@@ -67,6 +67,9 @@ public class StartNowPreferenceController extends BasePreferenceController {
         super.updateState(preference);
         final Button startButton = ((LayoutPreference) preference)
                 .findViewById(R.id.dream_start_now_button);
-        startButton.setEnabled(mBackend.getWhenToDreamSetting() != DreamBackend.NEVER);
+        boolean isDockingSupported = mContext.getResources()
+                .getBoolean(R.bool.config_isDockDreamSupported);
+        int whenToDream = DreamSettings.getWhenToDreamSetting(mBackend, isDockingSupported);
+        startButton.setEnabled(whenToDream != DreamBackend.NEVER);
     }
 }
