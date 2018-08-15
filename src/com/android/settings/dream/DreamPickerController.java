@@ -91,6 +91,11 @@ public class DreamPickerController extends BasePreferenceController {
     @Override
     public void updateState(Preference preference) {
         super.updateState(preference);
+        // TODO: Check if this is needed
+        boolean isDockingSupported = mContext.getResources()
+                .getBoolean(R.bool.config_isDockDreamSupported);
+        int whenToDream = DreamSettings.getWhenToDreamSetting(mBackend, isDockingSupported);
+        // is an addition here still useful, moved from old StartNowPreferenceController.java?
         if (mAdapter != null) {
             mAdapter.setEnabled(preference.isEnabled());
         }
