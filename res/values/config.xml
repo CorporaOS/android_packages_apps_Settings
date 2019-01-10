@@ -462,4 +462,14 @@
 
     <!-- Whether to show the Preference for Adaptive connectivity -->
     <bool name="config_show_adaptive_connectivity">false</bool>
+
+    <!-- Specifies not available strings for the APN.
+         Note: If the preset APN contains these strings, it will not be editable.
+    -->
+    <string-array name="config_disallow_adding_apn_string" translatable="false">
+        <!--
+        <item>apn-name.com</item>
+        <item>.net</item>
+        -->
+    </string-array>
 </resources>

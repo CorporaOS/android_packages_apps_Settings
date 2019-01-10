@@ -147,6 +147,8 @@ public class ApnEditor extends SettingsPreferenceFragment
     private String[] mReadOnlyApnFields;
     private boolean mReadOnlyApn;
     private Uri mCarrierUri;
+    @VisibleForTesting
+    String[] mDisallowAddingApnStrings;
 
     /**
      * APN types for data connections.  These are usage categories for an APN
@@ -278,6 +280,8 @@ public class ApnEditor extends SettingsPreferenceFragment
 
         initApnEditorUi();
         getCarrierCustomizedConfig();
+        mDisallowAddingApnStrings = getResources()
+                .getStringArray(R.array.config_disallow_adding_apn_string);
 
         Uri uri = null;
         if (action.equals(Intent.ACTION_EDIT)) {
@@ -1149,6 +1153,8 @@ public class ApnEditor extends SettingsPreferenceFragment
             errorMsg = getResources().getString(R.string.error_name_empty);
         } else if (TextUtils.isEmpty(apn)) {
             errorMsg = getResources().getString(R.string.error_apn_empty);
+        } else if (apnNameContains(mDisallowAddingApnStrings, apn)) {
+            errorMsg = getResources().getString(R.string.error_disallow_adding_apn_string);
         } else if (mcc == null || mcc.length() != 3) {
             errorMsg = getResources().getString(R.string.error_mcc_not3);
         } else if ((mnc == null || (mnc.length() & 0xFFFE) != 2)) {
@@ -1175,6 +1181,22 @@ public class ApnEditor extends SettingsPreferenceFragment
         }
 
         return errorMsg;
+    }
+
+    private boolean apnNameContains(String[] apnNameArray1, String apnName2) {
+        if (ArrayUtils.isEmpty(apnNameArray1) || TextUtils.isEmpty(apnName2)) {
+            return false;
+        }
+
+        for (String apn : apnNameArray1) {
+            if (apnName2.contains(apn)) {
+                Log.d(TAG, "apnNameContains: true because found to contain " + apn);
+                return true;
+            }
+        }
+
+        Log.d(TAG, "apnNameContains: false");
+        return false;
     }
 
     @VisibleForTesting
