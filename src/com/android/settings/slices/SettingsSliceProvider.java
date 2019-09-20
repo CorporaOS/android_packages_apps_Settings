@@ -135,6 +135,7 @@ public class SettingsSliceProvider extends SliceProvider {
 
     private static final KeyValueListParser KEY_VALUE_LIST_PARSER = new KeyValueListParser(',');
 
+    // Should only be accessed by getSlicesDatabaseAccessor().
     @VisibleForTesting
     SlicesDatabaseAccessor mSlicesDatabaseAccessor;
 
@@ -156,9 +157,15 @@ public class SettingsSliceProvider extends SliceProvider {
     @Override
     public boolean onCreateSliceProvider() {
         Log.d(TAG, "onCreateSliceProvider");
-        mSlicesDatabaseAccessor = new SlicesDatabaseAccessor(getContext());
         mSliceWeakDataCache = new WeakHashMap<>();
         return true;
+    }
+
+    private synchronized SlicesDatabaseAccessor getSlicesDatabaseAccessor() {
+        if (mSlicesDatabaseAccessor == null) {
+            mSlicesDatabaseAccessor = new SlicesDatabaseAccessor(getContext());
+        }
+        return mSlicesDatabaseAccessor;
     }
 
     @Override
@@ -302,10 +309,11 @@ public class SettingsSliceProvider extends SliceProvider {
     public Collection<Uri> onGetSliceDescendants(Uri uri) {
         final List<Uri> descendants = new ArrayList<>();
         Uri finalUri = uri;
+        final SlicesDatabaseAccessor slicesDatabaseAccessor = getSlicesDatabaseAccessor();
 
         if (isPrivateSlicesNeeded(finalUri)) {
             descendants.addAll(
-                    mSlicesDatabaseAccessor.getSliceUris(finalUri.getAuthority(),
+                    slicesDatabaseAccessor.getSliceUris(finalUri.getAuthority(),
                             false /* isPublicSlice */));
             Log.d(TAG, "provide " + descendants.size() + " non-public slices");
             finalUri = new Uri.Builder()
@@ -335,7 +343,7 @@ public class SettingsSliceProvider extends SliceProvider {
         }
 
         // Add all descendants from db with matching authority.
-        descendants.addAll(mSlicesDatabaseAccessor.getSliceUris(authority, true /*isPublicSlice*/));
+        descendants.addAll(slicesDatabaseAccessor.getSliceUris(authority, true /*isPublicSlice*/));
 
         if (isPathEmpty && TextUtils.isEmpty(authority)) {
             // No path nor authority. Return all possible Uris by adding all special slice uri
@@ -398,7 +406,8 @@ public class SettingsSliceProvider extends SliceProvider {
 
         final SliceData sliceData;
         try {
-            sliceData = mSlicesDatabaseAccessor.getSliceDataFromUri(uri);
+            final SlicesDatabaseAccessor slicesDatabaseAccessor = getSlicesDatabaseAccessor();
+            sliceData = slicesDatabaseAccessor.getSliceDataFromUri(uri);
         } catch (IllegalStateException e) {
             Log.d(TAG, "Could not create slicedata for uri: " + uri, e);
             return;
