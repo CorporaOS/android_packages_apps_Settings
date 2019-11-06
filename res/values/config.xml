@@ -647,4 +647,8 @@
     <!-- Whether sim related information is visible to the end user. -->
     <bool name="config_show_sim_info">true</bool>
 
+    <!-- Whether to enforce disabling data for finding the network. Vendor modem may voluntarily
+         disable mobile data when it initiates finding the network. -->
+    <bool name="config_disabling_data_for_finding_network">true</bool>
+
 </resources>

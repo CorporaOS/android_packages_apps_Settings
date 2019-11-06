@@ -17,6 +17,7 @@
 package com.android.settings.network.telephony;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.content.Intent;
@@ -39,6 +40,7 @@ import android.view.View;
 
 import androidx.annotation.Keep;
 import androidx.annotation.VisibleForTesting;
+import androidx.appcompat.app.AlertDialog;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
@@ -72,6 +74,8 @@ public class NetworkSelectSettings extends DashboardFragment {
     private static final String PREF_KEY_NETWORK_OPERATORS = "network_operators_preference";
     private static final int MIN_NUMBER_OF_SCAN_REQUIRED = 2;
 
+    private static final int DIALOG_FIND_NETWORK = 1001;
+
     private PreferenceCategory mPreferenceCategory;
     @VisibleForTesting
     NetworkOperatorPreference mSelectedPreference;
@@ -83,6 +87,7 @@ public class NetworkSelectSettings extends DashboardFragment {
     private TelephonyManager mTelephonyManager;
     private List<String> mForbiddenPlmns;
     private boolean mShow4GForLTE = false;
+    private boolean mWarnDisableData = false;
     private NetworkScanHelper mNetworkScanHelper;
     private final ExecutorService mNetworkScanExecutor = Executors.newFixedThreadPool(1);
     private MetricsFeatureProvider mMetricsFeatureProvider;
@@ -117,6 +122,8 @@ public class NetworkSelectSettings extends DashboardFragment {
         if (bundle != null) {
             mShow4GForLTE = bundle.getBoolean(
                     CarrierConfigManager.KEY_SHOW_4G_FOR_LTE_DATA_ICON_BOOL);
+            mWarnDisableData = bundle.getBoolean(
+                    CarrierConfigManager.KEY_SHOW_WARNING_DISABLE_DATA_FOR_FINDING_NETWORK_BOOL);
         }
 
         mMetricsFeatureProvider = getMetricsFeatureProvider(getContext());
@@ -210,7 +217,12 @@ public class NetworkSelectSettings extends DashboardFragment {
             return;
         }
         if (mWaitingForNumberOfScanResults <= 0) {
-            startNetworkQuery();
+            if (getResources().getBoolean(R.bool.config_disabling_data_for_finding_network)
+                    && mTelephonyManager.isDataEnabled() && mWarnDisableData) {
+                showDialog(DIALOG_FIND_NETWORK);
+            } else {
+                startNetworkQuery();
+            }
         }
     }
 
@@ -619,5 +631,35 @@ public class NetworkSelectSettings extends DashboardFragment {
         stopNetworkQuery();
         mNetworkScanExecutor.shutdown();
         super.onDestroy();
+    }
+
+    @Override
+    public Dialog onCreateDialog(int dialogId) {
+        if (dialogId == DIALOG_FIND_NETWORK) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+            builder.setMessage(getResources().getString(R.string.find_network_warning_message))
+                    .setTitle(R.string.find_network_warning_title)
+                    .setPositiveButton(android.R.string.ok, (dialog, id) -> {
+                        // Vendor modem may voluntarily disable mobile data when it initiates
+                        // finding the network, so just start the query after user's consent.
+                        startNetworkQuery();
+                    })
+                    .setNegativeButton(android.R.string.cancel, (dialog, id) -> {
+                        final Activity activity = getActivity();
+                        if (activity != null) {
+                            activity.finish();
+                        }
+                    });
+            return builder.create();
+        }
+        return null;
+    }
+
+    @Override
+    public int getDialogMetricsCategory(int dialogId) {
+        if (dialogId == DIALOG_FIND_NETWORK) {
+            return SettingsEnums.DIALOG_FIND_NETWORK;
+        }
+        return 0;
     }
 }
