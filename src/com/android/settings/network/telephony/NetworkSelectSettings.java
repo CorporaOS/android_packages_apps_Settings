@@ -17,6 +17,7 @@
 package com.android.settings.network.telephony;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
@@ -37,6 +38,7 @@ import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.VisibleForTesting;
+import androidx.appcompat.app.AlertDialog;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
@@ -67,6 +69,8 @@ public class NetworkSelectSettings extends DashboardFragment {
 
     private static final String PREF_KEY_NETWORK_OPERATORS = "network_operators_preference";
     private static final int MIN_NUMBER_OF_SCAN_REQUIRED = 2;
+
+    private static final int DIALOG_FIND_NETWORK = 1001;
 
     @VisibleForTesting
     PreferenceCategory mPreferenceCategory;
@@ -145,7 +149,11 @@ public class NetworkSelectSettings extends DashboardFragment {
             return;
         }
         if (mWaitingForNumberOfScanResults <= 0) {
-            startNetworkQuery();
+            if (mTelephonyManager.isDataEnabled()) {
+                showDialog(DIALOG_FIND_NETWORK);
+            } else {
+                startNetworkQuery();
+            }
         }
     }
 
@@ -536,5 +544,35 @@ public class NetworkSelectSettings extends DashboardFragment {
         stopNetworkQuery();
         mNetworkScanExecutor.shutdown();
         super.onDestroy();
+    }
+
+    @Override
+    public Dialog onCreateDialog(int dialogId) {
+        if (dialogId == DIALOG_FIND_NETWORK) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+            builder.setMessage(getResources().getString(R.string.find_network_warning_message))
+                    .setTitle(R.string.find_network_warning_title)
+                    .setPositiveButton(android.R.string.ok, (dialog, id) -> {
+                        // Vendor modem voluntarily disables mobile data when it initiates
+                        // finding the network, so just start the query with the user's approval.
+                        startNetworkQuery();
+                    })
+                    .setNegativeButton(android.R.string.cancel, (dialog, id) -> {
+                        final Activity activity = getActivity();
+                        if (activity != null) {
+                            activity.finish();
+                        }
+                    });
+            return builder.create();
+        }
+        return null;
+    }
+
+    @Override
+    public int getDialogMetricsCategory(int dialogId) {
+        if (dialogId == DIALOG_FIND_NETWORK) {
+            return SettingsEnums.DIALOG_FIND_NETWORK;
+        }
+        return 0;
     }
 }
