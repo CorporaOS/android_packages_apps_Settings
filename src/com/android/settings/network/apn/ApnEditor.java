@@ -415,7 +415,7 @@ public class ApnEditor extends SettingsPreferenceFragment
         final String[] apnTypesArray2 = apnTypes2.split(",");
 
         for (String apn : apnTypesArray2) {
-            if (apnTypesList1.contains(apn.trim())) {
+            if (apnTypesList1.contains(apn.trim().toLowerCase())) {
                 Log.d(TAG, "apnTypesMatch: true because match found for " + apn.trim());
                 return true;
             }
