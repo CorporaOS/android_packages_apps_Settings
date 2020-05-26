@@ -105,4 +105,8 @@
     <string name="search">Search</string>
     <string name="search_apps">Search apps</string>
     <string name="application_icon">Application icon</string>
+
+    <!-- Black theme for dark mode -->
+    <string name="berry_black_theme_title">Pure black</string>
+    <string name="berry_black_theme_summary">Pure black background for dark theme</string>
 </resources>
