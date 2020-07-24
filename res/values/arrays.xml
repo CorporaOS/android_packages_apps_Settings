@@ -872,7 +872,8 @@
         <item>1</item>
     </string-array>
 
-    <!-- Match this with the constants in VpnProfile. --> <skip />
+    <!-- Currently, there are only 3 vpn types in VPN Settings and there is a function in
+         ConfigDialog.java which is translating these 3 types to the constants in VpnProfile. -->
     <!-- Short names for each VPN type, not really translatable. [CHAR LIMIT=20] -->
     <string-array name="vpn_types" translatable="false">
         <item>IKEv2/IPSec MSCHAPv2</item>
