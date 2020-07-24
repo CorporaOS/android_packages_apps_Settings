@@ -872,15 +872,10 @@
         <item>1</item>
     </string-array>
 
-    <!-- Match this with the constants in VpnProfile. --> <skip />
+    <!-- Currently, there are only 3 vpn types in VPN Settings and there is a function in
+         ConfigDialog.java which is translating these 3 types to the constants in VpnProfile. -->
     <!-- Short names for each VPN type, not really translatable. [CHAR LIMIT=20] -->
     <string-array name="vpn_types" translatable="false">
-        <item>PPTP</item>
-        <item>L2TP/IPSec PSK</item>
-        <item>L2TP/IPSec RSA</item>
-        <item>IPSec Xauth PSK</item>
-        <item>IPSec Xauth RSA</item>
-        <item>IPSec Hybrid RSA</item>
         <item>IKEv2/IPSec MSCHAPv2</item>
         <item>IKEv2/IPSec PSK</item>
         <item>IKEv2/IPSec RSA</item>
@@ -892,23 +887,6 @@
         <item>None</item>
         <!-- Manual HTTP proxy settings are used for the current VPN [CHAR LIMIT=25] -->
         <item>Manual</item>
-    </string-array>
-
-    <!-- Match this with the constants in LegacyVpnInfo. --> <skip />
-    <!-- Status for a VPN network. [CHAR LIMIT=100] -->
-    <string-array name="vpn_states">
-        <!-- Status message when VPN is disconnected. -->
-        <item>Disconnected</item>
-        <!-- Status message when VPN is initializing. -->
-        <item>Initializing\u2026</item>
-        <!-- Status message when VPN is connecting. -->
-        <item>Connecting\u2026</item>
-        <!-- Status message when VPN is connected. -->
-        <item>Connected</item>
-        <!-- Status message when VPN is timeout. -->
-        <item>Timeout</item>
-        <!-- Status message when VPN is failed. -->
-        <item>Unsuccessful</item>
     </string-array>
 
     <!-- Values for premium SMS permission selector [CHAR LIMIT=30] -->
