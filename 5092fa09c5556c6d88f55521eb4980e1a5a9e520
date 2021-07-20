@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e5819ec_7f0ac88a",
+        "filename": "src/com/android/settings/homepage/contextualcards/conditional/ConditionContextualCardController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1393882
+      },
+      "writtenOn": "2021-07-20T07:06:16Z",
+      "side": 1,
+      "message": "mContext",
+      "range": {
+        "startLine": 58,
+        "startChar": 49,
+        "endLine": 58,
+        "endChar": 80
+      },
+      "revId": "5092fa09c5556c6d88f55521eb4980e1a5a9e520",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
