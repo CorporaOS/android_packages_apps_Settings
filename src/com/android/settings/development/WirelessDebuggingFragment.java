@@ -24,6 +24,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.debug.AdbManager;
 import android.debug.IAdbManager;
+import android.debug.NamedPairDevice;
 import android.debug.PairDevice;
 import android.os.Build;
 import android.os.Bundle;
@@ -310,8 +311,12 @@ public class WirelessDebuggingFragment extends DashboardFragment
             mAdbManager = IAdbManager.Stub.asInterface(ServiceManager.getService(
                     Context.ADB_SERVICE));
             try {
-                Map<String, PairDevice> newList = mAdbManager.getPairedDevices();
-                updatePairedDevicePreferences(newList);
+                NamedPairDevice[] newList = mAdbManager.getPairedDevices();
+                Map<String, PairDevice> newMap = new HashMap<>();
+                for (NamedPairDevice namedPairDevice : newList) {
+                    newMap.put(namedPairDevice.keyFingerprint, namedPairDevice.device);
+                }
+                updatePairedDevicePreferences(newMap);
                 mConnectionPort = mAdbManager.getAdbWirelessPort();
                 if (mConnectionPort > 0) {
                     Log.i(TAG, "onEnabled(): connect_port=" + mConnectionPort);
