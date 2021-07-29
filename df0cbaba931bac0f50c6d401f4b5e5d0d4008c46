@@ -1,0 +1,30 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000013954967",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1606501?revision\u003d5",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "4b3b3fd9_c48ab661",
+        "filename": "src/com/android/settings/homepage/contextualcards/conditional/ConditionContextualCardController.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2021-07-29T07:14:59Z",
+      "side": 1,
+      "message": "Please remove the trailing whitespace.",
+      "range": {
+        "startLine": 57,
+        "startChar": 51,
+        "endLine": 57,
+        "endChar": 52
+      },
+      "revId": "df0cbaba931bac0f50c6d401f4b5e5d0d4008c46",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
