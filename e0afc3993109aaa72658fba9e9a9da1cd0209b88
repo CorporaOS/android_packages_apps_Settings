@@ -22,6 +22,30 @@
       },
       "revId": "e0afc3993109aaa72658fba9e9a9da1cd0209b88",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "54b5ae77_55ff3f57",
+        "filename": "src/com/android/settings/development/WirelessDebuggingFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 319,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2021-07-29T19:33:48Z",
+      "side": 1,
+      "message": "Yes but that requires changing other callers. I\u0027ll leave it to the owners of this code.",
+      "parentUuid": "af25af4c_ac47c15a",
+      "range": {
+        "startLine": 319,
+        "startChar": 16,
+        "endLine": 319,
+        "endChar": 45
+      },
+      "revId": "e0afc3993109aaa72658fba9e9a9da1cd0209b88",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
