@@ -148,6 +148,14 @@
         android:fragment="com.android.settings.security.ScreenPinningSettings"
         settings:keywords="@string/keywords_app_pinning" />
 
+    <Preference
+        android:order="90"
+        android:key="secure_shutdown_settings"
+        android:title="@string/secure_shutdown_title"
+        android:summary="@string/secure_shutdown_description"
+        android:fragment="com.android.settings.security.SecureShutdownSettings"
+        settings:keywords="@string/keywords_secure_shutdown"/>
+
     <SwitchPreference
         android:order="90"
         android:key="confirm_sim_deletion"

@@ -7256,6 +7256,7 @@
     <string name="help_url_trust_agent" translatable="false"></string>
     <string name="help_url_usage_access" translatable="false"></string>
     <string name="help_url_screen_pinning" translatable="false"></string>
+    <string name="help_url_secure_shutdown" translatable="false"></string>
     <string name="help_url_user_and_account_dashboard" translatable="false"></string>
     <string name="help_url_accessibility_shortcut" translatable="false"></string>
     <string name="help_url_magnification" translatable="false"></string>
@@ -7640,6 +7641,7 @@
     <string name="keywords_lockscreen">slide to unlock, password, pattern, PIN</string>
     <!-- Search keyword for App pinning Settings [CHAR LIMIT=NONE] -->
     <string name="keywords_app_pinning">screen pinning</string>
+    <string name="keywords_secure_shutdown">secure shutdown</string>
     <string name="keywords_profile_challenge">work challenge, work, profile</string>
     <string name="keywords_unification">work profile, managed profile, unify, unification, work, profile</string>
     <string name="keywords_gesture">gestures</string>
@@ -9366,6 +9368,21 @@
     <string name="screen_pinning_unlock_password">Ask for password before unpinning</string>
     <!-- [CHAR LIMIT=60] Unlock setting for screen pinning -->
     <string name="screen_pinning_unlock_none">Lock device when unpinning</string>
+
+        <!-- [CHAR LIMIT=28] Secure shutdown title -->
+    <string name="secure_shutdown_title">Secure shutdown</string>
+    <!-- [CHAR LIMIT=none] Secure shutdown description -->
+    <string name="secure_shutdown_description">
+        Secure shutdown prevents others from powering off your device. This feature can be helpful in cases such as when you lose your phone, because you need your device to be running in order to locate it using \'Find my device\' or any similar services. This need not be the only use case.
+        \n\nWhen enabled, system will prompt for authorization before shutdown.
+        \n\n1. Enable the first setting to use this feature only when on the lock screen.
+        \n2. Enable the second setting to use this feature throughout the system except on lock screen.
+        \n(You can enable both the settings too.)
+    </string>
+    <!-- [CHAR LIMIT=60] Secure shutdown on keyguard title -->
+    <string name="secure_shutdown_on_keyguard_title">Secure shutdown only on the lock screen.</string>
+    <!-- [CHAR LIMIT=60] Secure shutdown throughout system title -->
+    <string name="secure_shutdown_throughout_title">Secure shutdown throughout the system except lock screen.</string>
 
     <!-- [CHAR LIMIT=60] turn eSim deletion confirmation on/off  -->
     <string name="confirm_sim_deletion_title">Confirm SIM deletion</string>

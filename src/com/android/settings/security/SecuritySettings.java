@@ -105,6 +105,7 @@ public class SecuritySettings extends DashboardFragment {
         controllers.add(new EnterprisePrivacyPreferenceController(context));
         controllers.add(new ManageTrustAgentsPreferenceController(context));
         controllers.add(new ScreenPinningPreferenceController(context));
+        controllers.add(new SecureShutdownPreferenceController(context));
         controllers.add(new SimLockPreferenceController(context));
         controllers.add(new EncryptionStatusPreferenceController(context,
                 PREF_KEY_ENCRYPTION_SECURITY_PAGE));

@@ -375,6 +375,9 @@
     <!-- Whether screen_pinning_settings should be shown or not. -->
     <bool name="config_show_screen_pinning_settings">true</bool>
 
+    <!-- Whether secure_shutdown_settings should be shown or not. -->
+    <bool name="config_show_secure_shutdown_settings">true</bool>
+
     <!-- Whether manage_trust_agents should be shown or not. -->
     <bool name="config_show_manage_trust_agents">true</bool>
 
