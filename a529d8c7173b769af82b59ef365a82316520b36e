@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40731659_8599e42f",
+        "filename": "res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2021-08-05T09:30:28Z",
+      "side": 0,
+      "message": "you shouldn\u0027t remove it since there\u0027re other references.",
+      "range": {
+        "startLine": 283,
+        "startChar": 3,
+        "endLine": 284,
+        "endChar": 45
+      },
+      "revId": "a529d8c7173b769af82b59ef365a82316520b36e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

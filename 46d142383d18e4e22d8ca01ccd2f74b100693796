@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "408af81d_cc63ea3d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2021-08-05T09:30:28Z",
+      "side": 1,
+      "message": "I would like to keep the original cl since it\u0027s related to the settings behavior. and we have other overlay for specific device. we shouldn\u0027t remove this config file.",
+      "revId": "46d142383d18e4e22d8ca01ccd2f74b100693796",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
