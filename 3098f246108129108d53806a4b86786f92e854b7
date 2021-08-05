@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2d238546_b75c99d1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1890322
+      },
+      "writtenOn": "2021-08-05T11:52:34Z",
+      "side": 1,
+      "message": "Hi sir/madam,\nA new feature that I thought would be a useful addition to Android. Looking forward for your review.\n\nThank You\nMadhu",
+      "revId": "3098f246108129108d53806a4b86786f92e854b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
