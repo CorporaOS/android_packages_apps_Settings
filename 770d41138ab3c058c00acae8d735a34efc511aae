@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e2f5e4a_6f2a1bfd",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3164,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2021-08-06T06:13:41Z",
+      "side": 1,
+      "message": "no, I expect we still use config_has_help since we use overlay mechanism to change the value based on different cases.\n\nWhy is framework\u0027s cl related to settings\u0027 code? why we need to follow same value between fw and settings app?",
+      "range": {
+        "startLine": 3164,
+        "startChar": 12,
+        "endLine": 3164,
+        "endChar": 79
+      },
+      "revId": "770d41138ab3c058c00acae8d735a34efc511aae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
