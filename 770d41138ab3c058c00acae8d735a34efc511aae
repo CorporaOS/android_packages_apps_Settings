@@ -22,6 +22,30 @@
       },
       "revId": "770d41138ab3c058c00acae8d735a34efc511aae",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a5d1d807_327224c2",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3164,
+      "author": {
+        "id": 1221112
+      },
+      "writtenOn": "2021-08-06T08:04:55Z",
+      "side": 1,
+      "message": "They are related, SystemUI tries to launch HelpTrampoline when pressing \"Learn More\" button in the USB contaminant dialog. When config_has_help is false SystemUI crashes due to HelpTrampoline is missing. Having one config in Settings and one config in frameworks that both need to match each other will risk people forget setting the one in frameworks.",
+      "parentUuid": "7e2f5e4a_6f2a1bfd",
+      "range": {
+        "startLine": 3164,
+        "startChar": 12,
+        "endLine": 3164,
+        "endChar": 79
+      },
+      "revId": "770d41138ab3c058c00acae8d735a34efc511aae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
