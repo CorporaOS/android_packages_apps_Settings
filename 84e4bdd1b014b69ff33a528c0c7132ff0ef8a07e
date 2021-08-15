@@ -121,6 +121,23 @@
       "parentUuid": "768d207b_e50aea03",
       "revId": "84e4bdd1b014b69ff33a528c0c7132ff0ef8a07e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a66292e_46f653c9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1702152
+      },
+      "writtenOn": "2021-08-15T22:33:21Z",
+      "side": 1,
+      "message": "Hello, is there any update on this change? Even if its going to be abandoned, just wanted some update if possible :).",
+      "revId": "84e4bdd1b014b69ff33a528c0c7132ff0ef8a07e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
