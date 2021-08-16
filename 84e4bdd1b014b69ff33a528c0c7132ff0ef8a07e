@@ -138,6 +138,29 @@
       "message": "Hello, is there any update on this change? Even if its going to be abandoned, just wanted some update if possible :).",
       "revId": "84e4bdd1b014b69ff33a528c0c7132ff0ef8a07e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e8d7da4_283e6a37",
+        "filename": "src/com/android/settings/display/ColorModePreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2021-08-16T07:18:10Z",
+      "side": 1,
+      "message": "why don\u0027t you merge colorModeCount \u003d\u003d 0 into the check condition?\n\n\nreturn mContext.getSystemService(ColorDisplayManager.class)\n                .isDeviceColorManaged()\n       \u0026\u0026 !ColorDisplayManager.areAccessibilityTransformsEnabled(mContext)\n       \u0026\u0026 (colorModeCount \u003e\u003d 0) ? AVAILABLE : DISABLED_FOR_USER",
+      "range": {
+        "startLine": 36,
+        "startChar": 15,
+        "endLine": 39,
+        "endChar": 38
+      },
+      "revId": "84e4bdd1b014b69ff33a528c0c7132ff0ef8a07e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
