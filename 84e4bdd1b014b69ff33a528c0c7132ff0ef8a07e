@@ -142,6 +142,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9628c175_d6dcc79f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1347463
+      },
+      "writtenOn": "2021-08-16T17:42:42Z",
+      "side": 1,
+      "message": "Thanks for the clarification. The SurfaceFlinger color modes and the ColorDisplay color modes are actually not the same thing. The ColorDisplay color modes set the SurfaceFlinger color modes, and regulate the abilities of ColorDisplayService. ColorDisplayService will not function properly without support for at least one ColorDisplay color mode (there are four \"standard\" options, Natural, Boosted, Saturated, and Adaptive, plus the ability for OEMs to provide custom ones).\n\nIf an OEM wishes to not include ColorDisplay color modes, they should remove the ColorDisplayService entirely (as well as this preference). But that decision should be made by each OEM and not something done in AOSP, so this patch is not something we intend to support at this time.",
+      "parentUuid": "8610d430_d08e7032",
+      "revId": "84e4bdd1b014b69ff33a528c0c7132ff0ef8a07e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9e8d7da4_283e6a37",
         "filename": "src/com/android/settings/display/ColorModePreferenceController.java",
         "patchSetId": 2
