@@ -22,6 +22,30 @@
       },
       "revId": "ea5d04f928f68a28146548be4ad67dcff9b4fecc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "daaf808c_f78c077a",
+        "filename": "src/com/android/settings/display/ColorModePreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1702152
+      },
+      "writtenOn": "2021-08-16T09:54:13Z",
+      "side": 1,
+      "message": "Should I do that on this commit?",
+      "parentUuid": "7ade8741_efc44c46",
+      "range": {
+        "startLine": 36,
+        "startChar": 15,
+        "endLine": 37,
+        "endChar": 39
+      },
+      "revId": "ea5d04f928f68a28146548be4ad67dcff9b4fecc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
