@@ -70,6 +70,30 @@
       },
       "revId": "ea5d04f928f68a28146548be4ad67dcff9b4fecc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "026cfbbf_0ed7c6e9",
+        "filename": "src/com/android/settings/display/ColorModePreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1702152
+      },
+      "writtenOn": "2021-08-16T09:57:24Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "c924a313_15c5dd02",
+      "range": {
+        "startLine": 36,
+        "startChar": 15,
+        "endLine": 37,
+        "endChar": 39
+      },
+      "revId": "ea5d04f928f68a28146548be4ad67dcff9b4fecc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
