@@ -160,6 +160,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "daeea343_5c476db4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1702152
+      },
+      "writtenOn": "2021-08-16T17:48:18Z",
+      "side": 1,
+      "message": "Alright, thanks for explaining it :). Will mark this change as abandoned then.",
+      "parentUuid": "9628c175_d6dcc79f",
+      "revId": "84e4bdd1b014b69ff33a528c0c7132ff0ef8a07e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9e8d7da4_283e6a37",
         "filename": "src/com/android/settings/display/ColorModePreferenceController.java",
         "patchSetId": 2
