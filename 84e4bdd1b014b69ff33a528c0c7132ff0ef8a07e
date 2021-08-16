@@ -161,6 +161,30 @@
       },
       "revId": "84e4bdd1b014b69ff33a528c0c7132ff0ef8a07e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "749ca7ca_adb72232",
+        "filename": "src/com/android/settings/display/ColorModePreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1702152
+      },
+      "writtenOn": "2021-08-16T08:33:24Z",
+      "side": 1,
+      "message": "Done. Used (colorModeCount \u003e 0) instead of (colorModeCount \u003e\u003d 0) as you said, as (colorModeCount \u003e\u003d 0) would show the preference if the color mode count is 0 too which would have the same effect that without the patch I guess.",
+      "parentUuid": "9e8d7da4_283e6a37",
+      "range": {
+        "startLine": 36,
+        "startChar": 15,
+        "endLine": 39,
+        "endChar": 38
+      },
+      "revId": "84e4bdd1b014b69ff33a528c0c7132ff0ef8a07e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
