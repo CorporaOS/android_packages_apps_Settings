@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42d0a5cc_38fd30f8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2021-08-20T06:42:42Z",
+      "side": 1,
+      "message": "Tim, could you share a before/after screenshots with us?",
+      "revId": "313ef1e734793c07c8f2157ed4c3f7f68fb1873f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
