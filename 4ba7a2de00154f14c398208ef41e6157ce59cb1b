@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "def679ea_5e1d2495",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2021-08-20T11:21:30Z",
+      "side": 1,
+      "message": "Did you run the robo test locally?\n\nhttps://source.corp.google.com/android/packages/apps/Settings/tests/robotests/src/com/android/settings/applications/specialaccess/DefaultPaymentSettingsPreferenceControllerTest.java?q\u003dDefaultPaymentSettingsPreferenceController%20package:android%20file:packages%2Fapps%2FSettings%7Cframeworks%2Fbase%2Fpackages%2FSettingsLib%7Cvendor%2Funbundled_google%2Fpackages%2FSettingsGoogle\u0026type\u003dcs",
+      "revId": "4ba7a2de00154f14c398208ef41e6157ce59cb1b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
