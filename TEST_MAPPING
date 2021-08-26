@@ -1,7 +1,7 @@
 {
   "postsubmit": [
     {
-      "name": "SettingsUnitTests",
+      "name1": "SettingsUnitTests",
       "options": [
         {
           "exclude-annotation": "androidx.test.filters.FlakyTest"
