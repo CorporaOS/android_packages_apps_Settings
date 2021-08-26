@@ -22,6 +22,30 @@
       },
       "revId": "6685e7a9f20cb9e5843ca522b5ec5c7bf722f3e0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a7ef5797_1ef9724b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1237921
+      },
+      "writtenOn": "2021-08-26T10:43:46Z",
+      "side": 1,
+      "message": "Thank you for your advice. I update it to test command. Could you please review my new patch?",
+      "parentUuid": "2946772e_a4e7edd8",
+      "range": {
+        "startLine": 27,
+        "startChar": 5,
+        "endLine": 27,
+        "endChar": 58
+      },
+      "revId": "6685e7a9f20cb9e5843ca522b5ec5c7bf722f3e0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
