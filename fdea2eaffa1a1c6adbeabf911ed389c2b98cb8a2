@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c801de06_5acaccdc",
+        "filename": "src/com/android/settings/network/telephony/Enhanced4gBasePreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2021-08-30T08:27:59Z",
+      "side": 0,
+      "message": "Can you share more information regarding the call flow from the happening of carrier config change to this specific point ?",
+      "range": {
+        "startLine": 80,
+        "startChar": 8,
+        "endLine": 80,
+        "endChar": 30
+      },
+      "revId": "fdea2eaffa1a1c6adbeabf911ed389c2b98cb8a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c1cade83_2740f29b",
+        "filename": "src/com/android/settings/network/telephony/Enhanced4gBasePreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2021-08-30T08:27:59Z",
+      "side": 0,
+      "message": "Can we keep this for performance ? and have another route specifically for dealing with the event of carrier config change ?\n\nThere\u0027re 3 PreferenceController active at the same time.\n(Enhanced4gLtePreferenceController, Enhanced4gCallingPreferenceController, Enhanced4gAdvancedCallingPreferenceController)\nHowever, only one of them is required at each moment.\n\nThe remove of this part would lead to 3 PreferenceController listens the phone state and busy on phone state change even not displaying to the user.",
+      "range": {
+        "startLine": 133,
+        "startChar": 12,
+        "endLine": 133,
+        "endChar": 28
+      },
+      "revId": "fdea2eaffa1a1c6adbeabf911ed389c2b98cb8a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

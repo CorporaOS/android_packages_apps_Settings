@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4650d9cc_0eaff3cd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2021-08-30T08:27:59Z",
+      "side": 1,
+      "message": "Many thanks for identifying the root cause of this issue.\nIt\u0027s very helpful.",
+      "range": {
+        "startLine": 17,
+        "startChar": 22,
+        "endLine": 18,
+        "endChar": 17
+      },
+      "revId": "4ab0d3ad5dabaded4b4b30cc3c6b8bcadc5e13f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
