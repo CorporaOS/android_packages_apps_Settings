@@ -48,6 +48,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1a3fe411_66b47e1e",
+        "filename": "src/com/android/settings/network/telephony/Enhanced4gBasePreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2021-08-31T06:51:35Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "30089fc4_bf59d931",
+      "range": {
+        "startLine": 80,
+        "startChar": 8,
+        "endLine": 80,
+        "endChar": 30
+      },
+      "revId": "fdea2eaffa1a1c6adbeabf911ed389c2b98cb8a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c1cade83_2740f29b",
@@ -85,6 +109,30 @@
       "side": 0,
       "message": "It is a difficult to keep this. Your understanding is correct that there are 3 PreferenceController active at the same time. But I decided to take this solution. Here are the reasons.\n\n1. This is the simplest way.\n2. It is small impact on performance even if 3 PreferenceController handles it.\n3. It is minor use case starting a call when the call setting screen is displayed as foreground.",
       "parentUuid": "c1cade83_2740f29b",
+      "range": {
+        "startLine": 133,
+        "startChar": 12,
+        "endLine": 133,
+        "endChar": 28
+      },
+      "revId": "fdea2eaffa1a1c6adbeabf911ed389c2b98cb8a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0bed4185_e6795a8a",
+        "filename": "src/com/android/settings/network/telephony/Enhanced4gBasePreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2021-08-31T06:51:35Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "972b03b0_8ce10846",
       "range": {
         "startLine": 133,
         "startChar": 12,
