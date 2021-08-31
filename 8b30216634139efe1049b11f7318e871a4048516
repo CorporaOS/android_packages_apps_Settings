@@ -33,6 +33,29 @@
       "message": "+ Phone settings owner to review this cl",
       "revId": "8b30216634139efe1049b11f7318e871a4048516",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff851c29_c746e06c",
+        "filename": "src/com/android/settings/network/EraseEuiccDataController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2021-08-31T00:50:08Z",
+      "side": 1,
+      "message": "Would you mind changing the auto testing part within exactly the same change of this ?\nI mean, for instance, adding an @Ignore on the test case within file packages/apps/Settings/tests/unit/src/com/android/settings/network/EraseEuiccDataControllerTest.java ?",
+      "range": {
+        "startLine": 55,
+        "startChar": 58,
+        "endLine": 55,
+        "endChar": 80
+      },
+      "revId": "8b30216634139efe1049b11f7318e871a4048516",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
