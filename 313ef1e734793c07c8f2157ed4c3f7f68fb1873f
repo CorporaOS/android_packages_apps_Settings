@@ -16,6 +16,23 @@
       "message": "Tim, could you share a before/after screenshots with us?",
       "revId": "313ef1e734793c07c8f2157ed4c3f7f68fb1873f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e76c72ec_7ac68935",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1815899
+      },
+      "writtenOn": "2021-08-31T12:11:46Z",
+      "side": 1,
+      "message": "Hi,\nsorry for delay, here are screenshots:\nbefore: https://imgur.com/y4nOxP4\nafter: https://imgur.com/WwuL3HI",
+      "revId": "313ef1e734793c07c8f2157ed4c3f7f68fb1873f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
