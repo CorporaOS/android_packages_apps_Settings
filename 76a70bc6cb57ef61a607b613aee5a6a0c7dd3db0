@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc622952_d3ecd12f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2021-09-02T16:20:40Z",
+      "side": 1,
+      "message": "Wait, I\u0027m confused. I see no original changes in this patch – I\u0027m seeing 14 new tests. But this cover comment sounds like you moved 12 of them (and created 2). Where did these 12 come from ? Do you have another patch somewhere that removes them from somewhere else ?",
+      "range": {
+        "startLine": 12,
+        "startChar": 2,
+        "endLine": 12,
+        "endChar": 18
+      },
+      "revId": "76a70bc6cb57ef61a607b613aee5a6a0c7dd3db0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
