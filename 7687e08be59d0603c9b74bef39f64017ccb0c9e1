@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "472b6bec_2322ca69",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2021-09-02T08:15:34Z",
+      "side": 1,
+      "message": "Add Jason for suggestion card",
+      "revId": "7687e08be59d0603c9b74bef39f64017ccb0c9e1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
