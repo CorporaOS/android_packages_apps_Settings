@@ -36,7 +36,6 @@ import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Parcel;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.UserHandle;
@@ -74,7 +73,6 @@ public class NotificationStation extends SettingsPreferenceFragment {
 
     private static final boolean DEBUG = false;
     private static final boolean DUMP_EXTRAS = true;
-    private static final boolean DUMP_PARCEL = true;
 
     private static class HistoricalNotificationInfo {
         public String key;
@@ -629,19 +627,6 @@ public class NotificationStation extends SettingsPreferenceFragment {
                     sb.append("\n  ").append(extraKey).append(delim).append(val);
                 }
             }
-        }
-        if (DUMP_PARCEL) {
-            final Parcel p = Parcel.obtain();
-            n.writeToParcel(p, 0);
-            sb.append("\n")
-                    .append(bold(getString(R.string.notification_log_details_parcel)))
-                    .append(delim)
-                    .append(String.valueOf(p.dataPosition()))
-                    .append(' ')
-                    .append(bold(getString(R.string.notification_log_details_ashmem)))
-                    .append(delim)
-                    .append(String.valueOf(p.getBlobAshmemSize()))
-                    .append("\n");
         }
         return sb;
     }
