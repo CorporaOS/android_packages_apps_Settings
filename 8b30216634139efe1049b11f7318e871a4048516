@@ -56,6 +56,54 @@
       },
       "revId": "8b30216634139efe1049b11f7318e871a4048516",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c18e66bf_4d27b8d4",
+        "filename": "src/com/android/settings/network/EraseEuiccDataController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1221112
+      },
+      "writtenOn": "2021-09-08T15:21:58Z",
+      "side": 1,
+      "message": "Ack, will do",
+      "parentUuid": "ff851c29_c746e06c",
+      "range": {
+        "startLine": 55,
+        "startChar": 58,
+        "endLine": 55,
+        "endChar": 80
+      },
+      "revId": "8b30216634139efe1049b11f7318e871a4048516",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6e4140f_6e78dc71",
+        "filename": "src/com/android/settings/network/EraseEuiccDataController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1221112
+      },
+      "writtenOn": "2021-09-08T15:21:58Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "ff851c29_c746e06c",
+      "range": {
+        "startLine": 55,
+        "startChar": 58,
+        "endLine": 55,
+        "endChar": 80
+      },
+      "revId": "8b30216634139efe1049b11f7318e871a4048516",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
