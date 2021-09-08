@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f1ed1bd_dc1c5c67",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003403
+      },
+      "writtenOn": "2021-09-08T02:56:28Z",
+      "side": 1,
+      "message": "Aw dang, we actually use that for identifying extremely heavyweight notifications.",
+      "revId": "c77f9c40bf3ded50e88fde32e10ca2894f224882",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
