@@ -16,6 +16,23 @@
       "message": "please have a look",
       "revId": "860216208f188703957301ae8054f0f8c8b931f3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f3ccecf_904d093d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2021-09-09T08:31:06Z",
+      "side": 1,
+      "message": "Look good to me.",
+      "revId": "860216208f188703957301ae8054f0f8c8b931f3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
