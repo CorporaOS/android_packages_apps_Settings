@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b5990def_06245979",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1098053
+      },
+      "writtenOn": "2021-09-09T17:03:24Z",
+      "side": 1,
+      "message": "Remove this, Merged-In tag below will ensure it does not get merged into branches that it is already in.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 21
+      },
+      "revId": "887e7f7efbd79ba6d0d5610be3515afcab5e28e3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
