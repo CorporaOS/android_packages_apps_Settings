@@ -16,6 +16,24 @@
       "message": "Aw dang, we actually use that for identifying extremely heavyweight notifications.",
       "revId": "c77f9c40bf3ded50e88fde32e10ca2894f224882",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed168284_a15d673a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2021-09-09T20:51:47Z",
+      "side": 1,
+      "message": "Mentioned over email about the problems. Though, I guess what I suggest is that we can check individual Parcel objects for how much memory they have open. This way, we can avoid doing these checks/counts on every FD in every Parcel?",
+      "parentUuid": "5f1ed1bd_dc1c5c67",
+      "revId": "c77f9c40bf3ded50e88fde32e10ca2894f224882",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
