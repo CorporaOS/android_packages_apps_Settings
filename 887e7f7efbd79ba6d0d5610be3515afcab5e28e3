@@ -22,6 +22,54 @@
       },
       "revId": "887e7f7efbd79ba6d0d5610be3515afcab5e28e3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "73c12c4a_738554ef",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2021-09-10T09:33:33Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "b5990def_06245979",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 21
+      },
+      "revId": "887e7f7efbd79ba6d0d5610be3515afcab5e28e3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce87ef28_9ae9d4ac",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2021-09-10T09:33:33Z",
+      "side": 1,
+      "message": "Thanks. I added \"Merged-In\" and got failure in report before. It seems got fixed now.",
+      "parentUuid": "b5990def_06245979",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 21
+      },
+      "revId": "887e7f7efbd79ba6d0d5610be3515afcab5e28e3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
