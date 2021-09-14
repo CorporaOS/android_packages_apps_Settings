@@ -36,6 +36,7 @@ import android.text.TextUtils;
 import android.util.ArraySet;
 import android.util.FeatureFlagUtils;
 import android.util.Log;
+import android.content.Intent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -47,6 +48,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.content.Intent;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
@@ -61,9 +63,11 @@ import com.android.settings.SettingsApplication;
 import com.android.settings.accounts.AvatarViewMixin;
 import com.android.settings.activityembedding.ActivityEmbeddingRulesController;
 import com.android.settings.activityembedding.ActivityEmbeddingUtils;
+import com.android.settings.bluetooth.TestLauncherActivity;
 import com.android.settings.core.CategoryMixin;
 import com.android.settings.core.FeatureFlags;
 import com.android.settings.homepage.contextualcards.ContextualCardsFragment;
+import com.android.settings.bluetooth.irk.BluetoothIrkActivity;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settingslib.Utils;
 import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
@@ -222,6 +226,11 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         launchDeepLinkIntentToRight();
         updateHomepagePaddings();
         updateSplitLayout();
+        openTester();
+    }
+
+    private void openTester() {
+        startActivity(new Intent(this, TestLauncherActivity.class));
     }
 
     @Override

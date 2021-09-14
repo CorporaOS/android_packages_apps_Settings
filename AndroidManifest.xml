@@ -5,6 +5,8 @@
 
     <original-package android:name="com.android.settings"/>
 
+    <permission android:name="com.example.myapplication.ACTION_FOUND_PERMISSION" />
+
     <uses-permission android:name="android.permission.REQUEST_NETWORK_SCORES" />
     <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
@@ -4486,6 +4488,29 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+
+        <!-- IRK -->
+        <activity android:name=".bluetooth.irk.BluetoothIrkActivity"
+                  android:exported="true"
+                  android:label="BT IRK Tester"/>
+        <receiver android:name=".bluetooth.irk.ScanBroadcastReceiver"
+                  android:exported="true" >
+            <intent-filter>
+                <action
+                    android:name="com.example.myapplication.ACTION_FOUND"
+                    android:permission="com.example.myapplication.ACTION_FOUND_PERMISSION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- OOB -->
+        <activity android:name=".bluetooth.oob.BluetoothOobActivity"
+                  android:label="BT OOB Test"/>
+        <activity android:name=".bluetooth.oob.BluetoothQrCodeActivity"
+                  android:label="BT OOB Scanner"/>
+
+        <!-- Test Launcher -->
+        <activity android:name=".bluetooth.TestLauncherActivity"
+                  android:label="BT Test Launcher"/>
 
         <!-- This is the longest AndroidManifest.xml ever. -->
     </application>

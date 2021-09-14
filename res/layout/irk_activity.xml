@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+  <LinearLayout
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <TextView
+          android:text="Address:"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+      <EditText
+          android:id="@+id/et_address"
+          android:text="08:9E:08:34:4A:00"
+          android:layout_width="250dp"
+          android:layout_height="wrap_content"/>
+  </LinearLayout>
+
+  <LinearLayout
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <TextView
+          android:text="IRK:"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+      <EditText
+          android:id="@+id/et_irk"
+          android:text="0102030405060708090A0B0C0D0E0F10"
+          android:layout_width="250dp"
+          android:layout_height="wrap_content"/>
+  </LinearLayout>
+
+  <LinearLayout
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <CheckBox
+          android:id="@+id/cb_bonded"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Is Bonded?" />
+      <CheckBox
+          android:id="@+id/cb_public"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Is Public Address?" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:gravity="center"
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btn"
+        android:text="Toggle PI scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:text="Toggle CB scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="20dp">
+      <TextView
+          android:text="Result:"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+      <TextView
+          android:id="@+id/tv_result"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+  </LinearLayout>
+
+</LinearLayout>
