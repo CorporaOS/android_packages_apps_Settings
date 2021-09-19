@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f83aa798_ce8271b5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1815899
+      },
+      "writtenOn": "2021-09-19T19:55:41Z",
+      "side": 1,
+      "message": "Hi,\n\nplease see screenshots below:\n- before: https://imgur.com/a/Ox58ssZ\n- after: https://imgur.com/a/s7QxgrV",
+      "revId": "fe2b51d222d4b22e33e0a8e1b12f15c377c2a654",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
