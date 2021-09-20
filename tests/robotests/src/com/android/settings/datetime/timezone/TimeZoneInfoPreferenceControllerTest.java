@@ -43,19 +43,23 @@ public class TimeZoneInfoPreferenceControllerTest {
     @Before
     public void setUp() {
         final Context context = RuntimeEnvironment.application;
-        final Date now = new Date(0L); // 00:00 1/1/1970
-        final Formatter formatter = new Formatter(Locale.US, now);
+        final Formatter formatter = new Formatter(Locale.US, new Date());
         mTimeZoneInfo = formatter.format("America/Los_Angeles");
         mController = new TimeZoneInfoPreferenceController(context, "key");
-        mController.mDate = now;
         mController.setTimeZoneInfo(mTimeZoneInfo);
     }
 
     @Test
     public void getSummary_matchExpectedFormattedText() {
+        mController.mDate = new Date(0L); // 00:00 1/1/1970
         assertThat(mController.getSummary().toString()).isEqualTo(
                 "Uses Pacific Time (GMT-08:00). "
                         + "Pacific Daylight Time starts on April 26, 1970.");
+
+        mController.mDate = new Date(1632134688L); // 20/9/2021
+        assertThat(mController.getSummary().toString()).isEqualTo(
+                "Uses Pacific Time (GMT-07:00). "
+                        + "Pacific Standard Time starts on November 7, 2021.");
     }
 
     @Test
