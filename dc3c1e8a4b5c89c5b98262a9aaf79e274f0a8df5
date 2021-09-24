@@ -16,6 +16,23 @@
       "message": "Hi, can you help to review this packport ? Thanks.",
       "revId": "dc3c1e8a4b5c89c5b98262a9aaf79e274f0a8df5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b801d12_6ed3110d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2021-09-24T10:10:24Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "dc3c1e8a4b5c89c5b98262a9aaf79e274f0a8df5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
