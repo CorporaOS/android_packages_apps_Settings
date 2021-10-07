@@ -43,6 +43,8 @@ import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
+import java.util.Arrays;
+
 @RunWith(RobolectricTestRunner.class)
 public class BluetoothQualityDialogPreferenceControllerTest {
 
@@ -116,7 +118,8 @@ public class BluetoothQualityDialogPreferenceControllerTest {
     @Test
     public void updateState_codeTypeIsLDAC_enablePreference() {
         BluetoothCodecConfig[] mCodecConfigs = {mCodecConfigAAC, mCodecConfigLDAC};
-        mCodecStatus = new BluetoothCodecStatus(mCodecConfigLDAC, null, mCodecConfigs);
+        mCodecStatus = new BluetoothCodecStatus(mCodecConfigLDAC, null,
+                Arrays.asList(mCodecConfigs));
         when(mBluetoothA2dp.getCodecStatus(mActiveDevice)).thenReturn(mCodecStatus);
         mController.onBluetoothServiceConnected(mBluetoothA2dp);
         mController.updateState(mPreference);
@@ -127,7 +130,8 @@ public class BluetoothQualityDialogPreferenceControllerTest {
     @Test
     public void updateState_codeTypeAAC_disablePreference() {
         BluetoothCodecConfig[] mCodecConfigs = {mCodecConfigAAC, mCodecConfigLDAC};
-        mCodecStatus = new BluetoothCodecStatus(mCodecConfigAAC, null, mCodecConfigs);
+        mCodecStatus = new BluetoothCodecStatus(mCodecConfigAAC, null,
+                Arrays.asList(mCodecConfigs));
         when(mBluetoothA2dp.getCodecStatus(mActiveDevice)).thenReturn(mCodecStatus);
         mController.onBluetoothServiceConnected(mBluetoothA2dp);
         mController.updateState(mPreference);
