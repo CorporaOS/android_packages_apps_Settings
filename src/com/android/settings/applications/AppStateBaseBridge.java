@@ -19,6 +19,8 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 
+import androidx.lifecycle.Lifecycle;
+
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.applications.ApplicationsState.AppEntry;
 import com.android.settingslib.applications.ApplicationsState.Session;
@@ -32,13 +34,27 @@ public abstract class AppStateBaseBridge implements ApplicationsState.Callbacks 
 
     protected final ApplicationsState mAppState;
     protected final Session mAppSession;
+    private final boolean mIsLifecycleEnabled;
     protected final Callback mCallback;
     protected final BackgroundHandler mHandler;
     protected final MainHandler mMainHandler;
 
     public AppStateBaseBridge(ApplicationsState appState, Callback callback) {
+        this(appState, callback, null);
+    }
+
+    /**
+     * Constructor of bridge to {@link ApplicationsState}.
+     *
+     * @param appState {@link ApplicationsState}
+     * @param callback when ApplicationsState get updated.
+     * @param lifecycle {@link Lifecycle} of UI
+     **/
+    public AppStateBaseBridge(ApplicationsState appState, Callback callback,
+            Lifecycle lifecycle) {
         mAppState = appState;
-        mAppSession = mAppState != null ? mAppState.newSession(this) : null;
+        mAppSession = mAppState != null ? mAppState.newSession(this, lifecycle) : null;
+        mIsLifecycleEnabled = (lifecycle != null);
         mCallback = callback;
         // Running on the same background thread as the ApplicationsState lets
         // us run in the background and make sure they aren't doing updates at
@@ -49,15 +65,28 @@ public abstract class AppStateBaseBridge implements ApplicationsState.Callbacks 
     }
 
     public void resume() {
+        if (mIsLifecycleEnabled) {
+            // Load all is not required since it will be done in #onLoadEntriesCompleted()
+            // Session itself will perform #onResume() by itselves through Lifecycle.
+            return;
+        }
         mHandler.sendEmptyMessage(BackgroundHandler.MSG_LOAD_ALL);
         mAppSession.onResume();
     }
 
     public void pause() {
+        if (mIsLifecycleEnabled) {
+            // Session itself will perform #onPause() by itselves through Lifecycle.
+            return;
+        }
         mAppSession.onPause();
     }
 
     public void release() {
+        if (mIsLifecycleEnabled) {
+            // Session itself will perform #onDestroy() by itselves through Lifecycle.
+            return;
+        }
         mAppSession.onDestroy();
     }
 
