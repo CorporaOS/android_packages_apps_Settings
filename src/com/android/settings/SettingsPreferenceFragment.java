@@ -122,6 +122,20 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
     @VisibleForTesting
     public boolean mPreferenceHighlighted = false;
 
+    private boolean mFragmentCreated;
+    /**
+     * Invoked when Fragment got constructed.
+     *
+     * Note: Before #isFragmentCreated(), APIs provided by PreferenceFragment might
+     *       not functional.
+     *
+     * @param context of this Fragment
+     */
+    public void onFragmentPreload(Context context) {}
+
+    // return true when Fragment got #onCreate(Bundle)
+    public boolean isFragmentCreated() { return mFragmentCreated; }
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
