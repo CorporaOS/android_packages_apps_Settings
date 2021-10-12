@@ -151,6 +151,9 @@ public class SettingsActivity extends SettingsBaseActivity
 
     private String mFragmentClass;
 
+    private String mPreloadClass;
+    private Fragment mPreloadFragment;
+
     private CharSequence mInitialTitle;
     private int mInitialTitleResId;
 
@@ -247,6 +250,26 @@ public class SettingsActivity extends SettingsBaseActivity
 
         // Getting Intent properties can only be done after the super.onCreate(...)
         final String initialFragmentName = getInitialFragmentName(intent);
+
+        /**
+         * There're multiple steps before starting the operating of PreferenceFragment.
+         * #onFragmentPreload(Context) within PreferenceFragment will be invoked once
+         * it constructed. This gives PreferenceFragment a chance to start some
+         * background works in the beginning of the time in parallel while main thread
+         * is keeping initialization. Which enables a possibility to reduce the time
+         * required for first launch.
+         *
+         * Note: Since PreferenceFragment has not been management by FragmentManager,
+         *       all of the APIs provided by PreferenceFragment are not functional.
+         */
+        mPreloadClass = initialFragmentName;
+        if (mPreloadClass != null) {
+            mPreloadFragment = Utils.getTargetFragment(this, mPreloadClass,
+                    getInitialFragmentArgs(intent));
+        }
+        if (mPreloadFragment != null) {
+            mPreloadFragment.onFragmentPreload(this);
+        }
 
         // This is a "Sub Settings" when:
         // - this is a real SubSettings
@@ -353,6 +376,12 @@ public class SettingsActivity extends SettingsBaseActivity
         return intent.getStringExtra(EXTRA_SHOW_FRAGMENT);
     }
 
+    /** Returns the initial fragment args that the activity will launch. */
+    @VisibleForTesting
+    public Bundle getInitialFragmentArgs(Intent intent) {
+        return intent.getBundleExtra(EXTRA_SHOW_FRAGMENT_ARGUMENTS);
+    }
+
     @Override
     protected void onApplyThemeResource(Theme theme, int resid, boolean first) {
         theme.applyStyle(R.style.SetupWizardPartnerResource, true);
@@ -377,7 +406,7 @@ public class SettingsActivity extends SettingsBaseActivity
         if (initialFragmentName != null) {
             setTitleFromIntent(intent);
 
-            Bundle initialArguments = intent.getBundleExtra(EXTRA_SHOW_FRAGMENT_ARGUMENTS);
+            Bundle initialArguments = getInitialFragmentArgs(intent);
             switchToFragment(initialFragmentName, initialArguments, true,
                     mInitialTitleResId, mInitialTitle);
         } else {
@@ -581,10 +610,20 @@ public class SettingsActivity extends SettingsBaseActivity
             throw new IllegalArgumentException("Invalid fragment for this activity: "
                     + fragmentName);
         }
-        Fragment f = Utils.getTargetFragment(this, fragmentName, args);
-        if (f == null) {
-            return;
+
+        Fragment f = null;
+        if (fragmentName.equals(mPreloadClass)) {
+            f = mPreloadFragment;
         }
+        mPreloadFragment = null;
+        if (f == null) {
+            f = Utils.getTargetFragment(this, fragmentName, args);
+            if (f == null) {
+                return;
+            }
+            f.onFragmentPreload(this);
+        }
+
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.main_content, f);
         if (titleResId > 0) {
