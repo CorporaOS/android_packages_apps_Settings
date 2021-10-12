@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "689810e6_6ba41f13",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2021-10-12T15:20:23Z",
+      "side": 1,
+      "message": "Hi, please help to review this extension for SettingsActivity. Thanks.",
+      "revId": "462f40f1452b4236ced15c5dc2e24bdb658b59aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
