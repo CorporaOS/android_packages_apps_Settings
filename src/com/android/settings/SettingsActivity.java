@@ -353,6 +353,12 @@ public class SettingsActivity extends SettingsBaseActivity
         return intent.getStringExtra(EXTRA_SHOW_FRAGMENT);
     }
 
+    /** Returns the initial fragment args that the activity will launch. */
+    @VisibleForTesting
+    public Bundle getInitialFragmentArgs(Intent intent) {
+        return intent.getBundleExtra(EXTRA_SHOW_FRAGMENT_ARGUMENTS);
+    }
+
     @Override
     protected void onApplyThemeResource(Theme theme, int resid, boolean first) {
         theme.applyStyle(R.style.SetupWizardPartnerResource, true);
@@ -377,7 +383,7 @@ public class SettingsActivity extends SettingsBaseActivity
         if (initialFragmentName != null) {
             setTitleFromIntent(intent);
 
-            Bundle initialArguments = intent.getBundleExtra(EXTRA_SHOW_FRAGMENT_ARGUMENTS);
+            Bundle initialArguments = getInitialFragmentArgs(intent);
             switchToFragment(initialFragmentName, initialArguments, true,
                     mInitialTitleResId, mInitialTitle);
         } else {
@@ -572,6 +578,17 @@ public class SettingsActivity extends SettingsBaseActivity
     }
 
     /**
+     * Construction for Fragment.
+     *
+     * @param fragmentName The class name of the fragment to instantiate.
+     * @param args Bundle of arguments to supply to the fragment. May be null.
+     * @return Fragment
+     */
+    Fragment constructFragment(String fragmentName, Bundle args) {
+        return Utils.getTargetFragment(this, fragmentName, args);
+    }
+
+    /**
      * Switch to a specific Fragment with taking care of validation, Title and BackStack
      */
     private void switchToFragment(String fragmentName, Bundle args, boolean validate,
@@ -581,7 +598,7 @@ public class SettingsActivity extends SettingsBaseActivity
             throw new IllegalArgumentException("Invalid fragment for this activity: "
                     + fragmentName);
         }
-        Fragment f = Utils.getTargetFragment(this, fragmentName, args);
+        Fragment f = constructFragment(fragmentName, args);
         if (f == null) {
             return;
         }
