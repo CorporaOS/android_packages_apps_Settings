@@ -16,6 +16,29 @@
       "message": "Hi, please help to review this extension for SettingsActivity. Thanks.",
       "revId": "462f40f1452b4236ced15c5dc2e24bdb658b59aa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9c53a848_2ba3b13a",
+        "filename": "src/com/android/settings/PreloadActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2021-10-13T03:56:28Z",
+      "side": 1,
+      "message": "1. Why don\u0027t we just have this in core infrastructure?\n\n2. How do we know it won\u0027t impact other things?\n\ne.g it sounds like some flows could be deferred to late stage since we enforce to execute some actions now.",
+      "range": {
+        "startLine": 25,
+        "startChar": 3,
+        "endLine": 39,
+        "endChar": 75
+      },
+      "revId": "462f40f1452b4236ced15c5dc2e24bdb658b59aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
