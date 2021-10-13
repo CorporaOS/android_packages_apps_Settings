@@ -46,6 +46,54 @@
       },
       "revId": "770d41138ab3c058c00acae8d735a34efc511aae",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78dd8c9c_2f3f4985",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3164,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2021-10-13T06:28:24Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "a5d1d807_327224c2",
+      "range": {
+        "startLine": 3164,
+        "startChar": 12,
+        "endLine": 3164,
+        "endChar": 79
+      },
+      "revId": "770d41138ab3c058c00acae8d735a34efc511aae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b6f98b43_d03af34e",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3164,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2021-10-13T06:28:24Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "a5d1d807_327224c2",
+      "range": {
+        "startLine": 3164,
+        "startChar": 12,
+        "endLine": 3164,
+        "endChar": 79
+      },
+      "revId": "770d41138ab3c058c00acae8d735a34efc511aae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
