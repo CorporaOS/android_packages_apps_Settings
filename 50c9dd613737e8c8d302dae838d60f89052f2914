@@ -16,6 +16,29 @@
       "message": "+ yanting to review for performance improvment.",
       "revId": "50c9dd613737e8c8d302dae838d60f89052f2914",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "efe81957_a3980dcd",
+        "filename": "src/com/android/settings/SettingsActivity.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2021-10-13T06:58:42Z",
+      "side": 1,
+      "message": "how do we ensure user follow up this rule?",
+      "range": {
+        "startLine": 257,
+        "startChar": 27,
+        "endLine": 258,
+        "endChar": 68
+      },
+      "revId": "50c9dd613737e8c8d302dae838d60f89052f2914",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
