@@ -16,6 +16,29 @@
       "message": "Hi, can you help to review this change for code refactor ? Thanks.",
       "revId": "53f03c322d518e343b9b51e5176b1b812d2ac1a9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0f50a98_f7ddde94",
+        "filename": "src/com/android/settings/applications/AppStateBaseBridge.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2021-10-13T03:40:02Z",
+      "side": 1,
+      "message": "can you explain why we need it?",
+      "range": {
+        "startLine": 57,
+        "startChar": 8,
+        "endLine": 57,
+        "endChar": 50
+      },
+      "revId": "53f03c322d518e343b9b51e5176b1b812d2ac1a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
