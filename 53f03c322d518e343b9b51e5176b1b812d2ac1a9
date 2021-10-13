@@ -39,6 +39,30 @@
       },
       "revId": "53f03c322d518e343b9b51e5176b1b812d2ac1a9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b61267c_aa73bb56",
+        "filename": "src/com/android/settings/applications/AppStateBaseBridge.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2021-10-13T04:49:54Z",
+      "side": 1,
+      "message": "Without this boolean, mAppSession.onResume() might be run twice.\nOne by itself - through listening to the lifecycle.\nOne by application - through invoke AppStateBaseBridge#resume().\nThis boolean is to avoid from the invoke from application when lifecycle been enabled.",
+      "parentUuid": "b0f50a98_f7ddde94",
+      "range": {
+        "startLine": 57,
+        "startChar": 8,
+        "endLine": 57,
+        "endChar": 50
+      },
+      "revId": "53f03c322d518e343b9b51e5176b1b812d2ac1a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
