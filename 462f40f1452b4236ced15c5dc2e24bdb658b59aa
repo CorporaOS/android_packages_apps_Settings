@@ -87,6 +87,30 @@
       },
       "revId": "462f40f1452b4236ced15c5dc2e24bdb658b59aa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ebce742c_01718ef9",
+        "filename": "src/com/android/settings/PreloadActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2021-10-13T06:45:22Z",
+      "side": 1,
+      "message": "1. It\u0027s most likely creating a lifecycle before onCreate().\n   At that stage, nothing get ready.\n   This is simply providing a context for PreferenceFragment to start some works in background to shorten the time required for first launch.\n\n2. Originally, it is designed as a PreloadActivity.java and only affected features applying it.\nWhich is to say, extends PreloadActivity in Settings.java (when comparing with extends SettingsActivity within Settings.java).\nOnly functional when launching a PreloadPreferenceFragment.\n\n3. Move to experimental area.",
+      "parentUuid": "be50a6e5_15d64530",
+      "range": {
+        "startLine": 25,
+        "startChar": 3,
+        "endLine": 39,
+        "endChar": 75
+      },
+      "revId": "462f40f1452b4236ced15c5dc2e24bdb658b59aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
