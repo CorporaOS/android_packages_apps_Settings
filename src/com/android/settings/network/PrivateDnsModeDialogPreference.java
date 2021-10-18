@@ -15,6 +15,8 @@
  */
 package com.android.settings.network;
 
+import static android.net.ConnectivitySettingsManager.PRIVATE_DNS_BLOCK_UNENCRYPTED_DNS_OFF;
+import static android.net.ConnectivitySettingsManager.PRIVATE_DNS_BLOCK_UNENCRYPTED_DNS_ON;
 import static android.net.ConnectivitySettingsManager.PRIVATE_DNS_MODE_OFF;
 import static android.net.ConnectivitySettingsManager.PRIVATE_DNS_MODE_OPPORTUNISTIC;
 import static android.net.ConnectivitySettingsManager.PRIVATE_DNS_MODE_PROVIDER_HOSTNAME;
@@ -38,6 +40,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -94,6 +97,7 @@ public class PrivateDnsModeDialogPreference extends CustomDialogPreferenceCompat
     RadioGroup mRadioGroup;
     @VisibleForTesting
     int mMode;
+    CheckBox mCheckBox;
 
     public PrivateDnsModeDialogPreference(Context context) {
         super(context);
@@ -161,6 +165,7 @@ public class PrivateDnsModeDialogPreference extends CustomDialogPreferenceCompat
         final ContentResolver contentResolver = context.getContentResolver();
 
         mMode = ConnectivitySettingsManager.getPrivateDnsMode(context);
+        final int blockDns = ConnectivitySettingsManager.getPrivateDnsBlockUnencryptedDns(context);
 
         mEditText = view.findViewById(R.id.private_dns_mode_provider_hostname);
         mEditText.addTextChangedListener(this);
@@ -169,6 +174,15 @@ public class PrivateDnsModeDialogPreference extends CustomDialogPreferenceCompat
         mRadioGroup = view.findViewById(R.id.private_dns_radio_group);
         mRadioGroup.setOnCheckedChangeListener(this);
         mRadioGroup.check(PRIVATE_DNS_MAP.getOrDefault(mMode, R.id.private_dns_mode_opportunistic));
+
+        mCheckBox = view.findViewById(R.id.block_unencrypted_dns);
+        if (PRIVATE_DNS_MODE_PROVIDER_HOSTNAME == mMode) {
+            mCheckBox.setEnabled(true);
+            mCheckBox.setChecked(blockDns == PRIVATE_DNS_BLOCK_UNENCRYPTED_DNS_ON);
+        } else {
+            mCheckBox.setEnabled(false);
+            mCheckBox.setChecked(false);
+        }
 
         // Initial radio button text
         final RadioButton offRadioButton = view.findViewById(R.id.private_dns_mode_off);
@@ -207,6 +221,9 @@ public class PrivateDnsModeDialogPreference extends CustomDialogPreferenceCompat
             FeatureFactory.getFactory(context).getMetricsFeatureProvider().action(context,
                     SettingsEnums.ACTION_PRIVATE_DNS_MODE, mMode);
             ConnectivitySettingsManager.setPrivateDnsMode(context, mMode);
+            ConnectivitySettingsManager.setPrivateDnsBlockUnencryptedDns(
+                    context, mCheckBox.isChecked()
+                    ? PRIVATE_DNS_BLOCK_UNENCRYPTED_DNS_ON : PRIVATE_DNS_BLOCK_UNENCRYPTED_DNS_OFF);
         }
     }
 
@@ -269,6 +286,14 @@ public class PrivateDnsModeDialogPreference extends CustomDialogPreferenceCompat
         final boolean modeProvider = PRIVATE_DNS_MODE_PROVIDER_HOSTNAME == mMode;
         if (mEditText != null) {
             mEditText.setEnabled(modeProvider);
+        }
+        if (mCheckBox != null) {
+            // If the mode is not PRIVATE_DNS_MODE_PROVIDER_HOSTNAME, automatically set
+            // the checkbox unchecked and grey it out.
+            if (!modeProvider) {
+                mCheckBox.setChecked(false);
+            }
+            mCheckBox.setEnabled(modeProvider);
         }
         final Button saveButton = getSaveButton();
         if (saveButton != null) {

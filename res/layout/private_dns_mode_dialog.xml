@@ -54,6 +54,13 @@
                 android:layout_marginStart="3dp"
                 android:layout_marginEnd="8dp"
                 android:minHeight="@dimen/developer_option_dialog_min_height"/>
+
+            <CheckBox
+                android:id="@+id/block_unencrypted_dns"
+                android:text="Block unencrypted DNS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
         </RadioGroup>
 
         <include
