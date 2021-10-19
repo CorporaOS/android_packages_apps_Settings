@@ -39,6 +39,53 @@
       },
       "revId": "50c9dd613737e8c8d302dae838d60f89052f2914",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8ca92d3d_0b87f2fd",
+        "filename": "src/com/android/settings/SettingsActivity.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2021-10-19T07:09:57Z",
+      "side": 1,
+      "message": "Still important to me since if it\u0027s main thread then it will impact the launch time.",
+      "parentUuid": "efe81957_a3980dcd",
+      "range": {
+        "startLine": 257,
+        "startChar": 27,
+        "endLine": 258,
+        "endChar": 68
+      },
+      "revId": "50c9dd613737e8c8d302dae838d60f89052f2914",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "411af230_12921b4f",
+        "filename": "src/com/android/settings/SettingsActivity.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 625,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2021-10-19T07:09:57Z",
+      "side": 1,
+      "message": "What\u0027s the API call you will put in this method? Will developer break the search functionality accidentally if they move their implementation in this method. How do we prevent this.",
+      "range": {
+        "startLine": 625,
+        "startChar": 44,
+        "endLine": 625,
+        "endChar": 61
+      },
+      "revId": "50c9dd613737e8c8d302dae838d60f89052f2914",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
