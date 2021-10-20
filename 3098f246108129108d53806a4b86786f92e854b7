@@ -16,6 +16,24 @@
       "message": "Hi sir/madam,\nA new feature that I thought would be a useful addition to Android. Looking forward for your review.\n\nThank You\nMadhu",
       "revId": "3098f246108129108d53806a4b86786f92e854b7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a99b150_d4d41b9f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1078064
+      },
+      "writtenOn": "2021-10-20T09:45:33Z",
+      "side": 1,
+      "message": "The changes lack any automated tests. \nBeyond that, this feature requires product discussion and security review.\n\nI can\u0027t provide either, but I\u0027d like to point out that the value of the feature is unclear because an attacker can put the device in an RF-blocking container until the device runs out of battery. So the goal of allowing someone who loses their device to locate it by preventing shutdown is doubtful.",
+      "parentUuid": "2d238546_b75c99d1",
+      "revId": "3098f246108129108d53806a4b86786f92e854b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
