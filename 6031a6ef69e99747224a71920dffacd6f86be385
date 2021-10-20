@@ -33,6 +33,24 @@
       "message": "Thanks Weng, can we get this merged today?\nBR\nMattias",
       "revId": "6031a6ef69e99747224a71920dffacd6f86be385",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "18d6d7da_608de21b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367652
+      },
+      "writtenOn": "2021-10-20T14:14:16Z",
+      "side": 1,
+      "message": "Yes, please. Thank you!",
+      "parentUuid": "baa109aa_c8a1f681",
+      "revId": "6031a6ef69e99747224a71920dffacd6f86be385",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
