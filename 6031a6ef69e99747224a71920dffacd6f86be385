@@ -51,6 +51,24 @@
       "parentUuid": "baa109aa_c8a1f681",
       "revId": "6031a6ef69e99747224a71920dffacd6f86be385",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "820b036e_48f2671e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1221112
+      },
+      "writtenOn": "2021-10-21T12:33:07Z",
+      "side": 1,
+      "message": "You may have misunderstood me, we need your help to merge it. We do not have permissions for that ;). \nBR\nMattias",
+      "parentUuid": "18d6d7da_608de21b",
+      "revId": "6031a6ef69e99747224a71920dffacd6f86be385",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
