@@ -292,10 +292,23 @@ public class MobileNetworkActivity extends SettingsBaseActivity
             Log.d(TAG, "Construct fragment: " + fragmentTag);
         }
 
+        Fragment prevFragment = fragmentManager.findFragmentById(R.id.content_frame);
+
         final Fragment fragment = new MobileNetworkSettings();
         fragment.setArguments(bundle);
         fragmentTransaction.replace(R.id.content_frame, fragment, fragmentTag);
         fragmentTransaction.commitAllowingStateLoss();
+
+        /**
+         * Adjust the fragment binding for the replacement operation.
+         *
+         * TODO: Traverse child fragments and fixing in same way.
+         */
+        fragmentManager.getFragments().forEach(f -> {
+            if (f.getTargetFragment() == prevFragment) {
+                f.setTargetFragment(fragment, 0);
+            }
+        });
     }
 
     private void removeContactDiscoveryDialog(int subId) {
