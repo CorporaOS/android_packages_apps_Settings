@@ -77,6 +77,12 @@ public class UsbDetailsTranscodeMtpController extends UsbDetailsController
     public boolean onPreferenceClick(Preference preference) {
         SystemProperties.set(TRANSCODE_MTP_SYS_PROP_KEY,
                 Boolean.toString(mSwitchPreference.isChecked()));
+
+        final long previousFunctions = mUsbBackend.getCurrentFunctions();
+        // Toggle the MTP connection to reload file sizes for files shared via MTP clients
+        mUsbBackend.setCurrentFunctions(UsbManager.FUNCTION_NONE);
+        mUsbBackend.setCurrentFunctions(previousFunctions);
+
         return true;
     }
 
