@@ -16,6 +16,23 @@
       "message": "Rebased, but I can\u0027t build redfin on AOSP to test this right now as there is an unrelated build error.",
       "revId": "89c2c5e9c08d68666fd56137f47834d8e320f90d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "430c4a82_845e7f59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004882
+      },
+      "writtenOn": "2021-11-09T07:11:41Z",
+      "side": 1,
+      "message": "Unable to get AOSP to build, but verified on the closest thing that I had to AOSP.",
+      "revId": "89c2c5e9c08d68666fd56137f47834d8e320f90d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
