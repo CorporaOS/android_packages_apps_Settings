@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa8975d6_110c2d69",
+        "filename": "src/com/android/settings/nfc/NfcPaymentPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1165283
+      },
+      "writtenOn": "2021-11-11T01:59:48Z",
+      "side": 1,
+      "message": "Nit: for consistency, you might want to also call this um.",
+      "range": {
+        "startLine": 131,
+        "startChar": 24,
+        "endLine": 131,
+        "endChar": 31
+      },
+      "revId": "ae81ca1c81c0ecfd2e71a110c925abdf32f4cff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd45832d_21429de1",
+        "filename": "src/com/android/settings/nfc/PaymentBackend.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 1165283
+      },
+      "writtenOn": "2021-11-11T01:59:48Z",
+      "side": 1,
+      "message": "Just for my own understanding: what\u0027s the reason for switching from using `UserHandle.myUserId()` to using `ActivityManager.getCurrentUser()`?\n\nIs it just because you want to make sure that you\u0027re calling `getEnabledProfiles()` for the parent? Or is there a different reason?",
+      "range": {
+        "startLine": 177,
+        "startChar": 30,
+        "endLine": 177,
+        "endChar": 62
+      },
+      "revId": "ae81ca1c81c0ecfd2e71a110c925abdf32f4cff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5555475b_596ae67e",
+        "filename": "src/com/android/settings/nfc/PaymentDefaultDialog.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1165283
+      },
+      "writtenOn": "2021-11-11T01:59:48Z",
+      "side": 1,
+      "message": "So this will keep looking, even after it has found it, and adopt the last one?",
+      "range": {
+        "startLine": 93,
+        "startChar": 8,
+        "endLine": 93,
+        "endChar": 11
+      },
+      "revId": "ae81ca1c81c0ecfd2e71a110c925abdf32f4cff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
