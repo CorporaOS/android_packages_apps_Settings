@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6bf044e2_c9cca9f5",
+        "filename": "src/com/android/settings/nfc/NfcPaymentPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1328430
+      },
+      "writtenOn": "2021-11-11T08:42:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aa8975d6_110c2d69",
+      "range": {
+        "startLine": 131,
+        "startChar": 24,
+        "endLine": 131,
+        "endChar": 31
+      },
+      "revId": "ae81ca1c81c0ecfd2e71a110c925abdf32f4cff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fd45832d_21429de1",
@@ -49,6 +73,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "150e6548_5c62c839",
+        "filename": "src/com/android/settings/nfc/PaymentBackend.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 1328430
+      },
+      "writtenOn": "2021-11-11T08:42:00Z",
+      "side": 1,
+      "message": "Here I tried to set the same Settings.Secure.NFC_PAYMENT_FOREGROUND value for all enabled profiles. When profile applications query, they can get correct setting.",
+      "parentUuid": "fd45832d_21429de1",
+      "range": {
+        "startLine": 177,
+        "startChar": 30,
+        "endLine": 177,
+        "endChar": 62
+      },
+      "revId": "ae81ca1c81c0ecfd2e71a110c925abdf32f4cff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5555475b_596ae67e",
         "filename": "src/com/android/settings/nfc/PaymentDefaultDialog.java",
         "patchSetId": 3
@@ -60,6 +108,30 @@
       "writtenOn": "2021-11-11T01:59:48Z",
       "side": 1,
       "message": "So this will keep looking, even after it has found it, and adopt the last one?",
+      "range": {
+        "startLine": 93,
+        "startChar": 8,
+        "endLine": 93,
+        "endChar": 11
+      },
+      "revId": "ae81ca1c81c0ecfd2e71a110c925abdf32f4cff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "64bcfdcd_bb4a6f23",
+        "filename": "src/com/android/settings/nfc/PaymentDefaultDialog.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1328430
+      },
+      "writtenOn": "2021-11-11T08:42:00Z",
+      "side": 1,
+      "message": "Yes, usually there shouldn\u0027t be another payment service that can be matched.\nThe requestedPaymentApp and defaultPaymentApp might be different, so we simply traverse all services.",
+      "parentUuid": "5555475b_596ae67e",
       "range": {
         "startLine": 93,
         "startChar": 8,
