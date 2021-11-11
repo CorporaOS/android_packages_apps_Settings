@@ -97,6 +97,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "378fa394_4f8371f4",
+        "filename": "src/com/android/settings/nfc/PaymentBackend.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 1165283
+      },
+      "writtenOn": "2021-11-11T19:57:30Z",
+      "side": 1,
+      "message": "Not sure I follow fully.\n\nThere are three scenarios:\n1. it is called by the parent, who is in the foreground. Then myUserId\u003d\u003dgetCurrentUser. So this cl is a no-op in that case.\n\n2. it is called by a profile, whose parent is in the foreground. Then myUserId\u003dprofile which differs from the getCurrentUser\u003dparent. However, getEnabledProfiles happens to return the same list either way. So it didn\u0027t matter which you put [although perhaps getCurrentUser is indeed clearer and safer].\n\n3. it is called by a user that is NOT the current user nor a profile of it. Then things are very different from the previous behavior, since myUserId has nothing to do with the profiles of getCurrentUser. So the behaviour is different then. But I\u0027m guessing that\u0027s not a situation you are caring about?\n\nI just wanted to clarify that it is situation 2 that you did this (which I believe technically doesn\u0027t even need it, but it\u0027s fine and perhaps safer since the API documentation doesn\u0027t explicitly state that getEnablesProfiles works on a profile).",
+      "parentUuid": "150e6548_5c62c839",
+      "range": {
+        "startLine": 177,
+        "startChar": 30,
+        "endLine": 177,
+        "endChar": 62
+      },
+      "revId": "ae81ca1c81c0ecfd2e71a110c925abdf32f4cff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5555475b_596ae67e",
         "filename": "src/com/android/settings/nfc/PaymentDefaultDialog.java",
         "patchSetId": 3
