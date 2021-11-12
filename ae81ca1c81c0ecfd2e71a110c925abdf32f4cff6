@@ -121,6 +121,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "401fdb47_097a7c97",
+        "filename": "src/com/android/settings/nfc/PaymentBackend.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 1328430
+      },
+      "writtenOn": "2021-11-12T09:35:41Z",
+      "side": 1,
+      "message": "It seems I misunderstood your first question.\nThis function is only called from Settings app.\nI thought it\u0027s should always be the current user not profile user since I did not notice the Setting app in the work profile.\nSo I used getCurrentUser().\nIf it\u0027s the same, I can modify this part to UserHandle.myUserId().\nIs it suggested to use UserHandle.myUserId()？",
+      "parentUuid": "378fa394_4f8371f4",
+      "range": {
+        "startLine": 177,
+        "startChar": 30,
+        "endLine": 177,
+        "endChar": 62
+      },
+      "revId": "ae81ca1c81c0ecfd2e71a110c925abdf32f4cff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5555475b_596ae67e",
         "filename": "src/com/android/settings/nfc/PaymentDefaultDialog.java",
         "patchSetId": 3
@@ -156,6 +180,30 @@
       "side": 1,
       "message": "Yes, usually there shouldn\u0027t be another payment service that can be matched.\nThe requestedPaymentApp and defaultPaymentApp might be different, so we simply traverse all services.",
       "parentUuid": "5555475b_596ae67e",
+      "range": {
+        "startLine": 93,
+        "startChar": 8,
+        "endLine": 93,
+        "endChar": 11
+      },
+      "revId": "ae81ca1c81c0ecfd2e71a110c925abdf32f4cff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5976637_ddc55a67",
+        "filename": "src/com/android/settings/nfc/PaymentDefaultDialog.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1328430
+      },
+      "writtenOn": "2021-11-12T09:35:41Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "64bcfdcd_bb4a6f23",
       "range": {
         "startLine": 93,
         "startChar": 8,
