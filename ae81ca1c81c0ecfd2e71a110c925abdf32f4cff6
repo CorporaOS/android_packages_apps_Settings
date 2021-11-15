@@ -167,6 +167,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "080789d1_6352bff2",
+        "filename": "src/com/android/settings/nfc/PaymentBackend.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 1328430
+      },
+      "writtenOn": "2021-11-15T11:10:12Z",
+      "side": 1,
+      "message": "Updated to user \"UserHandle.myUserId()\".\n\nI expect the function to be - write the same value to Settings.Secure.NFC_PAYMENT_FOREGROUND for all users that belong to the same parent user as the caller.",
+      "parentUuid": "1be53074_3079990d",
+      "range": {
+        "startLine": 177,
+        "startChar": 30,
+        "endLine": 177,
+        "endChar": 62
+      },
+      "revId": "ae81ca1c81c0ecfd2e71a110c925abdf32f4cff6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5555475b_596ae67e",
