@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9904e882_381765cc",
+        "filename": "src/com/android/settings/bluetooth/BluetoothDetailsMacAddressController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1320071
+      },
+      "writtenOn": "2021-11-29T01:49:37Z",
+      "side": 1,
+      "message": "nits: title",
+      "range": {
+        "startLine": 55,
+        "startChar": 26,
+        "endLine": 55,
+        "endChar": 32
+      },
+      "revId": "9f11a4cddf42cb04e3980e7c86b3c83bb66fdafd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
