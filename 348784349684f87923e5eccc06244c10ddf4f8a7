@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "13dd18a1_3e65172e",
+        "filename": "tests/robotests/src/com/android/settings/bluetooth/AvailableMediaBluetoothDeviceUpdaterTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 1730162
+      },
+      "writtenOn": "2021-11-29T02:09:17Z",
+      "side": 1,
+      "message": "cherry-pick from downstream, I would do it in the other patch.",
+      "parentUuid": "7771d869_9cd3fa71",
+      "range": {
+        "startLine": 238,
+        "startChar": 81,
+        "endLine": 238,
+        "endChar": 94
+      },
+      "revId": "348784349684f87923e5eccc06244c10ddf4f8a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f027b77d_8ad3da09",
@@ -37,6 +61,30 @@
       "writtenOn": "2021-11-29T01:57:05Z",
       "side": 1,
       "message": "ditto",
+      "range": {
+        "startLine": 251,
+        "startChar": 78,
+        "endLine": 251,
+        "endChar": 91
+      },
+      "revId": "348784349684f87923e5eccc06244c10ddf4f8a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4c59e89_8733b2fc",
+        "filename": "tests/robotests/src/com/android/settings/bluetooth/AvailableMediaBluetoothDeviceUpdaterTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 1730162
+      },
+      "writtenOn": "2021-11-29T02:09:17Z",
+      "side": 1,
+      "message": "cherry-pick from downstream, I would do it in the other patch.",
+      "parentUuid": "f027b77d_8ad3da09",
       "range": {
         "startLine": 251,
         "startChar": 78,
@@ -70,6 +118,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9753fb6d_8399cab8",
+        "filename": "tests/robotests/src/com/android/settings/bluetooth/ConnectedBluetoothDeviceUpdaterTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 1730162
+      },
+      "writtenOn": "2021-11-29T02:09:17Z",
+      "side": 1,
+      "message": "cherry-pick from downstream, I would do it in the other patch.",
+      "parentUuid": "884fadd7_0111e249",
+      "range": {
+        "startLine": 238,
+        "startChar": 78,
+        "endLine": 238,
+        "endChar": 94
+      },
+      "revId": "348784349684f87923e5eccc06244c10ddf4f8a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "012f25c6_0362b723",
@@ -83,6 +155,30 @@
       "writtenOn": "2021-11-29T01:57:05Z",
       "side": 1,
       "message": "ditto",
+      "range": {
+        "startLine": 251,
+        "startChar": 81,
+        "endLine": 251,
+        "endChar": 97
+      },
+      "revId": "348784349684f87923e5eccc06244c10ddf4f8a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8516378d_800081cf",
+        "filename": "tests/robotests/src/com/android/settings/bluetooth/ConnectedBluetoothDeviceUpdaterTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 1730162
+      },
+      "writtenOn": "2021-11-29T02:09:17Z",
+      "side": 1,
+      "message": "cherry-pick from downstream, I would do it in the other patch.",
+      "parentUuid": "012f25c6_0362b723",
       "range": {
         "startLine": 251,
         "startChar": 81,
