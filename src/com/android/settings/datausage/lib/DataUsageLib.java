@@ -68,7 +68,7 @@ public class DataUsageLib {
             return mobileTemplate;
         }
 
-        return NetworkTemplate.normalize(mobileTemplate, mergedSubscriberIds);
+        return NetworkTemplate.normalize(mobileTemplate, mergedSubscriberIds, null);
     }
 
     private static NetworkTemplate getMobileTemplateForSubId(
@@ -76,7 +76,7 @@ public class DataUsageLib {
         // The null subscriberId means that no any mobile/carrier network will be matched.
         // Using old API: buildTemplateMobileAll for the null subscriberId to avoid NPE.
         String subscriberId = telephonyManager.getSubscriberId(subId);
-        return subscriberId != null ? NetworkTemplate.buildTemplateCarrierMetered(subscriberId)
-                : NetworkTemplate.buildTemplateMobileAll(subscriberId);
+        return subscriberId != null ? NetworkTemplate.buildTemplateCarrierMetered(subscriberId,
+                subId) : NetworkTemplate.buildTemplateMobileAll(subscriberId, subId);
     }
 }

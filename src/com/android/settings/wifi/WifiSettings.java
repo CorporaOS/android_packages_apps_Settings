@@ -267,7 +267,7 @@ public class WifiSettings extends RestrictedSettingsFragment
         mDataUsagePreference.setVisible(DataUsageUtils.hasWifiRadio(getContext()));
         mDataUsagePreference.setTemplate(
                 NetworkTemplate.buildTemplateWifi(NetworkTemplate.WIFI_NETWORKID_ALL,
-                null /* subscriberId */), 0 /*subId*/, null /*service*/);
+                null /* subscriberId */, 0 /*subId*/), 0 /*subId*/, null /*service*/);
     }
 
     @Override

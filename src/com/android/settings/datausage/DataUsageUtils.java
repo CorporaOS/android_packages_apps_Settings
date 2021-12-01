@@ -185,7 +185,7 @@ public final class DataUsageUtils extends com.android.settingslib.net.DataUsageU
             return DataUsageLib.getMobileTemplate(context, defaultSubId);
         } else if (hasWifiRadio(context)) {
             return NetworkTemplate.buildTemplateWifi(NetworkTemplate.WIFI_NETWORKID_ALL,
-                    null /* subscriberId */);
+                    null /* subscriberId */, 0 /* subId */);
         } else {
             return NetworkTemplate.buildTemplateEthernet();
         }

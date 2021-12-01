@@ -112,13 +112,14 @@ public class SettingsDumpService extends Service {
                 telephonyManager = telephonyManager
                         .createForSubscriptionId(info.getSubscriptionId());
                 String subscriberId = telephonyManager.getSubscriberId();
+                int subId = info.getSubscriptionId();
                 // The null subscriberId means that no any mobile/carrier network will be matched.
                 // Using old API: buildTemplateMobileAll for the null subscriberId to avoid NPE.
                 NetworkTemplate template = subscriberId != null
-                        ? NetworkTemplate.buildTemplateCarrierMetered(subscriberId)
-                        : NetworkTemplate.buildTemplateMobileAll(subscriberId);
+                        ? NetworkTemplate.buildTemplateCarrierMetered(subscriberId, subId)
+                        : NetworkTemplate.buildTemplateMobileAll(subscriberId, subId);
                 final JSONObject usage = dumpDataUsage(template, controller);
-                usage.put("subId", info.getSubscriptionId());
+                usage.put("subId", subId);
                 array.put(usage);
             }
             obj.put("cell", array);
@@ -126,7 +127,8 @@ public class SettingsDumpService extends Service {
         if (packageManager.hasSystemFeature(FEATURE_WIFI)) {
             obj.put("wifi", dumpDataUsage(
                     NetworkTemplate.buildTemplateWifi(
-                    NetworkTemplate.WIFI_NETWORKID_ALL, null /* subscriberId */), controller));
+                    NetworkTemplate.WIFI_NETWORKID_ALL, null /* subscriberId */, 0 /* subId */),
+                    controller));
         }
 
         if (packageManager.hasSystemFeature(FEATURE_ETHERNET)) {

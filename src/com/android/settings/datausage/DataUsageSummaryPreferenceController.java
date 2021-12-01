@@ -139,7 +139,7 @@ public class DataUsageSummaryPreferenceController extends TelephonyBasePreferenc
         } else if (DataUsageUtils.hasWifiRadio(context)) {
             mDataUsageTemplate = R.string.wifi_data_template;
             mDefaultTemplate = NetworkTemplate.buildTemplateWifi(
-                    NetworkTemplate.WIFI_NETWORKID_ALL, null /* subscriberId */);
+                    NetworkTemplate.WIFI_NETWORKID_ALL, null /* subscriberId */, subscriptionId);
         } else {
             mDataUsageTemplate = R.string.ethernet_data_template;
             mDefaultTemplate = DataUsageUtils.getDefaultTemplate(context, subscriptionId);

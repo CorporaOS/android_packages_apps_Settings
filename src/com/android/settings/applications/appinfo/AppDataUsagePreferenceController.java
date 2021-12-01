@@ -140,7 +140,7 @@ public class AppDataUsagePreferenceController extends AppInfoPreferenceControlle
         }
         if (DataUsageUtils.hasWifiRadio(context)) {
             return NetworkTemplate.buildTemplateWifi(NetworkTemplate.WIFI_NETWORKID_ALL,
-                    null /* subscriberId */);
+                    null /* subscriberId */, 0 /* subId */);
         }
         return NetworkTemplate.buildTemplateEthernet();
     }
