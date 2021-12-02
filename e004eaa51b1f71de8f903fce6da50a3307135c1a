@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1466f5c_ba5f784b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2021-12-02T05:46:24Z",
+      "side": 1,
+      "message": "LGTM from my perspective.\nAdd Buletooth Settings owner to review.",
+      "revId": "e004eaa51b1f71de8f903fce6da50a3307135c1a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
