@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53e57dc2_62499e13",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 3845,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2021-12-03T07:39:22Z",
+      "side": 1,
+      "message": "\u003c!-- (b/197919878) Disable startup provider due to resource loading issue. --\u003e\n\nPlease help add this comment for tracking purpose. Thanks",
+      "range": {
+        "startLine": 3845,
+        "startChar": 8,
+        "endLine": 3845,
+        "endChar": 72
+      },
+      "revId": "baf1815396f610c96e3e142394085b5de19522b9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
