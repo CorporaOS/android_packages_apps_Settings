@@ -16,6 +16,24 @@
       "message": "Can you create an open bug/issue to track this cl?",
       "revId": "6a42caed7ced58ceff018f19f780213b3c5751eb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "84d20e74_fe71d828",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1928671
+      },
+      "writtenOn": "2021-12-03T07:11:24Z",
+      "side": 1,
+      "message": "Issue created: https://issuetracker.google.com/issues/208883742\n\nI\u0027m not sure if set Framework as component is correct.",
+      "parentUuid": "e978f384_a5b61e25",
+      "revId": "6a42caed7ced58ceff018f19f780213b3c5751eb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
