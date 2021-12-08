@@ -196,6 +196,8 @@ public class EnabledNetworkModePreferenceController extends
         ENABLED_NETWORKS_EXCEPT_GSM_4G_CHOICES,
         ENABLED_NETWORKS_EXCEPT_GSM_CHOICES,
         ENABLED_NETWORKS_EXCEPT_LTE_CHOICES,
+        ENABLED_NETWORKS_EXCEPT_GSM_3G_4G_CHOICES,
+        ENABLED_NETWORKS_EXCEPT_GSM_3G_CHOICES,
         ENABLED_NETWORKS_4G_CHOICES,
         ENABLED_NETWORKS_CHOICES,
         PREFERRED_NETWORK_MODE_CHOICES_WORLD_MODE
@@ -337,6 +339,28 @@ public class EnabledNetworkModePreferenceController extends
                     addLteEntry(entryValuesInt[0]);
                     add3gEntry(entryValuesInt[1]);
                     break;
+                case ENABLED_NETWORKS_EXCEPT_GSM_3G_4G_CHOICES:
+                    entryValues = mContext.getResources().getStringArray(
+                            R.array.enabled_networks_except_gsm_3g_values);
+                    entryValuesInt = Stream.of(entryValues).mapToInt(Integer::parseInt).toArray();
+                    if (entryValuesInt.length < 1) {
+                        throw new IllegalArgumentException(
+                                "ENABLED_NETWORKS_EXCEPT_GSM_4G_CHOICES index error.");
+                    }
+                    add5gEntry(addNrToLteNetworkType(entryValuesInt[0]));
+                    add4gEntry(entryValuesInt[0]);
+                    break;
+                case ENABLED_NETWORKS_EXCEPT_GSM_3G_CHOICES:
+                    entryValues = mContext.getResources().getStringArray(
+                            R.array.enabled_networks_except_gsm_3g_values);
+                    entryValuesInt = Stream.of(entryValues).mapToInt(Integer::parseInt).toArray();
+                    if (entryValuesInt.length < 1) {
+                        throw new IllegalArgumentException(
+                                "ENABLED_NETWORKS_EXCEPT_GSM_CHOICES index error.");
+                    }
+                    add5gEntry(addNrToLteNetworkType(entryValuesInt[0]));
+                    addLteEntry(entryValuesInt[0]);
+                    break;
                 case ENABLED_NETWORKS_EXCEPT_LTE_CHOICES:
                     entryValues = getResourcesForSubId().getStringArray(
                             R.array.enabled_networks_except_lte_values);
@@ -452,6 +476,12 @@ public class EnabledNetworkModePreferenceController extends
                         && !carrierConfig.getBoolean(CarrierConfigManager.KEY_PREFER_2G_BOOL)
                         && !carrierConfig.getBoolean(CarrierConfigManager.KEY_LTE_ENABLED_BOOL)) {
                     enabledNetworkType = EnabledNetworks.ENABLED_NETWORKS_EXCEPT_GSM_LTE_CHOICES;
+                } else if (carrierConfig != null
+                        && !carrierConfig.getBoolean(CarrierConfigManager.KEY_PREFER_2G_BOOL)
+                        && !carrierConfig.getBoolean(CarrierConfigManager.KEY_PREFER_3G_BOOL)) {
+                    enabledNetworkType = mShow4gForLTE
+                            ? EnabledNetworks.ENABLED_NETWORKS_EXCEPT_GSM_3G_4G_CHOICES
+                            : EnabledNetworks.ENABLED_NETWORKS_EXCEPT_GSM_3G_CHOICES;
                 } else if (carrierConfig != null
                         && !carrierConfig.getBoolean(CarrierConfigManager.KEY_PREFER_2G_BOOL)) {
                     enabledNetworkType = mShow4gForLTE
