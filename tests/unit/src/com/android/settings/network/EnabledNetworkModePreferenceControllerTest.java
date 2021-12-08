@@ -335,6 +335,28 @@ public class EnabledNetworkModePreferenceControllerTest {
 
     @UiThreadTest
     @Test
+    public void updateState_3gGsmOptionHidden() {
+        mockEnabledNetworkMode(TelephonyManagerConstants.NETWORK_MODE_NR_LTE_CDMA_EVDO_GSM_WCDMA);
+        mockAllowedNetworkTypes(ALLOWED_ALL_NETWORK_TYPE);
+        mockAccessFamily(TelephonyManager.NETWORK_MODE_NR_LTE_CDMA_EVDO_GSM_WCDMA);
+        mController.init(mLifecycle, SUB_ID);
+        mockPhoneType(TelephonyManager.PHONE_TYPE_GSM);
+        mPersistableBundle.putBoolean(CarrierConfigManager.KEY_PREFER_3G_BOOL, false);
+        mPersistableBundle.putBoolean(CarrierConfigManager.KEY_PREFER_2G_BOOL, false);
+
+        mController.updateState(mPreference);
+
+        assertThat(mPreference.getEntryValues())
+                .asList()
+                .doesNotContain(String.valueOf(TelephonyManager.NETWORK_MODE_WCDMA_PREF));
+
+        assertThat(mPreference.getEntryValues())
+                .asList()
+                .doesNotContain(String.valueOf(TelephonyManager.NETWORK_MODE_GSM_ONLY));
+    }
+
+    @UiThreadTest
+    @Test
     public void onPreferenceChange_updateSuccess() {
         mockEnabledNetworkMode(TelephonyManagerConstants.NETWORK_MODE_LTE_GSM_WCDMA);
         doReturn(true).when(mTelephonyManager).setPreferredNetworkTypeBitmask(
@@ -421,6 +443,11 @@ public class EnabledNetworkModePreferenceControllerTest {
         entryValues = mController.getResourcesForSubId().getStringArray(id);
         assertEquals(2, entryValues.length);
 
+        id = mController.getResourcesForSubId().getIdentifier(
+                "enabled_networks_except_gsm_3g_values", "array", mContext.getPackageName());
+        entryValues = mController.getResourcesForSubId().getStringArray(id);
+        assertEquals(1, entryValues.length);
+
         id = mController.getResourcesForSubId().getIdentifier("enabled_networks_except_lte_values",
                 "array", mContext.getPackageName());
         entryValues = mController.getResourcesForSubId().getStringArray(id);
@@ -450,6 +477,7 @@ public class EnabledNetworkModePreferenceControllerTest {
                 || networkMode == TelephonyManagerConstants.NETWORK_MODE_LTE_CDMA_EVDO_GSM_WCDMA) {
             mockPhoneType(TelephonyManager.PHONE_TYPE_GSM);
             mPersistableBundle.putBoolean(CarrierConfigManager.KEY_PREFER_2G_BOOL, true);
+            mPersistableBundle.putBoolean(CarrierConfigManager.KEY_PREFER_3G_BOOL, true);
             mPersistableBundle.putBoolean(CarrierConfigManager.KEY_LTE_ENABLED_BOOL, true);
         } else if (networkMode == TelephonyManagerConstants.NETWORK_MODE_NR_LTE_TDSCDMA_GSM_WCDMA) {
             mockPhoneType(TelephonyManager.PHONE_TYPE_GSM);
@@ -459,6 +487,7 @@ public class EnabledNetworkModePreferenceControllerTest {
                 == TelephonyManagerConstants.NETWORK_MODE_NR_LTE_CDMA_EVDO_GSM_WCDMA) {
             mockPhoneType(TelephonyManager.PHONE_TYPE_GSM);
             mPersistableBundle.putBoolean(CarrierConfigManager.KEY_PREFER_2G_BOOL, true);
+            mPersistableBundle.putBoolean(CarrierConfigManager.KEY_PREFER_3G_BOOL, true);
             mPersistableBundle.putBoolean(CarrierConfigManager.KEY_LTE_ENABLED_BOOL, true);
         }
     }
