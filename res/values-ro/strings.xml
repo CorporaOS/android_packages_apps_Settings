@@ -144,10 +144,10 @@
     <string name="bluetooth_pref_summary" product="device" msgid="2192027516577675587">"Permiteți dispozitivului să comunice cu dispozitivele Bluetooth din apropiere"</string>
     <string name="bluetooth_pref_summary" product="default" msgid="768958961865499804">"Permiteți telefonului să comunice cu dispozitivele Bluetooth din apropiere"</string>
     <string name="bluetooth_disable_a2dp_hw_offload" msgid="5942913792817797541">"Dezactivați descărcarea prin hardware cu Bluetooth A2DP"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_title" msgid="8610420176339657720">"Reporniți dispoz.?"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_message" msgid="8333029144800835996">"Trebuie să reporniți dispozitivul pentru a modifica setarea."</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_confirm" msgid="3488695418187553566">"Reporniți"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_cancel" msgid="4930826928585464191">"Anulați"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_title" msgid="8610420176339657720">"Reporniți dispoz.?"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_message" msgid="8333029144800835996">"Trebuie să reporniți dispozitivul pentru a modifica setarea."</string>
+    <string name="bluetooth_disable_hw_offload_dialog_confirm" msgid="3488695418187553566">"Reporniți"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_cancel" msgid="4930826928585464191">"Anulați"</string>
     <string name="connected_device_media_device_title" msgid="3783388247594566734">"Dispozitive media"</string>
     <string name="connected_device_call_device_title" msgid="88732390601723608">"Dispozitive de apel"</string>
     <string name="connected_device_other_device_title" msgid="4652120430615729193">"Alte dispozitive"</string>

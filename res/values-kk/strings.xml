@@ -143,10 +143,10 @@
     <string name="bluetooth_pref_summary" product="device" msgid="2192027516577675587">"Құрылғыңызға маңайдағы Bluetooth құрылғыларымен байланыс орнатуға рұқсат етіңіз"</string>
     <string name="bluetooth_pref_summary" product="default" msgid="768958961865499804">"Телефоныңызға маңайдағы Bluetooth құрылғыларымен байланыс орнатуға рұқсат етіңіз"</string>
     <string name="bluetooth_disable_a2dp_hw_offload" msgid="5942913792817797541">"Bluetooth A2DP жүктемесін түсіруді өшіру"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_title" msgid="8610420176339657720">"Құрылғы қайта қосылсын ба?"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_message" msgid="8333029144800835996">"Бұл параметрді өзгерту үшін құрылғыны қайта қосу қажет."</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_confirm" msgid="3488695418187553566">"Қайта қосу"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_cancel" msgid="4930826928585464191">"Бас тарту"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_title" msgid="8610420176339657720">"Құрылғы қайта қосылсын ба?"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_message" msgid="8333029144800835996">"Бұл параметрді өзгерту үшін құрылғыны қайта қосу қажет."</string>
+    <string name="bluetooth_disable_hw_offload_dialog_confirm" msgid="3488695418187553566">"Қайта қосу"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_cancel" msgid="4930826928585464191">"Бас тарту"</string>
     <string name="connected_device_media_device_title" msgid="3783388247594566734">"Сақтау құрылғылары"</string>
     <string name="connected_device_call_device_title" msgid="88732390601723608">"Қоңырау шалуға болатын құрылғылар"</string>
     <string name="connected_device_other_device_title" msgid="4652120430615729193">"Басқа құрылғылар"</string>

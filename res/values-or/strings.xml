@@ -143,10 +143,10 @@
     <string name="bluetooth_pref_summary" product="device" msgid="2192027516577675587">"ଆପଣଙ୍କର ଡିଭାଇସ୍‌କୁ ଆଖପାଖରେ ଥିବା ବ୍ଲୁଟୂଥ୍‍ ଡିଭାଇସ୍ ସହ ଯୋଗାଯୋଗ କରିବାକୁ ଦିଅନ୍ତୁ"</string>
     <string name="bluetooth_pref_summary" product="default" msgid="768958961865499804">"ଆପଣଙ୍କର ଫୋନ୍‌କୁ ଆଖପାଖରେ ଥିବା ବ୍ଲୁଟୂଥ୍‍ ଡିଭାଇସ୍ ସହ ଯୋଗାଯୋଗ କରିବାକୁ ଦିଅନ୍ତୁ"</string>
     <string name="bluetooth_disable_a2dp_hw_offload" msgid="5942913792817797541">"Bluetooth A2DP ହାର୍ଡୱେର୍‍ ଅଫଲୋଡ୍ ଅକ୍ଷମ କରନ୍ତୁ"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_title" msgid="8610420176339657720">"ଡିଭାଇସ୍‍ ରିଷ୍ଟାର୍ଟ କରିବେ କି?"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_message" msgid="8333029144800835996">"ଏହି ସେଟିଂ ବଦଳାଇବାକୁ ଆପଣଙ୍କୁ ଆପଣଙ୍କର ଡିଭାଇସ୍‍ ରିଷ୍ଟାର୍ଟ କରିବାକୁ ହେବ।"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_confirm" msgid="3488695418187553566">"ରିଷ୍ଟାର୍ଟ କରନ୍ତୁ"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_cancel" msgid="4930826928585464191">"ବାତିଲ୍ କରନ୍ତୁ"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_title" msgid="8610420176339657720">"ଡିଭାଇସ୍‍ ରିଷ୍ଟାର୍ଟ କରିବେ କି?"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_message" msgid="8333029144800835996">"ଏହି ସେଟିଂ ବଦଳାଇବାକୁ ଆପଣଙ୍କୁ ଆପଣଙ୍କର ଡିଭାଇସ୍‍ ରିଷ୍ଟାର୍ଟ କରିବାକୁ ହେବ।"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_confirm" msgid="3488695418187553566">"ରିଷ୍ଟାର୍ଟ କରନ୍ତୁ"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_cancel" msgid="4930826928585464191">"ବାତିଲ୍ କରନ୍ତୁ"</string>
     <string name="connected_device_media_device_title" msgid="3783388247594566734">"ମିଡିଆ ଡିଭାଇସ୍‌ଗୁଡ଼ିକ"</string>
     <string name="connected_device_call_device_title" msgid="88732390601723608">"କଲ୍ ଡିଭାଇସ୍‌ଗୁଡ଼ିକ"</string>
     <string name="connected_device_other_device_title" msgid="4652120430615729193">"ଅନ୍ୟ ଡିଭାଇସ୍‌ଗୁଡ଼ିକ"</string>
