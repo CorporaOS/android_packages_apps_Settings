@@ -28,17 +28,16 @@ import androidx.fragment.app.FragmentManager;
 import com.android.settings.R;
 import com.android.settings.core.instrumentation.InstrumentedDialogFragment;
 
-public class BluetoothA2dpHwOffloadRebootDialog extends InstrumentedDialogFragment
+public class BluetoothHwOffloadRebootDialog extends InstrumentedDialogFragment
         implements DialogInterface.OnClickListener {
 
-    public static final String TAG = "BluetoothA2dpHwOffloadReboot";
+    public static final String TAG = "BluetoothHwOffloadReboot";
 
-    public static void show(DevelopmentSettingsDashboardFragment host,
-            BluetoothA2dpHwOffloadPreferenceController controller) {
+    public static void show(DevelopmentSettingsDashboardFragment host) {
         final FragmentManager manager = host.getActivity().getSupportFragmentManager();
         if (manager.findFragmentByTag(TAG) == null) {
-            final BluetoothA2dpHwOffloadRebootDialog dialog =
-                    new BluetoothA2dpHwOffloadRebootDialog();
+            final BluetoothHwOffloadRebootDialog dialog =
+                    new BluetoothHwOffloadRebootDialog();
             dialog.setTargetFragment(host, 0 /* requestCode */);
             dialog.show(manager, TAG);
         }
@@ -52,33 +51,36 @@ public class BluetoothA2dpHwOffloadRebootDialog extends InstrumentedDialogFragme
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         return new AlertDialog.Builder(getActivity())
-                .setMessage(R.string.bluetooth_disable_a2dp_hw_offload_dialog_message)
-                .setTitle(R.string.bluetooth_disable_a2dp_hw_offload_dialog_title)
+                .setMessage(R.string.bluetooth_disable_hw_offload_dialog_message)
+                .setTitle(R.string.bluetooth_disable_hw_offload_dialog_title)
                 .setPositiveButton(
-                        R.string.bluetooth_disable_a2dp_hw_offload_dialog_confirm, this)
+                        R.string.bluetooth_disable_hw_offload_dialog_confirm, this)
                 .setNegativeButton(
-                        R.string.bluetooth_disable_a2dp_hw_offload_dialog_cancel, this)
+                        R.string.bluetooth_disable_hw_offload_dialog_cancel, this)
                 .create();
     }
 
     @Override
     public void onClick(DialogInterface dialog, int which) {
-        final OnA2dpHwDialogConfirmedListener host =
-                (OnA2dpHwDialogConfirmedListener) getTargetFragment();
+        final OnHwOffloadDialogListener host =
+                (OnHwOffloadDialogListener) getTargetFragment();
         if (host == null) {
             return;
         }
         if (which == DialogInterface.BUTTON_POSITIVE) {
-            host.onA2dpHwDialogConfirmed();
+            host.onHwOffloadDialogConfirmed();
             PowerManager pm = getContext().getSystemService(PowerManager.class);
             pm.reboot(null);
+        } else {
+            host.onHwOffloadDialogCanceled();
         }
     }
 
-    public interface OnA2dpHwDialogConfirmedListener {
+    public interface OnHwOffloadDialogListener {
         /**
          * Called when the user presses reboot on the warning dialog.
          */
-        void onA2dpHwDialogConfirmed();
+        void onHwOffloadDialogConfirmed();
+        void onHwOffloadDialogCanceled();
     }
 }

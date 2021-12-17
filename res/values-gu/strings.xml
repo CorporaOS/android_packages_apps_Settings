@@ -143,10 +143,10 @@
     <string name="bluetooth_pref_summary" product="device" msgid="2192027516577675587">"તમારા ડિવાઇસને નજીકના બ્લૂટૂથ ડિવાઇસ સાથે સંચાર કરવાની મંજૂરી આપો"</string>
     <string name="bluetooth_pref_summary" product="default" msgid="768958961865499804">"તમારા ફોનને નજીકના બ્લૂટૂથ ઉપકરણો સાથે સંચાર કરવાની મંજૂરી આપો"</string>
     <string name="bluetooth_disable_a2dp_hw_offload" msgid="5942913792817797541">"બ્લૂટૂથ A2DP હાર્ડવેર ઑફલોડને બંધ કરો"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_title" msgid="8610420176339657720">"ઉપકરણ ફરી શરૂ કરીએ?"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_message" msgid="8333029144800835996">"આ સેટિંગમાં ફેરફાર કરવા માટે તમારા ડિવાઇસને ફરીથી શરૂ કરો."</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_confirm" msgid="3488695418187553566">"ફરી શરૂ કરો"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_cancel" msgid="4930826928585464191">"રદ કરો"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_title" msgid="8610420176339657720">"ઉપકરણ ફરી શરૂ કરીએ?"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_message" msgid="8333029144800835996">"આ સેટિંગમાં ફેરફાર કરવા માટે તમારા ડિવાઇસને ફરીથી શરૂ કરો."</string>
+    <string name="bluetooth_disable_hw_offload_dialog_confirm" msgid="3488695418187553566">"ફરી શરૂ કરો"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_cancel" msgid="4930826928585464191">"રદ કરો"</string>
     <string name="connected_device_media_device_title" msgid="3783388247594566734">"મીડિયા ડિવાઇસ"</string>
     <string name="connected_device_call_device_title" msgid="88732390601723608">"કૉલ ડિવાઇસ"</string>
     <string name="connected_device_other_device_title" msgid="4652120430615729193">"અન્ય ડિવાઇસ"</string>

@@ -16,12 +16,11 @@
 
 package com.android.settings.development;
 
-import static com.android.settings.development.BluetoothA2dpHwOffloadPreferenceController
-        .A2DP_OFFLOAD_DISABLED_PROPERTY;
+import static com.android.settings.development.BluetoothLeAudioHwOffloadPreferenceController
+        .LE_AUDIO_OFFLOAD_DISABLED_PROPERTY;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.when;
 
@@ -40,7 +39,7 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
 @RunWith(RobolectricTestRunner.class)
-public class BluetoothA2dpHwOffloadPreferenceControllerTest {
+public class BluetoothLeAudioHwOffloadPreferenceControllerTest {
 
     @Mock
     private PreferenceScreen mPreferenceScreen;
@@ -49,40 +48,40 @@ public class BluetoothA2dpHwOffloadPreferenceControllerTest {
 
     private Context mContext;
     private SwitchPreference mPreference;
-    private BluetoothA2dpHwOffloadPreferenceController mController;
+    private BluetoothLeAudioHwOffloadPreferenceController mController;
 
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
         mPreference = new SwitchPreference(mContext);
-        mController = spy(new BluetoothA2dpHwOffloadPreferenceController(mContext, mFragment));
+        mController = spy(new BluetoothLeAudioHwOffloadPreferenceController(mContext, mFragment));
         when(mPreferenceScreen.findPreference(mController.getPreferenceKey()))
             .thenReturn(mPreference);
         mController.displayPreference(mPreferenceScreen);
     }
 
     @Test
-    public void onA2dpHwDialogConfirmed_shouldChangeProperty() {
-        SystemProperties.set(A2DP_OFFLOAD_DISABLED_PROPERTY, Boolean.toString(false));
+    public void onLeAudioHwDialogConfirmed_shouldChangeProperty() {
+        SystemProperties.set(LE_AUDIO_OFFLOAD_DISABLED_PROPERTY, Boolean.toString(false));
         when(mController.isPreferenceChanged()).thenReturn(true);
 
         mController.onHwOffloadDialogConfirmed();
-        final boolean mode = SystemProperties.getBoolean(A2DP_OFFLOAD_DISABLED_PROPERTY, false);
+        final boolean mode = SystemProperties.getBoolean(LE_AUDIO_OFFLOAD_DISABLED_PROPERTY, false);
         assertThat(mode).isTrue();
 
         mController.onHwOffloadDialogConfirmed();
-        final boolean mode2 = SystemProperties.getBoolean(A2DP_OFFLOAD_DISABLED_PROPERTY, false);
+        final boolean mode2 = SystemProperties.getBoolean(LE_AUDIO_OFFLOAD_DISABLED_PROPERTY, false);
         assertThat(mode2).isFalse();
     }
 
     @Test
-    public void onA2dpHwDialogCanceled_shouldNotChangeProperty() {
-        SystemProperties.set(A2DP_OFFLOAD_DISABLED_PROPERTY, Boolean.toString(false));
+    public void onLeAudioHwDialogCanceled_shouldNotChangeProperty() {
+        SystemProperties.set(LE_AUDIO_OFFLOAD_DISABLED_PROPERTY, Boolean.toString(false));
         when(mController.isPreferenceChanged()).thenReturn(true);
-
+        
         mController.onHwOffloadDialogCanceled();
-        final boolean mode = SystemProperties.getBoolean(A2DP_OFFLOAD_DISABLED_PROPERTY, false);
+        final boolean mode = SystemProperties.getBoolean(LE_AUDIO_OFFLOAD_DISABLED_PROPERTY, false);
         assertThat(mode).isFalse();
     }
 }

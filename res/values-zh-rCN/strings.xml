@@ -143,10 +143,10 @@
     <string name="bluetooth_pref_summary" product="device" msgid="2192027516577675587">"允许您的设备与附近的蓝牙设备进行通信"</string>
     <string name="bluetooth_pref_summary" product="default" msgid="768958961865499804">"允许您的手机与附近的蓝牙设备进行通信"</string>
     <string name="bluetooth_disable_a2dp_hw_offload" msgid="5942913792817797541">"停用蓝牙 A2DP 硬件卸载"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_title" msgid="8610420176339657720">"要重启设备吗？"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_message" msgid="8333029144800835996">"您需要重启设备才能让这项设置更改生效。"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_confirm" msgid="3488695418187553566">"重启"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_cancel" msgid="4930826928585464191">"取消"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_title" msgid="8610420176339657720">"要重启设备吗？"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_message" msgid="8333029144800835996">"您需要重启设备才能让这项设置更改生效。"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_confirm" msgid="3488695418187553566">"重启"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_cancel" msgid="4930826928585464191">"取消"</string>
     <string name="connected_device_media_device_title" msgid="3783388247594566734">"媒体设备"</string>
     <string name="connected_device_call_device_title" msgid="88732390601723608">"通话设备"</string>
     <string name="connected_device_other_device_title" msgid="4652120430615729193">"其他设备"</string>
