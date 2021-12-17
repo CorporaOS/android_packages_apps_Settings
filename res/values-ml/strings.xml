@@ -143,10 +143,10 @@
     <string name="bluetooth_pref_summary" product="device" msgid="2192027516577675587">"അടുത്തുള്ള Bluetooth ഉപകരണങ്ങളുമായി ആശയവിനിമയം നടത്താൻ നിങ്ങളുടെ ഉപകരണത്തെ അനുവദിക്കുക"</string>
     <string name="bluetooth_pref_summary" product="default" msgid="768958961865499804">"അടുത്തുള്ള Bluetooth ഉപകരണങ്ങളുമായി ആശയവിനിമയം നടത്താൻ നിങ്ങളുടെ ഫോണിനെ അനുവദിക്കുക"</string>
     <string name="bluetooth_disable_a2dp_hw_offload" msgid="5942913792817797541">"Bluetooth A2DP ഹാര്‍ഡ്‍വെയര്‍ ഓഫ്‌ലോഡ് പ്രവർത്തനരഹിതമാക്കുക"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_title" msgid="8610420176339657720">"ഉപകരണം റീസ്‌റ്റാർട്ട് ചെയ്യണോ?"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_message" msgid="8333029144800835996">"ഈ ക്രമീകരണം മാറ്റാൻ നിങ്ങളുടെ ഉപകരണം റീസ്‌റ്റാർട്ട് ചെയ്യേണ്ടതുണ്ട്."</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_confirm" msgid="3488695418187553566">"റീസ്‌റ്റാർട്ട് ചെയ്യുക"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_cancel" msgid="4930826928585464191">"റദ്ദാക്കുക"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_title" msgid="8610420176339657720">"ഉപകരണം റീസ്‌റ്റാർട്ട് ചെയ്യണോ?"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_message" msgid="8333029144800835996">"ഈ ക്രമീകരണം മാറ്റാൻ നിങ്ങളുടെ ഉപകരണം റീസ്‌റ്റാർട്ട് ചെയ്യേണ്ടതുണ്ട്."</string>
+    <string name="bluetooth_disable_hw_offload_dialog_confirm" msgid="3488695418187553566">"റീസ്‌റ്റാർട്ട് ചെയ്യുക"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_cancel" msgid="4930826928585464191">"റദ്ദാക്കുക"</string>
     <string name="connected_device_media_device_title" msgid="3783388247594566734">"മീഡിയ ഉപകരണങ്ങൾ"</string>
     <string name="connected_device_call_device_title" msgid="88732390601723608">"കോൾ ഉപകരണങ്ങൾ"</string>
     <string name="connected_device_other_device_title" msgid="4652120430615729193">"മറ്റ് ഉപകരണങ്ങൾ"</string>

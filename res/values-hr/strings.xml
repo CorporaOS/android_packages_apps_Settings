@@ -144,10 +144,10 @@
     <string name="bluetooth_pref_summary" product="device" msgid="2192027516577675587">"Dopustite uređaju da komunicira s Bluetooth uređajima u blizini"</string>
     <string name="bluetooth_pref_summary" product="default" msgid="768958961865499804">"Dopustite telefonu da komunicira s Bluetooth uređajima u blizini"</string>
     <string name="bluetooth_disable_a2dp_hw_offload" msgid="5942913792817797541">"Onemogući Bluetooth A2DP hardversko rasterećenje"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_title" msgid="8610420176339657720">"Ponovo pokrenuti?"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_message" msgid="8333029144800835996">"Ponovo pokrenite uređaj da biste promijenili tu postavku."</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_confirm" msgid="3488695418187553566">"Pokreni"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_cancel" msgid="4930826928585464191">"Odustani"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_title" msgid="8610420176339657720">"Ponovo pokrenuti?"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_message" msgid="8333029144800835996">"Ponovo pokrenite uređaj da biste promijenili tu postavku."</string>
+    <string name="bluetooth_disable_hw_offload_dialog_confirm" msgid="3488695418187553566">"Pokreni"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_cancel" msgid="4930826928585464191">"Odustani"</string>
     <string name="connected_device_media_device_title" msgid="3783388247594566734">"Medijski uređaji"</string>
     <string name="connected_device_call_device_title" msgid="88732390601723608">"Uređaji za pozive"</string>
     <string name="connected_device_other_device_title" msgid="4652120430615729193">"Ostali uređaji"</string>

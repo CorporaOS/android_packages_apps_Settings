@@ -143,10 +143,10 @@
     <string name="bluetooth_pref_summary" product="device" msgid="2192027516577675587">"Cho phép thiết bị kết nối với các thiết bị Bluetooth ở gần"</string>
     <string name="bluetooth_pref_summary" product="default" msgid="768958961865499804">"Cho phép điện thoại kết nối với các thiết bị Bluetooth ở gần"</string>
     <string name="bluetooth_disable_a2dp_hw_offload" msgid="5942913792817797541">"Tắt giảm tải cho phần cứng Bluetooth A2DP"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_title" msgid="8610420176339657720">"Khởi động lại thiết bị?"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_message" msgid="8333029144800835996">"Bạn cần khởi động lại thiết bị để thay đổi cài đặt này."</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_confirm" msgid="3488695418187553566">"Khởi động lại"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_cancel" msgid="4930826928585464191">"Hủy"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_title" msgid="8610420176339657720">"Khởi động lại thiết bị?"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_message" msgid="8333029144800835996">"Bạn cần khởi động lại thiết bị để thay đổi cài đặt này."</string>
+    <string name="bluetooth_disable_hw_offload_dialog_confirm" msgid="3488695418187553566">"Khởi động lại"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_cancel" msgid="4930826928585464191">"Hủy"</string>
     <string name="connected_device_media_device_title" msgid="3783388247594566734">"Thiết bị truyền thông"</string>
     <string name="connected_device_call_device_title" msgid="88732390601723608">"Thiết bị gọi điện"</string>
     <string name="connected_device_other_device_title" msgid="4652120430615729193">"Thiết bị khác"</string>
