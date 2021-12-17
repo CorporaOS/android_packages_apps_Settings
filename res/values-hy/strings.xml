@@ -143,10 +143,10 @@
     <string name="bluetooth_pref_summary" product="device" msgid="2192027516577675587">"Թույլատրել սարքին միանալ մոտակայքում գտնվող Bluetooth սարքերին"</string>
     <string name="bluetooth_pref_summary" product="default" msgid="768958961865499804">"Թույլատրել հեռախոսին միանալ մոտակայքում գտնվող Bluetooth սարքերին"</string>
     <string name="bluetooth_disable_a2dp_hw_offload" msgid="5942913792817797541">"Անջատել Bluetooth A2DP-ի բեռնաթափումը"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_title" msgid="8610420176339657720">"Վերագործարկե՞լ սարքը"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_message" msgid="8333029144800835996">"Վերագործարկեք սարքը՝ այս կարգավորումը փոխելու համար:"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_confirm" msgid="3488695418187553566">"Վերագործարկել"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_cancel" msgid="4930826928585464191">"Չեղարկել"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_title" msgid="8610420176339657720">"Վերագործարկե՞լ սարքը"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_message" msgid="8333029144800835996">"Վերագործարկեք սարքը՝ այս կարգավորումը փոխելու համար:"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_confirm" msgid="3488695418187553566">"Վերագործարկել"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_cancel" msgid="4930826928585464191">"Չեղարկել"</string>
     <string name="connected_device_media_device_title" msgid="3783388247594566734">"Մեդիա սարքեր"</string>
     <string name="connected_device_call_device_title" msgid="88732390601723608">"Հեռախոսային սարքեր"</string>
     <string name="connected_device_other_device_title" msgid="4652120430615729193">"Այլ սարքեր"</string>

@@ -143,10 +143,10 @@
     <string name="bluetooth_pref_summary" product="device" msgid="2192027516577675587">"Memungkinkan perangkat Anda berkomunikasi dengan perangkat Bluetooth di sekitar"</string>
     <string name="bluetooth_pref_summary" product="default" msgid="768958961865499804">"Memungkinkan ponsel Anda berkomunikasi dengan perangkat Bluetooth di sekitar"</string>
     <string name="bluetooth_disable_a2dp_hw_offload" msgid="5942913792817797541">"Nonaktifkan offload hardware Bluetooth A2DP"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_title" msgid="8610420176339657720">"Mulai Ulang Perangkat?"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_message" msgid="8333029144800835996">"Anda perlu memulai ulang perangkat untuk mengubah setelan."</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_confirm" msgid="3488695418187553566">"Mulai Ulang"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_cancel" msgid="4930826928585464191">"Batal"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_title" msgid="8610420176339657720">"Mulai Ulang Perangkat?"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_message" msgid="8333029144800835996">"Anda perlu memulai ulang perangkat untuk mengubah setelan."</string>
+    <string name="bluetooth_disable_hw_offload_dialog_confirm" msgid="3488695418187553566">"Mulai Ulang"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_cancel" msgid="4930826928585464191">"Batal"</string>
     <string name="connected_device_media_device_title" msgid="3783388247594566734">"Perangkat Media"</string>
     <string name="connected_device_call_device_title" msgid="88732390601723608">"Perangkat panggilan telepon"</string>
     <string name="connected_device_other_device_title" msgid="4652120430615729193">"Perangkat lain"</string>

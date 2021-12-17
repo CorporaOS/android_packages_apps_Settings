@@ -143,10 +143,10 @@
     <string name="bluetooth_pref_summary" product="device" msgid="2192027516577675587">"Vumela idivayisi yakho ukuxhumana namadivayisi aseduze e-Bluetooth"</string>
     <string name="bluetooth_pref_summary" product="default" msgid="768958961865499804">"Vumela ifoni yakho ukuxhumana namadivayisi aseduze e-Bluetooth"</string>
     <string name="bluetooth_disable_a2dp_hw_offload" msgid="5942913792817797541">"Khubaza i-Bluetooth A2DP hardware offload"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_title" msgid="8610420176339657720">"Qalisa kabusha idivayisi?"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_message" msgid="8333029144800835996">"Udinga ukuqalisa kabusha idivayisi yakho ukushintsha lesi silungiselelo."</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_confirm" msgid="3488695418187553566">"Qala kabusha"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_cancel" msgid="4930826928585464191">"Khansela"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_title" msgid="8610420176339657720">"Qalisa kabusha idivayisi?"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_message" msgid="8333029144800835996">"Udinga ukuqalisa kabusha idivayisi yakho ukushintsha lesi silungiselelo."</string>
+    <string name="bluetooth_disable_hw_offload_dialog_confirm" msgid="3488695418187553566">"Qala kabusha"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_cancel" msgid="4930826928585464191">"Khansela"</string>
     <string name="connected_device_media_device_title" msgid="3783388247594566734">"Amadivayisi emidiya"</string>
     <string name="connected_device_call_device_title" msgid="88732390601723608">"Shayela amadivayisi"</string>
     <string name="connected_device_other_device_title" msgid="4652120430615729193">"Amanye amadivayisi"</string>

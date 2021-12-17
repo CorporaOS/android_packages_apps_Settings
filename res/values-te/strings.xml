@@ -143,10 +143,10 @@
     <string name="bluetooth_pref_summary" product="device" msgid="2192027516577675587">"సమీపంలోని బ్లూటూత్ పరికరాలతో కమ్యూనికేట్ చేయడం కోసం మీ పరికరాన్ని అనుమతించండి"</string>
     <string name="bluetooth_pref_summary" product="default" msgid="768958961865499804">"సమీపంలోని బ్లూటూత్ పరికరాలతో కమ్యూనికేట్ చేయడం కోసం మీ ఫోన్‌ని అనుమతించండి"</string>
     <string name="bluetooth_disable_a2dp_hw_offload" msgid="5942913792817797541">"బ్లూటూత్ A2DP హార్డ్‌వేర్ ఆఫ్‌లోడ్‌ని డిజేబుల్ చేయి"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_title" msgid="8610420176339657720">"పరికరాన్ని మళ్లీ ప్రారంభించాలా?"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_message" msgid="8333029144800835996">"మీరు ఈ సెట్టింగ్‌ను మార్చడానికి మీ పరికరాన్ని మళ్లీ ప్రారంభించాలి."</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_confirm" msgid="3488695418187553566">"మళ్లీ ప్రారంభించు"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_cancel" msgid="4930826928585464191">"రద్దు చేయి"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_title" msgid="8610420176339657720">"పరికరాన్ని మళ్లీ ప్రారంభించాలా?"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_message" msgid="8333029144800835996">"మీరు ఈ సెట్టింగ్‌ను మార్చడానికి మీ పరికరాన్ని మళ్లీ ప్రారంభించాలి."</string>
+    <string name="bluetooth_disable_hw_offload_dialog_confirm" msgid="3488695418187553566">"మళ్లీ ప్రారంభించు"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_cancel" msgid="4930826928585464191">"రద్దు చేయి"</string>
     <string name="connected_device_media_device_title" msgid="3783388247594566734">"మీడియా పరికరాలు"</string>
     <string name="connected_device_call_device_title" msgid="88732390601723608">"కాల్ పరికరాలు"</string>
     <string name="connected_device_other_device_title" msgid="4652120430615729193">"ఇతర పరికరాలు"</string>

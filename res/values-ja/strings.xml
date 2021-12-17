@@ -143,10 +143,10 @@
     <string name="bluetooth_pref_summary" product="device" msgid="2192027516577675587">"デバイスが付近の Bluetooth デバイスと通信することを許可する"</string>
     <string name="bluetooth_pref_summary" product="default" msgid="768958961865499804">"スマートフォンが付近の Bluetooth デバイスと通信することを許可する"</string>
     <string name="bluetooth_disable_a2dp_hw_offload" msgid="5942913792817797541">"Bluetooth A2DP ハードウェア オフロードの無効化"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_title" msgid="8610420176339657720">"デバイスを再起動しますか？"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_message" msgid="8333029144800835996">"この設定を変更するには、デバイスの再起動が必要です。"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_confirm" msgid="3488695418187553566">"再起動"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload_dialog_cancel" msgid="4930826928585464191">"キャンセル"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_title" msgid="8610420176339657720">"デバイスを再起動しますか？"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_message" msgid="8333029144800835996">"この設定を変更するには、デバイスの再起動が必要です。"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_confirm" msgid="3488695418187553566">"再起動"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_cancel" msgid="4930826928585464191">"キャンセル"</string>
     <string name="connected_device_media_device_title" msgid="3783388247594566734">"メディア デバイス"</string>
     <string name="connected_device_call_device_title" msgid="88732390601723608">"通話デバイス"</string>
     <string name="connected_device_other_device_title" msgid="4652120430615729193">"その他のデバイス"</string>
