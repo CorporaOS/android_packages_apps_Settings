@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "18666ec8_a95fc14b",
+        "filename": "tests/robotests/src/com/android/settings/bluetooth/SavedBluetoothDeviceUpdaterTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 1320071
+      },
+      "writtenOn": "2021-12-20T01:33:26Z",
+      "side": 1,
+      "message": "doesNothing",
+      "range": {
+        "startLine": 255,
+        "startChar": 46,
+        "endLine": 255,
+        "endChar": 55
+      },
+      "revId": "6d7cef40c1f62b7a36b8a1afdf027b713e9e0b15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
