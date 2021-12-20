@@ -69,6 +69,7 @@ public class BluetoothCodecDialogPreferenceControllerTest {
     private BluetoothCodecConfig mCodecConfigAPTX;
     private BluetoothCodecConfig mCodecConfigAPTXHD;
     private BluetoothCodecConfig mCodecConfigLDAC;
+    private BluetoothCodecConfig mCodecConfigLC3;
     private BluetoothDevice mActiveDevice;
     private Context mContext;
     private LifecycleOwner mLifecycleOwner;
@@ -115,6 +116,9 @@ public class BluetoothCodecDialogPreferenceControllerTest {
         mCodecConfigLDAC = new BluetoothCodecConfig.Builder()
                 .setCodecType(BluetoothCodecConfig.SOURCE_CODEC_TYPE_LDAC)
                 .build();
+        mCodecConfigLC3 = new BluetoothCodecConfig.Builder()
+                .setCodecType(BluetoothCodecConfig.SOURCE_CODEC_TYPE_LC3)
+                .build();
         when(mBluetoothA2dp.getActiveDevice()).thenReturn(mActiveDevice);
     }
 
@@ -135,7 +139,8 @@ public class BluetoothCodecDialogPreferenceControllerTest {
     @Test
     public void writeConfigurationValues_checkCodec() {
         BluetoothCodecConfig[] mCodecConfigs = {mCodecConfigAAC, mCodecConfigSBC, mCodecConfigAPTX,
-                mCodecConfigAPTXHD, mCodecConfigLDAC, mCodecConfigAAC, mCodecConfigSBC};
+                mCodecConfigAPTXHD, mCodecConfigLDAC, mCodecConfigLC3, mCodecConfigAAC,
+                mCodecConfigSBC};
         mCodecStatus = new BluetoothCodecStatus(mCodecConfigSBC, null,
                         Arrays.asList(mCodecConfigs));
         when(mBluetoothA2dp.getCodecStatus(mActiveDevice)).thenReturn(mCodecStatus);
@@ -158,12 +163,15 @@ public class BluetoothCodecDialogPreferenceControllerTest {
         mController.writeConfigurationValues(5);
         verify(mBluetoothA2dpConfigStore).setCodecType(BluetoothCodecConfig.SOURCE_CODEC_TYPE_LDAC);
 
+        mController.writeConfigurationValues(6);
+        verify(mBluetoothA2dpConfigStore).setCodecType(BluetoothCodecConfig.SOURCE_CODEC_TYPE_LC3);
     }
 
     @Test
     public void writeConfigurationValues_resetHighestConfig() {
         BluetoothCodecConfig[] mCodecConfigs = {mCodecConfigAAC, mCodecConfigSBC, mCodecConfigAPTX,
-                mCodecConfigAPTXHD, mCodecConfigLDAC, mCodecConfigAAC, mCodecConfigSBC};
+                mCodecConfigAPTXHD, mCodecConfigLDAC, mCodecConfigLC3, mCodecConfigAAC,
+                mCodecConfigSBC};
         mCodecStatus = new BluetoothCodecStatus(mCodecConfigAAC, null,
                         Arrays.asList(mCodecConfigs));
         when(mBluetoothA2dp.getCodecStatus(mActiveDevice)).thenReturn(mCodecStatus);
