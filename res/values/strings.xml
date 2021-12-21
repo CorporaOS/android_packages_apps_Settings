@@ -13134,6 +13134,8 @@
 
     <!-- Title for the button to initiate a heap dump for the system server. [CHAR LIMIT=NONE] -->
     <string name="capture_system_heap_dump_title">Capture system heap dump</string>
+    <!-- Title for the button to reboot with MTE enabled. [CHAR LIMIT=NONE] -->
+    <string name="reboot_with_mte_title">Reboot with MTE</string>
     <!-- Toast that is shown when the user initiates capturing a heap dump for the system server. [CHAR LIMIT=NONE] -->
     <string name="capturing_system_heap_dump_message">Capturing system heap dump</string>
     <!-- Toast that is shown if there's an error capturing the user initiated heap dump. [CHAR LIMIT=NONE] -->
