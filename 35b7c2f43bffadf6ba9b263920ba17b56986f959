@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4ef19dc_d437af4e",
+        "filename": "src/com/android/settings/wifi/calling/LinkifyDescriptionPreference.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2022-01-04T02:32:35Z",
+      "side": 1,
+      "message": "why do you override this method if you want to follow footer preference style?",
+      "range": {
+        "startLine": 47,
+        "startChar": 16,
+        "endLine": 47,
+        "endChar": 32
+      },
+      "revId": "35b7c2f43bffadf6ba9b263920ba17b56986f959",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
