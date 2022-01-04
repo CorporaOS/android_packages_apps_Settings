@@ -22,6 +22,30 @@
       },
       "revId": "35b7c2f43bffadf6ba9b263920ba17b56986f959",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ed53f19_52ec3b19",
+        "filename": "src/com/android/settings/wifi/calling/LinkifyDescriptionPreference.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1815899
+      },
+      "writtenOn": "2022-01-04T11:06:04Z",
+      "side": 1,
+      "message": "To preserve the points introduced here: https://android-review.googlesource.com/c/platform/packages/apps/Settings/+/1904791 .",
+      "parentUuid": "c4ef19dc_d437af4e",
+      "range": {
+        "startLine": 47,
+        "startChar": 16,
+        "endLine": 47,
+        "endChar": 32
+      },
+      "revId": "35b7c2f43bffadf6ba9b263920ba17b56986f959",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
