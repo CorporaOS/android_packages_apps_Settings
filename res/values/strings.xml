@@ -7708,6 +7708,16 @@
 
     <!-- NFC payment settings --><skip/>
     <string name="nfc_payment_settings_title">Contactless payments</string>
+    <string name="nfc_default_payment_settings_title">Default payment app</string>
+    <string name="nfc_default_payment_footer">To make a payment using a payment app, hold the back of your device to a payment terminal</string>
+    <string name="nfc_more_details">Learn more</string>
+
+    <!-- Strings shown in a dialog when a user tries to set a work app as a nfc default payment app -->
+    <string name="nfc_default_payment_workapp_confirmation_title">Set work app as default payment app?</string>
+    <string name="nfc_default_payment_workapp_confirmation_message_title">To make a payment using a work app:</string>
+    <string name="nfc_default_payment_workapp_confirmation_message_1">work profile must be turned on.</string>
+    <string name="nfc_default_payment_workapp_confirmation_message_2">you\'ll need to enter your work profile lock if you have one.</string>
+
     <!-- Caption for button linking to a page explaining how Tap and Pay works-->
     <string name="nfc_payment_how_it_works">How it works</string>
     <!-- String shown when there are no NFC payment applications installed -->
@@ -7719,7 +7729,9 @@
     <!-- String indicating the label of the default payment app and a description of its state; eg Google Wallet - MasterCard 1234 -->
     <string name="nfc_payment_app_and_desc"><xliff:g id="app">%1$s</xliff:g> - <xliff:g id="description">%2$s</xliff:g></string>
     <!-- Header for what to do when the open app supports TapPay: use the default set app, or the open app -->
-    <string name="nfc_payment_use_default">Use default</string>
+    <string name="nfc_payment_use_default">Use default payment app</string>
+    <!-- Header for a dialog asking what to do when the open app supports TapPay -->
+    <string name="nfc_payment_use_default_dialog">Use default payment app</string>
     <!-- Always use the default app (independent of what app is open) -->
     <string name="nfc_payment_favor_default">Always</string>
     <!-- If open app supports TapPay, use that app instead of the default -->

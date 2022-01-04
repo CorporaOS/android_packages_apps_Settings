@@ -67,7 +67,7 @@ public class PaymentSettings extends DashboardFragment {
         mPaymentBackend = new PaymentBackend(getActivity());
         setHasOptionsMenu(true);
 
-        use(NfcPaymentPreferenceController.class).setPaymentBackend(mPaymentBackend);
+        use(NfcDefaultPaymentPreferenceController.class).setPaymentBackend(mPaymentBackend);
         use(NfcForegroundPreferenceController.class).setPaymentBackend(mPaymentBackend);
     }
 
@@ -91,15 +91,6 @@ public class PaymentSettings extends DashboardFragment {
     public void onPause() {
         super.onPause();
         mPaymentBackend.onPause();
-    }
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-        MenuItem menuItem = menu.add(R.string.nfc_payment_how_it_works);
-        Intent howItWorksIntent = new Intent(getActivity(), HowItWorks.class);
-        menuItem.setIntent(howItWorksIntent);
-        menuItem.setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_NEVER);
     }
 
     @VisibleForTesting
