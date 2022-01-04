@@ -1,0 +1,134 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000018863174",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1934925?revision\u003d1",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "df6b93b5_aec636f5",
+        "filename": "src/com/android/settings/nfc/DefaultPaymentSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-01-04T10:11:57Z",
+      "side": 1,
+      "message": "Lines longer than 100 characters should be wrapped to improve readability; see https://source.android.com/setup/contribute/code-style#limit-line-length for more details.",
+      "range": {
+        "startLine": 77,
+        "startChar": 0,
+        "endLine": 77,
+        "endChar": 116
+      },
+      "revId": "23fbed3b94d544d1198ee21251d61ad7f9f8d175",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000018863174",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1934925?revision\u003d1",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "02989d09_05cc0322",
+        "filename": "src/com/android/settings/nfc/DefaultPaymentSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-01-04T10:11:57Z",
+      "side": 1,
+      "message": "Lines longer than 100 characters should be wrapped to improve readability; see https://source.android.com/setup/contribute/code-style#limit-line-length for more details.",
+      "range": {
+        "startLine": 217,
+        "startChar": 0,
+        "endLine": 217,
+        "endChar": 105
+      },
+      "revId": "23fbed3b94d544d1198ee21251d61ad7f9f8d175",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000018863174",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1934925?revision\u003d1",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "0577fe0c_54e31776",
+        "filename": "src/com/android/settings/nfc/DefaultPaymentSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-01-04T10:11:57Z",
+      "side": 1,
+      "message": "Lines longer than 100 characters should be wrapped to improve readability; see https://source.android.com/setup/contribute/code-style#limit-line-length for more details.",
+      "range": {
+        "startLine": 219,
+        "startChar": 0,
+        "endLine": 219,
+        "endChar": 114
+      },
+      "revId": "23fbed3b94d544d1198ee21251d61ad7f9f8d175",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000018863174",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1934925?revision\u003d1",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "8dcc5e2a_c621cb90",
+        "filename": "src/com/android/settings/nfc/DefaultPaymentSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-01-04T10:11:57Z",
+      "side": 1,
+      "message": "Lines longer than 100 characters should be wrapped to improve readability; see https://source.android.com/setup/contribute/code-style#limit-line-length for more details.",
+      "range": {
+        "startLine": 226,
+        "startChar": 0,
+        "endLine": 226,
+        "endChar": 104
+      },
+      "revId": "23fbed3b94d544d1198ee21251d61ad7f9f8d175",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000018863174",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1934925?revision\u003d1",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "1f6c0104_fd45673f",
+        "filename": "src/com/android/settings/nfc/NfcDefaultPaymentPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-01-04T10:11:57Z",
+      "side": 1,
+      "message": "Lines longer than 100 characters should be wrapped to improve readability; see https://source.android.com/setup/contribute/code-style#limit-line-length for more details.",
+      "range": {
+        "startLine": 133,
+        "startChar": 0,
+        "endLine": 133,
+        "endChar": 104
+      },
+      "revId": "23fbed3b94d544d1198ee21251d61ad7f9f8d175",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
