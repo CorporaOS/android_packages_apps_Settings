@@ -32,7 +32,6 @@ import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.FragmentActivity;
 
 import com.android.settings.R;
@@ -41,7 +40,6 @@ import com.android.settings.core.CategoryMixin.CategoryHandler;
 import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
 import com.android.settingslib.transition.SettingsTransitionHelper.TransitionType;
 
-import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.resources.TextAppearanceConfig;
 import com.google.android.setupcompat.util.WizardManagerHelper;
@@ -62,7 +60,6 @@ public class SettingsBaseActivity extends FragmentActivity implements CategoryHa
 
     protected CategoryMixin mCategoryMixin;
     protected CollapsingToolbarLayout mCollapsingToolbarLayout;
-    protected AppBarLayout mAppBarLayout;
     private Toolbar mToolbar;
 
     @Override
@@ -107,11 +104,9 @@ public class SettingsBaseActivity extends FragmentActivity implements CategoryHa
         if (isToolbarEnabled() && !isAnySetupWizard) {
             super.setContentView(R.layout.collapsing_toolbar_base_layout);
             mCollapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
-            mAppBarLayout = findViewById(R.id.app_bar);
             if (mCollapsingToolbarLayout != null) {
                 mCollapsingToolbarLayout.setLineSpacingMultiplier(TOOLBAR_LINE_SPACING_MULTIPLIER);
             }
-            disableCollapsingToolbarLayoutScrollingBehavior();
         } else {
             super.setContentView(R.layout.settings_base_layout);
         }
@@ -246,23 +241,6 @@ public class SettingsBaseActivity extends FragmentActivity implements CategoryHa
             return true;
         }
         return false;
-    }
-
-    private void disableCollapsingToolbarLayoutScrollingBehavior() {
-        if (mAppBarLayout == null) {
-            return;
-        }
-        final CoordinatorLayout.LayoutParams params =
-                (CoordinatorLayout.LayoutParams) mAppBarLayout.getLayoutParams();
-        final AppBarLayout.Behavior behavior = new AppBarLayout.Behavior();
-        behavior.setDragCallback(
-                new AppBarLayout.Behavior.DragCallback() {
-                    @Override
-                    public boolean canDrag(@NonNull AppBarLayout appBarLayout) {
-                        return false;
-                    }
-                });
-        params.setBehavior(behavior);
     }
 
     private int getTransitionType(Intent intent) {
