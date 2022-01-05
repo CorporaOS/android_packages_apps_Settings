@@ -87,8 +87,8 @@ public class SubscriptionUtil {
         if (slotInfo == null)  {
             return false;
         }
-        return !slotInfo.getIsEuicc() && !slotInfo.getPorts().stream().findFirst().get()
-                .isActive() && slotInfo.getCardStateInfo() == CARD_STATE_INFO_PRESENT;
+        return !slotInfo.getIsEuicc() && !slotInfo.getIsActive() &&
+                slotInfo.getCardStateInfo() == CARD_STATE_INFO_PRESENT;
     }
 
     /**
@@ -179,8 +179,7 @@ public class SubscriptionUtil {
             // verify if subscription is inserted within slot
             for (UiccSlotInfo slotInfo : slotsInfo) {
                 if ((slotInfo != null) && (!slotInfo.getIsEuicc())
-                        && (slotInfo.getPorts().stream().findFirst().get().getLogicalSlotIndex()
-                        == subInfo.getSimSlotIndex())) {
+                        && (slotInfo.getLogicalSlotIdx() == subInfo.getSimSlotIndex())) {
                     return true;
                 }
             }
@@ -577,7 +576,7 @@ public class SubscriptionUtil {
             if (!cardInfo.isRemovable()
                     || cardInfo.getCardId() == TelephonyManager.UNSUPPORTED_CARD_ID) {
                 Log.i(TAG, "Skip embedded card or invalid cardId on slot: "
-                        + cardInfo.getPhysicalSlotIndex());
+                        + cardInfo.getSlotIndex());
                 continue;
             }
             Log.i(TAG, "Target removable cardId :" + cardInfo.getCardId());

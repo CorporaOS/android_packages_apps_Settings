@@ -54,7 +54,6 @@ import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 import android.telephony.UiccCardInfo;
-import android.telephony.UiccPortInfo;
 import android.telephony.euicc.EuiccManager;
 
 import androidx.lifecycle.LifecycleOwner;
@@ -74,7 +73,6 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -389,34 +387,17 @@ public class SimStatusDialogControllerTest {
                 false,                                  // isEuicc
                 0,                                      // cardId
                 null,                                   // eid
+                "123451234567890",                      // iccid
                 0,                                      // slotIndex
-                true,                                   // isRemovable
-                false,            // isMultipleEnabledProfileSupported
-                Collections.singletonList(
-                        new UiccPortInfo(
-                                "123451234567890",     // iccId
-                                0,                   // portIdx
-                                0,              // logicalSlotIdx
-                                true               // isActive
-                        )
-                ));
+                true);                                  // isRemovable
         uiccCardInfos.add(uiccCardInfo1);
         UiccCardInfo uiccCardInfo2 = new UiccCardInfo(
                 true,                                   // isEuicc
                 1,                                      // cardId
                 null,                                   // eid (unavailable)
+                null,                                   // iccid
                 1,                                      // slotIndex
-                false,                             // isRemovable
-                false,
-                Collections.singletonList(
-                        new UiccPortInfo(
-                                null,                  // iccId
-                                1,                   // portIdx
-                                1,              // logicalSlotIdx
-                                true               // isActive
-                        )
-                )
-        );
+                false);                                 // isRemovable
         uiccCardInfos.add(uiccCardInfo2);
         when(mTelephonyManager.getUiccCardsInfo()).thenReturn(uiccCardInfos);
 
@@ -446,31 +427,17 @@ public class SimStatusDialogControllerTest {
                 true,                                   // isEuicc
                 0,                                      // cardId
                 TEST_EID_FROM_CARD,                     // eid
+                null,                                   // iccid
                 0,                                      // slotIndex
-                false,                                 // isRemovable
-                false,
-                Collections.singletonList(new UiccPortInfo(
-                        null,                                 // iccId
-                        0,                                  // portIdx
-                        0,                             // logicalSlotIdx
-                        true                              // isActive
-                )));
+                false);                                 // isRemovable
         uiccCardInfos.add(uiccCardInfo1);
         UiccCardInfo uiccCardInfo2 = new UiccCardInfo(
                 false,                                  // isEuicc
                 1,                                      // cardId
                 null,                                   // eid
+                "123451234567890",                      // iccid
                 1,                                      // slotIndex
-                true,                             // isRemovable
-                false,           // isMultipleEnabledProfileSupported
-                Collections.singletonList(
-                        new UiccPortInfo(
-                                "123451234567890",      // iccId
-                                1,                    // portIdx
-                                1,               // logicalSlotIdx
-                                true                // isActive
-                        )
-                ));
+                true);                                  // isRemovable
         uiccCardInfos.add(uiccCardInfo2);
         when(mTelephonyManager.getUiccCardsInfo()).thenReturn(uiccCardInfos);
 
@@ -501,34 +468,17 @@ public class SimStatusDialogControllerTest {
                 false,                                  // isEuicc
                 0,                                      // cardId
                 null,                                   // eid
+                "123451234567890",                      // iccid
                 0,                                      // slotIndex
-                true,                             // isRemovable
-                false,             // isMultipleEnabledProfileSupported
-                Collections.singletonList(
-                        new UiccPortInfo(
-                                "123451234567890",       // iccId
-                                1,                     // portIdx
-                                1,                // logicalSlotIdx
-                                true                 // isActive
-                        )
-                ));
+                true);                                  // isRemovable
         uiccCardInfos.add(uiccCardInfo1);
         UiccCardInfo uiccCardInfo2 = new UiccCardInfo(
                 true,                                   // isEuicc
                 1,                                      // cardId
                 null,                                   // eid (unavailable)
+                null,                                   // iccid
                 1,                                      // slotIndex
-                false,                                 // isRemovable
-                false,             // isMultipleEnabledProfileSupported
-                Collections.singletonList(
-                        new UiccPortInfo(
-                                null,                   // iccId
-                                1,                    // portIdx
-                                1,               // logicalSlotIdx
-                                true                // isActive
-                        )
-                )
-        );
+                false);                                 // isRemovable
         uiccCardInfos.add(uiccCardInfo2);
         when(mTelephonyManager.getUiccCardsInfo()).thenReturn(uiccCardInfos);
 
@@ -561,33 +511,17 @@ public class SimStatusDialogControllerTest {
                 false,                                  // isEuicc
                 0,                                      // cardId
                 null,                                   // eid
+                "123451234567890",                      // iccid
                 0,                                      // slotIndex
-                true,                                  // isRemovable
-                false,              // isMultipleEnabledProfileSupported
-                Collections.singletonList(
-                        new UiccPortInfo(
-                                "123451234567890",        // iccId
-                                0,                      // portIdx
-                                0,                 // logicalSlotIdx
-                                true                  // isActive
-                        )
-                ));
+                true);                                  // isRemovable
         uiccCardInfos.add(uiccCardInfo1);
         UiccCardInfo uiccCardInfo2 = new UiccCardInfo(
                 true,                                   // isEuicc
                 1,                                      // cardId
                 TEST_EID_FROM_CARD,                     // eid
+                null,                                   // iccid
                 1,                                      // slotIndex
-                false,                                 // isRemovable
-                false,            // isMultipleEnabledProfileSupported
-                Collections.singletonList(
-                        new UiccPortInfo(
-                                null,                  // iccId
-                                1,                   // portIdx
-                                1,              // logicalSlotIdx
-                                true               // isActive
-                        )
-                ));
+                false);                                 // isRemovable
         uiccCardInfos.add(uiccCardInfo2);
         when(mTelephonyManager.getUiccCardsInfo()).thenReturn(uiccCardInfos);
 
@@ -618,17 +552,9 @@ public class SimStatusDialogControllerTest {
                 true,                                   // isEuicc
                 0,                                      // cardId
                 TEST_EID_FROM_CARD,                     // eid (not used)
+                null,                                   // iccid
                 0,                                      // slotIndex
-                false,                                 // isRemovable
-                false,            // isMultipleEnabledProfileSupported
-                Collections.singletonList(
-                        new UiccPortInfo(
-                                null,                  // iccId
-                                0,                   // portIdx
-                                0,              // logicalSlotIdx
-                                true               // isActive
-                        )
-                ));
+                false);                                 // isRemovable
         uiccCardInfos.add(uiccCardInfo);
         when(mTelephonyManager.getUiccCardsInfo()).thenReturn(uiccCardInfos);
 
@@ -657,18 +583,9 @@ public class SimStatusDialogControllerTest {
                 true,                                   // isEuicc (eUICC slot is selected)
                 0,                                      // cardId
                 TEST_EID_FROM_CARD,                     // eid (not used)
+                null,                                   // iccid
                 0,                                      // slotIndex
-                false,                                 // isRemovable
-                false,               // isMultipleEnabledProfileSupported
-                Collections.singletonList(
-                        new UiccPortInfo(
-                                null,                // iccId
-                                0,                 // portIdx
-                                0,            // logicalSlotIdx
-                                true             // isActive
-                        )
-                )
-        );
+                false);                                 // isRemovable
         uiccCardInfos.add(uiccCardInfo);
         when(mTelephonyManager.getUiccCardsInfo()).thenReturn(uiccCardInfos);
 
@@ -699,18 +616,9 @@ public class SimStatusDialogControllerTest {
                 false,                                  // isEuicc (eUICC slot is not selected)
                 0,                                      // cardId
                 null,                                   // eid
+                "123451234567890",                      // iccid
                 0,                                      // slotIndex
-                true,                                  // isRemovable
-                false,            // isMultipleEnabledProfileSupported
-                Collections.singletonList(
-                        new UiccPortInfo(
-                                "123451234567890",        // iccId
-                                0,                      // portIdx
-                                0,                 // logicalSlotIdx
-                                true                  // isActive
-
-                        )
-                ));
+                true);                                  // isRemovable
         uiccCardInfos.add(uiccCardInfo);
         when(mTelephonyManager.getUiccCardsInfo()).thenReturn(uiccCardInfos);
 
@@ -741,17 +649,9 @@ public class SimStatusDialogControllerTest {
                 false,                                  // isEuicc
                 0,                                      // cardId
                 null,                                   // eid
+                "123451234567890",                      // iccid
                 0,                                      // slotIndex
-                true,                                  // isRemovable
-                false,           //isMultipleEnabledProfileSupported
-                Collections.singletonList(
-                        new UiccPortInfo(
-                                "123451234567890",      // iccId
-                                0,                    // portIdx
-                                0,               // logicalSlotIdx
-                                true                // isActive
-                        )
-                ));
+                true);                                  // isRemovable
         uiccCardInfos.add(uiccCardInfo);
         when(mTelephonyManager.getUiccCardsInfo()).thenReturn(uiccCardInfos);
 

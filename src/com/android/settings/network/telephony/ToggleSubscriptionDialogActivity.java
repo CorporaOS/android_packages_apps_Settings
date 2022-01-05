@@ -462,8 +462,7 @@ public class ToggleSubscriptionDialogActivity extends SubscriptionActionDialogAc
                                 slot ->
                                         slot != null
                                                 && slot.isRemovable()
-                                                && slot.getPorts().stream().anyMatch(
-                                                        port -> port.isActive())
+                                                && slot.getIsActive()
                                                 && slot.getCardStateInfo()
                                                         == UiccSlotInfo.CARD_STATE_INFO_PRESENT);
         if (mIsEsimOperation && isRemovableSimEnabled) {
@@ -477,7 +476,7 @@ public class ToggleSubscriptionDialogActivity extends SubscriptionActionDialogAc
             Log.i(
                     TAG,
                     "Removable SIM operation and eSIM profile is enabled. DSDS condition"
-                            + " satisfied.");
+                        + " satisfied.");
             return true;
         }
         Log.i(TAG, "DSDS condition not satisfied.");
