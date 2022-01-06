@@ -595,6 +595,8 @@
     <string name="share">Share</string>
     <!-- Button label for generic add action [CHAR LIMIT=20] -->
     <string name="add">Add</string>
+    <!-- Button label for generic process action [CHAR LIMIT=20] -->
+    <string name="process">Process</string>
 
     <!-- Title of the Settings activity shown within the application itself. -->
     <string name="settings_label">Settings</string>
