@@ -94,6 +94,30 @@
       },
       "revId": "35b7c2f43bffadf6ba9b263920ba17b56986f959",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fe35f931_7f671e11",
+        "filename": "src/com/android/settings/wifi/calling/LinkifyDescriptionPreference.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1815899
+      },
+      "writtenOn": "2022-01-06T22:43:30Z",
+      "side": 1,
+      "message": "Hi, thanks for your suggestion.\nMy idea was to follow what was done also here https://android.googlesource.com/platform/packages/apps/Settings/+/435c3385f610d110605c624208665cf4c54d12bf%5E%21/#F0 . It is also a footerpreference that hides when feature activated.\n\nAfter your CL I linked earlier I think the visual appearance got signifigantly better. I can make this CL look like a footerprefence if that is better visually and stay aligned with other settings pages.",
+      "parentUuid": "aff4c2f9_783fb677",
+      "range": {
+        "startLine": 47,
+        "startChar": 16,
+        "endLine": 47,
+        "endChar": 32
+      },
+      "revId": "35b7c2f43bffadf6ba9b263920ba17b56986f959",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
