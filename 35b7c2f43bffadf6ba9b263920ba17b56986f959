@@ -46,6 +46,30 @@
       },
       "revId": "35b7c2f43bffadf6ba9b263920ba17b56986f959",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "92fe8e4e_cbdfc20e",
+        "filename": "src/com/android/settings/wifi/calling/LinkifyDescriptionPreference.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2022-01-06T08:18:25Z",
+      "side": 1,
+      "message": "Bonian, could you help take a look? Is it necessary that we keep this new footer preference style? Why can\u0027t we align with same style in the Settings.",
+      "parentUuid": "6ed53f19_52ec3b19",
+      "range": {
+        "startLine": 47,
+        "startChar": 16,
+        "endLine": 47,
+        "endChar": 32
+      },
+      "revId": "35b7c2f43bffadf6ba9b263920ba17b56986f959",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
