@@ -70,6 +70,30 @@
       },
       "revId": "35b7c2f43bffadf6ba9b263920ba17b56986f959",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aff4c2f9_783fb677",
+        "filename": "src/com/android/settings/wifi/calling/LinkifyDescriptionPreference.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-01-06T20:12:55Z",
+      "side": 1,
+      "message": "Hi Timi,\nSorry for the confusing made by that CL (aosp/1904791).\n\nIt is a Preference which occasionally close to the bottom part of the UI.\nMake it into a footer could possibly create better user experience in this single page but may confusing enginieers regarding the style of footer Preferece(s) over non-footer Preference(s).\nCan we achieve similar concept through adjusting the layout instead of extending from footer ?\n\nBy the way, thanks for the sharing of issue and this change.\nIf you can share a screenshot, which might help people to aware of how badly the situation is.\nThanks.",
+      "parentUuid": "92fe8e4e_cbdfc20e",
+      "range": {
+        "startLine": 47,
+        "startChar": 16,
+        "endLine": 47,
+        "endChar": 32
+      },
+      "revId": "35b7c2f43bffadf6ba9b263920ba17b56986f959",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
