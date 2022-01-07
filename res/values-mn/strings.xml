@@ -5338,6 +5338,19 @@
     <string name="carrier_wifi_offload_title" msgid="7263365988016247722">"W+ холболтууд"</string>
     <string name="carrier_wifi_offload_summary" msgid="2980563718888371142">"Хурд болон хамрах хүрээг сайжруулахын тулд Google Fi-д W+ сүлжээг ашиглахыг зөвшөөрнө үү"</string>
     <string name="carrier_wifi_network_title" msgid="5461382943873831770">"W+ сүлжээ"</string>
+<<<<<<< HEAD   (a4f936 Merge "eSIM deprecated API test Refactoring")
+=======
+    <string name="sim_category_title" msgid="2341314000964710495">"SIM"</string>
+    <string name="downloaded_sim_category_title" msgid="8611467223348446658">"ТАТСАН SIM"</string>
+    <string name="downloaded_sims_category_title" msgid="8779223441781763315">"ТАТАЖ АВСАН SIM"</string>
+    <string name="sim_category_active_sim" msgid="1503823567818544012">"Идэвхтэй"</string>
+    <string name="sim_category_inactive_sim" msgid="4068899490133820881">"Идэвхгүй"</string>
+    <string name="sim_category_default_active_sim" msgid="1208194173387987231">" / <xliff:g id="ID_1">%1$s</xliff:g>-н өгөгдмөл"</string>
+    <string name="default_active_sim_calls" msgid="2390973682556353558">"дуудлага"</string>
+    <string name="default_active_sim_sms" msgid="8041498593025994921">"SMS"</string>
+    <string name="default_active_sim_mobile_data" msgid="6798083892814045301">"мобайл дата"</string>
+    <string name="wifi_scan_notify_message" msgid="4130641837826688879">"Төхөөрөмжийн туршлагыг сайжруулахын тулд аппууд болон үйлчилгээнүүд нь Wi-Fi сүлжээг хүссэн үедээ буюу Wi-Fi-г унтраалттай байсан ч скан хийх боломжтой хэвээр байна. Үүнийг байршилд тулгуурласан онцлогууд болон үйлчилгээнүүдийг сайжруулах зэргээр ашиглаж болно. Та үүнийг Wi-Fi скан хийх тохиргоонд өөрчлөх боломжтой. "<annotation id="link">"Өөрчлөх"</annotation></string>
+>>>>>>> BRANCH (04f4cc Merge cherrypicks of [16061618, 16099517, 16093937, 16144999)
     <string name="preference_summary_default_combination" msgid="4643585915107796253">"<xliff:g id="STATE">%1$s</xliff:g> / <xliff:g id="NETWORKMODE">%2$s</xliff:g>"</string>
     <string name="mobile_data_connection_active" msgid="2422223108911581552">"Холбогдсон"</string>
     <string name="mobile_data_no_connection" msgid="905897142426974030">"Холболт алга"</string>

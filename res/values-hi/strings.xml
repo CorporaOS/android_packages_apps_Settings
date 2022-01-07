@@ -5365,10 +5365,28 @@
     <string name="fix_connectivity" msgid="2781433603228089501">"कनेक्टिविटी से जुड़ी समस्याएं ठीक करें"</string>
     <string name="networks_available" msgid="3299512933684383474">"नेटवर्क उपलब्ध हैं"</string>
     <string name="to_switch_networks_disconnect_ethernet" msgid="6615374552827587197">"नेटवर्क बदलने के लिए, पहले ईथरनेट को डिसकनेक्ट करें"</string>
+<<<<<<< HEAD   (a4f936 Merge "eSIM deprecated API test Refactoring")
     <string name="wifi_is_turned_on_subtitle" msgid="4222869018808845600">"वाई-फ़ाई चालू है"</string>
     <string name="carrier_wifi_offload_title" msgid="7263365988016247722">"W+ कनेक्शन"</string>
     <string name="carrier_wifi_offload_summary" msgid="2980563718888371142">"कवरेज और स्पीड बढ़ाने के लिए, Google Fi को W+ नेटवर्क इस्तेमाल करने की अनुमति दें"</string>
     <string name="carrier_wifi_network_title" msgid="5461382943873831770">"W+ नेटवर्क"</string>
+=======
+    <string name="wifi_is_off" msgid="8308136482502734453">"वाई-फ़ाई बंद है"</string>
+    <string name="tap_a_network_to_connect" msgid="8044777400224037875">"इंटरनेट से कनेक्ट करने के लिए, किसी नेटवर्क पर टैप करें"</string>
+    <string name="carrier_wifi_offload_title" msgid="7263365988016247722">"वाई-फ़ाई कनेक्शन"</string>
+    <string name="carrier_wifi_offload_summary" msgid="2980563718888371142">"कवरेज और स्पीड बढ़ाने के लिए, Google Fi को वाई-फ़ाई नेटवर्क इस्तेमाल करने की अनुमति दें"</string>
+    <string name="carrier_wifi_network_title" msgid="5461382943873831770">"वाइ-फ़ाई नेटवर्क"</string>
+    <string name="sim_category_title" msgid="2341314000964710495">"सिम"</string>
+    <string name="downloaded_sim_category_title" msgid="8611467223348446658">"डाउनलोड किया गया सिम"</string>
+    <string name="downloaded_sims_category_title" msgid="8779223441781763315">"डाउनलोड किए गए सिम"</string>
+    <string name="sim_category_active_sim" msgid="1503823567818544012">"चालू है"</string>
+    <string name="sim_category_inactive_sim" msgid="4068899490133820881">"बंद है"</string>
+    <string name="sim_category_default_active_sim" msgid="1208194173387987231">" / <xliff:g id="ID_1">%1$s</xliff:g> के लिए डिफ़ॉल्ट कॉन्फ़िगरेशन"</string>
+    <string name="default_active_sim_calls" msgid="2390973682556353558">"कॉल"</string>
+    <string name="default_active_sim_sms" msgid="8041498593025994921">"मैसेज (एसएमएस)"</string>
+    <string name="default_active_sim_mobile_data" msgid="6798083892814045301">"मोबाइल डेटा"</string>
+    <string name="wifi_scan_notify_message" msgid="4130641837826688879">"डिवाइस इस्तेमाल करने के अनुभव काे बेहतर बनाने के लिए, ऐप्लिकेशन और सेवाओं की मदद से, किसी भी समय वाई-फ़ाई नेटवर्क स्कैन किए जा सकते हैं. ऐसा वाई-फ़ाई बंद होने पर भी किया जा सकता है. उदाहरण के लिए, इसका इस्तेमाल जगह से जुड़ी सुविधाओं और सेवाओं को बेहतर बनाने के लिए किया जा सकता है. वाई-फ़ाई स्कैनिंग की सेटिंग में जाकर, इसे बदला जा सकता है. "<annotation id="link">"बदलें"</annotation></string>
+>>>>>>> BRANCH (04f4cc Merge cherrypicks of [16061618, 16099517, 16093937, 16144999)
     <string name="preference_summary_default_combination" msgid="4643585915107796253">"<xliff:g id="STATE">%1$s</xliff:g> / <xliff:g id="NETWORKMODE">%2$s</xliff:g>"</string>
     <string name="mobile_data_connection_active" msgid="2422223108911581552">"कनेक्ट हो गया"</string>
     <string name="mobile_data_no_connection" msgid="905897142426974030">"इंटरनेट कनेक्शन नहीं है"</string>

@@ -5338,6 +5338,19 @@
     <string name="carrier_wifi_offload_title" msgid="7263365988016247722">"W+-tilkoblinger"</string>
     <string name="carrier_wifi_offload_summary" msgid="2980563718888371142">"Tillat at Google Fi bruker W+-nettverk for å forbedre hastighet og dekning"</string>
     <string name="carrier_wifi_network_title" msgid="5461382943873831770">"W+-nettverk"</string>
+<<<<<<< HEAD   (a4f936 Merge "eSIM deprecated API test Refactoring")
+=======
+    <string name="sim_category_title" msgid="2341314000964710495">"SIM"</string>
+    <string name="downloaded_sim_category_title" msgid="8611467223348446658">"NEDLASTET SIM-KORT"</string>
+    <string name="downloaded_sims_category_title" msgid="8779223441781763315">"NEDLASTEDE SIM-KORT"</string>
+    <string name="sim_category_active_sim" msgid="1503823567818544012">"Aktiv"</string>
+    <string name="sim_category_inactive_sim" msgid="4068899490133820881">"Inaktiv"</string>
+    <string name="sim_category_default_active_sim" msgid="1208194173387987231">" / Standard for <xliff:g id="ID_1">%1$s</xliff:g>"</string>
+    <string name="default_active_sim_calls" msgid="2390973682556353558">"anrop"</string>
+    <string name="default_active_sim_sms" msgid="8041498593025994921">"SMS"</string>
+    <string name="default_active_sim_mobile_data" msgid="6798083892814045301">"mobildata"</string>
+    <string name="wifi_scan_notify_message" msgid="4130641837826688879">"For å forbedre brukeropplevelsen på enheten kan apper og tjenester søke etter Wi-Fi-nettverk når som helst – også når Wi-Fi er slått av. Dette kan for eksempel brukes til å forbedre posisjonsbaserte funksjoner og tjenester. Du kan endre dette i innstillingene for Wi-Fi-skanning. "<annotation id="link">"Endre"</annotation></string>
+>>>>>>> BRANCH (04f4cc Merge cherrypicks of [16061618, 16099517, 16093937, 16144999)
     <string name="preference_summary_default_combination" msgid="4643585915107796253">"<xliff:g id="STATE">%1$s</xliff:g>/<xliff:g id="NETWORKMODE">%2$s</xliff:g>"</string>
     <string name="mobile_data_connection_active" msgid="2422223108911581552">"Tilkoblet"</string>
     <string name="mobile_data_no_connection" msgid="905897142426974030">"Ingen tilkobling"</string>

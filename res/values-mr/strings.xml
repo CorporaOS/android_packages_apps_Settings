@@ -4195,7 +4195,7 @@
     <string name="filter_enabled_apps" msgid="8868356616126759124">"इंस्टॉल केलेली अ‍ॅप्स"</string>
     <string name="filter_instant_apps" msgid="2292108467020380068">"इन्स्टंट अ‍ॅप्स"</string>
     <string name="filter_notif_all_apps" msgid="2764590815789208306">"अ‍ॅप्स: सर्व"</string>
-    <string name="filter_notif_blocked_apps" msgid="1065653868850012325">"बंद केले आहे"</string>
+    <string name="filter_notif_blocked_apps" msgid="1065653868850012325">"बंद केलेले"</string>
     <string name="filter_notif_urgent_channels" msgid="875381675739324318">"वर्गवाऱ्या: तातडीचे महत्त्व"</string>
     <string name="filter_notif_low_channels" msgid="2163005243095264537">"वर्गवाऱ्या: कमी महत्त्व"</string>
     <string name="filter_notif_blocked_channels" msgid="1131444963543380495">"वर्गवाऱ्या: बंद केलेल्या"</string>
@@ -5341,6 +5341,19 @@
     <string name="carrier_wifi_offload_title" msgid="7263365988016247722">"W+ कनेक्शन"</string>
     <string name="carrier_wifi_offload_summary" msgid="2980563718888371142">"वेग आणि कव्हरेजमध्ये सुधारणा करण्यासाठी Google Fi ला W+ नेटवर्क वापरण्याची अनुमती द्या"</string>
     <string name="carrier_wifi_network_title" msgid="5461382943873831770">"W+ नेटवर्क"</string>
+<<<<<<< HEAD   (a4f936 Merge "eSIM deprecated API test Refactoring")
+=======
+    <string name="sim_category_title" msgid="2341314000964710495">"सिम"</string>
+    <string name="downloaded_sim_category_title" msgid="8611467223348446658">"डाउनलोड केलेले सिम"</string>
+    <string name="downloaded_sims_category_title" msgid="8779223441781763315">"डाउनलोड केलेली सिम"</string>
+    <string name="sim_category_active_sim" msgid="1503823567818544012">"सुरू आहे"</string>
+    <string name="sim_category_inactive_sim" msgid="4068899490133820881">"बंद आहे"</string>
+    <string name="sim_category_default_active_sim" msgid="1208194173387987231">" / <xliff:g id="ID_1">%1$s</xliff:g> साठी डीफॉल्ट आहे"</string>
+    <string name="default_active_sim_calls" msgid="2390973682556353558">"कॉल"</string>
+    <string name="default_active_sim_sms" msgid="8041498593025994921">"एसएमएस"</string>
+    <string name="default_active_sim_mobile_data" msgid="6798083892814045301">"मोबाइल डेटा"</string>
+    <string name="wifi_scan_notify_message" msgid="4130641837826688879">"डिव्हाइसच्या अनुभवामध्ये सुधारणा करण्यासाठी, वाय-फाय बंद असले तरीही ॲप्स आणि सेवा या कधीही वाय-फाय नेटवर्क स्कॅन करू शकतात. उदाहरणार्थ, हे स्थानावर आधारित वैशिष्ट्ये आणि सेवांमध्ये सुधारणा करण्यासाठी वापरले जाऊ शकते. तुम्ही हे वाय-फाय स्कॅनिंग सेटिंग्जमध्ये बदलू शकता. "<annotation id="link">"बदला "</annotation></string>
+>>>>>>> BRANCH (04f4cc Merge cherrypicks of [16061618, 16099517, 16093937, 16144999)
     <string name="preference_summary_default_combination" msgid="4643585915107796253">"<xliff:g id="STATE">%1$s</xliff:g> / <xliff:g id="NETWORKMODE">%2$s</xliff:g>"</string>
     <string name="mobile_data_connection_active" msgid="2422223108911581552">"कनेक्ट केले आहे"</string>
     <string name="mobile_data_no_connection" msgid="905897142426974030">"कोणतेही कनेक्शन नाही"</string>

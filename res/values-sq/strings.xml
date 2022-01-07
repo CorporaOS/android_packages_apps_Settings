@@ -5382,6 +5382,19 @@
     <string name="carrier_wifi_offload_title" msgid="7263365988016247722">"Lidhjet W+"</string>
     <string name="carrier_wifi_offload_summary" msgid="2980563718888371142">"Lejoji Google Fi të përdorë rrjetet W+ për të përmirësuar shpejtësinë dhe mbulimin"</string>
     <string name="carrier_wifi_network_title" msgid="5461382943873831770">"Rrjeti W+"</string>
+<<<<<<< HEAD   (a4f936 Merge "eSIM deprecated API test Refactoring")
+=======
+    <string name="sim_category_title" msgid="2341314000964710495">"SIM"</string>
+    <string name="downloaded_sim_category_title" msgid="8611467223348446658">"KARTA SIM E SHKARKUAR"</string>
+    <string name="downloaded_sims_category_title" msgid="8779223441781763315">"SIM-ET E SHKARKUARA"</string>
+    <string name="sim_category_active_sim" msgid="1503823567818544012">"Aktive"</string>
+    <string name="sim_category_inactive_sim" msgid="4068899490133820881">"Joaktive"</string>
+    <string name="sim_category_default_active_sim" msgid="1208194173387987231">" / Parazgjedhja për <xliff:g id="ID_1">%1$s</xliff:g>"</string>
+    <string name="default_active_sim_calls" msgid="2390973682556353558">"telefonatat"</string>
+    <string name="default_active_sim_sms" msgid="8041498593025994921">"SMS"</string>
+    <string name="default_active_sim_mobile_data" msgid="6798083892814045301">"të dhënat celulare"</string>
+    <string name="wifi_scan_notify_message" msgid="4130641837826688879">"Për të përmirësuar përvojën e pajisjes, aplikacionet dhe shërbimet mund të vazhdojnë të skanojnë për rrjete Wi‑Fi në çdo kohë, edhe kur Wi‑Fi është joaktiv. Kjo mund të përdoret, për shembull, për të përmirësuar veçoritë dhe shërbimet e bazuara te vendndodhja. Mund ta ndryshosh këtë te cilësimet e skanimit të Wi-Fi. "<annotation id="link">"Ndrysho"</annotation></string>
+>>>>>>> BRANCH (04f4cc Merge cherrypicks of [16061618, 16099517, 16093937, 16144999)
     <string name="preference_summary_default_combination" msgid="4643585915107796253">"<xliff:g id="STATE">%1$s</xliff:g> / <xliff:g id="NETWORKMODE">%2$s</xliff:g>"</string>
     <string name="mobile_data_connection_active" msgid="2422223108911581552">"Lidhur"</string>
     <string name="mobile_data_no_connection" msgid="905897142426974030">"Nuk ka lidhje"</string>
