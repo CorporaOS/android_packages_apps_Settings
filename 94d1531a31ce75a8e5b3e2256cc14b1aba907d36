@@ -70,6 +70,30 @@
       },
       "revId": "94d1531a31ce75a8e5b3e2256cc14b1aba907d36",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "efbc2a44_e2993682",
+        "filename": "src/com/android/settings/development/BluetoothLeAudioHwOffloadPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1730162
+      },
+      "writtenOn": "2022-01-11T05:39:09Z",
+      "side": 1,
+      "message": "It would become odd as we use the properties in the other place. If I would like to turn on the feature, I need to set the disable property false to make the feature enable.",
+      "parentUuid": "15d11ad4_6aa78698",
+      "range": {
+        "startLine": 56,
+        "startChar": 16,
+        "endLine": 56,
+        "endChar": 44
+      },
+      "revId": "94d1531a31ce75a8e5b3e2256cc14b1aba907d36",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
