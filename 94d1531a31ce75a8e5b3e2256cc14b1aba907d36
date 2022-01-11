@@ -46,6 +46,30 @@
       },
       "revId": "94d1531a31ce75a8e5b3e2256cc14b1aba907d36",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15d11ad4_6aa78698",
+        "filename": "src/com/android/settings/development/BluetoothLeAudioHwOffloadPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1320071
+      },
+      "writtenOn": "2022-01-11T02:32:10Z",
+      "side": 1,
+      "message": "In my opinions this naming of constants is odd. Because it is a positive description but have negative value.\nI recommend to modify the naming to \"LE_AUDIO_DISABLE_OFFLOAD_PROPERTY\" is more consistent.",
+      "parentUuid": "3eaa4096_c382ef28",
+      "range": {
+        "startLine": 56,
+        "startChar": 16,
+        "endLine": 56,
+        "endChar": 44
+      },
+      "revId": "94d1531a31ce75a8e5b3e2256cc14b1aba907d36",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
