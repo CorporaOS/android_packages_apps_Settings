@@ -160,6 +160,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9a294fb_7d8d33cf",
+        "filename": "res/xml/development_settings.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1356080
+      },
+      "writtenOn": "2022-01-13T06:19:02Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "1f112fae_a9275ca8",
+      "range": {
+        "startLine": 47,
+        "startChar": 9,
+        "endLine": 47,
+        "endChar": 19
+      },
+      "revId": "f83956b9a9f48e0a5f76eda727c69861718b87aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f048066f_bbf2ea5d",
