@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7284a264_8206ca1c",
+        "filename": "src/com/android/settings/development/RebootWithMtePreferenceController.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2022-01-13T13:44:45Z",
+      "side": 1,
+      "message": "I am not prefer to show dialog directly, we should use InstrumentedDialogFragment to show the dialog.\n\nI think you can refer ClearAdbKeysPreferenceController\nhttps://source.corp.google.com/android/packages/apps/Settings/src/com/android/settings/development/ClearAdbKeysPreferenceController.java;l\u003d79",
+      "range": {
+        "startLine": 53,
+        "startChar": 4,
+        "endLine": 71,
+        "endChar": 5
+      },
+      "revId": "52f25571c6a9b9db63f0657d30fc92447d89878d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
