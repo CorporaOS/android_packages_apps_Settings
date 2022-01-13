@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9daa1348_e383f596",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 13139,
+      "author": {
+        "id": 1356080
+      },
+      "writtenOn": "2022-01-13T01:23:05Z",
+      "side": 1,
+      "message": "Do you think it helps users if we show Memory Tagging Extension (MTE) in the title and/or the message?",
+      "range": {
+        "startLine": 13138,
+        "startChar": 4,
+        "endLine": 13139,
+        "endChar": 189
+      },
+      "revId": "f83956b9a9f48e0a5f76eda727c69861718b87aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f47402d1_a6950e5b",
+        "filename": "res/xml/development_settings.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1356080
+      },
+      "writtenOn": "2022-01-13T01:23:05Z",
+      "side": 1,
+      "message": "The preference is not a SwitchPreference, how do users know if MTE is enable or not from the UI?",
+      "range": {
+        "startLine": 47,
+        "startChar": 9,
+        "endLine": 47,
+        "endChar": 19
+      },
+      "revId": "f83956b9a9f48e0a5f76eda727c69861718b87aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f048066f_bbf2ea5d",
+        "filename": "src/com/android/settings/development/RebootWithMtePreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1356080
+      },
+      "writtenOn": "2022-01-13T01:23:05Z",
+      "side": 1,
+      "message": "In AbstractPreferenceController, its mContext is protected and you can use it without the private mContext.\n\npublic abstract class AbstractPreferenceController {\n    protected final Context mContext;",
+      "range": {
+        "startLine": 39,
+        "startChar": 4,
+        "endLine": 39,
+        "endChar": 35
+      },
+      "revId": "f83956b9a9f48e0a5f76eda727c69861718b87aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a377657_67f20bbe",
+        "filename": "src/com/android/settings/development/RebootWithMtePreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1356080
+      },
+      "writtenOn": "2022-01-13T01:23:05Z",
+      "side": 1,
+      "message": "Since device reboots right after the OK button clicked, we should let users know enables MTE will reboot device.\n\n\u003cstring name\u003d\"reboot_with_mte_message\"\u003eThis allows to experiment with MTE. This may negatively impact system performance and stability. Will be reset on next subsequent reboot.\u003c/string\u003e",
+      "range": {
+        "startLine": 66,
+        "startChar": 20,
+        "endLine": 66,
+        "endChar": 36
+      },
+      "revId": "f83956b9a9f48e0a5f76eda727c69861718b87aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
