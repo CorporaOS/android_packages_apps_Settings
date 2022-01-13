@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "47bd950e_09c1840e",
+        "filename": "tests/robotests/src/com/android/settings/development/BluetoothMaxConnectedAudioDevicesPreferenceControllerTest.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1880948
+      },
+      "writtenOn": "2022-01-13T17:23:58Z",
+      "side": 1,
+      "message": "Ah, sorry about that.",
+      "parentUuid": "470c9255_7fca1ce7",
+      "range": {
+        "startLine": 58,
+        "startChar": 24,
+        "endLine": 58,
+        "endChar": 49
+      },
+      "revId": "127e9c6568a3ee397c1a33eedda16eccabd8dac5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "eef40e85_ee737aad",
@@ -37,6 +61,30 @@
       "writtenOn": "2022-01-13T17:00:58Z",
       "side": 1,
       "message": "can we use mBluetoothManager?",
+      "range": {
+        "startLine": 61,
+        "startChar": 6,
+        "endLine": 62,
+        "endChar": 51
+      },
+      "revId": "127e9c6568a3ee397c1a33eedda16eccabd8dac5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b96f9c9_52ccdf3b",
+        "filename": "tests/robotests/src/com/android/settings/development/BluetoothMaxConnectedAudioDevicesPreferenceControllerTest.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1880948
+      },
+      "writtenOn": "2022-01-13T17:23:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eef40e85_ee737aad",
       "range": {
         "startLine": 61,
         "startChar": 6,
