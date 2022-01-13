@@ -41,6 +41,54 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7ae8346_c60758d9",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 13139,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2022-01-13T05:26:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9daa1348_e383f596",
+      "range": {
+        "startLine": 13138,
+        "startChar": 4,
+        "endLine": 13139,
+        "endChar": 189
+      },
+      "revId": "f83956b9a9f48e0a5f76eda727c69861718b87aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4bc13068_2ae6d838",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 13139,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2022-01-13T05:26:23Z",
+      "side": 1,
+      "message": "Done. I want to get a document onto DAC eventually and link it from here.",
+      "parentUuid": "9daa1348_e383f596",
+      "range": {
+        "startLine": 13138,
+        "startChar": 4,
+        "endLine": 13139,
+        "endChar": 189
+      },
+      "revId": "f83956b9a9f48e0a5f76eda727c69861718b87aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f47402d1_a6950e5b",
@@ -90,6 +138,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1f112fae_a9275ca8",
+        "filename": "res/xml/development_settings.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2022-01-13T05:26:23Z",
+      "side": 1,
+      "message": "We don\u0027t intend it to show it in this option. A switch would give the wrong impression that this stays enabled until turned off, while this is a one off switch to reboot, and enable MTE for this one session.\n\nCurrently, we have two ideas, either\n\na) in DAC, tell people to use sanitizer-status from the command line to verify the reboot turned on MTE, or\nb) have a persistent notification that tells people that this is enabled.\n\nTo disable, users need to reboot again.\n\nThis approach was taken because this is an experimental configuration, and we want to make sure that it isn\u0027t accidentally turned on for longer than intended.",
+      "parentUuid": "f47402d1_a6950e5b",
+      "range": {
+        "startLine": 47,
+        "startChar": 9,
+        "endLine": 47,
+        "endChar": 19
+      },
+      "revId": "f83956b9a9f48e0a5f76eda727c69861718b87aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f048066f_bbf2ea5d",
         "filename": "src/com/android/settings/development/RebootWithMtePreferenceController.java",
         "patchSetId": 8
@@ -101,6 +173,30 @@
       "writtenOn": "2022-01-13T01:23:05Z",
       "side": 1,
       "message": "In AbstractPreferenceController, its mContext is protected and you can use it without the private mContext.\n\npublic abstract class AbstractPreferenceController {\n    protected final Context mContext;",
+      "range": {
+        "startLine": 39,
+        "startChar": 4,
+        "endLine": 39,
+        "endChar": 35
+      },
+      "revId": "f83956b9a9f48e0a5f76eda727c69861718b87aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb635578_9e178218",
+        "filename": "src/com/android/settings/development/RebootWithMtePreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2022-01-13T05:26:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f048066f_bbf2ea5d",
       "range": {
         "startLine": 39,
         "startChar": 4,
@@ -124,6 +220,30 @@
       "writtenOn": "2022-01-13T01:23:05Z",
       "side": 1,
       "message": "Since device reboots right after the OK button clicked, we should let users know enables MTE will reboot device.\n\n\u003cstring name\u003d\"reboot_with_mte_message\"\u003eThis allows to experiment with MTE. This may negatively impact system performance and stability. Will be reset on next subsequent reboot.\u003c/string\u003e",
+      "range": {
+        "startLine": 66,
+        "startChar": 20,
+        "endLine": 66,
+        "endChar": 36
+      },
+      "revId": "f83956b9a9f48e0a5f76eda727c69861718b87aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7f259b3_2993f3a6",
+        "filename": "src/com/android/settings/development/RebootWithMtePreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2022-01-13T05:26:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0a377657_67f20bbe",
       "range": {
         "startLine": 66,
         "startChar": 20,
