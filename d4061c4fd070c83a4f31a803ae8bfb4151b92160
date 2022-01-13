@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "576b0f90_2afbfb49",
+        "filename": "src/com/android/settings/development/BluetoothMaxConnectedAudioDevicesPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2022-01-13T13:23:19Z",
+      "side": 1,
+      "message": "nit: use getSystemService(BluetoothManager.class) to avoid casting",
+      "range": {
+        "startLine": 47,
+        "startChar": 17,
+        "endLine": 47,
+        "endChar": 60
+      },
+      "revId": "d4061c4fd070c83a4f31a803ae8bfb4151b92160",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
