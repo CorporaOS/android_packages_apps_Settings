@@ -49,6 +49,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c590e48a_bcedf298",
+        "filename": "res/xml/development_settings.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1356080
+      },
+      "writtenOn": "2022-01-13T01:38:18Z",
+      "side": 1,
+      "message": "And how do users disable MTE?",
+      "parentUuid": "f47402d1_a6950e5b",
+      "range": {
+        "startLine": 47,
+        "startChar": 9,
+        "endLine": 47,
+        "endChar": 19
+      },
+      "revId": "f83956b9a9f48e0a5f76eda727c69861718b87aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f048066f_bbf2ea5d",
         "filename": "src/com/android/settings/development/RebootWithMtePreferenceController.java",
         "patchSetId": 8
