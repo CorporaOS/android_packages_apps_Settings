@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b79e6d7_cbabb1f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2022-01-13T02:53:18Z",
+      "side": 1,
+      "message": "Please follow the link to tell us why this settings should be in the developer page.\nhttps://g3doc.corp.google.com/company/teams/apps-android-settings/howto/add_a_developer_option.md?cl\u003dhead",
+      "revId": "f83956b9a9f48e0a5f76eda727c69861718b87aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9daa1348_e383f596",
