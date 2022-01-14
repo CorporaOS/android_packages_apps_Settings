@@ -22,6 +22,30 @@
       },
       "revId": "52f25571c6a9b9db63f0657d30fc92447d89878d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e85bc68e_3fd2c65e",
+        "filename": "src/com/android/settings/development/RebootWithMtePreferenceController.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1268571
+      },
+      "writtenOn": "2022-01-14T01:12:16Z",
+      "side": 1,
+      "message": "In that case I need to move this change to ag, because I also need to touch frameworks/. PTAL at that,",
+      "parentUuid": "7284a264_8206ca1c",
+      "range": {
+        "startLine": 53,
+        "startChar": 4,
+        "endLine": 71,
+        "endChar": 5
+      },
+      "revId": "52f25571c6a9b9db63f0657d30fc92447d89878d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
