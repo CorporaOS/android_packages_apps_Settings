@@ -16,8 +16,10 @@
 
 package com.android.settings.network;
 
+import static android.net.TetheringConstants.ACTION_TETHERING_ENTITLEMENT_FOREGROUND;
 import static android.net.TetheringConstants.EXTRA_ADD_TETHER_TYPE;
 import static android.net.TetheringConstants.EXTRA_PROVISION_CALLBACK;
+import static android.net.TetheringConstants.EXTRA_REQUEST_TETHER_TYPE;
 import static android.net.TetheringManager.TETHERING_INVALID;
 import static android.net.TetheringManager.TETHER_ERROR_NO_ERROR;
 import static android.net.TetheringManager.TETHER_ERROR_PROVISIONING_FAILED;
@@ -28,8 +30,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.os.ResultReceiver;
 import android.os.UserHandle;
+import android.telephony.CarrierConfigManager;
 import android.telephony.SubscriptionManager;
 import android.util.Log;
 
@@ -70,20 +74,25 @@ public class TetherProvisioningActivity extends Activity {
             finish();
             return;
         }
-        String[] provisionApp = getIntent().getStringArrayExtra(
-                EXTRA_TETHER_UI_PROVISIONING_APP_NAME);
-        if (provisionApp == null || provisionApp.length != 2) {
-            Log.e(TAG, "Unexpected provision app configuration");
-            return;
-        }
         final Intent intent = new Intent(Intent.ACTION_MAIN);
-        intent.setClassName(provisionApp[0], provisionApp[1]);
-        intent.putExtra(EXTRA_TETHER_TYPE, tetherType);
+        if (getEntitlementAppPackageNameFromCarrierConfig(subId).isEmpty()) {
+            String[] provisionApp = getIntent().getStringArrayExtra(
+                    EXTRA_TETHER_UI_PROVISIONING_APP_NAME);
+            if (provisionApp == null || provisionApp.length != 2) {
+                Log.e(TAG, "Unexpected provision app configuration");
+                return;
+            }
+            intent.setClassName(provisionApp[0], provisionApp[1]);
+            intent.putExtra(EXTRA_TETHER_TYPE, tetherType);
+            if (DEBUG) {
+                Log.d(TAG, "Starting provisioning app: " + provisionApp[0] + "." + provisionApp[1]);
+            }
+        } else {
+            intent.setAction(ACTION_TETHERING_ENTITLEMENT_FOREGROUND);
+            intent.putExtra(EXTRA_REQUEST_TETHER_TYPE, tetherType);
+        }
         intent.putExtra(EXTRA_SUBSCRIPTION_INDEX, subId);
         intent.putExtra(EXTRA_PROVISION_CALLBACK, mResultReceiver);
-        if (DEBUG) {
-            Log.d(TAG, "Starting provisioning app: " + provisionApp[0] + "." + provisionApp[1]);
-        }
 
         if (getPackageManager().queryIntentActivities(intent,
                 PackageManager.MATCH_DEFAULT_ONLY).isEmpty()) {
@@ -106,5 +115,19 @@ public class TetherProvisioningActivity extends Activity {
             mResultReceiver.send(result, null);
             finish();
         }
+    }
+
+    private String getEntitlementAppPackageNameFromCarrierConfig(int subId) {
+        final CarrierConfigManager configManager = getSystemService(CarrierConfigManager.class);
+        if (configManager == null) {
+            return "";
+        }
+
+        final PersistableBundle carrierConfig = configManager.getConfigForSubId(subId);
+        if (CarrierConfigManager.isConfigForIdentifiedCarrier(carrierConfig)) {
+            return carrierConfig.getString(
+                CarrierConfigManager.Tethering.KEY_ENTITLEMENT_SERVICE_PACKAGE_STRING);
+        }
+        return "";
     }
 }

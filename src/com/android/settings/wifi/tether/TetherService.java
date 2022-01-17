@@ -16,9 +16,11 @@
 
 package com.android.settings.wifi.tether;
 
+import static android.net.TetheringConstants.ACTION_TETHERING_ENTITLEMENT;
 import static android.net.TetheringConstants.EXTRA_ADD_TETHER_TYPE;
 import static android.net.TetheringConstants.EXTRA_PROVISION_CALLBACK;
 import static android.net.TetheringConstants.EXTRA_REM_TETHER_TYPE;
+import static android.net.TetheringConstants.EXTRA_REQUEST_TETHER_TYPE;
 import static android.net.TetheringConstants.EXTRA_RUN_PROVISION;
 import static android.net.TetheringManager.TETHERING_BLUETOOTH;
 import static android.net.TetheringManager.TETHERING_ETHERNET;
@@ -42,7 +44,10 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.TetheringManager;
+import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.Parcel;
 import android.os.ResultReceiver;
 import android.telephony.SubscriptionManager;
 import android.text.TextUtils;
@@ -91,6 +96,14 @@ public class TetherService extends Service {
     private TetherServiceWrapper mWrapper;
     private ArrayList<Integer> mCurrentTethers;
     private ArrayMap<Integer, List<ResultReceiver>> mPendingCallbacks;
+
+    private final ResultReceiver mEntitlementResultReceiver =
+            new ResultReceiver(new Handler()) {
+                @Override
+                protected void onReceiveResult(int resultCode, Bundle resultData) {
+                    handleEntitlementResult(resultCode);
+                }
+            };
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -170,13 +183,15 @@ public class TetherService extends Service {
             Log.e(TAG, "null provisioning action, stop ");
             return stopSelfAndStartNotSticky();
         }
+        if (!mProvisionAction.equals(ACTION_TETHERING_ENTITLEMENT)) {
+            final String response = intent.getStringExtra(EXTRA_TETHER_PROVISIONING_RESPONSE);
+            if (response == null) {
+                Log.e(TAG, "null provisioning response, stop ");
+                return stopSelfAndStartNotSticky();
+            }
 
-        final String response = intent.getStringExtra(EXTRA_TETHER_PROVISIONING_RESPONSE);
-        if (response == null) {
-            Log.e(TAG, "null provisioning response, stop ");
-            return stopSelfAndStartNotSticky();
+            maybeRegisterReceiver(response);
         }
-        maybeRegisterReceiver(response);
 
         if (intent.hasExtra(EXTRA_REM_TETHER_TYPE)) {
             if (!mInProvisionCheck) {
@@ -278,8 +293,11 @@ public class TetherService extends Service {
         if (mProvisionAction == null) Log.wtf(TAG, "null provisioning action");
         Intent intent = new Intent(mProvisionAction);
         int type = mCurrentTethers.get(index);
-        intent.putExtra(TETHER_CHOICE, type);
+        String extraTetherType =  (mProvisionAction.equals(ACTION_TETHERING_ENTITLEMENT))
+                ? EXTRA_REQUEST_TETHER_TYPE : TETHER_CHOICE;
+        intent.putExtra(extraTetherType, type);
         intent.putExtra(EXTRA_SUBSCRIPTION_INDEX, mSubId);
+        intent.putExtra(EXTRA_PROVISION_CALLBACK, writeToParcel(mEntitlementResultReceiver));
         intent.setFlags(Intent.FLAG_RECEIVER_FOREGROUND
                 | Intent.FLAG_RECEIVER_INCLUDE_BACKGROUND);
 
@@ -309,8 +327,15 @@ public class TetherService extends Service {
         if (callbacksForType == null) {
             return;
         }
-        int errorCode = result == RESULT_OK ? TETHER_ERROR_NO_ERROR :
+
+        int errorCode = TETHER_ERROR_PROVISIONING_FAILED;
+        if (mProvisionAction.equals(ACTION_TETHERING_ENTITLEMENT)) {
+            errorCode = result;
+        } else {
+            errorCode = result == RESULT_OK ? TETHER_ERROR_NO_ERROR :
                 TETHER_ERROR_PROVISIONING_FAILED;
+        }
+
         for (ResultReceiver callback : callbacksForType) {
           if (DEBUG) Log.d(TAG, "Firing result: " + errorCode + " to callback");
           callback.send(errorCode, null);
@@ -328,27 +353,31 @@ public class TetherService extends Service {
                         + intent.getAction() + ", expected=" + mExpectedProvisionResponseAction);
                 return;
             }
-
-            if (!mInProvisionCheck) {
-                Log.e(TAG, "Unexpected provisioning response when not in provisioning check"
-                        + intent);
-                return;
-            }
-            int checkType = mCurrentTethers.get(mCurrentTypeIndex);
-            mInProvisionCheck = false;
-            int result = intent.getIntExtra(EXTRA_RESULT, RESULT_DEFAULT);
-            if (result != RESULT_OK) disableTethering(checkType);
-            fireCallbacksForType(checkType, result);
-
-            if (++mCurrentTypeIndex >= mCurrentTethers.size()) {
-                // We are done with all checks, time to die.
-                stopSelf();
-            } else {
-                // Start the next check in our list.
-                startProvisioning(mCurrentTypeIndex);
-            }
+            handleEntitlementResult(intent.getIntExtra(EXTRA_RESULT, RESULT_DEFAULT));
         }
     };
+
+    private void handleEntitlementResult(int result) {
+        if (!mInProvisionCheck) {
+            Log.e(TAG, "Unexpected provisioning response when not in provisioning check");
+            return;
+        }
+        int checkType = mCurrentTethers.get(mCurrentTypeIndex);
+        mInProvisionCheck = false;
+        if ((mProvisionAction.equals(ACTION_TETHERING_ENTITLEMENT)
+                && result == TETHER_ERROR_PROVISIONING_FAILED) || result != RESULT_OK) {
+            disableTethering(checkType);
+        }
+        fireCallbacksForType(checkType, result);
+
+        if (++mCurrentTypeIndex >= mCurrentTethers.size()) {
+            // We are done with all checks, time to die.
+            stopSelf();
+        } else {
+            // Start the next check in our list.
+            startProvisioning(mCurrentTypeIndex);
+        }
+    }
 
     @VisibleForTesting
     void setTetherServiceWrapper(TetherServiceWrapper wrapper) {
@@ -382,5 +411,17 @@ public class TetherService extends Service {
         int getActiveDataSubscriptionId() {
             return SubscriptionManager.getActiveDataSubscriptionId();
         }
+    }
+
+    /**
+     * Copy from {@link com.android.networkstack.tethering#EntitlementManager}
+     */
+    private ResultReceiver writeToParcel(final ResultReceiver receiver) {
+        Parcel parcel = Parcel.obtain();
+        receiver.writeToParcel(parcel, 0);
+        parcel.setDataPosition(0);
+        ResultReceiver receiverForSending = ResultReceiver.CREATOR.createFromParcel(parcel);
+        parcel.recycle();
+        return receiverForSending;
     }
 }
