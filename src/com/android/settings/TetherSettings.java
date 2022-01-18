@@ -331,7 +331,7 @@ public class TetherSettings extends RestrictedSettingsFragment
 
         mEthernetListener = new EthernetListener();
         if (mEm != null)
-            mEm.addListener(mEthernetListener);
+            mEm.addListener(mEthernetListener, new HandlerExecutor(mHandler));
 
         updateUsbState();
         updateBluetoothAndEthernetState();

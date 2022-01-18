@@ -20,6 +20,7 @@ import android.content.Context;
 import android.net.EthernetManager;
 import android.net.TetheringManager;
 import android.os.Handler;
+import android.os.HandlerExecutor;
 import android.os.Looper;
 import android.text.TextUtils;
 
@@ -54,7 +55,7 @@ public final class EthernetTetherPreferenceController extends TetherBasePreferen
                 new Handler(Looper.getMainLooper()).post(() -> updateState(mPreference));
             }
         };
-        mEthernetManager.addListener(mEthernetListener);
+        mEthernetManager.addListener(mEthernetListener, new HandlerExecutor(new Handler()));
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
