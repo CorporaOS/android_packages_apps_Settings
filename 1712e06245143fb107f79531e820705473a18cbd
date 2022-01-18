@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b757b49_1c9f54c2",
+        "filename": "src/com/android/settings/wifi/tether/TetherService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1138358
+      },
+      "writtenOn": "2022-01-18T18:02:43Z",
+      "side": 1,
+      "message": "final",
+      "range": {
+        "startLine": 99,
+        "startChar": 11,
+        "endLine": 99,
+        "endChar": 12
+      },
+      "revId": "1712e06245143fb107f79531e820705473a18cbd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
