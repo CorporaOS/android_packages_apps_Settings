@@ -22,6 +22,30 @@
       },
       "revId": "1712e06245143fb107f79531e820705473a18cbd",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ebe2cc79_9e8ba1f5",
+        "filename": "src/com/android/settings/wifi/tether/TetherService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-01-19T02:25:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1b757b49_1c9f54c2",
+      "range": {
+        "startLine": 99,
+        "startChar": 11,
+        "endLine": 99,
+        "endChar": 12
+      },
+      "revId": "1712e06245143fb107f79531e820705473a18cbd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
