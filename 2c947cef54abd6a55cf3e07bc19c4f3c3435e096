@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "74da7fe4_1d81cce2",
+        "filename": "src/com/android/settings/biometrics/fingerprint/FingerprintEnrollIntroduction.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1368032
+      },
+      "writtenOn": "2022-01-19T02:01:10Z",
+      "side": 1,
+      "message": "Can we hide the LinearLayout block that includes an icon, a space and a text? If only the icon were hidden, there would be a space leaving. That might affect the a11y\u0027s behavior.",
+      "range": {
+        "startLine": 97,
+        "startChar": 30,
+        "endLine": 97,
+        "endChar": 45
+      },
+      "revId": "2c947cef54abd6a55cf3e07bc19c4f3c3435e096",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
