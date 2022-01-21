@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2273f914_8224eca0",
+        "filename": "src/com/android/settings/network/TetherProvisioningActivity.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1138358
+      },
+      "writtenOn": "2022-01-21T19:24:25Z",
+      "side": 1,
+      "message": "This can return null. Use getString(KEY, \"\") instead to make sure empty string is returned if the key is missing.",
+      "range": {
+        "startLine": 129,
+        "startChar": 85,
+        "endLine": 129,
+        "endChar": 86
+      },
+      "revId": "a774d73783492d0f8e310cbba855c38b1165ba07",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
