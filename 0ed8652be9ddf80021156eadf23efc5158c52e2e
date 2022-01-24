@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc847992_8b81f77f",
+        "filename": "src/com/android/settings/TetherSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 334,
+      "author": {
+        "id": 1306837
+      },
+      "writtenOn": "2022-01-24T14:13:17Z",
+      "side": 1,
+      "message": "r -\u003e mHandler.post(r)",
+      "range": {
+        "startLine": 334,
+        "startChar": 48,
+        "endLine": 334,
+        "endChar": 76
+      },
+      "revId": "0ed8652be9ddf80021156eadf23efc5158c52e2e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "90bdec26_5f1d1fda",
+        "filename": "src/com/android/settings/network/EthernetTetherPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1306837
+      },
+      "writtenOn": "2022-01-24T14:13:17Z",
+      "side": 1,
+      "message": "IIUC you don\u0027t need this.\nSee aosp/1936446",
+      "range": {
+        "startLine": 23,
+        "startChar": 8,
+        "endLine": 23,
+        "endChar": 34
+      },
+      "revId": "0ed8652be9ddf80021156eadf23efc5158c52e2e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c1f61f7c_f2d22e10",
+        "filename": "src/com/android/settings/network/EthernetTetherPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1306837
+      },
+      "writtenOn": "2022-01-24T14:13:17Z",
+      "side": 1,
+      "message": "1.\nIIUC this is not correct where the event will be posted on a Handler which nobody handles the event.\nMaybe just use inline executor:\n        mEthernetManager.addListener(mEthernetListener, r -\u003e r.run());\n        \n2. Furthermore, IIUC the listener and handler can be simplified too:\n  mEthernetListener \u003d (iface, isAvailable) -\u003e updateState(mPreference);\n  final Handler handler \u003d new Handler(Looper.getMainLooper());\nIf so you need to use Executor that post event on that handler, which is:\n   mEthernetManager.addListener(mEthernetListener, r -\u003e handler.post(r));",
+      "range": {
+        "startLine": 58,
+        "startChar": 56,
+        "endLine": 58,
+        "endChar": 90
+      },
+      "revId": "0ed8652be9ddf80021156eadf23efc5158c52e2e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
