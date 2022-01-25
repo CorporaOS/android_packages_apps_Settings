@@ -2299,6 +2299,7 @@
         <activity android:name=".Settings$UsbDetailsActivity"
                   android:excludeFromRecents="true"
                   android:permission="android.permission.MANAGE_USB"
+                  android:taskAffinity="com.android.settings.usb"
                   android:exported="true">
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.connecteddevice.usb.UsbDetailsFragment"/>
