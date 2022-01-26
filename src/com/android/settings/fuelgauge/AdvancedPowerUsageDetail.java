@@ -354,10 +354,17 @@ public class AdvancedPowerUsageDetail extends DashboardFragment implements
             footerString = context.getString(R.string.manager_battery_usage_footer);
         }
         mFooterPreference.setTitle(footerString);
-        mFooterPreference.setLearnMoreAction(v ->
-                startActivityForResult(HelpUtils.getHelpIntent(context,
-                        context.getString(R.string.help_url_app_usage_settings),
-                        /*backupContext=*/ ""), /*requestCode=*/ 0));
+        Intent helpIntent = HelpUtils.getHelpIntent(context,
+                context.getString(R.string.help_url_app_usage_settings),
+                /*backupContext=*/ "");
+        // Learn more textview should only be displayed when its help intent has been set
+        if (null != helpIntent) {
+            mFooterPreference.setLearnMoreAction(v ->
+                    startActivityForResult(helpIntent, /*requestCode=*/ 0));
+        } else {
+            // will hide the learn more textview when its action is null
+            mFooterPreference.setLearnMoreAction(null);
+        }
         mFooterPreference.setLearnMoreContentDescription(
                 context.getString(R.string.manager_battery_usage_link_a11y));
     }
