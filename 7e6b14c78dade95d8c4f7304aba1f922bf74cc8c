@@ -1,0 +1,56 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000019754783",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1960844?revision\u003d1",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "adb47be6_1706c0cb",
+        "filename": "tests/robotests/src/com/android/settings/development/BluetoothMaxConnectedAudioDevicesPreferenceControllerTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-01-26T12:11:13Z",
+      "side": 1,
+      "message": "Lines longer than 100 characters should be wrapped to improve readability; see https://source.android.com/setup/contribute/code-style#limit-line-length for more details.",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 106
+      },
+      "revId": "7e6b14c78dade95d8c4f7304aba1f922bf74cc8c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000019754783",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1960844?revision\u003d1",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "408cd282_5512caca",
+        "filename": "tests/robotests/src/com/android/settings/development/BluetoothMaxConnectedAudioDevicesPreferenceControllerTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-01-26T12:11:13Z",
+      "side": 1,
+      "message": "Lines longer than 100 characters should be wrapped to improve readability; see https://source.android.com/setup/contribute/code-style#limit-line-length for more details.",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 159
+      },
+      "revId": "7e6b14c78dade95d8c4f7304aba1f922bf74cc8c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
