@@ -16,6 +16,29 @@
       "message": "@Wesley, Done, Please review again",
       "revId": "ff12c8a99df57ab099a9a84de6ebdb2bf99d5714",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "70280ae7_10f8dcc6",
+        "filename": "src/com/android/settings/fuelgauge/AdvancedPowerUsageDetail.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 359,
+      "author": {
+        "id": 1351519
+      },
+      "writtenOn": "2022-01-26T12:19:06Z",
+      "side": 1,
+      "message": "Due to the merge conflict, can you help to modify this part to:\n    final Intent helpIntent \u003d HelpUtils.getHelpIntent(context, context.getString(\n            R.string.help_url_app_usage_settings), /*backupContext\u003d*/ \"\");\n            \nand trigger the presubmit again? thanks\n\nI will find another way to fix it if it\u0027s still not work",
+      "range": {
+        "startLine": 357,
+        "startChar": 8,
+        "endLine": 359,
+        "endChar": 39
+      },
+      "revId": "ff12c8a99df57ab099a9a84de6ebdb2bf99d5714",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
