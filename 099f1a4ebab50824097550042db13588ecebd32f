@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "58c3f933_9af3dc1f",
+        "filename": "src/com/android/settings/fuelgauge/AdvancedPowerUsageDetail.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 361,
+      "author": {
+        "id": 1351519
+      },
+      "writtenOn": "2022-01-26T09:06:40Z",
+      "side": 1,
+      "message": "helpIntent !\u003d null",
+      "range": {
+        "startLine": 361,
+        "startChar": 12,
+        "endLine": 361,
+        "endChar": 30
+      },
+      "revId": "099f1a4ebab50824097550042db13588ecebd32f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "408bacda_93454d34",
+        "filename": "src/com/android/settings/fuelgauge/AdvancedPowerUsageDetail.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 1351519
+      },
+      "writtenOn": "2022-01-26T09:06:40Z",
+      "side": 1,
+      "message": "Thanks to checking this 😊\n\nBut you can simply checking the intent is not null and setLearnMoreAction + setLearnMoreContentDescription only, the learn more button won\u0027t be shows up without setting, this can let you get rid of the else condition and a redundant setLearnMoreContentDescription.",
+      "range": {
+        "startLine": 364,
+        "startChar": 8,
+        "endLine": 369,
+        "endChar": 77
+      },
+      "revId": "099f1a4ebab50824097550042db13588ecebd32f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
