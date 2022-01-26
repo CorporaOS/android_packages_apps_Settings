@@ -232,6 +232,7 @@ public class QrCamera extends Handler {
     private class DecodingTask extends AsyncTask<Void, Void, String> {
         private QrYuvLuminanceSource mImage;
         private SurfaceTexture mSurface;
+        private boolean mInvertImage;
 
         private DecodingTask(SurfaceTexture surface) {
             mSurface = surface;
@@ -258,9 +259,17 @@ public class QrCamera extends Handler {
                     imageGot.acquire();
                     Result qrCode = null;
                     try {
-                        qrCode =
-                                mReader.decodeWithState(
-                                        new BinaryBitmap(new HybridBinarizer(mImage)));
+                        // Alternate between inverted and non-inverted images to be able to
+                        // decode inverted QR codes.
+                        if (mInvertImage) {
+                            mInvertImage = false;
+                            qrCode = mReader.decodeWithState(
+                                    new BinaryBitmap(new HybridBinarizer(mImage.invert())));
+                        } else {
+                            mInvertImage = true;
+                            qrCode = mReader.decodeWithState(
+                                    new BinaryBitmap(new HybridBinarizer(mImage)));
+                        }
                     } catch (ReaderException e) {
                         // No logging since every time the reader cannot decode the
                         // image, this ReaderException will be thrown.
