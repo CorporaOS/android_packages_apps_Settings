@@ -22,6 +22,30 @@
       },
       "revId": "535d47b298ca3e075c70390e26a66af8ca5063ee",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7946583f_2d1d688f",
+        "filename": "tests/unit/OWNERS",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2022-01-27T09:43:28Z",
+      "side": 1,
+      "message": "I think it\u0027s ok to let every module owner to maintain their test code. (+2 on their test cl without settings core engineers involve.)\n\nIn reality, I don\u0027t want to review all tests code since the resource consideration and domain owners usually understands their test code than settings core engineer. \n\n\nJeremy, do you have any concern about this strategy? We have same strategy as robo tests.",
+      "parentUuid": "bf7a269f_af2bf285",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 17
+      },
+      "revId": "535d47b298ca3e075c70390e26a66af8ca5063ee",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
