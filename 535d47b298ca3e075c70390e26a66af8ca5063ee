@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bf7a269f_af2bf285",
+        "filename": "tests/unit/OWNERS",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1762265
+      },
+      "writtenOn": "2022-01-27T09:17:03Z",
+      "side": 1,
+      "message": "I\u0027m not sure we should let all engineers own Settings unit tests. How about engineers on the Settings and Connectivity Settings teams?",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 17
+      },
+      "revId": "535d47b298ca3e075c70390e26a66af8ca5063ee",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
