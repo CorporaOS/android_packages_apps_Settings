@@ -46,6 +46,30 @@
       },
       "revId": "535d47b298ca3e075c70390e26a66af8ca5063ee",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e913a38d_0d4bff66",
+        "filename": "tests/unit/OWNERS",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1367652
+      },
+      "writtenOn": "2022-01-27T09:47:27Z",
+      "side": 1,
+      "message": "Please refer to the OWNERS file of the tests/robotests.\n\nhttps://source.corp.google.com/android/packages/apps/Settings/tests/robotests/OWNERS\n\nIt was opened to everyone for tests modification now.\n\nThank you!",
+      "parentUuid": "bf7a269f_af2bf285",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 17
+      },
+      "revId": "535d47b298ca3e075c70390e26a66af8ca5063ee",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
