@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "940cd228_cd6bca42",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1815899
+      },
+      "writtenOn": "2022-01-27T19:40:32Z",
+      "side": 1,
+      "message": "Hi,\n\nPlease see screenshots of the issue:\n\n* https://imgur.com/a/tAJ6OqV\n\nSection \"Phone number on SIM\".",
+      "revId": "0824805a66587884f5766c0154eab197623a9444",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
