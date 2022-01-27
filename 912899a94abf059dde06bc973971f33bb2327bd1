@@ -16,6 +16,24 @@
       "message": "What is the confliction?",
       "revId": "912899a94abf059dde06bc973971f33bb2327bd1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "24c5faa3_d2ad01b8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1351519
+      },
+      "writtenOn": "2022-01-27T09:40:02Z",
+      "side": 1,
+      "message": "Not sure 😕\nIt just conflict when merging to other branch, I can not find the specific place which it went wrong(although we only have couple lines here)\n\nI added an id to block it merge to the conflict branch, that branch already have those logic, so it\u0027s fine, we can submit this CL now 😊",
+      "parentUuid": "16dc6210_d5f8f5c9",
+      "revId": "912899a94abf059dde06bc973971f33bb2327bd1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
