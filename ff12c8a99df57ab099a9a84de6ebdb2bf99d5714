@@ -39,6 +39,30 @@
       },
       "revId": "ff12c8a99df57ab099a9a84de6ebdb2bf99d5714",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a6499ac_9917dfc6",
+        "filename": "src/com/android/settings/fuelgauge/AdvancedPowerUsageDetail.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 359,
+      "author": {
+        "id": 1413437
+      },
+      "writtenOn": "2022-01-27T01:22:20Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "70280ae7_10f8dcc6",
+      "range": {
+        "startLine": 357,
+        "startChar": 8,
+        "endLine": 359,
+        "endChar": 39
+      },
+      "revId": "ff12c8a99df57ab099a9a84de6ebdb2bf99d5714",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
