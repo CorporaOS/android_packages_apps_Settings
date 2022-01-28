@@ -28,27 +28,35 @@ import androidx.lifecycle.OnLifecycleEvent;
 
 import com.android.internal.annotations.VisibleForTesting;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * This controller helps to manage the switch state and visibility of ethernet tether switch
  * preference.
  */
 public final class EthernetTetherPreferenceController extends TetherBasePreferenceController {
 
-    private final String mEthernetRegex;
     private final EthernetManager mEthernetManager;
+    private final Set<String> mKnownInterfaces = new HashSet<>();
     @VisibleForTesting
     EthernetManager.Listener mEthernetListener;
 
     public EthernetTetherPreferenceController(Context context, String preferenceKey) {
         super(context, preferenceKey);
-        mEthernetRegex = context.getString(
-                com.android.internal.R.string.config_ethernet_iface_regex);
         mEthernetManager = (EthernetManager) context.getSystemService(Context.ETHERNET_SERVICE);
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     public void onStart() {
-        mEthernetListener = (iface, isAvailable) -> updateState(mPreference);
+        mEthernetListener = (iface, isAvailable) -> {
+            if (isAvailable) {
+                mKnownInterfaces.add(iface);
+            } else {
+                mKnownInterfaces.remove(iface);
+            }
+            updateState(mPreference);
+        };
         final Handler handler = new Handler(Looper.getMainLooper());
         // Executor will execute to post the updateState event to a new handler which is created
         // from the main looper when the {@link EthernetManager.Listener.onAvailabilityChanged}
@@ -66,7 +74,7 @@ public final class EthernetTetherPreferenceController extends TetherBasePreferen
     public boolean shouldEnable() {
         String[] available = mTm.getTetherableIfaces();
         for (String s : available) {
-            if (s.matches(mEthernetRegex)) {
+            if (mKnownInterfaces.contains(s)) {
                 return true;
             }
         }
@@ -75,7 +83,7 @@ public final class EthernetTetherPreferenceController extends TetherBasePreferen
 
     @Override
     public boolean shouldShow() {
-        return !TextUtils.isEmpty(mEthernetRegex);
+        return !mKnownInterfaces.isEmpty();
     }
 
     @Override
