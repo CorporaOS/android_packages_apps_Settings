@@ -34,6 +34,9 @@ import android.content.IntentFilter;
 import android.hardware.usb.UsbManager;
 import android.net.ConnectivityManager;
 import android.net.EthernetManager;
+import android.net.EthernetManager.InterfaceState;
+import android.net.EthernetManager.Role;
+import android.net.IpConfiguration;
 import android.net.TetheringManager;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
@@ -106,6 +109,7 @@ public class TetherSettings extends RestrictedSettingsFragment
     private EthernetManager mEm;
     private TetheringEventCallback mTetheringEventCallback;
     private EthernetListener mEthernetListener;
+    private final List<String> mEthernetAvailableInterfaces = new ArrayList<>();
 
     private WifiTetherPreferenceController mWifiTetherPreferenceController;
 
@@ -330,7 +334,7 @@ public class TetherSettings extends RestrictedSettingsFragment
 
         mEthernetListener = new EthernetListener();
         if (mEm != null)
-            mEm.addListener(mEthernetListener, r -> mHandler.post(r));
+            mEm.addListener(r -> mHandler.post(r), mEthernetListener);
 
         updateUsbState();
         updateBluetoothAndEthernetState();
@@ -498,7 +502,7 @@ public class TetherSettings extends RestrictedSettingsFragment
         if (isTethered) {
             mEthernetTether.setEnabled(!mDataSaverEnabled);
             mEthernetTether.setChecked(true);
-        } else if (isAvailable || (mEm != null && mEm.isAvailable())) {
+        } else if (isAvailable || (mEthernetAvailableInterfaces.size() > 0)) {
             mEthernetTether.setEnabled(!mDataSaverEnabled);
             mEthernetTether.setChecked(false);
         } else {
@@ -647,8 +651,14 @@ public class TetherSettings extends RestrictedSettingsFragment
     }
 
     private final class EthernetListener implements EthernetManager.Listener {
-        public void onAvailabilityChanged(String iface, boolean isAvailable) {
-            mHandler.post(() -> updateBluetoothAndEthernetState());
+        public void onInterfaceStateChanged(String iface, @InterfaceState int state,
+                @Role int role, IpConfiguration configuration) {
+            if (state == EthernetManager.LINK_UP) {
+                mEthernetAvailableInterfaces.add(iface);
+            } else {
+                mEthernetAvailableInterfaces.remove(iface);
+            }
+            updateBluetoothAndEthernetState();
         }
     }
 }
