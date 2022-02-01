@@ -17,9 +17,12 @@
 package com.android.settings.development;
 
 import android.bluetooth.BluetoothA2dp;
+import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothCodecConfig;
 import android.bluetooth.BluetoothCodecStatus;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothManager;
+import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 
 import androidx.annotation.VisibleForTesting;
@@ -34,6 +37,8 @@ import com.android.settingslib.core.lifecycle.LifecycleObserver;
 import com.android.settingslib.core.lifecycle.events.OnDestroy;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
 
+import java.util.List;
+
 public abstract class AbstractBluetoothA2dpPreferenceController extends
         DeveloperOptionsPreferenceController implements Preference.OnPreferenceChangeListener,
         PreferenceControllerMixin, BluetoothServiceConnectionListener, LifecycleObserver,
@@ -43,6 +48,7 @@ public abstract class AbstractBluetoothA2dpPreferenceController extends
     static final int STREAMING_LABEL_ID = R.string.bluetooth_select_a2dp_codec_streaming_label;
 
     protected final BluetoothA2dpConfigStore mBluetoothA2dpConfigStore;
+    private BluetoothAdapter mBluetoothAdapter;
     protected BluetoothA2dp mBluetoothA2dp;
     protected ListPreference mPreference;
     private final String[] mListValues;
@@ -53,6 +59,7 @@ public abstract class AbstractBluetoothA2dpPreferenceController extends
         super(context);
 
         mBluetoothA2dpConfigStore = store;
+        mBluetoothAdapter = context.getSystemService(BluetoothManager.class).getAdapter();
         mListValues = getListValues();
         mListSummaries = getListSummaries();
 
@@ -82,13 +89,11 @@ public abstract class AbstractBluetoothA2dpPreferenceController extends
 
         final BluetoothCodecConfig codecConfig = mBluetoothA2dpConfigStore.createCodecConfig();
         synchronized (mBluetoothA2dpConfigStore) {
-            if (mBluetoothA2dp != null) {
-                BluetoothDevice activeDevice = mBluetoothA2dp.getActiveDevice();
-                if (activeDevice == null) {
-                    return false;
-                }
-                setCodecConfigPreference(activeDevice, codecConfig);
+            BluetoothDevice activeDevice = getA2dpActiveDevice();
+            if (activeDevice == null) {
+                return false;
             }
+            setCodecConfigPreference(activeDevice, codecConfig);
         }
         // Because the setting is not persisted into permanent storage, we cannot call update state
         // here to update the preference.
@@ -106,7 +111,7 @@ public abstract class AbstractBluetoothA2dpPreferenceController extends
 
     @Override
     public void updateState(Preference preference) {
-        BluetoothDevice activeDevice = mBluetoothA2dp.getActiveDevice();
+        BluetoothDevice activeDevice = getA2dpActiveDevice();
         if (activeDevice == null || getCodecConfig(activeDevice) == null || mPreference == null) {
             return;
         }
@@ -184,7 +189,7 @@ public abstract class AbstractBluetoothA2dpPreferenceController extends
     void setCodecConfigPreference(BluetoothDevice device,
             BluetoothCodecConfig config) {
         BluetoothDevice bluetoothDevice =
-                (device != null) ? device : mBluetoothA2dp.getActiveDevice();
+                (device != null) ? device : getA2dpActiveDevice();
         if (bluetoothDevice == null) {
             return;
         }
@@ -195,7 +200,7 @@ public abstract class AbstractBluetoothA2dpPreferenceController extends
     BluetoothCodecConfig getCodecConfig(BluetoothDevice device) {
         if (mBluetoothA2dp != null) {
             BluetoothDevice bluetoothDevice =
-                    (device != null) ? device : mBluetoothA2dp.getActiveDevice();
+                    (device != null) ? device : getA2dpActiveDevice();
             if (bluetoothDevice == null) {
                 return null;
             }
@@ -205,5 +210,14 @@ public abstract class AbstractBluetoothA2dpPreferenceController extends
             }
         }
         return null;
+    }
+
+    private BluetoothDevice getA2dpActiveDevice() {
+        if (mBluetoothAdapter == null) {
+            return null;
+        }
+        List<BluetoothDevice> activeDevices =
+                mBluetoothAdapter.getActiveDevices(BluetoothProfile.A2DP);
+        return (activeDevices.size() > 0) ? activeDevices.get(0) : null;
     }
 }
