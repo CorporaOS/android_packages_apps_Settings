@@ -18,6 +18,7 @@ package com.android.settings.development.bluetooth;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.eq;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -27,6 +28,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothCodecConfig;
 import android.bluetooth.BluetoothCodecStatus;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 
 import androidx.lifecycle.LifecycleOwner;
@@ -54,6 +56,8 @@ public class BluetoothChannelModeDialogPreferenceControllerTest {
 
     @Mock
     private BluetoothA2dp mBluetoothA2dp;
+    @Mock
+    private BluetoothAdapter mBluetoothAdapter;
     @Mock
     private PreferenceScreen mScreen;
 
@@ -90,7 +94,8 @@ public class BluetoothChannelModeDialogPreferenceControllerTest {
                 .setChannelMode(BluetoothCodecConfig.CHANNEL_MODE_MONO
                             | BluetoothCodecConfig.CHANNEL_MODE_STEREO)
                 .build();
-        when(mBluetoothA2dp.getActiveDevice()).thenReturn(mActiveDevice);
+        when(mBluetoothAdapter.getActiveDevices(eq(BluetoothProfile.A2DP)))
+                .thenReturn(Arrays.asList(mActiveDevice));
     }
 
     @Test

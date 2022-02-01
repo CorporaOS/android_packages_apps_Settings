@@ -29,6 +29,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothCodecConfig;
 import android.bluetooth.BluetoothCodecStatus;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 
 import androidx.lifecycle.LifecycleOwner;
@@ -55,6 +56,8 @@ public class BluetoothCodecDialogPreferenceControllerTest {
 
     @Mock
     private BluetoothA2dp mBluetoothA2dp;
+    @Mock
+    private BluetoothAdapter mBluetoothAdapter;
     @Mock
     private PreferenceScreen mScreen;
     @Mock
@@ -115,7 +118,8 @@ public class BluetoothCodecDialogPreferenceControllerTest {
         mCodecConfigLDAC = new BluetoothCodecConfig.Builder()
                 .setCodecType(BluetoothCodecConfig.SOURCE_CODEC_TYPE_LDAC)
                 .build();
-        when(mBluetoothA2dp.getActiveDevice()).thenReturn(mActiveDevice);
+        when(mBluetoothAdapter.getActiveDevices(eq(BluetoothProfile.A2DP)))
+                .thenReturn(Arrays.asList(mActiveDevice));
     }
 
     @Test
