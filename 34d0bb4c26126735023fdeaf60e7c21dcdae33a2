@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "413d36e9_3b97ea04",
+        "filename": "src/com/android/settings/development/AbstractBluetoothA2dpPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 1051483
+      },
+      "writtenOn": "2022-02-01T19:13:53Z",
+      "side": 1,
+      "message": "nit: 0",
+      "range": {
+        "startLine": 221,
+        "startChar": 39,
+        "endLine": 221,
+        "endChar": 40
+      },
+      "revId": "34d0bb4c26126735023fdeaf60e7c21dcdae33a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "62ee18e2_2993adf4",
+        "filename": "src/com/android/settings/development/bluetooth/AbstractBluetoothPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1051483
+      },
+      "writtenOn": "2022-02-01T19:13:53Z",
+      "side": 1,
+      "message": "nit: 0",
+      "range": {
+        "startLine": 100,
+        "startChar": 39,
+        "endLine": 100,
+        "endChar": 40
+      },
+      "revId": "34d0bb4c26126735023fdeaf60e7c21dcdae33a2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
