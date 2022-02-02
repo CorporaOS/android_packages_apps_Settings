@@ -16,6 +16,24 @@
       "message": "why doing this in aosp rather than internal master?",
       "revId": "9692c59d3a9300cf53c5277a51a290ea45da70d7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f1abcac3_9c253936",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1880948
+      },
+      "writtenOn": "2022-02-02T23:36:44Z",
+      "side": 1,
+      "message": "We have to clear hidden APIs calls to Bluetooth module both in AOSP and internal master. when building the module as an apex, hidden APIs calls will cause build failures",
+      "parentUuid": "e61357a3_1d0efab8",
+      "revId": "9692c59d3a9300cf53c5277a51a290ea45da70d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
