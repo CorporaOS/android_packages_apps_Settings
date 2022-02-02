@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e61357a3_1d0efab8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1639706
+      },
+      "writtenOn": "2022-02-02T23:33:07Z",
+      "side": 1,
+      "message": "why doing this in aosp rather than internal master?",
+      "revId": "9692c59d3a9300cf53c5277a51a290ea45da70d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
