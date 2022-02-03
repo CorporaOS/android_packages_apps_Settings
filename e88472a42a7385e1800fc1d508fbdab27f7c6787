@@ -34,6 +34,24 @@
       "parentUuid": "e2a2976f_5c468bfd",
       "revId": "e88472a42a7385e1800fc1d508fbdab27f7c6787",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1aef1ce7_6ddd19cf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1344895
+      },
+      "writtenOn": "2022-02-03T23:04:35Z",
+      "side": 1,
+      "message": "Internally we use the \"side\" and \"rear\" terminology, so something like this would be great:\nsecurity_settings_fingerprint_enroll_find_rear_sensor_message\nsecurity_settings_fingerprint_enroll_find_side_sensor_message\n\nI\u0027m afraid you\u0027d need to update a bunch of references to the original security_settings_fingerprint_enroll_find_sensor_message. Give it a try, but let us know if you run into issues and we can file an internal bug to track it.\n\nThanks for raising this issue!",
+      "parentUuid": "1f2b629e_192e4ae8",
+      "revId": "e88472a42a7385e1800fc1d508fbdab27f7c6787",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
