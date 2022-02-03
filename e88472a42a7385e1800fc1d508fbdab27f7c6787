@@ -16,6 +16,24 @@
       "message": "Thank you for the change!\n\nHowever, I can see how this might break for languages other than English, for example Russian. It would not be enough to only change the word \"side\" or \"back\", other words in the sentence would need to change accordingly.\n\nA better solution would be to have a dedicated string for side fingerprint. That way the entire string can be translated correctly. ",
       "revId": "e88472a42a7385e1800fc1d508fbdab27f7c6787",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f2b629e_192e4ae8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1156808
+      },
+      "writtenOn": "2022-02-03T22:58:24Z",
+      "side": 1,
+      "message": "Thanks for your feedback. Is it okay to rename string security_settings_fingerprint_enroll_find_sensor_message to security_settings_fingerprint_enroll_find_sensor_message_back and create security_settings_fingerprint_enroll_find_sensor_message_side?",
+      "parentUuid": "e2a2976f_5c468bfd",
+      "revId": "e88472a42a7385e1800fc1d508fbdab27f7c6787",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
