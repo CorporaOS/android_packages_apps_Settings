@@ -16,6 +16,23 @@
       "message": "Update as per the suggestions.",
       "revId": "a0906b7e0656b77c5f99410baf4c4b85fd272a40",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a998d1c_822f4a89",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1344895
+      },
+      "writtenOn": "2022-02-03T23:55:44Z",
+      "side": 1,
+      "message": "Jim, do you see any issues with updating the strings like that?",
+      "revId": "a0906b7e0656b77c5f99410baf4c4b85fd272a40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
