@@ -1,0 +1,30 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000020083719",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1971342?revision\u003d2",
+      "fixSuggestions": [],
+      "key": {
+        "uuid": "e151e58a_9bdcf1a2",
+        "filename": "tests/robotests/res/layout-mcc999/fingerprint_enroll_find_sensor.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-02-03T23:14:01Z",
+      "side": 1,
+      "message": "Lines longer than 100 characters should be wrapped to improve readability; see https://source.android.com/setup/contribute/code-style#limit-line-length for more details.",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 102
+      },
+      "revId": "a0906b7e0656b77c5f99410baf4c4b85fd272a40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
