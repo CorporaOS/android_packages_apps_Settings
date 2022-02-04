@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e18222a2_963976f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1246512
+      },
+      "writtenOn": "2022-02-04T08:49:16Z",
+      "side": 1,
+      "message": "Hi, is there anything I need to change in order to resolve the build error?",
+      "revId": "7b609992ebf6a4a6b294e1a87bc6a3c8eeade856",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
