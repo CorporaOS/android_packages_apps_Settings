@@ -33,6 +33,23 @@
       "message": "Jim, do you see any issues with updating the strings like that?",
       "revId": "a0906b7e0656b77c5f99410baf4c4b85fd272a40",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "caf4a86b_96044136",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1156808
+      },
+      "writtenOn": "2022-02-04T20:32:56Z",
+      "side": 1,
+      "message": "Please let me know if you prefer other string names or if this is fine.",
+      "revId": "a0906b7e0656b77c5f99410baf4c4b85fd272a40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
