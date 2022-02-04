@@ -33,6 +33,24 @@
       "message": "Hi Joe,\n\nWe have verified the patch locally on a Sony device.\n\nUnfortunately we have not been able to verify on a pixel, since GMS apps needs to be added properly and on suitable hardware.\n\nWould it be possible for you verify?\n\n",
       "revId": "7b609992ebf6a4a6b294e1a87bc6a3c8eeade856",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9eaeffa5_b43c4214",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1565948
+      },
+      "writtenOn": "2022-02-04T23:45:04Z",
+      "side": 1,
+      "message": "Yes, it\u0027s fine. There\u0027s a similar change already in many of the other branches, which is why this is stuck on a merge conflict. I should be able to clear it soon. Thanks again for the fix!",
+      "parentUuid": "69e1c3b4_b316ef1e",
+      "revId": "7b609992ebf6a4a6b294e1a87bc6a3c8eeade856",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
