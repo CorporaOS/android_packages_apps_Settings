@@ -47,6 +47,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "93bb42d4_8ced77bd",
+        "filename": "src/com/android/settings/TetherSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 656,
+      "author": {
+        "id": 1406251
+      },
+      "writtenOn": "2022-02-07T10:16:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "60390582_59830775",
+      "range": {
+        "startLine": 656,
+        "startChar": 12,
+        "endLine": 656,
+        "endChar": 43
+      },
+      "revId": "89dae9ec45b1661921182cf01c1ec984631fcac9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "db81ad46_f26a2826",
@@ -60,6 +84,30 @@
       "writtenOn": "2022-02-03T07:31:04Z",
       "side": 1,
       "message": "There is already an mContext member in this class which contains the context that was passed to the constructor",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 35
+      },
+      "revId": "89dae9ec45b1661921182cf01c1ec984631fcac9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "72c44b1f_d8ae25e8",
+        "filename": "src/com/android/settings/network/EthernetTetherPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1406251
+      },
+      "writtenOn": "2022-02-07T10:16:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "db81ad46_f26a2826",
       "range": {
         "startLine": 40,
         "startChar": 0,
@@ -93,6 +141,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c8f3229_cc066f20",
+        "filename": "src/com/android/settings/network/EthernetTetherPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1406251
+      },
+      "writtenOn": "2022-02-07T10:16:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "36b789f3_dd3e06e4",
+      "range": {
+        "startLine": 56,
+        "startChar": 45,
+        "endLine": 56,
+        "endChar": 56
+      },
+      "revId": "89dae9ec45b1661921182cf01c1ec984631fcac9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0c3f5daf_743555e1",
@@ -106,6 +178,30 @@
       "writtenOn": "2022-02-03T07:31:04Z",
       "side": 1,
       "message": "Instead of calling this every time, let\u0027s call it once in the constructor and store the answer in a final boolean",
+      "range": {
+        "startLine": 88,
+        "startChar": 8,
+        "endLine": 88,
+        "endChar": 94
+      },
+      "revId": "89dae9ec45b1661921182cf01c1ec984631fcac9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f06d672_3675ad9a",
+        "filename": "src/com/android/settings/network/EthernetTetherPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1406251
+      },
+      "writtenOn": "2022-02-07T10:16:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0c3f5daf_743555e1",
       "range": {
         "startLine": 88,
         "startChar": 8,
