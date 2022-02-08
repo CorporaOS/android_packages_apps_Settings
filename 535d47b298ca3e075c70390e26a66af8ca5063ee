@@ -70,6 +70,30 @@
       },
       "revId": "535d47b298ca3e075c70390e26a66af8ca5063ee",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b7e307b4_f5f40bfb",
+        "filename": "tests/unit/OWNERS",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1762265
+      },
+      "writtenOn": "2022-02-08T03:43:51Z",
+      "side": 1,
+      "message": "Okay, so long as we\u0027re being deliberate about the strategy forward I don\u0027t have an objection to this plan. Thanks for the additional explanations",
+      "parentUuid": "e913a38d_0d4bff66",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 17
+      },
+      "revId": "535d47b298ca3e075c70390e26a66af8ca5063ee",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
