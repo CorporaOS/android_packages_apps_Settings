@@ -103,6 +103,42 @@
       "parentUuid": "f6442ba8_31603502",
       "revId": "a0906b7e0656b77c5f99410baf4c4b85fd272a40",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e546f61f_e729a20e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1344895
+      },
+      "writtenOn": "2022-02-08T22:11:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0a998d1c_822f4a89",
+      "revId": "a0906b7e0656b77c5f99410baf4c4b85fd272a40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e218c2fc_e5d63e33",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1344895
+      },
+      "writtenOn": "2022-02-08T22:11:17Z",
+      "side": 1,
+      "message": "Internally we kept the original string name and added a separate string for UDFPS. By that logic, I simply added a new string for side-FPS to avoid the complexity of renaming the existing string.\n\nMy change has already failed because of some merge conflicts with the internal branches.\n\nAt this point any solution appears to result in a merge conflict. To be realistic, I don\u0027t think we\u0027ll be able to fix this any time soon, and there might be a lot more back-and-forth.\n\nI propose that you file a bug in https://issuetracker.google.com/issues?q\u003dcomponentid:559537, and we\u0027ll try to fix it internally. However, we cannot guarantee a fast fix at this time.",
+      "parentUuid": "f6442ba8_31603502",
+      "revId": "a0906b7e0656b77c5f99410baf4c4b85fd272a40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
