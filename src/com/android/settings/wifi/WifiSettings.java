@@ -184,6 +184,8 @@ public class WifiSettings extends RestrictedSettingsFragment
 
     // Worker thread used for WifiPickerTracker work
     private HandlerThread mWorkerThread;
+    private Handler mMainHandler;
+    private Handler mWorkerHandler;
 
     @VisibleForTesting
     WifiPickerTracker mWifiPickerTracker;
@@ -284,11 +286,13 @@ public class WifiSettings extends RestrictedSettingsFragment
                 return SystemClock.elapsedRealtime();
             }
         };
+
+        mMainHandler = new Handler(Looper.getMainLooper());
+        mWorkerHandler = mWorkerThread.getThreadHandler();
         mWifiPickerTracker = FeatureFactory.getFactory(context)
                 .getWifiTrackerLibProvider()
                 .createWifiPickerTracker(getSettingsLifecycle(), context,
-                        new Handler(Looper.getMainLooper()),
-                        mWorkerThread.getThreadHandler(),
+                        mMainHandler, mWorkerHandler,
                         elapsedRealtimeClock,
                         MAX_SCAN_AGE_MILLIS,
                         SCAN_INTERVAL_MILLIS,
@@ -360,6 +364,10 @@ public class WifiSettings extends RestrictedSettingsFragment
         if (mWifiEnabler != null) {
             mWifiEnabler.teardownSwitchController();
         }
+
+        // remove all msg and callback in main handler and worker handler
+        mMainHandler.removeCallbacksAndMessages(null);
+        mWorkerHandler.removeCallbacksAndMessages(null);
         mWorkerThread.quit();
 
         super.onDestroyView();
@@ -644,7 +652,7 @@ public class WifiSettings extends RestrictedSettingsFragment
     /** Called when the state of Wifi has changed. */
     @Override
     public void onWifiStateChanged() {
-        if (mIsRestricted) {
+        if (mIsRestricted || isFinishingOrDestroyed()) {
             return;
         }
         final int wifiState = mWifiPickerTracker.getWifiState();
@@ -682,6 +690,10 @@ public class WifiSettings extends RestrictedSettingsFragment
 
     @Override
     public void onWifiEntriesChanged() {
+        if (isFinishingOrDestroyed()) {
+            return;
+        }
+
         if (mIsWifiEntryListStale) {
             mIsWifiEntryListStale = false;
             updateWifiEntryPreferences();
