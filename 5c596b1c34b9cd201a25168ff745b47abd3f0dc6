@@ -1,0 +1,47 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000020197954",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1975409?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "7810112e_04154561",
+          "description": "Change to \"src/com/android/settings/wifi/WifiSettings.java\"",
+          "replacements": [
+            {
+              "path": "src/com/android/settings/wifi/WifiSettings.java",
+              "range": {
+                "startLine": 693,
+                "startChar": 45,
+                "endLine": 693,
+                "endChar": 54
+              },
+              "replacement": "destroyed"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "b20d155d_37f114da",
+        "filename": "src/com/android/settings/wifi/WifiSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 693,
+      "author": {
+        "id": 1757831
+      },
+      "writtenOn": "2022-02-08T06:42:20Z",
+      "side": 1,
+      "message": "Common typo found: \"destoryed\" -- should it be \"destroyed\"?\nNote: a line containing \"common_typos_disable\" or \"common_typos_enable\" will turn off or on (respectively) the linter for subsequent lines in the file. Alternatively include the token \"NOTYPO\" within a line to skip typo linting that line or include \u0027No-Typo-Check: \u003creason\u003e\u0027in the commit message.",
+      "range": {
+        "startLine": 693,
+        "startChar": 45,
+        "endLine": 693,
+        "endChar": 54
+      },
+      "revId": "5c596b1c34b9cd201a25168ff745b47abd3f0dc6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
