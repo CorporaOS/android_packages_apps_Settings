@@ -1036,6 +1036,8 @@
     <string name="security_settings_fingerprint_enroll_find_sensor_message">It\u2019s on the back of your phone. Use your index finger.</string>
     <!-- Message shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=NONE]-->
     <string name="security_settings_udfps_enroll_find_sensor_message">The fingerprint sensor is on your screen. You\u2019ll capture your fingerprint on the next screen.</string>
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor [CHAR LIMIT=NONE]-->
+    <string name="security_settings_sidefps_enroll_find_sensor_message">It\u2019s on the side of your phone. Use your thumb.</string>
     <!-- Button for starting fingerprint enrollment. [CHAR LIMIT=10]-->
     <string name="security_settings_udfps_enroll_find_sensor_start_button">Start</string>
     <!-- Message announced to a11y users during fingerprint enrollment to help them locate the sensor. [CHAR LIMIT=NONE] -->

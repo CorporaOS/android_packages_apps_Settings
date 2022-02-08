@@ -49,6 +49,7 @@ public class FingerprintEnrollFindSensor extends BiometricEnrollBase implements
     private FingerprintEnrollSidecar mSidecar;
     private boolean mNextClicked;
     private boolean mCanAssumeUdfps;
+    private boolean mCanAssumeSidefps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,7 @@ public class FingerprintEnrollFindSensor extends BiometricEnrollBase implements
         final List<FingerprintSensorPropertiesInternal> props =
                 fingerprintManager.getSensorPropertiesInternal();
         mCanAssumeUdfps = props != null && props.size() == 1 && props.get(0).isAnyUdfpsType();
+        mCanAssumeSidefps = props != null && props.size() == 1 && props.get(0).isAnySidefpsType();
         setContentView(getContentView());
         mFooterBarMixin = getLayout().getMixin(FooterBarMixin.class);
         mFooterBarMixin.setSecondaryButton(
@@ -82,7 +84,9 @@ public class FingerprintEnrollFindSensor extends BiometricEnrollBase implements
             );
         } else {
             setHeaderText(R.string.security_settings_fingerprint_enroll_find_sensor_title);
-            setDescriptionText(R.string.security_settings_fingerprint_enroll_find_sensor_message);
+            setDescriptionText(getString(mCanAssumeSidefps
+                    ? R.string.security_settings_sidefps_enroll_find_sensor_message
+                    : R.string.security_settings_fingerprint_enroll_find_sensor_message));
         }
 
         // This is an entry point for SetNewPasswordController, e.g.
