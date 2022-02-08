@@ -67,6 +67,24 @@
       "message": "Any due action on my side? What failed?",
       "revId": "a0906b7e0656b77c5f99410baf4c4b85fd272a40",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6442ba8_31603502",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1344895
+      },
+      "writtenOn": "2022-02-08T21:46:29Z",
+      "side": 1,
+      "message": "This is the error:\n\n```\npackages/apps/Settings/src/com/android/settings/biometrics/fingerprint/FingerprintEnrollFindSensor.java:104: error: cannot find symbol\n            setDescriptionText(R.string.security_settings_fingerprint_enroll_find_sensor_message);\n                                       ^\n  symbol:   variable security_settings_fingerprint_enroll_find_sensor_message\n  location: class string\n1 error\n2 warnings\n```\n\nWe discussed your change internally. It conflicts with the codebase that we\u0027re preparing for the next release, and I kicked off a simpler change to test if it works:\nhttps://r.android.com/1976514\n\nIf it does work, feel free to update your change accordingly and we\u0027ll +2 your change.",
+      "parentUuid": "d370be04_ce5801cd",
+      "revId": "a0906b7e0656b77c5f99410baf4c4b85fd272a40",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
