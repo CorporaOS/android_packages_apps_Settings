@@ -50,6 +50,23 @@
       "message": "Hi tmfang@google.com,\nCan you help with this case ? I don\u0027t think the failure in presubmit can be resolved by people without sufficient permissions for resolving them.",
       "revId": "0824805a66587884f5766c0154eab197623a9444",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f55141b1_6801ce84",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2022-02-09T10:38:34Z",
+      "side": 1,
+      "message": "let\u0027s wait for fixing the internal robo issue. ",
+      "revId": "0824805a66587884f5766c0154eab197623a9444",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
