@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7ee683c6_c6fccc93",
+        "filename": "src/com/android/settings/TetherSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2022-02-09T12:45:54Z",
+      "side": 1,
+      "message": "This is still relevant – I think we are moving the resource, so it will no longer be accessible from here.",
+      "parentUuid": "06fb46ee_41922bb2",
+      "range": {
+        "startLine": 184,
+        "startChar": 3,
+        "endLine": 185,
+        "endChar": 75
+      },
+      "revId": "89dae9ec45b1661921182cf01c1ec984631fcac9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "60390582_59830775",
         "filename": "src/com/android/settings/TetherSettings.java",
         "patchSetId": 1

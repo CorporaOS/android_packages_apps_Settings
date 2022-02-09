@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2ab437f_72841e8c",
+        "filename": "src/com/android/settings/network/EthernetTetherPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2022-02-09T12:45:54Z",
+      "side": 1,
+      "message": "If that\u0027s not true l.68 will have crashed.\n\nIt\u0027s possible the device has EthernetManager but not FEATURE_ETHERNET if it has FEATURE_USB_HOST. I don\u0027t know how common such devices are, but I suppose that strictly speaking this should look at FEATURE_ETHERNET and l.68 should be behind a null check.\n\nInstead of the old mShouldShow boolean, it\u0027s likely fine to keep this check here and only fill mEthernetManager if FEATURE_ETHERNET is present",
+      "range": {
+        "startLine": 90,
+        "startChar": 15,
+        "endLine": 90,
+        "endChar": 40
+      },
+      "revId": "538393e05d0bf5394fe92bc9f29f439d64d7d10e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
