@@ -159,12 +159,45 @@ public class VideoCallingPreferenceController extends TelephonyTogglePreferenceC
 
         if (!carrierConfig.getBoolean(
                 CarrierConfigManager.KEY_IGNORE_DATA_ENABLED_CHANGED_FOR_VIDEO_CALLS)
-                && (!mContext.getSystemService(TelephonyManager.class)
-                    .createForSubscriptionId(subId).isDataEnabled())) {
+                && !isDataEnabledForVideoCalling(subId)) {
+            Log.e(TAG, "Mobile data is not enabled for video calling");
             return false;
         }
 
         return queryImsState(subId).isReadyToVideoCall();
+    }
+
+    /**
+     * Check whether mobile data is enabled for video calling.
+     *
+     * If this query is for the DDS, simply return the overall mobile data enabled state of the
+     * device.
+     *
+     * If this query is for the non-DDS, first check whether data is enabled for DDS or not.
+     * If yes, check if data for video calling is allowed by the 'Data during calls' UI setting.
+     */
+    private boolean isDataEnabledForVideoCalling(int subId) {
+        int defaultDataSubId = SubscriptionManager.getDefaultDataSubscriptionId();
+        TelephonyManager defaultDataTelephonyManager =
+                mContext.getSystemService(TelephonyManager.class)
+                .createForSubscriptionId(defaultDataSubId);
+
+        boolean isDataEnabledForDds = defaultDataTelephonyManager.isDataEnabled();
+
+        if (subId == defaultDataSubId) {
+            // This request is for the default data subscription
+            return isDataEnabledForDds;
+        } else {
+            // Use 'Data During Calls' setting to determine if video calls should be supported
+            TelephonyManager nonDdsTelephonyManager =
+                    mContext.getSystemService(TelephonyManager.class)
+                    .createForSubscriptionId(subId);
+
+            boolean isDataDuringCallsEnabled = nonDdsTelephonyManager.isMobileDataPolicyEnabled(
+                    TelephonyManager.MOBILE_DATA_POLICY_DATA_ON_NON_DEFAULT_DURING_VOICE_CALL);
+
+            return isDataEnabledForDds && isDataDuringCallsEnabled;
+        }
     }
 
     @Override
