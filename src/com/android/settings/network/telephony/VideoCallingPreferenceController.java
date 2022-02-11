@@ -159,12 +159,27 @@ public class VideoCallingPreferenceController extends TelephonyTogglePreferenceC
 
         if (!carrierConfig.getBoolean(
                 CarrierConfigManager.KEY_IGNORE_DATA_ENABLED_CHANGED_FOR_VIDEO_CALLS)
-                && (!mContext.getSystemService(TelephonyManager.class)
-                    .createForSubscriptionId(subId).isDataEnabled())) {
+                && !isDataEnabledForVideoCalling(subId)) {
+            Log.e(TAG, "Mobile data is not enabled for video calling");
             return false;
         }
 
         return queryImsState(subId).isReadyToVideoCall();
+    }
+
+    private boolean isDataEnabledForVideoCalling(int subId) {
+        TelephonyManager tm = mContext.getSystemService(TelephonyManager.class)
+                .createForSubscriptionId(subId);
+        int ddsSubId = SubscriptionManager.getDefaultDataSubscriptionId();
+
+        if (subId == ddsSubId) {
+            return tm.isDataEnabled();
+        } else {
+            // For non-DDS, data for VT is controlled via the 'Data during calls' setting.
+            boolean dataDuringCallsEnabled = tm.isMobileDataPolicyEnabled(
+                    TelephonyManager.MOBILE_DATA_POLICY_DATA_ON_NON_DEFAULT_DURING_VOICE_CALL);
+            return dataDuringCallsEnabled;
+        }
     }
 
     @Override
