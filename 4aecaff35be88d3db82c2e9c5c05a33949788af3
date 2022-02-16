@@ -22,6 +22,30 @@
       },
       "revId": "4aecaff35be88d3db82c2e9c5c05a33949788af3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4271ce55_bf0e10b3",
+        "filename": "src/com/android/settings/network/TetherProvisioningCarrierDialogActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1138358
+      },
+      "writtenOn": "2022-02-16T01:18:25Z",
+      "side": 1,
+      "message": "UX confirmed the option w/ title so this CL looks good!",
+      "parentUuid": "b0caeac7_0cd68333",
+      "range": {
+        "startLine": 36,
+        "startChar": 17,
+        "endLine": 36,
+        "endChar": 27
+      },
+      "revId": "4aecaff35be88d3db82c2e9c5c05a33949788af3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
