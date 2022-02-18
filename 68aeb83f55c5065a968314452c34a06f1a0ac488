@@ -16,6 +16,207 @@
       "message": "Look good to me.",
       "revId": "68aeb83f55c5065a968314452c34a06f1a0ac488",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a467532_beac1bcb",
+        "filename": "src/com/android/settings/TetherSettings.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2022-02-18T09:08:19Z",
+      "side": 1,
+      "message": "Let\u0027s make this member final. It\u0027s accessed on other threads than the constructor, and in sequential statements that don\u0027t move it to a local.",
+      "revId": "68aeb83f55c5065a968314452c34a06f1a0ac488",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d846071_0a0f6f3f",
+        "filename": "src/com/android/settings/TetherSettings.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2022-02-18T09:08:19Z",
+      "side": 1,
+      "message": "context can\u0027t be null.\n\n- You call this method in l.191 ; you know it can\u0027t have been null because the old code would call mContext.getResources(), which would have crashed if mContext had ever been null.\n- You call this method in l.616 ; you know the local |context| can\u0027t be null because it would have crashed in l.597.\n\nLet\u0027s annotate the argument @NonNull and remove the null check.",
+      "range": {
+        "startLine": 153,
+        "startChar": 12,
+        "endLine": 153,
+        "endChar": 27
+      },
+      "revId": "68aeb83f55c5065a968314452c34a06f1a0ac488",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da6dc7b5_8ebf8176",
+        "filename": "src/com/android/settings/TetherSettings.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2022-02-18T09:08:19Z",
+      "side": 1,
+      "message": "Here too, I don\u0027t see the value in nulling this out – this seems poor engineering practice ; it seems safer and more readable to have the listener final and never null. But your patch isn\u0027t changing this, so optional",
+      "range": {
+        "startLine": 366,
+        "startChar": 8,
+        "endLine": 366,
+        "endChar": 33
+      },
+      "revId": "68aeb83f55c5065a968314452c34a06f1a0ac488",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9f09148_43204f69",
+        "filename": "src/com/android/settings/TetherSettings.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 513,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2022-02-18T09:08:19Z",
+      "side": 1,
+      "message": "I know you\u0027re not changing this but the logic looks conflicted here ? If data saver is enabled and tethering is off, then you can\u0027t turn it on (as per l.515~516). But if data saver is enabled and tethering is on, then you can\u0027t turn it off and save battery ?\n\nIIUC this doesn\u0027t actually matter in practice because turning on data saver will turn tethering off, so the buggy case never happens in practice, but it still looks like a bug in this code.\n\nAnyway, you\u0027re not changing this, so I guess it\u0027s out of scope for this patch",
+      "range": {
+        "startLine": 513,
+        "startChar": 0,
+        "endLine": 513,
+        "endChar": 45
+      },
+      "revId": "68aeb83f55c5065a968314452c34a06f1a0ac488",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "affa4d9c_69debe1a",
+        "filename": "src/com/android/settings/TetherSettings.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 514,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2022-02-18T09:08:19Z",
+      "side": 1,
+      "message": "You no longer need to check for this I think ? If |isAvailable| is true, then necessarily mAvailableInterfaces.size() \u003e 0 (otherwise you couldn\u0027t have found any interfaces in that map).",
+      "range": {
+        "startLine": 514,
+        "startChar": 19,
+        "endLine": 514,
+        "endChar": 34
+      },
+      "revId": "68aeb83f55c5065a968314452c34a06f1a0ac488",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "06cf7d8b_efabb001",
+        "filename": "src/com/android/settings/network/EthernetTetherPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2022-02-18T09:08:19Z",
+      "side": 1,
+      "message": "You must keep this final, otherwise you can crash with NPE in l.66, or return false from shouldShow when the device has FEATURE_ETHERNET. Please read the java spec chapter 17.5. Non-final members are not necessarily visible by other threads.\n\nIt\u0027s very easy to make it final with :\n\n if (...) {\n   mEthernetManager \u003d getSystemService()\n } else {\n   mEthernetManager \u003d null;\n }",
+      "range": {
+        "startLine": 41,
+        "startChar": 4,
+        "endLine": 41,
+        "endChar": 19
+      },
+      "revId": "68aeb83f55c5065a968314452c34a06f1a0ac488",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf81aaf7_d16458fe",
+        "filename": "src/com/android/settings/network/EthernetTetherPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2022-02-18T09:08:19Z",
+      "side": 1,
+      "message": "What about FEATURE_USB_HOST ? EthernetManager is available if either of FEATURE_ETHERNET or FEATURE_USB_HOST are available – does that mean an Ethernet USB dongle will work on a device without FEATURE_ETHERNET ? If so, you probably can simply always getSystemService, and rely on that returning null if it\u0027s not supported.",
+      "range": {
+        "startLine": 47,
+        "startChar": 72,
+        "endLine": 47,
+        "endChar": 88
+      },
+      "revId": "68aeb83f55c5065a968314452c34a06f1a0ac488",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4536dd1c_6ba6a55e",
+        "filename": "src/com/android/settings/network/EthernetTetherPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2022-02-18T09:08:19Z",
+      "side": 1,
+      "message": "I know your patch is not changing this, but what is the reason for nulling this out ? It seems a bit dangerous, and unnecessary. I think it\u0027s a lot safer if the listener is final and we only register in onStart and unregister in onStop.\n\n(optional because your patch is not changing this)",
+      "range": {
+        "startLine": 72,
+        "startChar": 8,
+        "endLine": 72,
+        "endChar": 33
+      },
+      "revId": "68aeb83f55c5065a968314452c34a06f1a0ac488",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e84f7031_0fd0d965",
+        "filename": "src/com/android/settings/network/EthernetTetherPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2022-02-18T09:08:19Z",
+      "side": 1,
+      "message": "This must be called on the handler created in l.62, otherwise it may crash with ConcurrentModificationException. Can you please add a check that makes sure this is only ever called on the main thread ?",
+      "range": {
+        "startLine": 79,
+        "startChar": 16,
+        "endLine": 79,
+        "endChar": 36
+      },
+      "revId": "68aeb83f55c5065a968314452c34a06f1a0ac488",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
