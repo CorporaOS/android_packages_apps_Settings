@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c5cff3a6_6f5b022b",
+        "filename": "src/com/android/settings/TetherSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 1406251
+      },
+      "writtenOn": "2022-02-18T00:59:11Z",
+      "side": 1,
+      "message": "I tried to deprecate the mEtherentRegex as well, instead checking if the device supports FEATURE_ETHERNET and can get a non-null EthernetManager to confirm the availability of ethernet interface, please take a look if that\u0027s reasonable.",
+      "parentUuid": "7ee683c6_c6fccc93",
+      "range": {
+        "startLine": 184,
+        "startChar": 3,
+        "endLine": 185,
+        "endChar": 75
+      },
+      "revId": "89dae9ec45b1661921182cf01c1ec984631fcac9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "60390582_59830775",
         "filename": "src/com/android/settings/TetherSettings.java",
         "patchSetId": 1
