@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7f032121_8205d95a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367652
+      },
+      "writtenOn": "2022-02-18T13:39:50Z",
+      "side": 1,
+      "message": "Hi Hoff,\n\nWould you help to fix the presubmit test failure below? Thanks!\n\nWanted but not invoked:\nWanted but not invoked:\nwifiSettings.changeNextButtonState(\n    \u003cany boolean\u003e\n);\n-\u003e at com.android.settings.wifi.WifiSettingsTest.onWifiEntriesChanged_shouldChangeNextButtonState(WifiSettingsTest.java:281)",
+      "revId": "20b1d303b597ccf01bced17bda4cb788ccbbbad5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
