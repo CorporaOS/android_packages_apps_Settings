@@ -8276,6 +8276,7 @@
     <string name="keywords_default_apps">apps, default</string>
     <string name="keywords_ignore_optimizations">ignore optimizations, doze, app standby</string>
     <string name="keywords_color_mode">vibrant, RGB, sRGB, color, natural, standard</string>
+    <string name="keywords_pointer_auth">pointer, auth, arm, pac</string>
     <string name="keywords_color_temperature">color, temperature, D65, D73, white, yellow, blue, warm, cool</string>
     <string name="keywords_lockscreen">slide to unlock, password, pattern, PIN</string>
     <!-- Search keyword for App pinning Settings [CHAR LIMIT=NONE] -->
@@ -11191,6 +11192,15 @@
 
     <!-- Name of option to remove a suggestion from the list [CHAR LIMIT=30] -->
     <string name="suggestion_remove">Remove</string>
+
+    <!-- Name of the setting to enable Pointer Authentication -->
+    <string name="pointer_auth">Enable Pointer Authentication</string>
+
+    <!-- Description of the setting enable Pointer Authentication -->
+    <string name="pointer_auth_desc">Pointer Authentication for enhanced control flow integrity (experimental)</string>
+
+    <!-- Toast message letting the user know the change of setting is not immediate -->
+    <string name="pointer_auth_toast">To apply change, reboot</string>
 
     <!-- Name of the setting to change the display's color temperature -->
     <string name="color_temperature">Cool color temperature</string>
