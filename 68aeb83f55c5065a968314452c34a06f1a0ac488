@@ -60,6 +60,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "fb43ecdf_dae4df47",
+        "filename": "src/com/android/settings/TetherSettings.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 1406251
+      },
+      "writtenOn": "2022-02-21T15:21:24Z",
+      "side": 1,
+      "message": "Updated with just also simply checking if we can get an available EthernetManager instance from system service(since Ethernet service will start if either of FEATURE_ETHERNET and FEATURE_USB_HOST is supported), then check the nullability when calling it. I\u0027ll remove this function and replace it with just one line code.",
+      "parentUuid": "3d846071_0a0f6f3f",
+      "range": {
+        "startLine": 153,
+        "startChar": 12,
+        "endLine": 153,
+        "endChar": 27
+      },
+      "revId": "68aeb83f55c5065a968314452c34a06f1a0ac488",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "da6dc7b5_8ebf8176",
         "filename": "src/com/android/settings/TetherSettings.java",
         "patchSetId": 4
@@ -127,6 +151,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9fb99db4_53c3cc7d",
+        "filename": "src/com/android/settings/TetherSettings.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 514,
+      "author": {
+        "id": 1406251
+      },
+      "writtenOn": "2022-02-21T15:21:24Z",
+      "side": 1,
+      "message": "ah, yes, we have already checked this in I.499. Updated.",
+      "parentUuid": "affa4d9c_69debe1a",
+      "range": {
+        "startLine": 514,
+        "startChar": 19,
+        "endLine": 514,
+        "endChar": 34
+      },
+      "revId": "68aeb83f55c5065a968314452c34a06f1a0ac488",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "06cf7d8b_efabb001",
@@ -150,6 +198,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c2ad909_78f48d0a",
+        "filename": "src/com/android/settings/network/EthernetTetherPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1406251
+      },
+      "writtenOn": "2022-02-21T15:21:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "06cf7d8b_efabb001",
+      "range": {
+        "startLine": 41,
+        "startChar": 4,
+        "endLine": 41,
+        "endChar": 19
+      },
+      "revId": "68aeb83f55c5065a968314452c34a06f1a0ac488",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cf81aaf7_d16458fe",
@@ -163,6 +235,30 @@
       "writtenOn": "2022-02-18T09:08:19Z",
       "side": 1,
       "message": "What about FEATURE_USB_HOST ? EthernetManager is available if either of FEATURE_ETHERNET or FEATURE_USB_HOST are available – does that mean an Ethernet USB dongle will work on a device without FEATURE_ETHERNET ? If so, you probably can simply always getSystemService, and rely on that returning null if it\u0027s not supported.",
+      "range": {
+        "startLine": 47,
+        "startChar": 72,
+        "endLine": 47,
+        "endChar": 88
+      },
+      "revId": "68aeb83f55c5065a968314452c34a06f1a0ac488",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c26bc98_9593bdcd",
+        "filename": "src/com/android/settings/network/EthernetTetherPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1406251
+      },
+      "writtenOn": "2022-02-21T15:21:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cf81aaf7_d16458fe",
       "range": {
         "startLine": 47,
         "startChar": 72,
@@ -209,6 +305,30 @@
       "writtenOn": "2022-02-18T09:08:19Z",
       "side": 1,
       "message": "This must be called on the handler created in l.62, otherwise it may crash with ConcurrentModificationException. Can you please add a check that makes sure this is only ever called on the main thread ?",
+      "range": {
+        "startLine": 79,
+        "startChar": 16,
+        "endLine": 79,
+        "endChar": 36
+      },
+      "revId": "68aeb83f55c5065a968314452c34a06f1a0ac488",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6d8fdbf_dbe11c73",
+        "filename": "src/com/android/settings/network/EthernetTetherPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1406251
+      },
+      "writtenOn": "2022-02-21T15:21:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e84f7031_0fd0d965",
       "range": {
         "startLine": 79,
         "startChar": 16,
