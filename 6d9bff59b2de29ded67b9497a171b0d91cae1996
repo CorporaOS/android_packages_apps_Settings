@@ -34,6 +34,24 @@
       "parentUuid": "4a5a593a_c97a5830",
       "revId": "6d9bff59b2de29ded67b9497a171b0d91cae1996",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5cefb2d4_491bb120",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367652
+      },
+      "writtenOn": "2022-02-21T08:19:50Z",
+      "side": 1,
+      "message": "Please use below command to pre-test this CL within AOSP source path.\n\n```\nmake RunSettingsRoboTests ROBOTEST_FILTER\u003dWifiP2pSettingsTest\n```\n\nThe WifiP2pSettingsTest should be required to update corresponding to this CL.",
+      "parentUuid": "c7018ef7_3cc549f3",
+      "revId": "6d9bff59b2de29ded67b9497a171b0d91cae1996",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
