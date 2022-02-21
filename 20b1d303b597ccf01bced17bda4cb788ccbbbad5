@@ -34,6 +34,24 @@
       "parentUuid": "7f032121_8205d95a",
       "revId": "20b1d303b597ccf01bced17bda4cb788ccbbbad5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fce28d26_b22839a9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367652
+      },
+      "writtenOn": "2022-02-21T08:23:11Z",
+      "side": 1,
+      "message": "Please use below command to pre-test this CL within AOSP source path.\n\n```\nmake RunSettingsRoboTests ROBOTEST_FILTER\u003dWifiSettingsTest\n```\n\nThe WifiSettingsTest should be required to update corresponding to this CL.",
+      "parentUuid": "d6dae013_19eb789c",
+      "revId": "20b1d303b597ccf01bced17bda4cb788ccbbbad5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
