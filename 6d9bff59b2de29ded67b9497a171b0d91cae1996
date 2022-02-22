@@ -52,6 +52,24 @@
       "parentUuid": "c7018ef7_3cc549f3",
       "revId": "6d9bff59b2de29ded67b9497a171b0d91cae1996",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0462c9f6_e1d0eb94",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1413437
+      },
+      "writtenOn": "2022-02-22T03:04:43Z",
+      "side": 1,
+      "message": "Hi Su,\nI removed the invalid test cases which based on original onActivityCreated code. I am not familiar with MOCK, So remove then to pass presubmit verify. If want to add new test cases for current code, please help to add it.\n\nB.R.\nHoff",
+      "parentUuid": "5cefb2d4_491bb120",
+      "revId": "6d9bff59b2de29ded67b9497a171b0d91cae1996",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
