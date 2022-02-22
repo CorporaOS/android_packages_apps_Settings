@@ -70,6 +70,24 @@
       "parentUuid": "5cefb2d4_491bb120",
       "revId": "6d9bff59b2de29ded67b9497a171b0d91cae1996",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "313fa940_e6c0ccd4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1413437
+      },
+      "writtenOn": "2022-02-22T03:37:05Z",
+      "side": 1,
+      "message": "Not remove the testcases. Modify them to adapt the new code. Fixed them. Please review it again",
+      "parentUuid": "0462c9f6_e1d0eb94",
+      "revId": "6d9bff59b2de29ded67b9497a171b0d91cae1996",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
