@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa37b62d_ec89ca13",
+        "filename": "src/com/android/settings/TetherSettings.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2022-02-22T05:57:12Z",
+      "side": 1,
+      "message": "Ethernet",
+      "range": {
+        "startLine": 180,
+        "startChar": 11,
+        "endLine": 180,
+        "endChar": 19
+      },
+      "revId": "8717cbee4c0b32965e9c6878798d185f43d9b046",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "657385b4_c7bd3ab4",
+        "filename": "src/com/android/settings/TetherSettings.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2022-02-22T05:57:12Z",
+      "side": 1,
+      "message": "Nit:\nI\u0027d say it\u0027s not the best idea to describe here the logic from somewhere else in the code because if somebody updates the logic this comment becomes outdated and confusing. I think you could just say\n\n  Some devices do not have EthernetManager available. In that case\n  getSystemService will return null.",
+      "range": {
+        "startLine": 180,
+        "startChar": 0,
+        "endLine": 182,
+        "endChar": 46
+      },
+      "revId": "8717cbee4c0b32965e9c6878798d185f43d9b046",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e60b631_57302336",
+        "filename": "tests/robotests/src/com/android/settings/AllInOneTetherSettingsTest.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2022-02-22T05:57:12Z",
+      "side": 1,
+      "message": "Should this be in setUp() instead ?",
+      "range": {
+        "startLine": 118,
+        "startChar": 8,
+        "endLine": 118,
+        "endChar": 92
+      },
+      "revId": "8717cbee4c0b32965e9c6878798d185f43d9b046",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
