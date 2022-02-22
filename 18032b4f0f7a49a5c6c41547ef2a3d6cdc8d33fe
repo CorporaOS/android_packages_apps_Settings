@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab6904fd_2e434707",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1470412
+      },
+      "writtenOn": "2022-02-22T17:02:26Z",
+      "side": 1,
+      "message": "Thinking about something like to help developers to test their apps with PAC if they have a capable device. Please let me know what do you think.",
+      "revId": "18032b4f0f7a49a5c6c41547ef2a3d6cdc8d33fe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
