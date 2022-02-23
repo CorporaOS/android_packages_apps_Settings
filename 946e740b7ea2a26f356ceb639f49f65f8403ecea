@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fc229913_cb524689",
+        "filename": "src/com/android/settings/network/telephony/VideoCallingPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1595364
+      },
+      "writtenOn": "2022-02-23T06:20:35Z",
+      "side": 1,
+      "message": "That\u0027s right. When KEY_IGNORE_DATA_ENABLED_CHANGED_FOR_VIDEO_CALLS is true, the understanding is that there is no dependency on data enabled state.",
+      "parentUuid": "6753358f_59da859f",
+      "range": {
+        "startLine": 162,
+        "startChar": 20,
+        "endLine": 162,
+        "endChar": 48
+      },
+      "revId": "946e740b7ea2a26f356ceb639f49f65f8403ecea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a906735a_c2d3c245",
         "filename": "src/com/android/settings/network/telephony/VideoCallingPreferenceController.java",
         "patchSetId": 3
@@ -61,6 +85,30 @@
       "writtenOn": "2022-02-23T05:47:36Z",
       "side": 1,
       "message": "[Suggestion]\nFrom performance perspective, these part might not required when \"isDataEnabledForDds\" is \"false\". Some optimization on this change might be better.",
+      "range": {
+        "startLine": 191,
+        "startChar": 0,
+        "endLine": 198,
+        "endChar": 0
+      },
+      "revId": "946e740b7ea2a26f356ceb639f49f65f8403ecea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa4293fc_a00e805f",
+        "filename": "src/com/android/settings/network/telephony/VideoCallingPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1595364
+      },
+      "writtenOn": "2022-02-23T06:20:35Z",
+      "side": 1,
+      "message": "Sure. Made changes in patch set 4.",
+      "parentUuid": "a906735a_c2d3c245",
       "range": {
         "startLine": 191,
         "startChar": 0,
