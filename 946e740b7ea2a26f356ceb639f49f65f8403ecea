@@ -120,6 +120,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e991f01_aa6b77f4",
+        "filename": "src/com/android/settings/network/telephony/VideoCallingPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-02-23T06:56:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e096b736_18540196",
+      "range": {
+        "startLine": 162,
+        "startChar": 20,
+        "endLine": 162,
+        "endChar": 48
+      },
+      "revId": "946e740b7ea2a26f356ceb639f49f65f8403ecea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a906735a_c2d3c245",
