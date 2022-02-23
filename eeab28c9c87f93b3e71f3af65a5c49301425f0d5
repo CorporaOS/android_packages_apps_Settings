@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e649f921_1557c4f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-02-23T06:46:53Z",
+      "side": 1,
+      "message": "Looks good to me.\nThe remaining open question is related to product definition.",
+      "revId": "eeab28c9c87f93b3e71f3af65a5c49301425f0d5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "adeea335_9c5f5753",
