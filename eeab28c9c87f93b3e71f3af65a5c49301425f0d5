@@ -41,6 +41,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "010b958d_f1400d97",
+        "filename": "src/com/android/settings/network/telephony/VideoCallingPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 1595364
+      },
+      "writtenOn": "2022-02-23T06:55:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "adeea335_9c5f5753",
+      "range": {
+        "startLine": 181,
+        "startChar": 8,
+        "endLine": 183,
+        "endChar": 59
+      },
+      "revId": "eeab28c9c87f93b3e71f3af65a5c49301425f0d5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bb128c6f_1704321f",
@@ -64,6 +88,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "50d8624b_fdd4a62c",
+        "filename": "src/com/android/settings/network/telephony/VideoCallingPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 1595364
+      },
+      "writtenOn": "2022-02-23T06:55:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bb128c6f_1704321f",
+      "range": {
+        "startLine": 185,
+        "startChar": 38,
+        "endLine": 185,
+        "endChar": 65
+      },
+      "revId": "eeab28c9c87f93b3e71f3af65a5c49301425f0d5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "62aa366f_ba464092",
@@ -77,6 +125,30 @@
       "writtenOn": "2022-02-23T06:30:30Z",
       "side": 1,
       "message": "if (subId \u003d\u003d defaultDataSubId {\nreturn isDataEnabledForDds;\n}\n\nif (isDataEnabledForDds) {\nreturn mContext.getSystemService(TelephonyManager.class)\n.createForSubscriptionId(subId).isMobileDataPolicyEnabled(                  TelephonyManager.MOBILE_DATA_POLICY_DATA_ON_NON_DEFAULT_DURING_VOICE_CALL);\n}\n\nreturn false;",
+      "range": {
+        "startLine": 187,
+        "startChar": 1,
+        "endLine": 206,
+        "endChar": 9
+      },
+      "revId": "eeab28c9c87f93b3e71f3af65a5c49301425f0d5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b3b1f16_2e57f1e5",
+        "filename": "src/com/android/settings/network/telephony/VideoCallingPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1595364
+      },
+      "writtenOn": "2022-02-23T06:55:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "62aa366f_ba464092",
       "range": {
         "startLine": 187,
         "startChar": 1,
