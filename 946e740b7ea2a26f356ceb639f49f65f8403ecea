@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "10d8e27e_136b4e1a",
+        "filename": "src/com/android/settings/network/telephony/VideoCallingPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1141163
+      },
+      "writtenOn": "2022-02-23T06:20:29Z",
+      "side": 1,
+      "message": "yes, currently this logic is working only for single SIM and DDS sub in case of dual SIM. Its not working for non DDS sub. This change is adding the support for it.",
+      "parentUuid": "6753358f_59da859f",
+      "range": {
+        "startLine": 162,
+        "startChar": 20,
+        "endLine": 162,
+        "endChar": 48
+      },
+      "revId": "946e740b7ea2a26f356ceb639f49f65f8403ecea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a906735a_c2d3c245",
