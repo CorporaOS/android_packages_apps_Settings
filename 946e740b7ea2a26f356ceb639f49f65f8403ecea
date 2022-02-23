@@ -74,6 +74,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "24376bfc_cd785d2e",
+        "filename": "src/com/android/settings/network/telephony/VideoCallingPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-02-23T06:34:29Z",
+      "side": 1,
+      "message": "[And more questions]\n\nSince carrier config is per subscription basis, the value in line 161 is for current subscription (not the one for default data subscription).\nWill the situation remain the same ?\n\nFor instance, when this subscription get all three\n(1) KEY_IGNORE_DATA_ENABLED_CHANGED_FOR_VIDEO_CALLS \u003d true\nand\n(2) MOBILE_DATA_POLICY_DATA_ON_NON_DEFAULT_DURING_VOICE_CALL \u003d false\nunder the condition\n(3) subId !\u003d defaultDataSubId\n\nShould this design allow voice call ? or disallow voice call ?",
+      "parentUuid": "fc229913_cb524689",
+      "range": {
+        "startLine": 162,
+        "startChar": 20,
+        "endLine": 162,
+        "endChar": 48
+      },
+      "revId": "946e740b7ea2a26f356ceb639f49f65f8403ecea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a906735a_c2d3c245",
         "filename": "src/com/android/settings/network/telephony/VideoCallingPreferenceController.java",
         "patchSetId": 3
@@ -109,6 +133,30 @@
       "side": 1,
       "message": "Sure. Made changes in patch set 4.",
       "parentUuid": "a906735a_c2d3c245",
+      "range": {
+        "startLine": 191,
+        "startChar": 0,
+        "endLine": 198,
+        "endChar": 0
+      },
+      "revId": "946e740b7ea2a26f356ceb639f49f65f8403ecea",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "37b0c182_b08e2a32",
+        "filename": "src/com/android/settings/network/telephony/VideoCallingPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-02-23T06:34:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aa4293fc_a00e805f",
       "range": {
         "startLine": 191,
         "startChar": 0,
