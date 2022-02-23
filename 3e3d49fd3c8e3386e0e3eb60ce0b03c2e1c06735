@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e304349c_913e3d95",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 8027,
+      "author": {
+        "id": 1141163
+      },
+      "writtenOn": "2022-02-23T20:13:06Z",
+      "side": 1,
+      "message": "Sneh, \n\nI think we should have one more copy and make the change there\n\nWe want to retain the original string if this requirement is not applicable to the carrier .. i.e by checking the carrier config",
+      "range": {
+        "startLine": 8027,
+        "startChar": 24,
+        "endLine": 8027,
+        "endChar": 80
+      },
+      "revId": "3e3d49fd3c8e3386e0e3eb60ce0b03c2e1c06735",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
