@@ -35,6 +35,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "697b2a13_fe39a688",
+        "filename": "src/com/android/settings/TetherSettings.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 1406251
+      },
+      "writtenOn": "2022-02-24T01:57:44Z",
+      "side": 1,
+      "message": "Noticed that when I move the mEm initialization to the TetherSettings constructor, seems that the Tethering Settings UI doesn\u0027t show up at all, not sure if that\u0027s related to the DISALLOW_CONFIG_TETHERING config in the I.139,",
+      "parentUuid": "5a467532_beac1bcb",
+      "revId": "68aeb83f55c5065a968314452c34a06f1a0ac488",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3d846071_0a0f6f3f",
