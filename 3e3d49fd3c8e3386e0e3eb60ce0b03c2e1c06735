@@ -22,6 +22,30 @@
       },
       "revId": "3e3d49fd3c8e3386e0e3eb60ce0b03c2e1c06735",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f09ea34_ee91300f",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 8027,
+      "author": {
+        "id": 1595364
+      },
+      "writtenOn": "2022-02-24T07:30:40Z",
+      "side": 1,
+      "message": "Sounds reasonable. Please confirm if CarrierConfigManager.KEY_IGNORE_DATA_ENABLED_CHANGED_FOR_VIDEO_CALLS is the config we want to use here.",
+      "parentUuid": "e304349c_913e3d95",
+      "range": {
+        "startLine": 8027,
+        "startChar": 24,
+        "endLine": 8027,
+        "endChar": 80
+      },
+      "revId": "3e3d49fd3c8e3386e0e3eb60ce0b03c2e1c06735",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
