@@ -16,6 +16,29 @@
       "message": "Please have a look, there is room for discussion here. At least it does not feel correct that the error dialog pops up.",
       "revId": "7100a1d61c07fbfbc0f0c85c49abd89c6e98c113",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e0329814_c1c7798d",
+        "filename": "src/com/android/settings/network/apn/ApnEditor.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 1221112
+      },
+      "writtenOn": "2022-03-02T16:38:00Z",
+      "side": 1,
+      "message": "can also be similar to the other statement something like:\nmIsCarrierIdApn \u0026\u0026 TextUtils.isEmpty(mcc) \u0026\u0026 TextUtils.isEmpty(mnc)",
+      "range": {
+        "startLine": 336,
+        "startChar": 12,
+        "endLine": 336,
+        "endChar": 27
+      },
+      "revId": "7100a1d61c07fbfbc0f0c85c49abd89c6e98c113",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
