@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d260d18b_7410233f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1221112
+      },
+      "writtenOn": "2022-03-02T16:36:08Z",
+      "side": 1,
+      "message": "Please have a look, there is room for discussion here. At least it does not feel correct that the error dialog pops up.",
+      "revId": "7100a1d61c07fbfbc0f0c85c49abd89c6e98c113",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
