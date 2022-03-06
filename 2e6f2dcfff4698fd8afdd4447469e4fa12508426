@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5496b9bd_77e551e0",
+        "filename": "src/com/android/settings/wifi/p2p/WifiP2pSettings.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 1367652
+      },
+      "writtenOn": "2022-03-06T18:12:48Z",
+      "side": 0,
+      "message": "Can we move this line to top of the onActivityCreated() function to fix the issue?",
+      "range": {
+        "startLine": 336,
+        "startChar": 8,
+        "endLine": 336,
+        "endChar": 52
+      },
+      "revId": "2e6f2dcfff4698fd8afdd4447469e4fa12508426",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
