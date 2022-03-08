@@ -22,6 +22,30 @@
       },
       "revId": "2e6f2dcfff4698fd8afdd4447469e4fa12508426",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95e2aff2_10b8e0b3",
+        "filename": "src/com/android/settings/wifi/p2p/WifiP2pSettings.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 1413437
+      },
+      "writtenOn": "2022-03-08T06:32:29Z",
+      "side": 0,
+      "message": "Just move this line, cannot fix the issuu. That is because of onCreateDialog is called before onActivityCreated.",
+      "parentUuid": "5496b9bd_77e551e0",
+      "range": {
+        "startLine": 336,
+        "startChar": 8,
+        "endLine": 336,
+        "endChar": 52
+      },
+      "revId": "2e6f2dcfff4698fd8afdd4447469e4fa12508426",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
