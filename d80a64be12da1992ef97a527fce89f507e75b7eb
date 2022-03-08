@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f193d707_0e962990",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1041767
+      },
+      "writtenOn": "2022-03-08T18:19:53Z",
+      "side": 1,
+      "message": "It\u0027s a good start, but needs to plumb downwards to remove, such as this file:\n\npackages/apps/Settings/src/com/android/settings/development/BluetoothGabeldorschePreferenceController.java\n",
+      "revId": "d80a64be12da1992ef97a527fce89f507e75b7eb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
