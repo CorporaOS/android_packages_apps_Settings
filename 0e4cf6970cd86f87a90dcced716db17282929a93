@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "708c2490_0b9b8c43",
+        "filename": "src/com/android/settings/development/compat/PlatformCompatDashboard.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1501264
+      },
+      "writtenOn": "2022-03-09T03:06:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "16a7ffbe_9a0444b5",
+      "range": {
+        "startLine": 127,
+        "startChar": 24,
+        "endLine": 127,
+        "endChar": 45
+      },
+      "revId": "0e4cf6970cd86f87a90dcced716db17282929a93",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ccfa7f33_790b84e0",
@@ -37,6 +61,30 @@
       "writtenOn": "2022-03-08T18:46:56Z",
       "side": 1,
       "message": "TextUtils.isEmpty",
+      "range": {
+        "startLine": 147,
+        "startChar": 16,
+        "endLine": 147,
+        "endChar": 37
+      },
+      "revId": "0e4cf6970cd86f87a90dcced716db17282929a93",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a7d9636_6cb16734",
+        "filename": "src/com/android/settings/development/compat/PlatformCompatDashboard.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1501264
+      },
+      "writtenOn": "2022-03-09T03:06:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ccfa7f33_790b84e0",
       "range": {
         "startLine": 147,
         "startChar": 16,
