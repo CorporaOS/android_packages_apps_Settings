@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dfe9d9e2_ca15cbf1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1403999
+      },
+      "writtenOn": "2022-03-10T06:35:08Z",
+      "side": 1,
+      "message": "Reassign to current owner",
+      "revId": "34261e25a74e051d8b9e459169623a3b89b134ba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
