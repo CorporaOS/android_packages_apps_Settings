@@ -16,6 +16,23 @@
       "message": "Reassign to current owner",
       "revId": "34261e25a74e051d8b9e459169623a3b89b134ba",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "162a084a_c2242756",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1501264
+      },
+      "writtenOn": "2022-03-10T07:29:57Z",
+      "side": 1,
+      "message": "Thanks for reviewing!",
+      "revId": "34261e25a74e051d8b9e459169623a3b89b134ba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
