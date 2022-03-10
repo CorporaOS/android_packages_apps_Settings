@@ -16,6 +16,23 @@
       "message": "Look good to me.",
       "revId": "5209b9bff3fc03b1ef3eca1f5029ecfb4704f99a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b8848ba_8350cd34",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1076123
+      },
+      "writtenOn": "2022-03-10T17:34:05Z",
+      "side": 1,
+      "message": "Why not delete the whole file, since we\u0027re deleting the file it tests?",
+      "revId": "5209b9bff3fc03b1ef3eca1f5029ecfb4704f99a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
