@@ -39,6 +39,30 @@
       },
       "revId": "7100a1d61c07fbfbc0f0c85c49abd89c6e98c113",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cff12309_f5e1be9c",
+        "filename": "src/com/android/settings/network/apn/ApnEditor.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 1221112
+      },
+      "writtenOn": "2022-03-14T13:23:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e0329814_c1c7798d",
+      "range": {
+        "startLine": 336,
+        "startChar": 12,
+        "endLine": 336,
+        "endChar": 27
+      },
+      "revId": "7100a1d61c07fbfbc0f0c85c49abd89c6e98c113",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
