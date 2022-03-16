@@ -22,6 +22,30 @@
       },
       "revId": "6aad9acfcb528d24cf297289a454e866c82ce459",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e06e74db_269212d1",
+        "filename": "src/com/android/settings/wifi/qrcode/QrCamera.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1246512
+      },
+      "writtenOn": "2022-03-16T08:49:23Z",
+      "side": 1,
+      "message": "Agreed, calling releaseCamera is the better option.\n\nThis line solves the \"Camera is being used after Camera.release() was called\" crash, so the camera is already released at this point.\n\nThe JNI layer supports calling releaseCamera even if the native camera has already been released.",
+      "parentUuid": "4ba5a6ff_56db492a",
+      "range": {
+        "startLine": 127,
+        "startChar": 12,
+        "endLine": 127,
+        "endChar": 27
+      },
+      "revId": "6aad9acfcb528d24cf297289a454e866c82ce459",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

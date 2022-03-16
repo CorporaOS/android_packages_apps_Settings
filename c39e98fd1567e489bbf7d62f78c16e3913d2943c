@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "847c714f_1309e83f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1246512
+      },
+      "writtenOn": "2022-03-16T08:49:23Z",
+      "side": 1,
+      "message": "Developer tested the releaseCamera() change 30 times without being able to reproduce the crash.",
+      "revId": "c39e98fd1567e489bbf7d62f78c16e3913d2943c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
