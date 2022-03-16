@@ -310,7 +310,7 @@ public class ToggleSubscriptionDialogActivity extends SubscriptionActionDialogAc
             showEnableDsdsConfirmDialog();
             return;
         }
-        if (!mIsEsimOperation && mTelMgr.isMultiSimEnabled()) {
+        if (!mIsEsimOperation) {
             Log.i(TAG, "Toggle on pSIM, no dialog displayed.");
             handleTogglePsimAction();
             finish();
