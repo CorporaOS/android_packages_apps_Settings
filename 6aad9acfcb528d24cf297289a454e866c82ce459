@@ -46,6 +46,30 @@
       },
       "revId": "6aad9acfcb528d24cf297289a454e866c82ce459",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "762b7a58_5a482441",
+        "filename": "src/com/android/settings/wifi/qrcode/QrCamera.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1246512
+      },
+      "writtenOn": "2022-03-16T08:49:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e06e74db_269212d1",
+      "range": {
+        "startLine": 127,
+        "startChar": 12,
+        "endLine": 127,
+        "endChar": 27
+      },
+      "revId": "6aad9acfcb528d24cf297289a454e866c82ce459",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
