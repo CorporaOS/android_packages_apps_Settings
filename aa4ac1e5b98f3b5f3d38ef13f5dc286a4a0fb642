@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d5d1c21_d00fa30e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1221112
+      },
+      "writtenOn": "2022-03-17T06:55:02Z",
+      "side": 1,
+      "message": "Friendly ping on this, is there a possibility to get this merged this week?\nBRs\nMattias",
+      "revId": "aa4ac1e5b98f3b5f3d38ef13f5dc286a4a0fb642",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
