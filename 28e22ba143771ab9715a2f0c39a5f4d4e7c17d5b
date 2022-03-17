@@ -16,6 +16,23 @@
       "message": "Good to go?",
       "revId": "28e22ba143771ab9715a2f0c39a5f4d4e7c17d5b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed5314ee_a2766df0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1815899
+      },
+      "writtenOn": "2022-03-17T06:37:25Z",
+      "side": 1,
+      "message": "This also good to go?",
+      "revId": "28e22ba143771ab9715a2f0c39a5f4d4e7c17d5b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
