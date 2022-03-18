@@ -33,6 +33,23 @@
       "message": "I guess this needs manual cherry picking internally or?",
       "revId": "aa4ac1e5b98f3b5f3d38ef13f5dc286a4a0fb642",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a06a96a1_330b269c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121193
+      },
+      "writtenOn": "2022-03-18T21:58:56Z",
+      "side": 1,
+      "message": "the one failing test case is a known issue and not telephony related, thus by pass presubmit\nhttps://android-build.googleplex.com/builds/tests/view?invocationId\u003dI09600010028779418\u0026testResultId\u003dTR58827937058271273",
+      "revId": "aa4ac1e5b98f3b5f3d38ef13f5dc286a4a0fb642",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
