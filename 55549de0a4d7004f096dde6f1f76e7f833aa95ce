@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75d2d090_6b05811f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1059499
+      },
+      "writtenOn": "2022-03-18T09:35:14Z",
+      "side": 1,
+      "message": "Test: m RunSettingsRoboTests -j ROBOTEST_FILTER\u003dcom.android.settings.password",
+      "revId": "55549de0a4d7004f096dde6f1f76e7f833aa95ce",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
