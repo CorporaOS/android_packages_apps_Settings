@@ -237,7 +237,9 @@ public class SubscriptionsPreferenceController extends AbstractPreferenceControl
             });
 
             mSubsGearPref.setOnGearClickListener(p ->
-                    startMobileNetworkActivity(mContext, subInfo.getSubscriptionId()));
+                    startMobileNetworkActivity(mContext,
+                            mSubscriptionManager.getDefaultDataSubscriptionInfo()
+                                    .getSubscriptionId()));
         }
 
         if (!(mContext.getSystemService(UserManager.class)).isAdminUser()) {
