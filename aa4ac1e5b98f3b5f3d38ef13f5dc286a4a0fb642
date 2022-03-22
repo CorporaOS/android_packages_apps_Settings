@@ -50,6 +50,23 @@
       "message": "the one failing test case is a known issue and not telephony related, thus by pass presubmit\nhttps://android-build.googleplex.com/builds/tests/view?invocationId\u003dI09600010028779418\u0026testResultId\u003dTR58827937058271273",
       "revId": "aa4ac1e5b98f3b5f3d38ef13f5dc286a4a0fb642",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ebb32417_2b1f57da",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-03-22T05:33:11Z",
+      "side": 1,
+      "message": "Look good to me.",
+      "revId": "aa4ac1e5b98f3b5f3d38ef13f5dc286a4a0fb642",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
