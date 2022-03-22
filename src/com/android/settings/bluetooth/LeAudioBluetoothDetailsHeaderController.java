@@ -275,7 +275,7 @@ public class LeAudioBluetoothDetailsHeaderController extends BasePreferenceContr
                 return;
             }
             boolean isLeft = (deviceId & LEFT_DEVICE_ID) != 0;
-            boolean isRight = (deviceId & LEFT_DEVICE_ID) != 0;
+            boolean isRight = (deviceId & RIGHT_DEVICE_ID) != 0;
             boolean isLeftRight = isLeft && isRight;
             // The LE device updates the BatteryLayout
             if (isLeftRight) {
