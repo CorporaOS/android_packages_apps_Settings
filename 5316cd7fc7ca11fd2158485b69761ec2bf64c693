@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "829331c2_3c6f17e3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-03-22T04:59:25Z",
+      "side": 1,
+      "message": "I tend to agree that, mobile network part can be resumed when wifi becomes visible.\n\nThe mobile network part might not been changed during the reset process, in that case, conditionally resume it seems to be one of the route for recovering mobile network part.",
+      "revId": "5316cd7fc7ca11fd2158485b69761ec2bf64c693",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
