@@ -34,6 +34,24 @@
       "parentUuid": "5b7b2569_b481afac",
       "revId": "c8ca9ef447d7da69f1fee2b00205ddbe0022c4ac",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "84f89194_5816f851",
+        "filename": "src/com/android/settings/network/telephony/ToggleSubscriptionDialogActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 462,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-03-25T15:35:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "34549a5f_6decd13e",
+      "revId": "c8ca9ef447d7da69f1fee2b00205ddbe0022c4ac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
