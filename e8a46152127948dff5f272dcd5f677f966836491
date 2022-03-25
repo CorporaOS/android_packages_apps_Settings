@@ -22,6 +22,30 @@
       },
       "revId": "e8a46152127948dff5f272dcd5f677f966836491",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7433d1e8_f5cc77cf",
+        "filename": "src/com/android/settings/network/telephony/ToggleSubscriptionDialogActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 472,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-03-25T15:34:04Z",
+      "side": 1,
+      "message": "Per discussed offline. Study the possibility in the future.",
+      "parentUuid": "c54c2ed7_f6749f33",
+      "range": {
+        "startLine": 469,
+        "startChar": 0,
+        "endLine": 472,
+        "endChar": 64
+      },
+      "revId": "e8a46152127948dff5f272dcd5f677f966836491",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
