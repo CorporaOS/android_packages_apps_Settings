@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b7b2569_b481afac",
+        "filename": "src/com/android/settings/network/telephony/ToggleSubscriptionDialogActivity.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 462,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-03-25T14:55:26Z",
+      "side": 1,
+      "message": "Could it be better to set the TextView#setLayoutDirection() within  ConfirmDialogFragment.java instead of this design ?",
+      "revId": "c8ca9ef447d7da69f1fee2b00205ddbe0022c4ac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
