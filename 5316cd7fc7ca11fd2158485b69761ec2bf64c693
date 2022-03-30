@@ -33,6 +33,24 @@
       "message": "@Weng su, why presubmit-verified -1 here ? I have no permission to check it, can you help to check it?",
       "revId": "5316cd7fc7ca11fd2158485b69761ec2bf64c693",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4331045d_d0aa8a6c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367652
+      },
+      "writtenOn": "2022-03-30T07:17:22Z",
+      "side": 1,
+      "message": "Could you help to update the InternetResetHelperTest.java with the solution change also?\n\nPlease use following command to test this CL with testing device.\n\n$ atest InternetResetHelperTest\n\nThank you!",
+      "parentUuid": "119bdbd4_5f581b37",
+      "revId": "5316cd7fc7ca11fd2158485b69761ec2bf64c693",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
