@@ -59,7 +59,7 @@ android_library {
         "com.google.android.material_material",
         "setupcompat",
         "setupdesign",
-        "androidx-constraintlayout_constraintlayout-solver",
+        "androidx-constraintlayout_constraintlayout-core",
         "androidx.lifecycle_lifecycle-runtime",
         "androidx.lifecycle_lifecycle-extensions",
         "guava",
