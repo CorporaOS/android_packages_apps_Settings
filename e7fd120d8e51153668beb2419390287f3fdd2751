@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b3f6b72_7a982821",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1793992
+      },
+      "writtenOn": "2022-04-05T15:35:35Z",
+      "side": 1,
+      "message": "If this change is for U, shouldn\u0027t it be fixed in CLDR? This CL might just delay discovery of such CLDR bugs.",
+      "revId": "e7fd120d8e51153668beb2419390287f3fdd2751",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
