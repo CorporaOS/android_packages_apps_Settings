@@ -16,6 +16,24 @@
       "message": "If this change is for U, shouldn\u0027t it be fixed in CLDR? This CL might just delay discovery of such CLDR bugs.",
       "revId": "e7fd120d8e51153668beb2419390287f3fdd2751",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fa696281_770ff177",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1038039
+      },
+      "writtenOn": "2022-04-05T15:36:35Z",
+      "side": 1,
+      "message": "The conclusion on the bug is that it _isn\u0027t_ a CLDR bug.",
+      "parentUuid": "2b3f6b72_7a982821",
+      "revId": "e7fd120d8e51153668beb2419390287f3fdd2751",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
