@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "504567c1_bc114426",
+        "filename": "src/com/android/settings/network/TetherEnabler.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1594463
+      },
+      "writtenOn": "2022-04-11T16:35:27Z",
+      "side": 1,
+      "message": "nit: I think you could also do `new HandlerExecutor(mMainThreadHandler)` analogous to line 176.",
+      "range": {
+        "startLine": 182,
+        "startChar": 55,
+        "endLine": 182,
+        "endChar": 86
+      },
+      "revId": "f707d68e05eaacf28407a8c7c0118339da3621fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1081de2a_5c600a66",
+        "filename": "src/com/android/settings/network/TetherEnabler.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 1594463
+      },
+      "writtenOn": "2022-04-11T16:35:27Z",
+      "side": 1,
+      "message": "I wonder if you need to use ConcurrentHashmap. I see that some calls originate from within the main handler thread context, but I am not sure if that is the case for all of them (addListener for instance). Do you know if this is safe?",
+      "range": {
+        "startLine": 271,
+        "startChar": 16,
+        "endLine": 271,
+        "endChar": 48
+      },
+      "revId": "f707d68e05eaacf28407a8c7c0118339da3621fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
