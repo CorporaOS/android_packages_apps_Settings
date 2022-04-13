@@ -45,6 +45,30 @@
       },
       "revId": "f707d68e05eaacf28407a8c7c0118339da3621fb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0b181f38_f90fd86b",
+        "filename": "src/com/android/settings/network/TetherEnabler.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 1406251
+      },
+      "writtenOn": "2022-04-13T01:59:40Z",
+      "side": 1,
+      "message": "I have a search in the codebase, looks like currently TetherEnabler is used in AllInOneTetherSettings and AllInOneTetherPreferenceController, these two classes should run in the main settings application thread. If so, then that ensures mAvailableInterfaces is calling in the same thread in order.",
+      "parentUuid": "1081de2a_5c600a66",
+      "range": {
+        "startLine": 271,
+        "startChar": 16,
+        "endLine": 271,
+        "endChar": 48
+      },
+      "revId": "f707d68e05eaacf28407a8c7c0118339da3621fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
