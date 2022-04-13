@@ -86,6 +86,30 @@
       },
       "revId": "f707d68e05eaacf28407a8c7c0118339da3621fb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3eb31b23_d0a8acd0",
+        "filename": "src/com/android/settings/network/TetherEnabler.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 1406251
+      },
+      "writtenOn": "2022-04-13T10:31:04Z",
+      "side": 1,
+      "message": "Updated with ConcurrentHashmap, to make it safer.",
+      "parentUuid": "0b181f38_f90fd86b",
+      "range": {
+        "startLine": 271,
+        "startChar": 16,
+        "endLine": 271,
+        "endChar": 48
+      },
+      "revId": "f707d68e05eaacf28407a8c7c0118339da3621fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
