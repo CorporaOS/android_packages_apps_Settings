@@ -3,6 +3,23 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "01f2e3c1_b764cdfb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367652
+      },
+      "writtenOn": "2022-04-13T07:26:15Z",
+      "side": 1,
+      "message": "Thank you for this change.",
+      "revId": "f707d68e05eaacf28407a8c7c0118339da3621fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "504567c1_bc114426",
         "filename": "src/com/android/settings/network/TetherEnabler.java",
         "patchSetId": 2
