@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f8ece8bd_ddf42f78",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-04-14T02:51:39Z",
+      "side": 1,
+      "message": "Hi Tsung-Mao,\nCould you help to review the SettingsUIDeviceConfig.java?\nThanks",
+      "revId": "11b337178a74d539eee109c78726570e592a1974",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
