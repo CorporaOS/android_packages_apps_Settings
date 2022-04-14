@@ -67,6 +67,24 @@
       "message": "Joe, can you help the code conflict problem for this cl?",
       "revId": "28e22ba143771ab9715a2f0c39a5f4d4e7c17d5b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aaead1d9_2e242151",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1565948
+      },
+      "writtenOn": "2022-04-14T16:38:16Z",
+      "side": 1,
+      "message": "I think it just needs to be rebaseed.",
+      "parentUuid": "c64db3d6_d825fa8f",
+      "revId": "28e22ba143771ab9715a2f0c39a5f4d4e7c17d5b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
