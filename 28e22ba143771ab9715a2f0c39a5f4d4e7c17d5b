@@ -50,6 +50,23 @@
       "message": "Bump",
       "revId": "28e22ba143771ab9715a2f0c39a5f4d4e7c17d5b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c64db3d6_d825fa8f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2022-04-14T06:16:49Z",
+      "side": 1,
+      "message": "Joe, can you help the code conflict problem for this cl?",
+      "revId": "28e22ba143771ab9715a2f0c39a5f4d4e7c17d5b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
