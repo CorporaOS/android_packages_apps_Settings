@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d30c08c_d02f65c0",
+        "filename": "src/com/android/settings/bluetooth/BluetoothDetailsProfilesController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 518,
+      "author": {
+        "id": 1320071
+      },
+      "writtenOn": "2022-04-15T07:14:44Z",
+      "side": 1,
+      "message": "Please remove this blank line",
+      "range": {
+        "startLine": 518,
+        "startChar": 0,
+        "endLine": 518,
+        "endChar": 1
+      },
+      "revId": "daae712644c569a3b0a1f1cdfebe0ea3894f19e0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
