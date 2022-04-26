@@ -149,7 +149,7 @@ public class ApnSettings extends RestrictedSettingsFragment
                 if (!mRestoreDefaultApnMode) {
                     fillList();
                 } else {
-                    showDialog(DIALOG_RESTORE_DEFAULTAPN);
+                    showRestoreDefaultApnDialog();
                 }
             }
         }
@@ -466,7 +466,7 @@ public class ApnSettings extends RestrictedSettingsFragment
     }
 
     private boolean restoreDefaultApn() {
-        showDialog(DIALOG_RESTORE_DEFAULTAPN);
+        showRestoreDefaultApnDialog();
         mRestoreDefaultApnMode = true;
 
         if (mRestoreApnUiHandler == null) {
@@ -563,5 +563,13 @@ public class ApnSettings extends RestrictedSettingsFragment
             return SettingsEnums.DIALOG_APN_RESTORE_DEFAULT;
         }
         return 0;
+    }
+
+    private void showRestoreDefaultApnDialog() {
+        // try to remove the progress dialog firstly to avoid this dialog sometimes not dismissed.
+        // such as repeatly and quickly clicking the restore default apn menu item before the
+        // progress dialog UI is really shown.
+        removeDialog(DIALOG_RESTORE_DEFAULTAPN);
+        showDialog(DIALOG_RESTORE_DEFAULTAPN);
     }
 }
