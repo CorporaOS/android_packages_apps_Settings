@@ -16,6 +16,24 @@
       "message": "Nit: do you want to log with the \"victor\" tag?\n(and I know I\u0027m not a reviewer on this one :-)",
       "revId": "1358a77408141917ca4c7f2ff2e320c2fa9bdce5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c9371ec1_7b9984bb",
+        "filename": "src/com/android/settings/datetime/timezone/SpannableUtil.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1047684
+      },
+      "writtenOn": "2022-04-27T17:53:54Z",
+      "side": 1,
+      "message": "No. It\u0027s only for debugging now. Will remove it when I get this CL working.",
+      "parentUuid": "8f981da3_2c9a55d3",
+      "revId": "1358a77408141917ca4c7f2ff2e320c2fa9bdce5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
