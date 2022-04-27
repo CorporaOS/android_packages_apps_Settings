@@ -17,6 +17,7 @@
 package com.android.settings.datetime.timezone;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.icu.text.DateFormat;
 import android.icu.text.DisplayContext;
 import android.icu.text.SimpleDateFormat;
@@ -32,6 +33,7 @@ import java.time.Instant;
 import java.time.zone.ZoneOffsetTransition;
 import java.time.zone.ZoneRules;
 import java.util.Date;
+import java.util.Locale;
 
 public class TimeZoneInfoPreferenceController extends BasePreferenceController {
 
@@ -80,15 +82,19 @@ public class TimeZoneInfoPreferenceController extends BasePreferenceController {
     }
 
     private CharSequence formatInfo(TimeZoneInfo item) {
+        Resources resources = mContext.getResources();
+        Locale locale = resources.getConfiguration().getLocales().get(0);
         final CharSequence offsetAndName = formatOffsetAndName(item);
         final TimeZone timeZone = item.getTimeZone();
         if (!timeZone.observesDaylightTime()) {
-            return mContext.getString(R.string.zone_info_footer_no_dst, offsetAndName);
+            return SpannableUtil.titleCaseSentences(locale, SpannableUtil.getResourcesText(
+                resources, R.string.zone_info_footer_no_dst, offsetAndName));
         }
 
         final ZoneOffsetTransition nextDstTransition = findNextDstTransition(item);
         if (nextDstTransition == null) { // No future transition
-            return mContext.getString(R.string.zone_info_footer_no_dst, offsetAndName);
+            return SpannableUtil.titleCaseSentences(locale, SpannableUtil.getResourcesText(
+                resources, R.string.zone_info_footer_no_dst, offsetAndName));
         }
         final boolean toDst = getDSTSavings(timeZone, nextDstTransition.getInstant()) != 0;
         String timeType = toDst ? item.getDaylightName() : item.getStandardName();
@@ -103,8 +109,8 @@ public class TimeZoneInfoPreferenceController extends BasePreferenceController {
         final Calendar transitionTime = Calendar.getInstance(timeZone);
         transitionTime.setTimeInMillis(nextDstTransition.getInstant().toEpochMilli());
         final String date = mDateFormat.format(transitionTime);
-        return SpannableUtil.getResourcesText(mContext.getResources(),
-                R.string.zone_info_footer, offsetAndName, timeType, date);
+        return SpannableUtil.titleCaseSentences(locale, SpannableUtil.getResourcesText(resources,
+                R.string.zone_info_footer, offsetAndName, timeType, date));
     }
 
     private ZoneOffsetTransition findNextDstTransition(TimeZoneInfo timeZoneInfo) {
