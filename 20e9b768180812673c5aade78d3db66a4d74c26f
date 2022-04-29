@@ -16,6 +16,57 @@
       "message": "it\u0027s now ready for review",
       "revId": "20e9b768180812673c5aade78d3db66a4d74c26f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1553eef_b7bde131",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065394
+      },
+      "writtenOn": "2022-04-29T16:35:10Z",
+      "side": 1,
+      "message": "Thanks you.\n\nAdded two nitpick comments.\nBut already approved (because nitpicks are \"do it only if you like it\" or \"it\u0027s just a note\")\n",
+      "revId": "20e9b768180812673c5aade78d3db66a4d74c26f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a7939fc_5bfc5ea4",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 612,
+      "author": {
+        "id": 1065394
+      },
+      "writtenOn": "2022-04-29T16:35:10Z",
+      "side": 1,
+      "message": "Nitpick: Concatenation is not ideal.\nBut if using a newline is not desired then I agree, this is a reasonable solution.",
+      "revId": "20e9b768180812673c5aade78d3db66a4d74c26f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "91c069e7_8f53684c",
+        "filename": "src/com/android/settings/datetime/timezone/SpannableUtil.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1065394
+      },
+      "writtenOn": "2022-04-29T16:35:10Z",
+      "side": 1,
+      "message": "Nitpick: This does not seem to be neither used, not tested.",
+      "revId": "20e9b768180812673c5aade78d3db66a4d74c26f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
