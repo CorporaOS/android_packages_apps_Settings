@@ -35,6 +35,23 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b6b817ad_3cfc661c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065394
+      },
+      "writtenOn": "2022-04-29T18:12:14Z",
+      "side": 1,
+      "message": "Thank you for the clarifications to the nitpicks :-)\nStill +1 on Code-Review\n",
+      "revId": "20e9b768180812673c5aade78d3db66a4d74c26f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0a7939fc_5bfc5ea4",
