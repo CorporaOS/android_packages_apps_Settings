@@ -34,6 +34,24 @@
       "parentUuid": "8f981da3_2c9a55d3",
       "revId": "1358a77408141917ca4c7f2ff2e320c2fa9bdce5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ebfedef_b3fe9346",
+        "filename": "src/com/android/settings/datetime/timezone/SpannableUtil.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1047684
+      },
+      "writtenOn": "2022-04-29T16:11:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c9371ec1_7b9984bb",
+      "revId": "1358a77408141917ca4c7f2ff2e320c2fa9bdce5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
