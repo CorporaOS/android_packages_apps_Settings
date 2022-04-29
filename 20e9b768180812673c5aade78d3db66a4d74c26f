@@ -52,6 +52,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bbd26efc_e1869056",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 612,
+      "author": {
+        "id": 1047684
+      },
+      "writtenOn": "2022-04-29T17:21:23Z",
+      "side": 1,
+      "message": "yes, but i don\u0027t intend to change the English output in this CL, but only fix the the titled case issue.",
+      "parentUuid": "0a7939fc_5bfc5ea4",
+      "revId": "20e9b768180812673c5aade78d3db66a4d74c26f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "91c069e7_8f53684c",
@@ -65,6 +83,24 @@
       "writtenOn": "2022-04-29T16:35:10Z",
       "side": 1,
       "message": "Nitpick: This does not seem to be neither used, not tested.",
+      "revId": "20e9b768180812673c5aade78d3db66a4d74c26f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c49ebf27_15dc3dea",
+        "filename": "src/com/android/settings/datetime/timezone/SpannableUtil.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1047684
+      },
+      "writtenOn": "2022-04-29T17:21:23Z",
+      "side": 1,
+      "message": "This is used in getResourcesText() to preserve the Spannable objects and not convert it into String object. I have added a new test to verify the spannables are preserved.",
+      "parentUuid": "91c069e7_8f53684c",
       "revId": "20e9b768180812673c5aade78d3db66a4d74c26f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
