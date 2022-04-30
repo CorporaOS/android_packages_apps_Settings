@@ -149,7 +149,7 @@ public class ApnSettings extends RestrictedSettingsFragment
                 if (!mRestoreDefaultApnMode) {
                     fillList();
                 } else {
-                    showDialog(DIALOG_RESTORE_DEFAULTAPN);
+                    showDialogIfNotExist(DIALOG_RESTORE_DEFAULTAPN);
                 }
             }
         }
@@ -466,7 +466,7 @@ public class ApnSettings extends RestrictedSettingsFragment
     }
 
     private boolean restoreDefaultApn() {
-        showDialog(DIALOG_RESTORE_DEFAULTAPN);
+        showDialogIfNotExist(DIALOG_RESTORE_DEFAULTAPN);
         mRestoreDefaultApnMode = true;
 
         if (mRestoreApnUiHandler == null) {

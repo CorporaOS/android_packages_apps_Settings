@@ -470,6 +470,15 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
         mDialogFragment.show(getChildFragmentManager(), Integer.toString(dialogId));
     }
 
+    protected void showDialogIfNotExist(int dialogId) {
+        if ((mDialogFragment != null)
+                && (mDialogFragment == getChildFragmentManager().findFragmentById(dialogId))) {
+            Log.d(TAG, "Old dialog " + dialogId + " still active.");
+            return;
+        }
+        showDialog(dialogId);
+    }
+
     @Override
     public Dialog onCreateDialog(int dialogId) {
         return null;
