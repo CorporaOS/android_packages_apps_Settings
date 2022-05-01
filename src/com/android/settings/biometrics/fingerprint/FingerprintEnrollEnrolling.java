@@ -244,7 +244,7 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
     public void onEnterAnimationComplete() {
         super.onEnterAnimationComplete();
 
-        if (mCanAssumeUdfps) {
+        if (!shouldStartAutomatically()) {
             startEnrollment();
         }
 
