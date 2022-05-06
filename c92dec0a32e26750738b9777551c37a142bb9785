@@ -80,6 +80,29 @@
       },
       "revId": "c92dec0a32e26750738b9777551c37a142bb9785",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "14c217f0_03a6d8a6",
+        "filename": "src/com/android/settings/wfd/WifiDisplaySettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 686,
+      "author": {
+        "id": 1320071
+      },
+      "writtenOn": "2022-05-06T09:13:39Z",
+      "side": 1,
+      "message": "Since this issue is happened when route is not connecting, \nIMO, we can change the condition as below:\n\nif (route.isConnecting()) {\n    setSummary(R.string.wifi_display_status_connecting);\n} else {\n    CharSequence status \u003d route.getStatus();\n    if (!TextUtils.isEmpty(status)) {\n        setSummary(status);\n    } else {\n        setSummary(R.string.wifi_display_status_connected);\n    }\n}",
+      "range": {
+        "startLine": 680,
+        "startChar": 16,
+        "endLine": 686,
+        "endChar": 13
+      },
+      "revId": "c92dec0a32e26750738b9777551c37a142bb9785",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
