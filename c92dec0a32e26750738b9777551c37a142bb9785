@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83c20827_f73fc9cb",
+        "filename": "src/com/android/settings/wfd/WifiDisplaySettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 679,
+      "author": {
+        "id": 1322948
+      },
+      "writtenOn": "2022-05-06T05:18:56Z",
+      "side": 1,
+      "message": "connecting?",
+      "range": {
+        "startLine": 679,
+        "startChar": 22,
+        "endLine": 679,
+        "endChar": 31
+      },
+      "revId": "c92dec0a32e26750738b9777551c37a142bb9785",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
