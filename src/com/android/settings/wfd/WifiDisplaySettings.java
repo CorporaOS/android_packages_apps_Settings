@@ -675,8 +675,11 @@ public final class WifiDisplaySettings extends SettingsPreferenceFragment implem
             setEnabled(route.isEnabled());
             if (route.isSelected()) {
                 setOrder(ORDER_CONNECTED);
-                if (route.isConnecting()) {
-                    setSummary(R.string.wifi_display_status_connecting);
+                // Should display the real status. Display unavailable status
+                // as connected is confusing.
+                CharSequence status = route.getStatus();
+                if (status != null) {
+                    setSummary(status);
                 } else {
                     setSummary(R.string.wifi_display_status_connected);
                 }
