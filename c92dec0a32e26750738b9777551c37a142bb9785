@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ba5cb716_13d02e65",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1413437
+      },
+      "writtenOn": "2022-05-06T05:47:31Z",
+      "side": 1,
+      "message": "@Jimmy Assigned the buganizer https://partnerissuetracker.corp.google.com/u/1/issues/231656030 to you. You can get more info from this buganizer.",
+      "revId": "c92dec0a32e26750738b9777551c37a142bb9785",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "83c20827_f73fc9cb",
