@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2f1175f_5c75794c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1413437
+      },
+      "writtenOn": "2022-05-09T00:59:42Z",
+      "side": 1,
+      "message": "Hi Phani, please help to do QC-review +1. ",
+      "revId": "1faade249e02b5bb1d3ff1f1457972b1c8de6343",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
