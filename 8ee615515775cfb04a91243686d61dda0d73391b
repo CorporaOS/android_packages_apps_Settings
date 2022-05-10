@@ -22,6 +22,29 @@
       },
       "revId": "8ee615515775cfb04a91243686d61dda0d73391b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7eff8097_4a581ab6",
+        "filename": "src/com/android/settings/security/SimLockPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-05-10T04:33:10Z",
+      "side": 1,
+      "message": "Is it possible to get IMEI in this case ?\n\nThere\u0027s a peice of source code within ImeiInfoDialogController#updateDialogForCdmaPhone() might need to aligned with this change.",
+      "range": {
+        "startLine": 99,
+        "startChar": 53,
+        "endLine": 99,
+        "endChar": 76
+      },
+      "revId": "8ee615515775cfb04a91243686d61dda0d73391b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
