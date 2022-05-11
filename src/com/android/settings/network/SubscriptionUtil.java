@@ -279,9 +279,13 @@ public class SubscriptionUtil {
         // Creates a mapping of Subscription id to original display name + phone number display name
         final Supplier<Stream<DisplayInfo>> uniqueInfos = () -> originalInfos.get().map(info -> {
             if (duplicateOriginalNames.contains(info.originalName)) {
-                // This may return null, if the user cannot view the phone number itself.
-                final String phoneNumber = DeviceInfoUtils.getBidiFormattedPhoneNumber(context,
-                        info.subscriptionInfo);
+                String phoneNumber = "";
+                if (info.subscriptionInfo.getSimSlotIndex() !=
+                        SubscriptionManager.INVALID_SIM_SLOT_INDEX) {
+                    // This may return null, if the user cannot view the phone number itself.
+                    phoneNumber = DeviceInfoUtils.getBidiFormattedPhoneNumber(context,
+                            info.subscriptionInfo);
+                }
                 String lastFourDigits = "";
                 if (phoneNumber != null) {
                     lastFourDigits = (phoneNumber.length() > 4)
