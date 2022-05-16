@@ -16,6 +16,23 @@
       "message": "hughchen@google.com, I updates one new patchset for keeping the consistence for the cast menu summary in AdvancedConnectedDeviceDashboardFragment.",
       "revId": "0304a0e88bf54d17eb84780e62314590a465f606",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "98fdb28a_700f9450",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1413437
+      },
+      "writtenOn": "2022-05-16T08:43:56Z",
+      "side": 1,
+      "message": "hughchen@google.com, please trigger Presubmit-ready +1.",
+      "revId": "0304a0e88bf54d17eb84780e62314590a465f606",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
