@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11ff5aa1_d587ffd6",
+        "filename": "src/com/android/settings/bluetooth/BluetoothDetailsProfilesController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1730162
+      },
+      "writtenOn": "2022-05-18T17:03:39Z",
+      "side": 1,
+      "message": "profile instanceof HfpClientProfile?",
+      "range": {
+        "startLine": 131,
+        "startChar": 19,
+        "endLine": 131,
+        "endChar": 59
+      },
+      "revId": "08cffd5707a8be4521974c92d30c1b54d2e73de7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4681438_28957315",
+        "filename": "src/com/android/settings/bluetooth/BluetoothDetailsProfilesController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 1730162
+      },
+      "writtenOn": "2022-05-18T17:03:39Z",
+      "side": 1,
+      "message": "hfp \u0026 headset would be the same preference. If one of hfp \u0026 headset isn\u0027t null, you should gray out the preference.",
+      "range": {
+        "startLine": 156,
+        "startChar": 0,
+        "endLine": 157,
+        "endChar": 63
+      },
+      "revId": "08cffd5707a8be4521974c92d30c1b54d2e73de7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
