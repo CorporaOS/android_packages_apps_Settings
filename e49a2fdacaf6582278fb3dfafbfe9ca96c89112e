@@ -16,6 +16,24 @@
       "message": "I think you should handle HFP/Headset profile both, they all have the same return value from getNameResource with R.string.bluetooth_profile_heads, and it\u0027s used to map \n\u003cstring name\u003d\"bluetooth_profile_headset\"\u003ePhone calls\u003c/string\u003e",
       "revId": "e49a2fdacaf6582278fb3dfafbfe9ca96c89112e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0fc39599_15c02d99",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-05-18T09:47:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "69945ac7_3eaaf8d9",
+      "revId": "e49a2fdacaf6582278fb3dfafbfe9ca96c89112e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
