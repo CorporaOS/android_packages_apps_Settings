@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f31e1e39_6132c6d2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1730162
+      },
+      "writtenOn": "2022-05-19T06:55:06Z",
+      "side": 1,
+      "message": "Sorry for the misunderstanding, and correct my previous comment. hfp_client seems be the HeadsetClient in the bluetooth framework. So it\u0027s the client role for the headset profile. We don\u0027t need to handle hfp_client. Please rollback to the patchset 2. Thanks a lot.",
+      "revId": "08cffd5707a8be4521974c92d30c1b54d2e73de7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "11ff5aa1_d587ffd6",
         "filename": "src/com/android/settings/bluetooth/BluetoothDetailsProfilesController.java",
         "patchSetId": 4
@@ -38,6 +55,30 @@
       "side": 1,
       "message": "I can\u0027t use the HfpClientProfile class, since it is not public class.\nhttps://source.corp.google.com/android/frameworks/base/packages/SettingsLib/src/com/android/settingslib/bluetooth/HfpClientProfile.java;l\u003d40;bpv\u003d0;bpt\u003d1",
       "parentUuid": "11ff5aa1_d587ffd6",
+      "range": {
+        "startLine": 131,
+        "startChar": 19,
+        "endLine": 131,
+        "endChar": 59
+      },
+      "revId": "08cffd5707a8be4521974c92d30c1b54d2e73de7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "752f0679_79fc66e4",
+        "filename": "src/com/android/settings/bluetooth/BluetoothDetailsProfilesController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1730162
+      },
+      "writtenOn": "2022-05-19T06:55:06Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "17be3a00_b20466b1",
       "range": {
         "startLine": 131,
         "startChar": 19,
@@ -85,6 +126,30 @@
       "side": 1,
       "message": "If there are the hfp and headset, then there are the two \"phone calls\"preference.\none of preference\u0027s key is \"HEADSET_CLIENT\".\nhttps://source.corp.google.com/android/frameworks/base/packages/SettingsLib/src/com/android/settingslib/bluetooth/HfpClientProfile.java;l\u003d170\nother one preference\u0027s key is \"HEADSET\".\nhttps://source.corp.google.com/android/frameworks/base/packages/SettingsLib/src/com/android/settingslib/bluetooth/HeadsetProfile.java;l\u003d194\n\nThey are different preference, so we check and gray out each of preference.",
       "parentUuid": "c4681438_28957315",
+      "range": {
+        "startLine": 156,
+        "startChar": 0,
+        "endLine": 157,
+        "endChar": 63
+      },
+      "revId": "08cffd5707a8be4521974c92d30c1b54d2e73de7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2aa835f_1a341af9",
+        "filename": "src/com/android/settings/bluetooth/BluetoothDetailsProfilesController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 1730162
+      },
+      "writtenOn": "2022-05-19T06:55:06Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7ee54c8d_29ccd781",
       "range": {
         "startLine": 156,
         "startChar": 0,
