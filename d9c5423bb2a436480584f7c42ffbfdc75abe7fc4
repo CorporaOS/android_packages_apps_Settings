@@ -48,6 +48,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1008e84_4b5f1675",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1246512
+      },
+      "writtenOn": "2022-05-20T09:06:49Z",
+      "side": 1,
+      "message": "I have resolved the comment.\n\nThis issue was originally seen on Android Q.\nAs we have this patch applied internally and don\u0027t use the contextual cards that much any longer, we haven\u0027t seen this issue since.\n\nI will poke around and see if I can find any evidence of it happening on later cookies.\n\nHowever the code seems to remain largely unchanged since then:\nhttps://cs.android.com/android/platform/superproject/+/master:packages/apps/Settings/src/com/android/settings/homepage/contextualcards/CardDatabaseHelper.java;l\u003d29?q\u003dcarddatabasehelper.\u0026sq\u003d\n\nStill calls context.getApplicationContext() when getting the instance. If application has not been started, applicationContext will be null and there will be a nullpointer in SQLiteOpenHelper.java\nhttps://cs.android.com/android/platform/superproject/+/master:frameworks/base/core/java/android/database/sqlite/SQLiteOpenHelper.java;l\u003d1?q\u003dSQLiteOpenHelper.java\u0026sq\u003d",
+      "parentUuid": "627c1947_c37dfad2",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 43
+      },
+      "revId": "d9c5423bb2a436480584f7c42ffbfdc75abe7fc4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b1003006_9a68fcf1",
@@ -85,6 +109,30 @@
       "side": 1,
       "message": "If the changes in this file is not needed, please revert it. Thanks!",
       "parentUuid": "b1003006_9a68fcf1",
+      "range": {
+        "startLine": 138,
+        "startChar": 0,
+        "endLine": 138,
+        "endChar": 14
+      },
+      "revId": "d9c5423bb2a436480584f7c42ffbfdc75abe7fc4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb9f6382_9ad6372f",
+        "filename": "src/com/android/settings/slices/SettingsSliceProvider.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1246512
+      },
+      "writtenOn": "2022-05-20T09:06:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a35efbaf_41194eb7",
       "range": {
         "startLine": 138,
         "startChar": 0,
