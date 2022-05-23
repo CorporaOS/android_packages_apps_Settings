@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8ef4d800_39817dd1",
+        "filename": "src/com/android/settings/display/BatteryPercentagePreferenceController.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1146169
+      },
+      "writtenOn": "2022-05-23T14:33:48Z",
+      "side": 1,
+      "message": "Looks like this needs a default value in frameworks/base/core/res/res/values/config.xml, otherwise it will throw an exception.",
+      "range": {
+        "startLine": 72,
+        "startChar": 23,
+        "endLine": 72,
+        "endChar": 61
+      },
+      "revId": "5eb6247fead05d5c1cc276ae9accac6313a4e3e8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
