@@ -16,6 +16,24 @@
       "message": "We can modify the only res/values/arrays.xml. The translation console will handle the other translation part.",
       "revId": "d4576f40281e542d726285917fcbf299be348bff",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bbf4ec74_4d290b33",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1949712
+      },
+      "writtenOn": "2022-05-23T10:00:15Z",
+      "side": 1,
+      "message": "I\u0027ve restored all translation files, Thanks for your reminding.",
+      "parentUuid": "30658a6d_1e039486",
+      "revId": "d4576f40281e542d726285917fcbf299be348bff",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
