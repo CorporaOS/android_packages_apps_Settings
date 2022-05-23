@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "30658a6d_1e039486",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-05-23T07:16:16Z",
+      "side": 1,
+      "message": "We can modify the only res/values/arrays.xml. The translation console will handle the other translation part.",
+      "revId": "d4576f40281e542d726285917fcbf299be348bff",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
