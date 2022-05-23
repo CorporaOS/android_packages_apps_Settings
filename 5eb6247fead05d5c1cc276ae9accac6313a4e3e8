@@ -22,6 +22,30 @@
       },
       "revId": "5eb6247fead05d5c1cc276ae9accac6313a4e3e8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5cd757ab_206b10c2",
+        "filename": "src/com/android/settings/display/BatteryPercentagePreferenceController.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1221112
+      },
+      "writtenOn": "2022-05-23T14:52:09Z",
+      "side": 1,
+      "message": "I guess this will do right ;) ?\n https://android-review.googlesource.com/c/platform/frameworks/base/+/1719595",
+      "parentUuid": "8ef4d800_39817dd1",
+      "range": {
+        "startLine": 72,
+        "startChar": 23,
+        "endLine": 72,
+        "endChar": 61
+      },
+      "revId": "5eb6247fead05d5c1cc276ae9accac6313a4e3e8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
