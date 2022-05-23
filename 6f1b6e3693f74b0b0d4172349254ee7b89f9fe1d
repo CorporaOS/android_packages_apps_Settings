@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a0c14e98_c2bce10a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1246512
+      },
+      "writtenOn": "2022-05-23T07:13:02Z",
+      "side": 1,
+      "message": "Have not been able to reproduce the original error on xperia devices nor on pixel 4.\n\nCards behaviour seems to work as before in settings menu when testing on xperia devices and on pixel 4 (aosp userdebug build).",
+      "revId": "6f1b6e3693f74b0b0d4172349254ee7b89f9fe1d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
