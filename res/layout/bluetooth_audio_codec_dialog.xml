@@ -54,6 +54,10 @@
             <include
                 android:id="@+id/bluetooth_audio_codec_ldac"
                 layout="@layout/preference_widget_dialog_radiobutton"/>
+
+            <include
+                android:id="@+id/bluetooth_audio_codec_lhdcv5"
+                layout="@layout/preference_widget_dialog_radiobutton"/>
         </RadioGroup>
 
         <include
