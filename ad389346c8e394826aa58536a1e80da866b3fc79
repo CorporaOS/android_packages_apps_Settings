@@ -84,6 +84,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "689c8a65_82a0b08d",
+        "filename": "src/com/android/settings/utils/FileSizeFormatter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1047684
+      },
+      "writtenOn": "2022-05-24T10:05:30Z",
+      "side": 1,
+      "message": "If it needs to be fixed, we can create a follow-up CL to fix this because it\u0027s not a regression in this CL. I am going to submit this CL first.",
+      "parentUuid": "558cf125_e9923ac4",
+      "range": {
+        "startLine": 119,
+        "startChar": 55,
+        "endLine": 119,
+        "endChar": 82
+      },
+      "revId": "ad389346c8e394826aa58536a1e80da866b3fc79",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "aa302870_29b5e0d7",
         "filename": "src/com/android/settings/utils/FileSizeFormatter.java",
         "patchSetId": 1
