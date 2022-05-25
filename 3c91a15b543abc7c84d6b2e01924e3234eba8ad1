@@ -52,6 +52,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "37069972_a6955e5e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1952721
+      },
+      "writtenOn": "2022-05-25T09:38:05Z",
+      "side": 1,
+      "message": "Hi Jason,\n\nOK. I will find the way to file a bug on the issue tracker,\nthen amend the commit message soon.\n\nThank you so much!",
+      "parentUuid": "a056416b_1375c4ab",
+      "revId": "3c91a15b543abc7c84d6b2e01924e3234eba8ad1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1a5f4064_26099069",
