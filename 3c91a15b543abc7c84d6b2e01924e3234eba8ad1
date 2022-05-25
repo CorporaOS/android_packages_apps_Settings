@@ -33,6 +33,69 @@
       "message": "Hi partner, could you please file a bug (https://source.android.com/setup/contribute/report-bugs) to explain your problem/feature, attach the bug number to the commit message using \"Bug:\", elaborate what you wanna change in the commit message?",
       "revId": "3c91a15b543abc7c84d6b2e01924e3234eba8ad1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee3235f0_4d1d7f5c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1351023
+      },
+      "writtenOn": "2022-05-25T03:49:25Z",
+      "side": 1,
+      "message": "Hi Ugo, please help to review the BT codec logic.",
+      "revId": "3c91a15b543abc7c84d6b2e01924e3234eba8ad1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1a5f4064_26099069",
+        "filename": "src/com/android/settings/development/bluetooth/BluetoothLHDCAudioLatencyPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1351023
+      },
+      "writtenOn": "2022-05-25T03:49:25Z",
+      "side": 1,
+      "message": "2022",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 21
+      },
+      "revId": "3c91a15b543abc7c84d6b2e01924e3234eba8ad1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3624e633_6560a6f2",
+        "filename": "src/com/android/settings/development/bluetooth/BluetoothLHDCQualityDialogPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1351023
+      },
+      "writtenOn": "2022-05-25T03:49:25Z",
+      "side": 1,
+      "message": "2022",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 21
+      },
+      "revId": "3c91a15b543abc7c84d6b2e01924e3234eba8ad1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
