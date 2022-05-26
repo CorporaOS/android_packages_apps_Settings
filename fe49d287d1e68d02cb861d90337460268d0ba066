@@ -34,6 +34,24 @@
       "parentUuid": "7cd5e9da_ac0a3714",
       "revId": "fe49d287d1e68d02cb861d90337460268d0ba066",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "864a7974_5611b5ed",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-05-26T08:57:56Z",
+      "side": 1,
+      "message": "We have CP it into android 12L, but I am not sure which branch involves it.\nSince you change the code, I trigger the Presubmit-Ready. If the Presubmit-Ready pass, I will give it +2, then you can merge it.",
+      "parentUuid": "7c1b3280_117767b7",
+      "revId": "fe49d287d1e68d02cb861d90337460268d0ba066",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
