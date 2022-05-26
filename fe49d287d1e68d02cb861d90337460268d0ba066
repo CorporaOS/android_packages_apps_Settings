@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7cd5e9da_ac0a3714",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-05-26T02:33:23Z",
+      "side": 1,
+      "message": "Hi Xupei,\nI checked it in the internal code base. It is fixed at androidT and this res was changed to integer-array. The code will be released at the android T release. we don\u0027t need this cl. \n\nThanks for your contribution.\n\nThe code is at ag/16634155, like below. you can refer it.\n```\n    \u003cinteger-array name\u003d\"sim_color_light\"\u003e\n\n    \u003c/integer-array\u003e\n```",
+      "revId": "fe49d287d1e68d02cb861d90337460268d0ba066",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
