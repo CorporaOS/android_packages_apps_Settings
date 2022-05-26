@@ -24,9 +24,9 @@ import static com.android.settings.network.TetherEnabler.TETHERING_USB_ON;
 import static com.android.settings.network.TetherEnabler.TETHERING_WIFI_ON;
 import static com.android.settingslib.RestrictedLockUtilsInternal.checkIfRestrictionEnforced;
 
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothPan;
-import android.bluetooth.BluetoothProfile;
+//import android.bluetooth.BluetoothAdapter;
+//import android.bluetooth.BluetoothPan;
+//import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 import android.os.UserHandle;
 import android.util.FeatureFlagUtils;
@@ -59,7 +59,7 @@ public class AllInOneTetherPreferenceController extends BasePreferenceController
     private int mTetheringState;
 
     private final boolean mAdminDisallowedTetherConfig;
-    private final AtomicReference<BluetoothPan> mBluetoothPan;
+    /*private final AtomicReference<BluetoothPan> mBluetoothPan;
     private final BluetoothAdapter mBluetoothAdapter;
     @VisibleForTesting
     final BluetoothProfile.ServiceListener mBtProfileServiceListener =
@@ -73,7 +73,7 @@ public class AllInOneTetherPreferenceController extends BasePreferenceController
                 public void onServiceDisconnected(int profile) {
                     mBluetoothPan.set(null);
                 }
-            };
+            };*/
 
     private PrimarySwitchPreference mPreference;
     private TetherEnabler mTetherEnabler;
@@ -82,16 +82,16 @@ public class AllInOneTetherPreferenceController extends BasePreferenceController
     AllInOneTetherPreferenceController() {
         super(null /*context*/, "test");
         mAdminDisallowedTetherConfig = false;
-        mBluetoothPan = new AtomicReference<>();
-        mBluetoothAdapter = null;
+        //mBluetoothPan = new AtomicReference<>();
+        //mBluetoothAdapter = null;
     }
 
     public AllInOneTetherPreferenceController(Context context, String key) {
         super(context, key);
-        mBluetoothPan = new AtomicReference<>();
+        //mBluetoothPan = new AtomicReference<>();
         mAdminDisallowedTetherConfig = checkIfRestrictionEnforced(
                 context, DISALLOW_CONFIG_TETHERING, UserHandle.myUserId()) != null;
-        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        //mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
     }
 
     @Override
@@ -159,11 +159,11 @@ public class AllInOneTetherPreferenceController extends BasePreferenceController
 
     @OnLifecycleEvent(Event.ON_CREATE)
     public void onCreate() {
-        if (mBluetoothAdapter != null
+        /*if (mBluetoothAdapter != null
                 && mBluetoothAdapter.getState() == BluetoothAdapter.STATE_ON) {
             mBluetoothAdapter.getProfileProxy(mContext, mBtProfileServiceListener,
                         BluetoothProfile.PAN);
-        }
+        }*/
     }
 
     @OnLifecycleEvent(Event.ON_RESUME)
@@ -182,16 +182,16 @@ public class AllInOneTetherPreferenceController extends BasePreferenceController
 
     @OnLifecycleEvent(Event.ON_DESTROY)
     public void onDestroy() {
-        final BluetoothProfile profile = mBluetoothPan.getAndSet(null);
+        /*final BluetoothProfile profile = mBluetoothPan.getAndSet(null);
         if (profile != null && mBluetoothAdapter != null) {
             mBluetoothAdapter.closeProfileProxy(BluetoothProfile.PAN, profile);
-        }
+        }*/
     }
 
     void initEnabler(Lifecycle lifecycle) {
         if (mPreference != null) {
             mTetherEnabler = new TetherEnabler(
-                    mContext, new GenericSwitchController(mPreference), mBluetoothPan);
+                    mContext, new GenericSwitchController(mPreference));
             if (lifecycle != null) {
                 lifecycle.addObserver(mTetherEnabler);
             }

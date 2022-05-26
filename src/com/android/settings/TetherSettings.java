@@ -58,6 +58,8 @@ import com.android.settings.wifi.tether.WifiTetherPreferenceController;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedSwitchPreference;
 import com.android.settingslib.TetherUtil;
+import com.android.settingslib.bluetooth.LocalBluetoothProfileManager;
+import com.android.settingslib.bluetooth.PanProfile;
 import com.android.settingslib.search.SearchIndexable;
 
 import java.lang.ref.WeakReference;
@@ -99,7 +101,8 @@ public class TetherSettings extends RestrictedSettingsFragment
     private BroadcastReceiver mTetherChangeReceiver;
 
     private String[] mBluetoothRegexs;
-    private AtomicReference<BluetoothPan> mBluetoothPan = new AtomicReference<>();
+    //private AtomicReference<BluetoothPan> mBluetoothPan = new AtomicReference<>();
+    private LocalBluetoothProfileProfileManager mBtProfileManager;
 
     private Handler mHandler = new Handler();
     private OnStartTetheringCallback mStartTetheringCallback;
@@ -163,10 +166,12 @@ public class TetherSettings extends RestrictedSettingsFragment
 
         final Activity activity = getActivity();
         BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
-        if (adapter != null) {
+        /*if (adapter != null) {
             adapter.getProfileProxy(activity.getApplicationContext(), mProfileServiceListener,
                     BluetoothProfile.PAN);
-        }
+        }*/
+	mBtProfileManager = com.android.settings.bluetooth.Utils
+                    .getLocalBtManager(activity.getApplicationContext()).getProfileManager;
 
         setupTetherPreference();
         setTopIntroPreferenceTitle();
@@ -195,8 +200,9 @@ public class TetherSettings extends RestrictedSettingsFragment
         if (!bluetoothAvailable) {
             getPreferenceScreen().removePreference(mBluetoothTether);
         } else {
-            BluetoothPan pan = mBluetoothPan.get();
-            if (pan != null && pan.isTetheringOn()) {
+            //BluetoothPan pan = mBluetoothPan.get();
+            final PanProfile panProfile = mBtProfileManager.getPanProfile();
+	    if (panProfile != null && panProfile.isTetheringOn()) {
                 mBluetoothTether.setChecked(true);
             } else {
                 mBluetoothTether.setChecked(false);
@@ -211,11 +217,11 @@ public class TetherSettings extends RestrictedSettingsFragment
     public void onDestroy() {
         mDataSaverBackend.remListener(this);
 
-        BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
+        /*BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
         BluetoothProfile profile = mBluetoothPan.getAndSet(null);
         if (profile != null && adapter != null) {
             adapter.closeProfileProxy(BluetoothProfile.PAN, profile);
-        }
+        }*/
 
         super.onDestroy();
     }
@@ -449,8 +455,9 @@ public class TetherSettings extends RestrictedSettingsFragment
 
     @VisibleForTesting
     boolean isBluetoothTetheringOn() {
-        final BluetoothPan bluetoothPan = mBluetoothPan.get();
-        return bluetoothPan != null && bluetoothPan.isTetheringOn();
+        //final BluetoothPan bluetoothPan = mBluetoothPan.get();
+        final PanProfile panProfile = mBtProfileManager.getPanProfile();
+	return panProfile != null && panProfile.isTetheringOn();
     }
 
     private void updateBluetoothState() {
@@ -553,7 +560,7 @@ public class TetherSettings extends RestrictedSettingsFragment
         return R.string.help_url_tether;
     }
 
-    private BluetoothProfile.ServiceListener mProfileServiceListener =
+    /*private BluetoothProfile.ServiceListener mProfileServiceListener =
             new BluetoothProfile.ServiceListener() {
         public void onServiceConnected(int profile, BluetoothProfile proxy) {
             mBluetoothPan.set((BluetoothPan) proxy);
@@ -561,7 +568,7 @@ public class TetherSettings extends RestrictedSettingsFragment
         public void onServiceDisconnected(int profile) {
             mBluetoothPan.set(null);
         }
-    };
+    };*/
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider() {

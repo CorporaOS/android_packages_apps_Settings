@@ -25,7 +25,7 @@ import static java.lang.annotation.RetentionPolicy.SOURCE;
 
 import android.annotation.IntDef;
 import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothPan;
+//import android.bluetooth.BluetoothPan;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -49,8 +49,12 @@ import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
 
 import com.android.internal.annotations.VisibleForTesting;
+import com.android.settings.bluetooth.Utils;
 import com.android.settings.datausage.DataSaverBackend;
 import com.android.settings.widget.SwitchWidgetController;
+
+import com.android.settingslib.bluetooth.LocalBluetoothProfileManager;
+import com.android.settingslib.bluetooth.PanProfile;
 
 import java.lang.annotation.Retention;
 import java.lang.ref.WeakReference;
@@ -131,16 +135,16 @@ public class TetherEnabler implements SwitchWidgetController.OnSwitchChangeListe
     TetheringManager.TetheringEventCallback mTetheringEventCallback;
     @VisibleForTesting
     ConnectivityManager.OnStartTetheringCallback mOnStartTetheringCallback;
-    private final AtomicReference<BluetoothPan> mBluetoothPan;
+    //private final AtomicReference<BluetoothPan> mBluetoothPan;
     private boolean mBluetoothEnableForTether;
     private final BluetoothAdapter mBluetoothAdapter;
+    private LocalBluetoothProfileManager mBtProfileManager;
     private final EthernetManager mEthernetManager;
     private final EthernetManager.InterfaceStateListener mEthernetListener = new EthernetListener();
     private final ConcurrentHashMap<String, IpConfiguration> mAvailableInterfaces =
             new ConcurrentHashMap<>();
 
-    public TetherEnabler(Context context, SwitchWidgetController switchWidgetController,
-            AtomicReference<BluetoothPan> bluetoothPan) {
+    public TetherEnabler(Context context, SwitchWidgetController switchWidgetController) {
         mContext = context;
         mSwitchWidgetController = switchWidgetController;
         mDataSaverBackend = new DataSaverBackend(context);
@@ -150,11 +154,12 @@ public class TetherEnabler implements SwitchWidgetController.OnSwitchChangeListe
         mWifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
         mUserManager = (UserManager) context.getSystemService(Context.USER_SERVICE);
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        mBluetoothPan = bluetoothPan;
+        //mBluetoothPan = bluetoothPan;
         mDataSaverEnabled = mDataSaverBackend.isDataSaverEnabled();
         mListeners = new ArrayList<>();
         mMainThreadHandler = new Handler(Looper.getMainLooper());
-        mEthernetManager = context.getSystemService(EthernetManager.class);
+        mBtProfileManager = Utils.getLocalBtManager(mContext.getApplicationContext()).getProfileManager();
+	mEthernetManager = context.getSystemService(EthernetManager.class);
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
@@ -254,12 +259,14 @@ public class TetherEnabler implements SwitchWidgetController.OnSwitchChangeListe
 
         // Only check bluetooth tethering state if not stopped by user already.
         if (!mBluetoothTetheringStoppedByUser) {
-            final BluetoothPan pan = mBluetoothPan.get();
-            if (mBluetoothAdapter != null &&
-                mBluetoothAdapter.getState() == BluetoothAdapter.STATE_ON
-                    && pan != null && pan.isTetheringOn()) {
-                tetherState |= TETHERING_BLUETOOTH_ON;
-            }
+            //final BluetoothPan pan = mBluetoothPan.get();
+            if (mBluetoothAdapter != null && mBtProfileManager != null &&
+                mBluetoothAdapter.getState() == BluetoothAdapter.STATE_ON) {
+                    final PanProfile panProfile = mBtProfileManager.getPanProfile();
+		    if (panProfile != null && panProfile.isTetheringOn()) {
+			    tetherState |= TETHERING_BLUETOOTH_ON;
+		    }
+	     }
         }
 
         String[] usbRegexs = mTetheringManager.getTetherableUsbRegexs();

@@ -21,9 +21,9 @@ import static android.net.TetheringManager.ACTION_TETHER_STATE_CHANGED;
 import static android.net.wifi.WifiManager.WIFI_AP_STATE_CHANGED_ACTION;
 
 import android.app.settings.SettingsEnums;
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothPan;
-import android.bluetooth.BluetoothProfile;
+//import android.bluetooth.BluetoothAdapter;
+//import android.bluetooth.BluetoothPan;
+//import android.bluetooth.BluetoothProfile;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -113,7 +113,7 @@ public class AllInOneTetherSettings extends RestrictedDashboardFragment
 
     private WifiManager mWifiManager;
     private boolean mRestartWifiApAfterConfigChange;
-    private final AtomicReference<BluetoothPan> mBluetoothPan = new AtomicReference<>();
+    //private final AtomicReference<BluetoothPan> mBluetoothPan = new AtomicReference<>();
 
     private WifiTetherSSIDPreferenceController mSSIDPreferenceController;
     private WifiTetherPasswordPreferenceController mPasswordPreferenceController;
@@ -158,7 +158,7 @@ public class AllInOneTetherSettings extends RestrictedDashboardFragment
         }
     };
 
-    private final BluetoothProfile.ServiceListener mProfileServiceListener =
+    /*private final BluetoothProfile.ServiceListener mProfileServiceListener =
             new BluetoothProfile.ServiceListener() {
                 public void onServiceConnected(int profile, BluetoothProfile proxy) {
                     mBluetoothPan.set((BluetoothPan) proxy);
@@ -167,7 +167,7 @@ public class AllInOneTetherSettings extends RestrictedDashboardFragment
                 public void onServiceDisconnected(int profile) {
                     mBluetoothPan.set(null);
                 }
-            };
+            };*/
 
     @Override
     public int getMetricsCategory() {
@@ -222,14 +222,13 @@ public class AllInOneTetherSettings extends RestrictedDashboardFragment
         // Assume we are in a SettingsActivity. This is only safe because we currently use
         // SettingsActivity as base for all preference fragments.
         final SettingsActivity activity = (SettingsActivity) getActivity();
-        final BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
+        /*final BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
         if (adapter != null) {
             adapter.getProfileProxy(activity.getApplicationContext(), mProfileServiceListener,
                     BluetoothProfile.PAN);
-        }
+        }*/
         final SettingsMainSwitchBar mainSwitch = activity.getSwitchBar();
-        mTetherEnabler = new TetherEnabler(activity,
-                new MainSwitchBarController(mainSwitch), mBluetoothPan);
+        mTetherEnabler = new TetherEnabler(activity, new MainSwitchBarController(mainSwitch));
         getSettingsLifecycle().addObserver(mTetherEnabler);
         use(UsbTetherPreferenceController.class).setTetherEnabler(mTetherEnabler);
         use(BluetoothTetherPreferenceController.class).setTetherEnabler(mTetherEnabler);
