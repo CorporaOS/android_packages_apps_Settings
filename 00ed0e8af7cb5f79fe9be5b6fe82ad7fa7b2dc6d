@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "59f351fe_c7fda77f",
+        "filename": "src/com/android/settings/development/BluetoothLeAudioPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1351023
+      },
+      "writtenOn": "2022-05-31T02:12:40Z",
+      "side": 1,
+      "message": "I mean to move this to after the last private static final.\n-\u003e\"private static final String PROPERTY_FILE \u003d \"/data/local.prop\";\"",
+      "parentUuid": "1dcedcb3_97f523c3",
+      "range": {
+        "startLine": 47,
+        "startChar": 4,
+        "endLine": 47,
+        "endChar": 65
+      },
+      "revId": "00ed0e8af7cb5f79fe9be5b6fe82ad7fa7b2dc6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8c8c6107_f949eb67",
         "filename": "src/com/android/settings/development/BluetoothLeAudioPreferenceController.java",
         "patchSetId": 2
