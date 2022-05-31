@@ -72,6 +72,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f998594d_e543e7b2",
+        "filename": "src/com/android/settings/development/BluetoothLeAudioPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1730162
+      },
+      "writtenOn": "2022-05-31T10:13:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "59f351fe_c7fda77f",
+      "range": {
+        "startLine": 47,
+        "startChar": 4,
+        "endLine": 47,
+        "endChar": 65
+      },
+      "revId": "00ed0e8af7cb5f79fe9be5b6fe82ad7fa7b2dc6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8c8c6107_f949eb67",
@@ -85,6 +109,30 @@
       "writtenOn": "2022-05-30T06:01:11Z",
       "side": 1,
       "message": "For a better maintenance, please help to add a comment of the session",
+      "range": {
+        "startLine": 136,
+        "startChar": 16,
+        "endLine": 154,
+        "endChar": 17
+      },
+      "revId": "00ed0e8af7cb5f79fe9be5b6fe82ad7fa7b2dc6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "94857657_45c5bfa9",
+        "filename": "src/com/android/settings/development/BluetoothLeAudioPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1730162
+      },
+      "writtenOn": "2022-05-31T10:13:01Z",
+      "side": 1,
+      "message": "Remove the part.",
+      "parentUuid": "8c8c6107_f949eb67",
       "range": {
         "startLine": 136,
         "startChar": 16,
