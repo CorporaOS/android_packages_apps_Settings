@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "64a574ba_b89fde29",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 1018371
+      },
+      "writtenOn": "2022-06-03T02:55:07Z",
+      "side": 1,
+      "message": "Enable \"Bluetooth\" LE audio",
+      "range": {
+        "startLine": 344,
+        "startChar": 44,
+        "endLine": 344,
+        "endChar": 60
+      },
+      "revId": "6100084aa981af93e91e5c2c6a6d4d25bb7253f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
