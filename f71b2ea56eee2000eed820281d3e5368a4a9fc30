@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b4c29d3_841d1102",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2022-06-06T05:54:47Z",
+      "side": 1,
+      "message": "+1 from Settings core perspective, defer to Tim to make final call.",
+      "revId": "f71b2ea56eee2000eed820281d3e5368a4a9fc30",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
