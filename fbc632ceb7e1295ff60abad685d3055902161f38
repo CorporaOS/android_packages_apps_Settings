@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd11c4e9_d7a7fb77",
+        "filename": "src/com/android/settings/network/telephony/Enable2gPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-09T10:26:18Z",
+      "side": 1,
+      "message": "I think that the \"reason\" is important.\nPlease add the reason ALLOWED_NETWORK_TYPES_REASON_ENABLE_2G.\nhttps://source.corp.google.com/android/frameworks/base/telephony/java/android/telephony/TelephonyManager.java;rcl\u003dHEAD;l\u003d9418?q\u003dtelephonymanager\u0026sq\u003dpackage:%5Eandroid$",
+      "range": {
+        "startLine": 37,
+        "startChar": 29,
+        "endLine": 37,
+        "endChar": 30
+      },
+      "revId": "fbc632ceb7e1295ff60abad685d3055902161f38",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
