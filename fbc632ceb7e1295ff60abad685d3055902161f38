@@ -22,6 +22,30 @@
       },
       "revId": "fbc632ceb7e1295ff60abad685d3055902161f38",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0281f9b_6e6e4705",
+        "filename": "src/com/android/settings/network/telephony/Enable2gPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1951225
+      },
+      "writtenOn": "2022-06-09T13:49:11Z",
+      "side": 1,
+      "message": "Thanks! Updated.",
+      "parentUuid": "cd11c4e9_d7a7fb77",
+      "range": {
+        "startLine": 37,
+        "startChar": 29,
+        "endLine": 37,
+        "endChar": 30
+      },
+      "revId": "fbc632ceb7e1295ff60abad685d3055902161f38",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
