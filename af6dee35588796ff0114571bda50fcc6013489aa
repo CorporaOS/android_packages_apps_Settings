@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e13417f9_da5eae42",
+        "filename": "src/com/android/settings/network/SubscriptionUtil.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 478,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-06-10T08:01:41Z",
+      "side": 1,
+      "message": "What is the purpose you use orElse(null) here?",
+      "range": {
+        "startLine": 478,
+        "startChar": 16,
+        "endLine": 478,
+        "endChar": 30
+      },
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
