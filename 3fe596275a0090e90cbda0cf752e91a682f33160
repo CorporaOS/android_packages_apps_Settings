@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "79bdcaaf_37b2cc8a",
+        "filename": "src/com/android/settings/network/telephony/SubscriptionActionDialogActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-12T18:14:05Z",
+      "side": 1,
+      "message": "I will improve it at next android version and we can track it at b/235738767.",
+      "parentUuid": "e4ff9b46_9335c0f3",
+      "range": {
+        "startLine": 39,
+        "startChar": 28,
+        "endLine": 39,
+        "endChar": 51
+      },
+      "revId": "3fe596275a0090e90cbda0cf752e91a682f33160",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c7e2bf51_a4d5baa1",
@@ -37,6 +61,30 @@
       "writtenOn": "2022-06-10T07:32:17Z",
       "side": 1,
       "message": "is The package scope enough?",
+      "range": {
+        "startLine": 40,
+        "startChar": 4,
+        "endLine": 40,
+        "endChar": 10
+      },
+      "revId": "3fe596275a0090e90cbda0cf752e91a682f33160",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4bdc1675_8d1a4fcf",
+        "filename": "src/com/android/settings/network/telephony/SubscriptionActionDialogActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-12T18:14:05Z",
+      "side": 1,
+      "message": "Yes it is enough. I just protect the settings\u0027 dialogs.",
+      "parentUuid": "c7e2bf51_a4d5baa1",
       "range": {
         "startLine": 40,
         "startChar": 4,
@@ -64,6 +112,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a742319_1f65596d",
+        "filename": "src/com/android/settings/network/telephony/SubscriptionActionDialogActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-12T18:14:05Z",
+      "side": 1,
+      "message": "I will improve it at next android version and we can track it at b/235738767.",
+      "parentUuid": "638d3f5b_2738ccd5",
+      "revId": "3fe596275a0090e90cbda0cf752e91a682f33160",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c54775e4_260b653a",
@@ -77,6 +143,24 @@
       "writtenOn": "2022-06-10T07:32:17Z",
       "side": 1,
       "message": "remove",
+      "revId": "3fe596275a0090e90cbda0cf752e91a682f33160",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "47f0162d_bd1430da",
+        "filename": "src/com/android/settings/sim/SimDialogActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-12T18:14:05Z",
+      "side": 1,
+      "message": "I will improve it at next android version and we can track it at b/235738767.",
+      "parentUuid": "c54775e4_260b653a",
       "revId": "3fe596275a0090e90cbda0cf752e91a682f33160",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
