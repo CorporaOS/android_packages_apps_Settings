@@ -22,6 +22,30 @@
       },
       "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "160f033d_03ddff35",
+        "filename": "src/com/android/settings/network/SubscriptionUtil.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 478,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-12T18:06:10Z",
+      "side": 1,
+      "message": "If the \"subId\" is not in the getAllSubscriptionInfoList, then it causes the exception.",
+      "parentUuid": "e13417f9_da5eae42",
+      "range": {
+        "startLine": 478,
+        "startChar": 16,
+        "endLine": 478,
+        "endChar": 30
+      },
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
