@@ -119,6 +119,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "993e339f_0e325120",
+        "filename": "src/com/android/settings/network/telephony/SubscriptionActionDialogActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-06-13T07:32:04Z",
+      "side": 1,
+      "message": "ok, good",
+      "parentUuid": "84f740a2_ac199892",
+      "range": {
+        "startLine": 40,
+        "startChar": 4,
+        "endLine": 40,
+        "endChar": 10
+      },
+      "revId": "3fe596275a0090e90cbda0cf752e91a682f33160",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "638d3f5b_2738ccd5",
