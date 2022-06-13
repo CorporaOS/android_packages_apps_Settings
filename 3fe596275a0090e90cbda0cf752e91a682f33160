@@ -97,6 +97,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "84f740a2_ac199892",
+        "filename": "src/com/android/settings/network/telephony/SubscriptionActionDialogActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-13T06:35:46Z",
+      "side": 1,
+      "message": "I misunderstand the meaning. the packages which use this static variable are different.\nhttps://source.corp.google.com/search?q\u003dPROGRESS_IS_SHOWING\u0026sq\u003dpackage:%5Eandroid$",
+      "parentUuid": "4bdc1675_8d1a4fcf",
+      "range": {
+        "startLine": 40,
+        "startChar": 4,
+        "endLine": 40,
+        "endChar": 10
+      },
+      "revId": "3fe596275a0090e90cbda0cf752e91a682f33160",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "638d3f5b_2738ccd5",
         "filename": "src/com/android/settings/network/telephony/SubscriptionActionDialogActivity.java",
         "patchSetId": 1
