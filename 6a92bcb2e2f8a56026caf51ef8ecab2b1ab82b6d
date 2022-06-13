@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0eec4013_1d7651e7",
+        "filename": "src/com/android/settings/network/SwitchToEuiccSubscriptionSidecar.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-06-13T07:31:52Z",
+      "side": 1,
+      "message": "0 is a default slot port id, do you think to use a name such as, DEFAULT_PORT_ID instead of 0 is more clear?",
+      "range": {
+        "startLine": 134,
+        "startChar": 40,
+        "endLine": 134,
+        "endChar": 41
+      },
+      "revId": "6a92bcb2e2f8a56026caf51ef8ecab2b1ab82b6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
