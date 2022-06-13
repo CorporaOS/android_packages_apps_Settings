@@ -22,6 +22,30 @@
       },
       "revId": "6a92bcb2e2f8a56026caf51ef8ecab2b1ab82b6d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4183cc30_dde035b5",
+        "filename": "src/com/android/settings/network/SwitchToEuiccSubscriptionSidecar.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-06-13T08:53:32Z",
+      "side": 1,
+      "message": "Assume the comment is resolved, give the +2 first.",
+      "parentUuid": "0eec4013_1d7651e7",
+      "range": {
+        "startLine": 134,
+        "startChar": 40,
+        "endLine": 134,
+        "endChar": 41
+      },
+      "revId": "6a92bcb2e2f8a56026caf51ef8ecab2b1ab82b6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
