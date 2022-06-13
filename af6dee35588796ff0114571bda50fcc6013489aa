@@ -115,6 +115,160 @@
       },
       "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1d3826a_43ec5be5",
+        "filename": "src/com/android/settings/network/SwitchToEuiccSubscriptionSidecar.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-06-13T09:44:44Z",
+      "side": 1,
+      "message": "This is a nonnull api, Do you think you still need to do NPE check?\n\nhttps://source.corp.google.com/android/frameworks/base/telephony/java/android/telephony/TelephonyManager.java;rcl\u003d942f3835c2f5540afee565d09560f99fd2ba2a14;l\u003d4139\n\n\nMaybe change to size check?",
+      "range": {
+        "startLine": 237,
+        "startChar": 57,
+        "endLine": 237,
+        "endChar": 73
+      },
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "08172014_c804330d",
+        "filename": "src/com/android/settings/network/UiccSlotUtil.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-06-13T09:44:44Z",
+      "side": 1,
+      "message": "a removable esim",
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75af2589_6a7fa259",
+        "filename": "tests/unit/src/com/android/settings/network/UiccSlotUtilTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-06-13T09:44:44Z",
+      "side": 1,
+      "message": "mContext is not with a @Mock annotation.\n\nMove it to L63 shall be better.",
+      "range": {
+        "startLine": 55,
+        "startChar": 4,
+        "endLine": 55,
+        "endChar": 29
+      },
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "29e0ce3c_2099c0d2",
+        "filename": "tests/unit/src/com/android/settings/network/UiccSlotUtilTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-06-13T09:44:44Z",
+      "side": 1,
+      "message": "Adds a empty line between L65 and L66.",
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be3d8c37_3d9e59cb",
+        "filename": "tests/unit/src/com/android/settings/network/UiccSlotUtilTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-06-13T09:44:44Z",
+      "side": 1,
+      "message": "Adds a empty line between L114 and L115.",
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7a6bbe82_1a9c4916",
+        "filename": "tests/unit/src/com/android/settings/network/UiccSlotUtilTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-06-13T09:44:44Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "db30b3e0_a637c30d",
+        "filename": "tests/unit/src/com/android/settings/network/UiccSlotUtilTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-06-13T09:44:44Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 138,
+        "startChar": 58,
+        "endLine": 138,
+        "endChar": 59
+      },
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dbec82a4_d4fa75c9",
+        "filename": "tests/unit/src/com/android/settings/network/UiccSlotUtilTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-06-13T09:44:44Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
