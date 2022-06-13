@@ -212,6 +212,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "24e45960_548b23aa",
+        "filename": "src/com/android/settings/network/SwitchToEuiccSubscriptionSidecar.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-13T10:26:49Z",
+      "side": 1,
+      "message": "I add it into new patch aosp/2121199",
+      "parentUuid": "b1d3826a_43ec5be5",
+      "range": {
+        "startLine": 237,
+        "startChar": 57,
+        "endLine": 237,
+        "endChar": 73
+      },
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "08172014_c804330d",
@@ -225,6 +249,24 @@
       "writtenOn": "2022-06-13T09:44:44Z",
       "side": 1,
       "message": "a removable esim",
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e409c6b8_e28c08f6",
+        "filename": "src/com/android/settings/network/UiccSlotUtil.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-13T10:26:49Z",
+      "side": 1,
+      "message": "I add it into new patch aosp/2121199",
+      "parentUuid": "08172014_c804330d",
       "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -252,6 +294,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ee0b07b_810ab000",
+        "filename": "tests/unit/src/com/android/settings/network/UiccSlotUtilTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-13T10:26:49Z",
+      "side": 1,
+      "message": "I add it into new patch aosp/2121199",
+      "parentUuid": "75af2589_6a7fa259",
+      "range": {
+        "startLine": 55,
+        "startChar": 4,
+        "endLine": 55,
+        "endChar": 29
+      },
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "29e0ce3c_2099c0d2",
@@ -265,6 +331,24 @@
       "writtenOn": "2022-06-13T09:44:44Z",
       "side": 1,
       "message": "Adds a empty line between L65 and L66.",
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9b89d0a_800a0aaa",
+        "filename": "tests/unit/src/com/android/settings/network/UiccSlotUtilTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-13T10:26:49Z",
+      "side": 1,
+      "message": "I add it into new patch aosp/2121199",
+      "parentUuid": "29e0ce3c_2099c0d2",
       "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -286,6 +370,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "142b0e26_8a512dc0",
+        "filename": "tests/unit/src/com/android/settings/network/UiccSlotUtilTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-13T10:26:49Z",
+      "side": 1,
+      "message": "I add it into new patch aosp/2121199",
+      "parentUuid": "be3d8c37_3d9e59cb",
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7a6bbe82_1a9c4916",
@@ -299,6 +401,24 @@
       "writtenOn": "2022-06-13T09:44:44Z",
       "side": 1,
       "message": "ditto",
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c261acba_b06e9a8b",
+        "filename": "tests/unit/src/com/android/settings/network/UiccSlotUtilTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-13T10:26:49Z",
+      "side": 1,
+      "message": "I add it into new patch aosp/2121199",
+      "parentUuid": "7a6bbe82_1a9c4916",
       "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -326,6 +446,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b360e02_dd43608c",
+        "filename": "tests/unit/src/com/android/settings/network/UiccSlotUtilTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-13T10:26:49Z",
+      "side": 1,
+      "message": "I add it into new patch aosp/2121199",
+      "parentUuid": "db30b3e0_a637c30d",
+      "range": {
+        "startLine": 138,
+        "startChar": 58,
+        "endLine": 138,
+        "endChar": 59
+      },
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dbec82a4_d4fa75c9",
@@ -339,6 +483,24 @@
       "writtenOn": "2022-06-13T09:44:44Z",
       "side": 1,
       "message": "ditto",
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "19bc89f2_6cf9c5c7",
+        "filename": "tests/unit/src/com/android/settings/network/UiccSlotUtilTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-13T10:26:49Z",
+      "side": 1,
+      "message": "I add it into new patch aosp/2121199",
+      "parentUuid": "dbec82a4_d4fa75c9",
       "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
