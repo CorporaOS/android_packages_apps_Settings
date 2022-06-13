@@ -71,6 +71,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "999bf767_e36a0d60",
+        "filename": "src/com/android/settings/network/SwitchToEuiccSubscriptionSidecar.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-13T10:04:45Z",
+      "side": 1,
+      "message": "I add it into new patch aosp/2121199",
+      "parentUuid": "0ff23155_15b02e68",
+      "range": {
+        "startLine": 95,
+        "startChar": 0,
+        "endLine": 97,
+        "endChar": 87
+      },
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0e9c04d9_037960c9",
@@ -94,6 +118,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ffbbd12d_41df9c26",
+        "filename": "src/com/android/settings/network/SwitchToEuiccSubscriptionSidecar.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-13T10:04:45Z",
+      "side": 1,
+      "message": "I add it into new patch aosp/2121199",
+      "parentUuid": "0e9c04d9_037960c9",
+      "range": {
+        "startLine": 120,
+        "startChar": 0,
+        "endLine": 132,
+        "endChar": 77
+      },
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0e477876_c3843421",
@@ -107,6 +155,30 @@
       "writtenOn": "2022-06-13T09:24:29Z",
       "side": 1,
       "message": "Capitol",
+      "range": {
+        "startLine": 133,
+        "startChar": 24,
+        "endLine": 133,
+        "endChar": 25
+      },
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3adcc47c_8b10513d",
+        "filename": "src/com/android/settings/network/SwitchToEuiccSubscriptionSidecar.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-13T10:04:45Z",
+      "side": 1,
+      "message": "I add it into new patch aosp/2121199",
+      "parentUuid": "0e477876_c3843421",
       "range": {
         "startLine": 133,
         "startChar": 24,
