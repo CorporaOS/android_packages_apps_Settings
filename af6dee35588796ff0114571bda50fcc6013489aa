@@ -46,6 +46,75 @@
       },
       "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0ff23155_15b02e68",
+        "filename": "src/com/android/settings/network/SwitchToEuiccSubscriptionSidecar.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-06-13T09:24:29Z",
+      "side": 1,
+      "message": "These new added line shall put after L104. This is to avoid redundant process if target \u003c 0.",
+      "range": {
+        "startLine": 95,
+        "startChar": 0,
+        "endLine": 97,
+        "endChar": 87
+      },
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0e9c04d9_037960c9",
+        "filename": "src/com/android/settings/network/SwitchToEuiccSubscriptionSidecar.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-06-13T09:24:29Z",
+      "side": 1,
+      "message": "// Case 1: In DSDS mode+MEP, if the replaced esim is active, then the replaced esim\n            // should be disabled before changing SimSlotMapping process.\n            //\n            // Case 2: If the user enables the esim A on the target slot:port which is active\n            // and there is an active esim B on target slot:port, then the\n            // settings disables the esim B before the settings enables the esim A on the\n            // target slot:port.\n            //\n            // Step:\n            // 1) Disables the replaced esim.\n            // 2) Switches the SimSlotMapping if the target slot:port is not active.\n            // 3) Enables the target esim.\n            // Note: Use INVALID_SUBSCRIPTION_ID to disable the esim profile.",
+      "range": {
+        "startLine": 120,
+        "startChar": 0,
+        "endLine": 132,
+        "endChar": 77
+      },
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0e477876_c3843421",
+        "filename": "src/com/android/settings/network/SwitchToEuiccSubscriptionSidecar.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-06-13T09:24:29Z",
+      "side": 1,
+      "message": "Capitol",
+      "range": {
+        "startLine": 133,
+        "startChar": 24,
+        "endLine": 133,
+        "endChar": 25
+      },
+      "revId": "af6dee35588796ff0114571bda50fcc6013489aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
