@@ -46,6 +46,30 @@
       },
       "revId": "56e1297abe496094ec13711d3eb2b5a2cf228d7d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e311eec7_816640ec",
+        "filename": "src/com/android/settings/network/SwitchToEuiccSubscriptionSidecar.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-06-14T06:33:36Z",
+      "side": 0,
+      "message": "per talked with you, this log shall not be necessary.",
+      "parentUuid": "26f4e2b0_60821639",
+      "range": {
+        "startLine": 238,
+        "startChar": 0,
+        "endLine": 241,
+        "endChar": 9
+      },
+      "revId": "56e1297abe496094ec13711d3eb2b5a2cf228d7d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
