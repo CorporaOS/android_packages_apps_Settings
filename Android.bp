@@ -35,7 +35,6 @@ java_library {
     ],
 }
 
-// Build the Settings APK
 android_library {
     name: "Settings-core",
     platform_apis: true,
@@ -90,6 +89,7 @@ platform_compat_config {
     system_ext_specific: true,
 }
 
+// Build the Settings APK
 android_app {
     name: "Settings",
     defaults: ["platform_app_defaults"],
