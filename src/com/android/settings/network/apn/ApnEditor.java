@@ -150,7 +150,7 @@ public class ApnEditor extends SettingsPreferenceFragment
     private boolean mReadOnlyApn;
     private Uri mCarrierUri;
     private boolean mIsCarrierIdApn;
-
+    private boolean mAllowEmptyApn = false;
     /**
      * APN types for data connections.  These are usage categories for an APN
      * entry.  One APN entry may support multiple APN types, eg, a single APN
@@ -318,6 +318,8 @@ public class ApnEditor extends SettingsPreferenceFragment
         final int carrierId = mApnData.getInteger(CARRIER_ID_INDEX,
                 TelephonyManager.UNKNOWN_CARRIER_ID);
         mIsCarrierIdApn = (carrierId > TelephonyManager.UNKNOWN_CARRIER_ID);
+
+        mAllowEmptyApn = getContext().getResources().getBoolean(R.bool.config_allow_empty_apn);
 
         final boolean isUserEdited = mApnData.getInteger(EDITED_INDEX,
                 Telephony.Carriers.USER_EDITED) == Telephony.Carriers.USER_EDITED;
@@ -1172,7 +1174,7 @@ public class ApnEditor extends SettingsPreferenceFragment
         final String mnc = checkNotSet(mMnc.getText());
         boolean doNotCheckMccMnc = mIsCarrierIdApn && TextUtils.isEmpty(mcc)
                 && TextUtils.isEmpty(mnc);
-        if (TextUtils.isEmpty(name)) {
+        if (TextUtils.isEmpty(name) && !mAllowEmptyApn) {
             errorMsg = getResources().getString(R.string.error_name_empty);
         } else if (TextUtils.isEmpty(apn)) {
             errorMsg = getResources().getString(R.string.error_apn_empty);
