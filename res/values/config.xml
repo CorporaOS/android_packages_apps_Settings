@@ -557,4 +557,7 @@
 
     <!-- Whether to aggregate for network selection list-->
     <bool name="config_network_selection_list_aggregation_enabled">false</bool>
+
+    <!-- Whether to allow empty apn-->
+    <bool name="config_allow_empty_apn">false</bool>
 </resources>
