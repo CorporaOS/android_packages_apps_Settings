@@ -150,7 +150,7 @@ public class ApnEditor extends SettingsPreferenceFragment
     private boolean mReadOnlyApn;
     private Uri mCarrierUri;
     private boolean mIsCarrierIdApn;
-
+    private boolean mAllowEmptyApn = false;
     /**
      * APN types for data connections.  These are usage categories for an APN
      * entry.  One APN entry may support multiple APN types, eg, a single APN
