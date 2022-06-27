@@ -34,6 +34,7 @@ import android.os.Handler;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.util.FeatureFlagUtils;
+import android.util.Log;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
@@ -56,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TetherPreferenceController extends AbstractPreferenceController implements
         PreferenceControllerMixin, LifecycleObserver, OnCreate, OnResume, OnPause, OnDestroy {
 
+    private static final String TAG = "TetherPreferenceController";
     private static final String KEY_TETHER_SETTINGS = "tether_settings";
 
     private final boolean mAdminDisallowedTetherConfig;
@@ -74,6 +76,27 @@ public class TetherPreferenceController extends AbstractPreferenceController imp
                     mBluetoothPan.set(null);
                 }
             };
+
+    private final BroadcastReceiver mBluetoothStateReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            final String action = intent.getAction();
+            if (action.equals(BluetoothAdapter.ACTION_STATE_CHANGED)) {
+                final int state = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE, BluetoothAdapter.ERROR);
+                Log.d(TAG, "onReceive: action: " + action + ", state: " + state);
+                final BluetoothProfile profile = mBluetoothPan.get();
+                switch(state) {
+                    case BluetoothAdapter.STATE_TURNING_OFF:
+                        if (profile != null && mBluetoothAdapter != null) {
+                            mBluetoothAdapter.closeProfileProxy(BluetoothProfile.PAN, profile);
+                        }
+                        break;
+                    case BluetoothAdapter.STATE_ON:
+                        break;
+                }
+            }
+        }
+    };
 
     private SettingObserver mAirplaneModeObserver;
     private Preference mPreference;
@@ -143,6 +166,8 @@ public class TetherPreferenceController extends AbstractPreferenceController imp
             mTetherReceiver = new TetherBroadcastReceiver();
         }
         mContext.registerReceiver(
+                mBluetoothStateReceiver, new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
+        mContext.registerReceiver(
                 mTetherReceiver, new IntentFilter(TetheringManager.ACTION_TETHER_STATE_CHANGED));
         mContext.getContentResolver()
                 .registerContentObserver(mAirplaneModeObserver.uri, false, mAirplaneModeObserver);
@@ -155,6 +180,9 @@ public class TetherPreferenceController extends AbstractPreferenceController imp
         }
         if (mTetherReceiver != null) {
             mContext.unregisterReceiver(mTetherReceiver);
+        }
+        if (mBluetoothStateReceiver != null) {
+            mContext.unregisterReceiver(mBluetoothStateReceiver);
         }
     }
 
