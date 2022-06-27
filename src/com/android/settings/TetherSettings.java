@@ -128,6 +128,28 @@ public class TetherSettings extends RestrictedSettingsFragment
     @VisibleForTesting
     TetheringManager mTm;
 
+    private final BroadcastReceiver mBluetoothStateReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            final String action = intent.getAction();
+            Log.i(TAG, "onReceive: action: " + action);
+
+            if (action.equals(BluetoothAdapter.ACTION_STATE_CHANGED)) {
+                final int state = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE, BluetoothAdapter.ERROR);
+                Log.i(TAG, "onReceive: state: " + BluetoothAdapter.nameForState(state));
+                final BluetoothProfile profile = mBluetoothPan.get();
+                switch(state) {
+                    case BluetoothAdapter.STATE_TURNING_OFF:
+                        BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
+                        if (profile != null && adapter != null) {
+                            adapter.closeProfileProxy(BluetoothProfile.PAN, profile);
+                        }
+                        break;
+                }
+            }
+        }
+    };
+
     @Override
     public int getMetricsCategory() {
         return SettingsEnums.TETHER;
@@ -167,6 +189,8 @@ public class TetherSettings extends RestrictedSettingsFragment
             adapter.getProfileProxy(activity.getApplicationContext(), mProfileServiceListener,
                     BluetoothProfile.PAN);
         }
+        mContext.registerReceiver(
+            mBluetoothStateReceiver, new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
 
         setupTetherPreference();
         setTopIntroPreferenceTitle();
@@ -215,6 +239,9 @@ public class TetherSettings extends RestrictedSettingsFragment
         BluetoothProfile profile = mBluetoothPan.getAndSet(null);
         if (profile != null && adapter != null) {
             adapter.closeProfileProxy(BluetoothProfile.PAN, profile);
+        }
+        if (mBluetoothStateReceiver != null) {
+            mContext.unregisterReceiver(mBluetoothStateReceiver);
         }
 
         super.onDestroy();
