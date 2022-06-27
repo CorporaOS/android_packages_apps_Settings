@@ -34,6 +34,7 @@ import android.os.Handler;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.util.FeatureFlagUtils;
+import android.util.Log;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
@@ -56,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TetherPreferenceController extends AbstractPreferenceController implements
         PreferenceControllerMixin, LifecycleObserver, OnCreate, OnResume, OnPause, OnDestroy {
 
+    private static final String TAG = "TetherPreferenceController";
     private static final String KEY_TETHER_SETTINGS = "tether_settings";
 
     private final boolean mAdminDisallowedTetherConfig;
@@ -66,12 +68,13 @@ public class TetherPreferenceController extends AbstractPreferenceController imp
     final BluetoothProfile.ServiceListener mBtProfileServiceListener =
             new android.bluetooth.BluetoothProfile.ServiceListener() {
                 public void onServiceConnected(int profile, BluetoothProfile proxy) {
-                    mBluetoothPan.set((BluetoothPan) proxy);
+                    if (mBluetoothPan.get() == null) {
+                        mBluetoothPan.set((BluetoothPan) proxy);
+                    }
                     updateSummary();
                 }
 
                 public void onServiceDisconnected(int profile) {
-                    mBluetoothPan.set(null);
                     updateSummary();
                 }
             };
@@ -79,6 +82,7 @@ public class TetherPreferenceController extends AbstractPreferenceController imp
     private SettingObserver mAirplaneModeObserver;
     private Preference mPreference;
     private TetherBroadcastReceiver mTetherReceiver;
+    private BroadcastReceiver mBluetoothStateReceiver;
 
     @VisibleForTesting(otherwise = VisibleForTesting.NONE)
     TetherPreferenceController() {
@@ -133,6 +137,12 @@ public class TetherPreferenceController extends AbstractPreferenceController imp
             mBluetoothAdapter.getProfileProxy(mContext, mBtProfileServiceListener,
                     BluetoothProfile.PAN);
         }
+        if (mBluetoothStateReceiver == null) {
+            mBluetoothStateReceiver = new BluetoothStateReceiver();
+            mContext.registerReceiver(
+                    mBluetoothStateReceiver,
+                    new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
+        }
     }
 
     @Override
@@ -164,6 +174,10 @@ public class TetherPreferenceController extends AbstractPreferenceController imp
         final BluetoothProfile profile = mBluetoothPan.getAndSet(null);
         if (profile != null && mBluetoothAdapter != null) {
             mBluetoothAdapter.closeProfileProxy(BluetoothProfile.PAN, profile);
+        }
+        if (mBluetoothStateReceiver != null) {
+            mContext.unregisterReceiver(mBluetoothStateReceiver);
+            mBluetoothStateReceiver = null;
         }
     }
 
@@ -269,5 +283,28 @@ public class TetherPreferenceController extends AbstractPreferenceController imp
             updateSummary();
         }
 
+    }
+
+    private class BluetoothStateReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            final String action = intent.getAction();
+            Log.i(TAG, "onReceive: action: " + action);
+
+            if (action.equals(BluetoothAdapter.ACTION_STATE_CHANGED)) {
+                final int state =
+                        intent.getIntExtra(BluetoothAdapter.EXTRA_STATE, BluetoothAdapter.ERROR);
+                Log.i(TAG, "onReceive: state: " + BluetoothAdapter.nameForState(state));
+                final BluetoothProfile profile = mBluetoothPan.get();
+                switch(state) {
+                    case BluetoothAdapter.STATE_ON:
+                        if (profile == null && mBluetoothAdapter != null) {
+                            mBluetoothAdapter.getProfileProxy(mContext, mBtProfileServiceListener,
+                                    BluetoothProfile.PAN);
+                        }
+                        break;
+                }
+            }
+        }
     }
 }
