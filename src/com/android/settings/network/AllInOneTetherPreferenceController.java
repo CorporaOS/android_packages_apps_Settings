@@ -27,7 +27,10 @@ import static com.android.settingslib.RestrictedLockUtilsInternal.checkIfRestric
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothPan;
 import android.bluetooth.BluetoothProfile;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.UserHandle;
 import android.util.FeatureFlagUtils;
 import android.util.Log;
@@ -77,6 +80,7 @@ public class AllInOneTetherPreferenceController extends BasePreferenceController
 
     private PrimarySwitchPreference mPreference;
     private TetherEnabler mTetherEnabler;
+    private BroadcastReceiver mBluetoothStateReceiver;
 
     @VisibleForTesting(otherwise = VisibleForTesting.NONE)
     AllInOneTetherPreferenceController() {
@@ -164,6 +168,11 @@ public class AllInOneTetherPreferenceController extends BasePreferenceController
             mBluetoothAdapter.getProfileProxy(mContext, mBtProfileServiceListener,
                         BluetoothProfile.PAN);
         }
+        if (mBluetoothStateReceiver == null) {
+            mBluetoothStateReceiver = new BluetoothStateReceiver();
+            mContext.registerReceiver(
+                    mBluetoothStateReceiver, new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
+        }
     }
 
     @OnLifecycleEvent(Event.ON_RESUME)
@@ -186,6 +195,10 @@ public class AllInOneTetherPreferenceController extends BasePreferenceController
         if (profile != null && mBluetoothAdapter != null) {
             mBluetoothAdapter.closeProfileProxy(BluetoothProfile.PAN, profile);
         }
+        if (mBluetoothStateReceiver != null) {
+            mContext.unregisterReceiver(mBluetoothStateReceiver);
+            mBluetoothStateReceiver = null;
+        }
     }
 
     void initEnabler(Lifecycle lifecycle) {
@@ -204,5 +217,26 @@ public class AllInOneTetherPreferenceController extends BasePreferenceController
     public void onTetherStateUpdated(@TetherEnabler.TetheringState int state) {
         mTetheringState = state;
         updateState(mPreference);
+    }
+
+    private class BluetoothStateReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            final String action = intent.getAction();
+            Log.i(TAG, "onReceive: action: " + action);
+
+            if (action.equals(BluetoothAdapter.ACTION_STATE_CHANGED)) {
+                final int state = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE, BluetoothAdapter.ERROR);
+                Log.i(TAG, "onReceive: state: " + BluetoothAdapter.nameForState(state));
+                final BluetoothProfile profile = mBluetoothPan.get();
+                switch(state) {
+                    case BluetoothAdapter.STATE_TURNING_OFF:
+                        if (profile != null && mBluetoothAdapter != null) {
+                            mBluetoothAdapter.closeProfileProxy(BluetoothProfile.PAN, profile);
+                        }
+                        break;
+                }
+            }
+        }
     }
 }

@@ -97,6 +97,7 @@ public class TetherSettings extends RestrictedSettingsFragment
     private SwitchPreference mEthernetTether;
 
     private BroadcastReceiver mTetherChangeReceiver;
+    private BroadcastReceiver mBluetoothStateReceiver;
 
     private String[] mBluetoothRegexs;
     private AtomicReference<BluetoothPan> mBluetoothPan = new AtomicReference<>();
@@ -167,6 +168,11 @@ public class TetherSettings extends RestrictedSettingsFragment
             adapter.getProfileProxy(activity.getApplicationContext(), mProfileServiceListener,
                     BluetoothProfile.PAN);
         }
+        if (mBluetoothStateReceiver == null) {
+            mBluetoothStateReceiver = new BluetoothStateReceiver();
+            mContext.registerReceiver(
+                    mBluetoothStateReceiver, new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
+        }
 
         setupTetherPreference();
         setTopIntroPreferenceTitle();
@@ -216,6 +222,10 @@ public class TetherSettings extends RestrictedSettingsFragment
         if (profile != null && adapter != null) {
             adapter.closeProfileProxy(BluetoothProfile.PAN, profile);
         }
+        if (mBluetoothStateReceiver != null) {
+            mContext.unregisterReceiver(mBluetoothStateReceiver);
+            mBluetoothStateReceiver = null;
+        }
 
         super.onDestroy();
     }
@@ -252,6 +262,28 @@ public class TetherSettings extends RestrictedSettingsFragment
             topIntroPreference.setTitle(R.string.tethering_footer_info_sta_ap_concurrency);
         } else {
             topIntroPreference.setTitle(R.string.tethering_footer_info);
+        }
+    }
+
+    private class BluetoothStateReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            final String action = intent.getAction();
+            Log.i(TAG, "onReceive: action: " + action);
+
+            if (action.equals(BluetoothAdapter.ACTION_STATE_CHANGED)) {
+                final int state = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE, BluetoothAdapter.ERROR);
+                Log.i(TAG, "onReceive: state: " + BluetoothAdapter.nameForState(state));
+                final BluetoothProfile profile = mBluetoothPan.get();
+                switch(state) {
+                    case BluetoothAdapter.STATE_TURNING_OFF:
+                        BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
+                        if (profile != null && adapter != null) {
+                            adapter.closeProfileProxy(BluetoothProfile.PAN, profile);
+                        }
+                        break;
+                }
+            }
         }
     }
 
