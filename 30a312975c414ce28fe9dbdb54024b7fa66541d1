@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b648074_67f143e9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1393882
+      },
+      "writtenOn": "2022-06-28T08:37:33Z",
+      "side": 1,
+      "message": "Wasn\u0027t ag/19083766 auto-merged to master?",
+      "revId": "30a312975c414ce28fe9dbdb54024b7fa66541d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
