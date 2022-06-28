@@ -16,6 +16,24 @@
       "message": "Wasn\u0027t ag/19083766 auto-merged to master?",
       "revId": "30a312975c414ce28fe9dbdb54024b7fa66541d1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8b176ca4_47e0d2bc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-06-28T08:56:50Z",
+      "side": 1,
+      "message": "The ag/19083766 will auto-merged to master. \nThis AOSP\u0027s cls are for the OEM\u0027s BT part. The BT FW co-work with OEM, and the OEM will test the LE audio part. They will need these cls.",
+      "parentUuid": "4b648074_67f143e9",
+      "revId": "30a312975c414ce28fe9dbdb54024b7fa66541d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
