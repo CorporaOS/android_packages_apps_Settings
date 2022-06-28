@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7063c9b_8a128ef3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1941455
+      },
+      "writtenOn": "2022-06-28T06:57:55Z",
+      "side": 1,
+      "message": "We cannot check the reason for Presubmit-Verified -1.\nCould you please deal with it, or show me the details? \nThanks.",
+      "revId": "0cec86137032ac63dd0f43289d3baaa048326ee8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
