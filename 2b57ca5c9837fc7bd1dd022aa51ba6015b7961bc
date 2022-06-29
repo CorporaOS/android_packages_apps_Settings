@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "af725e5e_64161f1c",
+        "filename": "res/layout/battery_header.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1014288
+      },
+      "writtenOn": "2022-06-29T20:53:20Z",
+      "side": 0,
+      "message": "hmm, this is strange. I\u0027m wondering whether this is supposed to be in the text view\u0027s attributes. Will loop in current Settings folks to review.",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 64
+      },
+      "revId": "2b57ca5c9837fc7bd1dd022aa51ba6015b7961bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
