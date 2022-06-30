@@ -22,6 +22,30 @@
       },
       "revId": "2b57ca5c9837fc7bd1dd022aa51ba6015b7961bc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "640cc4c0_faf748e1",
+        "filename": "res/layout/battery_header.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1351519
+      },
+      "writtenOn": "2022-06-30T07:07:43Z",
+      "side": 0,
+      "message": "I think it\u0027s intended but not sure it needs to be removed here?\ncan we confirm the layout or the UI is display as expected?",
+      "parentUuid": "af725e5e_64161f1c",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 64
+      },
+      "revId": "2b57ca5c9837fc7bd1dd022aa51ba6015b7961bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
