@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9357c55_d9df39b2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2022-06-30T05:49:49Z",
+      "side": 1,
+      "message": "It\u0027s related to battery ui, loop YK to take a look.",
+      "revId": "ad66ad55cab415ed6d81ea4ecca833ee66b73f06",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
