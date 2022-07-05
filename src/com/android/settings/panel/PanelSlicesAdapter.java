@@ -139,7 +139,7 @@ public class PanelSlicesAdapter
             final Slice slice = sliceLiveData.getValue();
 
             // Hides slice which reports with error hint or not contain any slice sub-item.
-            if (slice == null || !isValidSlice(slice)) {
+            if (slice == null) {
                 sliceView.setVisibility(View.GONE);
             }
 
