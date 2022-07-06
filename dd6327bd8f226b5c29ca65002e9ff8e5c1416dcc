@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "92c95f58_828f442d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-07-06T02:41:31Z",
+      "side": 1,
+      "message": "Looks to me a good idea through an additional click and update that field.",
+      "revId": "dd6327bd8f226b5c29ca65002e9ff8e5c1416dcc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2dde5b3d_99a95102",
