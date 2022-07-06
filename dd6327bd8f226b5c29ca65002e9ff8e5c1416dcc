@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2dde5b3d_99a95102",
+        "filename": "src/com/android/settings/deviceinfo/imei/ImeiInfoPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-07-06T02:39:52Z",
+      "side": 1,
+      "message": "Do we need to preserve the support of presenting MEID within this field ?",
+      "revId": "dd6327bd8f226b5c29ca65002e9ff8e5c1416dcc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
