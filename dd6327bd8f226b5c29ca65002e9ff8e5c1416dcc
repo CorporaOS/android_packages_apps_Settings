@@ -35,6 +35,23 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "19110ee9_de8f960d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1112368
+      },
+      "writtenOn": "2022-07-10T19:24:34Z",
+      "side": 1,
+      "message": "Can someone take a look at the presubnit failures?",
+      "revId": "dd6327bd8f226b5c29ca65002e9ff8e5c1416dcc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2dde5b3d_99a95102",
