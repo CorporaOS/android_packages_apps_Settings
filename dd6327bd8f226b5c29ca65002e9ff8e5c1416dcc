@@ -67,6 +67,24 @@
       "message": "Do we need to preserve the support of presenting MEID within this field ?",
       "revId": "dd6327bd8f226b5c29ca65002e9ff8e5c1416dcc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "661568ac_f711c65a",
+        "filename": "src/com/android/settings/deviceinfo/imei/ImeiInfoPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1112368
+      },
+      "writtenOn": "2022-07-10T19:25:27Z",
+      "side": 1,
+      "message": "I would think one should. If we didn\u0027t want to, it would be a follow up CL to remove it.",
+      "parentUuid": "2dde5b3d_99a95102",
+      "revId": "dd6327bd8f226b5c29ca65002e9ff8e5c1416dcc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
