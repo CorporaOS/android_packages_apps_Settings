@@ -46,6 +46,30 @@
       },
       "revId": "2b57ca5c9837fc7bd1dd022aa51ba6015b7961bc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "658aa9c4_fa9a5fab",
+        "filename": "res/layout/battery_header.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1535516
+      },
+      "writtenOn": "2022-07-12T00:36:32Z",
+      "side": 0,
+      "message": "Hi, if no action is being made towards figuring out what should really happen here, could we +2 this cl in the meantime? It\u0027s a no-op change.",
+      "parentUuid": "640cc4c0_faf748e1",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 64
+      },
+      "revId": "2b57ca5c9837fc7bd1dd022aa51ba6015b7961bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
