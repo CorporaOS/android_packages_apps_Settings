@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7994b08b_839f9c8e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1356080
+      },
+      "writtenOn": "2022-08-01T02:45:07Z",
+      "side": 1,
+      "message": "Hi Edgar \u0026 Sunny \u0026 TM,\n\nIn this CL, OEM partner uses FLAG_NOT_TOUCHABLE to fix the problem.\n\n1. It only works for back button but not back gesture. I want to\n   merge this CL and then I work for the solution for back gesture.\n\n2. Furthermore, I think we should be careful about the design to\n   disable touch event, I\u0027m still reading FLAG_NOT_TOUCHABLE related\n   issues.\n\nIt will be a great help if you see any problem or have any suggestion.\nThank you.",
+      "revId": "9a72877c7c3c798cd26f4668abc344de67423801",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
