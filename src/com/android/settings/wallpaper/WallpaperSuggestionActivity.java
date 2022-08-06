@@ -73,8 +73,7 @@ public class WallpaperSuggestionActivity extends StyleSuggestionActivityBase imp
                 private static final String SUPPORT_SEARCH_INDEX_KEY = "wallpaper_type";
 
                 @Override
-                public List<SearchIndexableRaw> getRawDataToIndex(Context context,
-                        boolean enabled) {
+                public List<SearchIndexableRaw> getRawDataToIndex(Context context) {
                     final List<SearchIndexableRaw> result = new ArrayList<>();
                     WallpaperPreferenceController controller =
                             new WallpaperPreferenceController(context, "unused key");

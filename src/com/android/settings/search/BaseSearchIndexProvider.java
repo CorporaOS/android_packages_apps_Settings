@@ -62,7 +62,7 @@ public class BaseSearchIndexProvider implements Indexable.SearchIndexProvider {
     }
 
     @Override
-    public List<SearchIndexableResource> getXmlResourcesToIndex(Context context, boolean enabled) {
+    public List<SearchIndexableResource> getXmlResourcesToIndex(Context context) {
         if (mXmlRes != 0) {
             final SearchIndexableResource sir = new SearchIndexableResource(context);
             sir.xmlResId = mXmlRes;
@@ -72,13 +72,13 @@ public class BaseSearchIndexProvider implements Indexable.SearchIndexProvider {
     }
 
     @Override
-    public List<SearchIndexableRaw> getRawDataToIndex(Context context, boolean enabled) {
+    public List<SearchIndexableRaw> getRawDataToIndex(Context context) {
         return null;
     }
 
     @Override
     @CallSuper
-    public List<SearchIndexableRaw> getDynamicRawDataToIndex(Context context, boolean enabled) {
+    public List<SearchIndexableRaw> getDynamicRawDataToIndex(Context context) {
         final List<SearchIndexableRaw> dynamicRaws = new ArrayList<>();
         if (!isPageSearchEnabled(context)) {
             // Entire page should be suppressed, do not add dynamic raw data.
@@ -139,7 +139,7 @@ public class BaseSearchIndexProvider implements Indexable.SearchIndexProvider {
             Log.w(TAG, "Error initial controller");
         }
 
-        final List<SearchIndexableResource> res = getXmlResourcesToIndex(context, true);
+        final List<SearchIndexableResource> res = getXmlResourcesToIndex(context);
         if (res == null || res.isEmpty()) {
             return controllersFromCode;
         }
@@ -181,7 +181,7 @@ public class BaseSearchIndexProvider implements Indexable.SearchIndexProvider {
      */
     private List<String> getNonIndexableKeysFromXml(Context context, boolean suppressAllPage) {
         final List<SearchIndexableResource> resources = getXmlResourcesToIndex(
-                context, true /* not used*/);
+                context);
         if (resources == null || resources.isEmpty()) {
             return new ArrayList<>();
         }

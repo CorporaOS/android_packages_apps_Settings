@@ -69,8 +69,7 @@ public class ZenModeMessagesSettings extends ZenModeSettingsBase {
     public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider() {
         @Override
-        public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
-                boolean enabled) {
+        public List<SearchIndexableResource> getXmlResourcesToIndex(Context context) {
             final ArrayList<SearchIndexableResource> result = new ArrayList<>();
 
             final SearchIndexableResource sir = new SearchIndexableResource(context);

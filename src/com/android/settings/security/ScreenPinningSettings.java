@@ -248,8 +248,7 @@ public class ScreenPinningSettings extends SettingsPreferenceFragment
             new BaseSearchIndexProvider() {
 
                 @Override
-                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
-                        boolean enabled) {
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context) {
                     final SearchIndexableResource sir = new SearchIndexableResource(context);
                     sir.xmlResId = R.xml.screen_pinning_settings;
                     return Arrays.asList(sir);

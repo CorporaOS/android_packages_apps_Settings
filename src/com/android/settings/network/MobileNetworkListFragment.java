@@ -77,8 +77,7 @@ public class MobileNetworkListFragment extends DashboardFragment {
             new BaseSearchIndexProvider() {
 
                 @Override
-                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
-                        boolean enabled) {
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context) {
                     final ArrayList<SearchIndexableResource> result = new ArrayList<>();
                     final SearchIndexableResource sir = new SearchIndexableResource(context);
                     sir.xmlResId = R.xml.network_provider_sims_list;

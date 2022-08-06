@@ -78,8 +78,7 @@ public class UserDictionaryList extends DashboardFragment {
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider() {
                 @Override
-                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
-                        boolean enabled) {
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context) {
                     final ArrayList<SearchIndexableResource> result = new ArrayList<>();
 
                     final SearchIndexableResource sir = new SearchIndexableResource(context);

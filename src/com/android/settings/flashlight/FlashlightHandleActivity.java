@@ -57,8 +57,7 @@ public class FlashlightHandleActivity extends Activity implements Indexable {
             new BaseSearchIndexProvider() {
 
                 @Override
-                public List<SearchIndexableRaw> getRawDataToIndex(Context context,
-                        boolean enabled) {
+                public List<SearchIndexableRaw> getRawDataToIndex(Context context) {
 
                     final List<SearchIndexableRaw> result = new ArrayList<>();
 

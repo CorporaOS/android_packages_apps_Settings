@@ -120,7 +120,7 @@ public class XmlControllerAttributeTest {
             }
 
             List<SearchIndexableResource> resources =
-                provider.getXmlResourcesToIndex(mContext, true);
+                provider.getXmlResourcesToIndex(mContext);
 
             if (resources == null) {
                 continue;

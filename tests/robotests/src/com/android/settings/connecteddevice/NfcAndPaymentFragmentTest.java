@@ -65,7 +65,7 @@ public class NfcAndPaymentFragmentTest {
     public void searchIndexProvider_shouldIndexResource() {
         final List<SearchIndexableResource> indexRes =
                 NfcAndPaymentFragment.SEARCH_INDEX_DATA_PROVIDER
-                        .getXmlResourcesToIndex(mContext, true /* enabled */);
+                        .getXmlResourcesToIndex(mContext);
 
         assertThat(indexRes).isNotNull();
         assertThat(indexRes.get(0).xmlResId).isEqualTo(mFragment.getPreferenceScreenResId());

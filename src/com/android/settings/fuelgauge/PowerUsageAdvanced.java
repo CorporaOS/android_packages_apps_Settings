@@ -220,8 +220,7 @@ public class PowerUsageAdvanced extends PowerUsageBase {
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider() {
                 @Override
-                public List<SearchIndexableResource> getXmlResourcesToIndex(
-                        Context context, boolean enabled) {
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context) {
                     final SearchIndexableResource sir = new SearchIndexableResource(context);
                     sir.xmlResId = R.xml.power_usage_advanced;
                     return Arrays.asList(sir);

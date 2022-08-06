@@ -62,7 +62,7 @@ public class SwipeToNotificationSettingsTest {
     public void testSearchIndexProvider_shouldIndexResource() {
         final List<SearchIndexableResource> indexRes =
                 SwipeToNotificationSettings.SEARCH_INDEX_DATA_PROVIDER
-                        .getXmlResourcesToIndex(mContext, true /* enabled */);
+                        .getXmlResourcesToIndex(mContext);
 
         assertThat(indexRes).isNotNull();
         assertThat(indexRes.get(0).xmlResId).isEqualTo(mFragment.getPreferenceScreenResId());

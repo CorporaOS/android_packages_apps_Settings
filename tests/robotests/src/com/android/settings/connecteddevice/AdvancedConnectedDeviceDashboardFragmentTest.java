@@ -68,7 +68,7 @@ public class AdvancedConnectedDeviceDashboardFragmentTest {
     public void testSearchIndexProvider_shouldIndexResource() {
         final List<SearchIndexableResource> indexRes =
                 AdvancedConnectedDeviceDashboardFragment.SEARCH_INDEX_DATA_PROVIDER
-                        .getXmlResourcesToIndex(RuntimeEnvironment.application, true /* enabled */);
+                        .getXmlResourcesToIndex(RuntimeEnvironment.application);
 
         assertThat(indexRes).isNotNull();
         assertThat(indexRes.get(0).xmlResId).isEqualTo(mFragment.getPreferenceScreenResId());

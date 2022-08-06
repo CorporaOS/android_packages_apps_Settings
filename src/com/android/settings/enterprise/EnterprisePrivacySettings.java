@@ -88,8 +88,7 @@ public class EnterprisePrivacySettings extends DashboardFragment {
                 }
 
                 @Override
-                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
-                        boolean enabled) {
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context) {
                     mPrivacySettingsPreference =
                             PrivacySettingsPreferenceFactory.createPrivacySettingsPreference(
                                     context);

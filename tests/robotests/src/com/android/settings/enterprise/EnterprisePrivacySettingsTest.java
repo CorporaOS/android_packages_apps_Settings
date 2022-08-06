@@ -136,7 +136,7 @@ public class EnterprisePrivacySettingsTest extends BasePrivacySettingsPreference
     public void getXmlResourcesToIndex_returnsEnterpriseXmlResources() {
         final List<SearchIndexableResource> searchIndexableResources =
                 EnterprisePrivacySettings.SEARCH_INDEX_DATA_PROVIDER
-                        .getXmlResourcesToIndex(mContext, true);
+                        .getXmlResourcesToIndex(mContext);
 
         verifyEnterpriseSearchIndexableResources(searchIndexableResources);
     }

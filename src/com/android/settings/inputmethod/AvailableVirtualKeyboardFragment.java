@@ -124,8 +124,7 @@ public final class AvailableVirtualKeyboardFragment extends SettingsPreferenceFr
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider() {
                 @Override
-                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
-                        boolean enabled) {
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context) {
                     List<SearchIndexableResource> res = new ArrayList<>();
                     SearchIndexableResource index = new SearchIndexableResource(context);
                     index.xmlResId = R.xml.available_virtual_keyboard;
