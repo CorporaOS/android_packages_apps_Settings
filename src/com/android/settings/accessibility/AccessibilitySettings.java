@@ -498,8 +498,7 @@ public class AccessibilitySettings extends DashboardFragment {
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider(R.xml.accessibility_settings) {
                 @Override
-                public List<SearchIndexableRaw> getRawDataToIndex(Context context,
-                        boolean enabled) {
+                public List<SearchIndexableRaw> getRawDataToIndex(Context context) {
                     return FeatureFactory.getFactory(context)
                             .getAccessibilitySearchFeatureProvider().getSearchIndexableRawData(
                                     context);

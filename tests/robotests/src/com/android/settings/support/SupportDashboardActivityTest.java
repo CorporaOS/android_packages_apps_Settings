@@ -48,7 +48,7 @@ public class SupportDashboardActivityTest {
     public void shouldIndexSearchActivityForSearch() {
         final List<SearchIndexableRaw> indexables =
                 SupportDashboardActivity.SEARCH_INDEX_DATA_PROVIDER
-                        .getRawDataToIndex(mContext, true /* enabled */);
+                        .getRawDataToIndex(mContext);
 
         assertThat(indexables).hasSize(1);
 

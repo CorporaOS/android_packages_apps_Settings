@@ -330,8 +330,7 @@ public class LocaleListEditor extends RestrictedSettingsFragment {
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider() {
                 @Override
-                public List<SearchIndexableRaw> getRawDataToIndex(Context context,
-                        boolean enabled) {
+                public List<SearchIndexableRaw> getRawDataToIndex(Context context) {
                     final Resources res = context.getResources();
                     final List<SearchIndexableRaw> indexRaws = new ArrayList<>();
                     final SearchIndexableRaw raw = new SearchIndexableRaw(context);

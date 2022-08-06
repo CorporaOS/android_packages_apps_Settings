@@ -102,7 +102,7 @@ public class ZenModeSettingsTest {
     @Test
     public void searchProvider_shouldIndexDefaultXml() {
         final List<SearchIndexableResource> sir = ZenModeSettings.SEARCH_INDEX_DATA_PROVIDER
-                .getXmlResourcesToIndex(mContext, true /* enabled */);
+                .getXmlResourcesToIndex(mContext);
 
         assertThat(sir).hasSize(1);
         assertThat(sir.get(0).xmlResId).isEqualTo(R.xml.zen_mode_settings);

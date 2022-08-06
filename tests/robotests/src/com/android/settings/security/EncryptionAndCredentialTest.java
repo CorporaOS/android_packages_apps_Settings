@@ -72,7 +72,7 @@ public class EncryptionAndCredentialTest {
         when(mUserManager.isAdminUser()).thenReturn(false);
 
         final List<SearchIndexableResource> index =
-                SEARCH_INDEX_DATA_PROVIDER.getXmlResourcesToIndex(mContext, true /* enabled */);
+                SEARCH_INDEX_DATA_PROVIDER.getXmlResourcesToIndex(mContext);
         final List<String> expectedKeys = new ArrayList<>();
         for (SearchIndexableResource res : index) {
             expectedKeys.addAll(((BaseSearchIndexProvider) SEARCH_INDEX_DATA_PROVIDER)

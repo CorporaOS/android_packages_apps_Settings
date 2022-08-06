@@ -177,7 +177,7 @@ public class SearchIndexProviderCodeInspector extends CodeInspector {
             final Indexable.SearchIndexProvider provider =
                     DatabaseIndexingUtils.getSearchIndexProvider(clazz);
             final List<SearchIndexableResource> resources = provider.getXmlResourcesToIndex(
-                    RuntimeEnvironment.application, true /* enabled */);
+                    RuntimeEnvironment.application);
             if (resources == null) {
                 // No resource, that's fine.
                 return true;

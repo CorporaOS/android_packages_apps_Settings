@@ -119,8 +119,7 @@ public class AccountDashboardFragment extends DashboardFragment {
                 }
 
                 @Override
-                public List<SearchIndexableRaw> getDynamicRawDataToIndex(Context context,
-                        boolean enabled) {
+                public List<SearchIndexableRaw> getDynamicRawDataToIndex(Context context) {
                     final List<SearchIndexableRaw> indexRaws = new ArrayList<>();
                     final UserManager userManager = (UserManager) context.getSystemService(
                             Context.USER_SERVICE);

@@ -127,7 +127,7 @@ public class UserBackupSettingsActivityTest {
         ShadowBackupSettingsHelper.isBackupServiceActive = true;
 
         assertThat(UserBackupSettingsActivity.SEARCH_INDEX_DATA_PROVIDER.getRawDataToIndex(
-                mApplication, true)).isNotEmpty();
+                mApplication)).isNotEmpty();
         assertThat(UserBackupSettingsActivity.SEARCH_INDEX_DATA_PROVIDER.getNonIndexableKeys(
                 mApplication)).isEmpty();
     }
@@ -137,7 +137,7 @@ public class UserBackupSettingsActivityTest {
         ShadowBackupSettingsHelper.isBackupServiceActive = false;
 
         assertThat(UserBackupSettingsActivity.SEARCH_INDEX_DATA_PROVIDER.getRawDataToIndex(
-            mApplication, true)).isNotEmpty();
+            mApplication)).isNotEmpty();
         assertThat(UserBackupSettingsActivity.SEARCH_INDEX_DATA_PROVIDER.getNonIndexableKeys(
             mApplication)).contains("Backup");
     }

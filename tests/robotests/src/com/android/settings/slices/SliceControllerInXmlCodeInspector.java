@@ -157,8 +157,7 @@ public class SliceControllerInXmlCodeInspector extends CodeInspector {
                 continue;
             }
 
-            List<SearchIndexableResource> resources = provider.getXmlResourcesToIndex(mContext,
-                    true);
+            List<SearchIndexableResource> resources = provider.getXmlResourcesToIndex(mContext);
 
             if (resources == null) {
                 continue;

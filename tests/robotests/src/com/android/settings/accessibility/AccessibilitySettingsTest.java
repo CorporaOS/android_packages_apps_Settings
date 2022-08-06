@@ -136,7 +136,7 @@ public class AccessibilitySettingsTest {
     @Test
     public void getRawDataToIndex_isNull() {
         final List<SearchIndexableRaw> indexableRawList =
-                AccessibilitySettings.SEARCH_INDEX_DATA_PROVIDER.getRawDataToIndex(mContext, true);
+                AccessibilitySettings.SEARCH_INDEX_DATA_PROVIDER.getRawDataToIndex(mContext);
 
         assertThat(indexableRawList).isNull();
     }

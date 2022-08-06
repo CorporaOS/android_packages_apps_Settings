@@ -345,8 +345,7 @@ public class ScreenTimeoutSettings extends RadioButtonPickerFragment implements
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider(R.xml.screen_timeout_settings) {
-                public List<SearchIndexableRaw> getRawDataToIndex(Context context,
-                        boolean enabled) {
+                public List<SearchIndexableRaw> getRawDataToIndex(Context context) {
                     if (!isScreenAttentionAvailable(context)) {
                         return null;
                     }

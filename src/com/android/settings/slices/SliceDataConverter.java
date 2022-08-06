@@ -130,7 +130,7 @@ class SliceDataConverter {
         final List<SliceData> sliceData = new ArrayList<>();
 
         final List<SearchIndexableResource> resList =
-                provider.getXmlResourcesToIndex(mContext, true /* enabled */);
+                provider.getXmlResourcesToIndex(mContext);
 
         if (resList == null) {
             return sliceData;

@@ -101,8 +101,7 @@ public class UserBackupSettingsActivity extends FragmentActivity implements Inde
                 private static final String BACKUP_SEARCH_INDEX_KEY = "Backup";
 
                 @Override
-                public List<SearchIndexableRaw> getRawDataToIndex(Context context,
-                        boolean enabled) {
+                public List<SearchIndexableRaw> getRawDataToIndex(Context context) {
 
                     final List<SearchIndexableRaw> result = new ArrayList<>();
 

@@ -133,8 +133,7 @@ public class ScreenTimeoutSettingsTest {
     @Test
     public void searchIndexProvider_shouldIndexResource() {
         final List<SearchIndexableResource> indexRes =
-                ScreenTimeoutSettings.SEARCH_INDEX_DATA_PROVIDER.getXmlResourcesToIndex(
-                        mContext, true /* enabled */);
+                ScreenTimeoutSettings.SEARCH_INDEX_DATA_PROVIDER.getXmlResourcesToIndex(mContext);
 
         assertThat(indexRes).isNotNull();
         assertThat(indexRes.get(0).xmlResId).isEqualTo(mSettings.getPreferenceScreenResId());

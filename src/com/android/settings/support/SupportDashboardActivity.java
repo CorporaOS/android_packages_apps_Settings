@@ -58,8 +58,7 @@ public class SupportDashboardActivity extends Activity implements Indexable {
                 private static final String SUPPORT_SEARCH_INDEX_KEY = "support_dashboard_activity";
 
                 @Override
-                public List<SearchIndexableRaw> getRawDataToIndex(Context context,
-                        boolean enabled) {
+                public List<SearchIndexableRaw> getRawDataToIndex(Context context) {
 
                     final List<SearchIndexableRaw> result = new ArrayList<>();
 

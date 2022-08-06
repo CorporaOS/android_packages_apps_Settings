@@ -98,7 +98,7 @@ public class DevelopmentSettingsDashboardFragmentTest {
     public void searchIndex_shouldIndexFromPrefXml() {
         final List<SearchIndexableResource> index =
                 DevelopmentSettingsDashboardFragment.SEARCH_INDEX_DATA_PROVIDER
-                        .getXmlResourcesToIndex(RuntimeEnvironment.application, true);
+                        .getXmlResourcesToIndex(RuntimeEnvironment.application);
 
         assertThat(index.size()).isEqualTo(1);
         assertThat(index.get(0).xmlResId).isEqualTo(R.xml.development_settings);

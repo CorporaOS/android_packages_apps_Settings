@@ -59,7 +59,7 @@ public class CredentialManagementAppFragmentTest {
     public void searchIndexProvider_shouldIndexResource() {
         final List<SearchIndexableResource> indexRes =
                 CredentialManagementAppFragment.SEARCH_INDEX_DATA_PROVIDER
-                        .getXmlResourcesToIndex(mContext, true /* enabled */);
+                        .getXmlResourcesToIndex(mContext);
 
         assertThat(indexRes).isNotNull();
         assertThat(indexRes.get(0).xmlResId).isEqualTo(R.xml.credential_management_app_fragment);

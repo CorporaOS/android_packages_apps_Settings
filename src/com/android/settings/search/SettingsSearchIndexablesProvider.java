@@ -329,7 +329,7 @@ public class SettingsSearchIndexablesProvider extends SearchIndexablesProvider {
         for (SearchIndexableData bundle : bundles) {
             Indexable.SearchIndexProvider provider = bundle.getSearchIndexProvider();
             final List<SearchIndexableResource> resList =
-                    provider.getXmlResourcesToIndex(context, true);
+                    provider.getXmlResourcesToIndex(context);
 
             if (resList == null) {
                 continue;
@@ -354,8 +354,7 @@ public class SettingsSearchIndexablesProvider extends SearchIndexablesProvider {
 
         for (SearchIndexableData bundle : bundles) {
             Indexable.SearchIndexProvider provider = bundle.getSearchIndexProvider();
-            final List<SearchIndexableRaw> providerRaws = provider.getRawDataToIndex(context,
-                    true /* enabled */);
+            final List<SearchIndexableRaw> providerRaws = provider.getRawDataToIndex(context);
 
             if (providerRaws == null) {
                 continue;
@@ -376,7 +375,7 @@ public class SettingsSearchIndexablesProvider extends SearchIndexablesProvider {
             SearchIndexableData bundle) {
         final Indexable.SearchIndexProvider provider = bundle.getSearchIndexProvider();
         final List<SearchIndexableRaw> providerRaws =
-                provider.getDynamicRawDataToIndex(context, true /* enabled */);
+                provider.getDynamicRawDataToIndex(context);
         if (providerRaws == null) {
             return new ArrayList<>();
         }

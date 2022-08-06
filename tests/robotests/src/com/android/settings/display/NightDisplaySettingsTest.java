@@ -37,7 +37,7 @@ public class NightDisplaySettingsTest {
     public void testNightDisplayIndexing_containsResource() {
         List<SearchIndexableResource> resources =
                 NightDisplaySettings.SEARCH_INDEX_DATA_PROVIDER
-                    .getXmlResourcesToIndex(RuntimeEnvironment.application, true /* enabled */);
+                    .getXmlResourcesToIndex(RuntimeEnvironment.application);
 
         List<Integer> indexedXml = new ArrayList<>();
         for (SearchIndexableResource resource : resources) {

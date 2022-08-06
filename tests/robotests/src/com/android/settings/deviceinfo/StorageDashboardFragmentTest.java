@@ -155,7 +155,7 @@ public class StorageDashboardFragmentTest {
     public void testSearchIndexProvider_shouldIndexResource() {
         final List<SearchIndexableResource> indexRes =
                 StorageDashboardFragment.SEARCH_INDEX_DATA_PROVIDER
-                    .getXmlResourcesToIndex(RuntimeEnvironment.application, true /* enabled */);
+                    .getXmlResourcesToIndex(RuntimeEnvironment.application);
 
         assertThat(indexRes).isNotNull();
         assertThat(indexRes.get(0).xmlResId).isEqualTo(mFragment.getPreferenceScreenResId());

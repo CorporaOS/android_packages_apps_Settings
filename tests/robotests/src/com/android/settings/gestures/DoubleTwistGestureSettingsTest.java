@@ -42,7 +42,7 @@ public class DoubleTwistGestureSettingsTest {
     public void testSearchIndexProvider_shouldIndexResource() {
         final List<SearchIndexableResource> indexRes =
             DoubleTwistGestureSettings.SEARCH_INDEX_DATA_PROVIDER.getXmlResourcesToIndex(
-                RuntimeEnvironment.application, true /* enabled */);
+                RuntimeEnvironment.application);
 
         assertThat(indexRes).isNotNull();
         assertThat(indexRes.get(0).xmlResId).isEqualTo(mSettings.getPreferenceScreenResId());

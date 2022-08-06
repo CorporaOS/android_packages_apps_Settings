@@ -101,8 +101,7 @@ public class BaseSearchIndexProviderTest {
 
         final BaseSearchIndexProvider provider = new BaseSearchIndexProvider() {
             @Override
-            public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
-                    boolean enabled) {
+            public List<SearchIndexableResource> getXmlResourcesToIndex(Context context) {
                 final SearchIndexableResource sir = new SearchIndexableResource(context);
                 sir.xmlResId = R.xml.location_settings;
                 return Collections.singletonList(sir);
@@ -159,8 +158,7 @@ public class BaseSearchIndexProviderTest {
     public void getNonIndexableKeys_pageSearchIsDisabled_shouldSuppressEverything() {
         final BaseSearchIndexProvider provider = new BaseSearchIndexProvider() {
             @Override
-            public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
-                boolean enabled) {
+            public List<SearchIndexableResource> getXmlResourcesToIndex(Context context) {
                 final SearchIndexableResource sir = new SearchIndexableResource(context);
                 sir.xmlResId = R.xml.data_usage;
                 return Collections.singletonList(sir);
@@ -183,8 +181,7 @@ public class BaseSearchIndexProviderTest {
     public void getNonIndexableKeys_hasSearchableAttributeInXml_shouldSuppressUnsearchable() {
         final BaseSearchIndexProvider provider = new BaseSearchIndexProvider() {
             @Override
-            public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
-                    boolean enabled) {
+            public List<SearchIndexableResource> getXmlResourcesToIndex(Context context) {
                 final SearchIndexableResource sir = new SearchIndexableResource(context);
                 sir.xmlResId = R.xml.display_settings;
                 return Collections.singletonList(sir);
@@ -200,7 +197,7 @@ public class BaseSearchIndexProviderTest {
 
     @Test
     public void getDynamicRawDataToIndex_noPreferenceController_shouldReturnEmptyList() {
-        assertThat(mIndexProvider.getDynamicRawDataToIndex(mContext, true)).isEmpty();
+        assertThat(mIndexProvider.getDynamicRawDataToIndex(mContext)).isEmpty();
     }
 
     @Test
@@ -210,7 +207,7 @@ public class BaseSearchIndexProviderTest {
         doReturn(controllers).when(mIndexProvider).createPreferenceControllers(mContext);
         doReturn(false).when(mIndexProvider).isPageSearchEnabled(mContext);
 
-        assertThat(mIndexProvider.getDynamicRawDataToIndex(mContext, true)).isEmpty();
+        assertThat(mIndexProvider.getDynamicRawDataToIndex(mContext)).isEmpty();
     }
 
     @Test
@@ -219,6 +216,6 @@ public class BaseSearchIndexProviderTest {
         controllers.add(new AvailablePreferenceController(mContext));
         doReturn(controllers).when(mIndexProvider).createPreferenceControllers(mContext);
 
-        assertThat(mIndexProvider.getDynamicRawDataToIndex(mContext, true)).isNotEmpty();
+        assertThat(mIndexProvider.getDynamicRawDataToIndex(mContext)).isNotEmpty();
     }
 }

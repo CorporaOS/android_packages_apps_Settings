@@ -77,7 +77,7 @@ public class AccountDashboardFragmentTest {
     public void searchIndexProvider_shouldIndexResource() {
         final List<SearchIndexableResource> indexRes =
                 AccountDashboardFragment.SEARCH_INDEX_DATA_PROVIDER
-                        .getXmlResourcesToIndex(RuntimeEnvironment.application, true /* enabled */);
+                        .getXmlResourcesToIndex(RuntimeEnvironment.application);
 
         assertThat(indexRes).isNotNull();
         assertThat(indexRes.get(0).xmlResId).isEqualTo(mFragment.getPreferenceScreenResId());
@@ -91,7 +91,7 @@ public class AccountDashboardFragmentTest {
 
         final List<SearchIndexableRaw> indexRaws =
                 AccountDashboardFragment.SEARCH_INDEX_DATA_PROVIDER
-                        .getDynamicRawDataToIndex(mContext, true /* enabled */);
+                        .getDynamicRawDataToIndex(mContext);
 
         assertThat(indexRaws).isEmpty();
     }
@@ -110,7 +110,7 @@ public class AccountDashboardFragmentTest {
 
         final List<SearchIndexableRaw> indexRaws =
                 AccountDashboardFragment.SEARCH_INDEX_DATA_PROVIDER
-                        .getDynamicRawDataToIndex(mContext, true /* enabled */);
+                        .getDynamicRawDataToIndex(mContext);
 
         assertThat(indexRaws).isNotEmpty();
     }

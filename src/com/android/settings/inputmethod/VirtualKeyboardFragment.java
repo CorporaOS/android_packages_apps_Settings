@@ -53,7 +53,7 @@ public final class VirtualKeyboardFragment extends DashboardFragment {
             new BaseSearchIndexProvider() {
                 @Override
                 public List<SearchIndexableResource> getXmlResourcesToIndex(
-                        Context context, boolean enabled) {
+                        Context context) {
                     final SearchIndexableResource sir = new SearchIndexableResource(context);
                     sir.xmlResId = R.xml.virtual_keyboard_settings;
                     return Arrays.asList(sir);
