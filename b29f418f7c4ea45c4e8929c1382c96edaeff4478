@@ -16,6 +16,24 @@
       "message": "Hello Edgar Wang, please help review the following change.",
       "revId": "b29f418f7c4ea45c4e8929c1382c96edaeff4478",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8441981c_4e7d520a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2022-08-11T03:05:57Z",
+      "side": 1,
+      "message": "Hi 倞诚:\n\nYou did not follow up a regular [Contribute Guide](https://source.android.com/setup/contribute/submit-patches#make-your-change), so I guess googlers may not accept your commit.\n\nIn addition to that, I tried to follow up your commit message and did not reproduce this bug, the proper way is to go [Android Issue Tracker](https://source.android.com/setup/contribute/report-bugs) and [create an issue](https://source.android.com/setup/contribute/report-bugs), and attach the issue id you may get to this changes\u0027s commit message.\n\nEvery Google\u0027s commit has its own rules, and I believe they\u0027ll glad to review your commit if you can follow up every procedure and re-inspect your commit.",
+      "parentUuid": "5307e3df_38981184",
+      "revId": "b29f418f7c4ea45c4e8929c1382c96edaeff4478",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
