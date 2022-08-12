@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f320c51e_950e0baa",
+        "filename": "src/com/android/settings/network/apn/ApnEditor.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 413,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-08-12T07:50:12Z",
+      "side": 1,
+      "message": "Maybe we can use another way to implement here. see below comment.",
+      "range": {
+        "startLine": 410,
+        "startChar": 0,
+        "endLine": 413,
+        "endChar": 0
+      },
+      "revId": "42d9642550ca3827101b27069bb9859f23a84417",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d880c5e5_ba882d15",
+        "filename": "src/com/android/settings/network/apn/ApnEditor.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-08-12T07:50:12Z",
+      "side": 1,
+      "message": "Use this method may reduce code lines, and shall be easier.\n\nfinal String apnTypesList1 \u003d Arrays.toString(apnTypesArray1).toLowerCase();\n\nWhat do you think about this idea?\n\nNote: if the action of comment was done, you can tap the button of DONE to let me understand this comment action is finished.",
+      "range": {
+        "startLine": 418,
+        "startChar": 0,
+        "endLine": 418,
+        "endChar": 65
+      },
+      "revId": "42d9642550ca3827101b27069bb9859f23a84417",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
