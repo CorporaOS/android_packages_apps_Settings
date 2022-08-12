@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1bea4eb1_96ec9d33",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2022-08-12T02:44:01Z",
+      "side": 1,
+      "message": "Bob, can you add a bug id in the commit message so that we can refer it in the future?",
+      "revId": "11411e187bd52b0a2d01e5084207d401ae32f471",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
