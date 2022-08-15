@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0330627_fccb1e59",
+        "filename": "src/com/android/settings/bluetooth/BluetoothDetailsProfilesController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 454,
+      "author": {
+        "id": 1246512
+      },
+      "writtenOn": "2022-08-15T10:41:45Z",
+      "side": 0,
+      "message": "Previously there was a call to super.onResume() here.\nonResume() in super class calls refresh().\n\nCall to super.onResume() was removed in:\nhttps://android-review.googlesource.com/c/platform/packages/apps/Settings/+/2028084",
+      "revId": "24f45fbd637816438bc90fe0d2c0ca6a25e12f54",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
