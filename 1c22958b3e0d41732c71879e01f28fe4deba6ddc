@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "01e47644_c4d28851",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2022-08-15T10:34:40Z",
+      "side": 1,
+      "message": "Bonian :\n\nWould you mind share some info about the failure of some tests? I have no access to there info. Maybe I should not change `UnrestrictedDataAccessPreference`\u0027s constructor?",
+      "revId": "1c22958b3e0d41732c71879e01f28fe4deba6ddc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
