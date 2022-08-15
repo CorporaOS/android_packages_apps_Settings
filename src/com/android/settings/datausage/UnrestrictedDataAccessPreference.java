@@ -33,7 +33,6 @@ import com.android.settingslib.widget.AppSwitchPreference;
 public class UnrestrictedDataAccessPreference extends AppSwitchPreference implements
         DataSaverBackend.Listener {
 
-    private final ApplicationsState mApplicationsState;
     private final AppEntry mEntry;
     private final AppStateDataUsageBridge.DataUsageState mDataUsageState;
     private final DataSaverBackend mDataSaverBackend;
@@ -41,24 +40,19 @@ public class UnrestrictedDataAccessPreference extends AppSwitchPreference implem
     private final RestrictedPreferenceHelper mHelper;
 
     public UnrestrictedDataAccessPreference(final Context context, AppEntry entry,
-            ApplicationsState applicationsState, DataSaverBackend dataSaverBackend,
-            DashboardFragment parentFragment) {
+            DataSaverBackend dataSaverBackend, DashboardFragment parentFragment) {
         super(context);
         setWidgetLayoutResource(R.layout.restricted_switch_widget);
         mHelper = new RestrictedPreferenceHelper(context, this, null);
         mEntry = entry;
         mDataUsageState = (AppStateDataUsageBridge.DataUsageState) mEntry.extraInfo;
         mEntry.ensureLabel(context);
-        mApplicationsState = applicationsState;
         mDataSaverBackend = dataSaverBackend;
         mParentFragment = parentFragment;
         setDisabledByAdmin(checkIfMeteredDataRestricted(context, entry.info.packageName,
                 UserHandle.getUserId(entry.info.uid)));
         updateState();
         setKey(generateKey(mEntry));
-        if (mEntry.icon != null) {
-            setIcon(mEntry.icon);
-        }
     }
 
     static String generateKey(final AppEntry entry) {
@@ -101,18 +95,6 @@ public class UnrestrictedDataAccessPreference extends AppSwitchPreference implem
 
     @Override
     public void onBindViewHolder(PreferenceViewHolder holder) {
-        if (mEntry.icon == null) {
-            holder.itemView.post(new Runnable() {
-                @Override
-                public void run() {
-                    // Ensure we have an icon before binding.
-                    mApplicationsState.ensureIcon(mEntry);
-                    // This might trigger us to bind again, but it gives an easy way to only
-                    // load the icon once its needed, so its probably worth it.
-                    setIcon(mEntry.icon);
-                }
-            });
-        }
         final boolean disabledByAdmin = isDisabledByAdmin();
         final View widgetFrame = holder.findViewById(android.R.id.widget_frame);
         if (disabledByAdmin) {
@@ -170,6 +152,7 @@ public class UnrestrictedDataAccessPreference extends AppSwitchPreference implem
     // Sets UI state based on allowlist/denylist status.
     public void updateState() {
         setTitle(mEntry.label);
+        setIcon(mEntry.icon);
         if (mDataUsageState != null) {
             setChecked(mDataUsageState.isDataSaverAllowlisted);
             if (isDisabledByAdmin()) {
@@ -180,6 +163,5 @@ public class UnrestrictedDataAccessPreference extends AppSwitchPreference implem
                 setSummary("");
             }
         }
-        notifyChanged();
     }
 }

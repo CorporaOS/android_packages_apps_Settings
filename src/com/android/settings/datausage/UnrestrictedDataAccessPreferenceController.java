@@ -139,8 +139,9 @@ public class UnrestrictedDataAccessPreferenceController extends BasePreferenceCo
             UnrestrictedDataAccessPreference preference =
                     (UnrestrictedDataAccessPreference) mScreen.findPreference(prefkey);
             if (preference == null) {
+                mApplicationsState.ensureIcon(entry);
                 preference = new UnrestrictedDataAccessPreference(mScreen.getContext(), entry,
-                        mApplicationsState, mDataSaverBackend, mParentFragment);
+                        mDataSaverBackend, mParentFragment);
                 preference.setOnPreferenceChangeListener(this);
                 mScreen.addPreference(preference);
             } else {
