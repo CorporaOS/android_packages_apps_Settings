@@ -33,6 +33,24 @@
       "message": "can someone please tell us what treehugger tests are failed?",
       "revId": "bf5b47ef897ac660d6911e668d43ff66ea4dcb6e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3aafe53e_afb8b3fd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-08-19T01:05:28Z",
+      "side": 1,
+      "message": "Many thanks for the ping.\n\nSince this submit changed the behaviour of getSummary() and updateState(), which means PhoneNumberPreferenceControllerTest.java need to align with it.",
+      "parentUuid": "4bae2cf3_ed36da2e",
+      "revId": "bf5b47ef897ac660d6911e668d43ff66ea4dcb6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
