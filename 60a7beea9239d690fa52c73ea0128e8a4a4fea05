@@ -16,6 +16,23 @@
       "message": "defer display settings owner",
       "revId": "60a7beea9239d690fa52c73ea0128e8a4a4fea05",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7693c068_7d98e73a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2022-08-22T02:57:31Z",
+      "side": 1,
+      "message": "Hi @christyfranks@google.com,\nI am not the owner of night light. But after my local test and the \"Use Night Light\" Main switch will be turnned on by this patch in this reproduce steps of b/243321462. Could you help to review all of behavior and action are correct or not?",
+      "revId": "60a7beea9239d690fa52c73ea0128e8a4a4fea05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
