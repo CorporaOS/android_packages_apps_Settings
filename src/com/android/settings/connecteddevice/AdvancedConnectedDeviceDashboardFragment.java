@@ -70,7 +70,11 @@ public class AdvancedConnectedDeviceDashboardFragment extends DashboardFragment 
         super.onAttach(context);
         UwbPreferenceController uwbPreferenceController = use(UwbPreferenceController.class);
         if (uwbPreferenceController != null && getSettingsLifecycle() != null) {
-            getSettingsLifecycle().addObserver(uwbPreferenceController);
+            //We only need the observer for listening to the broadcast in the background for
+            // refreshing UI if the device supports UWB. (see b/244871579)
+            if (uwbPreferenceController.isUwbSupportedOnDevice()) {
+                getSettingsLifecycle().addObserver(uwbPreferenceController);
+            }
         }
     }
 
