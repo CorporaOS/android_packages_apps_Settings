@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ebf0035e_a0b17c99",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1393882
+      },
+      "writtenOn": "2022-09-06T07:32:42Z",
+      "side": 1,
+      "message": "Awaiting the review of the UWB owner.",
+      "revId": "0b9a6304aa4cb13566c830df8238f03aac3d1779",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
