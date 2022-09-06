@@ -33,6 +33,23 @@
       "message": "Add Bonian to review.",
       "revId": "77ce80d6cb2bf023624c38cee6906d0c4672f8a7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3251aa7a_d04d6f13",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-09-06T09:03:12Z",
+      "side": 1,
+      "message": "Look good to me.",
+      "revId": "77ce80d6cb2bf023624c38cee6906d0c4672f8a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
