@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae776835_8dbd0d7c",
+        "filename": "src/com/android/settings/connecteddevice/AdvancedConnectedDeviceDashboardFragment.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2022-09-06T06:59:16Z",
+      "side": 1,
+      "message": "Done.\n\nI\u0027ve also organized the if conditions here to make it more clear.",
+      "parentUuid": "5d03547c_eea3eea6",
+      "range": {
+        "startLine": 73,
+        "startChar": 12,
+        "endLine": 73,
+        "endChar": 14
+      },
+      "revId": "d65eefed955c61e066e340e1a9bd0719f38a3075",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "115fd2ff_00d593b0",
@@ -37,6 +61,30 @@
       "writtenOn": "2022-09-06T06:45:43Z",
       "side": 1,
       "message": "not needed",
+      "range": {
+        "startLine": 74,
+        "startChar": 56,
+        "endLine": 74,
+        "endChar": 74
+      },
+      "revId": "d65eefed955c61e066e340e1a9bd0719f38a3075",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e10f2de4_98fc85bd",
+        "filename": "src/com/android/settings/connecteddevice/AdvancedConnectedDeviceDashboardFragment.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2022-09-06T06:59:16Z",
+      "side": 1,
+      "message": "\u003e not needed",
+      "parentUuid": "115fd2ff_00d593b0",
       "range": {
         "startLine": 74,
         "startChar": 56,
@@ -70,6 +118,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "38f03806_6411a312",
+        "filename": "src/com/android/settings/uwb/UwbPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2022-09-06T06:59:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6f147958_fb12f92f",
+      "range": {
+        "startLine": 78,
+        "startChar": 4,
+        "endLine": 78,
+        "endChar": 22
+      },
+      "revId": "d65eefed955c61e066e340e1a9bd0719f38a3075",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f9fadc99_234f8614",
@@ -83,6 +155,24 @@
       "writtenOn": "2022-09-06T06:45:43Z",
       "side": 1,
       "message": "Use braces {} even if it\u0027s a single line.\n    if (...) {\n        return ...;\n    }",
+      "revId": "d65eefed955c61e066e340e1a9bd0719f38a3075",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f913c9b2_58f83ec3",
+        "filename": "src/com/android/settings/uwb/UwbPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2022-09-06T06:59:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f9fadc99_234f8614",
       "revId": "d65eefed955c61e066e340e1a9bd0719f38a3075",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
