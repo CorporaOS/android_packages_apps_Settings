@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc8f0b40_656ce81c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2022-09-08T02:59:23Z",
+      "side": 1,
+      "message": "Would you mind helping me look at the Pre-verify error info?",
+      "revId": "c36e1e181e92333beec6b934f24649a3e3f8666e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
