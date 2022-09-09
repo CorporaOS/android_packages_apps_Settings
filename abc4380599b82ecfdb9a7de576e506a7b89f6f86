@@ -52,6 +52,24 @@
       "parentUuid": "9ceb26fe_7ebeb7e9",
       "revId": "abc4380599b82ecfdb9a7de576e506a7b89f6f86",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "788fbccb_86df4d70",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2022-09-09T14:52:41Z",
+      "side": 1,
+      "message": "Thanks for the affirmation. We\u0027ll keep an eye on this phenomenon and provide you with more information if it occurs again. In any case, it is the first priority to make sure app not crash, isn\u0027t it?",
+      "parentUuid": "921db4ba_6bb0de44",
+      "revId": "abc4380599b82ecfdb9a7de576e506a7b89f6f86",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
