@@ -16,6 +16,24 @@
       "message": "Why is this preference present on a non-channel page?\n\nAlso please add a test - that class already has a test file to add to",
       "revId": "abc4380599b82ecfdb9a7de576e506a7b89f6f86",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ceb26fe_7ebeb7e9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2022-09-09T02:31:35Z",
+      "side": 1,
+      "message": "This crash occurs during our monkey test on device-wide, I have no idea about its presence, it should not appear in normal case. I\u0027ve uploaded some logs and links are under issue tracker, hope they can help.\n\nHowever, this change is based on java syntax level. Since this crash happens, and mChannel is annotated with @Nullable, and \"Find Usages\" shows that mChannel is used in many classes with a null-check, there is no doubt for us to add a null check here to avoid some unexpected bugs.\n\nI\u0027ve uploaded this change with one test case added, and it shows the PASSED based on this change.",
+      "parentUuid": "2111a005_39cd61bf",
+      "revId": "abc4380599b82ecfdb9a7de576e506a7b89f6f86",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
