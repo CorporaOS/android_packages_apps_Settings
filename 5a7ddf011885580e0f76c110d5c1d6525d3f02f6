@@ -16,6 +16,23 @@
       "message": "Hugh, is it ok for NFC intent to have this change?\n\nI think this is just a draft cl instead of final cl. But just want to confirm the the high level concept from you. ",
       "revId": "5a7ddf011885580e0f76c110d5c1d6525d3f02f6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "88354dfe_a5737175",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1320071
+      },
+      "writtenOn": "2022-09-15T03:20:17Z",
+      "side": 1,
+      "message": "Hi George\n\nCould you help to take a look at this CL? Thanks.",
+      "revId": "5a7ddf011885580e0f76c110d5c1d6525d3f02f6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
