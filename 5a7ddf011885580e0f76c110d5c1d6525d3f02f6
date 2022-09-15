@@ -50,6 +50,24 @@
       "message": "Overall looks good to me if NFC owner accept this intent handler change, but this cl makes sense to me.\n\nBy the way, Viesturs, we usually send code to internal master branch instead of AOSP master branch.",
       "revId": "5a7ddf011885580e0f76c110d5c1d6525d3f02f6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a9525d31_de570e6b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1587118
+      },
+      "writtenOn": "2022-09-15T16:22:40Z",
+      "side": 1,
+      "message": "Thanks, migrated over to https://googleplex-android-review.googlesource.com/c/platform/packages/apps/Settings/+/19967445/",
+      "parentUuid": "f8e156fc_cb0e5c50",
+      "revId": "5a7ddf011885580e0f76c110d5c1d6525d3f02f6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
