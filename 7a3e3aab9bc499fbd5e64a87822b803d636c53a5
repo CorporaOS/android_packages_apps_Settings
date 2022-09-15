@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91b334f5_ecb04e68",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 16
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1221112
+      },
+      "writtenOn": "2022-09-15T16:36:47Z",
+      "side": 1,
+      "message": "same with this as the one in fwk/base, would it be possible to get this in Evan?\nBR\nMattias",
+      "revId": "7a3e3aab9bc499fbd5e64a87822b803d636c53a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
