@@ -136,11 +136,18 @@ public class StorageDashboardFragment extends DashboardFragment
                         return storageEntry.equals(changedStorageEntry);
                     });
                     if (volumeState != VolumeInfo.STATE_REMOVED
-                            && volumeState != VolumeInfo.STATE_BAD_REMOVAL) {
+                            && volumeState != VolumeInfo.STATE_BAD_REMOVAL
+                            && volumeState != VolumeInfo.STATE_UNMOUNTED
+                            && volumeState != VolumeInfo.STATE_EJECTING) {
                         mStorageEntries.add(changedStorageEntry);
-                    }
-                    if (changedStorageEntry.equals(mSelectedStorageEntry)) {
-                        mSelectedStorageEntry = changedStorageEntry;
+                        if (changedStorageEntry.equals(mSelectedStorageEntry)) {
+                            mSelectedStorageEntry = changedStorageEntry;
+                        }
+                    } else {
+                        if (changedStorageEntry.equals(mSelectedStorageEntry)) {
+                            mSelectedStorageEntry =
+                                    StorageEntry.getDefaultInternalStorageEntry(getContext());
+                        }
                     }
                     refreshUi();
                     break;
