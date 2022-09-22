@@ -16,6 +16,29 @@
       "message": "Add the owner amyhsu@google.com to take a look.",
       "revId": "dc5a59598b8f2e2dcd6c1ac68c0ccb7657ebafbc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e3ab1792_cba43bb0",
+        "filename": "src/com/android/settings/display/PeakRefreshRatePreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1385492
+      },
+      "writtenOn": "2022-09-22T05:18:19Z",
+      "side": 1,
+      "message": "We used overlay to change this summary string if the project has different maximum refresh rate. For example: C10 https://source.corp.google.com/android/vendor/google_devices/pantah/proprietary/cheetah/overlay_packages/SettingsGoogleCheetahOverlay/res/values/strings.xml;rcl\u003dbd3aef01ea96f15b1b1ca90de79073c0060e70de;l\u003d4\n\nWill your changes affect C10 or other project who has overlay string on it?",
+      "range": {
+        "startLine": 95,
+        "startChar": 8,
+        "endLine": 96,
+        "endChar": 73
+      },
+      "revId": "dc5a59598b8f2e2dcd6c1ac68c0ccb7657ebafbc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
