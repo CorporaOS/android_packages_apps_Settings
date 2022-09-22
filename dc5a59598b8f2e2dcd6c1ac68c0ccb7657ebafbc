@@ -39,6 +39,30 @@
       },
       "revId": "dc5a59598b8f2e2dcd6c1ac68c0ccb7657ebafbc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "815c0728_af69bed4",
+        "filename": "src/com/android/settings/display/PeakRefreshRatePreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1966772
+      },
+      "writtenOn": "2022-09-22T12:02:40Z",
+      "side": 1,
+      "message": "It looks like it will affect C10 as the projects that are overlaying the summary do not have a placeholder in the summary string. The overlay should be able to be dropped, though I have not been able to confirm myself yet.",
+      "parentUuid": "e3ab1792_cba43bb0",
+      "range": {
+        "startLine": 95,
+        "startChar": 8,
+        "endLine": 96,
+        "endChar": 73
+      },
+      "revId": "dc5a59598b8f2e2dcd6c1ac68c0ccb7657ebafbc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
