@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f677538f_3d23f24d",
+        "filename": "src/com/android/settings/deviceinfo/StorageDashboardFragment.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 1356080
+      },
+      "writtenOn": "2022-09-23T02:16:03Z",
+      "side": 1,
+      "message": "There are 5 negative list items here.\nTo improve readability, would you help use positive list items instead?\nThank you.\n\nif (volumeState \u003d\u003d VolumeInfo.STATE_MOUNTED\n   ...",
+      "range": {
+        "startLine": 138,
+        "startChar": 0,
+        "endLine": 141,
+        "endChar": 74
+      },
+      "revId": "560a172c1ad4b92ea48bf4d75a55f020c8d8224b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
