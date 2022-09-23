@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "023f26a1_88924ce6",
+        "filename": "src/com/android/settings/network/telephony/Enable2gPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1951225
+      },
+      "writtenOn": "2022-09-23T17:08:43Z",
+      "side": 0,
+      "message": "The diff in this block came out a bit strange. Effectively, the comment block above was incorrectly merged previously which left it above the wrong method.",
+      "range": {
+        "startLine": 108,
+        "startChar": 0,
+        "endLine": 108,
+        "endChar": 52
+      },
+      "revId": "594002e21aea5ab57c1db2a4d0be8a5ad713f230",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
