@@ -63,6 +63,30 @@
       },
       "revId": "dc5a59598b8f2e2dcd6c1ac68c0ccb7657ebafbc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b4a6a0a8_222c3e43",
+        "filename": "src/com/android/settings/display/PeakRefreshRatePreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 1385492
+      },
+      "writtenOn": "2022-09-23T03:05:02Z",
+      "side": 1,
+      "message": "Agree, I think you should add the removement of C10 overlay into this patch as well. Please have a try.",
+      "parentUuid": "815c0728_af69bed4",
+      "range": {
+        "startLine": 95,
+        "startChar": 8,
+        "endLine": 96,
+        "endChar": 73
+      },
+      "revId": "dc5a59598b8f2e2dcd6c1ac68c0ccb7657ebafbc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
