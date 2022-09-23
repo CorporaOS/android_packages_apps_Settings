@@ -22,6 +22,30 @@
       },
       "revId": "560a172c1ad4b92ea48bf4d75a55f020c8d8224b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0710a032_b51c3ab5",
+        "filename": "src/com/android/settings/deviceinfo/StorageDashboardFragment.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 1786490
+      },
+      "writtenOn": "2022-09-23T03:08:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f677538f_3d23f24d",
+      "range": {
+        "startLine": 138,
+        "startChar": 0,
+        "endLine": 141,
+        "endChar": 74
+      },
+      "revId": "560a172c1ad4b92ea48bf4d75a55f020c8d8224b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
