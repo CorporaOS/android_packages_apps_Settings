@@ -84,6 +84,7 @@ public class VpnSettings extends RestrictedSettingsFragment implements
     private static final int RESCAN_INTERVAL_MS = 1000;
 
     private static final NetworkRequest VPN_REQUEST = new NetworkRequest.Builder()
+            .addTransportType(NetworkCapabilities.TRANSPORT_VPN)
             .removeCapability(NetworkCapabilities.NET_CAPABILITY_NOT_VPN)
             .removeCapability(NetworkCapabilities.NET_CAPABILITY_NOT_RESTRICTED)
             .removeCapability(NetworkCapabilities.NET_CAPABILITY_TRUSTED)
@@ -100,6 +101,8 @@ public class VpnSettings extends RestrictedSettingsFragment implements
     private Handler mUpdater;
     private HandlerThread mUpdaterThread;
     private LegacyVpnInfo mConnectedLegacyVpn;
+
+    private int mVpnConnectionState;
 
     private boolean mUnavailable;
 
@@ -240,7 +243,7 @@ public class VpnSettings extends RestrictedSettingsFragment implements
         // Refresh list of VPNs
         activity.runOnUiThread(new UpdatePreferences(this)
                 .legacyVpns(vpnProfiles, connectedLegacyVpns, lockdownVpnKey)
-                .appVpns(vpnApps, connectedAppVpns, alwaysOnAppVpnInfos));
+                .appVpns(vpnApps, connectedAppVpns, alwaysOnAppVpnInfos, mVpnConnectionState));
 
         synchronized (this) {
             if (mUpdater != null) {
@@ -262,6 +265,7 @@ public class VpnSettings extends RestrictedSettingsFragment implements
 
         private Set<AppVpnInfo> alwaysOnAppVpnInfos = Collections.<AppVpnInfo>emptySet();
         private String lockdownVpnKey = null;
+        private int mConnectionState;
 
         private final VpnSettings mSettings;
 
@@ -278,10 +282,12 @@ public class VpnSettings extends RestrictedSettingsFragment implements
         }
 
         public final UpdatePreferences appVpns(List<AppVpnInfo> vpnApps,
-                Set<AppVpnInfo> connectedAppVpns, Set<AppVpnInfo> alwaysOnAppVpnInfos) {
+                Set<AppVpnInfo> connectedAppVpns, Set<AppVpnInfo> alwaysOnAppVpnInfos,
+                int connectionState) {
             this.vpnApps = vpnApps;
             this.connectedAppVpns = connectedAppVpns;
             this.alwaysOnAppVpnInfos = alwaysOnAppVpnInfos;
+            this.mConnectionState = connectionState;
             return this;
         }
 
@@ -319,11 +325,11 @@ public class VpnSettings extends RestrictedSettingsFragment implements
                 updates.add(p);
             }
 
-            // Add VpnService VPNs
+            // Add VPN apps.
             for (AppVpnInfo app : vpnApps) {
                 AppPreference p = mSettings.findOrCreatePreference(app);
                 if (connectedAppVpns.contains(app)) {
-                    p.setState(AppPreference.STATE_CONNECTED);
+                    p.setState(mConnectionState);
                 } else {
                     p.setState(AppPreference.STATE_DISCONNECTED);
                 }
@@ -430,6 +436,7 @@ public class VpnSettings extends RestrictedSettingsFragment implements
     private NetworkCallback mNetworkCallback = new NetworkCallback() {
         @Override
         public void onAvailable(Network network) {
+            mVpnConnectionState = LegacyVpnInfo.STATE_CONNECTED;
             if (mUpdater != null) {
                 mUpdater.sendEmptyMessage(RESCAN_MESSAGE);
             }
@@ -437,6 +444,7 @@ public class VpnSettings extends RestrictedSettingsFragment implements
 
         @Override
         public void onLost(Network network) {
+            mVpnConnectionState = LegacyVpnInfo.STATE_DISCONNECTED;
             if (mUpdater != null) {
                 mUpdater.sendEmptyMessage(RESCAN_MESSAGE);
             }
