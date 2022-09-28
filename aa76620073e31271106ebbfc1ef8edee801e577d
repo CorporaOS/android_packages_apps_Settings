@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b9729c3_74254a77",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1356080
+      },
+      "writtenOn": "2022-09-28T01:24:22Z",
+      "side": 1,
+      "message": "Hi Chuanghua,\n\nI merged this CL, thank you very much for the contribution.",
+      "revId": "aa76620073e31271106ebbfc1ef8edee801e577d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
