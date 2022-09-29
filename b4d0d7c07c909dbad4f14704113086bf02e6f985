@@ -16,6 +16,144 @@
       "message": "Hi,\nCould you please help to review this CL and bug?\nThanks!",
       "revId": "b4d0d7c07c909dbad4f14704113086bf02e6f985",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad31a670_bb4da452",
+        "filename": "src/com/android/settings/TetherSettings.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 1320071
+      },
+      "writtenOn": "2022-09-29T03:39:10Z",
+      "side": 1,
+      "message": "Please fix it, Thanks.",
+      "range": {
+        "startLine": 174,
+        "startChar": 20,
+        "endLine": 174,
+        "endChar": 102
+      },
+      "revId": "b4d0d7c07c909dbad4f14704113086bf02e6f985",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2539a34f_379687f5",
+        "filename": "src/com/android/settings/TetherSettings.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 1320071
+      },
+      "writtenOn": "2022-09-29T03:39:10Z",
+      "side": 1,
+      "message": "Please fix it, Thanks.",
+      "range": {
+        "startLine": 275,
+        "startChar": 16,
+        "endLine": 275,
+        "endChar": 107
+      },
+      "revId": "b4d0d7c07c909dbad4f14704113086bf02e6f985",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9dd2bed9_54625e6a",
+        "filename": "src/com/android/settings/network/AllInOneTetherPreferenceController.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 1320071
+      },
+      "writtenOn": "2022-09-29T03:39:10Z",
+      "side": 1,
+      "message": "Please fix it, Thanks.",
+      "range": {
+        "startLine": 174,
+        "startChar": 20,
+        "endLine": 174,
+        "endChar": 102
+      },
+      "revId": "b4d0d7c07c909dbad4f14704113086bf02e6f985",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd2d1415_096838ef",
+        "filename": "src/com/android/settings/network/AllInOneTetherPreferenceController.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 1320071
+      },
+      "writtenOn": "2022-09-29T03:39:10Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 229,
+        "startChar": 16,
+        "endLine": 229,
+        "endChar": 107
+      },
+      "revId": "b4d0d7c07c909dbad4f14704113086bf02e6f985",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "54a2ca45_cf7693c3",
+        "filename": "src/com/android/settings/network/TetherPreferenceController.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 1320071
+      },
+      "writtenOn": "2022-09-29T03:39:10Z",
+      "side": 1,
+      "message": "Please fix it, Thanks.",
+      "range": {
+        "startLine": 141,
+        "startChar": 20,
+        "endLine": 141,
+        "endChar": 102
+      },
+      "revId": "b4d0d7c07c909dbad4f14704113086bf02e6f985",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67012edd_71a872dd",
+        "filename": "src/com/android/settings/network/TetherPreferenceController.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 1320071
+      },
+      "writtenOn": "2022-09-29T03:39:10Z",
+      "side": 1,
+      "message": "Please fix it, Thanks.",
+      "range": {
+        "startLine": 292,
+        "startChar": 16,
+        "endLine": 292,
+        "endChar": 107
+      },
+      "revId": "b4d0d7c07c909dbad4f14704113086bf02e6f985",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
