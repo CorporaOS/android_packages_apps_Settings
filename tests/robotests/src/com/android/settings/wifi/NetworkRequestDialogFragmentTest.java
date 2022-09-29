@@ -151,6 +151,7 @@ public class NetworkRequestDialogFragmentTest {
         final List<ScanResult> scanResults = new ArrayList<>();
         networkRequestDialogFragment.mMatchedScanResults = scanResults;
         ScanResult scanResult = mock(ScanResult.class);
+        when(scanResult.getSecurityTypes()).thenReturn(new int[0]);
         networkRequestDialogFragment.mMatchedScanResults.add(scanResult);
         networkRequestDialogFragment.onMatch(scanResults);
 
@@ -165,6 +166,7 @@ public class NetworkRequestDialogFragmentTest {
         final List<ScanResult> scanResults = new ArrayList<>();
         networkRequestDialogFragment.mMatchedScanResults = scanResults;
         ScanResult scanResult = mock(ScanResult.class);
+        when(scanResult.getSecurityTypes()).thenReturn(new int[0]);
         networkRequestDialogFragment.mMatchedScanResults.add(scanResult);
         networkRequestDialogFragment.onMatch(scanResults);
 
@@ -175,34 +177,45 @@ public class NetworkRequestDialogFragmentTest {
     private List<WifiEntry> createWifiEntryList() {
         List<WifiEntry> wifiEntryList = new ArrayList<>();
 
+        List<Integer> wifiEntrySecurityTypesContainWEP = new ArrayList<>();
+        wifiEntrySecurityTypesContainWEP.add(WifiEntry.SECURITY_WEP);
+        List<Integer> wifiEntrySecurityTypesContainNONE = new ArrayList<>();
+        wifiEntrySecurityTypesContainNONE.add(WifiEntry.SECURITY_NONE);
+
         final WifiEntry wifiEntry1 = mock(WifiEntry.class);
         when(wifiEntry1.getSsid()).thenReturn("Test AP 1");
         when(wifiEntry1.getSecurity()).thenReturn(WifiEntry.SECURITY_WEP);
+        when(wifiEntry1.getSecurityTypes()).thenReturn(wifiEntrySecurityTypesContainWEP);
         wifiEntryList.add(wifiEntry1);
 
         final WifiEntry wifiEntry2 = mock(WifiEntry.class);
         when(wifiEntry2.getSsid()).thenReturn("Test AP 2");
         when(wifiEntry2.getSecurity()).thenReturn(WifiEntry.SECURITY_WEP);
+        when(wifiEntry2.getSecurityTypes()).thenReturn(wifiEntrySecurityTypesContainWEP);
         wifiEntryList.add(wifiEntry2);
 
         final WifiEntry wifiEntry3 = mock(WifiEntry.class);
         when(wifiEntry3.getSsid()).thenReturn("Test AP 3");
         when(wifiEntry3.getSecurity()).thenReturn(WifiEntry.SECURITY_WEP);
+        when(wifiEntry3.getSecurityTypes()).thenReturn(wifiEntrySecurityTypesContainWEP);
         wifiEntryList.add(wifiEntry3);
 
         final WifiEntry wifiEntry4 = mock(WifiEntry.class);
         when(wifiEntry4.getSsid()).thenReturn("Test AP 4");
         when(wifiEntry4.getSecurity()).thenReturn(WifiEntry.SECURITY_NONE);
+        when(wifiEntry4.getSecurityTypes()).thenReturn(wifiEntrySecurityTypesContainNONE);
         wifiEntryList.add(wifiEntry4);
 
         final WifiEntry wifiEntry5 = mock(WifiEntry.class);
         when(wifiEntry5.getSsid()).thenReturn("Test AP 5");
         when(wifiEntry5.getSecurity()).thenReturn(WifiEntry.SECURITY_WEP);
+        when(wifiEntry5.getSecurityTypes()).thenReturn(wifiEntrySecurityTypesContainWEP);
         wifiEntryList.add(wifiEntry5);
 
         final WifiEntry wifiEntry6 = mock(WifiEntry.class);
         when(wifiEntry6.getSsid()).thenReturn("Test AP 6");
         when(wifiEntry6.getSecurity()).thenReturn(WifiEntry.SECURITY_WEP);
+        when(wifiEntry6.getSecurityTypes()).thenReturn(wifiEntrySecurityTypesContainWEP);
         wifiEntryList.add(wifiEntry6);
 
         return wifiEntryList;
@@ -233,6 +246,7 @@ public class NetworkRequestDialogFragmentTest {
             ScanResult scanResult = mock(ScanResult.class);
             scanResult.SSID = ssidAp + i;
             scanResult.capabilities = "WEP";
+            when(scanResult.getSecurityTypes()).thenReturn(new int[]{WifiEntry.SECURITY_WEP});
             scanResults.add(scanResult);
         }
         networkRequestDialogFragment.onMatch(scanResults);
