@@ -17,6 +17,7 @@
 package com.android.settings.wifi;
 
 import static com.android.settings.wifi.WifiUtils.getWifiEntrySecurity;
+import static com.android.wifitrackerlib.Utils.getSecurityTypesFromScanResult;
 
 import static java.util.stream.Collectors.toList;
 
@@ -277,8 +278,13 @@ public class NetworkRequestDialogFragment extends NetworkRequestDialogBaseFragme
         mFilteredWifiEntries.clear();
         mFilteredWifiEntries.addAll(wifiEntries.stream().filter(entry -> {
             for (ScanResult matchedScanResult : mMatchedScanResults) {
+                final List<Integer> entrySecurityTypes = entry.getSecurityTypes();
+                final List<Integer> matchedSecurityTypes =
+                        getSecurityTypesFromScanResult(matchedScanResult);
+                final List<Integer> intersectionSecurityTypes = entrySecurityTypes.stream()
+                        .filter(matchedSecurityTypes::contains).collect(toList());
                 if (TextUtils.equals(entry.getSsid(), matchedScanResult.SSID)
-                        && entry.getSecurity() == getWifiEntrySecurity(matchedScanResult)) {
+                        && intersectionSecurityTypes.size() > 0) {
                     return true;
                 }
             }
