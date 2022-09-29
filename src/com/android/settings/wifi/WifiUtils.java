@@ -174,7 +174,7 @@ public class WifiUtils extends com.android.settingslib.wifi.WifiUtils {
             security = getWifiEntrySecurity(scanResult);
         } else {
             if (wifiEntry.getWifiConfiguration() == null) {
-                config.SSID = "\"" + wifiEntry.getSsid() + "\"";
+                config.SSID = "\"" + wifiEntry.getTitle() + "\"";
             } else {
                 config.networkId = wifiEntry.getWifiConfiguration().networkId;
                 config.hiddenSSID = wifiEntry.getWifiConfiguration().hiddenSSID;
