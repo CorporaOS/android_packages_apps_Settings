@@ -83,12 +83,10 @@ public class VerifiedLinksPreference extends TwoTargetPreference {
             settingsWidget.setOnClickListener(mOnWidgetClickListener);
         }
         final View checkboxContainer = view.findViewById(R.id.checkbox_container);
-        final View parentView = (View) checkboxContainer.getParent();
-        parentView.setEnabled(false);
-        parentView.setClickable(false);
-        CheckBox checkBox = (CheckBox) view.findViewById(com.android.internal.R.id.checkbox);
+        final CheckBox checkBox = (CheckBox) view.findViewById(com.android.internal.R.id.checkbox);
         if (checkBox != null) {
             checkBox.setChecked(true);
+            checkBox.setEnabled(false);
             checkboxContainer.setVisibility(mShowCheckBox ? View.VISIBLE : View.GONE);
         }
     }
