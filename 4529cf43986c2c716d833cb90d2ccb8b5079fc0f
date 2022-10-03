@@ -16,6 +16,24 @@
       "message": "Look good to me.",
       "revId": "4529cf43986c2c716d833cb90d2ccb8b5079fc0f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b868aa1e_3af8bed8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1951225
+      },
+      "writtenOn": "2022-10-03T13:40:20Z",
+      "side": 1,
+      "message": "@bonianchen@google.com thanks! do you mind giving it a code owner +1/+2 response to unblock the CL?",
+      "parentUuid": "16ec9e93_bd061da7",
+      "revId": "4529cf43986c2c716d833cb90d2ccb8b5079fc0f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
