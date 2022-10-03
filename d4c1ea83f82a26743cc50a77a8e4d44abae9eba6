@@ -16,6 +16,24 @@
       "message": "Hi Daniel,\n\nThanks for your contribution. Actually, we plan to change the UI of the VerifiedLinksPreference as the following statement. So the VerifiedLinksPreference will be instead of the normal Preferene. Anyway, thanks for your efforts.\n\"The better UI would be remove the checkbox and (i) icon, and just have the \"4 verified links\" be clickable to open the dialog.\"",
       "revId": "d4c1ea83f82a26743cc50a77a8e4d44abae9eba6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad199aa0_289ea968",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1961300
+      },
+      "writtenOn": "2022-10-03T14:05:35Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "b817e402_d22448f1",
+      "revId": "d4c1ea83f82a26743cc50a77a8e4d44abae9eba6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
