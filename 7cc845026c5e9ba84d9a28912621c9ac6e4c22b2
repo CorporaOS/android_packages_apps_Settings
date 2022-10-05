@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "caff95a4_3cff411a",
+        "filename": "src/com/android/settings/development/BluetoothLeAudioHwOffloadPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1595229
+      },
+      "writtenOn": "2022-10-05T04:26:41Z",
+      "side": 1,
+      "message": "Why we need to set the reverse value when onRebootDialogConfirm?",
+      "range": {
+        "startLine": 142,
+        "startChar": 33,
+        "endLine": 142,
+        "endChar": 56
+      },
+      "revId": "7cc845026c5e9ba84d9a28912621c9ac6e4c22b2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
