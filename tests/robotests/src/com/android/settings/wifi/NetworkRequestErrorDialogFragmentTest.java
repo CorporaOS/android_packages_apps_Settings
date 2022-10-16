@@ -69,6 +69,7 @@ public class NetworkRequestErrorDialogFragmentTest {
         mFragment.show(mActivity.getSupportFragmentManager(), null);
     }
 
+    @SuppressWarnings("ReturnValueIgnored")
     @Test
     public void getConstructor_shouldNotThrowNoSuchMethodException() {
         try {
