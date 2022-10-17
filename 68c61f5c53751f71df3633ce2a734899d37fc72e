@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8f79bc59_28bae4ad",
+        "filename": "src/com/android/settings/vpn2/ConfigDialog.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 634,
+      "author": {
+        "id": 1762265
+      },
+      "writtenOn": "2022-10-17T20:00:16Z",
+      "side": 1,
+      "message": "Can we change this to:\n\n```\n  Log.e(TAG, \"could not parse proxy port integer\", e);\n```",
+      "range": {
+        "startLine": 634,
+        "startChar": 20,
+        "endLine": 634,
+        "endChar": 40
+      },
+      "revId": "68c61f5c53751f71df3633ce2a734899d37fc72e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
