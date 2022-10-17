@@ -160,12 +160,20 @@ public class WifiQrCode {
 
     private String getValueOrNull(List<String> keyValueList, String prefix) {
         for (String keyValue : keyValueList) {
+            keyValue = formatQrCodeKeyValue(keyValue, prefix);
             if (keyValue.startsWith(prefix)) {
                 return  keyValue.substring(prefix.length());
             }
         }
 
         return null;
+    }
+
+    private String formatQrCodeKeyValue(String keyValue, String prefix) {
+        int typeLength = keyValue.indexOf(':') + 1;
+        return typeLength > prefix.length()
+                ? keyValue.substring(typeLength - prefix.length())
+                : keyValue;
     }
 
     @VisibleForTesting
