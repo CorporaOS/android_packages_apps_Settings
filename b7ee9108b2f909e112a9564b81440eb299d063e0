@@ -16,6 +16,23 @@
       "message": "Hi sirs,\nCould you please help to review patch? Thanks!",
       "revId": "b7ee9108b2f909e112a9564b81440eb299d063e0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "de9c133c_db320935",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1873440
+      },
+      "writtenOn": "2022-10-18T14:37:18Z",
+      "side": 1,
+      "message": "Hi sirs,\nCould you review the CL? Thanks!",
+      "revId": "b7ee9108b2f909e112a9564b81440eb299d063e0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
