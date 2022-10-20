@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d88ba51_3fd7dddc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1356080
+      },
+      "writtenOn": "2022-10-20T00:01:03Z",
+      "side": 1,
+      "message": "Hi Weng,\n\nI\u0027m not sure if is reasonable to support the Wi-Fi QR code string which has a /r at the beginning of a key.\n\nWould you take a look and decide if we should allow this change?\nThank you.",
+      "revId": "df1dfecbebd76e7a88c8780d679c7d38d7bfc9b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c739930a_2edac21f",
+        "filename": "src/com/android/settings/wifi/dpp/WifiQrCode.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1356080
+      },
+      "writtenOn": "2022-10-20T00:01:03Z",
+      "side": 1,
+      "message": "This is a getter AI, to improve readability, we can change the naming to getXXXXX.\ne.g., getTrimmedKeyValue",
+      "range": {
+        "startLine": 172,
+        "startChar": 19,
+        "endLine": 172,
+        "endChar": 39
+      },
+      "revId": "df1dfecbebd76e7a88c8780d679c7d38d7bfc9b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "42aa5ae2_450ed517",
+        "filename": "src/com/android/settings/wifi/dpp/WifiQrCode.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 1356080
+      },
+      "writtenOn": "2022-10-20T00:01:03Z",
+      "side": 1,
+      "message": "If this change is to support a carriage return at the front of a key, why not just check if the 1st character is /r and then return trimmed sub-string?",
+      "range": {
+        "startLine": 173,
+        "startChar": 0,
+        "endLine": 176,
+        "endChar": 27
+      },
+      "revId": "df1dfecbebd76e7a88c8780d679c7d38d7bfc9b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
