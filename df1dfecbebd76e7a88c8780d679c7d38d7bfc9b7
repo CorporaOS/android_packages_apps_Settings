@@ -41,6 +41,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "69fd0ade_839843d5",
+        "filename": "src/com/android/settings/wifi/dpp/WifiQrCode.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1891020
+      },
+      "writtenOn": "2022-10-20T03:29:11Z",
+      "side": 1,
+      "message": "Yes, I think the new name is more appropriate",
+      "parentUuid": "c739930a_2edac21f",
+      "range": {
+        "startLine": 172,
+        "startChar": 19,
+        "endLine": 172,
+        "endChar": 39
+      },
+      "revId": "df1dfecbebd76e7a88c8780d679c7d38d7bfc9b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "42aa5ae2_450ed517",
@@ -54,6 +78,30 @@
       "writtenOn": "2022-10-20T00:01:03Z",
       "side": 1,
       "message": "If this change is to support a carriage return at the front of a key, why not just check if the 1st character is /r and then return trimmed sub-string?",
+      "range": {
+        "startLine": 173,
+        "startChar": 0,
+        "endLine": 176,
+        "endChar": 27
+      },
+      "revId": "df1dfecbebd76e7a88c8780d679c7d38d7bfc9b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f26c50d_3a6deb0d",
+        "filename": "src/com/android/settings/wifi/dpp/WifiQrCode.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 1891020
+      },
+      "writtenOn": "2022-10-20T03:29:11Z",
+      "side": 1,
+      "message": "Because the QR code type scanned at present contains \\r at the beginning, but whether there is a QR code containing multiple \\r or other characters, we don\u0027t know, just judge \\r, the coverage is too small\n\nSo I think it may be more appropriate to start with \":\" to find the TYPE first, and then start with the TYPE to find the keyvalue later",
+      "parentUuid": "42aa5ae2_450ed517",
       "range": {
         "startLine": 173,
         "startChar": 0,
