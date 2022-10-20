@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "67c0b499_6a604826",
+        "filename": "src/com/android/settings/network/EraseEuiccDataController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1004882
+      },
+      "writtenOn": "2022-10-20T22:53:40Z",
+      "side": 1,
+      "message": "This follows the same pattern as Factory reset - only admin (owner) and demo users can reset.",
+      "range": {
+        "startLine": 59,
+        "startChar": 44,
+        "endLine": 59,
+        "endChar": 54
+      },
+      "revId": "d1a3042d2342840ced1d9058fc3a319ce50bde6f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
