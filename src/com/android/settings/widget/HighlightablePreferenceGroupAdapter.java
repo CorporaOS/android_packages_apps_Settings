@@ -140,7 +140,14 @@ public class HighlightablePreferenceGroupAdapter extends PreferenceGroupAdapter 
         if (position < 0) {
             return;
         }
+        if (mHighlightPosition != RecyclerView.NO_POSITION && position == mHighlightPosition) {
+            //Duplicated highlight request position, ignore.
+            return;
+        }
 
+        // Highlight request accepted.
+        mHighlightRequested = true;
+        mHighlightPosition = position;
         // Collapse app bar after 300 milliseconds.
         if (appBarLayout != null) {
             root.postDelayed(() -> {
@@ -152,15 +159,26 @@ public class HighlightablePreferenceGroupAdapter extends PreferenceGroupAdapter 
         recyclerView.setItemAnimator(null);
         // Scroll to correct position after 600 milliseconds.
         root.postDelayed(() -> {
-            mHighlightRequested = true;
-            recyclerView.smoothScrollToPosition(position);
-            mHighlightPosition = position;
+            if (ensureHighlightPosition(position)) {
+                recyclerView.smoothScrollToPosition(position);
+            }
         }, DELAY_HIGHLIGHT_DURATION_MILLIS);
 
         // Highlight preference after 900 milliseconds.
         root.postDelayed(() -> {
-            notifyItemChanged(position);
+            if (ensureHighlightPosition(position)) {
+                notifyItemChanged(position);
+            }
         }, DELAY_COLLAPSE_DURATION_MILLIS + DELAY_HIGHLIGHT_DURATION_MILLIS);
+    }
+
+    /**
+     * Make sure we highlight the real-wanted position in case of preference position already
+     * changed when the delay time comes.
+     */
+    private boolean ensureHighlightPosition(int highlightPosition) {
+        final int position = getPreferenceAdapterPosition(mHighlightKey);
+        return position >= 0 && position == highlightPosition;
     }
 
     public boolean isHighlightRequested() {
