@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ac65c8b4_f05729f4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1347463
+      },
+      "writtenOn": "2022-10-24T16:38:49Z",
+      "side": 1,
+      "message": "Adding Stanley to confirm correctness, as it appears the affected code was part of a refactor last year",
+      "revId": "a977c655f50d797ffe51d2d52d31b1b779867154",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5f032c0e_28a10a0a",
+        "filename": "src/com/android/settings/display/NightDisplayActivationPreferenceController.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1347463
+      },
+      "writtenOn": "2022-10-24T16:38:49Z",
+      "side": 1,
+      "message": "nit: let\u0027s inline all of this content",
+      "range": {
+        "startLine": 95,
+        "startChar": 0,
+        "endLine": 95,
+        "endChar": 30
+      },
+      "revId": "a977c655f50d797ffe51d2d52d31b1b779867154",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
