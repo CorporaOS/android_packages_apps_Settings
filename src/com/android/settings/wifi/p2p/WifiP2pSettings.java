@@ -634,6 +634,9 @@ public class WifiP2pSettings extends DashboardFragment
         mThisDevicePreferenceController.setEnabled(mWifiP2pEnabled);
         mPersistentCategoryController.setEnabled(mWifiP2pEnabled);
         mPeerCategoryController.setEnabled(mWifiP2pEnabled);
+        if (mWifiP2pEnabled) {
+            startSearch();
+        }
     }
 
     private void updateSearchMenu(boolean searching) {
