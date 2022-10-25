@@ -39,6 +39,30 @@
       },
       "revId": "a977c655f50d797ffe51d2d52d31b1b779867154",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74ec9955_79e08f26",
+        "filename": "src/com/android/settings/display/NightDisplayActivationPreferenceController.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2022-10-25T02:30:10Z",
+      "side": 1,
+      "message": "It looks like it won\u0027t affect the functionality even if we remove this part of the code for the reason that:\n\n- Now `updateStateInternal()` did nothing but calling `mTimeFormatter.getFormattedTimeString()` with nobody uses its result, maybe we can remove this internal method.\n- We do need to call `super.updateState(preference)` to update toggle status, so we can remove this override since nothing else we need to do in this controller.\n\nI\u0027ve done some code clean-up, and test ok. @stanleytfwang@google.com @christyfranks@google.com would you help me confirm again?",
+      "parentUuid": "5f032c0e_28a10a0a",
+      "range": {
+        "startLine": 95,
+        "startChar": 0,
+        "endLine": 95,
+        "endChar": 30
+      },
+      "revId": "a977c655f50d797ffe51d2d52d31b1b779867154",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
