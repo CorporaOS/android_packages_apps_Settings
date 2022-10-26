@@ -30,6 +30,7 @@ import android.content.pm.verify.domain.DomainVerificationManager;
 import android.content.pm.verify.domain.DomainVerificationUserState;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.ArraySet;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -71,9 +72,6 @@ public class AppLaunchSettings extends AppInfoBase implements
     private static final String SELECTED_LINKS_CATEGORY_KEY =
             "open_by_default_selected_links_category";
     private static final String OTHER_DETAILS_PREF_CATEGORY_KEY = "app_launch_other_defaults";
-
-    private static final String LEARN_MORE_URI =
-            "https://developer.android.com/training/app-links/verify-site-associations";
 
     // Dialogs id
     private static final int DLG_VERIFIED_LINKS = DLG_BASE + 1;
@@ -359,14 +357,17 @@ public class AppLaunchSettings extends AppInfoBase implements
 
     private void initFooter() {
         final CharSequence footerText = mContext.getText(R.string.app_launch_footer);
+        final String learnMoreUri = mContext.getString(R.string.app_launch_developer_guide_uri);
         final FooterPreference footerPreference = (FooterPreference) findPreference(
                 FOOTER_PREF_KEY);
         footerPreference.setTitle(footerText);
-        // learn more
-        footerPreference.setLearnMoreAction(view -> {
-            final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(LEARN_MORE_URI));
-            mContext.startActivity(intent);
-        });
+        // learn more. Skip if OEM overlays with null String by accident.
+        if (!TextUtils.isEmpty(learnMoreUri)) {
+            footerPreference.setLearnMoreAction(view -> {
+                final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(learnMoreUri));
+                mContext.startActivity(intent);
+            });
+        }
         final String learnMoreText = mContext.getString(
                 R.string.footer_learn_more_content_description, getLabelName());
         footerPreference.setLearnMoreText(learnMoreText);
