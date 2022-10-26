@@ -16,6 +16,23 @@
       "message": "Edgar, would you please help to approve this Cherry-pick only (from internal to aosp) CL? The original CL was approved by you and it works well. Thanks!",
       "revId": "306a366d121f76a6e83c450eaba50e8fc5a6b6cf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "76ac03d2_8579e9ca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1609802
+      },
+      "writtenOn": "2022-10-26T16:38:31Z",
+      "side": 1,
+      "message": "Add Arc as well who is driving the bug b/255692040.",
+      "revId": "306a366d121f76a6e83c450eaba50e8fc5a6b6cf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
