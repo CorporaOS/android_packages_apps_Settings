@@ -51,6 +51,24 @@
       "message": "Thanks Sunny.\n\nAbandon per your comment.",
       "revId": "86711a777de277608c4a24c48b0eb7b35c0ef176",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa872791_0f713f5f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2022-10-27T02:56:04Z",
+      "side": 1,
+      "message": "Thanks Shen.\n\nI will seperate the url string into resource file when I get the new url. Thanks for your effort.",
+      "parentUuid": "6e091619_678d31ef",
+      "revId": "86711a777de277608c4a24c48b0eb7b35c0ef176",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
