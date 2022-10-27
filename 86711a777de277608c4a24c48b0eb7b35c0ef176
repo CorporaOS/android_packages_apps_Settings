@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da544382_624f761c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2022-10-27T02:33:55Z",
+      "side": 1,
+      "message": "Hi Shen,\n\nThanks for your contribution. Actually, we have an internal issue (b/222333177, I think you can\u0027t see the detail due to the security) to discuss this learn more link problem. I feel like it will be changed to new url after the contexts of web doc are ready. Then I will update the code for new url.",
+      "revId": "86711a777de277608c4a24c48b0eb7b35c0ef176",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
