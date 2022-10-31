@@ -453,15 +453,15 @@ public class SettingsHomepageActivity extends FragmentActivity implements
                 new ComponentName(getApplicationContext(), getClass()),
                 targetComponentName,
                 targetIntent.getAction(),
-                SplitRule.FINISH_ALWAYS,
-                SplitRule.FINISH_ALWAYS,
+                SplitRule.FinishBehavior.ALWAYS,
+                SplitRule.FinishBehavior.ALWAYS,
                 true /* clearTop */);
         ActivityEmbeddingRulesController.registerTwoPanePairRule(this,
                 new ComponentName(getApplicationContext(), Settings.class),
                 targetComponentName,
                 targetIntent.getAction(),
-                SplitRule.FINISH_ALWAYS,
-                SplitRule.FINISH_ALWAYS,
+                SplitRule.FinishBehavior.ALWAYS,
+                SplitRule.FinishBehavior.ALWAYS,
                 true /* clearTop */);
 
         final UserHandle user = intent.getParcelableExtra(EXTRA_USER_HANDLE, UserHandle.class);

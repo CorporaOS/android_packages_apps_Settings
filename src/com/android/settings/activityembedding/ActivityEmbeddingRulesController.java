@@ -22,16 +22,16 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.util.FeatureFlagUtils;
-import android.util.LayoutDirection;
 import android.util.Log;
 
 import androidx.window.embedding.ActivityFilter;
 import androidx.window.embedding.ActivityRule;
+import androidx.window.embedding.SplitAttributes;
 import androidx.window.embedding.SplitController;
 import androidx.window.embedding.SplitPairFilter;
 import androidx.window.embedding.SplitPairRule;
 import androidx.window.embedding.SplitPlaceholderRule;
-import androidx.window.embedding.SplitRule;
+import androidx.window.embedding.SplitRule.FinishBehavior;
 
 import com.android.settings.Settings;
 import com.android.settings.SettingsActivity;
@@ -85,8 +85,8 @@ public class ActivityEmbeddingRulesController {
             ComponentName primaryComponent,
             ComponentName secondaryComponent,
             String secondaryIntentAction,
-            int finishPrimaryWithSecondary,
-            int finishSecondaryWithPrimary,
+            FinishBehavior finishPrimaryWithSecondary,
+            FinishBehavior finishSecondaryWithPrimary,
             boolean clearTop) {
         if (!ActivityEmbeddingUtils.isEmbeddingActivityEnabled(context)) {
             return;
@@ -95,14 +95,19 @@ public class ActivityEmbeddingRulesController {
         filters.add(new SplitPairFilter(primaryComponent, secondaryComponent,
                 secondaryIntentAction));
 
-        SplitController.getInstance().registerRule(new SplitPairRule(filters,
-                finishPrimaryWithSecondary,
-                finishSecondaryWithPrimary,
-                clearTop,
+        SplitController.getInstance().addRule(new SplitPairRule.Builder(filters,
                 ActivityEmbeddingUtils.getMinCurrentScreenSplitWidthPx(context),
-                ActivityEmbeddingUtils.getMinSmallestScreenSplitWidthPx(context),
-                ActivityEmbeddingUtils.getSplitRatio(context),
-                LayoutDirection.LOCALE));
+                0, /* minHeight */
+                ActivityEmbeddingUtils.getMinSmallestScreenSplitWidthPx(context))
+                .setFinishPrimaryWithSecondary(finishPrimaryWithSecondary)
+                .setFinishSecondaryWithPrimary(finishSecondaryWithPrimary)
+                .setClearTop(clearTop)
+                .setDefaultSplitAttributes(new SplitAttributes.Builder()
+                        .setSplitType(SplitAttributes.SplitType.ratio(
+                                ActivityEmbeddingUtils.getSplitRatio(context)))
+                        .setLayoutDirection(SplitAttributes.LayoutDirection.LOCALE)
+                        .build())
+                .build());
     }
 
     /**
@@ -123,8 +128,8 @@ public class ActivityEmbeddingRulesController {
                 new ComponentName(context, Settings.class),
                 secondaryComponent,
                 secondaryIntentAction,
-                finishPrimaryWithSecondary ? SplitRule.FINISH_ADJACENT : SplitRule.FINISH_NEVER,
-                finishSecondaryWithPrimary ? SplitRule.FINISH_ADJACENT : SplitRule.FINISH_NEVER,
+                finishPrimaryWithSecondary ? FinishBehavior.ADJACENT : FinishBehavior.NEVER,
+                finishSecondaryWithPrimary ? FinishBehavior.ADJACENT : FinishBehavior.NEVER,
                 clearTop);
 
         registerTwoPanePairRule(
@@ -132,8 +137,8 @@ public class ActivityEmbeddingRulesController {
                 new ComponentName(context, SettingsHomepageActivity.class),
                 secondaryComponent,
                 secondaryIntentAction,
-                finishPrimaryWithSecondary ? SplitRule.FINISH_ADJACENT : SplitRule.FINISH_NEVER,
-                finishSecondaryWithPrimary ? SplitRule.FINISH_ADJACENT : SplitRule.FINISH_NEVER,
+                finishPrimaryWithSecondary ? FinishBehavior.ADJACENT : FinishBehavior.NEVER,
+                finishSecondaryWithPrimary ? FinishBehavior.ADJACENT : FinishBehavior.NEVER,
                 clearTop);
 
         // We should finish HomePageActivity altogether even if it shows in single pane for all deep
@@ -143,8 +148,8 @@ public class ActivityEmbeddingRulesController {
                 new ComponentName(context, DeepLinkHomepageActivity.class),
                 secondaryComponent,
                 secondaryIntentAction,
-                finishPrimaryWithSecondary ? SplitRule.FINISH_ALWAYS : SplitRule.FINISH_NEVER,
-                finishSecondaryWithPrimary ? SplitRule.FINISH_ALWAYS : SplitRule.FINISH_NEVER,
+                finishPrimaryWithSecondary ? FinishBehavior.ALWAYS : FinishBehavior.NEVER,
+                finishSecondaryWithPrimary ? FinishBehavior.ALWAYS : FinishBehavior.NEVER,
                 clearTop);
 
         registerTwoPanePairRule(
@@ -152,8 +157,8 @@ public class ActivityEmbeddingRulesController {
                 new ComponentName(context, DeepLinkHomepageActivityInternal.class),
                 secondaryComponent,
                 secondaryIntentAction,
-                finishPrimaryWithSecondary ? SplitRule.FINISH_ALWAYS : SplitRule.FINISH_NEVER,
-                finishSecondaryWithPrimary ? SplitRule.FINISH_ALWAYS : SplitRule.FINISH_NEVER,
+                finishPrimaryWithSecondary ? FinishBehavior.ALWAYS : FinishBehavior.NEVER,
+                finishSecondaryWithPrimary ? FinishBehavior.ALWAYS : FinishBehavior.NEVER,
                 clearTop);
     }
 
@@ -204,17 +209,22 @@ public class ActivityEmbeddingRulesController {
 
         final Intent intent = new Intent(mContext, Settings.NetworkDashboardActivity.class);
         intent.putExtra(SettingsActivity.EXTRA_IS_SECOND_LAYER_PAGE, true);
-        final SplitPlaceholderRule placeholderRule = new SplitPlaceholderRule(
+        final SplitPlaceholderRule placeholderRule = new SplitPlaceholderRule.Builder(
                 activityFilters,
                 intent,
-                true /* stickyPlaceholder */,
-                SplitRule.FINISH_ADJACENT,
                 ActivityEmbeddingUtils.getMinCurrentScreenSplitWidthPx(mContext),
-                ActivityEmbeddingUtils.getMinSmallestScreenSplitWidthPx(mContext),
-                ActivityEmbeddingUtils.getSplitRatio(mContext),
-                LayoutDirection.LOCALE);
+                0, /* minHeight */
+                ActivityEmbeddingUtils.getMinSmallestScreenSplitWidthPx(mContext))
+                .setFinishPrimaryWithPlaceholder(FinishBehavior.ADJACENT)
+                .setSticky(true)
+                .setDefaultSplitAttributes(new SplitAttributes.Builder()
+                        .setSplitType(SplitAttributes.SplitType.ratio(
+                                ActivityEmbeddingUtils.getSplitRatio(mContext)))
+                        .setLayoutDirection(SplitAttributes.LayoutDirection.LOCALE)
+                        .build())
+                .build();
 
-        mSplitController.registerRule(placeholderRule);
+        mSplitController.addRule(placeholderRule);
     }
 
     private void registerAlwaysExpandRule() {
@@ -229,7 +239,8 @@ public class ActivityEmbeddingRulesController {
         addActivityFilter(activityFilters, FingerprintEnrollIntroductionInternal.class);
         addActivityFilter(activityFilters, FingerprintEnrollEnrolling.class);
         addActivityFilter(activityFilters, AvatarPickerActivity.class);
-        mSplitController.registerRule(new ActivityRule(activityFilters, true /* alwaysExpand */));
+        mSplitController.addRule(new ActivityRule.Builder(activityFilters)
+                .setAlwaysExpand(true).build());
     }
 
     private static void addActivityFilter(Set<ActivityFilter> activityFilters, Intent intent) {
