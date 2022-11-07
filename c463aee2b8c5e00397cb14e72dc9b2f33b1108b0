@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7523efe6_c08c1b40",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2022-11-07T08:52:54Z",
+      "side": 1,
+      "message": "Shen, would like to learn more this cl.\n\nDo we have a good understanding why a nullptr is passed in in this case?",
+      "revId": "c463aee2b8c5e00397cb14e72dc9b2f33b1108b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
