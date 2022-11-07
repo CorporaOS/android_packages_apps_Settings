@@ -16,6 +16,24 @@
       "message": "Shen, would like to learn more this cl.\n\nDo we have a good understanding why a nullptr is passed in in this case?",
       "revId": "c463aee2b8c5e00397cb14e72dc9b2f33b1108b0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c24496b_97203585",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2022-11-07T09:24:00Z",
+      "side": 1,
+      "message": "Hi Tsung-Mao,\n\nI\u0027m not the origin author to write like this. Actually it looks like that it was you who contributed this solution for the first time? \n\nSee: https://cs.android.com/android/_/android/platform/packages/apps/Settings/+/e858691cfc05cfcc23fc79cde2344a20f5f27821:src/com/android/settings/widget/HighlightablePreferenceGroupAdapter.java;dlc\u003d123422c99cf3d7968e7d1bc5277d3a5f567140a6\n\nAs far as I know, there was a time when this exception for recyclerview was a common problem, and we can easily find discussion on the community like this https://stackoverflow.com/questions/30078834/recyclerview-gets-crashed-illegalargumentexception-when-use-notifyitemchanged, so I guess we fixed the bug then by referring to this post like this? My CL is just a modification of the call timing based on yours.\n\nFrom now on, I actually think the fundamental solution to this problem will be: https://android-review.googlesource.com/c/platform/packages/apps/Settings/+/2263782 . We verified it internally for a long time and the problem no longer occurs. Meanwhile, I have not enough evidence to prove that `recyclerView.setItemAnimator(null);` is no longer useful for solving this problem, maybe we should keep it unless we find obvious side effects.",
+      "parentUuid": "7523efe6_c08c1b40",
+      "revId": "c463aee2b8c5e00397cb14e72dc9b2f33b1108b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
