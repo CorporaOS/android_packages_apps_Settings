@@ -3273,6 +3273,7 @@
     <string name="sim_lock_settings">SIM lock settings</string>
     <!-- Security & screen lock settings screen, SIM lock setting option name  [CHAR LIMIT=40] -->
     <string name="sim_lock_settings_category">SIM lock</string>
+<<<<<<< HEAD
     <!-- Security & screen lock settings screen, SIM card lock setting summary when off [CHAR LIMIT=NONE] -->
     <string name="sim_lock_settings_summary_off">Off</string>
     <!-- Security & screen lock settings screen, SIM card lock setting summary when on [CHAR LIMIT=NONE] -->
@@ -3289,13 +3290,21 @@
     <string name="sim_lock_off" product="tablet">Require PIN to use tablet</string>
     <!-- SIM card lock settings screen, setting option summary text when SIM lock check box is clear  [CHAR LIMIT=40] -->
     <string name="sim_lock_off" product="default">Require PIN to use phone</string>
+=======
+    <!-- SIM lock settings screen, setting check box label  [CHAR LIMIT=40] -->
+    <string name="sim_pin_toggle">Lock SIM</string>
+>>>>>>> ecdfe28bd2 ([Android U][eSIM] Modify esim and sim card strings as part of esim primary)
     <!-- SIM card lock settings screen, setting option name to change the SIM PIN  [CHAR LIMIT=40] -->
     <string name="sim_pin_change">Change SIM PIN</string>
     <!-- SIM card lock settings screen, SIM PIN dialog message instruction  [CHAR LIMIT=40] -->
     <string name="sim_enter_pin">SIM PIN</string>
     <!-- SIM lock settings screen, SIM PIN dialog message instruction  [CHAR LIMIT=40] -->
     <string name="sim_enable_sim_lock">Lock SIM</string>
+<<<<<<< HEAD
     <!-- SIM card settings screen, SIM PIN dialog message instruction  [CHAR LIMIT=40] -->
+=======
+    <!-- SIM lock settings screen, SIM PIN dialog message instruction  [CHAR LIMIT=40] -->
+>>>>>>> ecdfe28bd2 ([Android U][eSIM] Modify esim and sim card strings as part of esim primary)
     <string name="sim_disable_sim_lock">Unlock SIM</string>
     <!-- SIM card lock settings screen, SIM PIN dialog message instruction  [CHAR LIMIT=40] -->
     <string name="sim_enter_old">Old SIM PIN</string>
@@ -10270,7 +10279,43 @@
     <!-- [CHAR LIMIT=60] turn eSim deletion confirmation on/off  -->
     <string name="confirm_sim_deletion_title">Confirm SIM deletion</string>
     <!-- [CHAR LIMIT=NONE] eSim deletion confirmation description  -->
+<<<<<<< HEAD
     <string name="confirm_sim_deletion_description">Verify it\u0027s you before erasing an eSIM</string>
+=======
+    <string name="confirm_sim_deletion_description">Verify it\u0027s you before erasing a eSIM</string>
+
+    <!-- TODO(b/258550150): Finalize all strings in this section and remove translatable="false" -->
+    <!-- [CHAR LIMIT=32] Name of Advanced memory protection page in "More Security Settings" and heading of page. -->
+    <string name="memtag_title" translatable="false">Advanced memory protection</string>
+    <!-- [CHAR LIMIT=52] Label for button to turn on / off Advanced memory protection.-->
+    <string name="memtag_toggle" translatable="false">Try Advanced memory protection</string>
+    <!-- [CHAR LIMIT=NONE] Subtitle of Advanced memory protection page. -->
+    <string name="memtag_intro" translatable="false">This beta feature helps you protect your device from bugs that may put your security at risk.</string>
+    <!-- [CHAR LIMIT=NONE] Status label indicating that Advanced memory protection is on. -->
+    <string name="memtag_on" translatable="false">On</string>
+    <!-- [CHAR LIMIT=37] Status label indicating that Advanced memory protection is off. -->
+    <string name="memtag_off" translatable="false">Off</string>
+    <!-- [CHAR LIMIT=37] Status label indicating that system needs to be rebooted for Advanced memory protection to be on. -->
+    <string name="memtag_on_pending" translatable="false">On after restart</string>
+    <!-- [CHAR LIMIT=37] Status label indicating that system needs to be rebooted for Advanced memory protection to be off. -->
+    <string name="memtag_off_pending" translatable="false">Off after restart</string>
+    <!-- [CHAR LIMIT=37] Status label indicating that Advanced memory protection was forced off via remote device configuration. -->
+    <string name="memtag_force_off" translatable="false">Currently unavailable for your device.</string>
+    <!-- [CHAR LIMIT=NONE] Subtext on page to control Advanced memory protection settings. -->
+    <string name="memtag_footer" translatable="false">You\u0027ll have to restart your device to turn Advanced memory protection on or off. When it\u0027s on, you may notice slower device performance.</string>
+    <!-- [CHAR LIMIT=31] Header of dialog asking user to reboot device. -->
+    <string name="memtag_reboot_title" translatable="false">Restart device?</string>
+    <!-- [CHAR LIMIT=NONE] Message shown in dialog prompting user to reboot device to turn on Advanced memory protection.-->
+    <string name="memtag_reboot_message_on" translatable="false">You\u0027ll need to restart your device to turn on Advanced memory protection.</string>
+    <!-- [CHAR LIMIT=NONE] Message shown in dialog prompting user to reboot device to turn off Advanced memory protection.-->
+    <string name="memtag_reboot_message_off" translatable="false">You\u0027ll need to restart your device to turn off Advanced memory protection.</string>
+    <!-- [CHAR LIMIT=17] Button label in dialog prompting user to reboot device.-->
+    <string name="memtag_reboot_yes" translatable="false">Restart</string>
+    <!-- [CHAR LIMIT=17] Button label in dialog prompting user to reboot device.-->
+    <string name="memtag_reboot_no" translatable="false">Not now</string>
+    <!-- [CHAR LIMIT=NONE] Label for Learn More link. -->
+    <string name="memtag_learn_more" translatable="false">Learn more about Advanced memory protection.</string>
+>>>>>>> ecdfe28bd2 ([Android U][eSIM] Modify esim and sim card strings as part of esim primary)
 
     <!-- Opening string on the dialog that prompts the user to confirm that they really want to delete their existing work profile. The administration app icon and name appear after the final colon. [CHAR LIMIT=NONE] -->
     <string name="opening_paragraph_delete_profile_unknown_company">This work profile is managed by:</string>
@@ -13649,7 +13694,11 @@
     <!-- Provider Model: title of eSIM category. [CHAR LIMIT=50] -->
     <string name="downloaded_sim_category_title">eSIM</string>
     <!-- Provider Model: title of eSIMs category. [CHAR LIMIT=50] -->
+<<<<<<< HEAD
     <string name="downloaded_sims_category_title">eSIMS</string>
+=======
+    <string name="downloaded_sims_category_title">eSIMs</string>
+>>>>>>> ecdfe28bd2 ([Android U][eSIM] Modify esim and sim card strings as part of esim primary)
     <!-- Provider Model: summary of Active in SIM category. [CHAR LIMIT=50] -->
     <string name="sim_category_active_sim">Active</string>
     <!-- Provider Model: summary of Inactive in SIM category. [CHAR LIMIT=50] -->
@@ -13846,6 +13895,7 @@
     <!-- Content description of preview pager in colors preview -->
     <string name="colors_viewpager_content_description">Color preview</string>
 
+<<<<<<< HEAD
     <!-- Bluetooth sim card permission alert for notification title [CHAR LIMIT=none] -->
     <string name="bluetooth_sim_card_access_notification_title">SIM access request</string>
     <!-- Bluetooth sim card permission alert for notification content [CHAR LIMIT=none] -->
@@ -13853,6 +13903,15 @@
     <!-- Bluetooth sim card permission alert for dialog title [CHAR LIMIT=none] -->
     <string name="bluetooth_sim_card_access_dialog_title">Allow access to SIM?</string>
     <!-- Bluetooth sim card permission alert for dialog content [CHAR LIMIT=none] -->
+=======
+    <!-- Bluetooth sim permission alert for notification title [CHAR LIMIT=none] -->
+    <string name="bluetooth_sim_card_access_notification_title">SIM access request</string>
+    <!-- Bluetooth sim permission alert for notification content [CHAR LIMIT=none] -->
+    <string name="bluetooth_sim_card_access_notification_content">A device wants to access your SIM. Tap for details.</string>
+    <!-- Bluetooth sim permission alert for dialog title [CHAR LIMIT=none] -->
+    <string name="bluetooth_sim_card_access_dialog_title">Allow access to SIM?</string>
+    <!-- Bluetooth sim permission alert for dialog content [CHAR LIMIT=none] -->
+>>>>>>> ecdfe28bd2 ([Android U][eSIM] Modify esim and sim card strings as part of esim primary)
     <string name="bluetooth_sim_card_access_dialog_content">A Bluetooth device, <xliff:g id="device_name" example="My device">%1$s</xliff:g>, wants to access data from your SIM. This includes your contacts.\n\nWhile connected, <xliff:g id="device_name" example="My device">%2$s</xliff:g> will receive all calls made to <xliff:g id="phone_number" example="0912345678">%3$s</xliff:g>.</string>
     <!-- Bluetooth connect permission alert for notification title [CHAR LIMIT=none] -->
     <string name="bluetooth_connect_access_notification_title">Bluetooth device available</string>
