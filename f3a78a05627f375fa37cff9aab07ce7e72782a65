@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b4b7f088_c9fbd2fa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367652
+      },
+      "writtenOn": "2022-11-08T14:26:40Z",
+      "side": 1,
+      "message": "Thanks for contributing this CL.\n\nPlease fix WifiP2pSettingsTest#beSearching_getP2pStateEnabledIntent_shouldBeFalse unit test failure within the same CL.\n\nE.g. correct it as following.\n    @Test\n    public void onReceive_getP2pStateEnabledIntent_searchingIsTrue() {\n        final Bundle bundle \u003d new Bundle();\n        final Intent intent \u003d new Intent(WifiP2pManager.WIFI_P2P_STATE_CHANGED_ACTION);\n        bundle.putInt(WifiP2pManager.EXTRA_WIFI_STATE, WifiP2pManager.WIFI_P2P_STATE_ENABLED);\n        intent.putExtras(bundle);\n\n        mFragment.mReceiver.onReceive(mContext, intent);\n\n        assertThat(mFragment.mWifiP2pSearching).isTrue();\n    }\n\n    @Test\n    public void onReceive_getP2pStateDisabledIntent_searchingIsFalse() {\n        final Bundle bundle \u003d new Bundle();\n        final Intent intent \u003d new Intent(WifiP2pManager.WIFI_P2P_STATE_CHANGED_ACTION);\n        bundle.putInt(WifiP2pManager.EXTRA_WIFI_STATE, WifiP2pManager.WIFI_P2P_STATE_DISABLED);\n        intent.putExtras(bundle);\n\n        mFragment.mReceiver.onReceive(mContext, intent);\n\n        assertThat(mFragment.mWifiP2pSearching).isFalse();\n    }",
+      "revId": "f3a78a05627f375fa37cff9aab07ce7e72782a65",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
