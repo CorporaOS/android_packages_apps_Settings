@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "282faed8_604b4454",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1393882
+      },
+      "writtenOn": "2022-11-09T03:30:01Z",
+      "side": 1,
+      "message": "Wrap text at 72 characters.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 128
+      },
+      "revId": "0ef58eb53f971603fcfe0ac2ac612137daf40c86",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "88124a43_d09ca91a",
         "filename": "/COMMIT_MSG",
         "patchSetId": 5
