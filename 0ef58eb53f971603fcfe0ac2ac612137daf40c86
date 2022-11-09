@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88124a43_d09ca91a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1393882
+      },
+      "writtenOn": "2022-11-09T03:26:34Z",
+      "side": 1,
+      "message": "Please file a bug and add into this commit message.\nBug: xxxxx",
+      "revId": "0ef58eb53f971603fcfe0ac2ac612137daf40c86",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
