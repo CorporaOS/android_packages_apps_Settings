@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bfd3b3c1_adcb4ff2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1332604
+      },
+      "writtenOn": "2022-11-10T17:32:33Z",
+      "side": 1,
+      "message": "@pyuli@google.com\n\nHi Pyuli,\n\nThis CL has changed the main logic of the AppAllServicesPreferenceController, could you please review the change? Thank you!",
+      "revId": "e8a0ba688b5cb713d840467e773058d5f1b83185",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
