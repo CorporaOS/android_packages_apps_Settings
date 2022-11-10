@@ -16,6 +16,23 @@
       "message": "@pyuli@google.com\n\nHi Pyuli,\n\nThis CL has changed the main logic of the AppAllServicesPreferenceController, could you please review the change? Thank you!",
       "revId": "e8a0ba688b5cb713d840467e773058d5f1b83185",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "53e81214_b99e35b4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1877870
+      },
+      "writtenOn": "2022-11-10T21:17:32Z",
+      "side": 1,
+      "message": "Thanks for the fix.",
+      "revId": "e8a0ba688b5cb713d840467e773058d5f1b83185",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
