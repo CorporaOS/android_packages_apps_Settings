@@ -35,6 +35,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 
 import com.android.settings.R;
+import com.android.settings.network.SubscriptionUtil;
 import com.android.settings.network.telephony.SubscriptionActionDialogActivity;
 
 import java.util.List;
@@ -64,6 +65,12 @@ public class SimDialogActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (!SubscriptionUtil.isSimHardwareVisible(this)) {
+            Log.d(TAG, "Not support on device without SIM.");
+            finish();
+            return;
+        }
 
         getWindow().addSystemFlags(
                 WindowManager.LayoutParams.SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
