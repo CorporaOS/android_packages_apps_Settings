@@ -34,6 +34,24 @@
       "parentUuid": "b4b7f088_c9fbd2fa",
       "revId": "f3a78a05627f375fa37cff9aab07ce7e72782a65",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f255ecb_5fa5b63a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1947928
+      },
+      "writtenOn": "2022-11-16T06:34:53Z",
+      "side": 1,
+      "message": "Modify beSearching_getP2pStateEnabledIntent_shouldBeFalse to beSearching_getP2pStateEnabledIntent_shouldBeTrue, and add method of beSearching_getP2pStateDisabledIntent_shouldBeFalse to test DisabledIntent.\n\nPlease help to check if it is reasonable. Thanks.\n(If I can\u0027t modify the robotests code, I can try to use other ways to fix this problem, thanks.)\n\nTest Result:\n[ 96% 24/25] host Robolectric: RunSettingsRoboTests9\nninja: output file missing after successful execution: out/target/product/generic_arm64/obj/ROBOLECTRIC/RunSettingsRoboTests9_intermediates/test-nocache\n[100% 25/25] build out/target/product/generic_arm64/obj/ROBOLECTRIC/RunSettingsRoboTests9_intermediates/test.fake\nRunSettingsRoboTests9: \nRunSettingsRoboTests9: Time: 21.411\nRunSettingsRoboTests9: \nRunSettingsRoboTests9: OK (42 tests)\nRunSettingsRoboTests9:",
+      "parentUuid": "9cfed8e3_193be33d",
+      "revId": "f3a78a05627f375fa37cff9aab07ce7e72782a65",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
