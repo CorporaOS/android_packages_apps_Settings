@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "73258e4e_e8731169",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-11-16T06:37:17Z",
+      "side": 1,
+      "message": "Hi, please help with this code review. Thanks.",
+      "revId": "bd58ac4b6c14e2df6e412dd7a022809d6f88f0d5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
