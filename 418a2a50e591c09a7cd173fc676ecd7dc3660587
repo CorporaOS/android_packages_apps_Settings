@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa8fb319_f35c8a0d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1884015
+      },
+      "writtenOn": "2022-11-16T13:00:36Z",
+      "side": 1,
+      "message": "Requires: https://android-review.googlesource.com/c/platform/frameworks/base/+/2304273",
+      "revId": "418a2a50e591c09a7cd173fc676ecd7dc3660587",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
