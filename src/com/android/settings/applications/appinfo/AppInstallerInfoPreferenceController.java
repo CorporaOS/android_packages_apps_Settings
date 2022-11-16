@@ -47,6 +47,10 @@ public class AppInstallerInfoPreferenceController extends AppInfoPreferenceContr
             return DISABLED_FOR_USER;
         }
 
+        if (AppUtils.isBookmarkApp(mPackageName)) {
+            return DISABLED_FOR_USER;
+        }
+
         return mInstallerLabel != null ? AVAILABLE : DISABLED_FOR_USER;
     }
 
