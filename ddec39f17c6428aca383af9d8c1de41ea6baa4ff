@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9eb1b00b_421907c7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-11-17T06:16:36Z",
+      "side": 1,
+      "message": "Very sorry for not resolving the failure of presubmit verification for a while.\nI\u0027m still working with some other colleagues to resolve this situation.",
+      "revId": "ddec39f17c6428aca383af9d8c1de41ea6baa4ff",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
