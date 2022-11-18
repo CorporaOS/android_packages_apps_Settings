@@ -39,6 +39,30 @@
       },
       "revId": "15d25be8e8bb42f557c4f5d7fd6be56b68cec9d0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95650a79_a82cdeed",
+        "filename": "src/com/android/settings/ResetNetwork.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-11-18T08:38:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "92025095_d18425aa",
+      "range": {
+        "startLine": 285,
+        "startChar": 8,
+        "endLine": 285,
+        "endChar": 22
+      },
+      "revId": "15d25be8e8bb42f557c4f5d7fd6be56b68cec9d0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
