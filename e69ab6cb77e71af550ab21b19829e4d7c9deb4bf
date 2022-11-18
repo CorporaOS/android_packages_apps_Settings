@@ -16,6 +16,29 @@
       "message": "Look good to me.",
       "revId": "e69ab6cb77e71af550ab21b19829e4d7c9deb4bf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "71d091f2_24957295",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 10273,
+      "author": {
+        "id": 1976987
+      },
+      "writtenOn": "2022-11-18T17:13:22Z",
+      "side": 1,
+      "message": "Can we please change this to \"an eSIM\"?",
+      "range": {
+        "startLine": 10273,
+        "startChar": 88,
+        "endLine": 10273,
+        "endChar": 94
+      },
+      "revId": "e69ab6cb77e71af550ab21b19829e4d7c9deb4bf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
