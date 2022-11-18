@@ -16,6 +16,29 @@
       "message": "Hi, can you help with this code review ? Thanks.",
       "revId": "15d25be8e8bb42f557c4f5d7fd6be56b68cec9d0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "92025095_d18425aa",
+        "filename": "src/com/android/settings/ResetNetwork.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2022-11-18T08:28:06Z",
+      "side": 1,
+      "message": "We are hard to know it is null from the log. Could you help to add the log to know whether mContentView is assigned or not.",
+      "range": {
+        "startLine": 285,
+        "startChar": 8,
+        "endLine": 285,
+        "endChar": 22
+      },
+      "revId": "15d25be8e8bb42f557c4f5d7fd6be56b68cec9d0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
