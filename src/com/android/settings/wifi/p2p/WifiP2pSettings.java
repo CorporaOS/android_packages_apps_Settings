@@ -76,7 +76,7 @@ public class WifiP2pSettings extends DashboardFragment
 
     private final IntentFilter mIntentFilter = new IntentFilter();
     @VisibleForTesting WifiP2pManager mWifiP2pManager;
-    @VisibleForTesting WifiP2pManager.Channel mChannel;
+    @VisibleForTesting static WifiP2pManager.Channel mChannel;
     @VisibleForTesting OnClickListener mRenameListener;
     @VisibleForTesting OnClickListener mDisconnectListener;
     @VisibleForTesting OnClickListener mCancelConnectListener;
