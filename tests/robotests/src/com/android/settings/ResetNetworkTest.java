@@ -55,8 +55,8 @@ public class ResetNetworkTest {
         mResetNetwork.showFinalConfirmation();
 
         Intent intent = shadowOf(mActivity).getNextStartedActivity();
-        assertThat(intent.getBundleExtra(SettingsActivity.EXTRA_SHOW_FRAGMENT_ARGUMENTS)
-                .getBoolean(MainClear.ERASE_ESIMS_EXTRA, false)).isTrue();
+        assertThat(intent.getStringExtra(ResetNetworkRequest.KEY_ESIM_PACKAGE))
+                .isNotNull();
     }
 
     @Test
@@ -67,8 +67,8 @@ public class ResetNetworkTest {
         mResetNetwork.showFinalConfirmation();
 
         Intent intent = shadowOf(mActivity).getNextStartedActivity();
-        assertThat(intent.getBundleExtra(SettingsActivity.EXTRA_SHOW_FRAGMENT_ARGUMENTS)
-                .getBoolean(MainClear.ERASE_ESIMS_EXTRA, false)).isFalse();
+        assertThat(intent.getStringExtra(ResetNetworkRequest.KEY_ESIM_PACKAGE))
+                .isNull();
     }
 
     @Test
@@ -79,8 +79,8 @@ public class ResetNetworkTest {
         mResetNetwork.showFinalConfirmation();
 
         Intent intent = shadowOf(mActivity).getNextStartedActivity();
-        assertThat(intent.getBundleExtra(SettingsActivity.EXTRA_SHOW_FRAGMENT_ARGUMENTS)
-                .getBoolean(MainClear.ERASE_ESIMS_EXTRA, false)).isFalse();
+        assertThat(intent.getStringExtra(ResetNetworkRequest.KEY_ESIM_PACKAGE))
+                .isNull();
     }
 
     @Test
@@ -91,7 +91,7 @@ public class ResetNetworkTest {
         mResetNetwork.showFinalConfirmation();
 
         Intent intent = shadowOf(mActivity).getNextStartedActivity();
-        assertThat(intent.getBundleExtra(SettingsActivity.EXTRA_SHOW_FRAGMENT_ARGUMENTS)
-                .getBoolean(MainClear.ERASE_ESIMS_EXTRA, false)).isFalse();
+        assertThat(intent.getStringExtra(ResetNetworkRequest.KEY_ESIM_PACKAGE))
+                .isNull();
     }
 }
