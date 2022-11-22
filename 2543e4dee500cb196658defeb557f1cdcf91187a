@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5fe6ffc6_7735172b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1964555
+      },
+      "writtenOn": "2022-11-22T09:56:37Z",
+      "side": 1,
+      "message": "Hi @bonianchen@google.com, can you please add the link to the breakage (https://android-build.googleplex.com/builds/quarterdeck?branch\u003daosp-master\u0026target\u003dfull-eng\u0026lkgb\u003d9318824\u0026lkbb\u003d9318826\u0026fkbb\u003d9318826) and the bug id (260055628) in the description, as well as in the BUG: tag?",
+      "revId": "2543e4dee500cb196658defeb557f1cdcf91187a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
