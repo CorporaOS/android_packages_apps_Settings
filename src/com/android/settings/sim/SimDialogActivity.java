@@ -225,4 +225,15 @@ public class SimDialogActivity extends FragmentActivity {
         }
         return null;
     }
+
+    /*
+     * Force dismiss this Activity.
+     */
+    protected void forceClose() {
+        if (isFinishing() || isDestroyed()) {
+            return;
+        }
+        Log.d(TAG, "Dismissed by Service");
+        finishAndRemoveTask();
+    }
 }
