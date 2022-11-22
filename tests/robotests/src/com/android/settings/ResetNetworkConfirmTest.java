@@ -25,11 +25,15 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.content.Context;
+import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Looper;
 import android.view.LayoutInflater;
 import android.widget.TextView;
 
 import androidx.fragment.app.FragmentActivity;
+
+import com.android.settings.testutils.shadow.ShadowBluetoothAdapter;
+import com.android.settings.testutils.shadow.ShadowRecoverySystem;
 
 import org.junit.After;
 import org.junit.Before;
@@ -43,25 +47,78 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
 @RunWith(RobolectricTestRunner.class)
+@Config(shadows = {ShadowRecoverySystem.class, ShadowBluetoothAdapter.class})
 public class ResetNetworkConfirmTest {
+
+    private static final String TEST_PACKAGE = "com.android.settings";
 
     private FragmentActivity mActivity;
 
+    @Mock
+    private WifiP2pManager mWifiP2pManager;
     @Mock
     private ResetNetworkConfirm mResetNetworkConfirm;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
+        when(mWifiP2pManager.initialize(any(Context.class), any(Looper.class), any()))
+                .thenReturn(mock(WifiP2pManager.Channel.class));
 
         mResetNetworkConfirm = new ResetNetworkConfirm();
         mActivity = spy(Robolectric.setupActivity(FragmentActivity.class));
+        when(mActivity.getSystemService(Context.WIFI_P2P_SERVICE)).thenReturn(mWifiP2pManager);
         mResetNetworkConfirm.mActivity = mActivity;
+    }
+
+    @After
+    public void tearDown() {
+        ShadowRecoverySystem.reset();
+    }
+
+    @Test
+    public void testResetNetworkData_resetEsim() {
+        mResetNetworkConfirm.mResetNetworkRequest =
+                new ResetNetworkRequest(ResetNetworkRequest.RESET_NONE);
+        mResetNetworkConfirm.mResetNetworkRequest.setResetEsim(TEST_PACKAGE);
+
+        mResetNetworkConfirm.mFinalClickListener.onClick(null /* View */);
+        Robolectric.getBackgroundThreadScheduler().advanceToLastPostedRunnable();
+
+        assertThat(ShadowRecoverySystem.getWipeEuiccCalledCount()).isEqualTo(1);
+    }
+
+    @Test
+    public void testResetNetworkData_notResetEsim() {
+        mResetNetworkConfirm.mResetNetworkRequest =
+                new ResetNetworkRequest(ResetNetworkRequest.RESET_NONE);
+
+        mResetNetworkConfirm.mFinalClickListener.onClick(null /* View */);
+        Robolectric.getBackgroundThreadScheduler().advanceToLastPostedRunnable();
+
+        assertThat(ShadowRecoverySystem.getWipeEuiccCalledCount()).isEqualTo(0);
+    }
+
+    /**
+     * Test for WifiP2pManager factoryReset method.
+     */
+    @Test
+    public void testResetNetworkData_resetP2p() {
+        mResetNetworkConfirm.mResetNetworkRequest =
+                new ResetNetworkRequest(ResetNetworkRequest.RESET_WIFI_P2P_MANAGER);
+
+        mResetNetworkConfirm.mFinalClickListener.onClick(null /* View */);
+        Robolectric.getBackgroundThreadScheduler().advanceToLastPostedRunnable();
+
+        verify(mWifiP2pManager).factoryReset(any(WifiP2pManager.Channel.class), any());
     }
 
     @Test
     public void setSubtitle_eraseEsim() {
-        mResetNetworkConfirm.mEraseEsim = true;
+        mResetNetworkConfirm.mResetNetworkRequest =
+                new ResetNetworkRequest(ResetNetworkRequest.RESET_NONE);
+        mResetNetworkConfirm.mResetNetworkRequest.setResetEsim(TEST_PACKAGE);
+
         mResetNetworkConfirm.mContentView =
                 LayoutInflater.from(mActivity).inflate(R.layout.reset_network_confirm, null);
 
@@ -74,7 +131,9 @@ public class ResetNetworkConfirmTest {
 
     @Test
     public void setSubtitle_notEraseEsim() {
-        mResetNetworkConfirm.mEraseEsim = false;
+        mResetNetworkConfirm.mResetNetworkRequest =
+                new ResetNetworkRequest(ResetNetworkRequest.RESET_NONE);
+
         mResetNetworkConfirm.mContentView =
                 LayoutInflater.from(mActivity).inflate(R.layout.reset_network_confirm, null);
 
