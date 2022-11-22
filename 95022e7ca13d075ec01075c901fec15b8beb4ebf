@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e3ffea11_76ae6de6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1061009
+      },
+      "writtenOn": "2022-11-22T11:49:37Z",
+      "side": 1,
+      "message": "You\u0027re missing the `Merged-In: I45b7898da440c36045aec64a0a86fb804116cd9d` tag here from https://r.android.com/2299464. Please add, otherwise this will get merged to stage-aosp-master and cause a merge conflict.",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 52
+      },
+      "revId": "95022e7ca13d075ec01075c901fec15b8beb4ebf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
