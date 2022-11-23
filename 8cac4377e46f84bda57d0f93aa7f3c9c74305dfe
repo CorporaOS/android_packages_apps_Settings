@@ -33,6 +33,24 @@
       "message": "setResetTelephonyAndNetworkPolicyManager, setResetApn and writeIntoBundle will return ResetNetworkRequest, however the request here is not be used. So why do we return ResetNetworkRequest in this 3 APIs?",
       "revId": "8cac4377e46f84bda57d0f93aa7f3c9c74305dfe",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "22348b79_07671b0d",
+        "filename": "src/com/android/settings/ResetNetwork.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-11-23T05:18:39Z",
+      "side": 1,
+      "message": "Thanks for the reminding. This is to follow Builder model, and I\u0027ve fixed some of the code.",
+      "parentUuid": "610d526f_a6997276",
+      "revId": "8cac4377e46f84bda57d0f93aa7f3c9c74305dfe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
