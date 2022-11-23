@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ec1719e_c534293a",
+        "filename": "src/com/android/settings/wifi/p2p/WifiP2pSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1367652
+      },
+      "writtenOn": "2022-11-23T03:42:03Z",
+      "side": 1,
+      "message": "Please update to sChannel. Thanks!",
+      "range": {
+        "startLine": 79,
+        "startChar": 53,
+        "endLine": 79,
+        "endChar": 61
+      },
+      "revId": "fc8f6b45d4f88ef90bc42d4d72a9b806538b2b6a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
