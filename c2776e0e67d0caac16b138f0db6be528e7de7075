@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "49635a72_4584b59d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-11-23T12:54:14Z",
+      "side": 1,
+      "message": "Hi, please help to review this change of code refactor. Thanks.",
+      "revId": "c2776e0e67d0caac16b138f0db6be528e7de7075",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
