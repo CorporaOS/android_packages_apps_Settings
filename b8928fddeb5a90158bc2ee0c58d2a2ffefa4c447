@@ -41,6 +41,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9cf5719_b9c63b77",
+        "filename": "src/com/android/settings/ResetNetwork.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-11-23T12:31:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8a65df25_82626211",
+      "range": {
+        "startLine": 134,
+        "startChar": 0,
+        "endLine": 135,
+        "endChar": 49
+      },
+      "revId": "b8928fddeb5a90158bc2ee0c58d2a2ffefa4c447",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "86c8bd69_f15e8c31",
@@ -64,6 +88,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d91d127e_f90ee133",
+        "filename": "src/com/android/settings/ResetNetwork.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-11-23T12:31:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "86c8bd69_f15e8c31",
+      "range": {
+        "startLine": 138,
+        "startChar": 12,
+        "endLine": 138,
+        "endChar": 74
+      },
+      "revId": "b8928fddeb5a90158bc2ee0c58d2a2ffefa4c447",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "926f404f_537b0f27",
@@ -77,6 +125,30 @@
       "writtenOn": "2022-11-23T10:31:17Z",
       "side": 1,
       "message": "please update as  \nbuilder.resetConnectivityManager();\n\nPlease modify the others in the follwoing codes.",
+      "range": {
+        "startLine": 199,
+        "startChar": 12,
+        "endLine": 199,
+        "endChar": 57
+      },
+      "revId": "b8928fddeb5a90158bc2ee0c58d2a2ffefa4c447",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5463bc5_21faacbb",
+        "filename": "src/com/android/settings/ResetNetworkRequest.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-11-23T12:31:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "926f404f_537b0f27",
       "range": {
         "startLine": 199,
         "startChar": 12,
