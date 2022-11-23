@@ -65,8 +65,6 @@ public class SimDialogActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        SimDialogProhibitService.supportDismiss(this);
-
         getWindow().addSystemFlags(
                 WindowManager.LayoutParams.SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
         showOrUpdateDialog();
@@ -226,16 +224,5 @@ public class SimDialogActivity extends FragmentActivity {
             }
         }
         return null;
-    }
-
-    /*
-     * Force dismiss this Activity.
-     */
-    protected void forceClose() {
-        if (isFinishing() || isDestroyed()) {
-            return;
-        }
-        Log.d(TAG, "Dismissed by Service");
-        finishAndRemoveTask();
     }
 }
