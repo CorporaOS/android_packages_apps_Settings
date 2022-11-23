@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3ea78142_781fd93d",
+        "filename": "src/com/android/settings/wifi/NetworkRequestDialogFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 283,
+      "author": {
+        "id": 1367652
+      },
+      "writtenOn": "2022-11-23T20:32:55Z",
+      "side": 1,
+      "message": "This seems to be a project-private function, and it breaks the build. Can you help to check it again?",
+      "range": {
+        "startLine": 283,
+        "startChar": 24,
+        "endLine": 283,
+        "endChar": 54
+      },
+      "revId": "fd01967f79a93c11ac661902a0d868135dea1e9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
