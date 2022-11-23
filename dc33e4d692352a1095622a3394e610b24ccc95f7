@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e461207e_8fd079bf",
+        "filename": "src/com/android/settings/ResetNetwork.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2022-11-23T12:50:57Z",
+      "side": 1,
+      "message": "please replace codes as following\nrequest.setResetTelephonyAndNetworkPolicyManager(subId)\n                             .setResetApn(subId);",
+      "range": {
+        "startLine": 134,
+        "startChar": 12,
+        "endLine": 135,
+        "endChar": 49
+      },
+      "revId": "dc33e4d692352a1095622a3394e610b24ccc95f7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
