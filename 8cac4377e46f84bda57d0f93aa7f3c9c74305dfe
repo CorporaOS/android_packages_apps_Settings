@@ -51,6 +51,24 @@
       "parentUuid": "610d526f_a6997276",
       "revId": "8cac4377e46f84bda57d0f93aa7f3c9c74305dfe",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "37db20fb_b9d13b0c",
+        "filename": "src/com/android/settings/ResetNetwork.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1468646
+      },
+      "writtenOn": "2022-11-23T06:01:35Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "22348b79_07671b0d",
+      "revId": "8cac4377e46f84bda57d0f93aa7f3c9c74305dfe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
