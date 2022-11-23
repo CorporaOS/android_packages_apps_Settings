@@ -16,6 +16,75 @@
       "message": "e",
       "revId": "b8928fddeb5a90158bc2ee0c58d2a2ffefa4c447",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a65df25_82626211",
+        "filename": "src/com/android/settings/ResetNetwork.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2022-11-23T10:31:17Z",
+      "side": 1,
+      "message": "Could you repleace these code as follwong?\n            request.setResetTelephonyAndNetworkPolicyManager(subId);\n            request.setResetApn(subId);",
+      "range": {
+        "startLine": 134,
+        "startChar": 0,
+        "endLine": 135,
+        "endChar": 49
+      },
+      "revId": "b8928fddeb5a90158bc2ee0c58d2a2ffefa4c447",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "86c8bd69_f15e8c31",
+        "filename": "src/com/android/settings/ResetNetwork.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2022-11-23T10:31:17Z",
+      "side": 1,
+      "message": "ditto.",
+      "range": {
+        "startLine": 138,
+        "startChar": 12,
+        "endLine": 138,
+        "endChar": 74
+      },
+      "revId": "b8928fddeb5a90158bc2ee0c58d2a2ffefa4c447",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "926f404f_537b0f27",
+        "filename": "src/com/android/settings/ResetNetworkRequest.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2022-11-23T10:31:17Z",
+      "side": 1,
+      "message": "please update as  \nbuilder.resetConnectivityManager();\n\nPlease modify the others in the follwoing codes.",
+      "range": {
+        "startLine": 199,
+        "startChar": 12,
+        "endLine": 199,
+        "endChar": 57
+      },
+      "revId": "b8928fddeb5a90158bc2ee0c58d2a2ffefa4c447",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
