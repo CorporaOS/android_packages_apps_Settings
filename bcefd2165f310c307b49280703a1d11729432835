@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1d4df4bc_ee240dc0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1972300
+      },
+      "writtenOn": "2022-11-25T09:05:15Z",
+      "side": 1,
+      "message": "Because there are difference between summary and list, i modified to use not java\u0027s Locale but Android\u0027s LocaleHelper.",
+      "revId": "bcefd2165f310c307b49280703a1d11729432835",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
