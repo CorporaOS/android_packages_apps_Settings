@@ -16,6 +16,23 @@
       "message": "Because there are difference between summary and list, i modified to use not java\u0027s Locale but Android\u0027s LocaleHelper.",
       "revId": "bcefd2165f310c307b49280703a1d11729432835",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c48acaec_3df50db8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-11-25T11:54:06Z",
+      "side": 1,
+      "message": "Can you put a explicit example here to show what the difference of before and after is?\n\nE.g. :  \nbefore : English\nAfter : English XXXX",
+      "revId": "bcefd2165f310c307b49280703a1d11729432835",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
