@@ -251,6 +251,9 @@ public class ResetNetwork extends InstrumentedFragment {
     }
 
     private List<SubscriptionInfo> getActiveSubscriptionInfoList() {
+        if (!SubscriptionUtil.isSimHardwareVisible(getActivity())) {
+            return Collections.emptyList();
+        }
         SubscriptionManager mgr = getActivity().getSystemService(SubscriptionManager.class);
         if (mgr == null) {
             Log.w(TAG, "No SubscriptionManager");
@@ -280,6 +283,9 @@ public class ResetNetwork extends InstrumentedFragment {
     }
 
     private boolean showEuiccSettings(Context context) {
+        if (!SubscriptionUtil.isSimHardwareVisible(context)) {
+            return false;
+        }
         EuiccManager euiccManager =
                 (EuiccManager) context.getSystemService(Context.EUICC_SERVICE);
         if (!euiccManager.isEnabled()) {
