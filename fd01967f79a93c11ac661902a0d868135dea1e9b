@@ -22,6 +22,30 @@
       },
       "revId": "fd01967f79a93c11ac661902a0d868135dea1e9b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9bbe1a65_30fbd3d3",
+        "filename": "src/com/android/settings/wifi/NetworkRequestDialogFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 283,
+      "author": {
+        "id": 1944786
+      },
+      "writtenOn": "2022-11-28T01:32:06Z",
+      "side": 1,
+      "message": "ok\n\nAdd a fix change:\nhttps://android-review.googlesource.com/c/platform/frameworks/opt/net/wifi/+/2319249\nPlease help review.",
+      "parentUuid": "3ea78142_781fd93d",
+      "range": {
+        "startLine": 283,
+        "startChar": 24,
+        "endLine": 283,
+        "endChar": 54
+      },
+      "revId": "fd01967f79a93c11ac661902a0d868135dea1e9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
