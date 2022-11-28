@@ -18,8 +18,6 @@ package com.android.settings.deviceinfo.simstatus;
 
 import android.content.Context;
 import android.telephony.SubscriptionInfo;
-import android.telephony.SubscriptionManager;
-import android.telephony.TelephonyManager;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.fragment.app.Fragment;
@@ -37,47 +35,55 @@ import java.util.List;
 public class SimStatusPreferenceController extends
         AbstractSimStatusImeiInfoPreferenceController implements PreferenceControllerMixin {
 
-    private static final String KEY_SIM_STATUS = "sim_status";
+    public static final String KEY_SIM_STATUS = "sim_status";
     private static final String KEY_PREFERENCE_CATEGORY = "device_detail_category";
 
-    private final TelephonyManager mTelephonyManager;
-    private final SubscriptionManager mSubscriptionManager;
     private final Fragment mFragment;
     private final List<Preference> mPreferenceList = new ArrayList<>();
+
+    private SimStatusBySlot mSimStatusBySlot;
+    private int mSlotIndex;
 
     public SimStatusPreferenceController(Context context, Fragment fragment) {
         super(context);
 
-        mTelephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-        mSubscriptionManager = (SubscriptionManager) context.getSystemService(
-                Context.TELEPHONY_SUBSCRIPTION_SERVICE);
         mFragment = fragment;
+    }
+
+    public void setSimSlotStatus(SimStatusBySlot simStatus, int slotIndex) {
+        mSimStatusBySlot = simStatus;
+        mSlotIndex = slotIndex;
     }
 
     @Override
     public String getPreferenceKey() {
-        return KEY_SIM_STATUS;
+        if (mSimStatusBySlot == null) {
+            return KEY_SIM_STATUS;
+        }
+        return mSimStatusBySlot.getPreferenceKey(mSlotIndex);
     }
 
     @Override
     public void displayPreference(PreferenceScreen screen) {
         super.displayPreference(screen);
-        final Preference preference = screen.findPreference(getPreferenceKey());
+        final Preference preference = screen.findPreference(KEY_SIM_STATUS);
         if (!isAvailable() || preference == null || !preference.isVisible()) {
             return;
         }
         final PreferenceCategory category = screen.findPreference(KEY_PREFERENCE_CATEGORY);
 
-        mPreferenceList.add(preference);
-
         final int simStatusOrder = preference.getOrder();
+        screen.removePreference(preference);
+        preference.setVisible(false);
+
         // Add additional preferences for each sim in the device
-        for (int simSlotNumber = 1; simSlotNumber < mTelephonyManager.getPhoneCount();
+        for (int simSlotNumber = 0; simSlotNumber < mSimStatusBySlot.size();
                 simSlotNumber++) {
             final Preference multiSimPreference = createNewPreference(screen.getContext());
+            SubscriptionInfo subInfo = mSimStatusBySlot.getSubscriptionInfo(simSlotNumber);
             multiSimPreference.setCopyingEnabled(true);
-            multiSimPreference.setOrder(simStatusOrder + simSlotNumber);
-            multiSimPreference.setKey(KEY_SIM_STATUS + simSlotNumber);
+            multiSimPreference.setOrder(simStatusOrder + simSlotNumber + 1);
+            multiSimPreference.setKey(mSimStatusBySlot.getPreferenceKey(simSlotNumber));
             category.addPreference(multiSimPreference);
             mPreferenceList.add(multiSimPreference);
         }
@@ -104,19 +110,16 @@ public class SimStatusPreferenceController extends
     }
 
     private String getPreferenceTitle(int simSlot) {
-        return mTelephonyManager.getPhoneCount() > 1 ? mContext.getString(
+        return mSimStatusBySlot.size() > 1 ? mContext.getString(
                 R.string.sim_status_title_sim_slot, simSlot + 1) : mContext.getString(
                 R.string.sim_status_title);
     }
 
     private CharSequence getCarrierName(int simSlot) {
-        final List<SubscriptionInfo> subscriptionInfoList =
-                mSubscriptionManager.getActiveSubscriptionInfoList();
-        if (subscriptionInfoList != null) {
-            for (SubscriptionInfo info : subscriptionInfoList) {
-                if (info.getSimSlotIndex() == simSlot) {
-                    return info.getCarrierName();
-                }
+        SubscriptionInfo info = mSimStatusBySlot.getSubscriptionInfo(simSlot);
+        if (info != null) {
+            if (info.getSimSlotIndex() == simSlot) {
+                return info.getCarrierName();
             }
         }
         return mContext.getText(R.string.device_info_not_available);

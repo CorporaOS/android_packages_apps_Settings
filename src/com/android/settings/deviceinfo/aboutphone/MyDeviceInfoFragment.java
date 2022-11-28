@@ -40,6 +40,7 @@ import com.android.settings.deviceinfo.SafetyInfoPreferenceController;
 import com.android.settings.deviceinfo.UptimePreferenceController;
 import com.android.settings.deviceinfo.WifiMacAddressPreferenceController;
 import com.android.settings.deviceinfo.imei.ImeiInfoPreferenceController;
+import com.android.settings.deviceinfo.simstatus.SimStatusBySlot;
 import com.android.settings.deviceinfo.simstatus.SimStatusPreferenceController;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.widget.EntityHeaderController;
@@ -102,8 +103,23 @@ public class MyDeviceInfoFragment extends DashboardFragment
 
     private static List<AbstractPreferenceController> buildPreferenceControllers(
             Context context, MyDeviceInfoFragment fragment, Lifecycle lifecycle) {
+        SimStatusBySlot simStatus = SimStatusBySlot.get(context);
+
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
-        controllers.add(new SimStatusPreferenceController(context, fragment));
+
+        SimStatusPreferenceController defaultRecord =
+            new SimStatusPreferenceController(context, fragment);
+        defaultRecord.setSimSlotStatus(simStatus, -1);
+        controllers.add(defaultRecord);
+
+        for (int slotIndex=0; slotIndex < simStatus.size(); slotIndex ++) {
+            String prefKey = simStatus.getPreferenceKey(slotIndex);
+            SimStatusPreferenceController slotRecord =
+                new SimStatusPreferenceController(context, fragment);
+            slotRecord.setSimSlotStatus(simStatus, slotIndex);
+            controllers.add(slotRecord);
+        }
+
         controllers.add(new IpAddressPreferenceController(context, lifecycle));
         controllers.add(new WifiMacAddressPreferenceController(context, lifecycle));
         controllers.add(new BluetoothAddressPreferenceController(context, lifecycle));
