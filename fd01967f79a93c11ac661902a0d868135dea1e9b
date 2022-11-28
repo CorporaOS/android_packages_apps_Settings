@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "197500c1_ab29c067",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367652
+      },
+      "writtenOn": "2022-11-28T20:44:29Z",
+      "side": 1,
+      "message": "Please take a look the unit test below.\n\n```\n    @Test\n    public void onWifiStateChanged_nonEmptyMatchedScanResults_shouldUpdateWifiEntries() {\n        final InOrder inOrder \u003d inOrder(networkRequestDialogFragment);\n\n        final List\u003cScanResult\u003e scanResults \u003d new ArrayList\u003c\u003e();\n        networkRequestDialogFragment.mMatchedScanResults \u003d scanResults;\n        ScanResult scanResult \u003d mock(ScanResult.class);\n        when(scanResult.getSecurityTypes()).thenReturn(new int[0]);\n        networkRequestDialogFragment.mMatchedScanResults.add(scanResult);\n        networkRequestDialogFragment.onMatch(scanResults);\n\n        inOrder.verify(networkRequestDialogFragment).updateWifiEntries();\n        inOrder.verify(networkRequestDialogFragment).updateUi();\n    }\n```\n\nAdd one line to the unit test above.\n\n```\n        when(scanResult.getSecurityTypes()).thenReturn(new int[0]);\n```\n\nThanks!",
+      "parentUuid": "47bc9fdf_689344a4",
+      "revId": "fd01967f79a93c11ac661902a0d868135dea1e9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4d6ab159_d93a87e5",
         "filename": "src/com/android/settings/wifi/NetworkRequestDialogFragment.java",
         "patchSetId": 4
