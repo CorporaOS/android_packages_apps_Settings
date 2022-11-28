@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "065fdc40_a7b797e0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1387063
+      },
+      "writtenOn": "2022-11-28T07:40:28Z",
+      "side": 1,
+      "message": "Hi, can you help with the code review of this cherry-pick ? Thanks.",
+      "revId": "6477275296bc8cd398e7d65b72fc6088c87965ae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
