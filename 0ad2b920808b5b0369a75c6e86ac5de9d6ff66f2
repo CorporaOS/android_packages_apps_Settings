@@ -34,6 +34,24 @@
       "parentUuid": "ca5d286e_22fadcea",
       "revId": "0ad2b920808b5b0369a75c6e86ac5de9d6ff66f2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bcf3343f_2b49651c",
+        "filename": "src/com/android/settings/applications/appinfo/AppLocaleDetails.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1972300
+      },
+      "writtenOn": "2022-11-29T07:11:29Z",
+      "side": 1,
+      "message": "Thank you. I am wondering how to trigger pre-submission.\nDoes it run automatically after someone has reviewed and voted on it? Or is there something I need to do to get it running?",
+      "parentUuid": "96ec9be0_fd57b158",
+      "revId": "0ad2b920808b5b0369a75c6e86ac5de9d6ff66f2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
