@@ -16,6 +16,29 @@
       "message": "The above modification has a test item that reports an failed. After modifying the code, the test passes. \nPlease help to review code, thank!",
       "revId": "b853dc61df345193b7e2893e98189edd3da4ccb7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15548c90_7069061b",
+        "filename": "tests/robotests/src/com/android/settings/wifi/NetworkRequestDialogFragmentTest.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 1367652
+      },
+      "writtenOn": "2022-11-29T10:29:00Z",
+      "side": 1,
+      "message": "Add below as above.\n\n```\nwhen(scanResult.getSecurityTypes()).thenReturn(new int[0]);\n```",
+      "range": {
+        "startLine": 168,
+        "startChar": 0,
+        "endLine": 169,
+        "endChar": 73
+      },
+      "revId": "b853dc61df345193b7e2893e98189edd3da4ccb7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
