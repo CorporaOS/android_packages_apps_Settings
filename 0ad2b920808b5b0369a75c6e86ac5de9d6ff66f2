@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ca5d286e_22fadcea",
+        "filename": "src/com/android/settings/applications/appinfo/AppLocaleDetails.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1972300
+      },
+      "writtenOn": "2022-11-29T04:25:40Z",
+      "side": 1,
+      "message": "tomhsu@google.com\ngoldmanj@google.com\n\nSorry. I forgot to add this line.",
+      "revId": "0ad2b920808b5b0369a75c6e86ac5de9d6ff66f2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
