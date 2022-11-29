@@ -68,6 +68,24 @@
       "message": "Thanks for your review.",
       "revId": "bcefd2165f310c307b49280703a1d11729432835",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5bfd3beb_3c31c8c1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2022-11-29T02:47:45Z",
+      "side": 1,
+      "message": "Thanks for the information provided.\n\nI think it shall be LGTM.",
+      "parentUuid": "aa4ab9d8_81e5a14e",
+      "revId": "bcefd2165f310c307b49280703a1d11729432835",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
