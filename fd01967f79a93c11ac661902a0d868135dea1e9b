@@ -36,6 +36,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d364824_d277c92c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1944786
+      },
+      "writtenOn": "2022-11-29T10:10:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "197500c1_ab29c067",
+      "revId": "fd01967f79a93c11ac661902a0d868135dea1e9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4d6ab159_d93a87e5",
@@ -49,6 +67,30 @@
       "writtenOn": "2022-11-28T20:24:50Z",
       "side": 1,
       "message": "Remove unused imports",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 71
+      },
+      "revId": "fd01967f79a93c11ac661902a0d868135dea1e9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b944f79_df1e51b0",
+        "filename": "src/com/android/settings/wifi/NetworkRequestDialogFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1944786
+      },
+      "writtenOn": "2022-11-29T10:10:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4d6ab159_d93a87e5",
       "range": {
         "startLine": 19,
         "startChar": 0,
