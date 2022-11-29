@@ -33,6 +33,41 @@
       "message": "Can you put a explicit example here to show what the difference of before and after is?\n\nE.g. :  \nbefore : English\nAfter : English XXXX",
       "revId": "bcefd2165f310c307b49280703a1d11729432835",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c1836dc_0e813adc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1972300
+      },
+      "writtenOn": "2022-11-29T02:00:32Z",
+      "side": 1,
+      "message": "Before: বাংলা (ভারত)\nAfter: বাংলা (ভারত, Western Digit)\n\nIt can be reproduce with test below scenario\n1. launch App Language Settings\n2. set language বাংলা (Bengali)\n3. compare display name between summary and list.\n\nThere are some difference between summary and list because it used by Java Locale on Summary. On the other hands, list use Locale Helper.\n\n\n```\nLocale :bn_IN_#u-nu-latn\nbefore :বাংলা (ভারত)\nafter :বাংলা (ভারত, ওয়েস্টার্ন ডিজিট)\n```",
+      "parentUuid": "c48acaec_3df50db8",
+      "revId": "bcefd2165f310c307b49280703a1d11729432835",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa4ab9d8_81e5a14e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1972300
+      },
+      "writtenOn": "2022-11-29T02:00:32Z",
+      "side": 1,
+      "message": "Thanks for your review.",
+      "revId": "bcefd2165f310c307b49280703a1d11729432835",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
