@@ -45,11 +45,16 @@ import static android.provider.SearchIndexablesContract.SLICE_URI_PAIRS_COLUMNS;
 
 import static com.android.settings.dashboard.DashboardFragmentRegistry.CATEGORY_KEY_TO_PARENT_MAP;
 
+import static com.android.settingslib.drawer.TileUtils.META_DATA_CUSTOMIZATION_REMOVE_TARGET;
+import static com.android.settingslib.drawer.TileUtils.META_DATA_CUSTOMIZATION_TYPE;
+import static com.android.settingslib.drawer.TileUtils.REMOVE;
+
 import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.MatrixCursor;
 import android.net.Uri;
+import android.os.Bundle;
 import android.provider.SearchIndexableResource;
 import android.provider.SearchIndexablesContract;
 import android.provider.SearchIndexablesProvider;
@@ -59,6 +64,7 @@ import android.util.ArrayMap;
 import android.util.ArraySet;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.slice.SliceViewManager;
@@ -71,6 +77,7 @@ import com.android.settings.dashboard.DashboardFragmentRegistry;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settings.slices.SettingsSliceProvider;
 import com.android.settingslib.drawer.ActivityTile;
+import com.android.settingslib.drawer.CustomizationTile;
 import com.android.settingslib.drawer.DashboardCategory;
 import com.android.settingslib.drawer.Tile;
 import com.android.settingslib.search.Indexable;
@@ -276,6 +283,13 @@ public class SettingsSearchIndexablesProvider extends SearchIndexablesProvider {
 
         final List<String> nonIndexableKeys = new ArrayList<>();
 
+        // Add the keys of any preferences that have been customized to be removed to the list of
+        // non-indexable keys
+        final List<String> customizedNonIndexableKeys = getCustomizedNonIndexableKeys(context);
+        if (!customizedNonIndexableKeys.isEmpty()) {
+            nonIndexableKeys.addAll(customizedNonIndexableKeys);
+        }
+
         for (SearchIndexableData bundle : bundles) {
             final long startTime = System.currentTimeMillis();
             Indexable.SearchIndexProvider provider = bundle.getSearchIndexProvider();
@@ -387,6 +401,38 @@ public class SettingsSearchIndexablesProvider extends SearchIndexablesProvider {
             raw.className = bundle.getTargetClass().getName();
         }
         return providerRaws;
+    }
+
+    // Get keys of Preferences that have been customized for removal
+    private static @NonNull List<String> getCustomizedNonIndexableKeys(
+            final @NonNull Context context) {
+        final DashboardFeatureProvider dashboardFeatureProvider =
+                FeatureFactory.getFactory(context).getDashboardFeatureProvider(context);
+        final List<DashboardCategory> categories = dashboardFeatureProvider.getAllCategories();
+        final List<String> nonIndexableKeys = new ArrayList<>();
+
+        for (DashboardCategory category : categories) {
+            final List<Tile> tiles = category.getTiles();
+            for (Tile tile : tiles) {
+                if (tile instanceof CustomizationTile) {
+                    final Bundle metaData = tile.getMetaData();
+                    if (metaData == null) {
+                        continue;
+                    }
+                    final String type = metaData.getString(META_DATA_CUSTOMIZATION_TYPE);
+                    if (REMOVE.equals(type)) {
+                        final String removeTargetKey = metaData.getString(
+                                META_DATA_CUSTOMIZATION_REMOVE_TARGET);
+                        if (TextUtils.isEmpty(removeTargetKey)) {
+                            continue;
+                        }
+                        nonIndexableKeys.add(removeTargetKey);
+                    }
+                }
+            }
+        }
+
+        return nonIndexableKeys;
     }
 
     @VisibleForTesting
