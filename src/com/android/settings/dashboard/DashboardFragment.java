@@ -15,19 +15,31 @@
  */
 package com.android.settings.dashboard;
 
+import static com.android.settingslib.drawer.SwitchesProvider.METHOD_GET_DYNAMIC_SUMMARY;
+import static com.android.settingslib.drawer.TileUtils.META_DATA_CUSTOMIZATION_TYPE;
+import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY;
+import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY_URI;
+import static com.android.settingslib.drawer.TileUtils.MOVE;
+import static com.android.settingslib.drawer.TileUtils.PREFERENCE_CATEGORY;
+import static com.android.settingslib.drawer.TileUtils.REMOVE;
+
 import android.app.Activity;
 import android.app.settings.SettingsEnums;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.IContentProvider;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.ArrayMap;
+import android.util.ArraySet;
 import android.util.Log;
 
 import androidx.annotation.CallSuper;
 import androidx.annotation.VisibleForTesting;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
@@ -43,10 +55,13 @@ import com.android.settings.overlay.FeatureFactory;
 import com.android.settingslib.PrimarySwitchPreference;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
+import com.android.settingslib.drawer.CustomizationTile;
 import com.android.settingslib.drawer.DashboardCategory;
 import com.android.settingslib.drawer.ProviderTile;
 import com.android.settingslib.drawer.Tile;
+import com.android.settingslib.drawer.TileUtils;
 import com.android.settingslib.search.Indexable;
+import com.android.settingslib.utils.ThreadUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -66,6 +81,7 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
         implements CategoryListener, Indexable, PreferenceGroup.OnExpandButtonClickListener,
         BasePreferenceController.UiBlockListener {
     public static final String CATEGORY = "category";
+    public static final String TILE_METADATA_EXTRA = "tile_metadata_extra";
     private static final String TAG = "DashboardFragment";
     private static final long TIMEOUT_MILLIS = 50L;
 
@@ -171,6 +187,11 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
         final DashboardCategory dashboardCategory =
                 mDashboardFeatureProvider.getTilesForCategory(categoryKey);
         if (dashboardCategory == null) {
+            return;
+        }
+
+        if (!haveTilesForCategoryChanged(dashboardCategory)) {
+            refreshDashboardTilesIfNeeded(getLogTag());
             return;
         }
 
@@ -406,6 +427,10 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
 
         refreshDashboardTiles(tag);
 
+        // Customize the fragment.
+        // Move/remove/sort dashboard tiles according to the Tile metadata
+        DashboardCustomization.customizePreferences(getPreferenceScreen());
+
         final Activity activity = getActivity();
         if (activity != null) {
             Log.d(tag, "All preferences added, reporting fully drawn");
@@ -484,13 +509,30 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
                         mPlaceholderPreferenceController.getOrder());
             } else {
                 // Don't have this key, add it.
-                final Preference pref = createPreference(tile);
-                observers = mDashboardFeatureProvider.bindPreferenceToTileAndGetObservers(
-                        getActivity(), this, forceRoundedIcons, pref, tile, key,
-                        mPlaceholderPreferenceController.getOrder());
-                screen.addPreference(pref);
-                registerDynamicDataObservers(observers);
-                mDashboardTilePrefKeys.put(key, observers);
+                if (tile instanceof CustomizationTile) {
+                    // An injected CustomizationTile
+                    final Preference customization = createCustomization(tile);
+                    if (customization != null) {
+                        observers = mDashboardFeatureProvider.bindPreferenceToTileAndGetObservers(
+                                getActivity(), this, forceRoundedIcons, customization, tile, key,
+                                mPlaceholderPreferenceController.getOrder());
+                        // Add customization preference to screen, they will be moved/removed as
+                        // necessary in the customization step
+                        screen.addPreference(customization);
+                        mDashboardTilePrefKeys.put(key, observers);
+                    } else {
+                        observers = null;
+                    }
+                } else {
+                    // An injected ActivityTile/ProviderTile
+                    final Preference pref = createPreference(tile);
+                    observers = mDashboardFeatureProvider.bindPreferenceToTileAndGetObservers(
+                            getActivity(), this, forceRoundedIcons, pref, tile, key,
+                            mPlaceholderPreferenceController.getOrder());
+                    screen.addPreference(pref);
+                    registerDynamicDataObservers(observers);
+                    mDashboardTilePrefKeys.put(key, observers);
+                }
             }
             if (observers != null) {
                 pendingObservers.addAll(observers);
@@ -531,11 +573,46 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
     }
 
     protected Preference createPreference(Tile tile) {
-        return tile instanceof ProviderTile
+        Preference pref = tile instanceof ProviderTile
                 ? new SwitchPreference(getPrefContext())
                 : tile.hasSwitch()
                         ? new PrimarySwitchPreference(getPrefContext())
                         : new Preference(getPrefContext());
+        // Copy tile metadata to Preference
+        Bundle extras = pref.getExtras();
+        extras.putBundle(TILE_METADATA_EXTRA, tile.getMetaData());
+        return pref;
+    }
+
+    private Preference createCustomization(Tile tile) {
+        Bundle metaData = tile.getMetaData();
+        if (metaData != null) {
+            if (metaData.containsKey(META_DATA_CUSTOMIZATION_TYPE)) {
+                Preference pref = null;
+                String customizationType = metaData.getString(META_DATA_CUSTOMIZATION_TYPE);
+                if (PREFERENCE_CATEGORY.equals(customizationType)) {
+                    // An injected PreferenceCatgeory
+                    pref = new PreferenceCategory(getPrefContext());
+                } else if (MOVE.equals(customizationType) || REMOVE.equals(customizationType)) {
+                    // A Move/Remove customization. Create a dummy Preference to hold the
+                    // customization metadata. The Preference will be removed in the customization
+                    // step
+                    pref = new Preference(getPrefContext());
+                } else {
+                    Log.w(TAG, "Unknown customization type");
+                }
+
+                if (pref != null) {
+                    // Copy tile metadata to Preference
+                    Bundle extras = pref.getExtras();
+                    extras.putBundle(TILE_METADATA_EXTRA, metaData);
+                    return pref;
+                }
+            } else {
+                Log.w(TAG, "CustomizationTile is missing META_DATA_CUSTOMIZATION_TYPE");
+            }
+        }
+        return null;
     }
 
     @VisibleForTesting
@@ -573,6 +650,94 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
             latch.await(TIMEOUT_MILLIS, TimeUnit.MILLISECONDS);
         } catch (InterruptedException e) {
             // Do nothing
+        }
+    }
+
+    /**
+     * Check if tiles have changed
+     */
+    private boolean haveTilesForCategoryChanged(DashboardCategory category) {
+        final List<Tile> tiles = category.getTiles();
+        if (tiles == null) {
+            return mDashboardTilePrefKeys.size() > 0;
+        }
+
+        if (tiles.size() < mDashboardTilePrefKeys.size()) {
+            return true;
+        }
+
+        Set<String> dashboardTilePrefKeys = new ArraySet<>();
+        for (Tile tile : tiles) {
+            final String key = mDashboardFeatureProvider.getDashboardKeyForTile(tile);
+            if (TextUtils.isEmpty(key)) {
+                continue;
+            }
+            if (!displayTile(tile)) {
+                continue;
+            }
+            dashboardTilePrefKeys.add(key);
+        }
+
+        if (dashboardTilePrefKeys.size() != mDashboardTilePrefKeys.size()) {
+            return true;
+        }
+
+        if (dashboardTilePrefKeys.containsAll(mDashboardTilePrefKeys.entrySet())) {
+            return false;
+        }
+
+        return false;
+    }
+
+    private void refreshDashboardTilesIfNeeded(final String TAG) {
+        final PreferenceScreen screen = getPreferenceScreen();
+
+        final DashboardCategory category =
+                mDashboardFeatureProvider.getTilesForCategory(getCategoryKey());
+        if (category == null) {
+            Log.d(TAG, "NO dashboard tiles for " + TAG);
+            return;
+        }
+        final List<Tile> tiles = category.getTiles();
+        if (tiles == null) {
+            Log.d(TAG, "tile list is empty, skipping category " + category.key);
+            return;
+        }
+        for (Tile tile : tiles) {
+            final String key = mDashboardFeatureProvider.getDashboardKeyForTile(tile);
+            if (TextUtils.isEmpty(key)) {
+                Log.d(TAG, "tile does not contain a key, skipping " + tile);
+                continue;
+            }
+            if (!displayTile(tile)) {
+                continue;
+            }
+            if (mDashboardTilePrefKeys.containsKey(key)) {
+                // Have the key already, will rebind.
+                final Preference preference = screen.findPreference(key);
+                bindSummary(preference, tile);
+            }
+        }
+    }
+
+    private void bindSummary(Preference preference, Tile tile) {
+        final CharSequence summary = tile.getSummary(getPrefContext());
+        if (summary != null) {
+            preference.setSummary(summary);
+        } else if (tile.getMetaData() != null
+                && tile.getMetaData().containsKey(META_DATA_PREFERENCE_SUMMARY_URI)) {
+            // Set a placeholder summary before  starting to fetch real summary, this is necessary
+            // to avoid preference height change.
+            preference.setSummary(R.string.summary_placeholder);
+
+            ThreadUtils.postOnBackgroundThread(() -> {
+                final Map<String, IContentProvider> providerMap = new ArrayMap<>();
+                final Uri uri =  TileUtils.getCompleteUri(tile, META_DATA_PREFERENCE_SUMMARY_URI
+                        ,METHOD_GET_DYNAMIC_SUMMARY);
+                final String summaryFromUri = TileUtils.getTextFromUri(
+                        getPrefContext(), uri, providerMap, META_DATA_PREFERENCE_SUMMARY);
+                ThreadUtils.postOnMainThread(() -> preference.setSummary(summaryFromUri));
+            });
         }
     }
 }
