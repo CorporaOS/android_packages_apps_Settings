@@ -171,6 +171,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="general_category"
         android:persistent="false"
         android:title="@string/general_category_title">
 
