@@ -28,6 +28,7 @@ import androidx.annotation.CallSuper;
 import androidx.annotation.VisibleForTesting;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
@@ -44,6 +45,7 @@ import com.android.settingslib.PrimarySwitchPreference;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.drawer.DashboardCategory;
+import com.android.settingslib.drawer.PreferenceCategoryTile;
 import com.android.settingslib.drawer.ProviderTile;
 import com.android.settingslib.drawer.Tile;
 import com.android.settingslib.search.Indexable;
@@ -484,13 +486,23 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
                         mPlaceholderPreferenceController.getOrder());
             } else {
                 // Don't have this key, add it.
-                final Preference pref = createPreference(tile);
-                observers = mDashboardFeatureProvider.bindPreferenceToTileAndGetObservers(
-                        getActivity(), this, forceRoundedIcons, pref, tile, key,
-                        mPlaceholderPreferenceController.getOrder());
-                screen.addPreference(pref);
-                registerDynamicDataObservers(observers);
-                mDashboardTilePrefKeys.put(key, observers);
+                if (!tile.isPreferenceCategory()) {
+                    final Preference pref = createPreference(tile);
+                    observers = mDashboardFeatureProvider.bindPreferenceToTileAndGetObservers(
+                            getActivity(), this, forceRoundedIcons, pref, tile, key,
+                            mPlaceholderPreferenceController.getOrder());
+                    screen.addPreference(pref);
+                    registerDynamicDataObservers(observers);
+                    mDashboardTilePrefKeys.put(key, observers);
+                } else {
+                   // An injected PreferenceCategory
+                    final PreferenceCategory prefCat = createPreferenceCategory(tile);
+                    observers = mDashboardFeatureProvider.bindPreferenceToTileAndGetObservers(
+                            getActivity(), this, forceRoundedIcons, prefCat, tile, key,
+                            mPlaceholderPreferenceController.getOrder());
+                    screen.addPreference(prefCat);
+                    mDashboardTilePrefKeys.put(key, observers);
+                }
             }
             if (observers != null) {
                 pendingObservers.addAll(observers);
@@ -536,6 +548,12 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
                 : tile.hasSwitch()
                         ? new PrimarySwitchPreference(getPrefContext())
                         : new Preference(getPrefContext());
+    }
+
+    private PreferenceCategory createPreferenceCategory(Tile tile) {
+        return tile instanceof PreferenceCategoryTile
+                ? new PreferenceCategory(getPrefContext())
+                : null;
     }
 
     @VisibleForTesting
