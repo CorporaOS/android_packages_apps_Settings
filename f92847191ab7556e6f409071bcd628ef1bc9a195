@@ -16,6 +16,24 @@
       "message": "Hi Yanting, Glad to let you know that our test team has verified this issue and acknowledged this CL internally, and I can also see it used to passe the Presublit-verify. We may restart the merge process now.",
       "revId": "f92847191ab7556e6f409071bcd628ef1bc9a195",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2bc6eca4_548eafcb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1332604
+      },
+      "writtenOn": "2022-12-12T10:29:39Z",
+      "side": 1,
+      "message": "Thanks for your great help! Let\u0027s merge it!",
+      "parentUuid": "908a152f_0274a3f5",
+      "revId": "f92847191ab7556e6f409071bcd628ef1bc9a195",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
