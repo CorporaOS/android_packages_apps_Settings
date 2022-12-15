@@ -16,6 +16,23 @@
       "message": "Look good to me.",
       "revId": "f677ee600ab9cfef563564400986da5ace874cac",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d8b4179_7a037135",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1356080
+      },
+      "writtenOn": "2022-12-15T08:41:20Z",
+      "side": 1,
+      "message": "There is a presubmit error, I see someone is working for it and we can trigger presubmit-ready later.",
+      "revId": "f677ee600ab9cfef563564400986da5ace874cac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
