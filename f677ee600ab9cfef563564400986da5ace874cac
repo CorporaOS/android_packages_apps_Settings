@@ -33,6 +33,24 @@
       "message": "There is a presubmit error, I see someone is working for it and we can trigger presubmit-ready later.",
       "revId": "f677ee600ab9cfef563564400986da5ace874cac",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d538db2_03f62b30",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2022-12-15T08:45:18Z",
+      "side": 1,
+      "message": "Thanks Arc, would you remember vote a `Presubmit-Ready + 1` if Treehugger vote a -1 to this CL, because we do not have permission to access Presubmit-Ready trigger.",
+      "parentUuid": "8d8b4179_7a037135",
+      "revId": "f677ee600ab9cfef563564400986da5ace874cac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
