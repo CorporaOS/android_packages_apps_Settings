@@ -17,9 +17,10 @@
 package com.android.settings.development;
 
 import static com.android.settings.development.BluetoothSnoopLogPreferenceController.BLUETOOTH_BTSNOOP_LOG_MODE_PROPERTY;
+
 import static com.google.common.truth.Truth.assertThat;
+
 import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.content.Context;
@@ -43,13 +44,10 @@ import org.robolectric.RuntimeEnvironment;
 @RunWith(RobolectricTestRunner.class)
 public class BluetoothSnoopLogPreferenceControllerTest {
 
-    @Spy
-    private Context mSpyContext = RuntimeEnvironment.application;
-    @Spy
-    private Resources mSpyResources = RuntimeEnvironment.application.getResources();
+    @Spy private Context mSpyContext = RuntimeEnvironment.application;
+    @Spy private Resources mSpyResources = RuntimeEnvironment.application.getResources();
     private ListPreference mPreference;
-    @Mock
-    private PreferenceScreen mPreferenceScreen;
+    @Mock private PreferenceScreen mPreferenceScreen;
     private BluetoothSnoopLogPreferenceController mController;
 
     private CharSequence[] mListValues;
@@ -65,10 +63,10 @@ public class BluetoothSnoopLogPreferenceControllerTest {
         mPreference.setEntries(R.array.bt_hci_snoop_log_entries);
         mPreference.setEntryValues(R.array.bt_hci_snoop_log_values);
         // Init the actual controller
-        mController = new BluetoothSnoopLogPreferenceController(mSpyContext);
+        mController = new BluetoothSnoopLogPreferenceController(mSpyContext, null);
         // Construct preference in the controller via a mocked preference screen object
         when(mPreferenceScreen.findPreference(mController.getPreferenceKey()))
-            .thenReturn(mPreference);
+                .thenReturn(mPreference);
         mController.displayPreference(mPreferenceScreen);
         mListValues = mPreference.getEntryValues();
         mListEntries = mPreference.getEntries();
@@ -89,7 +87,8 @@ public class BluetoothSnoopLogPreferenceControllerTest {
 
     @Test
     public void onPreferenceChanged_turnOnFullBluetoothSnoopLog() {
-        mController.onPreferenceChange(null,
+        mController.onPreferenceChange(
+                null,
                 mListValues[BluetoothSnoopLogPreferenceController.BTSNOOP_LOG_MODE_FULL_INDEX]);
         final String mode = SystemProperties.get(BLUETOOTH_BTSNOOP_LOG_MODE_PROPERTY);
         // "full" is hard-coded between Settings and system/bt
@@ -98,7 +97,8 @@ public class BluetoothSnoopLogPreferenceControllerTest {
 
     @Test
     public void onPreferenceChanged_turnOnFilteredBluetoothSnoopLog() {
-        mController.onPreferenceChange(null,
+        mController.onPreferenceChange(
+                null,
                 mListValues[BluetoothSnoopLogPreferenceController.BTSNOOP_LOG_MODE_FILTERED_INDEX]);
         final String mode = SystemProperties.get(BLUETOOTH_BTSNOOP_LOG_MODE_PROPERTY);
         // "filtered" is hard-coded between Settings and system/bt
@@ -107,7 +107,8 @@ public class BluetoothSnoopLogPreferenceControllerTest {
 
     @Test
     public void onPreferenceChanged_turnOffBluetoothSnoopLog() {
-        mController.onPreferenceChange(null,
+        mController.onPreferenceChange(
+                null,
                 mListValues[BluetoothSnoopLogPreferenceController.BTSNOOP_LOG_MODE_DISABLED_INDEX]);
         final String mode = SystemProperties.get(BLUETOOTH_BTSNOOP_LOG_MODE_PROPERTY);
         // "disabled" is hard-coded between Settings and system/bt
@@ -128,11 +129,9 @@ public class BluetoothSnoopLogPreferenceControllerTest {
     public void onDeveloperOptionsDisabled_shouldDisablePreference() {
         mController.onDeveloperOptionsDisabled();
         assertThat(mPreference.isEnabled()).isFalse();
-        assertThat(mPreference.getValue()).isEqualTo(
-                mListValues[mController.getDefaultModeIndex()]
-                        .toString());
-        assertThat(mPreference.getSummary()).isEqualTo(
-                mListEntries[mController.getDefaultModeIndex()]
-                        .toString());
+        assertThat(mPreference.getValue())
+                .isEqualTo(mListValues[mController.getDefaultModeIndex()].toString());
+        assertThat(mPreference.getSummary())
+                .isEqualTo(mListEntries[mController.getDefaultModeIndex()].toString());
     }
 }
