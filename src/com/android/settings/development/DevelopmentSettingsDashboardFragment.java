@@ -514,6 +514,10 @@ public class DevelopmentSettingsDashboardFragment extends RestrictedDashboardFra
         controllers.add(new StayAwakePreferenceController(context, lifecycle));
         controllers.add(new HdcpCheckingPreferenceController(context));
         controllers.add(new BluetoothSnoopLogPreferenceController(context));
+        controllers.add(new DefaultLaunchPreferenceController(context,
+                "snoop_logger_filters_dashboard"));
+        controllers.add(new BluetoothSnoopLogFilterProfilePbapPreferenceController(context));
+        controllers.add(new BluetoothSnoopLogFilterProfileMapPreferenceController(context));
         controllers.add(new OemUnlockPreferenceController(context, activity, fragment));
         controllers.add(new PictureColorModePreferenceController(context, lifecycle));
         controllers.add(new WebViewAppPreferenceController(context));
