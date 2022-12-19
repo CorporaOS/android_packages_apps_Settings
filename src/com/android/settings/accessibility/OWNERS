@@ -1,7 +1,6 @@
 # Default reviewers for this and subdirectories.
+include platform/frameworks/base:/core/java/android/view/accessibility/OWNERS
 menghanli@google.com
-pweaver@google.com
-zork@google.com
 
 per-file HapticFeedbackIntensityPreferenceController.java = michaelwr@google.com
 per-file *Vibration* = michaelwr@google.com
