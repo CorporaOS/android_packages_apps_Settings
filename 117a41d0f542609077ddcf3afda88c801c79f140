@@ -1,0 +1,159 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1789e4eb_6ed19b23",
+        "filename": "src/com/android/settings/development/snooplogger/SnoopLoggerFiltersDashboard.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1881060
+      },
+      "writtenOn": "2022-12-20T21:40:56Z",
+      "side": 1,
+      "message": "could bypass the result variable and do directly:\n```\nList.of(sir)\n```",
+      "revId": "117a41d0f542609077ddcf3afda88c801c79f140",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6cb804ee_53cca5c7",
+        "filename": "src/com/android/settings/development/snooplogger/SnoopLoggerFiltersPreference.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1881060
+      },
+      "writtenOn": "2022-12-20T21:40:56Z",
+      "side": 1,
+      "message": "Why not directly\n```\nboolean isFilterEnabled \u003d SystemProperties...\n```",
+      "range": {
+        "startLine": 39,
+        "startChar": 16,
+        "endLine": 41,
+        "endChar": 25
+      },
+      "revId": "117a41d0f542609077ddcf3afda88c801c79f140",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "74f52a75_67913fd7",
+        "filename": "src/com/android/settings/development/snooplogger/SnoopLoggerFiltersPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1881060
+      },
+      "writtenOn": "2022-12-20T21:40:56Z",
+      "side": 1,
+      "message": "Do we need to have it as member ? it\u0027s only used in `displayPreference`",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 35
+      },
+      "revId": "117a41d0f542609077ddcf3afda88c801c79f140",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c012c4e2_0bfff179",
+        "filename": "src/com/android/settings/development/snooplogger/SnoopLoggerFiltersPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1881060
+      },
+      "writtenOn": "2022-12-20T21:40:56Z",
+      "side": 1,
+      "message": "Can\u0027t be null",
+      "range": {
+        "startLine": 56,
+        "startChar": 12,
+        "endLine": 56,
+        "endChar": 22
+      },
+      "revId": "117a41d0f542609077ddcf3afda88c801c79f140",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "278de627_8bd043b0",
+        "filename": "tests/robotests/src/com/android/settings/development/BluetoothSnoopLogFilterProfilePbapPreferenceControllerTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1881060
+      },
+      "writtenOn": "2022-12-20T21:40:56Z",
+      "side": 1,
+      "message": "nit 2022",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 21
+      },
+      "revId": "117a41d0f542609077ddcf3afda88c801c79f140",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b68a4f5f_f915a5be",
+        "filename": "tests/robotests/src/com/android/settings/development/snooplogger/SnoopLoggerFiltersPreferenceControllerTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1881060
+      },
+      "writtenOn": "2022-12-20T21:40:56Z",
+      "side": 1,
+      "message": "nit 2022",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 21
+      },
+      "revId": "117a41d0f542609077ddcf3afda88c801c79f140",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6cd1e15c_39bf5acf",
+        "filename": "tests/robotests/src/com/android/settings/development/snooplogger/SnoopLoggerFiltersPreferenceTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1881060
+      },
+      "writtenOn": "2022-12-20T21:40:56Z",
+      "side": 1,
+      "message": "nit 2022",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 21
+      },
+      "revId": "117a41d0f542609077ddcf3afda88c801c79f140",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
