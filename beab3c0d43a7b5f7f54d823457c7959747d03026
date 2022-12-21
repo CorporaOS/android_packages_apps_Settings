@@ -16,6 +16,23 @@
       "message": "Look good to me.",
       "revId": "beab3c0d43a7b5f7f54d823457c7959747d03026",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5dc2b927_b6ed3390",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1976987
+      },
+      "writtenOn": "2022-12-21T16:41:25Z",
+      "side": 1,
+      "message": "LGTM, thank you!",
+      "revId": "beab3c0d43a7b5f7f54d823457c7959747d03026",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
