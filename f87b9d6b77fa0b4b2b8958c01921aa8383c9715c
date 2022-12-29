@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "39cded81_c941644e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956704
+      },
+      "writtenOn": "2022-12-29T12:31:41Z",
+      "side": 1,
+      "message": "Please note that only the changes to DashboardFragment.java and DashboardCustomization.java are part of the actual feature.\nThe remaining files are only added/modified to illustrate with a working example",
+      "revId": "f87b9d6b77fa0b4b2b8958c01921aa8383c9715c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
