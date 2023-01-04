@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5f03365_234fcaa6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1167873
+      },
+      "writtenOn": "2023-01-04T18:34:37Z",
+      "side": 1,
+      "message": "See comment#6 in the bug for rationale on the bypass presubmit",
+      "revId": "71c948ce7b197c2431c6991a47a6ae0e92dbd879",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
