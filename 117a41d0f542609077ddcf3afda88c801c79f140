@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2baa77ee_55534bf0",
+        "filename": "src/com/android/settings/development/snooplogger/SnoopLoggerFiltersDashboard.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1974186
+      },
+      "writtenOn": "2023-01-04T13:49:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1789e4eb_6ed19b23",
+      "revId": "117a41d0f542609077ddcf3afda88c801c79f140",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6cb804ee_53cca5c7",
@@ -31,6 +49,30 @@
       "writtenOn": "2022-12-20T21:40:56Z",
       "side": 1,
       "message": "Why not directly\n```\nboolean isFilterEnabled \u003d SystemProperties...\n```",
+      "range": {
+        "startLine": 39,
+        "startChar": 16,
+        "endLine": 41,
+        "endChar": 25
+      },
+      "revId": "117a41d0f542609077ddcf3afda88c801c79f140",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eae0fed4_cb1073a5",
+        "filename": "src/com/android/settings/development/snooplogger/SnoopLoggerFiltersPreference.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1974186
+      },
+      "writtenOn": "2023-01-04T13:49:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6cb804ee_53cca5c7",
       "range": {
         "startLine": 39,
         "startChar": 16,
@@ -64,6 +106,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c630dc0_35012fbe",
+        "filename": "src/com/android/settings/development/snooplogger/SnoopLoggerFiltersPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1974186
+      },
+      "writtenOn": "2023-01-04T13:49:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "74f52a75_67913fd7",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 35
+      },
+      "revId": "117a41d0f542609077ddcf3afda88c801c79f140",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c012c4e2_0bfff179",
@@ -77,6 +143,30 @@
       "writtenOn": "2022-12-20T21:40:56Z",
       "side": 1,
       "message": "Can\u0027t be null",
+      "range": {
+        "startLine": 56,
+        "startChar": 12,
+        "endLine": 56,
+        "endChar": 22
+      },
+      "revId": "117a41d0f542609077ddcf3afda88c801c79f140",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "31bb4edb_1edd5a12",
+        "filename": "src/com/android/settings/development/snooplogger/SnoopLoggerFiltersPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1974186
+      },
+      "writtenOn": "2023-01-04T13:49:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c012c4e2_0bfff179",
       "range": {
         "startLine": 56,
         "startChar": 12,
@@ -110,6 +200,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8da00d16_f47dd2c5",
+        "filename": "tests/robotests/src/com/android/settings/development/BluetoothSnoopLogFilterProfilePbapPreferenceControllerTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1974186
+      },
+      "writtenOn": "2023-01-04T13:49:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "278de627_8bd043b0",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 21
+      },
+      "revId": "117a41d0f542609077ddcf3afda88c801c79f140",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b68a4f5f_f915a5be",
@@ -133,6 +247,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3aa2658_dcdb84c8",
+        "filename": "tests/robotests/src/com/android/settings/development/snooplogger/SnoopLoggerFiltersPreferenceControllerTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1974186
+      },
+      "writtenOn": "2023-01-04T13:49:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b68a4f5f_f915a5be",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 21
+      },
+      "revId": "117a41d0f542609077ddcf3afda88c801c79f140",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6cd1e15c_39bf5acf",
@@ -146,6 +284,30 @@
       "writtenOn": "2022-12-20T21:40:56Z",
       "side": 1,
       "message": "nit 2022",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 21
+      },
+      "revId": "117a41d0f542609077ddcf3afda88c801c79f140",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "313bfad1_05d78eea",
+        "filename": "tests/robotests/src/com/android/settings/development/snooplogger/SnoopLoggerFiltersPreferenceTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1974186
+      },
+      "writtenOn": "2023-01-04T13:49:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6cd1e15c_39bf5acf",
       "range": {
         "startLine": 2,
         "startChar": 17,
