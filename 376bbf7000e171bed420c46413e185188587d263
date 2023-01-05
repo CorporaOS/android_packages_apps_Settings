@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc03d85b_70394f03",
+        "filename": "src/com/android/settings/development/snooplogger/SnoopLoggerFiltersPreference.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1881060
+      },
+      "writtenOn": "2023-01-05T02:41:13Z",
+      "side": 1,
+      "message": "Can we simplify with:\n```\nboolean previouslyChecked \u003d snoopLogFilterTypesList.contains(filterTypeValue);\nif (isChecked \u003d\u003d previouslyChecked) {\n  return;\n}\nif (isChecked) {\n  snoopLogFilterTypesList.add(filterTypeValue);\n} else {\n  snoopLogFilterTypesList.remove(filterTypeValue);\n}\n```",
+      "range": {
+        "startLine": 51,
+        "startChar": 8,
+        "endLine": 61,
+        "endChar": 9
+      },
+      "revId": "376bbf7000e171bed420c46413e185188587d263",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b247acff_9ddfcc96",
+        "filename": "src/com/android/settings/development/snooplogger/SnoopLoggerFiltersPreference.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1881060
+      },
+      "writtenOn": "2023-01-05T02:41:13Z",
+      "side": 1,
+      "message": "I understand your comment on the previous cl.\nStill I have one more question:\nCan we avoid this by having `BluetoothProperties.snoop_log_filter_types().orElse(...);` ? (I am even surprise it can work without the `orElse`)",
+      "range": {
+        "startLine": 63,
+        "startChar": 6,
+        "endLine": 65,
+        "endChar": 9
+      },
+      "revId": "376bbf7000e171bed420c46413e185188587d263",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
