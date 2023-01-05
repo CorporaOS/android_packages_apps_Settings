@@ -118,8 +118,6 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
 
     /**
      * Refreshes the state for an existing SwitchPreference for a profile.
-     * If the LeAudio profile is enabled on the LeAudio devices, then the SwitchPreferences of
-     * A2dp profile and Headset profile are graied out.
      */
     private void refreshProfilePreference(SwitchPreference profilePref,
             LocalBluetoothProfile profile) {
@@ -127,31 +125,16 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
         boolean isLeAudioEnabled = isLeAudioEnabled();
         if (profile instanceof A2dpProfile
                 || profile instanceof HeadsetProfile) {
-            if (isLeAudioEnabled) {
-                // If the LeAudio profile is enabled on the LeAudio devices, then the
-                // SwitchPreferences of A2dp profile and Headset profile are grayed out.
-                Log.d(TAG, "LE is enabled, gray out " + profile.toString());
-                profilePref.setEnabled(false);
-            } else {
-                List<CachedBluetoothDevice> deviceList = mProfileDeviceMap.get(
-                        profile.toString());
-                boolean isBusy = deviceList != null
-                        && deviceList.stream().anyMatch(item -> item.isBusy());
-                profilePref.setEnabled(!isBusy);
-            }
+            List<CachedBluetoothDevice> deviceList = mProfileDeviceMap.get(
+                    profile.toString());
+            boolean isBusy = deviceList != null
+                    && deviceList.stream().anyMatch(item -> item.isBusy());
+            profilePref.setEnabled(!isBusy);
         } else if (profile instanceof LeAudioProfile) {
             List<CachedBluetoothDevice> leAudioDeviceList = mProfileDeviceMap.get(
                     profile.toString());
             boolean isBusy = leAudioDeviceList != null
                     && leAudioDeviceList.stream().anyMatch(item -> item.isBusy());
-            if (isLeAudioEnabled && !isBusy) {
-                LocalBluetoothProfile a2dp = mProfileManager.getA2dpProfile();
-                LocalBluetoothProfile headset = mProfileManager.getHeadsetProfile();
-                // If the LeAudio profile is enabled on the LeAudio devices, then the
-                // SwitchPreferences of A2dp profile and Headset profile are graied out.
-                grayOutPreferenceWhenLeAudioIsEnabled(a2dp);
-                grayOutPreferenceWhenLeAudioIsEnabled(headset);
-            }
             profilePref.setEnabled(!isBusy);
         } else if (profile instanceof PbapServerProfile
                 && isLeAudioEnabled
@@ -183,7 +166,7 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
                     highQualityPref.setVisible(true);
                     highQualityPref.setTitle(a2dp.getHighQualityAudioOptionLabel(device));
                     highQualityPref.setChecked(a2dp.isHighQualityAudioEnabled(device));
-                    highQualityPref.setEnabled(!mCachedDevice.isBusy() && !isLeAudioEnabled);
+                    highQualityPref.setEnabled(!mCachedDevice.isBusy());
                 } else {
                     highQualityPref.setVisible(false);
                 }
@@ -203,16 +186,6 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
             }
         }
         return false;
-    }
-
-    private void grayOutPreferenceWhenLeAudioIsEnabled(LocalBluetoothProfile profile) {
-        if (profile != null) {
-            SwitchPreference pref = mProfilesContainer.findPreference(profile.toString());
-            if (pref != null) {
-                Log.d(TAG, "LE is enabled, gray out " + profile.toString());
-                pref.setEnabled(false);
-            }
-        }
     }
 
     /**
@@ -340,10 +313,7 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
     }
 
     /**
-     * When user disable the Le Audio profile, the system needs to do two things.
-     * 1) Disable the Le Audio profile for each of the Le Audio devices.
-     * 2) Enable the A2dp profile and Headset profile for the associated device. The system
-     * can't enable the A2dp profile and Headset profile if the Le Audio profile is enabled.
+     * Disable the Le Audio profile for each of the Le Audio devices.
      *
      * @param profile the LeAudio profile
      */
@@ -357,18 +327,10 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
                     "User disable LE device: " + leAudioDevice.getDevice().getAnonymizedAddress());
             profile.setEnabled(leAudioDevice.getDevice(), false);
         }
-
-        LocalBluetoothProfile a2dp = mProfileManager.getA2dpProfile();
-        LocalBluetoothProfile headset = mProfileManager.getHeadsetProfile();
-        enableProfileAfterUserDisablesLeAudio(a2dp);
-        enableProfileAfterUserDisablesLeAudio(headset);
     }
 
     /**
-     * When user enable the Le Audio profile, the system needs to do two things.
-     * 1) Disable the A2dp profile and Headset profile for the associated device. The system
-     * can't enable the Le Audio if the A2dp profile and Headset profile are enabled.
-     * 2) Enable the Le Audio profile for each of the Le Audio devices.
+     * Enable the Le Audio profile for each of the Le Audio devices.
      *
      * @param profile the LeAudio profile
      */
@@ -377,41 +339,11 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
             Log.e(TAG, "There is no the LE profile or no device in mProfileDeviceMap. Do nothing.");
             return;
         }
-        LocalBluetoothProfile a2dp = mProfileManager.getA2dpProfile();
-        LocalBluetoothProfile headset = mProfileManager.getHeadsetProfile();
-        disableProfileBeforeUserEnablesLeAudio(a2dp);
-        disableProfileBeforeUserEnablesLeAudio(headset);
 
         for (CachedBluetoothDevice leAudioDevice : mProfileDeviceMap.get(profile.toString())) {
             Log.d(TAG,
                     "User enable LE device: " + leAudioDevice.getDevice().getAnonymizedAddress());
             profile.setEnabled(leAudioDevice.getDevice(), true);
-        }
-    }
-
-    private void disableProfileBeforeUserEnablesLeAudio(LocalBluetoothProfile profile) {
-        if (profile != null && mProfileDeviceMap.get(profile.toString()) != null) {
-            Log.d(TAG, "Disable " + profile.toString() + " before user enables LE");
-            for (CachedBluetoothDevice profileDevice : mProfileDeviceMap.get(profile.toString())) {
-                if (profile.isEnabled(profileDevice.getDevice())) {
-                    profile.setEnabled(profileDevice.getDevice(), false);
-                } else {
-                    Log.d(TAG, "The " + profile.toString() + " profile is disabled. Do nothing.");
-                }
-            }
-        }
-    }
-
-    private void enableProfileAfterUserDisablesLeAudio(LocalBluetoothProfile profile) {
-        if (profile != null && mProfileDeviceMap.get(profile.toString()) != null) {
-            Log.d(TAG, "enable " + profile.toString() + "after user disables LE");
-            for (CachedBluetoothDevice profileDevice : mProfileDeviceMap.get(profile.toString())) {
-                if (!profile.isEnabled(profileDevice.getDevice())) {
-                    profile.setEnabled(profileDevice.getDevice(), true);
-                } else {
-                    Log.d(TAG, "The " + profile.toString() + " profile is enabled. Do nothing.");
-                }
-            }
         }
     }
 
