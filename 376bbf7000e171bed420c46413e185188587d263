@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc9913fd_fe13d90d",
+        "filename": "src/com/android/settings/development/snooplogger/SnoopLoggerFiltersPreference.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1974186
+      },
+      "writtenOn": "2023-01-12T09:15:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fc03d85b_70394f03",
+      "range": {
+        "startLine": 51,
+        "startChar": 8,
+        "endLine": 61,
+        "endChar": 9
+      },
+      "revId": "376bbf7000e171bed420c46413e185188587d263",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b247acff_9ddfcc96",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-01-05T02:41:13Z",
       "side": 1,
       "message": "I understand your comment on the previous cl.\nStill I have one more question:\nCan we avoid this by having `BluetoothProperties.snoop_log_filter_types().orElse(...);` ? (I am even surprise it can work without the `orElse`)",
+      "range": {
+        "startLine": 63,
+        "startChar": 6,
+        "endLine": 65,
+        "endChar": 9
+      },
+      "revId": "376bbf7000e171bed420c46413e185188587d263",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b573ea8_b7e1cd31",
+        "filename": "src/com/android/settings/development/snooplogger/SnoopLoggerFiltersPreference.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1974186
+      },
+      "writtenOn": "2023-01-12T09:15:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b247acff_9ddfcc96",
       "range": {
         "startLine": 63,
         "startChar": 6,
