@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "209d7a9b_d6b87139",
+        "filename": "src/com/android/settings/bluetooth/QrCodeScanModeFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2023-01-13T02:06:30Z",
+      "side": 1,
+      "message": "please follow the lint\u0027s suggestion.",
+      "range": {
+        "startLine": 242,
+        "startChar": 0,
+        "endLine": 242,
+        "endChar": 90
+      },
+      "revId": "1f12136edec10b47264996fbc73ec226d7d504bf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
