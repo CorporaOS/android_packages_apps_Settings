@@ -22,6 +22,30 @@
       },
       "revId": "1f12136edec10b47264996fbc73ec226d7d504bf",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c64fce25_3f4d774e",
+        "filename": "src/com/android/settings/bluetooth/QrCodeScanModeFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 1595229
+      },
+      "writtenOn": "2023-01-13T02:34:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "209d7a9b_d6b87139",
+      "range": {
+        "startLine": 242,
+        "startChar": 0,
+        "endLine": 242,
+        "endChar": 90
+      },
+      "revId": "1f12136edec10b47264996fbc73ec226d7d504bf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
