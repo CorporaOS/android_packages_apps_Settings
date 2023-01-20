@@ -22,6 +22,30 @@
       },
       "revId": "bd535b5e46ee82361874e205fcbd6d49a0c864fe",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8bffc7ee_d71f24ca",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1332604
+      },
+      "writtenOn": "2023-01-20T02:43:35Z",
+      "side": 1,
+      "message": "Done for adding the related members!\nWe should update the owner list in AOSP first to avoid future merge conflicts.\nAOSP will automatically merge back into the internal master. 😊",
+      "parentUuid": "1f16d31e_8f7be671",
+      "range": {
+        "startLine": 7,
+        "startChar": 7,
+        "endLine": 7,
+        "endChar": 17
+      },
+      "revId": "bd535b5e46ee82361874e205fcbd6d49a0c864fe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
