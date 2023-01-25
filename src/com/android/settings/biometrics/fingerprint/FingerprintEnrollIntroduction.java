@@ -27,10 +27,12 @@ import android.hardware.fingerprint.FingerprintManager;
 import android.hardware.fingerprint.FingerprintSensorPropertiesInternal;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -117,10 +119,15 @@ public class FingerprintEnrollIntroduction extends BiometricEnrollIntroduction {
         footerMessage5.setText(getFooterMessage5());
         footerMessage6.setText(getFooterMessage6());
 
-        final TextView footerLink = findViewById(R.id.footer_learn_more);
-        footerLink.setMovementMethod(LinkMovementMethod.getInstance());
-        footerLink.setText(Html.fromHtml(getString(getFooterLearnMore()),
-                Html.FROM_HTML_MODE_LEGACY));
+        if (TextUtils.isEmpty(getString(getFooterLearnMore()))) {
+            final LinearLayout learnMoreFooter = findViewById(R.id.learn_more);
+            learnMoreFooter.setVisibility(View.GONE);
+        } else {
+            final TextView footerLink = findViewById(R.id.footer_learn_more);
+            footerLink.setMovementMethod(LinkMovementMethod.getInstance());
+            footerLink.setText(Html.fromHtml(getString(getFooterLearnMore()),
+                    Html.FROM_HTML_MODE_LEGACY));
+        }
 
         if (mCanAssumeUdfps) {
             footerMessage6.setVisibility(View.VISIBLE);
