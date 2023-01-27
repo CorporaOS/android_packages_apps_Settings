@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d53a097_931e2275",
+        "filename": "src/com/android/settings/gestures/ButtonNavigationSettingsSwapController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2023-01-27T18:42:54Z",
+      "side": 1,
+      "message": "sorry, I feel this feature should not be available by default, maybe add one more config to check.\nthe config default is false, and OEM can customize it if they want to expose this UI to user.",
+      "range": {
+        "startLine": 51,
+        "startChar": 15,
+        "endLine": 51,
+        "endChar": 36
+      },
+      "revId": "a9b8794364c566084222dc926e834661670f176e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
