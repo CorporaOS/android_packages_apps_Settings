@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae5f5b4c_99cc17d6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956704
+      },
+      "writtenOn": "2023-01-30T12:25:12Z",
+      "side": 1,
+      "message": "Removed demo code, please refer to older patchsets for a demo/example of how customization is done",
+      "revId": "10891a0b81ee5cc89863506fe1112c7ff03a0e5b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
