@@ -313,7 +313,9 @@ public class ToggleScreenMagnificationPreferenceFragment extends
     }
 
     private void updateFollowTypingState() {
-        mFollowTypingPreferenceController.updateState();
+        if (mFollowTypingPreferenceController != null) {
+            mFollowTypingPreferenceController.updateState();
+        }
     }
 
     @Override
