@@ -16,6 +16,23 @@
       "message": "Loop file owner to check the change.",
       "revId": "f76cb02dd653927d92f73dea3d5012b305dba24f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "750e2192_8c8be7a5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2023-02-02T07:36:07Z",
+      "side": 1,
+      "message": "@menghanli@google.com Would you help me to view Presubmit logs or fire up a retry? We don\u0027t have permission to do it.",
+      "revId": "f76cb02dd653927d92f73dea3d5012b305dba24f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
