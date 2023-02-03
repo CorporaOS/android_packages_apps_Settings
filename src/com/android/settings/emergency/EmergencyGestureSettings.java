@@ -55,7 +55,7 @@ public class EmergencyGestureSettings extends DashboardFragment {
                             new EmergencyGestureEntrypointPreferenceController(context,
                                     "dummy_emergency_gesture_pref_key");
                     return !controller.isAvailable()
-                            || controller.shouldSuppressFromSearch();
+                            || !controller.shouldSuppressFromSearch();
                 }
             };
 }
