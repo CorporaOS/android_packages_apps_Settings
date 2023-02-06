@@ -33,6 +33,23 @@
       "message": "@menghanli@google.com Would you help me to view Presubmit logs or fire up a retry? We don\u0027t have permission to do it.",
       "revId": "f76cb02dd653927d92f73dea3d5012b305dba24f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e99a8ae_7c9efd1b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1135528
+      },
+      "writtenOn": "2023-02-06T23:06:18Z",
+      "side": 1,
+      "message": "I\u0027ve fixed this in a slightly different way with an upcoming refactor, which might cause merge conflicts: https://googleplex-android-review.git.corp.google.com/c/platform/packages/apps/Settings/+/21181614",
+      "revId": "f76cb02dd653927d92f73dea3d5012b305dba24f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
