@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2733b9f6_2adea8ac",
+        "filename": "src/com/android/settings/development/BluetoothLeAudioAllowListPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1929540
+      },
+      "writtenOn": "2023-02-06T13:54:26Z",
+      "side": 1,
+      "message": "nit: to be consistent lets use `le_audio`",
+      "range": {
+        "startLine": 48,
+        "startChar": 26,
+        "endLine": 48,
+        "endChar": 33
+      },
+      "revId": "79118ef505c6f98247d0e8c4b7438fbb2a97d59c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
