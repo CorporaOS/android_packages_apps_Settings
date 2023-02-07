@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b7526b0_0c5d6feb",
+        "filename": "src/com/android/settings/bluetooth/LocalBluetoothPreferences.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 1379942
+      },
+      "writtenOn": "2023-02-07T09:06:19Z",
+      "side": 1,
+      "message": "Q) Why not using activityManager.getPackageImportance(packageName)?",
+      "range": {
+        "startLine": 143,
+        "startChar": 16,
+        "endLine": 152,
+        "endChar": 17
+      },
+      "revId": "cdee77eb4300e2ea3e2b28cb12e9efb240371896",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
