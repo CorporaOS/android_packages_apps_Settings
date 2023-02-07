@@ -16,7 +16,10 @@
 
 package com.android.settings.bluetooth;
 
+import android.annotation.Nullable;
+import android.app.ActivityManager;
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -24,6 +27,8 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
+
+import java.util.List;
 
 /**
  * LocalBluetoothPreferences provides an interface to the preferences
@@ -57,8 +62,9 @@ final class LocalBluetoothPreferences {
                 KEY_DISCOVERABLE_END_TIMESTAMP, 0);
     }
 
-    static boolean shouldShowDialogInForeground(Context context,
-            String deviceAddress, String deviceName) {
+    static boolean shouldShowDialogInForeground(Context context, @Nullable BluetoothDevice device) {
+        String deviceAddress = device != null ? device.getAddress() : null;
+        String deviceName = device != null ? device.getName() : null;
         LocalBluetoothManager manager = Utils.getLocalBtManager(context);
         if (manager == null) {
             if (DEBUG) Log.v(TAG, "manager == null - do not show dialog.");
@@ -123,6 +129,27 @@ final class LocalBluetoothPreferences {
             if (deviceName.equals(packagedKeyboardName)) {
                 if (DEBUG) Log.v(TAG, "showing dialog for packaged keyboard");
                 return true;
+            }
+        }
+
+        if (device != null) {
+            ActivityManager activityManager = (ActivityManager) context.getSystemService(
+                    Context.ACTIVITY_SERVICE);
+            List<ActivityManager.RunningAppProcessInfo> appProcesses =
+                    activityManager.getRunningAppProcesses();
+            String packageName = device.getBondCreateCaller();
+
+            if (packageName != null) {
+                for (ActivityManager.RunningAppProcessInfo appProcess : appProcesses) {
+                    if (packageName.equals(appProcess.processName) && appProcess.importance
+                            == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND) {
+                        if (DEBUG) {
+                            Log.v(TAG, "showing dialog because the initiating application "
+                                    + "is in foreground");
+                        }
+                        return true;
+                    }
+                }
             }
         }
 
