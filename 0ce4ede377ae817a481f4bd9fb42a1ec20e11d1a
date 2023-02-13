@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "616639c4_f9dbdc76",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1947475
+      },
+      "writtenOn": "2023-02-13T09:08:35Z",
+      "side": 1,
+      "message": "Approved for the developer option page UI changes.",
+      "revId": "0ce4ede377ae817a481f4bd9fb42a1ec20e11d1a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
