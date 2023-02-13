@@ -34,6 +34,24 @@
       "parentUuid": "dea9ebb8_700b6c76",
       "revId": "5bff5f38683ec06b897bf156e1a39be1014cbf3b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "95addac3_958386e4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2023-02-13T08:41:18Z",
+      "side": 1,
+      "message": "@zzhen@google.com \nSince you did this before to other tethering UIs, I would like to understand why we need to turn off the UI of tethering under monkey test.",
+      "parentUuid": "0f9e5342_7b24acb3",
+      "revId": "5bff5f38683ec06b897bf156e1a39be1014cbf3b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
