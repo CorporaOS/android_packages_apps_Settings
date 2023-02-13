@@ -16,6 +16,24 @@
       "message": "I do not support this change, it just like a work around for the monkey.\nOnce the change did it, it may cause no test during Ethernet tethering of settings for any Monkey tests.",
       "revId": "5bff5f38683ec06b897bf156e1a39be1014cbf3b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f9e5342_7b24acb3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1967270
+      },
+      "writtenOn": "2023-02-13T06:17:48Z",
+      "side": 1,
+      "message": "Thanks @Tom Hsu for reviewing. \nI suppose that if we do not handle this condition during monkey test, it will interrupt the test if adb disconnection happens due to ethernet tethering. We also handled same scenario previously for Wi-Fi \u0026 USB Tethering.\nhttps://cs.android.com/android/platform/superproject/+/master:packages/apps/Settings/src/com/android/settings/wifi/tether/WifiTetherPreferenceController.java;l\u003d95\nhttps://cs.android.com/android/platform/superproject/+/master:packages/apps/Settings/src/com/android/settings/network/UsbTetherPreferenceController.java;l\u003d72",
+      "parentUuid": "dea9ebb8_700b6c76",
+      "revId": "5bff5f38683ec06b897bf156e1a39be1014cbf3b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
