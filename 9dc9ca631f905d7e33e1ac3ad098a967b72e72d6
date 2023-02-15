@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0372d61b_22c6c679",
+        "filename": "src/com/android/settings/network/telephony/NetworkSelectSettings.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1060151
+      },
+      "writtenOn": "2023-02-15T19:21:26Z",
+      "side": 1,
+      "message": "this feels like device-specific behavior. Is there a device overlay that indicates whether the particular model actually needs this behavior?",
+      "range": {
+        "startLine": 220,
+        "startChar": 15,
+        "endLine": 220,
+        "endChar": 70
+      },
+      "revId": "9dc9ca631f905d7e33e1ac3ad098a967b72e72d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
