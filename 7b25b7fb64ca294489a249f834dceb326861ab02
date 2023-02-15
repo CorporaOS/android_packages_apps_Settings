@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6fadc0c6_0d2f2259",
+        "filename": "src/com/android/settings/accessibility/MediaVibrationTogglePreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1368032
+      },
+      "writtenOn": "2023-02-15T09:58:58Z",
+      "side": 1,
+      "message": "Please add some test cases for your change.",
+      "range": {
+        "startLine": 33,
+        "startChar": 15,
+        "endLine": 34,
+        "endChar": 50
+      },
+      "revId": "7b25b7fb64ca294489a249f834dceb326861ab02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
