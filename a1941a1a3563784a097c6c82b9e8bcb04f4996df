@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "23b0583e_86dc9610",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/MediaVibrationIntensityPreferenceControllerTest.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 1368032
+      },
+      "writtenOn": "2023-02-16T04:17:41Z",
+      "side": 1,
+      "message": "Please remove `throws Exception`.",
+      "range": {
+        "startLine": 168,
+        "startChar": 66,
+        "endLine": 168,
+        "endChar": 83
+      },
+      "revId": "a1941a1a3563784a097c6c82b9e8bcb04f4996df",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
