@@ -26,7 +26,11 @@ import android.util.Log;
 
 import androidx.window.embedding.ActivityFilter;
 import androidx.window.embedding.ActivityRule;
+<<<<<<< PATCH SET (626629 Make Settings show in two-pane on portrait tablet)
+import androidx.window.embedding.EmbeddingAspectRatio;
+=======
 import androidx.window.embedding.RuleController;
+>>>>>>> BASE      (60763d Merge "Enable the android.window.PROPERTY_ACTIVITY_EMBEDDING)
 import androidx.window.embedding.SplitAttributes;
 import androidx.window.embedding.SplitPairFilter;
 import androidx.window.embedding.SplitPairRule;
@@ -107,6 +111,7 @@ public class ActivityEmbeddingRulesController {
                 .setClearTop(clearTop)
                 .setMinWidthDp(ActivityEmbeddingUtils.getMinCurrentScreenSplitWidthDp())
                 .setMinSmallestWidthDp(ActivityEmbeddingUtils.getMinSmallestScreenSplitWidthDp())
+                .setMaxAspectRatioInPortrait(EmbeddingAspectRatio.alwaysAllow())
                 .setDefaultSplitAttributes(attributes)
                 .build();
         RuleController.getInstance(context).addRule(splitPairRule);
@@ -227,6 +232,7 @@ public class ActivityEmbeddingRulesController {
                 activityFilters, intent)
                 .setMinWidthDp(ActivityEmbeddingUtils.getMinCurrentScreenSplitWidthDp())
                 .setMinSmallestWidthDp(ActivityEmbeddingUtils.getMinSmallestScreenSplitWidthDp())
+                .setMaxAspectRatioInPortrait(EmbeddingAspectRatio.alwaysAllow())
                 .setSticky(true)
                 .setFinishPrimaryWithPlaceholder(SplitRule.FinishBehavior.ADJACENT)
                 .setDefaultSplitAttributes(attributes)
