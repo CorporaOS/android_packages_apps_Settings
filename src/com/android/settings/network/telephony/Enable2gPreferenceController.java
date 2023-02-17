@@ -15,6 +15,9 @@
  */
 package com.android.settings.network.telephony;
 
+import static androidx.lifecycle.Lifecycle.Event.ON_START;
+import static androidx.lifecycle.Lifecycle.Event.ON_STOP;
+
 import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.os.PersistableBundle;
@@ -25,10 +28,14 @@ import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
 
+import androidx.annotation.VisibleForTesting;
+import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.settings.R;
+import com.android.settings.network.AllowedNetworkTypesListener;
 import com.android.settings.network.CarrierConfigCache;
 import com.android.settings.network.SubscriptionUtil;
 import com.android.settings.overlay.FeatureFactory;
@@ -49,7 +56,8 @@ import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
  *     requested preference state. </li>
  * </ul>
  */
-public class Enable2gPreferenceController extends TelephonyTogglePreferenceController {
+public class Enable2gPreferenceController extends TelephonyTogglePreferenceController
+        implements LifecycleObserver {
 
     private static final String LOG_TAG = "Enable2gPreferenceController";
     private static final long BITMASK_2G = TelephonyManager.NETWORK_TYPE_BITMASK_GSM
@@ -64,6 +72,8 @@ public class Enable2gPreferenceController extends TelephonyTogglePreferenceContr
     private SubscriptionManager mSubscriptionManager;
     private TelephonyManager mTelephonyManager;
     private RestrictedSwitchPreference mRestrictedPreference;
+    @VisibleForTesting
+    AllowedNetworkTypesListener mAllowedNetworkTypesListener;
 
     /**
      * Class constructor of "Enable 2G" toggle.
@@ -88,7 +98,10 @@ public class Enable2gPreferenceController extends TelephonyTogglePreferenceContr
     public Enable2gPreferenceController init(int subId) {
         mSubId = subId;
         mTelephonyManager = mContext.getSystemService(TelephonyManager.class)
-                .createForSubscriptionId(mSubId);
+              .createForSubscriptionId(mSubId);
+        mAllowedNetworkTypesListener = new AllowedNetworkTypesListener(mContext.getMainExecutor());
+        mAllowedNetworkTypesListener.setAllowedNetworkTypesListener(
+                () -> updateState((Preference) mRestrictedPreference));
         return this;
     }
 
@@ -114,8 +127,16 @@ public class Enable2gPreferenceController extends TelephonyTogglePreferenceContr
         final PersistableBundle carrierConfig = mCarrierConfigCache.getConfigForSubId(mSubId);
         boolean isDisabledByCarrier =
                 carrierConfig != null
-                        && carrierConfig.getBoolean(CarrierConfigManager.KEY_HIDE_ENABLE_2G);
-        preference.setEnabled(!isDisabledByCarrier);
+                && carrierConfig.getBoolean(CarrierConfigManager.KEY_HIDE_ENABLE_2G);
+        if (isOnly2gAllowedByUser()) {
+            // force 2G back to allow if the user selects only 2G in network mode setting.
+            preference.setEnabled(false);
+            setChecked(true);
+        } else {
+            // TODO: Change to "preference.setEnabled(true)" when removing
+            //  CarrierConfigManager.KEY_HIDE_ENABLE_2G.
+            preference.setEnabled(!isDisabledByCarrier);
+        }
         String summary;
         if (isDisabledByCarrier) {
             summary = mContext.getString(R.string.enable_2g_summary_disabled_carrier,
@@ -188,6 +209,12 @@ public class Enable2gPreferenceController extends TelephonyTogglePreferenceContr
         return (currentlyAllowedNetworkTypes & BITMASK_2G) != 0;
     }
 
+    private boolean isOnly2gAllowedByUser() {
+        long allowedNetworkByUser = mTelephonyManager.getAllowedNetworkTypesForReason(
+                TelephonyManager.ALLOWED_NETWORK_TYPES_REASON_USER);
+        return (allowedNetworkByUser & ~BITMASK_2G) == 0;
+    }
+
     /**
      * Ensure that the modem's allowed network types are configured according to the user's
      * preference.
@@ -231,5 +258,21 @@ public class Enable2gPreferenceController extends TelephonyTogglePreferenceContr
 
     private boolean isDisabledByAdmin() {
         return (mRestrictedPreference != null && mRestrictedPreference.isDisabledByAdmin());
+    }
+
+    /**
+     * Start Lifecycle event
+     */
+    @OnLifecycleEvent(ON_START)
+    public void onStart() {
+        mAllowedNetworkTypesListener.register(mContext, mSubId);
+    }
+
+    /**
+     * Stop Lifecycle event
+     */
+    @OnLifecycleEvent(ON_STOP)
+    public void onStop() {
+        mAllowedNetworkTypesListener.unregister(mContext, mSubId);
     }
 }
