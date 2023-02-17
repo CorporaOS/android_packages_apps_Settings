@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93c99ab5_e60d2452",
+        "filename": "src/com/android/settings/activityembedding/ActivityEmbeddingRulesController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1972759
+      },
+      "writtenOn": "2023-02-17T00:30:41Z",
+      "side": 1,
+      "message": "(to owners: I noticed that this value is false in other branches. just want to make sure that we have the right value here.)",
+      "range": {
+        "startLine": 230,
+        "startChar": 27,
+        "endLine": 230,
+        "endChar": 31
+      },
+      "revId": "656c7de341be754f1ab5beb87df6c7ade8989f80",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
