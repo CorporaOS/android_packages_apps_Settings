@@ -107,6 +107,7 @@ public class ActivityEmbeddingRulesController {
                 .setClearTop(clearTop)
                 .setMinWidthDp(ActivityEmbeddingUtils.getMinCurrentScreenSplitWidthDp())
                 .setMinSmallestWidthDp(ActivityEmbeddingUtils.getMinSmallestScreenSplitWidthDp())
+                .setMaxAspectRatioInPortrait(EmbeddingAspectRatio.alwaysAllow())
                 .setDefaultSplitAttributes(attributes)
                 .build();
         SplitController.getInstance(context).addRule(splitPairRule);
@@ -227,6 +228,7 @@ public class ActivityEmbeddingRulesController {
                 activityFilters, intent)
                 .setMinWidthDp(ActivityEmbeddingUtils.getMinCurrentScreenSplitWidthDp())
                 .setMinSmallestWidthDp(ActivityEmbeddingUtils.getMinSmallestScreenSplitWidthDp())
+                .setMaxAspectRatioInPortrait(EmbeddingAspectRatio.alwaysAllow())
                 .setSticky(true)
                 .setFinishPrimaryWithPlaceholder(SplitRule.FinishBehavior.ADJACENT)
                 .setDefaultSplitAttributes(attributes)
