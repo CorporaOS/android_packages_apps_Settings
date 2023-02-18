@@ -22,6 +22,30 @@
       },
       "revId": "656c7de341be754f1ab5beb87df6c7ade8989f80",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "12b16170_f49a96a6",
+        "filename": "src/com/android/settings/activityembedding/ActivityEmbeddingRulesController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1650177
+      },
+      "writtenOn": "2023-02-18T16:55:50Z",
+      "side": 1,
+      "message": "Let\u0027s keep the value in this branch to focus on the library update.",
+      "parentUuid": "93c99ab5_e60d2452",
+      "range": {
+        "startLine": 230,
+        "startChar": 27,
+        "endLine": 230,
+        "endChar": 31
+      },
+      "revId": "656c7de341be754f1ab5beb87df6c7ade8989f80",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
