@@ -1,0 +1,22 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4c11170_90dea6a8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1060151
+      },
+      "writtenOn": "2023-02-22T02:50:01Z",
+      "side": 1,
+      "message": "I think it\u0027s device specific since it depends on modem capability. Of course, I suppose it could be overlayed on an MNO basis if a carrier had a strong opinion (e.g. they want all devices to do it even if some don\u0027t have to), but it\u0027s absolutely going to be an OEM thing first-hand -foremost.",
+      "tag": "mailMessageId\u003d\u003cCADhJOfYXT+geJgvrsxgibL62G8cVb4PPVY4qDWwcy0LnidLnEA@mail.gmail.com\u003e",
+      "revId": "a86243ed391da472a719ceb8316c2e8899aa56e1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
