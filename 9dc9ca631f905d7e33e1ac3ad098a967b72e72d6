@@ -70,6 +70,30 @@
       },
       "revId": "9dc9ca631f905d7e33e1ac3ad098a967b72e72d6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a375a917_4946432c",
+        "filename": "src/com/android/settings/network/telephony/NetworkSelectSettings.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1609802
+      },
+      "writtenOn": "2023-02-22T02:45:30Z",
+      "side": 1,
+      "message": "Is this device-specific or carrier-specific (the bug description said \"required by operator\")?\n\nIn other word, is there a case that in the same device, on carrier requires the additional dialog while others don\u0027t?\n\nIf this is carrier-specific, we may need to turn on/off the feature based on carrier configurations (e.g. CarrierConfigManager) instead.",
+      "parentUuid": "295370e7_dcad202f",
+      "range": {
+        "startLine": 220,
+        "startChar": 15,
+        "endLine": 220,
+        "endChar": 70
+      },
+      "revId": "9dc9ca631f905d7e33e1ac3ad098a967b72e72d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
