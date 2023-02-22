@@ -94,6 +94,30 @@
       },
       "revId": "9dc9ca631f905d7e33e1ac3ad098a967b72e72d6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a811927_c347e4ed",
+        "filename": "src/com/android/settings/network/telephony/NetworkSelectSettings.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1237921
+      },
+      "writtenOn": "2023-02-22T04:09:14Z",
+      "side": 1,
+      "message": "It\u0027s both. There is a modem which need to disable mobile data during network search and also there are operators which want to show warning before disabling mobile data. So, we have added the carrier config in https://android-review.googlesource.com/c/platform/frameworks/base/+/2437972.",
+      "parentUuid": "a375a917_4946432c",
+      "range": {
+        "startLine": 220,
+        "startChar": 15,
+        "endLine": 220,
+        "endChar": 70
+      },
+      "revId": "9dc9ca631f905d7e33e1ac3ad098a967b72e72d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
