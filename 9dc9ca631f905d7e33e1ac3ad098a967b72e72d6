@@ -118,6 +118,30 @@
       },
       "revId": "9dc9ca631f905d7e33e1ac3ad098a967b72e72d6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9dba8014_ac18ff43",
+        "filename": "src/com/android/settings/network/telephony/NetworkSelectSettings.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1609802
+      },
+      "writtenOn": "2023-02-22T16:00:38Z",
+      "side": 1,
+      "message": "Thanks for updating the javadoc of the carrier config! I got the point now:\n- The carrier config controls if the new warning should be shown (true \u003d\u003e show, default is false)\n- The modem vendor is the source of truth to determine if the mobile data will ACTUALLY be disabled during network searching\n\nThe concern is in the scenario below:\n- carrier config is true\n- Warning dialog is shown\n- User choose YES (consent to temporarily disable mobile data)\n- But modem decides NOT to.\n\nSo user will observe the mobile data is still on after consent. This may be confusing.\n\nIs there any way we only show the warning when confirm vendor does disable the mobile data, or at least vendor has the ability to disable it? It would remove/reduce the possibility for the confusing case above.",
+      "parentUuid": "6a811927_c347e4ed",
+      "range": {
+        "startLine": 220,
+        "startChar": 15,
+        "endLine": 220,
+        "endChar": 70
+      },
+      "revId": "9dc9ca631f905d7e33e1ac3ad098a967b72e72d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
