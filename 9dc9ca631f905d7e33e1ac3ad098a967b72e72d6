@@ -22,6 +22,30 @@
       },
       "revId": "9dc9ca631f905d7e33e1ac3ad098a967b72e72d6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88a7e5f5_ea820c00",
+        "filename": "src/com/android/settings/network/telephony/NetworkSelectSettings.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1237921
+      },
+      "writtenOn": "2023-02-22T02:03:58Z",
+      "side": 1,
+      "message": "I agree with you. I added device config in patchset 8.",
+      "parentUuid": "0372d61b_22c6c679",
+      "range": {
+        "startLine": 220,
+        "startChar": 15,
+        "endLine": 220,
+        "endChar": 70
+      },
+      "revId": "9dc9ca631f905d7e33e1ac3ad098a967b72e72d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
