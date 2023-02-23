@@ -33,6 +33,24 @@
       "message": "Remove from the topic to avoid conflict. Let\u0027s submit this after the parent change.",
       "revId": "6266294d7059a7940312c0d4814429d7b9a97de2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "76de16b4_84726a72",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1650177
+      },
+      "writtenOn": "2023-02-23T07:58:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ced550df_9159dd2f",
+      "revId": "6266294d7059a7940312c0d4814429d7b9a97de2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
