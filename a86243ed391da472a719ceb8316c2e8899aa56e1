@@ -44,6 +44,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9fd1ab86_0b2f63ff",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 12960,
+      "author": {
+        "id": 1237921
+      },
+      "writtenOn": "2023-02-23T04:15:14Z",
+      "side": 1,
+      "message": "I would appreciate if Google could provide more descriptive title.",
+      "parentUuid": "022e5cad_09034611",
+      "range": {
+        "startLine": 12960,
+        "startChar": 46,
+        "endLine": 12960,
+        "endChar": 50
+      },
+      "revId": "a86243ed391da472a719ceb8316c2e8899aa56e1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "67bc946c_29bb9e0e",
         "filename": "res/values/strings.xml",
         "patchSetId": 8
@@ -55,6 +79,30 @@
       "writtenOn": "2023-02-22T16:00:38Z",
       "side": 1,
       "message": "Temporarily?",
+      "range": {
+        "startLine": 12962,
+        "startChar": 101,
+        "endLine": 12962,
+        "endChar": 110
+      },
+      "revId": "a86243ed391da472a719ceb8316c2e8899aa56e1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9cacea10_9d920d4a",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 12962,
+      "author": {
+        "id": 1237921
+      },
+      "writtenOn": "2023-02-23T04:15:14Z",
+      "side": 1,
+      "message": "Thank you. I will update.",
+      "parentUuid": "67bc946c_29bb9e0e",
       "range": {
         "startLine": 12962,
         "startChar": 101,
