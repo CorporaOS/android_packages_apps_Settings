@@ -30,25 +30,29 @@ import com.android.settings.R;
 /** An util class collecting all common methods for the embedding activity features. */
 public class ActivityEmbeddingUtils {
     // The smallest value of current width of the window when the split should be used.
-    private static final int MIN_CURRENT_SCREEN_SPLIT_WIDTH_DP = 720;
+    private static final float MIN_CURRENT_SCREEN_SPLIT_WIDTH_DP = 720f;
     // The smallest value of the smallest-width (sw) of the window in any rotation when
     // the split should be used.
-    private static final int MIN_SMALLEST_SCREEN_SPLIT_WIDTH_DP = 600;
+    private static final float MIN_SMALLEST_SCREEN_SPLIT_WIDTH_DP = 600f;
     // The minimum width of the activity to show the regular homepage layout.
     private static final float MIN_REGULAR_HOMEPAGE_LAYOUT_WIDTH_DP = 380f;
     private static final String TAG = "ActivityEmbeddingUtils";
 
-    /** Get the smallest width dp of the window when the split should be used. */
-    public static int getMinCurrentScreenSplitWidthDp() {
-        return MIN_CURRENT_SCREEN_SPLIT_WIDTH_DP;
+    /** Get the smallest pixel value of width of the window when the split should be used. */
+    public static int getMinCurrentScreenSplitWidthPx(Context context) {
+        final DisplayMetrics dm = context.getResources().getDisplayMetrics();
+        return (int) TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP, MIN_CURRENT_SCREEN_SPLIT_WIDTH_DP, dm);
     }
 
     /**
-     * Get the smallest dp value of the smallest-width (sw) of the window in any rotation when
+     * Get the smallest pixel value of the smallest-width (sw) of the window in any rotation when
      * the split should be used.
      */
-    public static int getMinSmallestScreenSplitWidthDp() {
-        return MIN_SMALLEST_SCREEN_SPLIT_WIDTH_DP;
+    public static int getMinSmallestScreenSplitWidthPx(Context context) {
+        final DisplayMetrics dm = context.getResources().getDisplayMetrics();
+        return (int) TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP, MIN_SMALLEST_SCREEN_SPLIT_WIDTH_DP, dm);
     }
 
     /**
@@ -63,7 +67,7 @@ public class ActivityEmbeddingUtils {
     public static boolean isEmbeddingActivityEnabled(Context context) {
         final boolean isFlagEnabled = FeatureFlagUtils.isEnabled(context,
                 FeatureFlagUtils.SETTINGS_SUPPORT_LARGE_SCREEN);
-        final boolean isSplitSupported = SplitController.getInstance(context).isSplitSupported();
+        final boolean isSplitSupported = SplitController.getInstance().isSplitSupported();
 
         Log.d(TAG, "isFlagEnabled = " + isFlagEnabled);
         Log.d(TAG, "isSplitSupported = " + isSplitSupported);

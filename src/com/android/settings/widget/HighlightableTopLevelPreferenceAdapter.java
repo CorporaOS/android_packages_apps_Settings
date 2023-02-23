@@ -250,6 +250,6 @@ public class HighlightableTopLevelPreferenceAdapter extends PreferenceGroupAdapt
     }
 
     private boolean isHighlightNeeded() {
-        return SplitController.getInstance(mHomepageActivity).isActivityEmbedded(mHomepageActivity);
+        return SplitController.getInstance().isActivityEmbedded(mHomepageActivity);
     }
 }

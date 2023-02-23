@@ -183,7 +183,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         setupEdgeToEdge();
         setContentView(R.layout.settings_homepage_container);
 
-        mSplitController = SplitController.getInstance(this);
+        mSplitController = SplitController.getInstance();
         mIsTwoPane = mSplitController.isActivityEmbedded(this);
 
         updateAppBarMinHeight();
@@ -453,15 +453,15 @@ public class SettingsHomepageActivity extends FragmentActivity implements
                 new ComponentName(getApplicationContext(), getClass()),
                 targetComponentName,
                 targetIntent.getAction(),
-                SplitRule.FinishBehavior.ALWAYS,
-                SplitRule.FinishBehavior.ALWAYS,
+                SplitRule.FINISH_ALWAYS,
+                SplitRule.FINISH_ALWAYS,
                 true /* clearTop */);
         ActivityEmbeddingRulesController.registerTwoPanePairRule(this,
                 new ComponentName(getApplicationContext(), Settings.class),
                 targetComponentName,
                 targetIntent.getAction(),
-                SplitRule.FinishBehavior.ALWAYS,
-                SplitRule.FinishBehavior.ALWAYS,
+                SplitRule.FINISH_ALWAYS,
+                SplitRule.FINISH_ALWAYS,
                 true /* clearTop */);
 
         final UserHandle user = intent.getParcelableExtra(EXTRA_USER_HANDLE, UserHandle.class);
