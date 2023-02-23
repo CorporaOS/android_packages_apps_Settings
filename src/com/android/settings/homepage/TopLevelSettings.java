@@ -35,7 +35,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.window.embedding.ActivityEmbeddingController;
+import androidx.window.embedding.SplitController;
 
 import com.android.settings.R;
 import com.android.settings.Utils;
@@ -64,7 +64,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     private int mPaddingHorizontal;
     private boolean mScrollNeeded = true;
     private boolean mFirstStarted = true;
-    private ActivityEmbeddingController mActivityEmbeddingController;
+    private SplitController mSplitController;
 
     public TopLevelSettings() {
         final Bundle args = new Bundle();
@@ -154,12 +154,12 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
         }
     }
 
-    /** Wrap ActivityEmbeddingController#isActivityEmbedded for testing. */
+    /** Wrap SplitController#isActivityEmbedded for testing. */
     public boolean isActivityEmbedded() {
-        if (mActivityEmbeddingController == null) {
-            mActivityEmbeddingController = ActivityEmbeddingController.getInstance(getActivity());
+        if (mSplitController == null) {
+            mSplitController = SplitController.getInstance(getActivity());
         }
-        return mActivityEmbeddingController.isActivityEmbedded(getActivity());
+        return mSplitController.isActivityEmbedded(getActivity());
     }
 
     @Override
