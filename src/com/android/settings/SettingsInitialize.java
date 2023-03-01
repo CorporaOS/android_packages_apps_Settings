@@ -42,8 +42,10 @@ import androidx.window.embedding.SplitController;
 import com.android.settings.Settings.CreateShortcutActivity;
 import com.android.settings.homepage.DeepLinkHomepageActivity;
 import com.android.settings.search.SearchStateReceiver;
+import com.android.settingslib.license.LicenseHtmlLoaderCompat;
 import com.android.settingslib.utils.ThreadUtils;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,6 +71,9 @@ public class SettingsInitialize extends BroadcastReceiver {
         webviewSettingSetup(context, pm, userInfo);
         ThreadUtils.postOnBackgroundThread(() -> refreshExistingShortcuts(context));
         enableTwoPaneDeepLinkActivityIfNecessary(pm, context);
+        if (Intent.ACTION_PRE_BOOT_COMPLETED.equals(broadcast.getAction())) {
+            ThreadUtils.postOnBackgroundThread(() -> deleteThirdPartyLicenseFile(context));
+        }
     }
 
     private void managedProfileSetup(Context context, final PackageManager pm, Intent broadcast,
@@ -160,5 +165,17 @@ public class SettingsInitialize extends BroadcastReceiver {
         pm.setComponentEnabledSetting(deepLinkHome, enableState, PackageManager.DONT_KILL_APP);
         pm.setComponentEnabledSetting(searchStateReceiver, enableState,
                 PackageManager.DONT_KILL_APP);
+    }
+
+    // Delete the cached third party license file on upgrade, if the file exists.
+    private static void deleteThirdPartyLicenseFile(Context context) {
+        File licenceFile = LicenseHtmlLoaderCompat.getCachedHtmlFile(context);
+        if (licenceFile.exists()) {
+            try {
+                licenceFile.delete();
+            } catch (SecurityException e) {
+                Log.e(TAG, "Failed to delete 3rd-party license file", e);
+            }
+        }
     }
 }
