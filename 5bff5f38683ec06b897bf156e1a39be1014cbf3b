@@ -88,6 +88,23 @@
       "parentUuid": "76f56bc1_b273cc14",
       "revId": "5bff5f38683ec06b897bf156e1a39be1014cbf3b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eaff1761_57755c1a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2023-03-07T07:19:02Z",
+      "side": 1,
+      "message": "Hi Weng,\nSince the Monkey tests in Most of Wifi and tethering class are ignored, do you have any concern about this CL? \n\nIf there is no concern, IMO, it can leverage other similar case to approve this change. \n\nBut, I think we still try to understand the reason of ignore and look for the alternative solution to avoid the ignored Monkey tests.",
+      "revId": "5bff5f38683ec06b897bf156e1a39be1014cbf3b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
