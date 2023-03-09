@@ -76,8 +76,11 @@ public class LocationTimeZoneDetectionPreferenceController
     @Override
     public boolean setChecked(boolean isChecked) {
         if (isChecked && !mLocationManager.isLocationEnabled()) {
-            new LocationToggleDisabledDialogFragment(mContext)
-                    .show(mFragment.getFragmentManager(), TAG);
+            if (mFragment.getFragmentManager().findFragmentByTag(
+                    LocationToggleDisabledDialogFragment.TAG) == null) {
+                LocationToggleDisabledDialogFragment.newInstance().show(
+                        mFragment.getFragmentManager(), TAG);
+            }
             // Toggle status is not updated.
             return false;
         } else {
