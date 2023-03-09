@@ -32,10 +32,11 @@ import com.android.settings.core.instrumentation.InstrumentedDialogFragment;
  */
 public class LocationToggleDisabledDialogFragment extends InstrumentedDialogFragment {
 
-    private final Context mContext;
+    public static final String TAG = "LocationToggleDisabledDialogFragment";
 
-    public LocationToggleDisabledDialogFragment(Context context) {
-        mContext = context;
+    public static LocationToggleDisabledDialogFragment newInstance() {
+        LocationToggleDisabledDialogFragment fragment = new LocationToggleDisabledDialogFragment();
+        return fragment;
     }
 
     @Override
@@ -48,7 +49,7 @@ public class LocationToggleDisabledDialogFragment extends InstrumentedDialogFrag
                         R.string.location_time_zone_detection_location_is_off_dialog_ok_button,
                         (dialog, which) -> {
                             Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                            mContext.startActivity(intent);
+                            startActivity(intent);
                         })
                 .setNegativeButton(
                         R.string.location_time_zone_detection_location_is_off_dialog_cancel_button,
