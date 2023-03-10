@@ -26,7 +26,6 @@ import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.OnLifecycleEvent;
 
 import com.android.internal.annotations.VisibleForTesting;
-import com.android.settings.Utils;
 import com.android.settingslib.utils.ThreadUtils;
 
 import java.util.HashSet;
@@ -88,7 +87,7 @@ public final class EthernetTetherPreferenceController extends TetherBasePreferen
 
     @Override
     public boolean shouldShow() {
-        return mEthernetManager != null && !Utils.isMonkeyRunning();
+        return mEthernetManager != null;
     }
 
     @Override
