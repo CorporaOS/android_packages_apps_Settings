@@ -112,6 +112,13 @@ public class BluetoothFindBroadcastsFragment extends RestrictedDashboardFragment
                 }
 
                 @Override
+                public void onSourceLost(@NonNull BluetoothLeBroadcastMetadata source) {
+                    Log.d(TAG, "onSourceLost:");
+                    getActivity().runOnUiThread(
+                            () -> removeListCategoryFromBroadcastMetadata(source));
+                }
+
+                @Override
                 public void onSourceAdded(@NonNull BluetoothDevice sink, int sourceId, int reason) {
                     setSourceId(sourceId);
                     if (mSelectedPreference == null) {
@@ -348,6 +355,17 @@ public class BluetoothFindBroadcastsFragment extends RestrictedDashboardFragment
         //refresh the header
         if (mBluetoothFindBroadcastsHeaderController != null) {
             mBluetoothFindBroadcastsHeaderController.refreshUi();
+        }
+    }
+
+    private void removeListCategoryFromBroadcastMetadata(
+            BluetoothLeBroadcastMetadata source) {
+        BluetoothBroadcastSourcePreference item =
+                mBroadcastSourceListCategory.findPreference(
+                        Integer.toString(source.getBroadcastId()));
+        if (item != null) {
+            mBroadcastSourceListCategory.removePreference(item);
+            item.updateMetadataAndRefreshUi(source, false);
         }
     }
 
