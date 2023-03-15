@@ -22,6 +22,7 @@ import static com.android.settings.sim.smartForwarding.SmartForwardingUtils.back
 import static com.android.settings.sim.smartForwarding.SmartForwardingUtils.clearAllBackupData;
 import static com.android.settings.sim.smartForwarding.SmartForwardingUtils.getAllSlotCallForwardingStatus;
 import static com.android.settings.sim.smartForwarding.SmartForwardingUtils.getAllSlotCallWaitingStatus;
+import static com.android.settings.sim.smartForwarding.SmartForwardingUtils.onDualSim;
 
 import android.app.ActionBar;
 import android.app.AlertDialog;
@@ -84,6 +85,14 @@ public class SmartForwardingActivity extends SettingsBaseActivity {
     }
 
     public void enableSmartForwarding(String[] phoneNumber) {
+        if (!onDualSim(this)) {
+            Log.d(TAG, "Only support under Dual SIM.");
+            FeatureResult result = new FeatureResult(false, null);
+            result.setReason(FeatureResult.FailedReason.SIM_NOT_ACTIVE);
+            onError(result);
+            return;
+        }
+
         // Pop-up ongoing dialog
         ProgressDialog dialog = new ProgressDialog(this);
         dialog.setTitle(R.string.smart_forwarding_ongoing_title);
@@ -134,6 +143,14 @@ public class SmartForwardingActivity extends SettingsBaseActivity {
     }
 
     public void disableSmartForwarding() {
+        if (!onDualSim(this)) {
+            Log.d(TAG, "Only support under Dual SIM.");
+            FeatureResult result = new FeatureResult(false, null);
+            result.setReason(FeatureResult.FailedReason.SIM_NOT_ACTIVE);
+            onError(result);
+            return;
+        }
+
         TelephonyManager tm = getSystemService(TelephonyManager.class);
         SubscriptionManager sm = getSystemService(SubscriptionManager.class);
 

@@ -23,6 +23,9 @@ import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class SmartForwardingUtils {
     public static final String TAG = "SmartForwarding";
     public static final String SMART_FORWARDING_PREF = "smart_forwarding_pref_";
@@ -141,5 +144,18 @@ public class SmartForwardingUtils {
         } else {
             return "";
         }
+    }
+
+    /**
+     * Check if device has at least 2 active SIMs to support SmartForwarding.
+     */
+    public static boolean onDualSim(Context context) {
+        List<SubscriptionInfo> subscriptions = context.getSystemService(SubscriptionManager.class)
+                .getActiveSubscriptionInfoList();
+        if (subscriptions == null) return false;
+        List<SubscriptionInfo> effectiveSubscriptions = subscriptions.stream()
+                .filter(subInfo -> !subInfo.isOpportunistic())
+                .collect(Collectors.toList());
+        return effectiveSubscriptions.size() >= 2;
     }
 }
