@@ -31,11 +31,15 @@ import androidx.annotation.VisibleForTesting;
 import com.android.settings.R;
 import com.android.settings.bluetooth.BluetoothPairingDialogFragment.BluetoothPairingDialogListener;
 import com.android.settings.core.SettingsUIDeviceConfig;
+import com.android.settingslib.bluetooth.BluetoothCallback;
 import com.android.settingslib.bluetooth.BluetoothUtils;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 import com.android.settingslib.bluetooth.LocalBluetoothProfile;
 
+import org.jetbrains.annotations.NotNull;
+
+import java.util.HashSet;
 import java.util.Locale;
 
 /**
@@ -73,6 +77,10 @@ public class BluetoothPairingController implements OnCheckedChangeListener,
     private boolean mIsLeAudio;
     private boolean mIsLeContactSharingEnabled;
 
+    // Cache 'just work' pairing devices that has been confirmed by user recently
+    private static HashSet<String> sPreConfirmedDevices = new HashSet<>();
+    private BluetoothCallback mBluetoothCallBack;
+
     /**
      * Creates an instance of a BluetoothPairingController.
      *
@@ -84,7 +92,6 @@ public class BluetoothPairingController implements OnCheckedChangeListener,
         mBluetoothManager = Utils.getLocalBtManager(context);
         mDevice = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
 
-        String message = "";
         if (mBluetoothManager == null) {
             throw new IllegalStateException("Could not obtain LocalBluetoothManager");
         } else if (mDevice == null) {
@@ -118,6 +125,21 @@ public class BluetoothPairingController implements OnCheckedChangeListener,
                     SettingsUIDeviceConfig.BT_LE_AUDIO_CONTACT_SHARING_ENABLED, true);
             Log.d(TAG, "BT_LE_AUDIO_CONTACT_SHARING_ENABLED is " + mIsLeContactSharingEnabled);
         }
+
+        mBluetoothCallBack = new BluetoothCallback() {
+            @Override
+            public void onDeviceDeleted(@NotNull CachedBluetoothDevice cachedDevice) {
+                BluetoothCallback.super.onDeviceDeleted(cachedDevice);
+                sPreConfirmedDevices.remove(cachedDevice.getAddress());
+            }
+        };
+        mBluetoothManager.getEventManager().registerCallback(mBluetoothCallBack);
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+        mBluetoothManager.getEventManager().unregisterCallback(mBluetoothCallBack);
     }
 
     @Override
@@ -458,9 +480,14 @@ public class BluetoothPairingController implements OnCheckedChangeListener,
                 mDevice.setPin(passkey);
                 break;
 
+            case BluetoothDevice.PAIRING_VARIANT_CONSENT:
+                // Cache "just work" pairing device so user don't have to confirm again soon,
+                // unless user explicitly forget that device
+                sPreConfirmedDevices.add(mDevice.getAddress());
+                mDevice.setPairingConfirmation(true);
+                break;
 
             case BluetoothDevice.PAIRING_VARIANT_PASSKEY_CONFIRMATION:
-            case BluetoothDevice.PAIRING_VARIANT_CONSENT:
                 mDevice.setPairingConfirmation(true);
                 break;
 
@@ -482,6 +509,7 @@ public class BluetoothPairingController implements OnCheckedChangeListener,
      */
     public void onCancel() {
         Log.d(TAG, "Pairing dialog canceled");
+        sPreConfirmedDevices.remove(mDevice.getAddress());
         mDevice.cancelBondProcess();
     }
 
@@ -493,6 +521,10 @@ public class BluetoothPairingController implements OnCheckedChangeListener,
      */
     public boolean deviceEquals(BluetoothDevice device) {
         return mDevice == device;
+    }
+
+    static boolean isDeviceBondPreConfirmed(BluetoothDevice device) {
+        return sPreConfirmedDevices.contains(device.getAddress());
     }
 
     @VisibleForTesting

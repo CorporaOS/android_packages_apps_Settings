@@ -50,13 +50,18 @@ public final class BluetoothPairingRequest extends BroadcastReceiver {
             PowerManager powerManager = context.getSystemService(PowerManager.class);
             int pairingVariant = intent.getIntExtra(BluetoothDevice.EXTRA_PAIRING_VARIANT,
                     BluetoothDevice.ERROR);
-            boolean shouldShowDialog = LocalBluetoothPreferences.shouldShowDialogInForeground(
+            boolean shouldShowDialog =
+                    LocalBluetoothPreferences.shouldShowDialogInForeground(
                     context, device);
 
             // Skips consent pairing dialog if the device was recently associated with CDM
             if (pairingVariant == BluetoothDevice.PAIRING_VARIANT_CONSENT
                     && (device.canBondWithoutDialog()
                     || mBluetoothManager.getCachedDeviceManager().isOngoingPairByCsip(device))) {
+                device.setPairingConfirmation(true);
+            } else if (pairingVariant == BluetoothDevice.PAIRING_VARIANT_CONSENT
+                    && BluetoothPairingController.isDeviceBondPreConfirmed(device)) {
+                // Skips consent because this device has been confirmed recently
                 device.setPairingConfirmation(true);
             } else if (powerManager.isInteractive() && shouldShowDialog) {
                 // Since the screen is on and the BT-related activity is in the foreground,
