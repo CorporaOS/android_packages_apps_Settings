@@ -345,6 +345,11 @@
             android:summary="@string/bluetooth_disable_leaudio_summary" />
 
         <SwitchPreference
+            android:key="bluetooth_enable_leaudio_bcast"
+            android:title="@string/bluetooth_enable_leaudio_bcast"
+            android:summary="@string/bluetooth_enable_leaudio_bcast_summary" />
+
+        <SwitchPreference
             android:key="bluetooth_enable_leaudio_allow_list"
             android:title="@string/bluetooth_enable_leaudio_allow_list"
             android:summary="@string/bluetooth_enable_leaudio_allow_list_summary" />

@@ -365,6 +365,11 @@
     <!-- Summary of checkbox for disabling Bluetooth LE audio [CHAR LIMIT=none]-->
     <string name="bluetooth_disable_leaudio_summary">Disables Bluetooth LE audio feature if the device supports LE audio hardware capabilities.</string>
 
+    <!-- Setting Checkbox title for enabling Bluetooth LE Audio feature. [CHAR LIMIT=40] -->
+    <string name="bluetooth_enable_leaudio_bcast">Enable Bluetooth LE audio broadcast</string>
+    <!-- Summary of checkbox for enabling Bluetooth LE audio [CHAR LIMIT=none]-->
+    <string name="bluetooth_enable_leaudio_bcast_summary">Enables Bluetooth LE audio broadcast feature.</string>
+
     <!-- Setting Checkbox title for enabling Bluetooth LE Audio Allow List. [CHAR LIMIT=none] -->
     <string name="bluetooth_enable_leaudio_allow_list">Enable Bluetooth LE audio Allow List</string>
     <!-- Summary of checkbox for enabling Bluetooth LE audio Allow List [CHAR LIMIT=none]-->
