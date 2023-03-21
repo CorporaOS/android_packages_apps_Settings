@@ -388,6 +388,11 @@ public class DevelopmentSettingsDashboardFragment extends RestrictedDashboardFra
                     BluetoothLeAudioPreferenceController.class);
         leAudioFeatureController.onRebootDialogConfirmed();
 
+        final BluetoothLeBroadcastPreferenceController leAudioBroadcastFeatureController =
+                getDevelopmentOptionsController(
+                    BluetoothLeBroadcastPreferenceController.class);
+        leAudioBroadcastFeatureController.onRebootDialogConfirmed();
+
         final BluetoothLeAudioAllowListPreferenceController leAudioAllowListController =
                 getDevelopmentOptionsController(
                     BluetoothLeAudioAllowListPreferenceController.class);
@@ -409,6 +414,11 @@ public class DevelopmentSettingsDashboardFragment extends RestrictedDashboardFra
                 getDevelopmentOptionsController(
                     BluetoothLeAudioPreferenceController.class);
         leAudioFeatureController.onRebootDialogCanceled();
+
+        final BluetoothLeBroadcastPreferenceController leAudioBroadcastFeatureController =
+                getDevelopmentOptionsController(
+                    BluetoothLeBroadcastPreferenceController.class);
+        leAudioBroadcastFeatureController.onRebootDialogCanceled();
 
         final BluetoothLeAudioAllowListPreferenceController leAudioAllowListController =
                 getDevelopmentOptionsController(
@@ -610,6 +620,7 @@ public class DevelopmentSettingsDashboardFragment extends RestrictedDashboardFra
         controllers.add(new BluetoothAvrcpVersionPreferenceController(context));
         controllers.add(new BluetoothMapVersionPreferenceController(context));
         controllers.add(new BluetoothLeAudioPreferenceController(context, fragment));
+        controllers.add(new BluetoothLeBroadcastPreferenceController(context, fragment));
         controllers.add(new BluetoothLeAudioAllowListPreferenceController(context, fragment));
         controllers.add(new BluetoothA2dpHwOffloadPreferenceController(context, fragment));
         controllers.add(new BluetoothLeAudioHwOffloadPreferenceController(context, fragment));
