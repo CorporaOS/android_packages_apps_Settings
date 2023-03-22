@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "67380b99_d0047e10",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2023-03-22T01:27:37Z",
+      "side": 1,
+      "message": "Hi @wengsu@google.com,\n\nI found that there are different path of this file \"TetherSettings.java\" between AOSP and master branch and the codes of these two files are different? I wonder why we have different version between AOSP and master? And do you allow this AOSP change or not?",
+      "revId": "7d253a09e70a95813db00e5e87eeefbe4d731b68",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6c1f245d_c5592c77",
