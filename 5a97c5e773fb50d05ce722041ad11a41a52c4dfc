@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d881f6c4_55337ab8",
+        "filename": "src/com/android/settings/datausage/DataUsagePreference.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1288034
+      },
+      "writtenOn": "2023-03-22T08:47:54Z",
+      "side": 1,
+      "message": "Note NetworkTemplate is already imported here",
+      "revId": "5a97c5e773fb50d05ce722041ad11a41a52c4dfc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
