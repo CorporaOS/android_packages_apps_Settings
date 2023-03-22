@@ -46,6 +46,8 @@ public class DataUsagePreference extends Preference implements TemplatePreferenc
                         android.R.attr.preferenceStyle), 0);
         mTitleRes = a.getResourceId(0, 0);
         a.recycle();
+        // This should not build
+        NetworkTemplate.buildTemplateMobileWildcard();
     }
 
     @Override
