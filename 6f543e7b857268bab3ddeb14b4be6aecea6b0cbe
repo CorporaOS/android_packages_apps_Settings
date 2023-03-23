@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "66dd92cc_7a4b0a92",
+        "filename": "src/com/android/settings/bluetooth/BluetoothDetailsProfilesController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2023-03-23T22:45:52Z",
+      "side": 1,
+      "message": "They are the same. Please help to combine them.",
+      "range": {
+        "startLine": 130,
+        "startChar": 0,
+        "endLine": 143,
+        "endChar": 9
+      },
+      "revId": "6f543e7b857268bab3ddeb14b4be6aecea6b0cbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5e54b166_a3ada544",
+        "filename": "src/com/android/settings/bluetooth/BluetoothDetailsProfilesController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2023-03-23T22:45:52Z",
+      "side": 1,
+      "message": "Do we show the phone calls \u0026 media audio when ENABLE_DUAL_MODE_AUDIO is false?",
+      "range": {
+        "startLine": 308,
+        "startChar": 0,
+        "endLine": 311,
+        "endChar": 9
+      },
+      "revId": "6f543e7b857268bab3ddeb14b4be6aecea6b0cbe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
