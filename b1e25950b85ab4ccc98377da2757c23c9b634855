@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "db9b37f6_10b031fd",
+        "filename": "src/com/android/settings/bluetooth/BluetoothDetailsProfilesController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 349,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2023-03-24T00:00:58Z",
+      "side": 1,
+      "message": "What is the default value at framework in the future?\nIf framework set the default value as true, here can be true.",
+      "range": {
+        "startLine": 349,
+        "startChar": 65,
+        "endLine": 349,
+        "endChar": 70
+      },
+      "revId": "b1e25950b85ab4ccc98377da2757c23c9b634855",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
