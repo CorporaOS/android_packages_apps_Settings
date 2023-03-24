@@ -22,6 +22,30 @@
       },
       "revId": "b1e25950b85ab4ccc98377da2757c23c9b634855",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d6e7fea_6843e99d",
+        "filename": "src/com/android/settings/bluetooth/BluetoothDetailsProfilesController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 349,
+      "author": {
+        "id": 1546552
+      },
+      "writtenOn": "2023-03-24T00:03:50Z",
+      "side": 1,
+      "message": "Default is always going to be false. We will override the value for devices that support it.",
+      "parentUuid": "db9b37f6_10b031fd",
+      "range": {
+        "startLine": 349,
+        "startChar": 65,
+        "endLine": 349,
+        "endChar": 70
+      },
+      "revId": "b1e25950b85ab4ccc98377da2757c23c9b634855",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
