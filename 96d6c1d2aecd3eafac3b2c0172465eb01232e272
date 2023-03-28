@@ -16,6 +16,23 @@
       "message": "Please help with triggering Presubmit-verify.",
       "revId": "96d6c1d2aecd3eafac3b2c0172465eb01232e272",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ded75c4b_9997014d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1332604
+      },
+      "writtenOn": "2023-03-28T13:18:52Z",
+      "side": 1,
+      "message": "Thanks for the contribution, we already have an internal fix in Sep 2022.\n\nPlease look forward to the U release, thanks!",
+      "revId": "96d6c1d2aecd3eafac3b2c0172465eb01232e272",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
