@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8686706_2794721c",
+        "filename": "res/xml/smart_forwarding_mdn_handler.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1237921
+      },
+      "writtenOn": "2023-03-29T10:46:19Z",
+      "side": 0,
+      "message": "This text is not translated.",
+      "range": {
+        "startLine": 18,
+        "startChar": 26,
+        "endLine": 18,
+        "endChar": 33
+      },
+      "revId": "1937737393cb4093c261580d227557229d5841b5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b26537e7_fff03b6d",
+        "filename": "res/xml/smart_forwarding_mdn_handler.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1237921
+      },
+      "writtenOn": "2023-03-29T10:46:19Z",
+      "side": 0,
+      "message": "This text is not translated.",
+      "range": {
+        "startLine": 25,
+        "startChar": 26,
+        "endLine": 25,
+        "endChar": 32
+      },
+      "revId": "1937737393cb4093c261580d227557229d5841b5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed2fd591_d44d49ca",
+        "filename": "res/xml/smart_forwarding_switch.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1237921
+      },
+      "writtenOn": "2023-03-29T10:46:19Z",
+      "side": 0,
+      "message": "This text is not translated.",
+      "range": {
+        "startLine": 9,
+        "startChar": 25,
+        "endLine": 9,
+        "endChar": 41
+      },
+      "revId": "1937737393cb4093c261580d227557229d5841b5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
