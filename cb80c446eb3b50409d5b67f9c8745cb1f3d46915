@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b60d612d_9043c4c5",
+        "filename": "res/xml/smart_forwarding_mdn_handler.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000262
+      },
+      "writtenOn": "2023-03-30T10:07:40Z",
+      "side": 1,
+      "message": "Could ConstraintLayout makes things easier ?",
+      "range": {
+        "startLine": 3,
+        "startChar": 1,
+        "endLine": 3,
+        "endChar": 15
+      },
+      "revId": "cb80c446eb3b50409d5b67f9c8745cb1f3d46915",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
