@@ -656,7 +656,12 @@ class ConfigDialog extends AlertDialog implements TextWatcher,
             case VpnProfile.TYPE_L2TP_IPSEC_RSA:
                 profile.l2tpSecret = mL2tpSecret.getText().toString();
                 // fall through
-            case VpnProfile.TYPE_IKEV2_IPSEC_RSA: // fall through
+            case VpnProfile.TYPE_IKEV2_IPSEC_RSA:
+                if (mIpsecUserCert.getSelectedItemPosition() != 0
+                        && profile.type == VpnProfile.TYPE_IKEV2_IPSEC_RSA) {
+                    profile.ipsecSecret = (String) mIpsecUserCert.getSelectedItem();
+                }
+                // fall through
             case VpnProfile.TYPE_IPSEC_XAUTH_RSA:
                 if (mIpsecUserCert.getSelectedItemPosition() != 0) {
                     profile.ipsecUserCert = (String) mIpsecUserCert.getSelectedItem();
