@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1534e5f4_d696f860",
+        "filename": "src/com/android/settings/vpn2/ConfigDialog.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 660,
+      "author": {
+        "id": 1221725
+      },
+      "writtenOn": "2023-04-11T05:16:33Z",
+      "side": 1,
+      "message": "I don\u0027t think we want to do this for XAUTH; it was never done before, and unless there\u0027s a strong reason to think that this is the right thing to do, we should isolate to IPSEC_RSA only. Also note that the IPSEC_RSA has a fallthrough from the code above, so we may need to make sure we don\u0027t fill this in incorrectly.\n\nIt might need to be something like:\n```\ncase VpnProfile.TYPE_L2TP_IPSEC_RSA:\n    if (mIpsecUserCert.getSelectedItemPosition() !\u003d 0\n            \u0026\u0026 profile.type \u003d\u003d VpnProfile.TYPE_IKEV2_IPSEC_RSA) {\n        profile.ipsecSecret \u003d (String) mIpsecUserCert.getSelectedItem();\n    }\n```",
+      "range": {
+        "startLine": 660,
+        "startChar": 28,
+        "endLine": 660,
+        "endChar": 48
+      },
+      "revId": "5949540515a659e18b67503fb60d8fe251cfb737",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
