@@ -81,6 +81,30 @@
       },
       "revId": "f2b8bdd6ea5fc7993ab87cd1bf17ec03e4d39395",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "99e7b37f_f4545353",
+        "filename": "src/com/android/settings/vpn2/ConfigDialog.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 662,
+      "author": {
+        "id": 1221725
+      },
+      "writtenOn": "2023-04-13T00:59:15Z",
+      "side": 1,
+      "message": "I think without one of the prefixes, this will fail the VpnProfile -\u003e Ikev2VpnProfile conversion in fromVpnProfile:\n\nhttps://cs.android.com/android/platform/superproject/+/master:frameworks/base/core/java/android/net/Ikev2VpnProfile.java;l\u003d596?q\u003dikev2vpnprofile\u0026ss\u003dandroid\n\nUnclear if that matters, since this codepath probably doesn\u0027t use fromVpnProfile until this field gets overwritten, but worth thinking about.",
+      "parentUuid": "b3a498d5_777530ed",
+      "range": {
+        "startLine": 662,
+        "startChar": 51,
+        "endLine": 662,
+        "endChar": 65
+      },
+      "revId": "f2b8bdd6ea5fc7993ab87cd1bf17ec03e4d39395",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
