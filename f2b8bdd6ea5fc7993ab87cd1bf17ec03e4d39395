@@ -76,6 +76,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "db35a783_2ac59d18",
+        "filename": "src/com/android/settings/vpn2/ConfigDialog.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 661,
+      "author": {
+        "id": 1304263
+      },
+      "writtenOn": "2023-04-13T07:50:39Z",
+      "side": 1,
+      "message": "Update design back to patchset 2 as Jean\u0027s comment.\n\nThe field looks visible for TYPE_L2TP_IPSEC_RSA. But in existing design, it should not be filled in. I think it\u0027s safer to swap these two cases rather than also set it for TYPE_L2TP_IPSEC_RSA.",
+      "parentUuid": "878f1c4d_5a0c4463",
+      "range": {
+        "startLine": 661,
+        "startChar": 27,
+        "endLine": 661,
+        "endChar": 74
+      },
+      "revId": "f2b8bdd6ea5fc7993ab87cd1bf17ec03e4d39395",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dbb725fa_e6fea341",
