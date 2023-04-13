@@ -105,6 +105,30 @@
       },
       "revId": "f2b8bdd6ea5fc7993ab87cd1bf17ec03e4d39395",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "531d6431_4f273fe1",
+        "filename": "src/com/android/settings/vpn2/ConfigDialog.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 662,
+      "author": {
+        "id": 1304263
+      },
+      "writtenOn": "2023-04-13T02:14:50Z",
+      "side": 1,
+      "message": "Settings starts VPN via startLegacyVpnPrivileged(). The prefix is appended inside Vpn. It should be added in either Settings or Vpn. If the prefix would like to be appened inside Settings, the implementataion in Vpn should be removed.  \n\nI would prefer that it\u0027s handled by framework. App side does not need to known which prefix should be appended.",
+      "parentUuid": "99e7b37f_f4545353",
+      "range": {
+        "startLine": 662,
+        "startChar": 51,
+        "endLine": 662,
+        "endChar": 65
+      },
+      "revId": "f2b8bdd6ea5fc7993ab87cd1bf17ec03e4d39395",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
