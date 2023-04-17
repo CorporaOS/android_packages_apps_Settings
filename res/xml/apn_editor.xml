@@ -174,4 +174,28 @@
         android:inputType="text"
         android:persistent="false"
         />
+    <EditTextPreference
+        android:title="@string/apn_mtu"
+        android:dialogTitle="@string/apn_mtu"
+        android:key="apn_mtu"
+        android:singleLine="true"
+        android:inputType="number"
+        android:persistent="false"
+        />
+    <EditTextPreference
+        android:title="@string/apn_mtu_v4"
+        android:dialogTitle="@string/apn_mtu_v4"
+        android:key="apn_mtu_v4"
+        android:singleLine="true"
+        android:inputType="number"
+        android:persistent="false"
+        />
+    <EditTextPreference
+        android:title="@string/apn_mtu_v6"
+        android:dialogTitle="@string/apn_mtu_v6"
+        android:key="apn_mtu_v6"
+        android:singleLine="true"
+        android:inputType="number"
+        android:persistent="false"
+        />
 </PreferenceScreen>
