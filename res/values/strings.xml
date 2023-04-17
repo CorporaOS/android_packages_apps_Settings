@@ -4125,6 +4125,12 @@
     <string name="mvno_type">MVNO type</string>
     <!-- Edit Mvno Match Data Info of APN -->
     <string name="mvno_match_data">MVNO value</string>
+    <!-- Edit MTU of APN -->
+    <string name="apn_mtu">MTU</string>
+    <!-- Edit IPv4 MTU of APN -->
+    <string name="apn_mtu">IPv4 MTU</string>
+    <!-- Edit IPv6 MTU of APN -->
+    <string name="apn_mtu">IPv6 MTU</string>
     <!-- Edit access point screen menu option to delete this APN -->
     <string name="menu_delete">Delete APN</string>
     <!-- APNs screen menu option to create a brand spanking new APN -->
