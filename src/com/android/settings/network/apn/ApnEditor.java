@@ -125,6 +125,12 @@ public class ApnEditor extends SettingsPreferenceFragment
     ListPreference mMvnoType;
     @VisibleForTesting
     EditTextPreference mMvnoMatchData;
+    @VisibleForTesting
+    EditTextPreference mMtu;
+    @VisibleForTesting
+    EditTextPreference mMtuV4;
+    @VisibleForTesting
+    EditTextPreference mMtuV6;
 
     @VisibleForTesting
     ApnData mApnData;
@@ -216,32 +222,35 @@ public class ApnEditor extends SettingsPreferenceFragment
      * Standard projection for the interesting columns of a normal note.
      */
     private static final String[] sProjection = new String[] {
-            Telephony.Carriers._ID,     // 0
-            Telephony.Carriers.NAME,    // 1
-            Telephony.Carriers.APN,     // 2
-            Telephony.Carriers.PROXY,   // 3
-            Telephony.Carriers.PORT,    // 4
-            Telephony.Carriers.USER,    // 5
-            Telephony.Carriers.SERVER,  // 6
-            Telephony.Carriers.PASSWORD, // 7
-            Telephony.Carriers.MMSC, // 8
-            Telephony.Carriers.MCC, // 9
-            Telephony.Carriers.MNC, // 10
-            Telephony.Carriers.NUMERIC, // 11
-            Telephony.Carriers.MMSPROXY, // 12
-            Telephony.Carriers.MMSPORT, // 13
-            Telephony.Carriers.AUTH_TYPE, // 14
-            Telephony.Carriers.TYPE, // 15
-            Telephony.Carriers.PROTOCOL, // 16
-            Telephony.Carriers.CARRIER_ENABLED, // 17
-            Telephony.Carriers.BEARER, // 18
-            Telephony.Carriers.BEARER_BITMASK, // 19
+            Telephony.Carriers._ID,              // 0
+            Telephony.Carriers.NAME,             // 1
+            Telephony.Carriers.APN,              // 2
+            Telephony.Carriers.PROXY,            // 3
+            Telephony.Carriers.PORT,             // 4
+            Telephony.Carriers.USER,             // 5
+            Telephony.Carriers.SERVER,           // 6
+            Telephony.Carriers.PASSWORD,         // 7
+            Telephony.Carriers.MMSC,             // 8
+            Telephony.Carriers.MCC,              // 9
+            Telephony.Carriers.MNC,              // 10
+            Telephony.Carriers.NUMERIC,          // 11
+            Telephony.Carriers.MMSPROXY,         // 12
+            Telephony.Carriers.MMSPORT,          // 13
+            Telephony.Carriers.AUTH_TYPE,        // 14
+            Telephony.Carriers.TYPE,             // 15
+            Telephony.Carriers.PROTOCOL,         // 16
+            Telephony.Carriers.CARRIER_ENABLED,  // 17
+            Telephony.Carriers.BEARER,           // 18
+            Telephony.Carriers.BEARER_BITMASK,   // 19
             Telephony.Carriers.ROAMING_PROTOCOL, // 20
-            Telephony.Carriers.MVNO_TYPE,   // 21
+            Telephony.Carriers.MVNO_TYPE,        // 21
             Telephony.Carriers.MVNO_MATCH_DATA,  // 22
-            Telephony.Carriers.EDITED_STATUS,   // 23
-            Telephony.Carriers.USER_EDITABLE,   // 24
-            Telephony.Carriers.CARRIER_ID       // 25
+            Telephony.Carriers.EDITED_STATUS,    // 23
+            Telephony.Carriers.USER_EDITABLE,    // 24
+            Telephony.Carriers.CARRIER_ID,       // 25
+            Telephony.Carriers.MTU,              // 26
+            Telephony.Carriers.MTU_V4,           // 27
+            Telephony.Carriers.MTU_V6,           // 28
     };
 
     private static final int ID_INDEX = 0;
@@ -277,6 +286,9 @@ public class ApnEditor extends SettingsPreferenceFragment
     private static final int EDITED_INDEX = 23;
     private static final int USER_EDITABLE_INDEX = 24;
     private static final int CARRIER_ID_INDEX = 25;
+    private static final int MTU_INDEX = 26;
+    private static final int MTU_V4_INDEX = 27;
+    private static final int MTU_V6_INDEX = 28;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -495,6 +507,12 @@ public class ApnEditor extends SettingsPreferenceFragment
                 return mMvnoType;
             case Telephony.Carriers.MVNO_MATCH_DATA:
                 return mMvnoMatchData;
+            case Telephony.Carrires.MTU:
+                return mMtu;
+            case Telephony.Carriers.MTU_V4:
+                return mMtuV4;
+            case Telephony.Carriers.MTU_V6:
+                return mMtuV6;
         }
         return null;
     }
@@ -537,6 +555,9 @@ public class ApnEditor extends SettingsPreferenceFragment
         mBearerMulti.setEnabled(false);
         mMvnoType.setEnabled(false);
         mMvnoMatchData.setEnabled(false);
+        mMtu.setEnabled(false);
+        mMtuV4.setEnabled(false);
+        mMtuV6.setEnabled(false);
     }
 
     /**
@@ -630,6 +651,9 @@ public class ApnEditor extends SettingsPreferenceFragment
                 mMvnoType.setValue(mMvnoTypeStr);
                 mMvnoMatchData.setText(mMvnoMatchDataStr);
             }
+            mMtu.setText(mApnData.getString(MTU_INDEX));
+            mMtuV6.setText(mApnData.getString(MTU_V4_INDEX));
+            mMtuV4.setText(mApnData.getString(MTU_V6_INDEX));
         }
 
         mName.setSummary(checkNull(mName.getText()));
@@ -665,6 +689,9 @@ public class ApnEditor extends SettingsPreferenceFragment
         mMvnoType.setSummary(
                 checkNull(mvnoDescription(mMvnoType.getValue())));
         mMvnoMatchData.setSummary(checkNullforMvnoValue(mMvnoMatchData.getText()));
+        mMtu.setSummary(checkNull(mMtu.getText()));
+        mMtuV4.setSummary(checkNull(mMtuV4.getText()));
+        mMtuV6.setSummary(checkNull(mMtuV6.getText()));
         // allow user to edit carrier_enabled for some APN
         final boolean ceEditable = getResources().getBoolean(
                 R.bool.config_allow_edit_carrier_enabled);
@@ -1136,6 +1163,24 @@ public class ApnEditor extends SettingsPreferenceFragment
                 callUpdate,
                 MVNO_MATCH_DATA_INDEX);
 
+        callUpdate = setStringValueAndCheckIfDiff(values,
+                Telephony.Carriers.MTU,
+                checkNotSet(mMtu.getText()),
+                callUpdate,
+                MTU_INDEX);
+
+        callUpdate = setStringValueAndCheckIfDiff(values,
+                Telephony.Carriers.MTU_V4,
+                checkNotSet(mMtuV4.getText()),
+                callUpdate,
+                MTU_V4_INDEX);
+
+        callUpdate = setStringValueAndCheckIfDiff(values,
+                Telephony.Carriers.MTU_V6,
+                checkNotSet(mMtuV6.getText()),
+                callUpdate,
+                MTU_V6_INDEX);
+
         callUpdate = setIntValueAndCheckIfDiff(values,
                 Telephony.Carriers.CARRIER_ENABLED,
                 mCarrierEnabled.isChecked() ? 1 : 0,
@@ -1330,6 +1375,9 @@ public class ApnEditor extends SettingsPreferenceFragment
         mBearerMulti = (MultiSelectListPreference) findPreference(KEY_BEARER_MULTI);
         mMvnoType = (ListPreference) findPreference(KEY_MVNO_TYPE);
         mMvnoMatchData = (EditTextPreference) findPreference("mvno_match_data");
+        mMtu = (EditTextPreference) findPreference("apn_mtu");
+        mMtuV4 = (EditTextPreference) findPreference("apn_mtu_v4");
+        mMtuV6 = (EditTextPreference) findPreference("apn_mtu_v6");
     }
 
     @VisibleForTesting
