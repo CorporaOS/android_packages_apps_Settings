@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd544305_25f38c15",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1938785
+      },
+      "writtenOn": "2023-04-24T19:42:14Z",
+      "side": 1,
+      "message": "Hi, we are the UiAutomator team updating all the UiAutomator imports across the Android codebase. PTAL at this CL. Thank you!",
+      "revId": "643e908ec428c7aa448b66e957972153b7ad5b28",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
