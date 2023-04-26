@@ -16,6 +16,24 @@
       "message": "This shall be better. \n```\nBoolean.valueOf(entry.extraInfo.toString())\n```",
       "revId": "d99db6d428e7b57982fd2a17768d77c5f198ee15",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee72d511_bacf98f3",
+        "filename": "src/com/android/settings/applications/AppStateLocaleBridge.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2023-04-26T04:49:14Z",
+      "side": 1,
+      "message": "IMHO: Calling a `toString` first and then `parse` it always seems a little bit redundant and inefficient. I\u0027d like to keep the current state, it does solve the problem, and a similar case can be found at [AppStatePowerBridge](https://cs.android.com/android/platform/superproject/+/master:packages/apps/Settings/src/com/android/settings/applications/AppStatePowerBridge.java;l\u003d64?q\u003dAppStatePowerBridge).",
+      "parentUuid": "66bbf190_ec26775c",
+      "revId": "d99db6d428e7b57982fd2a17768d77c5f198ee15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
