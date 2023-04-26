@@ -588,6 +588,11 @@
         -->
     </string-array>
 
+    <!-- Provides default value for double line clock in lock screen setting state:
+         0 - Don't show double line clock
+         1 - Show double line clock in lock screen (default) -->
+    <integer name="config_doubleline_clock_default">1</integer>
+
     <!-- The option list for switch screen resolution -->
     <string-array name="config_screen_resolution_options_strings" translatable="false">
         <item>@string/screen_resolution_option_high</item>
@@ -661,5 +666,4 @@
     <bool name="enrollment_prioritize_acquire_messages">false</bool>
     <!-- Control messages displayed during enrollment -->
     <bool name="enrollment_message_display_controller_flag">false</bool>
-
 </resources>

@@ -37,7 +37,8 @@ public class LockscreenClockPreferenceController extends TogglePreferenceControl
 
     @Override
     public boolean isChecked() {
-        return Settings.Secure.getInt(mContext.getContentResolver(), SETTING_KEY, 1) != 0;
+        return Settings.Secure.getInt(mContext.getContentResolver(), SETTING_KEY,
+                mContext.getResources().getInteger(R.integer.config_doubleline_clock_default)) != 0;
     }
 
     @Override
