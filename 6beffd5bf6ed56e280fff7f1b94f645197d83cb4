@@ -16,6 +16,23 @@
       "message": "LGTM",
       "revId": "6beffd5bf6ed56e280fff7f1b94f645197d83cb4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "029d1c6a_d4d59abd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2023-04-26T11:28:46Z",
+      "side": 1,
+      "message": "Hi Yanting, \n\nCould you help to Owner review for this CL?",
+      "revId": "6beffd5bf6ed56e280fff7f1b94f645197d83cb4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
