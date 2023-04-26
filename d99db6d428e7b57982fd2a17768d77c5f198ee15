@@ -51,6 +51,24 @@
       "parentUuid": "66bbf190_ec26775c",
       "revId": "d99db6d428e7b57982fd2a17768d77c5f198ee15",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8c99e72_cde3d966",
+        "filename": "src/com/android/settings/applications/AppStateLocaleBridge.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2023-04-26T08:47:16Z",
+      "side": 1,
+      "message": "\u003e IMHO: Calling a `toString` first and then `parse` it always seems a little bit redundant and inefficient. I\u0027d like to keep the current state, it does solve the problem, and a similar case can be found at [AppStatePowerBridge](https://cs.android.com/android/platform/superproject/+/master:packages/apps/Settings/src/com/android/settings/applications/AppStatePowerBridge.java;l\u003d64?q\u003dAppStatePowerBridge).\n\nAmend: After taking into a deep look, it makes sense to do so. Ack. BTW, What do you think if we also amend this similar point at [AppStatePowerBridge](https://cs.android.com/android/platform/superproject/+/master:packages/apps/Settings/src/com/android/settings/applications/AppStatePowerBridge.java;l\u003d64?q\u003dAppStatePowerBridge)， Tom?",
+      "parentUuid": "ee72d511_bacf98f3",
+      "revId": "d99db6d428e7b57982fd2a17768d77c5f198ee15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
