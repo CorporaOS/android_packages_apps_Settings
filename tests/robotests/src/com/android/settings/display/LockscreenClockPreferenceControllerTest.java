@@ -22,6 +22,8 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.provider.Settings;
 
+import android.testing.TestableResources;
+
 import androidx.preference.Preference;
 
 import org.junit.Before;
@@ -56,6 +58,8 @@ public class LockscreenClockPreferenceControllerTest {
     @Test
     public void isChecked_SettingIs1_returnTrue() {
         Settings.Secure.putInt(mContentResolver, SETTING_KEY, 1);
+        TestableResources resources = mContext.getOrCreateTestableResources();
+        resources.addOverride(R.integer.config_doubleline_clock_default, 1);
 
         assertThat(mController.isChecked()).isTrue();
     }
@@ -63,6 +67,8 @@ public class LockscreenClockPreferenceControllerTest {
     @Test
     public void isChecked_SettingIs0_returnFalse() {
         Settings.Secure.putInt(mContentResolver, SETTING_KEY, 0);
+        TestableResources resources = mContext.getOrCreateTestableResources();
+        resources.addOverride(R.integer.config_doubleline_clock_default, 0);
 
         assertThat(mController.isChecked()).isFalse();
     }
