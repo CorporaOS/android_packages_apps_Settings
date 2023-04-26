@@ -105,6 +105,24 @@
       "parentUuid": "1f2e6207_41d9762c",
       "revId": "d99db6d428e7b57982fd2a17768d77c5f198ee15",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "de875bc7_31e0125b",
+        "filename": "src/com/android/settings/applications/AppStateLocaleBridge.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2023-04-26T10:15:25Z",
+      "side": 1,
+      "message": "Done and thanks for this effort.",
+      "parentUuid": "02a99eaa_72f25eeb",
+      "revId": "d99db6d428e7b57982fd2a17768d77c5f198ee15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
