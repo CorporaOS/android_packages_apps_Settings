@@ -42,6 +42,8 @@ public class LockscreenClockPreferenceControllerTest {
     private ContentResolver mContentResolver;
     private LockscreenClockPreferenceController mController;
 
+    private int mDoubleLineClockDefault = 1;
+
     @Mock
     private Preference mPreference;
 
@@ -50,7 +52,12 @@ public class LockscreenClockPreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
         mContentResolver = mContext.getContentResolver();
-        mController = new LockscreenClockPreferenceController(mContext, TEST_KEY);
+        mController = new LockscreenClockPreferenceController(mContext, TEST_KEY) {
+            @Override
+            protected int getDoublelineClockDefault() {
+                return mDoubleLineClockDefault;
+            }
+        };
     }
 
     @Test
@@ -71,7 +78,18 @@ public class LockscreenClockPreferenceControllerTest {
     public void isChecked_SettingIsNotSet_returnTrue() {
         Settings.Secure.putString(mContentResolver, SETTING_KEY, null);
 
+        mDoubleLineClockDefault = 1;
+
         assertThat(mController.isChecked()).isTrue();
+    }
+
+    @Test
+    public void isChecked_SettingIsNotSet_returnFalse() {
+        Settings.Secure.putString(mContentResolver, SETTING_KEY, null);
+
+        mDoubleLineClockDefault = 0;
+
+        assertThat(mController.isChecked()).isFalse();
     }
 
     @Test
