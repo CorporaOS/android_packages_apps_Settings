@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "66bbf190_ec26775c",
+        "filename": "src/com/android/settings/applications/AppStateLocaleBridge.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2023-04-26T04:04:20Z",
+      "side": 1,
+      "message": "This shall be better. \n```\nBoolean.valueOf(entry.extraInfo.toString())\n```",
+      "revId": "d99db6d428e7b57982fd2a17768d77c5f198ee15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
