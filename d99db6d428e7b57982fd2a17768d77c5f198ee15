@@ -69,6 +69,24 @@
       "parentUuid": "ee72d511_bacf98f3",
       "revId": "d99db6d428e7b57982fd2a17768d77c5f198ee15",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f2e6207_41d9762c",
+        "filename": "src/com/android/settings/applications/AppStateLocaleBridge.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2023-04-26T10:08:26Z",
+      "side": 1,
+      "message": "My first opinion is to improve the readability.\ne.g.\n```\nreturn Boolean.valueOf(entry.extraInfo.toString());\n```\nBut you point out inefficient problem. I think your choice shall be better for the performance perspective.\n\nHence, I agree you use ```return entry.extraInfo \u003d\u003d Boolean.TRUE;``` instead.",
+      "parentUuid": "a8c99e72_cde3d966",
+      "revId": "d99db6d428e7b57982fd2a17768d77c5f198ee15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
