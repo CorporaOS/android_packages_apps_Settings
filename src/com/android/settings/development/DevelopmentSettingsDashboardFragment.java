@@ -613,6 +613,7 @@ public class DevelopmentSettingsDashboardFragment extends RestrictedDashboardFra
         controllers.add(new BluetoothAvrcpVersionPreferenceController(context));
         controllers.add(new BluetoothMapVersionPreferenceController(context));
         controllers.add(new BluetoothLeAudioPreferenceController(context, fragment));
+        controllers.add(new BluetoothLeAudioDeviceDetailsPreferenceController(context, fragment));
         controllers.add(new BluetoothLeAudioAllowListPreferenceController(context, fragment));
         controllers.add(new BluetoothA2dpHwOffloadPreferenceController(context, fragment));
         controllers.add(new BluetoothLeAudioHwOffloadPreferenceController(context, fragment));
