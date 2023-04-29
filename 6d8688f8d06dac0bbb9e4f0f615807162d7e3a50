@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d035f43f_805106a1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1730162
+      },
+      "writtenOn": "2023-04-29T22:03:28Z",
+      "side": 1,
+      "message": "We need a function to reset the setting as the developer option setting off.",
+      "revId": "6d8688f8d06dac0bbb9e4f0f615807162d7e3a50",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "01c62304_d8e8cac3",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 1730162
+      },
+      "writtenOn": "2023-04-29T22:03:28Z",
+      "side": 1,
+      "message": "It\u0027s not a checkbox. Please correct the comment and the others as well",
+      "range": {
+        "startLine": 368,
+        "startChar": 17,
+        "endLine": 368,
+        "endChar": 25
+      },
+      "revId": "6d8688f8d06dac0bbb9e4f0f615807162d7e3a50",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "00a6eabb_8df5d337",
+        "filename": "src/com/android/settings/development/BluetoothLeAudioDeviceDetailsPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1730162
+      },
+      "writtenOn": "2023-04-29T22:03:28Z",
+      "side": 1,
+      "message": "isLeAudioSupported? It would be better to have the similar connect cross all layer.",
+      "range": {
+        "startLine": 77,
+        "startChar": 22,
+        "endLine": 77,
+        "endChar": 36
+      },
+      "revId": "6d8688f8d06dac0bbb9e4f0f615807162d7e3a50",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44cbfa15_2321108e",
+        "filename": "src/com/android/settings/development/BluetoothLeAudioDeviceDetailsPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1730162
+      },
+      "writtenOn": "2023-04-29T22:03:28Z",
+      "side": 1,
+      "message": "Could it set to be invisible as LE Audio not supported?",
+      "range": {
+        "startLine": 84,
+        "startChar": 12,
+        "endLine": 84,
+        "endChar": 42
+      },
+      "revId": "6d8688f8d06dac0bbb9e4f0f615807162d7e3a50",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
