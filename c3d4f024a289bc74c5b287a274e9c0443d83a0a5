@@ -16,6 +16,24 @@
       "message": "Rename: `config_doubleline_clock_override`",
       "revId": "c3d4f024a289bc74c5b287a274e9c0443d83a0a5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "848a57d8_8b45e79b",
+        "filename": "res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 668,
+      "author": {
+        "id": 1568592
+      },
+      "writtenOn": "2023-05-01T11:40:25Z",
+      "side": 1,
+      "message": "Sorry, I meant to say `config_doubleline_clock_default`. It doesn\u0027t really override, rather it provides a default value.",
+      "parentUuid": "ce306981_ea4aeb47",
+      "revId": "c3d4f024a289bc74c5b287a274e9c0443d83a0a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
