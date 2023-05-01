@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce306981_ea4aeb47",
+        "filename": "res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 668,
+      "author": {
+        "id": 1568592
+      },
+      "writtenOn": "2023-05-01T11:35:38Z",
+      "side": 1,
+      "message": "Rename: `config_doubleline_clock_override`",
+      "revId": "c3d4f024a289bc74c5b287a274e9c0443d83a0a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
