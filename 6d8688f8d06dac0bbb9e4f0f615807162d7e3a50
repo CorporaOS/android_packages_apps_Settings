@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2be59302_9ccbb6e8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1875587
+      },
+      "writtenOn": "2023-05-02T08:45:55Z",
+      "side": 1,
+      "message": "Done\nReset the value to null when the developer option was disabled.",
+      "parentUuid": "d035f43f_805106a1",
+      "revId": "6d8688f8d06dac0bbb9e4f0f615807162d7e3a50",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "01c62304_d8e8cac3",
@@ -31,6 +49,30 @@
       "writtenOn": "2023-04-29T22:03:28Z",
       "side": 1,
       "message": "It\u0027s not a checkbox. Please correct the comment and the others as well",
+      "range": {
+        "startLine": 368,
+        "startChar": 17,
+        "endLine": 368,
+        "endChar": 25
+      },
+      "revId": "6d8688f8d06dac0bbb9e4f0f615807162d7e3a50",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db2ce910_47b3b6fa",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 1875587
+      },
+      "writtenOn": "2023-05-02T08:45:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "01c62304_d8e8cac3",
       "range": {
         "startLine": 368,
         "startChar": 17,
@@ -64,6 +106,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f62d53d_79404b18",
+        "filename": "src/com/android/settings/development/BluetoothLeAudioDeviceDetailsPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1875587
+      },
+      "writtenOn": "2023-05-02T08:45:55Z",
+      "side": 1,
+      "message": "Variable was removed in the latest patchset",
+      "parentUuid": "00a6eabb_8df5d337",
+      "range": {
+        "startLine": 77,
+        "startChar": 22,
+        "endLine": 77,
+        "endChar": 36
+      },
+      "revId": "6d8688f8d06dac0bbb9e4f0f615807162d7e3a50",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "44cbfa15_2321108e",
@@ -77,6 +143,30 @@
       "writtenOn": "2023-04-29T22:03:28Z",
       "side": 1,
       "message": "Could it set to be invisible as LE Audio not supported?",
+      "range": {
+        "startLine": 84,
+        "startChar": 12,
+        "endLine": 84,
+        "endChar": 42
+      },
+      "revId": "6d8688f8d06dac0bbb9e4f0f615807162d7e3a50",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ffd3e989_88a1d3e0",
+        "filename": "src/com/android/settings/development/BluetoothLeAudioDeviceDetailsPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1875587
+      },
+      "writtenOn": "2023-05-02T08:45:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "44cbfa15_2321108e",
       "range": {
         "startLine": 84,
         "startChar": 12,
