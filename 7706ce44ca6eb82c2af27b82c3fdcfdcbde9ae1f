@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e0f23782_a932cd5a",
+        "filename": "src/com/android/settings/development/BluetoothLeAudioDeviceDetailsPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2023-05-03T11:25:06Z",
+      "side": 1,
+      "message": "whether UI display Bluetooth LE audio toggle or not",
+      "range": {
+        "startLine": 33,
+        "startChar": 35,
+        "endLine": 33,
+        "endChar": 61
+      },
+      "revId": "7706ce44ca6eb82c2af27b82c3fdcfdcbde9ae1f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
