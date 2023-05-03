@@ -22,6 +22,30 @@
       },
       "revId": "7706ce44ca6eb82c2af27b82c3fdcfdcbde9ae1f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8dabcb8_02bb4fab",
+        "filename": "src/com/android/settings/development/BluetoothLeAudioDeviceDetailsPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1875587
+      },
+      "writtenOn": "2023-05-03T12:39:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e0f23782_a932cd5a",
+      "range": {
+        "startLine": 33,
+        "startChar": 35,
+        "endLine": 33,
+        "endChar": 61
+      },
+      "revId": "7706ce44ca6eb82c2af27b82c3fdcfdcbde9ae1f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
