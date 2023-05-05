@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eade3785_4bef327a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1730162
+      },
+      "writtenOn": "2023-05-05T08:56:30Z",
+      "side": 1,
+      "message": "You probably need to rebase the change. The base is older more than one month.",
+      "revId": "3679f61295845d46c80d43f57ced610121eb83a9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
