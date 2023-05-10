@@ -16,6 +16,23 @@
       "message": "Hi, we are the UiAutomator team updating all the UiAutomator imports across the Android codebase. PTAL at this CL. Thank you!",
       "revId": "38cf6857b5c26f9a21dfde9420f8248cbad38d19",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "01bcdb9d_38024f47",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1938785
+      },
+      "writtenOn": "2023-05-10T20:49:57Z",
+      "side": 1,
+      "message": "Hi, PTAL at this CL for updating the UiAutomator imports to the maintained and latest version. Thanks!",
+      "revId": "38cf6857b5c26f9a21dfde9420f8248cbad38d19",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
