@@ -97,6 +97,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3a1b5ba9_4d9ae7bb",
+        "filename": "src/com/android/settings/development/BluetoothLeAudioDeviceDetailsPreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1121403
+      },
+      "writtenOn": "2023-05-10T19:04:30Z",
+      "side": 1,
+      "message": "which namespace should this be? BT or Settings?",
+      "range": {
+        "startLine": 80,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 51
+      },
+      "revId": "e81654ed5008770210b0b163a09c18c81612a4bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f4b48d2a_f7475986",
         "filename": "src/com/android/settings/development/DevelopmentSettingsDashboardFragment.java",
         "patchSetId": 8
