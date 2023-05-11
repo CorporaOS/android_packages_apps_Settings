@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b5ec308e_e6334a54",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2023-05-11T08:15:50Z",
+      "side": 1,
+      "message": "This cl patch was merged at internal codebase.",
+      "revId": "b09d90da7770e4d925776d5bb3ea0f6c350724c0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
