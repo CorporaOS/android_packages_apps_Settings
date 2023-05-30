@@ -210,6 +210,13 @@
             </intent-filter>
         </receiver>
 
+        <receiver android:name=".OemKeepEnabledAppSetup"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.PRE_BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
         <activity android:name=".SubSettings"
                   android:exported="false"
                   android:theme="@style/Theme.SubSettings"

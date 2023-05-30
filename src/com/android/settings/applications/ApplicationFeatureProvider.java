@@ -82,6 +82,12 @@ public interface ApplicationFeatureProvider {
     Set<String> getKeepEnabledPackages();
 
     /**
+     * Returns a list of package names that should be kept enabled, as defined by OEMs. This is a
+     * subset of {@link getKeepEnabledPackages}
+     */
+    Set<String> getOemKeepEnabledPackages();
+
+    /**
      * Returns a user readable text explaining how much time user has spent in an app at a
      * pre-specified duration.
      */

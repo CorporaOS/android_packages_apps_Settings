@@ -76,6 +76,9 @@ public final class ApplicationFeatureProviderImplTest {
 
     private final String PERMISSION = "some.permission";
 
+    private final Set<String> OEM_KEEPENABLED_PACKAGES = Set.of(
+                "oem.keep.enabled_1", "oem.keep.enabled_2", "oem.keep.enabled_3");
+
     @Mock
     private UserManager mUserManager;
     @Mock
@@ -307,9 +310,42 @@ public final class ApplicationFeatureProviderImplTest {
 
         ReflectionHelpers.setField(mProvider, "mContext", spyContext);
 
+        // getOemKeepEnabledPackages must be mocked since the provider is mocked
+        doReturn(OEM_KEEPENABLED_PACKAGES).when(spyProvider).getOemKeepEnabledPackages();
+
         final Set<String> keepEnabledPackages = spyProvider.getKeepEnabledPackages();
 
         assertThat(keepEnabledPackages).contains(testEuicc);
+    }
+
+    @Test
+    @Config(shadows = {ShadowSmsApplication.class, ShadowDefaultDialerManager.class})
+    public void getKeepEnabledPackages_shouldContainOemKeepEnabledPackages() {
+        final String testDialer = "com.android.test.defaultdialer";
+        final String testSms = "com.android.test.defaultsms";
+        final String testLocationHistory = "com.android.test.location.history";
+        final String testEuicc = "com.android.test.euicc";
+
+        ShadowSmsApplication.setDefaultSmsApplication(new ComponentName(testSms, "receiver"));
+        ShadowDefaultDialerManager.setDefaultDialerApplication(testDialer);
+        final ComponentInfo componentInfo = new ComponentInfo();
+        componentInfo.packageName = testEuicc;
+
+        // Mock the provider and the OEM 'keep enabled' packages
+        ApplicationFeatureProviderImpl spyProvider = spy(new ApplicationFeatureProviderImpl(
+                mContext, mPackageManager, mPackageManagerService, mDevicePolicyManager));
+        doReturn(OEM_KEEPENABLED_PACKAGES).when(spyProvider).getOemKeepEnabledPackages();
+
+        // Spy the real context to mock LocationManager.
+        Context spyContext = spy(RuntimeEnvironment.application);
+        when(mLocationManager.getExtraLocationControllerPackage()).thenReturn(testLocationHistory);
+        when(spyContext.getSystemService(Context.LOCATION_SERVICE)).thenReturn(mLocationManager);
+
+        ReflectionHelpers.setField(mProvider, "mContext", spyContext);
+
+        final Set<String> keepEnabledPackages = spyProvider.getKeepEnabledPackages();
+
+        assertThat(keepEnabledPackages).containsAtLeastElementsIn(OEM_KEEPENABLED_PACKAGES);
     }
 
     @Test

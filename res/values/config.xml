@@ -662,4 +662,9 @@
     <!-- Control messages displayed during enrollment -->
     <bool name="enrollment_message_display_controller_flag">false</bool>
 
+    <!-- Package names of 'Keep enabled' applications for OEMs/Carriers, i.e applications which
+         shall be non-disableable -->
+    <string-array name="config_manufacturerKeepEnabledPackages" translatable="false"></string-array>
+    <string-array name="config_carrierKeepEnabledPackages" translatable="false"></string-array>
+
 </resources>

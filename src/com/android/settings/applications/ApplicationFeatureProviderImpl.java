@@ -28,6 +28,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.pm.ServiceInfo;
 import android.content.pm.UserInfo;
+import android.content.res.Resources;
 import android.location.LocationManager;
 import android.os.RemoteException;
 import android.os.UserManager;
@@ -58,6 +59,8 @@ public class ApplicationFeatureProviderImpl implements ApplicationFeatureProvide
     private static final int EUICC_QUERY_FLAGS =
             PackageManager.MATCH_SYSTEM_ONLY | PackageManager.MATCH_DEBUG_TRIAGED_MISSING
                 | PackageManager.GET_RESOLVED_FILTER;
+    private final Set<String> mOemKeepEnabledPackages = new ArraySet<String>();
+    private boolean mOemKeepEnabledPackagesInitialized = false;
 
     public ApplicationFeatureProviderImpl(Context context, PackageManager pm,
             IPackageManager pms, DevicePolicyManager dpm) {
@@ -167,7 +170,29 @@ public class ApplicationFeatureProviderImpl implements ApplicationFeatureProvide
         if (locationHistoryPackage != null) {
             keepEnabledPackages.add(locationHistoryPackage);
         }
+
+        // Packages defined as 'keep enabled' by OEMs should be kept enabled
+        keepEnabledPackages.addAll(getOemKeepEnabledPackages());
+
         return keepEnabledPackages;
+    }
+
+    @Override
+    public Set<String> getOemKeepEnabledPackages() {
+        if (!mOemKeepEnabledPackagesInitialized) {
+            final Resources r = mContext.getResources();
+            if (r != null) {
+                for (String s : r.getStringArray(R.array.config_manufacturerKeepEnabledPackages)) {
+                    mOemKeepEnabledPackages.add(s);
+                }
+                for (String s : r.getStringArray(R.array.config_carrierKeepEnabledPackages)) {
+                    mOemKeepEnabledPackages.add(s);
+                }
+            }
+            mOemKeepEnabledPackagesInitialized = true;
+        }
+
+        return mOemKeepEnabledPackages;
     }
 
     private Set<String> getEnabledPackageAllowlist() {
