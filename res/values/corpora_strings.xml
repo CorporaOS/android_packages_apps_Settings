@@ -42,4 +42,11 @@
     <!-- Torch Power button gestures -->
     <string name="power_button_torch_title">Quick torch</string>
     <string name="power_button_torch_summary">When the screen is off, long-pressing power button will enable torch</string>
+
+    <!-- Hide developer status -->
+    <string name="hide_developer_status_title">Hide developer status</string>
+    <string name="hide_developer_status_summary">Hide developer status from apps</string>
+
+    <!-- Misc Settings -->
+    <string name="misc_settings_title">Misc</string>
 </resources>
