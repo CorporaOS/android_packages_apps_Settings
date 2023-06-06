@@ -16,6 +16,23 @@
       "message": "please have a look",
       "revId": "18fa11d599b6921b7fba5cfe582bd0f18dab0e02",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "642fbf3f_51b99c9b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1332604
+      },
+      "writtenOn": "2023-06-06T23:33:13Z",
+      "side": 1,
+      "message": "As per the comment19 of b/200043113, we plan to kick off the request/technical review in July, thanks!",
+      "revId": "18fa11d599b6921b7fba5cfe582bd0f18dab0e02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
