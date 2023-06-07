@@ -76,7 +76,9 @@ android_robolectric_test {
     ],
 
     static_libs: [
+        "Settings_robolectric_meta_service_file",
         "SettingsLib-robo-testutils",
+        "Settings-robo-testutils",
         "android-support-annotations",
         "androidx.test.core",
         "androidx.test.runner",
@@ -107,10 +109,23 @@ android_robolectric_test {
 java_library {
     name: "Settings-robo-testutils",
     srcs: ["src/com/android/settings/testutils/**/*.java"],
-
+    javacflags: [
+        "-Aorg.robolectric.annotation.processing.shadowPackage=com.android.settings.testutils.shadow",
+        // Uncomment the below to debug annotation processors not firing.
+        //"-verbose",
+        //"-XprintRounds",
+        //"-XprintProcessorInfo",
+        //"-Xlint",
+        //"-J-verbose",
+    ],  
+    plugins: [
+        "auto_value_plugin_1.9",
+        "auto_value_builder_plugin_1.9",
+        "Robolectric_processor_upstream",
+    ],
     libs: [
+        "Robolectric_all-target_upstream",
         "Settings-core",
-        "Robolectric_all-target",
         "mockito-robolectric-prebuilt",
         "truth-prebuilt",
     ],

@@ -46,7 +46,7 @@ public class ShadowAudioManager extends org.robolectric.shadows.ShadowAudioManag
     private List<AudioDeviceCallback> mDeviceCallbacks = new ArrayList<>();
 
     @Implementation
-    private int getRingerModeInternal() {
+    protected int getRingerModeInternal() {
         return mRingerMode;
     }
 

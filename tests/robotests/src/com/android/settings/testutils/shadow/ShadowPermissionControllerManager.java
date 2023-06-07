@@ -31,6 +31,7 @@ import java.util.concurrent.Executor;
 @Implements(PermissionControllerManager.class)
 public class ShadowPermissionControllerManager {
 
+    @Implementation
     protected void __constructor__(Context contexts, Handler handler) {
         // no nothing, everything is shadowed
     }
