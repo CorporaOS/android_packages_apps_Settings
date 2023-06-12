@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e4f9178_cfbd3133",
+        "filename": "tests/robotests/src/com/android/settings/display/LockscreenClockPreferenceControllerTest.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1568592
+      },
+      "writtenOn": "2023-06-12T15:26:26Z",
+      "side": 1,
+      "message": "Ah, I see. I don\u0027t believe you can use `TestableResources` in settings. One way around this is to create a protected method in `LockscreenClockPreferenceController` that wraps `mContext.getResources().getInteger(R.integer.config_doubleline_clock_default)`, which you can then extend and override in this test class. @schfan@google.com is there a better way to override values in XML files?",
+      "revId": "db884e2ebb69dd070049b4640179a03873fefa92",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
