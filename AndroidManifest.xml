@@ -5,7 +5,7 @@
 
     <original-package android:name="com.android.settings"/>
 
-    <uses-permission android:name="android.permission.REQUEST_NETWORK_SCORES" />
+    <uses-permission android:name="android.permission.REQUEST_NETWORK_SCOS" />
     <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
