@@ -55,9 +55,9 @@ public class MobilePlanPreferenceController extends AbstractPreferenceController
     }
 
     public static final int MANAGE_MOBILE_PLAN_DIALOG_ID = 1;
+    static final String KEY_MANAGE_MOBILE_PLAN = "manage_mobile_plan";
 
     private static final String TAG = "MobilePlanPrefContr";
-    private static final String KEY_MANAGE_MOBILE_PLAN = "manage_mobile_plan";
     private static final String SAVED_MANAGE_MOBILE_PLAN_MSG = "mManageMobilePlanMessage";
 
     private final UserManager mUserManager;
