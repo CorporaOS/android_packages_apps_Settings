@@ -34,6 +34,24 @@
       "parentUuid": "3e4f9178_cfbd3133",
       "revId": "db884e2ebb69dd070049b4640179a03873fefa92",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4442df24_16e02878",
+        "filename": "tests/robotests/src/com/android/settings/display/LockscreenClockPreferenceControllerTest.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1877755
+      },
+      "writtenOn": "2023-06-15T10:21:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fbdb7043_346fbe46",
+      "revId": "db884e2ebb69dd070049b4640179a03873fefa92",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
