@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "21d5533c_8de16491",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1429802
+      },
+      "writtenOn": "2023-06-20T04:44:43Z",
+      "side": 1,
+      "message": "remove myself since I\u0027m not working on Settings team.",
+      "revId": "d7d4ec224f9d6921c9f7f51bce65e4c8d30157f0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
