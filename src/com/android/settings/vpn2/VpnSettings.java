@@ -18,6 +18,7 @@ package com.android.settings.vpn2;
 
 import static android.app.AppOpsManager.OP_ACTIVATE_PLATFORM_VPN;
 import static android.app.AppOpsManager.OP_ACTIVATE_VPN;
+import static android.content.pm.PackageManager.ResolveInfoFlags;
 
 import android.annotation.UiThread;
 import android.annotation.WorkerThread;
@@ -508,6 +509,19 @@ public class VpnSettings extends RestrictedSettingsFragment implements
         return result;
     }
 
+    static boolean isVpnServiceInManifest(Context context, int userId, String packageName) {
+        final PackageManager pm = context.getPackageManager();
+
+        if (pm == null) {
+            throw new IllegalStateException("Cannot get PackageManager.");
+        }
+
+        final Intent intent = new Intent(VpnConfig.SERVICE_INTERFACE);
+        intent.setPackage(packageName);
+
+        return pm.resolveServiceAsUser(intent, ResolveInfoFlags.of(0), userId) != null;
+    }
+
     static List<AppVpnInfo> getVpnApps(Context context, boolean includeProfiles) {
         List<AppVpnInfo> result = Lists.newArrayList();
 
@@ -528,6 +542,8 @@ public class VpnSettings extends RestrictedSettingsFragment implements
         if (apps != null) {
             for (AppOpsManager.PackageOps pkg : apps) {
                 int userId = UserHandle.getUserId(pkg.getUid());
+                final String packageName = pkg.getPackageName();
+
                 if (!profileIds.contains(userId)) {
                     // Skip packages for users outside of our profile group.
                     continue;
@@ -537,11 +553,15 @@ public class VpnSettings extends RestrictedSettingsFragment implements
                 for (AppOpsManager.OpEntry op : pkg.getOps()) {
                     if ((op.getOp() == OP_ACTIVATE_VPN || op.getOp() == OP_ACTIVATE_PLATFORM_VPN)
                             && op.getMode() == AppOpsManager.MODE_ALLOWED) {
+                        if (op.getOp() == OP_ACTIVATE_VPN
+                                && !isVpnServiceInManifest(context, userId, packageName)) {
+                            continue;
+                        }
                         allowed = true;
                     }
                 }
                 if (allowed) {
-                    result.add(new AppVpnInfo(userId, pkg.getPackageName()));
+                    result.add(new AppVpnInfo(userId, packageName));
                 }
             }
         }
