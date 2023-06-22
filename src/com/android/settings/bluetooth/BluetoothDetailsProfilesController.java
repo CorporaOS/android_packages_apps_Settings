@@ -333,6 +333,7 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
         }
         LocalBluetoothProfile vcp = mProfileManager.getVolumeControlProfile();
         LocalBluetoothProfile csip = mProfileManager.getCsipSetCoordinatorProfile();
+        LocalBluetoothProfile asha = mProfileManager.getHearingAidProfile();
 
         for (CachedBluetoothDevice leAudioDevice : mProfileDeviceMap.get(profile.toString())) {
             Log.d(TAG,
@@ -343,6 +344,9 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
             }
             if (csip != null) {
                 csip.setEnabled(leAudioDevice.getDevice(), false);
+            }
+            if (asha != null) {
+                asha.setEnabled(leAudioDevice.getDevice(), false);
             }
         }
 
@@ -372,6 +376,7 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
 
         LocalBluetoothProfile vcp = mProfileManager.getVolumeControlProfile();
         LocalBluetoothProfile csip = mProfileManager.getCsipSetCoordinatorProfile();
+        LocalBluetoothProfile asha = mProfileManager.getHearingAidProfile();
         for (CachedBluetoothDevice leAudioDevice : mProfileDeviceMap.get(profile.toString())) {
             Log.d(TAG,
                     "User enable LE device: " + leAudioDevice.getDevice().getAnonymizedAddress());
@@ -381,6 +386,9 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
             }
             if (csip != null) {
                 csip.setEnabled(leAudioDevice.getDevice(), true);
+            }
+            if (asha != null) {
+                asha.setEnabled(leAudioDevice.getDevice(), true);
             }
         }
     }
@@ -395,6 +403,11 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
                     Log.d(TAG, "The " + profile.toString() + " profile is disabled. Do nothing.");
                 }
             }
+        } else {
+            if (profile == null) { Log.w(TAG, "profile is null"); }
+            else {
+              Log.w(TAG, "mProfileDeviceMap does not have profile.toString()" + mProfileDeviceMap);
+            }
         }
     }
 
@@ -407,6 +420,11 @@ public class BluetoothDetailsProfilesController extends BluetoothDetailsControll
                 } else {
                     Log.d(TAG, "The " + profile.toString() + " profile is enabled. Do nothing.");
                 }
+            }
+        } else {
+            if (profile == null) { Log.w(TAG, "profile is null"); }
+            else {
+              Log.w(TAG, "mProfileDeviceMap does not have profile.toString()" + mProfileDeviceMap);
             }
         }
     }
