@@ -16,6 +16,115 @@
       "message": "Hi @edgarwang@google.com/ @millchen@google.com/ @ykhung@google.com ,\n\nCould you please help with a review on this CL?\n\nThanks.",
       "revId": "f6aaa304d54e90373a77975f153ff1827fa69766",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "555094d5_4d326074",
+        "filename": "res/values/config.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 594,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2023-06-28T09:27:18Z",
+      "side": 1,
+      "message": "I prefer to add this config in frameworks/base/core/res/res/values/config.xml\n\nso that we don\u0027t need to control this flag in every app(SystemUI \u0026 Settings, etc...)",
+      "range": {
+        "startLine": 591,
+        "startChar": 4,
+        "endLine": 594,
+        "endChar": 63
+      },
+      "revId": "f6aaa304d54e90373a77975f153ff1827fa69766",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "abccf503_7b58bde9",
+        "filename": "tests/robotests/src/com/android/settings/display/LockscreenClockPreferenceControllerTest.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2023-06-28T09:27:18Z",
+      "side": 1,
+      "message": "don\u0027t do that instead of using when()",
+      "range": {
+        "startLine": 56,
+        "startChar": 11,
+        "endLine": 59,
+        "endChar": 13
+      },
+      "revId": "f6aaa304d54e90373a77975f153ff1827fa69766",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2aed9d1b_2f1ab210",
+        "filename": "tests/robotests/src/com/android/settings/display/LockscreenClockPreferenceControllerTest.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2023-06-28T09:27:18Z",
+      "side": 1,
+      "message": "when(mContext.getResources().getInteger(R.integer.config_doubleline_clock_default))\n.thenReturn(1);",
+      "range": {
+        "startLine": 81,
+        "startChar": 8,
+        "endLine": 81,
+        "endChar": 36
+      },
+      "revId": "f6aaa304d54e90373a77975f153ff1827fa69766",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "30902e61_a639432b",
+        "filename": "tests/robotests/src/com/android/settings/display/LockscreenClockPreferenceControllerTest.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2023-06-28T09:27:18Z",
+      "side": 1,
+      "message": "remove to keep precondition together.",
+      "revId": "f6aaa304d54e90373a77975f153ff1827fa69766",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a8b6d5fe_c9af95c1",
+        "filename": "tests/robotests/src/com/android/settings/display/LockscreenClockPreferenceControllerTest.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2023-06-28T09:27:18Z",
+      "side": 1,
+      "message": "when(mContext.getResources().getInteger(R.integer.config_doubleline_clock_default))\n.thenReturn(0);",
+      "range": {
+        "startLine": 90,
+        "startChar": 8,
+        "endLine": 90,
+        "endChar": 36
+      },
+      "revId": "f6aaa304d54e90373a77975f153ff1827fa69766",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
