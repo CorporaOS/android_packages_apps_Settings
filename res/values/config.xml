@@ -681,6 +681,9 @@
     <!-- Whether to display the 3G option at network mode.-->
     <bool name="config_display_network_mode_3g_option">true</bool>
 
+    <!-- Whether to display the "Enable wireless display" menu -->
+    <bool name="config_show_wifi_display_enable_menu">true</bool>
+
     <!-- The illustration for those screen are not in one of below type. This file should be a video in JSON format. -->
     <item name="a11y_timeout_banner" type="raw" product="default">@raw/accessibility_timeout_banner</item>
     <item name="a11y_timeout_banner" type="raw" product="tablet">@raw/accessibility_timeout_banner_tablet</item>
