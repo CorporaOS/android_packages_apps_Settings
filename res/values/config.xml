@@ -696,4 +696,7 @@
 
     <item name="a11y_extra_dim_banner" type="raw" product="default">@raw/extra_dim_banner</item>
     <item name="a11y_extra_dim_banner" type="raw" product="tablet">@raw/extra_dim_banner_tablet</item>
+
+    <!-- Whether to display the "Enable wireless display" menu -->
+    <bool name="config_show_wifi_display_enable_menu">true</bool>
 </resources>
