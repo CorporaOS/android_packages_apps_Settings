@@ -731,4 +731,7 @@
 
     <!-- List of MVNO. Do not translate -->
     <integer-array name="datausage_hiding_carrier_service_carrier_id" translatable="false"/>
+
+    <!-- Whether to display the "Enable wireless display" menu -->
+    <bool name="config_show_wifi_display_enable_menu">true</bool>
 </resources>
