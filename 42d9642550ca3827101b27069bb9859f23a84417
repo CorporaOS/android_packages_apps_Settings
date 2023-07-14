@@ -65,6 +65,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "54a18742_424f44cd",
+        "filename": "src/com/android/settings/network/apn/ApnEditor.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 413,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2023-07-14T07:54:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fc4a4642_2abf4f1a",
+      "range": {
+        "startLine": 410,
+        "startChar": 0,
+        "endLine": 413,
+        "endChar": 0
+      },
+      "revId": "42d9642550ca3827101b27069bb9859f23a84417",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d880c5e5_ba882d15",
@@ -102,6 +126,30 @@
       "side": 1,
       "message": "I think we need to keep using List instead of String to match APN types.\n\nIf use String#contains, it will match any character of APN type in apnTypesList1.\nIf use List#contains, it will fully match APN type in apnTypesList1.\n\nFor example, apnTypesList1 \u003d [dun, ims], user enters APN type \u0027d\u0027 or \u0027i\u0027 or \u0027im\u0027 ... in APN Edit screen, then:\n\nNG: It will be matched as unexpected with your proposal.\nOK: It will not be matched as expected with our implementation.\n\nSo, I suggest to keep our implementation.",
       "parentUuid": "d880c5e5_ba882d15",
+      "range": {
+        "startLine": 418,
+        "startChar": 0,
+        "endLine": 418,
+        "endChar": 65
+      },
+      "revId": "42d9642550ca3827101b27069bb9859f23a84417",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8867137f_98c68e3d",
+        "filename": "src/com/android/settings/network/apn/ApnEditor.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2023-07-14T07:54:15Z",
+      "side": 1,
+      "message": "ok, LGTM",
+      "parentUuid": "1f306c2d_8c92d72d",
       "range": {
         "startLine": 418,
         "startChar": 0,
