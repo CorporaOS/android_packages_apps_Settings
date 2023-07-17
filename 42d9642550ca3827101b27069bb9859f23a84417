@@ -18,6 +18,23 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb6ebe3d_3bc84c12",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2023-07-17T08:44:47Z",
+      "side": 1,
+      "message": "Hi Mill,\n\nDo you have the +2 approval? Not sure who has this cl approval.",
+      "revId": "42d9642550ca3827101b27069bb9859f23a84417",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f320c51e_950e0baa",
