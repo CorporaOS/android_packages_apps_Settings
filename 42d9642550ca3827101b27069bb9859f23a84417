@@ -37,6 +37,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "729f9e4f_1ac462c6",
+        "filename": "src/com/android/settings/network/apn/ApnEditor.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 411,
+      "author": {
+        "id": 1368032
+      },
+      "writtenOn": "2023-07-17T09:31:09Z",
+      "side": 1,
+      "message": "Why do you need to modify the content of parameter that passed in? Will this affect the original apn types array?",
+      "range": {
+        "startLine": 411,
+        "startChar": 12,
+        "endLine": 411,
+        "endChar": 29
+      },
+      "revId": "42d9642550ca3827101b27069bb9859f23a84417",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f320c51e_950e0baa",
         "filename": "src/com/android/settings/network/apn/ApnEditor.java",
         "patchSetId": 2
