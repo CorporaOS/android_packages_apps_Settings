@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "2f675346_5c082a85",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2023-07-19T00:32:39Z",
+      "side": 1,
+      "message": "This only happens if the user is not currently running, right?  Can you please state that explicitly?",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 9
+      },
+      "revId": "96eba215453a033cdbb60a2ec5477f4a264ed542",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "57d6c080_f6e8824c",
@@ -14,6 +37,52 @@
       "writtenOn": "2023-07-18T09:45:19Z",
       "side": 1,
       "message": "I added the reviewers from last cl of StorageWizardMigrateConfirm.java.\nPlease help to review it.",
+      "revId": "96eba215453a033cdbb60a2ec5477f4a264ed542",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7422f28b_22a21603",
+        "filename": "src/com/android/settings/deviceinfo/StorageWizardMigrateConfirm.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2023-07-19T00:32:39Z",
+      "side": 1,
+      "message": "\"credentials set up\" \u003d\u003e \"a lockscreen credential\".  Likewise in the comment",
+      "range": {
+        "startLine": 107,
+        "startChar": 67,
+        "endLine": 107,
+        "endChar": 86
+      },
+      "revId": "96eba215453a033cdbb60a2ec5477f4a264ed542",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "705bfaf0_87d96a8d",
+        "filename": "src/com/android/settings/deviceinfo/StorageWizardMigrateConfirm.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2023-07-19T00:32:39Z",
+      "side": 1,
+      "message": "What you have here is correct for AOSP main currently.  Unfortunately it\u0027s not correct for Android 14 or internal main :-(\n\nThis is because starting in Android 14, each user\u0027s CE key is always encrypted by a key derived from the synthetic password of that user.  Previously, this was only true when the user didn\u0027t have a LSKF (i.e. lockscreen credential).\n\nAs a result, requests to unlock an unsecured user must now go through `LockSettingsService`.  So, `mStorage.unlockUserKey(user.id, user.serialNumber, null)` will need to be replaced with `lpu.unlockUserIfUnsecured(user.id)`.  That method does exist in Android 14, but it uses `LockSettingsInternal`, so `Settings` can\u0027t use it as-is.  It will need to be changed to use a binder API instead.\n\nI\u0027m very sorry that AOSP main isn\u0027t up to date in this area!  I personally would strongly prefer doing all development in AOSP main.  Unfortunately, many parts of Android are developed primarily in internal main, and that sometimes forces me to use internal main too.  If your company has early access to the Android 14 source, you can upload a revised version of this change to the partner Gerrit.  Otherwise, I think we need to wait for the push of Android 14 to AOSP.",
+      "range": {
+        "startLine": 109,
+        "startChar": 20,
+        "endLine": 109,
+        "endChar": 77
+      },
       "revId": "96eba215453a033cdbb60a2ec5477f4a264ed542",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
