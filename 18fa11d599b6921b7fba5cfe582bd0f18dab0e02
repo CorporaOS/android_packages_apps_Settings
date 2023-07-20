@@ -54,6 +54,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ce96f175_f1c12995",
+        "filename": "res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 667,
+      "author": {
+        "id": 1221112
+      },
+      "writtenOn": "2023-07-20T15:05:44Z",
+      "side": 1,
+      "message": "as an OEM we can change this in two ways, either use \nhttps://source.android.com/docs/core/runtime/rros\nor we can use build time overlays.\n/vendor belongs to companies like QCOM, we do changes in /system_ext and /product",
+      "parentUuid": "4d83291b_9c8b94e6",
+      "revId": "18fa11d599b6921b7fba5cfe582bd0f18dab0e02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "acd6fe2b_0c9f2f48",
         "filename": "src/com/android/settings/OemKeepEnabledAppSetup.java",
         "patchSetId": 1
