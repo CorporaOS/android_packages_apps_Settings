@@ -654,6 +654,9 @@
     <!-- The extra value for battery tip -->
     <integer name="config_battery_extra_tip_value">12</integer>
 
+    <!-- Whether to show the VPN options menu. The default is to show it. -->
+    <bool name="config_show_vpn_options">true</bool>
+
     <!-- An array of uid name for which packages exempt from Wi-Fi permission check. -->
     <string-array name="config_exempt_wifi_permission_uid_name" translatable="false">
         <item>@string/config_settingsintelligence_package_name</item>
