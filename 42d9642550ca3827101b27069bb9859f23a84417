@@ -78,6 +78,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "09d5b8c7_e02ed768",
+        "filename": "src/com/android/settings/network/apn/ApnEditor.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 411,
+      "author": {
+        "id": 1237921
+      },
+      "writtenOn": "2023-07-26T01:14:36Z",
+      "side": 1,
+      "message": "I should not have modify the original apn type array.\n\nI updated it in this commit. The default branch is changed to main. Is it okay?\nhttps://android-review.googlesource.com/c/platform/packages/apps/Settings/+/2671056",
+      "parentUuid": "729f9e4f_1ac462c6",
+      "range": {
+        "startLine": 411,
+        "startChar": 12,
+        "endLine": 411,
+        "endChar": 29
+      },
+      "revId": "42d9642550ca3827101b27069bb9859f23a84417",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f320c51e_950e0baa",
         "filename": "src/com/android/settings/network/apn/ApnEditor.java",
         "patchSetId": 2
