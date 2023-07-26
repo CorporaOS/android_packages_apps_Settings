@@ -428,7 +428,7 @@ public class FaceEnrollIntroduction extends BiometricEnrollIntroduction {
     private boolean maxFacesEnrolled() {
         if (mFaceManager != null) {
             // This will need to be updated for devices with multiple face sensors.
-            final int numEnrolledFaces = mFaceManager.getEnrolledFaces(mUserId).size();
+            final int numEnrolledFaces = mFaceManager.getEnrolledFaces(UserHandle.myUserId()).size();
             final int maxFacesEnrollable = getApplicationContext().getResources()
                     .getInteger(R.integer.suw_max_faces_enrollable);
             return numEnrolledFaces >= maxFacesEnrollable;
