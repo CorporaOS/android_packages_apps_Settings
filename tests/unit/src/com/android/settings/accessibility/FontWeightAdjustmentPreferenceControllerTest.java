@@ -28,6 +28,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import com.android.settings.core.BasePreferenceController;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -35,6 +36,7 @@ import org.junit.runner.RunWith;
  * Tests for {@link FontWeightAdjustmentPreferenceController}.
  */
 @RunWith(AndroidJUnit4.class)
+@Ignore("b/293250385: modifies the system-global FONT_WEIGHT_ADJUSTMENT but doesn't clean up.")
 public class FontWeightAdjustmentPreferenceControllerTest {
     private static final int ON = FontWeightAdjustmentPreferenceController.BOLD_TEXT_ADJUSTMENT;
     private static final int OFF = 0;
