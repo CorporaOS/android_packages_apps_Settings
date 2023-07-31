@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "003185e6_3b3407dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1858130
+      },
+      "writtenOn": "2023-07-31T20:44:10Z",
+      "side": 1,
+      "message": "Is it right to be in the biometrics package or can we move it as a peer?\n\nMaybe use remoteauth instead of remoteauthenticator so it\u0027s shorter?",
+      "revId": "3423bf094a31b7c350b558083ec79cd9924df499",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
