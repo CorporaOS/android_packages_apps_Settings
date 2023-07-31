@@ -16,6 +16,24 @@
       "message": "Is it right to be in the biometrics package or can we move it as a peer?\n\nMaybe use remoteauth instead of remoteauthenticator so it\u0027s shorter?",
       "revId": "3423bf094a31b7c350b558083ec79cd9924df499",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "471671d2_13afa2cd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1809097
+      },
+      "writtenOn": "2023-07-31T20:56:31Z",
+      "side": 1,
+      "message": "activeunlock is also under biometrics, this why I chose this route initially.\n\nI am open to being a peer. It will put us on the same level as all other package under com.android.settings.\n\n@joshmccloskey What are your thoughts?",
+      "parentUuid": "003185e6_3b3407dc",
+      "revId": "3423bf094a31b7c350b558083ec79cd9924df499",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
