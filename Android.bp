@@ -91,6 +91,11 @@ android_library {
         "SystemUIUnfoldLib",
     ],
 
+    lint: {
+        // b/293955812: UnsafeIntentLaunch lint check crashes
+        disabled_checks: ["UnsafeIntentLaunch"],
+    },
+
     libs: [
         "telephony-common",
         "ims-common",
