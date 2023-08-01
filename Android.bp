@@ -95,6 +95,11 @@ android_library {
         "telephony-common",
         "ims-common",
     ],
+
+    lint: {
+        // b/293955812: UnsafeIntentLaunch lint check crashes
+        disabled_checks: ["UnsafeIntentLaunch"],
+    },
 }
 
 platform_compat_config {
