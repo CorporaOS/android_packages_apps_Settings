@@ -34,6 +34,24 @@
       "parentUuid": "003185e6_3b3407dc",
       "revId": "3423bf094a31b7c350b558083ec79cd9924df499",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "289b385a_58d6543b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1809097
+      },
+      "writtenOn": "2023-08-01T13:42:25Z",
+      "side": 1,
+      "message": "I updated this to be outside of biometrics.",
+      "parentUuid": "471671d2_13afa2cd",
+      "revId": "3423bf094a31b7c350b558083ec79cd9924df499",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
