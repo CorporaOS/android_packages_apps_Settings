@@ -79,12 +79,16 @@ import java.util.List;
 
 @SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
 public class DevelopmentSettingsDashboardFragment extends RestrictedDashboardFragment
-        implements OnMainSwitchChangeListener, OemUnlockDialogHost, AdbDialogHost,
-        AdbClearKeysDialogHost, LogPersistDialogHost,
-        BluetoothRebootDialog.OnRebootDialogListener,
-        AbstractBluetoothPreferenceController.Callback,
-        BluetoothSnoopLogHost,
-        NfcRebootDialog.OnNfcRebootDialogConfirmedListener {
+        implements OnMainSwitchChangeListener,
+                OemUnlockDialogHost,
+                AdbDialogHost,
+                AdbClearKeysDialogHost,
+                LogPersistDialogHost,
+                BluetoothRebootDialog.OnRebootDialogListener,
+                AbstractBluetoothPreferenceController.Callback,
+                BluetoothSnoopLogHost,
+                NfcRebootDialog.OnNfcRebootDialogConfirmedListener,
+                SixteenKbPagesDialogHost {
 
     private static final String TAG = "DevSettingsDashboard";
 
@@ -577,6 +581,7 @@ public class DevelopmentSettingsDashboardFragment extends RestrictedDashboardFra
         controllers.add(new BluetoothSnoopLogFilterProfilePbapPreferenceController(context));
         controllers.add(new BluetoothSnoopLogFilterProfileMapPreferenceController(context));
         controllers.add(new OemUnlockPreferenceController(context, activity, fragment));
+        controllers.add(new Enable16kPagesPreferenceController(context, fragment));
         controllers.add(new PictureColorModePreferenceController(context, lifecycle));
         controllers.add(new WebViewAppPreferenceController(context));
         controllers.add(new CoolColorTemperaturePreferenceController(context));
@@ -733,4 +738,18 @@ public class DevelopmentSettingsDashboardFragment extends RestrictedDashboardFra
                             null /* bluetoothA2dpConfigStore */);
                 }
             };
+
+    @Override
+    public void onEnable16kPagesConfirmed() {
+        final Enable16kPagesPreferenceController controller =
+                getDevelopmentOptionsController(Enable16kPagesPreferenceController.class);
+        controller.on16kDialogConfirmed();
+    }
+
+    @Override
+    public void onEnable16kPagesDismissed() {
+        final Enable16kPagesPreferenceController controller =
+                getDevelopmentOptionsController(Enable16kPagesPreferenceController.class);
+        controller.on16kDialogDismissed();
+    }
 }
