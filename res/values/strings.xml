@@ -10106,6 +10106,15 @@
     <string name="oem_lock_info_message">Please restart the device to enable device protection feature.</string>
     <string name="automatic_storage_manager_freed_bytes"><xliff:g id="size" example="3.25MB">%1$s</xliff:g> total made available\n\nLast ran on <xliff:g id="date" example="Jan 12">%2$s</xliff:g></string>
 
+    <!-- setting Checkbox title whether to boot with 16K page size [CHAR_LIMIT=35] -->
+    <string name="enable_16k_pages">Boot with 16K page size</string>
+    <!-- setting Checkbox summary whether to boot with 16K page size[CHAR_LIMIT=50] -->
+    <string name="enable_16k_pages_summary">Boot device using 16K page size supported kernel</string>
+    <!-- Confirmation dialog title to ensure user wishes to enable 16K page size -->
+    <string name="confirm_enable_16k_pages_title">Reboot with 16K page compatible kernel?</string>
+    <!-- Warning dialog message to confirm user wishes to enable 16K page size -->
+    <string name="confirm_enable_16k_pages_text">WARNING: Some applications may not be compatible with this mode</string>
+
     <!-- Title text for enabling web actions. [CHAR_LIMIT=60] -->
     <string name="web_action_enable_title">Instant apps</string>
 
