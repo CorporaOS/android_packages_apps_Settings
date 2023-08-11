@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed2d9c8a_5973723f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-08-11T21:56:47Z",
+      "side": 1,
+      "message": "I will wait for b/295573133 to send this to settings team",
+      "revId": "26a0d2c3f0f89aeae780e8340d54a9db21837782",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
