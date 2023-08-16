@@ -154,9 +154,11 @@ abstract class BluetoothNameDialogFragment extends InstrumentedDialogFragment
     @Override
     public void onResume() {
         super.onResume();
-        if (mOkButton == null) {
+        if (mOkButton == null && mDeviceNameView != null) {
             mOkButton = mAlertDialog.getButton(DialogInterface.BUTTON_POSITIVE);
-            mOkButton.setEnabled(mDeviceNameEdited);    // Ok button enabled after user edits
+            // Ok button enabled after user edits
+            mOkButton.setEnabled(mDeviceNameEdited &&
+               mDeviceNameView.getText().toString().trim().length() != 0);
         }
     }
 
