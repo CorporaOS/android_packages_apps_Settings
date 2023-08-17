@@ -41,6 +41,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "90e09e32_e5852f85",
+        "filename": "res/values/config.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 594,
+      "author": {
+        "id": 1943370
+      },
+      "writtenOn": "2023-08-17T19:16:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "555094d5_4d326074",
+      "range": {
+        "startLine": 591,
+        "startChar": 4,
+        "endLine": 594,
+        "endChar": 63
+      },
+      "revId": "f6aaa304d54e90373a77975f153ff1827fa69766",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "abccf503_7b58bde9",
@@ -54,6 +78,30 @@
       "writtenOn": "2023-06-28T09:27:18Z",
       "side": 1,
       "message": "don\u0027t do that instead of using when()",
+      "range": {
+        "startLine": 56,
+        "startChar": 11,
+        "endLine": 59,
+        "endChar": 13
+      },
+      "revId": "f6aaa304d54e90373a77975f153ff1827fa69766",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5acdd7b8_09418366",
+        "filename": "tests/robotests/src/com/android/settings/display/LockscreenClockPreferenceControllerTest.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1943370
+      },
+      "writtenOn": "2023-08-17T19:16:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "abccf503_7b58bde9",
       "range": {
         "startLine": 56,
         "startChar": 11,
@@ -87,6 +135,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "746dbc86_aa456992",
+        "filename": "tests/robotests/src/com/android/settings/display/LockscreenClockPreferenceControllerTest.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1943370
+      },
+      "writtenOn": "2023-08-17T19:16:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2aed9d1b_2f1ab210",
+      "range": {
+        "startLine": 81,
+        "startChar": 8,
+        "endLine": 81,
+        "endChar": 36
+      },
+      "revId": "f6aaa304d54e90373a77975f153ff1827fa69766",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "30902e61_a639432b",
@@ -104,6 +176,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "526c71bb_7388f984",
+        "filename": "tests/robotests/src/com/android/settings/display/LockscreenClockPreferenceControllerTest.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1943370
+      },
+      "writtenOn": "2023-08-17T19:16:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "30902e61_a639432b",
+      "revId": "f6aaa304d54e90373a77975f153ff1827fa69766",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a8b6d5fe_c9af95c1",
@@ -117,6 +207,30 @@
       "writtenOn": "2023-06-28T09:27:18Z",
       "side": 1,
       "message": "when(mContext.getResources().getInteger(R.integer.config_doubleline_clock_default))\n.thenReturn(0);",
+      "range": {
+        "startLine": 90,
+        "startChar": 8,
+        "endLine": 90,
+        "endChar": 36
+      },
+      "revId": "f6aaa304d54e90373a77975f153ff1827fa69766",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e932a4e_dbd83fa9",
+        "filename": "tests/robotests/src/com/android/settings/display/LockscreenClockPreferenceControllerTest.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1943370
+      },
+      "writtenOn": "2023-08-17T19:16:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a8b6d5fe_c9af95c1",
       "range": {
         "startLine": 90,
         "startChar": 8,
