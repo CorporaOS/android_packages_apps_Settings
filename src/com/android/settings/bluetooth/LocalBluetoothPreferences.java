@@ -34,7 +34,7 @@ import com.android.settingslib.bluetooth.LocalBluetoothManager;
  */
 final class LocalBluetoothPreferences {
     private static final String TAG = "LocalBluetoothPreferences";
-    private static final boolean DEBUG = Utils.D;
+    private static final boolean DEBUG = true;
     private static final String SHARED_PREFERENCES_NAME = "bluetooth_settings";
 
     // If a device was picked from the device picker or was in discoverable mode
@@ -66,11 +66,13 @@ final class LocalBluetoothPreferences {
         LocalBluetoothManager manager = Utils.getLocalBtManager(context);
         if (manager == null) {
             if (DEBUG) Log.v(TAG, "manager == null - do not show dialog.");
+            Log.e(TAG, "Manager is null - do not show dialog.");
             return false;
         }
 
         // If Bluetooth Settings is visible
         if (manager.isForegroundActivity()) {
+            Log.e(TAG, "Is foreground activity - show dialog.");
             return true;
         }
 
@@ -78,6 +80,7 @@ final class LocalBluetoothPreferences {
         if ((context.getResources().getConfiguration().uiMode &
                 Configuration.UI_MODE_TYPE_APPLIANCE) == Configuration.UI_MODE_TYPE_APPLIANCE) {
             if (DEBUG) Log.v(TAG, "in appliance mode - do not show dialog.");
+            Log.e(TAG, "In appliance mode - do not show dialog.");
             return false;
         }
 
@@ -89,6 +92,7 @@ final class LocalBluetoothPreferences {
                 KEY_DISCOVERABLE_END_TIMESTAMP, 0);
         if ((lastDiscoverableEndTime + GRACE_PERIOD_TO_SHOW_DIALOGS_IN_FOREGROUND)
                 > currentTimeMillis) {
+            Log.e(TAG, "True at point 1");
             return true;
         }
 
@@ -96,10 +100,12 @@ final class LocalBluetoothPreferences {
         BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
         if (adapter != null) {
             if (adapter.isDiscovering()) {
+                Log.e(TAG, "True at point 2");
                 return true;
             }
             if ((adapter.getDiscoveryEndMillis() +
                 GRACE_PERIOD_TO_SHOW_DIALOGS_IN_FOREGROUND) > currentTimeMillis) {
+                Log.e(TAG, "True at point 3");
                 return true;
             }
         }
@@ -114,6 +120,7 @@ final class LocalBluetoothPreferences {
                         KEY_LAST_SELECTED_DEVICE_TIME, 0);
                 if ((lastDeviceSelectedTime + GRACE_PERIOD_TO_SHOW_DIALOGS_IN_FOREGROUND)
                         > currentTimeMillis) {
+                    Log.e(TAG, "True at point 4");
                     return true;
                 }
             }
@@ -140,11 +147,13 @@ final class LocalBluetoothPreferences {
                     Log.v(TAG, "showing dialog because the initiating application "
                             + "is in foreground");
                 }
+                Log.e(TAG, "True at point 5");
                 return true;
             }
         }
 
         if (DEBUG) Log.v(TAG, "Found no reason to show the dialog - do not show dialog.");
+        Log.e(TAG, "Found no reason to show the dialog - do not show dialog.");
         return false;
     }
 
