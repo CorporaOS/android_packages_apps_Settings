@@ -33,6 +33,24 @@
       "message": "will we enable/disable this based on the device-specific property, or is that taken in another CL?",
       "revId": "26a0d2c3f0f89aeae780e8340d54a9db21837782",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1e361ffa_8cf87135",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-08-30T22:45:54Z",
+      "side": 1,
+      "message": "Uploaded it here. we just need to override isAvailable method from PreferenceController:     \n    @Override\n    public boolean isAvailable() {\n           return SystemProperties.getBoolean(DEV_OPTION_PROPERTY, false);\n    }",
+      "parentUuid": "f3b9e78a_58d6acd1",
+      "revId": "26a0d2c3f0f89aeae780e8340d54a9db21837782",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
