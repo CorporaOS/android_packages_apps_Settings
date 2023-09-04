@@ -56,6 +56,30 @@
       },
       "revId": "f8b5ccffb60e4fe6905bc0ebf4331dd1e0678c7c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71ad5970_c4dc611b",
+        "filename": "src/com/android/settings/bluetooth/BluetoothFindBroadcastsFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 510,
+      "author": {
+        "id": 1956704
+      },
+      "writtenOn": "2023-09-04T08:16:18Z",
+      "side": 1,
+      "message": "Thanks! New PS uploaded",
+      "parentUuid": "df41db00_e9cd2ec7",
+      "range": {
+        "startLine": 510,
+        "startChar": 0,
+        "endLine": 510,
+        "endChar": 13
+      },
+      "revId": "f8b5ccffb60e4fe6905bc0ebf4331dd1e0678c7c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
