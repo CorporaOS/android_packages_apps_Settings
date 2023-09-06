@@ -166,6 +166,14 @@
     <string name="bluetooth_notif_title">Pairing request</string>
     <!-- Notification message when a Bluetooth device wants to pair with us -->
     <string name="bluetooth_notif_message">Tap to pair with <xliff:g id="device_name">%1$s</xliff:g>.</string>
+    <!-- Notification title when a Bluetooth device wants to pair with us -->
+    <string name="bluetooth_notif_key_missing_title">Bluetooth connection failed.</string>
+    <!-- Notification message when a Bluetooth device lost keys, and can no longer connect -->
+    <string name="bluetooth_notif_key_missing_message">Cant securely connect to <xliff:g id="device_name">%1$s</xliff:g>.</string>
+    <!-- Dialog message when a Bluetooth device lost keys, and can no longer connect - long version -->
+    <string name="bluetooth_notif_key_missing_message_long">Cant securely connect to <xliff:g id="device_name">%1$s</xliff:g>. If you recently modified your peripheral, i.e. performed a factory reset, please forget it and pair again.</string>
+    <!-- Button label to dismiss the key missing notification -->
+    <string name="bluetooth_notif_key_missing_dismiss">Dismiss</string>
 
     <!-- Title for contextual Bluetooth devices card when Bluetooth is off [CHAR LIMIT=NONE]-->
     <string name="bluetooth_devices_card_off_title">Bluetooth is off</string>
