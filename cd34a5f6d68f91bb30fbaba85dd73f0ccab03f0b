@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6220e837_e816fcd8",
+        "filename": "src/com/android/settings/wfd/WifiDisplaySettings.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2023-09-07T03:14:20Z",
+      "side": 0,
+      "message": "If you remove this directly but all conditions are satisfied, can the menu still show on the screen?",
+      "range": {
+        "startLine": 142,
+        "startChar": 8,
+        "endLine": 142,
+        "endChar": 32
+      },
+      "revId": "cd34a5f6d68f91bb30fbaba85dd73f0ccab03f0b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

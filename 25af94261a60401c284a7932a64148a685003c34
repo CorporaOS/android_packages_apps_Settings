@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "66919d01_5577cbfa",
+        "filename": "src/com/android/settings/wfd/WifiDisplaySettings.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2023-09-07T03:14:20Z",
+      "side": 1,
+      "message": "redundant and can be removed.",
+      "range": {
+        "startLine": 198,
+        "startChar": 12,
+        "endLine": 198,
+        "endChar": 26
+      },
+      "revId": "25af94261a60401c284a7932a64148a685003c34",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
