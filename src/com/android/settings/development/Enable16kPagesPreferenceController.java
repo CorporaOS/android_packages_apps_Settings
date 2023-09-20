@@ -17,14 +17,37 @@
 package com.android.settings.development;
 
 import android.content.Context;
+import android.os.PowerManager;
 import android.os.SystemProperties;
+import android.os.UpdateEngine;
+import android.os.UpdateEngineCallback;
 import android.provider.Settings;
+import android.util.Log;
+import android.widget.Toast;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
 
+import com.android.settings.R;
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
+import com.android.settingslib.utils.ThreadUtils;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.List;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
 
 /** Controller for 16K pages developer option */
 public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferenceController
@@ -33,11 +56,24 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
                 Enable16kbPagesDialogHost {
 
     private static final String ENABLE_16K_PAGES = "enable_16k_pages";
-    private static final String DEV_OPTION_PROPERTY = "ro.product.build.16k_page.enabled";
+
+    @VisibleForTesting
+    static final String DEV_OPTION_PROPERTY = "ro.product.build.16k_page.enabled";
+
     private static final int ENABLE_4K_PAGE_SIZE = 0;
     private static final int ENABLE_16K_PAGE_SIZE = 1;
 
+    private static final String OTA_16k_PATH = "/system/boot_otas/boot_ota_16k.zip";
+    private static final String OTA_4k_PATH = "/system/boot_otas/boot_ota_4k.zip";
+    private static final String PAYLOAD_BINARY_FILE_NAME = "payload.bin";
+    private static final String PAYLOAD_PROPERTIES_FILE_NAME = "payload_properties.txt";
+    private static final int OFFSET_TO_FILE_NAME = 30;
+
     private final DevelopmentSettingsDashboardFragment mFragment;
+    private boolean mEnable16k;
+
+    public static final String TAG = "Enable16kPages";
+    public static final String REBOOT_REASON = "toggle16k";
 
     public Enable16kPagesPreferenceController(
             Context context, DevelopmentSettingsDashboardFragment fragment) {
@@ -57,16 +93,10 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        final boolean optionEnabled = (Boolean) newValue;
-        Settings.Global.putInt(
-                mContext.getContentResolver(),
-                Settings.Global.ENABLE_16K_PAGES,
-                optionEnabled ? ENABLE_16K_PAGE_SIZE : ENABLE_4K_PAGE_SIZE);
-        if (optionEnabled) {
-            Enable16kPagesWarningDialog.show(mFragment, this);
-        } else {
-            // TODO(b/295573133):Directly reboot into 4k
-        }
+        mEnable16k = (Boolean) newValue;
+        Enable16kPagesWarningDialog.show(mFragment, this, mEnable16k);
+
+        // TODO(b/298214075): Show progress bar here
         return true;
     }
 
@@ -84,6 +114,7 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
     @Override
     protected void onDeveloperOptionsSwitchDisabled() {
         super.onDeveloperOptionsSwitchDisabled();
+        // TODO : Revert kernel?
         Settings.Global.putInt(
                 mContext.getContentResolver(),
                 Settings.Global.ENABLE_16K_PAGES,
@@ -92,12 +123,146 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
     }
 
     /** Called when user confirms reboot dialog */
-    @Override
     public void on16kPagesDialogConfirmed() {
-        // TODO(b/295573133) : integrate update engine
+        // Apply update in background
+        Future future = ThreadUtils.postOnBackgroundThread(() -> installUpdate(mEnable16k));
+        try {
+            future.get();
+        } catch (ExecutionException | InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     /** Called when user dismisses to reboot dialog */
     @Override
     public void on16kPagesDialogDismissed() {}
+
+    void installUpdate(boolean optionEnabled) {
+        String updateFilePath = optionEnabled ? OTA_16k_PATH : OTA_4k_PATH;
+        try {
+            File updateFile = new File(updateFilePath);
+            applyUpdateFile(updateFile);
+
+            ThreadUtils.postOnMainThread(
+                    () ->
+                            Settings.Global.putInt(
+                                    mContext.getContentResolver(),
+                                    Settings.Global.ENABLE_16K_PAGES,
+                                    optionEnabled ? ENABLE_16K_PAGE_SIZE : ENABLE_4K_PAGE_SIZE));
+
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @VisibleForTesting
+    void applyUpdateFile(File updateFile) throws IOException, FileNotFoundException {
+        boolean payloadFound = false;
+        boolean propertiesFound = false;
+        long payloadOffset = 0;
+        long payloadSize = 0;
+
+        List<String> properties = new ArrayList<>();
+        try (ZipFile zip = new ZipFile(updateFile)) {
+            Enumeration<? extends ZipEntry> entries = zip.entries();
+            long offset = 0;
+            while (entries.hasMoreElements()) {
+                ZipEntry zipEntry = entries.nextElement();
+                String fileName = zipEntry.getName();
+                long extraSize = zipEntry.getExtra() == null ? 0 : zipEntry.getExtra().length;
+                offset += OFFSET_TO_FILE_NAME + fileName.length() + extraSize;
+
+                if (zipEntry.isDirectory()) {
+                    continue;
+                }
+
+                long length = zipEntry.getCompressedSize();
+                if (PAYLOAD_BINARY_FILE_NAME.equals(fileName)) {
+                    if (zipEntry.getMethod() != ZipEntry.STORED) {
+                        throw new IOException("Unknown compression method.");
+                    }
+                    payloadFound = true;
+                    payloadOffset = offset;
+                    payloadSize = length;
+                } else if (PAYLOAD_PROPERTIES_FILE_NAME.equals(fileName)) {
+                    propertiesFound = true;
+                    InputStream inputStream = zip.getInputStream(zipEntry);
+                    if (inputStream != null) {
+                        BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
+                        String line;
+                        while ((line = br.readLine()) != null) {
+                            properties.add(line);
+                        }
+                    }
+                }
+                offset += length;
+            }
+        }
+
+        if (!payloadFound) {
+            throw new FileNotFoundException(
+                    "Failed to find payload in zip: " + updateFile.getAbsolutePath());
+        }
+
+        if (!propertiesFound) {
+            throw new FileNotFoundException(
+                    "Failed to find payload properties in zip: " + updateFile.getAbsolutePath());
+        }
+
+        if (payloadSize == 0) {
+            throw new IOException("Found empty payload in zip: " + updateFile.getAbsolutePath());
+        }
+
+        applyPayload(updateFile, payloadOffset, payloadSize, properties);
+    }
+
+    @VisibleForTesting
+    void applyPayload(
+            File updateFile, long payloadOffset, long payloadSize, List<String> properties) {
+        String[] header = properties.stream().toArray(String[]::new);
+        UpdateEngine updateEngine = new UpdateEngine();
+        try {
+            updateEngine.bind(new OtaUpdateCallback(updateEngine));
+            updateEngine.applyPayload(
+                    Paths.get(updateFile.getAbsolutePath()).toUri().toString(),
+                    payloadOffset,
+                    payloadSize,
+                    header);
+        } catch (Exception e) {
+            Log.e(TAG, "Failed to install update.", e);
+        }
+    }
+
+    void displayToast(String message) {
+        ThreadUtils.postOnMainThread(
+                () -> Toast.makeText(mFragment.getActivity(), message, Toast.LENGTH_SHORT).show());
+    }
+
+    class OtaUpdateCallback extends UpdateEngineCallback {
+        UpdateEngine mUpdateEngine;
+
+        OtaUpdateCallback(UpdateEngine engine) {
+            mUpdateEngine = engine;
+        }
+
+        @Override
+        public void onStatusUpdate(int status, float percent) {}
+
+        @Override
+        public void onPayloadApplicationComplete(int errorCode) {
+            // unbind the callback from update engine
+            mUpdateEngine.unbind();
+
+            if (errorCode == UpdateEngine.ErrorCodeConstants.SUCCESS) {
+                Log.i(TAG, "applyPayload successful");
+                PowerManager pm = mContext.getSystemService(PowerManager.class);
+                pm.reboot(REBOOT_REASON);
+            } else {
+                Log.e(TAG, "applyPayload failed, error code: " + errorCode);
+                displayToast(mContext.getString(R.string.toast_16k_update_failed_text));
+            }
+        }
+    }
 }
