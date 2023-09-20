@@ -35,14 +35,16 @@ public class Enable16kPagesWarningDialog extends InstrumentedDialogFragment
         implements DialogInterface.OnClickListener, DialogInterface.OnDismissListener {
 
     public static final String TAG = "Enable16KDialog";
+    private static final String DIALOG_BUNDLE_KEY = "SHOW_16K_DIALOG";
 
-    /**
-     * Used to display warning dialog
-     */
-    public static void show(Fragment host) {
+    /** Used to display warning dialog */
+    public static void show(Fragment host, boolean enable16k) {
         final FragmentManager manager = host.getActivity().getSupportFragmentManager();
         if (manager.findFragmentByTag(TAG) == null) {
             final Enable16kPagesWarningDialog dialog = new Enable16kPagesWarningDialog();
+            Bundle bundle = new Bundle();
+            bundle.putBoolean(DIALOG_BUNDLE_KEY, enable16k);
+            dialog.setArguments(bundle);
             dialog.setTargetFragment(host, 0 /* requestCode */);
             dialog.show(manager, TAG);
         }
@@ -55,9 +57,17 @@ public class Enable16kPagesWarningDialog extends InstrumentedDialogFragment
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
+        final Bundle bundle = getArguments();
+        boolean is16kDialog = bundle.getBoolean(DIALOG_BUNDLE_KEY);
         return new AlertDialog.Builder(getActivity())
-                .setTitle(R.string.confirm_enable_16k_pages_title)
-                .setMessage(R.string.confirm_enable_16k_pages_text)
+                .setTitle(
+                        is16kDialog
+                                ? R.string.confirm_enable_16k_pages_title
+                                : R.string.confirm_enable_4k_pages_title)
+                .setMessage(
+                        is16kDialog
+                                ? R.string.confirm_enable_16k_pages_text
+                                : R.string.confirm_enable_4k_pages_text)
                 .setPositiveButton(android.R.string.ok, this /* onClickListener */)
                 .setNegativeButton(android.R.string.cancel, this /* onClickListener */)
                 .create();
