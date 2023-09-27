@@ -26,10 +26,13 @@ import android.os.UpdateEngineStable;
 import android.os.UpdateEngineStableCallback;
 import android.provider.Settings;
 import android.util.Log;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.content.ContextCompat;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
@@ -85,6 +88,8 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
     final ListeningExecutorService mExecutorService =
             MoreExecutors.listeningDecorator(Executors.newSingleThreadExecutor());
 
+    private AlertDialog mProgressDialog;
+
     public Enable16kPagesPreferenceController(
             Context context, DevelopmentSettingsDashboardFragment fragment) {
         super(context);
@@ -105,8 +110,6 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         mEnable16k = (Boolean) newValue;
         Enable16kPagesWarningDialog.show(mFragment, this, mEnable16k);
-
-        // TODO(b/298214075): Show progress bar here
         return true;
     }
 
@@ -124,6 +127,8 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
     @Override
     protected void onDeveloperOptionsSwitchDisabled() {
         super.onDeveloperOptionsSwitchDisabled();
+
+        // TODO(295035851) : Revert kernel when dev option turned off
         Settings.Global.putInt(
                 mContext.getContentResolver(),
                 Settings.Global.ENABLE_16K_PAGES,
@@ -133,6 +138,10 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
 
     /** Called when user confirms reboot dialog */
     public void on16kPagesDialogConfirmed() {
+        // Show progress bar
+        mProgressDialog = makeProgressDialog();
+        mProgressDialog.show();
+
         // Apply update in background
         ListenableFuture future = mExecutorService.submit(() -> installUpdate());
         Futures.addCallback(
@@ -149,6 +158,7 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
 
                     @Override
                     public void onFailure(Throwable t) {
+                        hideProgressBar();
                         Log.e(TAG, "Failed to call applyPayload of UpdateEngineStable!");
                         displayToast(mContext.getString(R.string.toast_16k_update_failed_text));
                     }
@@ -231,6 +241,13 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
         applyPayload(updateFile, payloadOffset, payloadSize, properties);
     }
 
+    private void hideProgressBar() {
+        // Hide progress bar
+        if (mProgressDialog != null && mProgressDialog.isShowing()) {
+            mProgressDialog.hide();
+        }
+    }
+
     @VisibleForTesting
     void applyPayload(
             @NonNull File updateFile,
@@ -268,8 +285,12 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
 
         @Override
         public void onPayloadApplicationComplete(int errorCode) {
+            Log.i(TAG, "Callback from update engine stable received. unbinding..");
             // unbind the callback from update engine
             mUpdateEngineStable.unbind();
+
+            // Hide progress bar
+            hideProgressBar();
 
             if (errorCode == UpdateEngine.ErrorCodeConstants.SUCCESS) {
                 Log.i(TAG, "applyPayload successful");
@@ -285,5 +306,20 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
                 displayToast(mContext.getString(R.string.toast_16k_update_failed_text));
             }
         }
+    }
+
+    private AlertDialog makeProgressDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(mFragment.getActivity());
+        builder.setTitle(R.string.progress_16k_ota_title);
+
+        final ProgressBar progressBar = new ProgressBar(mFragment.getActivity());
+        LinearLayout.LayoutParams params =
+                new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT);
+        progressBar.setLayoutParams(params);
+        builder.setView(progressBar);
+        builder.setCancelable(false);
+        return builder.create();
     }
 }
