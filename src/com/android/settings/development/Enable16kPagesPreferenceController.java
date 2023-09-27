@@ -23,8 +23,11 @@ import android.os.UpdateEngine;
 import android.os.UpdateEngineCallback;
 import android.provider.Settings;
 import android.util.Log;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
 
@@ -55,7 +58,6 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
     private static final String DEV_OPTION_PROPERTY = "ro.product.build.16k_page.enabled";
     public static final int ENABLE_4K_PAGE_SIZE = 0;
     public static final int ENABLE_16K_PAGE_SIZE = 1;
-
     private static final String OTA_16k_PATH = "/system/boot_otas/boot_ota_16k.zip";
     private static final String OTA_4k_PATH = "/system/boot_otas/boot_ota_4k.zip";
     private static final String PAYLOAD_BINARY_FILE_NAME = "payload.bin";
@@ -68,10 +70,15 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
     public static final String TAG = "Enable16kPages";
     public static final String REBOOT_REASON = "Rebooting to apply 16K kernel update!";
 
+    private AlertDialog mProgressDialog;
+    private AlertDialog.Builder mBuilder;
+
     public Enable16kPagesPreferenceController(
             Context context, DevelopmentSettingsDashboardFragment fragment) {
         super(context);
         mFragment = fragment;
+        mProgressDialog = getProgressDialog().create();
+        mProgressDialog.setCanceledOnTouchOutside(false);
     }
 
     @Override
@@ -88,8 +95,6 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         mEnable16k = (Boolean) newValue;
         Enable16kPagesWarningDialog.show(mFragment, mEnable16k);
-
-        // TODO(b/298214075): Show progress bar here
         return true;
     }
 
@@ -107,7 +112,7 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
     @Override
     protected void onDeveloperOptionsSwitchDisabled() {
         super.onDeveloperOptionsSwitchDisabled();
-        // TODO : Revert kernel?
+        // TODO(295035851) : Revert kernel when dev option turned off
         Settings.Global.putInt(
                 mContext.getContentResolver(),
                 Settings.Global.ENABLE_16K_PAGES,
@@ -119,6 +124,9 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
      *  Called when user confirms to reboot with 16K pages
      */
     public void on16kDialogConfirmed() {
+        // Show progress bar
+        mProgressDialog.show();
+
         // Apply update in background
         ThreadUtils.postOnBackgroundThread(() -> installUpdate(mEnable16k));
     }
@@ -127,6 +135,22 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
      *  Called when user dismisses to reboot with 16K pages
      */
     public void on16kDialogDismissed() {}
+
+    private AlertDialog.Builder getProgressDialog() {
+        if (mBuilder == null) {
+            mBuilder = new AlertDialog.Builder(mFragment.getActivity());
+            mBuilder.setTitle(R.string.progress_16k_ota_title);
+
+            final ProgressBar progressBar = new ProgressBar(mFragment.getActivity());
+            LinearLayout.LayoutParams params =
+                    new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.WRAP_CONTENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT);
+            progressBar.setLayoutParams(params);
+            mBuilder.setView(progressBar);
+        }
+        return mBuilder;
+    }
 
     void installUpdate(boolean optionEnabled) {
         String updateFilePath = optionEnabled ? OTA_16k_PATH : OTA_4k_PATH;
@@ -230,6 +254,12 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
         @Override
         public void onPayloadApplicationComplete(int errorCode) {
             mUpdateEngine.unbind();
+            // Hide progress bar
+            ThreadUtils.postOnMainThread(
+                    () -> {
+                        mProgressDialog.hide();
+                    });
+
             if (errorCode == UpdateEngine.ErrorCodeConstants.SUCCESS) {
                 Log.i(TAG, "applyPayload successful");
                 PowerManager pm = mContext.getSystemService(PowerManager.class);
