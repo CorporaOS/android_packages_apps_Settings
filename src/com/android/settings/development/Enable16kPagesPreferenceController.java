@@ -24,11 +24,15 @@ import android.os.UpdateEngine;
 import android.os.UpdateEngineCallback;
 import android.provider.Settings;
 import android.util.Log;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
 
+import com.android.settings.R;
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
 import com.android.settingslib.utils.ThreadUtils;
@@ -54,10 +58,8 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
     private static final String DEV_OPTION_PROPERTY = "ro.product.build.16k_page.enabled";
     public static final int ENABLE_4K_PAGE_SIZE = 0;
     public static final int ENABLE_16K_PAGE_SIZE = 1;
-
     private static final String OTA_16k_PATH = "/system/boot_otas/boot_ota_16k.zip";
     private static final String OTA_4k_PATH = "/system/boot_otas/boot_ota_4k.zip";
-
     private static final String PAYLOAD_BINARY_FILE_NAME = "payload.bin";
     private static final String PAYLOAD_PROPERTIES_FILE_NAME = "payload_properties.txt";
     private static final int OFFSET_TO_FILE_NAME = 30;
@@ -74,10 +76,15 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
 
     private boolean mEnable16k;
 
+    private AlertDialog mProgressDialog;
+    private AlertDialog.Builder mBuilder;
+
     public Enable16kPagesPreferenceController(
             Context context, DevelopmentSettingsDashboardFragment fragment) {
         super(context);
         mFragment = fragment;
+        mProgressDialog = getProgressDialog().create();
+        mProgressDialog.setCanceledOnTouchOutside(false);
     }
 
     @Override
@@ -94,8 +101,6 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         mEnable16k = (Boolean) newValue;
         Enable16kPagesWarningDialog.show(mFragment, mEnable16k);
-
-        // TODO: Show progress bar here
         return true;
     }
 
@@ -125,6 +130,9 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
      *  Called when user confirms to reboot with 16K pages
      */
     public void on16kDialogConfirmed() {
+        // Show progress bar
+        mProgressDialog.show();
+
         // Apply update in background
         ThreadUtils.postOnBackgroundThread(() -> applyUpdate(mEnable16k));
     }
@@ -133,6 +141,22 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
      *  Called when user dismisses to reboot with 16K pages
      */
     public void on16kDialogDismissed() {}
+
+    private AlertDialog.Builder getProgressDialog() {
+        if (mBuilder == null) {
+            mBuilder = new AlertDialog.Builder(mFragment.getActivity());
+            mBuilder.setTitle(R.string.progress_16k_ota_title);
+
+            final ProgressBar progressBar = new ProgressBar(mFragment.getActivity());
+            LinearLayout.LayoutParams params =
+                    new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.WRAP_CONTENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT);
+            progressBar.setLayoutParams(params);
+            mBuilder.setView(progressBar);
+        }
+        return mBuilder;
+    }
 
     private void clearPayloadMetadata() throws IOException {
         mUpdateZipFile = new ZipFile(mUpdateFilePath);
@@ -236,6 +260,12 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
         @Override
         public void onPayloadApplicationComplete(int errorCode) {
             mUpdateEngine.unbind();
+            // Hide progress bar
+            ThreadUtils.postOnMainThread(
+                    () -> {
+                        mProgressDialog.hide();
+                    });
+
             if (errorCode == UpdateEngine.ErrorCodeConstants.SUCCESS) {
                 Log.i(TAG, "applyPayload successful");
                 PowerManager pm = mContext.getSystemService(PowerManager.class);
