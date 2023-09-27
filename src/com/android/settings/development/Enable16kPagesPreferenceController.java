@@ -24,10 +24,13 @@ import android.os.UpdateEngine;
 import android.os.UpdateEngineCallback;
 import android.provider.Settings;
 import android.util.Log;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.content.ContextCompat;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
@@ -86,6 +89,8 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
     final ListeningExecutorService mExecutorService =
             MoreExecutors.listeningDecorator(Executors.newSingleThreadExecutor());
 
+    private AlertDialog mProgressDialog;
+
     public Enable16kPagesPreferenceController(
             Context context, DevelopmentSettingsDashboardFragment fragment) {
         super(context);
@@ -106,8 +111,6 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         mEnable16k = (Boolean) newValue;
         Enable16kPagesWarningDialog.show(mFragment, this, mEnable16k);
-
-        // TODO(b/298214075): Show progress bar here
         return true;
     }
 
@@ -125,7 +128,7 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
     @Override
     protected void onDeveloperOptionsSwitchDisabled() {
         super.onDeveloperOptionsSwitchDisabled();
-        // TODO : Revert kernel?
+        // TODO(295035851) : Revert kernel when dev option turned off
         Settings.Global.putInt(
                 mContext.getContentResolver(),
                 Settings.Global.ENABLE_16K_PAGES,
@@ -135,6 +138,10 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
 
     /** Called when user confirms reboot dialog */
     public void on16kPagesDialogConfirmed() {
+        // Show progress bar
+        mProgressDialog = makeProgressDialog();
+        mProgressDialog.show();
+
         // Apply update in background
         Future unusedFuture = ThreadUtils.postOnBackgroundThread(() -> installUpdate(mEnable16k));
     }
@@ -142,6 +149,21 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
     /** Called when user dismisses to reboot dialog */
     @Override
     public void on16kPagesDialogDismissed() {}
+
+    private AlertDialog makeProgressDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(mFragment.getActivity());
+        builder.setTitle(R.string.progress_16k_ota_title);
+
+        final ProgressBar progressBar = new ProgressBar(mFragment.getActivity());
+        LinearLayout.LayoutParams params =
+                new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT);
+        progressBar.setLayoutParams(params);
+        builder.setView(progressBar);
+        builder.setCancelable(false);
+        return builder.create();
+    }
 
     private void installUpdate(boolean optionEnabled) {
         String updateFilePath = optionEnabled ? OTA_16k_PATH : OTA_4k_PATH;
@@ -176,9 +198,8 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
                     },
                     ContextCompat.getMainExecutor(mFragment.getActivity()));
 
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
+            hideProgressBar();
             throw new RuntimeException(e);
         }
     }
@@ -244,6 +265,16 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
         applyPayload(updateFile, payloadOffset, payloadSize, properties);
     }
 
+    private void hideProgressBar() {
+        // Hide progress bar
+        mExecutorService.submit(
+                () -> {
+                    if (mProgressDialog.isShowing()) {
+                        mProgressDialog.hide();
+                    }
+                });
+    }
+
     @VisibleForTesting
     void applyPayload(
             @NonNull File updateFile,
@@ -261,6 +292,7 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
                     header);
         } catch (Exception e) {
             Log.e(TAG, "Failed to install update.", e);
+            hideProgressBar();
         }
     }
 
@@ -296,8 +328,12 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
 
         @Override
         public void onPayloadApplicationComplete(int errorCode) {
+            Log.i(TAG, "Callback from update engine received. unbinding..");
             // unbind the callback from update engine
             mUpdateEngine.unbind();
+
+            // Hide progress bar
+            hideProgressBar();
 
             if (errorCode == UpdateEngine.ErrorCodeConstants.SUCCESS) {
                 Log.i(TAG, "applyPayload successful");
