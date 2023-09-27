@@ -10123,6 +10123,8 @@
     <!-- Toast message when 16k OTA update fails -->
     <string name="toast_16k_update_failed_text">Failed to update kernel to 16KB pages compatible kernel.</string>
 
+    <string name="progress_16k_ota_title">Applying change</string>
+
     <!-- Title text for enabling web actions. [CHAR_LIMIT=60] -->
     <string name="web_action_enable_title">Instant apps</string>
 
