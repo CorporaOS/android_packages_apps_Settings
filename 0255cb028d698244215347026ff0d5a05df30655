@@ -22,6 +22,30 @@
       },
       "revId": "0255cb028d698244215347026ff0d5a05df30655",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "405fc9f6_94d05de4",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-02T17:50:03Z",
+      "side": 1,
+      "message": "This is local file entry. Extraction code has been taken from Updater Sample - https://source.corp.google.com/h/googleplex-android/platform/superproject/main/+/main:bootable/recovery/updater_sample/src/com/example/android/systemupdatersample/util/PayloadSpecs.java;l\u003d48;bpv\u003d0;bpt\u003d1.\n\nPlus system app are not allowed to read from attacker controlled locations - https://source.corp.google.com/h/googleplex-android/platform/superproject/main/+/main:system/sepolicy/private/system_app.te;l\u003d197?q\u003dsystem_app\u0026sq\u003drepo:googleplex-android%2Fplatform%2Fsuperproject%2Fmain%20branch:main\n\nCan update engine take payload.bin instead of zip file path? API documentation says it needs zip file path- https://source.corp.google.com/h/googleplex-android/platform/superproject/main/+/main:frameworks/base/core/java/android/os/UpdateEngine.java;l\u003d348;bpv\u003d0;bpt\u003d1",
+      "parentUuid": "28ca3b53_447a6ca5",
+      "range": {
+        "startLine": 154,
+        "startChar": 31,
+        "endLine": 154,
+        "endChar": 47
+      },
+      "revId": "0255cb028d698244215347026ff0d5a05df30655",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
