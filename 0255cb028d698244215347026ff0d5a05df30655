@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "28ca3b53_447a6ca5",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1710792
+      },
+      "writtenOn": "2023-10-02T17:14:34Z",
+      "side": 1,
+      "message": "Not sure if this entries represents local file entry or central directory entry. It\u0027s safer if we decompress payload.bin to a temporary directory and apply that.",
+      "range": {
+        "startLine": 154,
+        "startChar": 31,
+        "endLine": 154,
+        "endChar": 47
+      },
+      "revId": "0255cb028d698244215347026ff0d5a05df30655",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
