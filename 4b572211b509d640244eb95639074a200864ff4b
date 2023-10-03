@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5e0806c_a762a12a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-03T23:55:37Z",
+      "side": 1,
+      "message": "This CL has merge conflicts downstream. Once the CL is approved, I will cherry pick it to those branches.",
+      "revId": "4b572211b509d640244eb95639074a200864ff4b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
