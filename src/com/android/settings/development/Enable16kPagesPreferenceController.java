@@ -17,9 +17,12 @@
 package com.android.settings.development;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.os.Looper;
+import android.os.PersistableBundle;
 import android.os.PowerManager;
 import android.os.SystemProperties;
+import android.os.SystemUpdateManager;
 import android.os.UpdateEngine;
 import android.os.UpdateEngineCallback;
 import android.provider.Settings;
@@ -82,10 +85,10 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
     private static final String PAYLOAD_BINARY_FILE_NAME = "payload.bin";
     private static final String PAYLOAD_PROPERTIES_FILE_NAME = "payload_properties.txt";
     private static final int OFFSET_TO_FILE_NAME = 30;
+    public static final String EXPERIMENTAL_UPDATE_TITLE = "Android 16K Kernel Experimental Update";
 
     private final DevelopmentSettingsDashboardFragment mFragment;
     private boolean mEnable16k;
-
     final ListeningExecutorService mExecutorService =
             MoreExecutors.listeningDecorator(Executors.newSingleThreadExecutor());
 
@@ -143,7 +146,20 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
         mProgressDialog.show();
 
         // Apply update in background
-        Future unusedFuture = ThreadUtils.postOnBackgroundThread(() -> installUpdate(mEnable16k));
+        Future unusedFuture =
+                ThreadUtils.postOnBackgroundThread(
+                        () -> {
+                            SystemUpdateManager manager =
+                                    (SystemUpdateManager)
+                                            mContext.getSystemService(
+                                                    Context.SYSTEM_UPDATE_SERVICE);
+                            Bundle data = manager.retrieveSystemUpdateInfo();
+                            int status = data.getInt(SystemUpdateManager.KEY_STATUS);
+                            if (status == SystemUpdateManager.STATUS_UNKNOWN
+                                    || status == SystemUpdateManager.STATUS_IDLE) {
+                                installUpdate(mEnable16k);
+                            }
+                        });
     }
 
     /** Called when user dismisses to reboot dialog */
@@ -326,6 +342,15 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
         @Override
         public void onStatusUpdate(int status, float percent) {}
 
+        public PersistableBundle getUpdateInfo() {
+            PersistableBundle infoBundle = new PersistableBundle();
+            infoBundle.putInt(
+                    SystemUpdateManager.KEY_STATUS, SystemUpdateManager.STATUS_WAITING_REBOOT);
+            infoBundle.putBoolean(SystemUpdateManager.KEY_IS_SECURITY_UPDATE, false);
+            infoBundle.putString(SystemUpdateManager.KEY_TITLE, EXPERIMENTAL_UPDATE_TITLE);
+            return infoBundle;
+        }
+
         @Override
         public void onPayloadApplicationComplete(int errorCode) {
             Log.i(TAG, "Callback from update engine received. unbinding..");
@@ -337,6 +362,13 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
 
             if (errorCode == UpdateEngine.ErrorCodeConstants.SUCCESS) {
                 Log.i(TAG, "applyPayload successful");
+                // Publish system update info
+                SystemUpdateManager manager =
+                        (SystemUpdateManager)
+                                mContext.getSystemService(Context.SYSTEM_UPDATE_SERVICE);
+                manager.updateSystemUpdateInfo(getUpdateInfo());
+
+                // Restart device to complete update
                 PowerManager pm = mContext.getSystemService(PowerManager.class);
                 pm.reboot(REBOOT_REASON);
             } else {
