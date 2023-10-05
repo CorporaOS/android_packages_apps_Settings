@@ -22,6 +22,30 @@
       },
       "revId": "c5857a8534ce103c8bb2df553d6ed7ebdd08937a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8cfd6ce6_e5bc3716",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-05T02:44:51Z",
+      "side": 1,
+      "message": "This dialog can\u0027t be dismissed till update engine returns. I have set setCanceledOnTouchOutside to false - See L87. If we want it to have cancelable, will need to cancel ongoing update.",
+      "parentUuid": "f68258ac_a42a6e37",
+      "range": {
+        "startLine": 134,
+        "startChar": 8,
+        "endLine": 134,
+        "endChar": 23
+      },
+      "revId": "c5857a8534ce103c8bb2df553d6ed7ebdd08937a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
