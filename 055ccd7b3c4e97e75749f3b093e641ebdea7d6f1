@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e595dc04_19842dcd",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-05T23:19:18Z",
+      "side": 1,
+      "message": "Please use Futures (this API actually returns a Future already) to synchronize work between threads.",
+      "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a820838e_ac1182d9",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-05T23:19:18Z",
+      "side": 1,
+      "message": "This logic needs extensive tests",
+      "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
