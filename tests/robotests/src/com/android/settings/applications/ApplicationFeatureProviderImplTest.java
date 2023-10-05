@@ -35,6 +35,7 @@ import android.content.pm.ResolveInfo;
 import android.content.pm.UserInfo;
 import android.location.LocationManager;
 import android.os.Build;
+import android.os.SystemConfigManager;
 import android.os.UserHandle;
 import android.os.UserManager;
 
@@ -88,6 +89,8 @@ public final class ApplicationFeatureProviderImplTest {
     private DevicePolicyManager mDevicePolicyManager;
     @Mock
     private LocationManager mLocationManager;
+    @Mock
+    private SystemConfigManager mSystemConfigManager;
 
     private ApplicationFeatureProvider mProvider;
 
@@ -101,6 +104,7 @@ public final class ApplicationFeatureProviderImplTest {
         when(mContext.getApplicationContext()).thenReturn(mContext);
         when(mContext.getSystemService(Context.USER_SERVICE)).thenReturn(mUserManager);
         when(mContext.getSystemService(Context.LOCATION_SERVICE)).thenReturn(mLocationManager);
+        when(mContext.getSystemService(SystemConfigManager.class)).thenReturn(mSystemConfigManager);
 
         mProvider = new ApplicationFeatureProviderImpl(mContext, mPackageManager,
                 mPackageManagerService, mDevicePolicyManager);
