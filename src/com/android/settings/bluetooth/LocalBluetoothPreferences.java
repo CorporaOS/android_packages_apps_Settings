@@ -76,7 +76,7 @@ final class LocalBluetoothPreferences {
 
         // If in appliance mode, do not show dialog in foreground.
         if ((context.getResources().getConfiguration().uiMode &
-                Configuration.UI_MODE_TYPE_APPLIANCE) == Configuration.UI_MODE_TYPE_APPLIANCE) {
+                Configuration.UI_MODE_TYPE_MASK) == Configuration.UI_MODE_TYPE_APPLIANCE) {
             if (DEBUG) Log.v(TAG, "in appliance mode - do not show dialog.");
             return false;
         }
