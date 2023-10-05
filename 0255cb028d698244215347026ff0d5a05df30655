@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c3829c6a_d44c3940",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12462,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-05T02:44:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fd3f69cd_e5419572",
+      "range": {
+        "startLine": 12462,
+        "startChar": 4,
+        "endLine": 12462,
+        "endChar": 98
+      },
+      "revId": "0255cb028d698244215347026ff0d5a05df30655",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "102afe8c_c2e14179",
@@ -49,6 +73,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e15c3a6c_db2187b4",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-05T02:44:34Z",
+      "side": 1,
+      "message": "UI will block until the current update is applied.\nThere are two cls which I am following up.\n1. I will be publishing this update info to SystemUpdaterService when update is successful from update engine and retrieving pending update info before applying a update. b/302391134\n2. UI will be changed to show blocking progress bar till applyPayload is in progress. CL : https://android-review.git.corp.google.com/c/platform/packages/apps/Settings/+/2766345.\n\nI think these two things should be able to prevent the UI spam. I can also prompt user that there is update pending if they try to spam the dev option.",
+      "parentUuid": "102afe8c_c2e14179",
+      "range": {
+        "startLine": 129,
+        "startChar": 8,
+        "endLine": 129,
+        "endChar": 74
+      },
+      "revId": "0255cb028d698244215347026ff0d5a05df30655",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5fb45163_17176773",
         "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
         "patchSetId": 2
@@ -60,6 +108,30 @@
       "writtenOn": "2023-10-04T01:48:44Z",
       "side": 1,
       "message": "It might be unnecessary or even undesirable to have `mFileEntries` (a consumable enumeration of the entries inside the zip file) be a instance member. It\u0027s only really \"used\" in this function and it seems that in the \"happy path\" (no invalid compression method used), `mFilesEntries.hasMoreElements() \u003d\u003d false` by the end of this function. If there\u0027s no intention to use it elsewhere, making it a instance member might be error prone.\n\nPerhaps keep it local to this function. Example:\n\n```java\nEnumeration\u003cZipEntry\u003e fileEntries \u003d mUpdateZipFile.entries();\nwhile (fileEntries.hasMoreElements) {\n  ZipEntry entry \u003d fileEntries.nextElement();\n  ...\n}\n```\n\nOn a larger note, it seems like `clearPayloadMetadata()` is only ever called right before `updatePayloadMetadata()`. Maybe just make it one function `parsePayloadMetadata(String updateFilePath)` that just resets / re-parses the zip file? A bonus is that updateFilePath does not need to be an instance member either.",
+      "range": {
+        "startLine": 147,
+        "startChar": 15,
+        "endLine": 147,
+        "endChar": 27
+      },
+      "revId": "0255cb028d698244215347026ff0d5a05df30655",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "22bcb2b5_a814a627",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-05T02:44:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5fb45163_17176773",
       "range": {
         "startLine": 147,
         "startChar": 15,
@@ -164,6 +236,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5874d79c_9fc24caa",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-05T02:44:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e7150455_e905d06d",
+      "range": {
+        "startLine": 155,
+        "startChar": 12,
+        "endLine": 175,
+        "endChar": 13
+      },
+      "revId": "0255cb028d698244215347026ff0d5a05df30655",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4974c27c_9659d1c1",
@@ -210,6 +306,54 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a568e6bf_ea0bc145",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-05T02:44:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b55db1ad_84f874e7",
+      "range": {
+        "startLine": 242,
+        "startChar": 16,
+        "endLine": 242,
+        "endChar": 32
+      },
+      "revId": "0255cb028d698244215347026ff0d5a05df30655",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a15b04c_2d9bedaf",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-05T02:44:34Z",
+      "side": 1,
+      "message": "I think it takes 5-10 seconds on cuttlefish. I have added blocking progress dialog till the update engine returns here: https://android-review.git.corp.google.com/c/platform/packages/apps/Settings/+/2766345. Adding you as reviewer there.",
+      "parentUuid": "4974c27c_9659d1c1",
+      "range": {
+        "startLine": 241,
+        "startChar": 16,
+        "endLine": 242,
+        "endChar": 32
+      },
+      "revId": "0255cb028d698244215347026ff0d5a05df30655",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "14e56f62_d03f08d1",
@@ -233,6 +377,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "847a8573_c8678bfe",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-05T02:44:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "14e56f62_d03f08d1",
+      "range": {
+        "startLine": 244,
+        "startChar": 50,
+        "endLine": 244,
+        "endChar": 58
+      },
+      "revId": "0255cb028d698244215347026ff0d5a05df30655",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "92132eef_96040c37",
@@ -246,6 +414,30 @@
       "writtenOn": "2023-10-04T01:48:44Z",
       "side": 1,
       "message": "Not sure if this is the final string, but\n1. This should be more descriptive. It\u0027s not clear what update failed. Is it possible user may have left the developer options screen by the time this appears? If that\u0027s the case, unless the target audience for this developer option understands that under the hood the kernel page size is changed through a pseudo-OTA, they may try to visit the system update settings screen, expecting there to be a pending / failed update. This will lead to a lot of incorrectly triaged issues.\n1. Does this string need to be localized like the 16k/4k title strings?",
+      "range": {
+        "startLine": 245,
+        "startChar": 30,
+        "endLine": 245,
+        "endChar": 43
+      },
+      "revId": "0255cb028d698244215347026ff0d5a05df30655",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2cfa44bd_3925643e",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-05T02:44:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "92132eef_96040c37",
       "range": {
         "startLine": 245,
         "startChar": 30,
