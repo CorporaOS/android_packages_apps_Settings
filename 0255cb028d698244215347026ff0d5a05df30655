@@ -95,6 +95,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8444b8a7_a6b2880c",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-05T22:25:50Z",
+      "side": 1,
+      "message": "See https://android-review.git.corp.google.com/c/platform/packages/apps/Settings/+/2775987 which is publishing update info.",
+      "parentUuid": "e15c3a6c_db2187b4",
+      "range": {
+        "startLine": 129,
+        "startChar": 8,
+        "endLine": 129,
+        "endChar": 74
+      },
+      "revId": "0255cb028d698244215347026ff0d5a05df30655",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5fb45163_17176773",
