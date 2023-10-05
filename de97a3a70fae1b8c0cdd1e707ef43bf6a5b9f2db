@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be355352_5dd1c352",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-05T23:24:58Z",
+      "side": 1,
+      "message": "We shouldn\u0027t preemptively create a dialog that most likely won\u0027t ever be used",
+      "revId": "de97a3a70fae1b8c0cdd1e707ef43bf6a5b9f2db",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5965efd4_59b438da",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-05T23:24:58Z",
+      "side": 1,
+      "message": "This function is only called once (currently from the constructor but we should remove that) so this is always null; why would we want to persist this builder?",
+      "revId": "de97a3a70fae1b8c0cdd1e707ef43bf6a5b9f2db",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c706f80a_50eb99c0",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-05T23:24:58Z",
+      "side": 1,
+      "message": "This builder is never created/shown.",
+      "revId": "de97a3a70fae1b8c0cdd1e707ef43bf6a5b9f2db",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
