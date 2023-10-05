@@ -35,6 +35,7 @@ import android.content.pm.ResolveInfo;
 import android.content.pm.UserInfo;
 import android.location.LocationManager;
 import android.os.Build;
+import android.os.SystemConfigManager;
 import android.os.UserHandle;
 import android.os.UserManager;
 
@@ -76,6 +77,9 @@ public final class ApplicationFeatureProviderImplTest {
 
     private final String PERMISSION = "some.permission";
 
+    private final Set<String> FORCE_ENABLED_PACKAGES = Set.of(
+                "force.enabled.package1", "force.enabled.package2", "force.enabled.package3");
+
     @Mock
     private UserManager mUserManager;
     @Mock
@@ -88,6 +92,8 @@ public final class ApplicationFeatureProviderImplTest {
     private DevicePolicyManager mDevicePolicyManager;
     @Mock
     private LocationManager mLocationManager;
+    @Mock
+    private SystemConfigManager mSystemConfigManager;
 
     private ApplicationFeatureProvider mProvider;
 
@@ -101,6 +107,7 @@ public final class ApplicationFeatureProviderImplTest {
         when(mContext.getApplicationContext()).thenReturn(mContext);
         when(mContext.getSystemService(Context.USER_SERVICE)).thenReturn(mUserManager);
         when(mContext.getSystemService(Context.LOCATION_SERVICE)).thenReturn(mLocationManager);
+        when(mContext.getSystemService(SystemConfigManager.class)).thenReturn(mSystemConfigManager);
 
         mProvider = new ApplicationFeatureProviderImpl(mContext, mPackageManager,
                 mPackageManagerService, mDevicePolicyManager);
@@ -354,6 +361,33 @@ public final class ApplicationFeatureProviderImplTest {
         final Set<String> allowlist = mProvider.getKeepEnabledPackages();
 
         assertThat(allowlist).contains("com.android.packageinstaller");
+    }
+
+    @Test
+    @Config(shadows = {ShadowSmsApplication.class, ShadowDefaultDialerManager.class})
+    public void getKeepEnabledPackages_shouldContainForceEnabledPackages() {
+        final String testDialer = "com.android.test.defaultdialer";
+        final String testSms = "com.android.test.defaultsms";
+        final String testLocationHistory = "com.android.test.location.history";
+
+        ShadowSmsApplication.setDefaultSmsApplication(new ComponentName(testSms, "receiver"));
+        ShadowDefaultDialerManager.setDefaultDialerApplication(testDialer);
+
+        // Mock the provider and the 'force-enable' packages
+        ApplicationFeatureProviderImpl spyProvider = spy(new ApplicationFeatureProviderImpl(
+                mContext, mPackageManager, mPackageManagerService, mDevicePolicyManager));
+        doReturn(FORCE_ENABLED_PACKAGES).when(spyProvider).getKeepEnabledPackages();
+
+        // Spy the real context to mock LocationManager.
+        Context spyContext = spy(RuntimeEnvironment.application);
+        when(mLocationManager.getExtraLocationControllerPackage()).thenReturn(testLocationHistory);
+        when(spyContext.getSystemService(Context.LOCATION_SERVICE)).thenReturn(mLocationManager);
+
+        ReflectionHelpers.setField(mProvider, "mContext", spyContext);
+
+        final Set<String> keepEnabledPackages = spyProvider.getKeepEnabledPackages();
+
+        assertThat(keepEnabledPackages).containsAtLeastElementsIn(FORCE_ENABLED_PACKAGES);
     }
 
     private void setUpUsersAndInstalledApps() {
