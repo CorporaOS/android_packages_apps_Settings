@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f817c3eb_661ecc18",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-05T23:12:03Z",
+      "side": 1,
+      "message": "Please add/update OWNERS file to attribute new code to your team",
+      "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa93c9a0_d4d914d2",
+        "filename": "src/com/android/settings/development/DevelopmentSettingsDashboardFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-05T23:12:03Z",
+      "side": 1,
+      "message": "Changes should be behind flags",
+      "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85ab2416_7baa28c6",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-05T23:12:03Z",
+      "side": 1,
+      "message": "Please add tests",
+      "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "00c6c42d_47baecf4",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-05T23:12:03Z",
+      "side": 1,
+      "message": "Looks like this can be private",
+      "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dd7de4cc_dac94cae",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-05T23:12:03Z",
+      "side": 1,
+      "message": "No reason to add a Toast; just leave empty until the integration is complete",
+      "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "810dc4d6_c05ce8fe",
+        "filename": "src/com/android/settings/development/Enable16kPagesWarningDialog.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-05T23:12:03Z",
+      "side": 1,
+      "message": "Why passthrough all these callbacks through the Fragment instead of just letting the PreferenceController implement/handle these?",
+      "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
