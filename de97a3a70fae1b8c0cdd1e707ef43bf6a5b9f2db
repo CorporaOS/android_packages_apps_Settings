@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "671518f4_33fcce16",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12470,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2023-10-06T06:53:52Z",
+      "side": 1,
+      "message": "Consider using an alternative text, like \"Applying change\". To my knowledge, the UI of the 16k page size feature doesn\u0027t make any references to the fact that the 16k / 4k modes are toggled by applying an OTA package, so using the text \"Applying update\" might be more confusing.",
+      "range": {
+        "startLine": 12470,
+        "startChar": 42,
+        "endLine": 12470,
+        "endChar": 57
+      },
+      "revId": "de97a3a70fae1b8c0cdd1e707ef43bf6a5b9f2db",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "be355352_5dd1c352",
         "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
         "patchSetId": 2
@@ -31,6 +54,24 @@
       "writtenOn": "2023-10-05T23:24:58Z",
       "side": 1,
       "message": "This function is only called once (currently from the constructor but we should remove that) so this is always null; why would we want to persist this builder?",
+      "revId": "de97a3a70fae1b8c0cdd1e707ef43bf6a5b9f2db",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6e137155_b2c52d40",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2023-10-06T06:53:52Z",
+      "side": 1,
+      "message": "+1. I think a better function would be one that makes the dialog on demand (rather than make the builder), especially if you don\u0027t plan on making any further changes to the dialog.\n```java\nprivate AlertDialog makeProgressDialog() {...}\n```",
+      "parentUuid": "5965efd4_59b438da",
       "revId": "de97a3a70fae1b8c0cdd1e707ef43bf6a5b9f2db",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
