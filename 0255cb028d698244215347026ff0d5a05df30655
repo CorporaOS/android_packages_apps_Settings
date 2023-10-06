@@ -121,6 +121,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b1fc1f09_ecb9663f",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2023-10-06T06:32:00Z",
+      "side": 1,
+      "message": "What do you mean by \"the UI will block\"? Using UI logic to prevent race conditions can be risky. The edge cases could be rare but not impossible\n1. User flip the UI toggle and click confirm on the dialog. A progress bar shows up and update engine applyPayload is called.\n2. Before the progress finishes, the user changes the developer setting through adb, a dialog pops up, they click confirm. applyPayload is called again.\n\nI\u0027ll leave it up to you since update engine itself should prevent the second call from going through.",
+      "parentUuid": "e15c3a6c_db2187b4",
+      "range": {
+        "startLine": 129,
+        "startChar": 8,
+        "endLine": 129,
+        "endChar": 74
+      },
+      "revId": "0255cb028d698244215347026ff0d5a05df30655",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5fb45163_17176773",
         "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
         "patchSetId": 2

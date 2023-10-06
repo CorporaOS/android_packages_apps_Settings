@@ -3,6 +3,52 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4b0e338a_ff9ece46",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12460,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2023-10-06T06:32:00Z",
+      "side": 1,
+      "message": "Why does the 4k confirmation dialog warn the user of the reboot and the 16k one doesn\u0027t? The 16k confirmation dialog be the first one that the user sees in their experience of the feature, so it\u0027s the one that they\u0027d be less aware of the reboot needed to complete the page size change.",
+      "range": {
+        "startLine": 12460,
+        "startChar": 18,
+        "endLine": 12460,
+        "endChar": 47
+      },
+      "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3012e493_dc14cbaa",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2023-10-06T06:32:00Z",
+      "side": 1,
+      "message": "Please keep the reboot reason as a comma separated list of tokens. It could be as simple as `toggle16k`.",
+      "range": {
+        "startLine": 69,
+        "startChar": 31,
+        "endLine": 69,
+        "endChar": 44
+      },
+      "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "e595dc04_19842dcd",
         "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
         "patchSetId": 3
@@ -31,6 +77,116 @@
       "writtenOn": "2023-10-05T23:19:18Z",
       "side": 1,
       "message": "This logic needs extensive tests",
+      "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "437fbd53_67f670c5",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2023-10-06T06:32:00Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "a820838e_ac1182d9",
+      "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "81236294_a6ec8ab1",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2023-10-06T06:32:00Z",
+      "side": 1,
+      "message": "Is this represented by the constant `OFFSET_TO_FILE_NAME`. If so, consider using the constant (it doesn\u0027t seemed to be used elsewhere).",
+      "range": {
+        "startLine": 162,
+        "startChar": 26,
+        "endLine": 162,
+        "endChar": 28
+      },
+      "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2da22681_d5e96a4c",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2023-10-06T06:32:00Z",
+      "side": 1,
+      "message": "It\u0027d be more accurate to characterize this state with a FileNotFoundException or a IllegalArgumentException rather than a generic IOException. The issue is that the caller specified a file that this function couldn\u0027t find.",
+      "range": {
+        "startLine": 191,
+        "startChar": 22,
+        "endLine": 191,
+        "endChar": 33
+      },
+      "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e09a7ee7_dda437d9",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2023-10-06T06:32:00Z",
+      "side": 1,
+      "message": "Consider renaming this function to be `applyUpdateFile` to better describe what it does (it does more than just parse the payload metadata as its name suggests).",
+      "range": {
+        "startLine": 194,
+        "startChar": 8,
+        "endLine": 194,
+        "endChar": 20
+      },
+      "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "512593b1_418ee6b5",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2023-10-06T06:32:00Z",
+      "side": 1,
+      "message": "It would probably be good to unbind update engine in the case of failure, not just in `onPayloadApplicationComplete()`. Actually it would be good to ensure that it is always unbound at some point if bind was called. In fact, if unbind isn\u0027t called, there may be reesource leakage since both OtaUpdateCallback and the UpdateEngine instances have circular references to one another.\n\nI\u0027d suggest unbinding in a finally clause rather than in the callback. That also has the benefit of not needing to have a reference to update engine from within the callback.\n```suggestion\n        UpdateEngine updateEngine \u003d new UpdateEngine();\n        try {\n            updateEngine.bind(new OtaUpdateCallback(updateEngine));\n            updateEngine.applyPayload(Paths.get(updateFile.getAbsolutePath()).toUri().toString(),\n                    payloadOffset, payloadSize, header);\n        } catch (Exception e) {\n            Log.e(TAG, \"Failed to install update.\", e);\n        } finally {\n            updateEngine.unbind();\n        }\n```",
+      "range": {
+        "startLine": 200,
+        "startChar": 8,
+        "endLine": 206,
+        "endChar": 9
+      },
       "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
