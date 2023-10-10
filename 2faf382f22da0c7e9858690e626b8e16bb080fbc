@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "29992958_58475620",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-10T18:04:58Z",
+      "side": 1,
+      "message": "The logic here looks fine to me, but it has a dependency on another CL, so please ping when that one is approved.",
+      "revId": "2faf382f22da0c7e9858690e626b8e16bb080fbc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "90e0da63_719ea722",
+        "filename": "src/com/android/settings/applications/ApplicationFeatureProviderImpl.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-10T18:04:58Z",
+      "side": 1,
+      "message": "Please update the Unit Test to verify this new behavior",
+      "revId": "2faf382f22da0c7e9858690e626b8e16bb080fbc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
