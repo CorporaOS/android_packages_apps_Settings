@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11f9655d_aa939dd2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1649662
+      },
+      "writtenOn": "2023-10-10T04:13:05Z",
+      "side": 1,
+      "message": "Sorry for the delay, the patch has been rebased on top of the AOSP 14 push. PTAL, thank you!",
+      "revId": "760712201ef7ccee2f37ba930129f6a69153723d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
