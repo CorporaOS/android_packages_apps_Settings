@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0985996e_d0d1ba63",
+        "filename": "src/com/android/settings/deviceinfo/StorageWizardMigrateConfirm.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2023-10-10T23:22:28Z",
+      "side": 1,
+      "message": "Wondering if there\u0027s a way to make these log messages clearer.  How about:\n\n`Log.d(TAG, \"Unsecured user \" + user.id + \" is currently locked; attempting automatic unlock\");`\n\nand `Log.d(TAG, \"Secured user \" + user.id + \" is currently locked; requesting manual unlock\");`\n\nLikewise in `StorageWizardMoveConfirm.java`.",
+      "range": {
+        "startLine": 106,
+        "startChar": 0,
+        "endLine": 110,
+        "endChar": 94
+      },
+      "revId": "4fa5b3a69dca9df270be2875f4b1bb81ea76f0fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
