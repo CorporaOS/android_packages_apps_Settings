@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "00c3f1b5_b8d6528c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2007917
+      },
+      "writtenOn": "2023-10-10T17:40:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2f675346_5c082a85",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 9
+      },
+      "revId": "96eba215453a033cdbb60a2ec5477f4a264ed542",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "57d6c080_f6e8824c",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1
@@ -54,6 +78,30 @@
       "writtenOn": "2023-07-19T00:32:39Z",
       "side": 1,
       "message": "\"credentials set up\" \u003d\u003e \"a lockscreen credential\".  Likewise in the comment",
+      "range": {
+        "startLine": 107,
+        "startChar": 67,
+        "endLine": 107,
+        "endChar": 86
+      },
+      "revId": "96eba215453a033cdbb60a2ec5477f4a264ed542",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e31a3b21_d5f35466",
+        "filename": "src/com/android/settings/deviceinfo/StorageWizardMigrateConfirm.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 2007917
+      },
+      "writtenOn": "2023-10-10T17:40:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7422f28b_22a21603",
       "range": {
         "startLine": 107,
         "startChar": 67,
@@ -149,6 +197,30 @@
       "side": 1,
       "message": "Sure, will upload the change.",
       "parentUuid": "1480315e_d2b2317a",
+      "range": {
+        "startLine": 109,
+        "startChar": 20,
+        "endLine": 109,
+        "endChar": 77
+      },
+      "revId": "96eba215453a033cdbb60a2ec5477f4a264ed542",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4ed9bba_11b5f220",
+        "filename": "src/com/android/settings/deviceinfo/StorageWizardMigrateConfirm.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 2007917
+      },
+      "writtenOn": "2023-10-10T17:40:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f38befc7_e04c5e6b",
       "range": {
         "startLine": 109,
         "startChar": 20,
