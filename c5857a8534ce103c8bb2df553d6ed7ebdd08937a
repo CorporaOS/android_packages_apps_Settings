@@ -46,6 +46,30 @@
       },
       "revId": "c5857a8534ce103c8bb2df553d6ed7ebdd08937a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e6914ff3_9e7a61ba",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-12T21:42:16Z",
+      "side": 1,
+      "message": "Does this also prevent back button from dismissing? I think the standard way to make a dialog not cancelable is to `setCancelable` on the Builder",
+      "parentUuid": "8cfd6ce6_e5bc3716",
+      "range": {
+        "startLine": 134,
+        "startChar": 8,
+        "endLine": 134,
+        "endChar": 23
+      },
+      "revId": "c5857a8534ce103c8bb2df553d6ed7ebdd08937a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
