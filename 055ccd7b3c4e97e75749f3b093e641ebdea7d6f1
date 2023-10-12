@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1692cb27_78702097",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12460,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-12T20:30:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4b0e338a_ff9ece46",
+      "range": {
+        "startLine": 12460,
+        "startChar": 18,
+        "endLine": 12460,
+        "endChar": 47
+      },
+      "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3012e493_dc14cbaa",
@@ -47,6 +71,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9a73d1b_c722dd64",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-12T20:30:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3012e493_dc14cbaa",
+      "range": {
+        "startLine": 69,
+        "startChar": 31,
+        "endLine": 69,
+        "endChar": 44
+      },
+      "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e595dc04_19842dcd",
@@ -60,6 +108,24 @@
       "writtenOn": "2023-10-05T23:19:18Z",
       "side": 1,
       "message": "Please use Futures (this API actually returns a Future already) to synchronize work between threads.",
+      "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb779ebb_c4705ee0",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-12T20:30:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e595dc04_19842dcd",
       "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -99,6 +165,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b3ce371_09e5d222",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-12T20:30:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "437fbd53_67f670c5",
+      "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "81236294_a6ec8ab1",
@@ -112,6 +196,30 @@
       "writtenOn": "2023-10-06T06:32:00Z",
       "side": 1,
       "message": "Is this represented by the constant `OFFSET_TO_FILE_NAME`. If so, consider using the constant (it doesn\u0027t seemed to be used elsewhere).",
+      "range": {
+        "startLine": 162,
+        "startChar": 26,
+        "endLine": 162,
+        "endChar": 28
+      },
+      "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "377d1274_523e0c97",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-12T20:30:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "81236294_a6ec8ab1",
       "range": {
         "startLine": 162,
         "startChar": 26,
@@ -145,6 +253,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "469b0b72_b99b9c20",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-12T20:30:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2da22681_d5e96a4c",
+      "range": {
+        "startLine": 191,
+        "startChar": 22,
+        "endLine": 191,
+        "endChar": 33
+      },
+      "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e09a7ee7_dda437d9",
@@ -168,6 +300,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "403aa010_af15102b",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-12T20:30:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e09a7ee7_dda437d9",
+      "range": {
+        "startLine": 194,
+        "startChar": 8,
+        "endLine": 194,
+        "endChar": 20
+      },
+      "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "512593b1_418ee6b5",
@@ -181,6 +337,30 @@
       "writtenOn": "2023-10-06T06:32:00Z",
       "side": 1,
       "message": "It would probably be good to unbind update engine in the case of failure, not just in `onPayloadApplicationComplete()`. Actually it would be good to ensure that it is always unbound at some point if bind was called. In fact, if unbind isn\u0027t called, there may be reesource leakage since both OtaUpdateCallback and the UpdateEngine instances have circular references to one another.\n\nI\u0027d suggest unbinding in a finally clause rather than in the callback. That also has the benefit of not needing to have a reference to update engine from within the callback.\n```suggestion\n        UpdateEngine updateEngine \u003d new UpdateEngine();\n        try {\n            updateEngine.bind(new OtaUpdateCallback(updateEngine));\n            updateEngine.applyPayload(Paths.get(updateFile.getAbsolutePath()).toUri().toString(),\n                    payloadOffset, payloadSize, header);\n        } catch (Exception e) {\n            Log.e(TAG, \"Failed to install update.\", e);\n        } finally {\n            updateEngine.unbind();\n        }\n```",
+      "range": {
+        "startLine": 200,
+        "startChar": 8,
+        "endLine": 206,
+        "endChar": 9
+      },
+      "revId": "055ccd7b3c4e97e75749f3b093e641ebdea7d6f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f46ff4f_0a9ca6cb",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-12T20:30:12Z",
+      "side": 1,
+      "message": "applyPayload isn\u0027t blocking call. I tried doing this and unbind was getting called even before getting callback.",
+      "parentUuid": "512593b1_418ee6b5",
       "range": {
         "startLine": 200,
         "startChar": 8,
