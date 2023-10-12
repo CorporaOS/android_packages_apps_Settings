@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5fcea687_928f5ebf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-12T20:29:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f817c3eb_661ecc18",
+      "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "aa93c9a0_d4d914d2",
@@ -31,6 +49,24 @@
       "writtenOn": "2023-10-05T23:12:03Z",
       "side": 1,
       "message": "Changes should be behind flags",
+      "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f70e828f_9e7f36ca",
+        "filename": "src/com/android/settings/development/DevelopmentSettingsDashboardFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-12T20:29:03Z",
+      "side": 1,
+      "message": "This feature is enabled by using product flag like : https://android-review.git.corp.google.com/c/device/google/cuttlefish/+/2729285/2/shared/device.mk. It will be enabled for the select devices. This flag sets up system property and this option will be available if defined for the product. Do we still need aconfig based flags?",
+      "parentUuid": "aa93c9a0_d4d914d2",
       "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -52,6 +88,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab4cb79a_fd9a279b",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-12T20:29:03Z",
+      "side": 1,
+      "message": "https://android-review.git.corp.google.com/c/platform/packages/apps/Settings/+/2756951/4/tests/robotests/src/com/android/settings/development/Enable16kPagesPreferenceControllerTest.java - Added in follow-up.",
+      "parentUuid": "85ab2416_7baa28c6",
+      "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "00c6c42d_47baecf4",
@@ -65,6 +119,24 @@
       "writtenOn": "2023-10-05T23:12:03Z",
       "side": 1,
       "message": "Looks like this can be private",
+      "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca2a4a83_8374fa81",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-12T20:29:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "00c6c42d_47baecf4",
       "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -86,6 +158,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2bc346f5_04cfede1",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-12T20:29:03Z",
+      "side": 1,
+      "message": "This has been added here in follow up which is in same topic: https://android-review.git.corp.google.com/c/platform/packages/apps/Settings/+/2756951",
+      "parentUuid": "dd7de4cc_dac94cae",
+      "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "810dc4d6_c05ce8fe",
@@ -99,6 +189,24 @@
       "writtenOn": "2023-10-05T23:12:03Z",
       "side": 1,
       "message": "Why passthrough all these callbacks through the Fragment instead of just letting the PreferenceController implement/handle these?",
+      "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d2e1ceb_76626a7c",
+        "filename": "src/com/android/settings/development/Enable16kPagesWarningDialog.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-12T20:29:03Z",
+      "side": 1,
+      "message": "IIUC, Dialog is pushed using FragmentManager and target fragment should be the one which should process the callbacks. Existing implementations which have dialog all delegate to Fragment First and then to controller : https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/src/com/android/settings/development/DevelopmentSettingsDashboardFragment.java;l\u003d416;bpv\u003d1\n\nChanged it to be handled by PreferenceController.",
+      "parentUuid": "810dc4d6_c05ce8fe",
       "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
