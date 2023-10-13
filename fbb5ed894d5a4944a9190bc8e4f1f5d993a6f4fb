@@ -72,6 +72,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8981462d_906da9dc",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-13T16:45:11Z",
+      "side": 1,
+      "message": "When work is submitted to an executor service, the created Future will already be scheduled to execute. You shouldn\u0027t need to block on it since it\u0027s already going to happen.",
+      "parentUuid": "7d9c96c2_4010e2a6",
+      "revId": "fbb5ed894d5a4944a9190bc8e4f1f5d993a6f4fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f83d0dd1_22c689ec",
         "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
         "patchSetId": 4
@@ -101,6 +119,24 @@
       "side": 1,
       "message": "Do you have any examples for this approach? I have seen lot of usage of threadUtils in settings code base Like https://source.corp.google.com/h/googleplex-android/platform/superproject/main/+/main:packages/apps/Settings/src/com/android/settings/users/UserSettings.java;l\u003d620?q\u003dThreadUtils\u0026ss\u003dh%2Fgoogleplex-android%2Fplatform%2Fsuperproject%2Fmain%2F%2B%2Frefs%2Fheads%2Fmain:packages%2Fapps%2FSettings%2F but not able to find good examples of ListenableFutures usuage.",
       "parentUuid": "f83d0dd1_22c689ec",
+      "revId": "fbb5ed894d5a4944a9190bc8e4f1f5d993a6f4fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b990ad6_dbb9488f",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-13T16:45:11Z",
+      "side": 1,
+      "message": "https://github.com/google/guava/wiki/ListenableFutureExplained\n\nor in Settings code https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/src/com/android/settings/sim/smartForwarding/SmartForwardingActivity.java;l\u003d144",
+      "parentUuid": "2eba6b5c_01c3694b",
       "revId": "fbb5ed894d5a4944a9190bc8e4f1f5d993a6f4fb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
