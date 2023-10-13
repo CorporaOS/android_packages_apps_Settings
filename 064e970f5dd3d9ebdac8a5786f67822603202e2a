@@ -73,6 +73,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "cb2db37c_3f34193e",
+        "filename": "src/com/android/settings/development/DevelopmentSettingsDashboardFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-13T01:02:23Z",
+      "side": 1,
+      "message": "I\u0027d say yes, because within the product we should be able to disable this feature should it show to be causing some issue or regression. More info here: go/trunk-stable-flagging-policy",
+      "parentUuid": "f70e828f_9e7f36ca",
+      "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "85ab2416_7baa28c6",
         "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
         "patchSetId": 4
