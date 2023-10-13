@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8bb8991f_d95140c2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000262
+      },
+      "writtenOn": "2023-10-13T17:06:37Z",
+      "side": 1,
+      "message": "Not sure if wengsu@ could help with this since he is listed within OWNERS list.",
+      "revId": "2b29ecfecb1fa25eedf36c9de4fe9b5c18e0b6fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
