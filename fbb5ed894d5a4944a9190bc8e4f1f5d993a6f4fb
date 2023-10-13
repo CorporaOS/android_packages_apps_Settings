@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "098881fc_af61594b",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-13T01:47:33Z",
+      "side": 1,
+      "message": "```suggestion\n    private static final String TAG \u003d \"Enable16kPages\";\n```",
+      "revId": "fbb5ed894d5a4944a9190bc8e4f1f5d993a6f4fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7c70850f_13ac64cc",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-13T01:47:33Z",
+      "side": 1,
+      "message": "```suggestion\n    private static final String REBOOT_REASON \u003d \"toggle16k\";\n```",
+      "revId": "fbb5ed894d5a4944a9190bc8e4f1f5d993a6f4fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ca69a10a_e7f31d33",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-13T01:47:33Z",
+      "side": 1,
+      "message": "We shouldn\u0027t block on background work. go/java-practices/futures for guidance on using Futures / async work",
+      "revId": "fbb5ed894d5a4944a9190bc8e4f1f5d993a6f4fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f83d0dd1_22c689ec",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-13T01:47:33Z",
+      "side": 1,
+      "message": "Posting back to the main thread should be done through ListenableFutures and executors",
+      "revId": "fbb5ed894d5a4944a9190bc8e4f1f5d993a6f4fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9d584f73_82eccaec",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-13T01:47:33Z",
+      "side": 1,
+      "message": "```suggestion\n    private void displayToast(String message) {\n```",
+      "revId": "fbb5ed894d5a4944a9190bc8e4f1f5d993a6f4fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b191763_9cf5ca0f",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-13T01:47:33Z",
+      "side": 1,
+      "message": "```suggestion\n    private class OtaUpdateCallback extends UpdateEngineCallback {\n```",
+      "revId": "fbb5ed894d5a4944a9190bc8e4f1f5d993a6f4fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7590303e_33ba94f3",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-13T01:47:33Z",
+      "side": 1,
+      "message": "annotate nullability",
+      "revId": "fbb5ed894d5a4944a9190bc8e4f1f5d993a6f4fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
