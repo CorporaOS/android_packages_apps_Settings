@@ -54,6 +54,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "7d9c96c2_4010e2a6",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-13T16:35:40Z",
+      "side": 1,
+      "message": "When this update finishes, we are going to get a callback from update engine. I am not sure how else a future can be used here without having to block for result. This call is mainly to do file parsing on background thread and update engine should provide a callback when it is done. I can just reference to the future which returned by this call but it will be usused like: https://source.corp.google.com/h/googleplex-android/platform/superproject/main/+/main:packages/apps/Settings/src/com/android/settings/users/UserSettings.java;l\u003d1022;drc\u003d15af219e4d7411e226b4c5f88e4b84ca62611240",
+      "parentUuid": "ca69a10a_e7f31d33",
+      "revId": "fbb5ed894d5a4944a9190bc8e4f1f5d993a6f4fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f83d0dd1_22c689ec",
         "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
         "patchSetId": 4
@@ -65,6 +83,24 @@
       "writtenOn": "2023-10-13T01:47:33Z",
       "side": 1,
       "message": "Posting back to the main thread should be done through ListenableFutures and executors",
+      "revId": "fbb5ed894d5a4944a9190bc8e4f1f5d993a6f4fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2eba6b5c_01c3694b",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-13T16:35:40Z",
+      "side": 1,
+      "message": "Do you have any examples for this approach? I have seen lot of usage of threadUtils in settings code base Like https://source.corp.google.com/h/googleplex-android/platform/superproject/main/+/main:packages/apps/Settings/src/com/android/settings/users/UserSettings.java;l\u003d620?q\u003dThreadUtils\u0026ss\u003dh%2Fgoogleplex-android%2Fplatform%2Fsuperproject%2Fmain%2F%2B%2Frefs%2Fheads%2Fmain:packages%2Fapps%2FSettings%2F but not able to find good examples of ListenableFutures usuage.",
+      "parentUuid": "f83d0dd1_22c689ec",
       "revId": "fbb5ed894d5a4944a9190bc8e4f1f5d993a6f4fb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
