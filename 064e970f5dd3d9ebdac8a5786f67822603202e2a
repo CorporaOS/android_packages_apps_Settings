@@ -91,6 +91,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b6ba76a7_da7c945e",
+        "filename": "src/com/android/settings/development/DevelopmentSettingsDashboardFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2023-10-13T22:47:50Z",
+      "side": 1,
+      "message": "This flag should be disabled now outright on the normal targets.\n\nHow does the flag flow from build to display here, so that this new option isn\u0027t shown? Or does this setting show on all devices now?",
+      "parentUuid": "cb2db37c_3f34193e",
+      "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "85ab2416_7baa28c6",
         "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
         "patchSetId": 4
