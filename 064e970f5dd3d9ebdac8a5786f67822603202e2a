@@ -109,6 +109,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5f7c5ae8_a919c18d",
+        "filename": "src/com/android/settings/development/DevelopmentSettingsDashboardFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-13T22:53:28Z",
+      "side": 1,
+      "message": "This is only enabled on cuttlefish devices. We have to define a product varialbe : https://android-review.git.corp.google.com/c/device/google/cuttlefish/+/2729285/2/shared/device.mk which enables the system property : https://android-review.git.corp.google.com/c/platform/build/+/2729459/4/core/main.mk.\n\nThis property is read in Enable16kPagesPreferenceController.java.\n```\n    @Override\n    public boolean isAvailable() {\n        return SystemProperties.getBoolean(DEV_OPTION_PROPERTY, false);\n    }\n```\n\nWhich decides if this will be enabled or not.",
+      "parentUuid": "b6ba76a7_da7c945e",
+      "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "85ab2416_7baa28c6",
         "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
         "patchSetId": 4
