@@ -16,6 +16,29 @@
       "message": "Any update on this one?  Thanks!",
       "revId": "5ae0f05a39d226ea0b820a985be270973ecfb45b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f1fce8fe_80a1dec4",
+        "filename": "src/com/android/settings/network/EraseEuiccDataController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2023-10-16T02:06:49Z",
+      "side": 1,
+      "message": "context.getSystemService(UserManager.class)",
+      "range": {
+        "startLine": 41,
+        "startChar": 14,
+        "endLine": 41,
+        "endChar": 75
+      },
+      "revId": "5ae0f05a39d226ea0b820a985be270973ecfb45b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

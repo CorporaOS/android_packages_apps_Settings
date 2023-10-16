@@ -16,6 +16,29 @@
       "message": "Not sure if wengsu@ could help with this since he is listed within OWNERS list.",
       "revId": "2b29ecfecb1fa25eedf36c9de4fe9b5c18e0b6fb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2fcad13e_c8a7b5e3",
+        "filename": "src/com/android/settings/network/EraseEuiccDataController.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2023-10-16T02:06:49Z",
+      "side": 1,
+      "message": "The readability gets a a little messy.\nI suggest to let logic be shorter.\n```\n        boolean isAllowedUser \u003d (mUm.isAdminUser() || Utils.isDemoUser(mContext)\n                \u0026\u0026 !MobileNetworkUtils.isMobileNetworkUserRestricted(mContext);\n        boolean hasEuiccFeature \u003d mContext.getPackageManager().hasSystemFeature(\n                PackageManager.FEATURE_TELEPHONY_EUICC);\n        return SubscriptionUtil.isSimHardwareVisible(mContext)\n                \u0026\u0026 isAllowedUser\n                \u0026\u0026 hasEuiccFeature ? AVAILABLE_UNSEARCHABLE : UNSUPPORTED_ON_DEVICE;\n```",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 68
+      },
+      "revId": "2b29ecfecb1fa25eedf36c9de4fe9b5c18e0b6fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
