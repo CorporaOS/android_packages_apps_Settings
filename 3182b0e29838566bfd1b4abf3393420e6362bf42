@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a44846e6_2a0f1a24",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1267775
+      },
+      "writtenOn": "2023-10-17T21:09:51Z",
+      "side": 1,
+      "message": "ptal, this is a pure cherry-pick from internal branch to aosp main",
+      "revId": "3182b0e29838566bfd1b4abf3393420e6362bf42",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
