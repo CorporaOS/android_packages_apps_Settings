@@ -127,6 +127,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "30f3397d_bdc64014",
+        "filename": "src/com/android/settings/development/DevelopmentSettingsDashboardFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2023-10-17T17:12:39Z",
+      "side": 1,
+      "message": "Chris, are you asking for \u0027controllers.add\u0027 to also be blocked by this to limit the code that is run?",
+      "parentUuid": "5f7c5ae8_a919c18d",
+      "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "85ab2416_7baa28c6",
         "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
         "patchSetId": 4
