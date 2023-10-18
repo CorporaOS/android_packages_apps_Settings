@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c1eb8f09_ec622ebd",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-18T23:40:42Z",
+      "side": 1,
+      "message": "Please familiarize yourself with go/java-practices/futures for how Futures are best used.\n\nThis code is currently mixing up what threads various pieces of work are doing. You shouldn\u0027t need to use `ThreadUtils` at all.\n\n```\nListenableFuture bgWork \u003d mExecutorService.submit(() -\u003e {\n    // work that needs to be done in background\n});\nFutures.addCallback(bgWork, new FutureCallback\u003c\u003e() {\n    public void onSuccess(...) {\n        // work that needs to be done in foreground\n    }\n},\nContextCompat.getMainExecutor(mContext));\n```",
+      "revId": "050121ce14e922c296b4dc908aec359d360fbbca",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "12c5fecb_381cc19d",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-18T23:40:42Z",
+      "side": 1,
+      "message": "Please use `bind(Callback, Handler)` API as this will let you specify what thread the callback is executed on. Using `bind(Callback)` is implicit and dangerous.",
+      "revId": "050121ce14e922c296b4dc908aec359d360fbbca",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e8d4930_dd0679a6",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-18T23:40:42Z",
+      "side": 1,
+      "message": "Once you make the above change, you won\u0027t need to worry about threading for this behavior",
+      "revId": "050121ce14e922c296b4dc908aec359d360fbbca",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
