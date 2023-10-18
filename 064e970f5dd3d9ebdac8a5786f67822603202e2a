@@ -161,6 +161,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1793c013_b502fdc5",
+        "filename": "src/com/android/settings/development/DevelopmentSettingsDashboardFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2023-10-18T22:59:08Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "25c6ac9c_106afc15",
+      "revId": "064e970f5dd3d9ebdac8a5786f67822603202e2a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "85ab2416_7baa28c6",
