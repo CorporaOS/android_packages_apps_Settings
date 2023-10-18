@@ -16,6 +16,57 @@
       "message": "@cantol@google.com, could you please review this change?",
       "revId": "f42dcfc999ba064f3d1cfa148cf4d471e9bdcebb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45b0b550_a4adc9e2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-18T17:20:28Z",
+      "side": 1,
+      "message": "Seems fine to me, please take the style changes before approval",
+      "revId": "f42dcfc999ba064f3d1cfa148cf4d471e9bdcebb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fa57915e_abb3c14b",
+        "filename": "src/com/android/settings/deviceinfo/StorageWizardMigrateConfirm.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-18T17:20:28Z",
+      "side": 1,
+      "message": "style: please use braces even for one line if conditions\n```suggestion\n                if (StorageManager.isUserKeyUnlocked(user.id)) {\n                    continue;\n                }\n```",
+      "revId": "f42dcfc999ba064f3d1cfa148cf4d471e9bdcebb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c729812_ceaf83eb",
+        "filename": "src/com/android/settings/deviceinfo/StorageWizardMoveConfirm.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-18T17:20:28Z",
+      "side": 1,
+      "message": "same styling concern\n```suggestion\n                if (StorageManager.isUserKeyUnlocked(user.id)) {\n                    continue;\n                }\n```",
+      "revId": "f42dcfc999ba064f3d1cfa148cf4d471e9bdcebb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
