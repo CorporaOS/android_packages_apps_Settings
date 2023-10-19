@@ -19,10 +19,12 @@ package com.android.settings;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.telephony.TelephonyManager;
 
 import com.android.settings.Settings.TestingSettingsActivity;
 
+import java.util.Arrays;
 
 public class TestingSettingsBroadcastReceiver extends BroadcastReceiver {
 
@@ -32,11 +34,18 @@ public class TestingSettingsBroadcastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         if (intent != null && intent.getAction() != null
-                && intent.getAction().equals(TelephonyManager.ACTION_SECRET_CODE)) {
+                && intent.getAction().equals(TelephonyManager.ACTION_SECRET_CODE)
+                && !isDisabled(context)) {
             Intent i = new Intent(Intent.ACTION_MAIN);
             i.setClass(context, TestingSettingsActivity.class);
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(i);
         }
+    }
+
+    private boolean isDisabled(Context context) {
+        String[] disabledBuildTypes = context.getResources().getStringArray(
+                R.array.testing_settings_menu_disabled_build_types);
+        return Arrays.asList(disabledBuildTypes).contains(Build.TYPE);
     }
 }

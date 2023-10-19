@@ -1457,6 +1457,9 @@
         <item>@string/battery_app_item_hint_in_bg</item>
         <item>@string/battery_app_item_hint_in_fg</item>
         <item>@string/battery_app_item_hint_in_fg</item>
+
+    <!-- The Testing Setting Menu is disabled for the build types in this array. -->
+    <string-array name="testing_settings_menu_disabled_build_types" translatable="false">
     </string-array>
 
 </resources>
