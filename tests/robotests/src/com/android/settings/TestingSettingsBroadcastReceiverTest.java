@@ -17,10 +17,13 @@
 package com.android.settings;
 
 import static com.google.common.truth.Truth.assertThat;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.when;
 
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.telephony.TelephonyManager;
 
 import org.junit.Before;
@@ -29,6 +32,7 @@ import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
+import org.robolectric.shadows.ShadowBuild;
 
 @RunWith(RobolectricTestRunner.class)
 public class TestingSettingsBroadcastReceiverTest {
@@ -68,6 +72,79 @@ public class TestingSettingsBroadcastReceiverTest {
 
     @Test
     public void onReceive_correctIntent_shouldStartActivity() {
+        final Intent intent = new Intent();
+        intent.setAction(TelephonyManager.ACTION_SECRET_CODE);
+
+        mReceiver.onReceive(mContext, intent);
+
+        final Intent next = Shadows.shadowOf(mApplication).getNextStartedActivity();
+        assertThat(next).isNotNull();
+        final String dest = next.getComponent().getClassName();
+        assertThat(dest).isEqualTo(Settings.TestingSettingsActivity.class.getName());
+    }
+
+    @Test
+    public void onReceive_disabledForBuildType_User_shouldNotStartActivity() {
+        // TestingSettingsMenu should be disabled if current Build.TYPE is "user" and
+        // 'testing_settings_menu_disabled_build_types' specifies "user"
+        String[] disabledBuildTypes = {"user"};
+        ShadowBuild.setType("user");
+
+        mContext = spy(RuntimeEnvironment.application);
+        when(mContext.getApplicationContext()).thenReturn(mContext);
+        Resources spiedResources = spy(mContext.getResources());
+        when(mContext.getResources()).thenReturn(spiedResources);
+        when(spiedResources.getStringArray(
+                R.array.testing_settings_menu_disabled_build_types)).thenReturn(disabledBuildTypes);
+
+        final Intent intent = new Intent();
+        intent.setAction(TelephonyManager.ACTION_SECRET_CODE);
+
+        mReceiver.onReceive(mContext, intent);
+
+        final Intent next = Shadows.shadowOf(mApplication).getNextStartedActivity();
+        assertThat(next).isNull();
+    }
+
+    @Test
+    public void onReceive_disabledForBuildType_Eng_shouldStartActivity() {
+        // TestingSettingsMenu should not be disabled if current Build.TYPE is "userdebug" and
+        // 'testing_settings_menu_disabled_build_types' specifies "eng" and "user"
+        String[] disabledBuildTypes = {"eng", "user"};
+        ShadowBuild.setType("userdebug");
+
+        mContext = spy(RuntimeEnvironment.application);
+        when(mContext.getApplicationContext()).thenReturn(mContext);
+        Resources spiedResources = spy(mContext.getResources());
+        when(mContext.getResources()).thenReturn(spiedResources);
+        when(spiedResources.getStringArray(
+                R.array.testing_settings_menu_disabled_build_types)).thenReturn(disabledBuildTypes);
+
+        final Intent intent = new Intent();
+        intent.setAction(TelephonyManager.ACTION_SECRET_CODE);
+
+        mReceiver.onReceive(mContext, intent);
+
+        final Intent next = Shadows.shadowOf(mApplication).getNextStartedActivity();
+        assertThat(next).isNotNull();
+        final String dest = next.getComponent().getClassName();
+        assertThat(dest).isEqualTo(Settings.TestingSettingsActivity.class.getName());
+    }
+
+    @Test
+    public void onReceive_disabledForBuildType_Empty_shouldStartActivity() {
+        // TestingSettingsMenu should not be disabled if current Build.TYPE is "user" and
+        // 'testing_settings_menu_disabled_build_types' is empty
+        String[] disabledBuildTypes = {};
+        ShadowBuild.setType("user");
+
+        mContext = spy(RuntimeEnvironment.application);
+        when(mContext.getApplicationContext()).thenReturn(mContext);
+        Resources spiedResources = spy(mContext.getResources());
+        when(mContext.getResources()).thenReturn(spiedResources);
+        when(spiedResources.getStringArray(
+                R.array.testing_settings_menu_disabled_build_types)).thenReturn(disabledBuildTypes);
+
         final Intent intent = new Intent();
         intent.setAction(TelephonyManager.ACTION_SECRET_CODE);
 

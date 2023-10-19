@@ -1409,4 +1409,8 @@
     <integer-array name="network_mode_3g_deprecated_carrier_id" translatable="false">
     </integer-array>
 
+    <!-- The Testing Setting Menu is disabled for the build types in this array. -->
+    <string-array name="testing_settings_menu_disabled_build_types" translatable="false">
+    </string-array>
+
 </resources>
