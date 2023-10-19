@@ -18,6 +18,23 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4dc29fba_f15874e4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2023-10-19T00:53:06Z",
+      "side": 1,
+      "message": "(dropping +2, because I think with an owner that knows the space, we can proceed with review normally, thank you)",
+      "revId": "83448fb649a18e68155a8cada78c68bada55b574",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ed12a2d2_c033b12a",
