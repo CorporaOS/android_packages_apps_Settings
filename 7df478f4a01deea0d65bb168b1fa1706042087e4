@@ -39,6 +39,30 @@
       },
       "revId": "7df478f4a01deea0d65bb168b1fa1706042087e4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e05ebd7c_57d649bd",
+        "filename": "src/com/android/settings/network/EraseEuiccDataController.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2023-10-20T06:01:23Z",
+      "side": 1,
+      "message": "Please refer it.\nhttps://developer.android.com/reference/android/content/Context#getSystemService(java.lang.Class%3CT%3E)\n\nyou don\u0027t need the case.\n        mUm \u003d context.getSystemService(UserManager.class);",
+      "parentUuid": "50aa41f9_9f3dde4f",
+      "range": {
+        "startLine": 42,
+        "startChar": 14,
+        "endLine": 42,
+        "endChar": 53
+      },
+      "revId": "7df478f4a01deea0d65bb168b1fa1706042087e4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
