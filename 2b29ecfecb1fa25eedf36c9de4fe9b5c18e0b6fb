@@ -39,6 +39,30 @@
       },
       "revId": "2b29ecfecb1fa25eedf36c9de4fe9b5c18e0b6fb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46dba333_1f8512b0",
+        "filename": "src/com/android/settings/network/EraseEuiccDataController.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1004882
+      },
+      "writtenOn": "2023-10-20T05:10:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2fcad13e_c8a7b5e3",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 68
+      },
+      "revId": "2b29ecfecb1fa25eedf36c9de4fe9b5c18e0b6fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

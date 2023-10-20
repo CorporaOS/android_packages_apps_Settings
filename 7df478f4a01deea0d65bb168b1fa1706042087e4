@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "019f8243_23f095b4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004882
+      },
+      "writtenOn": "2023-10-20T05:10:42Z",
+      "side": 1,
+      "message": "Thanks for the review!  Updated according to comments and corrected the commit message.",
+      "revId": "7df478f4a01deea0d65bb168b1fa1706042087e4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
