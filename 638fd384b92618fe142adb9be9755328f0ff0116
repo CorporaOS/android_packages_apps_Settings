@@ -16,6 +16,24 @@
       "message": "Do you plan to land this CL, and then cherry-pick http://ag/24842231, and http://ag/25035365?",
       "revId": "638fd384b92618fe142adb9be9755328f0ff0116",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36b3c5b5_0d547cf5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1267775
+      },
+      "writtenOn": "2023-10-23T21:34:34Z",
+      "side": 1,
+      "message": "http://ag/24842231 and http://ag/25035365 were already cherry-picked. \n\nhttps://android-review.git.corp.google.com/c/platform/packages/apps/Settings/+/2794055\n\nhttps://android-review.git.corp.google.com/c/platform/packages/apps/Settings/+/2794056",
+      "parentUuid": "e495115e_1a011ed1",
+      "revId": "638fd384b92618fe142adb9be9755328f0ff0116",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
