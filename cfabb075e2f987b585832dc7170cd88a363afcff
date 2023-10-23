@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a26768a8_45e1b0b7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004882
+      },
+      "writtenOn": "2023-10-23T18:21:19Z",
+      "side": 1,
+      "message": "Updated to match changes in fwks/base",
+      "revId": "cfabb075e2f987b585832dc7170cd88a363afcff",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
