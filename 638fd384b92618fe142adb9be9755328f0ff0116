@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e495115e_1a011ed1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1941946
+      },
+      "writtenOn": "2023-10-23T21:32:50Z",
+      "side": 1,
+      "message": "Do you plan to land this CL, and then cherry-pick http://ag/24842231, and http://ag/25035365?",
+      "revId": "638fd384b92618fe142adb9be9755328f0ff0116",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
