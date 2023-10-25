@@ -50,6 +50,24 @@
       "message": "\u003e TreeHugger finished with: 8 passed, 29 failed, 68 skipped.\n\nThat doesn\u0027t sound good. I have no access to the error log, is there something I should do?",
       "revId": "cfabb075e2f987b585832dc7170cd88a363afcff",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "13aee9e5_e7230276",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-25T21:29:26Z",
+      "side": 1,
+      "message": "This code won\u0027t compile since it depends on your other pull request (adds a new API that this code calls). You should be able to link them together so they build+submit together. Otherwise you would need to submit that parent change first and rebase this",
+      "parentUuid": "c1cc84f0_9652caac",
+      "revId": "cfabb075e2f987b585832dc7170cd88a363afcff",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
