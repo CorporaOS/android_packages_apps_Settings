@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a0919a54_398e6a47",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1455782
+      },
+      "writtenOn": "2023-10-25T18:42:40Z",
+      "side": 1,
+      "message": "This change LGTM, but because the Android Platform now requires using `.aconfig` flags for new changes I\u0027m planning to cherrypick your change and land it internally first. I\u0027ll add more details in the bug!\n\nMarking as CR-1 so that we merge the internal version instead.",
+      "revId": "2a7da9c433f57db9b7b9ad5c54bddb5da81e5693",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
