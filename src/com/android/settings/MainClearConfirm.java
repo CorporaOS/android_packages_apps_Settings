@@ -34,6 +34,7 @@ import android.os.Bundle;
 import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.os.UserManager;
+import android.os.image.DynamicSystemManager;
 import android.service.oemlock.OemLockManager;
 import android.service.persistentdata.PersistentDataBlockManager;
 import android.util.Log;
@@ -83,6 +84,11 @@ public class MainClearConfirm extends InstrumentedFragment {
 
         public void onClick(View v) {
             if (Utils.isMonkeyRunning()) {
+                return;
+            }
+            final DynamicSystemManager dsuManager = (DynamicSystemManager)
+                    getActivity().getSystemService(Context.DYNAMIC_SYSTEM_SERVICE);
+            if (dsuManager.isInUse()) {
                 return;
             }
 
