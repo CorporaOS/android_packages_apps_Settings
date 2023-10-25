@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5ca78d0_c369b489",
+        "filename": "src/com/android/settings/accessibility/TextReadingPreviewController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 1956704
+      },
+      "writtenOn": "2023-10-25T10:46:59Z",
+      "side": 1,
+      "message": "Better to default to an existing layout rather than -1, to avoid crashes",
+      "range": {
+        "startLine": 186,
+        "startChar": 58,
+        "endLine": 186,
+        "endChar": 60
+      },
+      "revId": "ca4182ec0527391f20c45b79b6a93d184f17ab83",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
