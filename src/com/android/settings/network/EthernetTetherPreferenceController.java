@@ -77,13 +77,7 @@ public final class EthernetTetherPreferenceController extends TetherBasePreferen
     @Override
     public boolean shouldEnable() {
         ThreadUtils.ensureMainThread();
-        String[] available = mTm.getTetherableIfaces();
-        for (String s : available) {
-            if (mAvailableInterfaces.contains(s)) {
-                return true;
-            }
-        }
-        return false;
+        return !mAvailableInterfaces.isEmpty();
     }
 
     @Override
