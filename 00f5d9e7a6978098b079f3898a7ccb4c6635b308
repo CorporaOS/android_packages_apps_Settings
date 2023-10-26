@@ -22,6 +22,30 @@
       },
       "revId": "00f5d9e7a6978098b079f3898a7ccb4c6635b308",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b9358f3_43c0249d",
+        "filename": "src/com/android/settings/network/MobileNetworkRepository.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 500,
+      "author": {
+        "id": 1301463
+      },
+      "writtenOn": "2023-10-26T08:52:03Z",
+      "side": 0,
+      "message": "No, it is intended to remove this line because the line#423 depends on the previous size",
+      "parentUuid": "c994e334_425e1d1b",
+      "range": {
+        "startLine": 500,
+        "startChar": 0,
+        "endLine": 500,
+        "endChar": 79
+      },
+      "revId": "00f5d9e7a6978098b079f3898a7ccb4c6635b308",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
