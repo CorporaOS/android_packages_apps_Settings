@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "31a8d3e2_e5b66455",
+        "filename": "src/com/android/settings/applications/specialaccess/PaymentSettingsEnabler.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2023-10-30T21:56:35Z",
+      "side": 1,
+      "message": "This appears to be a flagged api, so this code should also be flagged.\n\nAlso, this existing API still exists and is not marked as deprecated, so it\u0027s not clear why this change is needed. If the old API is not to be used, I would expect it to be annotated accordingly.",
+      "revId": "e5ec890389a2d56737a211522fb7e8123fde271b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
