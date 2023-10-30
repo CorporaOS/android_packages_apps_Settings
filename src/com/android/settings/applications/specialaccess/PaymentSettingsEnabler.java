@@ -19,6 +19,7 @@ package com.android.settings.applications.specialaccess;
 import android.content.Context;
 import android.nfc.NfcAdapter;
 import android.nfc.cardemulation.CardEmulation;
+import android.os.UserHandle;
 
 import androidx.preference.Preference;
 
@@ -69,7 +70,7 @@ public class PaymentSettingsEnabler extends BaseNfcEnabler {
         if (!isNfcAvailable()) {
             return;
         }
-        if (mCardEmuManager.getServices(CardEmulation.CATEGORY_PAYMENT).isEmpty()) {
+        if (mCardEmuManager.getServices(CardEmulation.CATEGORY_PAYMENT, UserHandle.myUserId()).isEmpty()) {
             mIsPaymentAvailable = false;
         } else {
             mIsPaymentAvailable = true;
