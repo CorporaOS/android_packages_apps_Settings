@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "87066904_c56b232e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1074459
+      },
+      "writtenOn": "2023-10-31T00:49:08Z",
+      "side": 1,
+      "message": "Addressed the comment. PTAL, Thanks!",
+      "revId": "e5ec890389a2d56737a211522fb7e8123fde271b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "31a8d3e2_e5b66455",
@@ -32,6 +49,24 @@
       "side": 1,
       "message": "Ack, Will flag it. \n\nThe old API exists, but it is an @hide API. NFC is becoming a mainline module, so we cannot have other parts of the platform use @hide APIs.",
       "parentUuid": "31a8d3e2_e5b66455",
+      "revId": "e5ec890389a2d56737a211522fb7e8123fde271b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9877672_022065f4",
+        "filename": "src/com/android/settings/applications/specialaccess/PaymentSettingsEnabler.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1074459
+      },
+      "writtenOn": "2023-10-31T00:49:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4407c12c_bd956dc6",
       "revId": "e5ec890389a2d56737a211522fb7e8123fde271b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
