@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": false,
       "key": {
         "uuid": "65c02a8d_602d32c9",
         "filename": "/PATCHSET_LEVEL",
@@ -14,10 +15,10 @@
       "side": 1,
       "message": "If user have already had legacy VPN items in VPN Settings, then when user gets upgrading and taps the legacy VPN item the VPN Settings will crash.\nChange the default value of convertTypeToSelectedItemPosition() to 0 can prevent this problem.",
       "revId": "41cb2901648b6a2af2517428c7dfdf20159d7719",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": false
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "8da4bc07_0c0357eb",
         "filename": "/PATCHSET_LEVEL",
@@ -32,10 +33,10 @@
       "message": "This will mean that the loaded profile is effectively invalid, cannot be saved, and cannot be started.\n\nMaybe leave a todo/bug to notify the user of what has happened, and we can address that in a later CL?\n\nAt the least, we\u0027ll probably need a toast noting that \"VPN type no longer supported.\"\n\nIdeally, we\u0027d have a dialog stating that \"VPN type no longer supported, please switch to IKEv2/IPsec\", with options to forget the profile there and then.",
       "parentUuid": "65c02a8d_602d32c9",
       "revId": "41cb2901648b6a2af2517428c7dfdf20159d7719",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": true
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
       "key": {
         "uuid": "069434d2_2756047d",
         "filename": "/PATCHSET_LEVEL",
@@ -49,10 +50,10 @@
       "side": 1,
       "message": "Lucas, do we have any documentation of this project in terms of design docs or some documentation discussing the implications on upgrading users? I think that\u0027d be helpful in ensuring we have consensus on how to handle this deprecation.",
       "revId": "41cb2901648b6a2af2517428c7dfdf20159d7719",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": false
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
       "key": {
         "uuid": "00ab395a_e19c2f94",
         "filename": "/PATCHSET_LEVEL",
@@ -66,10 +67,10 @@
       "side": 1,
       "message": "But otherwise, code looks good.",
       "revId": "41cb2901648b6a2af2517428c7dfdf20159d7719",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": false
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
       "key": {
         "uuid": "804a172e_989cc90a",
         "filename": "/PATCHSET_LEVEL",
@@ -84,10 +85,10 @@
       "message": "No, we don\u0027t.\nBut maybe we can have some notes or discussion on b/161776767.",
       "parentUuid": "069434d2_2756047d",
       "revId": "41cb2901648b6a2af2517428c7dfdf20159d7719",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": false
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
       "key": {
         "uuid": "80ee752f_3c305514",
         "filename": "/PATCHSET_LEVEL",
@@ -102,10 +103,10 @@
       "message": "Bug is filed: b/162198663",
       "parentUuid": "8da4bc07_0c0357eb",
       "revId": "41cb2901648b6a2af2517428c7dfdf20159d7719",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": false
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
       "key": {
         "uuid": "c8e211fb_19e1db0e",
         "filename": "/PATCHSET_LEVEL",
@@ -119,10 +120,27 @@
       "side": 1,
       "message": "Personal preference, I\u0027d prefer to have a line-of-sight to the end-state we\u0027d like in terms of backward compatibility before merging this CL, just so we don\u0027t miss things accidentally by merging this, but not something else.\n\nHolding until we figure out what to do with b/162198663. +1 kept, as I think this CL is correct from a technical perspective, and I have no objections to someone else overriding my preference.",
       "revId": "41cb2901648b6a2af2517428c7dfdf20159d7719",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": false
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c48cb89_02c85f05",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2023-10-31T09:14:32Z",
+      "side": 1,
+      "message": "Per offline discussion : ideally we should update this and check it in since it is a cleanup that never had a chance to be pushed to the tree, but it\u0027s still relevant",
+      "revId": "41cb2901648b6a2af2517428c7dfdf20159d7719",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "3c063ff9_434ab56b",
         "filename": "src/com/android/settings/vpn2/ConfigDialog.java",
@@ -142,10 +160,10 @@
         "endChar": 57
       },
       "revId": "41cb2901648b6a2af2517428c7dfdf20159d7719",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": true
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "a2c61abc_f951ea20",
         "filename": "src/com/android/settings/vpn2/ConfigDialog.java",
@@ -166,10 +184,10 @@
         "endChar": 57
       },
       "revId": "41cb2901648b6a2af2517428c7dfdf20159d7719",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": true
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "125341f2_2c096804",
         "filename": "src/com/android/settings/vpn2/ConfigDialog.java",
@@ -190,10 +208,10 @@
         "endChar": 57
       },
       "revId": "41cb2901648b6a2af2517428c7dfdf20159d7719",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": true
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "0073c96b_db640bbe",
         "filename": "src/com/android/settings/vpn2/ConfigDialog.java",
@@ -213,10 +231,10 @@
         "endChar": 27
       },
       "revId": "41cb2901648b6a2af2517428c7dfdf20159d7719",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": true
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "ae9d626c_089b6189",
         "filename": "src/com/android/settings/vpn2/ConfigDialog.java",
@@ -237,10 +255,10 @@
         "endChar": 27
       },
       "revId": "41cb2901648b6a2af2517428c7dfdf20159d7719",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": true
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "57019295_d6c912b7",
         "filename": "src/com/android/settings/vpn2/ConfigDialog.java",
@@ -261,10 +279,10 @@
         "endChar": 27
       },
       "revId": "41cb2901648b6a2af2517428c7dfdf20159d7719",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": true
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "27c96f02_122d5f3c",
         "filename": "src/com/android/settings/vpn2/ConfigDialog.java",
@@ -284,10 +302,10 @@
         "endChar": 25
       },
       "revId": "41cb2901648b6a2af2517428c7dfdf20159d7719",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": true
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "98026fa0_c315e56e",
         "filename": "src/com/android/settings/vpn2/ConfigDialog.java",
@@ -308,10 +326,10 @@
         "endChar": 25
       },
       "revId": "41cb2901648b6a2af2517428c7dfdf20159d7719",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": true
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
       "key": {
         "uuid": "ffe417c3_15dc95d7",
         "filename": "src/com/android/settings/vpn2/ConfigDialog.java",
@@ -332,8 +350,7 @@
         "endChar": 25
       },
       "revId": "41cb2901648b6a2af2517428c7dfdf20159d7719",
-      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
-      "unresolved": false
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
