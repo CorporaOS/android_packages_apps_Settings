@@ -209,6 +209,14 @@ public class BluetoothPermissionActivity extends AlertActivity implements
 
     @VisibleForTesting
     void sendReplyIntentToReceiver(final boolean allowed, final boolean always) {
+        String bluetoothName;
+        try {
+            bluetoothName = Utils.findBluetoothPackageName(this);
+        } catch (NameNotFoundException e) {
+            Log.e(TAG, "Failed to find BT package name", e);
+            return;
+        }
+
         Intent intent = new Intent(BluetoothDevice.ACTION_CONNECTION_ACCESS_REPLY);
 
         if (DEBUG) {
@@ -216,6 +224,7 @@ public class BluetoothPermissionActivity extends AlertActivity implements
                     + " mReturnPackage");
         }
 
+        intent.setPackage(bluetoothName);
         intent.putExtra(BluetoothDevice.EXTRA_CONNECTION_ACCESS_RESULT,
                         allowed ? BluetoothDevice.CONNECTION_ACCESS_YES
                                 : BluetoothDevice.CONNECTION_ACCESS_NO);
