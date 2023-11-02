@@ -115,8 +115,6 @@ public class ScreenTimeoutSettings extends RadioButtonPickerFragment implements
         super.onAttach(context);
         mContext = context;
         mDevicePolicyManager = mContext.getSystemService(DevicePolicyManager.class);
-        mInitialEntries = getResources().getStringArray(R.array.screen_timeout_entries);
-        mInitialValues = getResources().getStringArray(R.array.screen_timeout_values);
         mAdaptiveSleepController = new AdaptiveSleepPreferenceController(context);
         mAdaptiveSleepPermissionController = new AdaptiveSleepPermissionPreferenceController(
                 context);
@@ -135,10 +133,14 @@ public class ScreenTimeoutSettings extends RadioButtonPickerFragment implements
 
     @Override
     protected List<? extends CandidateInfo> getCandidates() {
+        mInitialEntries = getResources().getStringArray(R.array.screen_timeout_entries);
+        mInitialValues = getResources().getStringArray(R.array.screen_timeout_values);
+
         final List<CandidateInfo> candidates = new ArrayList<>();
         final long maxTimeout = getMaxScreenTimeout(getContext());
         if (mInitialValues != null) {
             for (int i = 0; i < mInitialValues.length; ++i) {
+                // Truncate mInitialEntries/Values so that they do not exceed maxTimeout
                 if (Long.parseLong(mInitialValues[i].toString()) <= maxTimeout) {
                     candidates.add(new TimeoutCandidateInfo(mInitialEntries[i],
                             mInitialValues[i].toString(), true));
@@ -182,7 +184,7 @@ public class ScreenTimeoutSettings extends RadioButtonPickerFragment implements
 
         for (CandidateInfo info : candidateList) {
             SelectorWithWidgetPreference pref =
-                    new SelectorWithWidgetPreference(getPrefContext());
+                    new SelectorWithWidgetPreference(getContext());
             bindPreference(pref, info.getKey(), info, defaultKey);
             screen.addPreference(pref);
         }
@@ -190,11 +192,17 @@ public class ScreenTimeoutSettings extends RadioButtonPickerFragment implements
         final long selectedTimeout = Long.parseLong(defaultKey);
         final long maxTimeout = getMaxScreenTimeout(getContext());
         if (!candidateList.isEmpty() && (selectedTimeout > maxTimeout)) {
-            // The selected time out value is longer than the max timeout allowed by the admin.
-            // Select the largest value from the list by default.
+            // The selected time out value is longer than the max timeout allowed by the
+            // admin/configuration.
+            // The list of candidates is already truncated so that no value exceeds the max timeout
+            // value.
+            // Select the largest value from the candidates list by default.
+            int size = candidateList.size();
             final SelectorWithWidgetPreference preferenceWithLargestTimeout =
-                    (SelectorWithWidgetPreference) screen.getPreference(candidateList.size() - 1);
+                    (SelectorWithWidgetPreference) screen.getPreference(size - 1);
             preferenceWithLargestTimeout.setChecked(true);
+            // Update the system screen timeout setting to match the UI
+            setCurrentSystemScreenTimeout(getContext(), candidateList.get(size - 1).getKey());
         }
 
         mPrivacyPreference = new FooterPreference(mContext);
@@ -264,7 +272,11 @@ public class ScreenTimeoutSettings extends RadioButtonPickerFragment implements
         return R.string.help_url_adaptive_sleep;
     }
 
+    // Get the maximum screen timeout as governed by admin and/or configuration.
+    // Returns the lowest timeout (admin/config) or Long.MAX_VALUE.
     private Long getMaxScreenTimeout(Context context) {
+        Long adminMaxTimeout = Long.MAX_VALUE;
+        Long configMaxTimeout = Long.MAX_VALUE;
         if (context == null) {
             return Long.MAX_VALUE;
         }
@@ -272,11 +284,21 @@ public class ScreenTimeoutSettings extends RadioButtonPickerFragment implements
         if (dpm == null) {
             return Long.MAX_VALUE;
         }
-        mAdmin = RestrictedLockUtilsInternal.checkIfMaximumTimeToLockIsSet(context);
-        if (mAdmin != null) {
-            return dpm.getMaximumTimeToLock(null /* admin */, UserHandle.myUserId());
+        if (mAdmin == null) { // Don't overwrite mocked mAdmin
+            mAdmin = RestrictedLockUtilsInternal.checkIfMaximumTimeToLockIsSet(context);
         }
-        return Long.MAX_VALUE;
+        if (mAdmin != null) {
+            // Get the admin max screen timeout
+            adminMaxTimeout = dpm.getMaximumTimeToLock(null /* admin */, UserHandle.myUserId());
+        }
+        try {
+            // Get the configurable max screen timeout
+            configMaxTimeout = Long.valueOf(
+                    context.getResources().getInteger(R.integer.config_max_screen_timeout));
+        } catch (Resources.NotFoundException e) {
+            // Do nothing
+        }
+        return Math.min(adminMaxTimeout, configMaxTimeout);
     }
 
     private String getCurrentSystemScreenTimeout(Context context) {
