@@ -24,23 +24,21 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.preference.Preference;
-
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.internal.app.AlertActivity;
 import com.android.internal.app.AlertController;
 import com.android.settings.R;
 import com.android.settings.network.SubscriptionUtil;
-
 import java.util.List;
 
 /**
@@ -209,6 +207,14 @@ public class BluetoothPermissionActivity extends AlertActivity implements
 
     @VisibleForTesting
     void sendReplyIntentToReceiver(final boolean allowed, final boolean always) {
+        String bluetoothName;
+        try {
+            bluetoothName = Utils.findBluetoothPackageName(this);
+        } catch (NameNotFoundException e) {
+            Log.e(TAG, "Failed to find BT package name", e);
+            return;
+        }
+
         Intent intent = new Intent(BluetoothDevice.ACTION_CONNECTION_ACCESS_REPLY);
 
         if (DEBUG) {
@@ -216,6 +222,7 @@ public class BluetoothPermissionActivity extends AlertActivity implements
                     + " mReturnPackage");
         }
 
+        intent.setPackage(bluetoothName);
         intent.putExtra(BluetoothDevice.EXTRA_CONNECTION_ACCESS_RESULT,
                         allowed ? BluetoothDevice.CONNECTION_ACCESS_YES
                                 : BluetoothDevice.CONNECTION_ACCESS_NO);
