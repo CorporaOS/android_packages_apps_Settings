@@ -70,6 +70,30 @@
       },
       "revId": "00f5d9e7a6978098b079f3898a7ccb4c6635b308",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fec75571_56efb293",
+        "filename": "src/com/android/settings/network/MobileNetworkRepository.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 500,
+      "author": {
+        "id": 1301463
+      },
+      "writtenOn": "2023-11-02T01:56:07Z",
+      "side": 0,
+      "message": "sure, yes, this line can be removed here also",
+      "parentUuid": "828c3428_00bda9cf",
+      "range": {
+        "startLine": 500,
+        "startChar": 0,
+        "endLine": 500,
+        "endChar": 79
+      },
+      "revId": "00f5d9e7a6978098b079f3898a7ccb4c6635b308",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
