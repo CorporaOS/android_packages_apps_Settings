@@ -36,4 +36,9 @@
     <integer name="enrollment_progress_minimum_time_display">0</integer>
     <!-- The time (in millis) to wait to collect messages in fingerprint enrollment before displaying it. -->
     <integer name="enrollment_collect_time">0</integer>
+
+    <!-- Configurable maximum screen timeout value shown in Screen timeout settings. Any timeout
+         values in R.arrays.screen_timeout_values that exceed this maximum will be hidden.
+         Leave empty to disable configuration and keep the default behavior. -->
+    <integer name="config_max_screen_timeout"></integer>
 </resources>
