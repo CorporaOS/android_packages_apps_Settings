@@ -290,8 +290,15 @@ public final class BluetoothPermissionRequest extends BroadcastReceiver {
     }
 
     private void sendReplyIntentToReceiver(final boolean allowed) {
+        String bluetoothName;
+        try {
+            bluetoothName = Utils.findBluetoothPackageName(mContext);
+        } catch (NameNotFoundException e) {
+            e.printStackTrace();
+            return;
+        }
         Intent intent = new Intent(BluetoothDevice.ACTION_CONNECTION_ACCESS_REPLY);
-
+        intent.setPackage(bluetoothName);
         intent.putExtra(BluetoothDevice.EXTRA_CONNECTION_ACCESS_RESULT,
                 allowed ? BluetoothDevice.CONNECTION_ACCESS_YES
                         : BluetoothDevice.CONNECTION_ACCESS_NO);
