@@ -96,9 +96,6 @@ public final class BluetoothDevicePreference extends GearPreference {
             new BluetoothAdapter.OnMetadataChangedListener() {
                 @Override
                 public void onMetadataChanged(BluetoothDevice device, int key, byte[] value) {
-                    Log.d(TAG, String.format("Metadata updated in Device %s: %d = %s.",
-                            device.getAnonymizedAddress(),
-                            key, value == null ? null : new String(value)));
                     onPreferenceAttributesChanged();
                 }
             };
@@ -229,6 +226,19 @@ public final class BluetoothDevicePreference extends GearPreference {
 
     @SuppressWarnings("FutureReturnValueIgnored")
     void onPreferenceAttributesChanged() {
+        if(ThreadUtils.isMainThread()) {
+            try {
+                ThreadUtils.postOnBackgroundThread(() -> onPreferenceAttributesChangedThread());
+            } catch (RejectedExecutionException e) {
+                Log.w(TAG, "Handler thread unavailable, skipping getConnectionSummary!");
+            }
+
+        } else {
+            onPreferenceAttributesChangedThread();
+        }
+    }
+
+    private void onPreferenceAttributesChangedThread() {
         Pair<Drawable, String> pair = mCachedDevice.getDrawableWithDescription();
         setIcon(pair.first);
         contentDescription = pair.second;
