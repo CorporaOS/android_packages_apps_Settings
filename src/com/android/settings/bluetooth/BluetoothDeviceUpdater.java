@@ -34,10 +34,11 @@ import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 import com.android.settingslib.bluetooth.LocalBluetoothProfileManager;
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
+import com.android.settingslib.utils.ThreadUtils;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -53,7 +54,7 @@ public abstract class BluetoothDeviceUpdater implements BluetoothCallback,
         LocalBluetoothProfileManager.ServiceListener {
     protected final MetricsFeatureProvider mMetricsFeatureProvider;
     protected final DevicePreferenceCallback mDevicePreferenceCallback;
-    protected final Map<BluetoothDevice, Preference> mPreferenceMap;
+    protected final ConcurrentHashMap<BluetoothDevice, Preference> mPreferenceMap;
     protected Context mContext;
     protected Context mPrefContext;
     @VisibleForTesting
@@ -79,7 +80,7 @@ public abstract class BluetoothDeviceUpdater implements BluetoothCallback,
             int metricsCategory) {
         mContext = context;
         mDevicePreferenceCallback = devicePreferenceCallback;
-        mPreferenceMap = new HashMap<>();
+        mPreferenceMap = new ConcurrentHashMap<>();
         mLocalManager = localManager;
         mMetricsCategory = metricsCategory;
         mMetricsFeatureProvider = FeatureFactory.getFactory(context).getMetricsFeatureProvider();
@@ -116,19 +117,21 @@ public abstract class BluetoothDeviceUpdater implements BluetoothCallback,
      * Force to update the list of bluetooth devices
      */
     public void forceUpdate() {
-        if (mLocalManager == null) {
-            Log.e(getLogTag(), "forceUpdate() Bluetooth is not supported on this device");
-            return;
-        }
-        if (BluetoothAdapter.getDefaultAdapter().isEnabled()) {
-            final Collection<CachedBluetoothDevice> cachedDevices =
-                    mLocalManager.getCachedDeviceManager().getCachedDevicesCopy();
-            for (CachedBluetoothDevice cachedBluetoothDevice : cachedDevices) {
-                update(cachedBluetoothDevice);
+        ThreadUtils.postOnBackgroundThread(() -> {
+            if (mLocalManager == null) {
+                Log.e(getLogTag(), "forceUpdate() Bluetooth is not supported on this device");
+                return;
             }
-        } else {
-            removeAllDevicesFromPreference();
-        }
+            if (BluetoothAdapter.getDefaultAdapter().isEnabled()) {
+                final Collection<CachedBluetoothDevice> cachedDevices =
+                mLocalManager.getCachedDeviceManager().getCachedDevicesCopy();
+                for (CachedBluetoothDevice cachedBluetoothDevice : cachedDevices) {
+                    update(cachedBluetoothDevice);
+                }
+            } else {
+                removeAllDevicesFromPreference();
+            }
+        });
     }
 
     public void removeAllDevicesFromPreference() {
