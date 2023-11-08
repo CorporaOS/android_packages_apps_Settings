@@ -81,7 +81,7 @@ public class WifiDisplayPreferenceController extends BasePreferenceController im
 
     @Override
     public CharSequence getSummary() {
-        CharSequence summary = mContext.getString(R.string.disconnected);
+        CharSequence summary = mContext.getString(R.string.wifi_display_settings_summary);
 
         final int routeCount = mRouter.getRouteCount();
         for (int i = 0; i < routeCount; i++) {

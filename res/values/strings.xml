@@ -1583,6 +1583,13 @@
     <!-- Wifi Display settings. The status summary for devices that's not available. [CHAR LIMIT=40] -->
     <string name="wifi_display_status_not_available">Unavailable</string>
 
+    <!-- Wifi Display settings. The description of Cast. -->
+    <string name="wifi_display_settings_summary" product="default">Mirror your phone on your Google Cast™ compliant TV or device (such as Chromecast™)</string>
+      <!-- Wifi Display settings. The description of Cast. -->
+    <string name="wifi_display_settings_summary" product="tablet">Mirror your tablet on your Google Cast™ compliant TV or device (such as Chromecast™)</string>
+      <!-- Wifi Display settings. The description of Cast. -->
+    <string name="wifi_display_settings_summary" product="device">Mirror your device on your Google Cast™ compliant TV or device (such as Chromecast™)</string>
+
     <!-- Wifi Display settings. Options dialog.  The title of the dialog. [CHAR LIMIT=40] -->
     <string name="wifi_display_options_title">Wireless display options</string>
     <!-- Wifi Display settings. Options dialog.  The forget button text. [CHAR LIMIT=20] -->
