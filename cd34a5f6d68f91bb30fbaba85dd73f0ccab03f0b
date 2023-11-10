@@ -46,6 +46,30 @@
       },
       "revId": "cd34a5f6d68f91bb30fbaba85dd73f0ccab03f0b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c06294fd_5a2711c6",
+        "filename": "src/com/android/settings/wfd/WifiDisplaySettings.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1955552
+      },
+      "writtenOn": "2023-11-10T13:47:56Z",
+      "side": 0,
+      "message": "Yes. setHasOptionsMenu is invoked in onActivityCreated of the parent class of WifiDisplaySettings. There is no need to invoke it again in WifiDisplaySettings.\n\nhttps://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/src/com/android/settings/SettingsPreferenceFragment.java;l\u003d205?q\u003dSettingsPreferenceFragment.java\u0026ss\u003dandroid%2Fplatform%2Fsuperproject%2Fmain",
+      "parentUuid": "6220e837_e816fcd8",
+      "range": {
+        "startLine": 142,
+        "startChar": 8,
+        "endLine": 142,
+        "endChar": 32
+      },
+      "revId": "cd34a5f6d68f91bb30fbaba85dd73f0ccab03f0b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
