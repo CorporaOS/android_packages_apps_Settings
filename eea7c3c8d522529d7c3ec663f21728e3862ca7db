@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed9b7611_d5b308ee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2023-11-10T02:20:32Z",
+      "side": 1,
+      "message": "Immediately this is a straight improvement, so LGTM. Please have a followup to address the comments.",
+      "revId": "eea7c3c8d522529d7c3ec663f21728e3862ca7db",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98d36f5a_4e983ee9",
+        "filename": "src/com/android/settings/vpn2/ConfigDialogFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 1015428
+      },
+      "writtenOn": "2023-11-10T02:20:32Z",
+      "side": 1,
+      "message": "I don\u0027t think a toast is good UX. I know this is supposed to be very rare, but we probably want something a little bit better. But considering how rare this is we probably don\u0027t want to spend a lot of time.\n\nCan you please (as a followup to this)\n- Define a new string that would be appropriate for this, instead of reusing an old one that may not be\n- Try to use AlertDialog or similar to display that string, because that would be a lot more obvious to the user.",
+      "range": {
+        "startLine": 212,
+        "startChar": 22,
+        "endLine": 212,
+        "endChar": 30
+      },
+      "revId": "eea7c3c8d522529d7c3ec663f21728e3862ca7db",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
