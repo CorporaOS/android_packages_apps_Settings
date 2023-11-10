@@ -22,6 +22,30 @@
       },
       "revId": "25af94261a60401c284a7932a64148a685003c34",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b8cdaca9_310c7526",
+        "filename": "src/com/android/settings/wfd/WifiDisplaySettings.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2023-11-10T13:21:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "66919d01_5577cbfa",
+      "range": {
+        "startLine": 198,
+        "startChar": 12,
+        "endLine": 198,
+        "endChar": 26
+      },
+      "revId": "25af94261a60401c284a7932a64148a685003c34",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
