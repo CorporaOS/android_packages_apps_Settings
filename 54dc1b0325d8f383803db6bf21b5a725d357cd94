@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1ffc2e4e_692c389a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2023-11-13T06:27:06Z",
+      "side": 1,
+      "message": "Updage this section while suggetion accepted.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 79
+      },
+      "revId": "54dc1b0325d8f383803db6bf21b5a725d357cd94",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2f330463_4a28d3a3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2023-11-13T06:27:06Z",
+      "side": 1,
+      "message": "replace Buganizer with Fixed or Bug",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 9
+      },
+      "revId": "54dc1b0325d8f383803db6bf21b5a725d357cd94",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7f559462_c7096dce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2023-11-13T06:27:06Z",
+      "side": 1,
+      "message": "Hi @olilan@google.com Please take a look.",
+      "revId": "54dc1b0325d8f383803db6bf21b5a725d357cd94",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d7b9eb2b_a1648cf0",
+        "filename": "src/com/android/settings/users/UserSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1725,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2023-11-13T06:27:06Z",
+      "side": 1,
+      "message": "suggest using the following codes.\n\nfinal List\u003cSearchIndexableRaw\u003e rawData \u003d new ArrayList\u003c\u003e();\nif (!UserManager.supportsMultipleUsers()) {\n    return rawData;\n}\n\nSearchIndexableRaw allowMultipleUsersResult \u003d new SearchIndexableRaw(context);\n...",
+      "range": {
+        "startLine": 1721,
+        "startChar": 20,
+        "endLine": 1725,
+        "endChar": 79
+      },
+      "revId": "54dc1b0325d8f383803db6bf21b5a725d357cd94",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
