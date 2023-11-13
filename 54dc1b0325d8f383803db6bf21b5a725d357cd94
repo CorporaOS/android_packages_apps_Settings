@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c590a050_6e1694b0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1413437
+      },
+      "writtenOn": "2023-11-13T06:37:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1ffc2e4e_692c389a",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 79
+      },
+      "revId": "54dc1b0325d8f383803db6bf21b5a725d357cd94",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2f330463_4a28d3a3",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-11-13T06:27:06Z",
       "side": 1,
       "message": "replace Buganizer with Fixed or Bug",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 9
+      },
+      "revId": "54dc1b0325d8f383803db6bf21b5a725d357cd94",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eaebb0d8_b492ee11",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1413437
+      },
+      "writtenOn": "2023-11-13T06:37:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2f330463_4a28d3a3",
       "range": {
         "startLine": 14,
         "startChar": 0,
@@ -77,6 +125,30 @@
       "writtenOn": "2023-11-13T06:27:06Z",
       "side": 1,
       "message": "suggest using the following codes.\n\nfinal List\u003cSearchIndexableRaw\u003e rawData \u003d new ArrayList\u003c\u003e();\nif (!UserManager.supportsMultipleUsers()) {\n    return rawData;\n}\n\nSearchIndexableRaw allowMultipleUsersResult \u003d new SearchIndexableRaw(context);\n...",
+      "range": {
+        "startLine": 1721,
+        "startChar": 20,
+        "endLine": 1725,
+        "endChar": 79
+      },
+      "revId": "54dc1b0325d8f383803db6bf21b5a725d357cd94",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "56e8cdba_5285cd5d",
+        "filename": "src/com/android/settings/users/UserSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1725,
+      "author": {
+        "id": 1413437
+      },
+      "writtenOn": "2023-11-13T06:37:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d7b9eb2b_a1648cf0",
       "range": {
         "startLine": 1721,
         "startChar": 20,
