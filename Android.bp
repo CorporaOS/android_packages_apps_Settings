@@ -162,3 +162,18 @@ filegroup {
     name: "Settings_manifest",
     srcs: ["AndroidManifest.xml"],
 }
+
+test_spec {
+    name: "settingspackages-test-spec-6204400884154368",
+    teamId: 6204400884154368,
+    tests: [
+        "InstrumentedEntitlementApp",
+        "SettingsComponentTests",
+        "AnomalyTester",
+        "SettingsPerfTests",
+        "SettingsRoboTests",
+        "SettingsSpaUnitTests",
+        "SettingsUITests",
+        "SettingsUnitTests"
+    ],
+}
