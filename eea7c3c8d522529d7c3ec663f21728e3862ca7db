@@ -39,6 +39,30 @@
       },
       "revId": "eea7c3c8d522529d7c3ec663f21728e3862ca7db",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6832283c_a7c82cf3",
+        "filename": "src/com/android/settings/vpn2/ConfigDialogFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 1966927
+      },
+      "writtenOn": "2023-11-15T09:40:13Z",
+      "side": 1,
+      "message": "Done in aosp/2824760 and aosp/2831551.",
+      "parentUuid": "98d36f5a_4e983ee9",
+      "range": {
+        "startLine": 212,
+        "startChar": 22,
+        "endLine": 212,
+        "endChar": 30
+      },
+      "revId": "eea7c3c8d522529d7c3ec663f21728e3862ca7db",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
