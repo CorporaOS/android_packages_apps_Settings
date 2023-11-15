@@ -210,7 +210,7 @@ public class ConfigDialogFragment extends InstrumentedDialogFragment implements
             } catch (UnsupportedOperationException e) {
                 Log.e(TAG, "Attempted to start an unsupported VPN type.");
                 final AlertDialog dialog = new AlertDialog.Builder(mContext)
-                        .setMessage(R.string.vpn_insecure_dialog_subtitle)
+                        .setMessage(R.string.vpn_start_unsupported)
                         .setPositiveButton(android.R.string.ok, null)
                         .show();
             }
