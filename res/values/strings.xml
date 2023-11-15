@@ -6213,6 +6213,8 @@
 
     <!-- Dialog subtitle warning for a VPN app that has an insecure type. [CHAR LIMIT=100]  -->
     <string name="vpn_insecure_dialog_subtitle">Not secure. Update to an IKEv2 VPN</string>
+    <!-- Dialog message when user attempted to start a VPN type that is longer supported. [CHAR LIMIT=NONE]  -->
+    <string name="vpn_start_unsupported">Failed to start unsupported VPN. Update to an IKEv2 VPN</string>
 
     <!-- Summary describing the always-on VPN feature. [CHAR LIMIT=NONE] -->
     <string name="vpn_lockdown_summary">Select a VPN profile to always remain connected to. Network traffic will only be allowed when connected to this VPN.</string>
