@@ -3030,7 +3030,7 @@
     <!-- Reset settings complete toast text [CHAR LIMIT=75] -->
     <string name="reset_network_complete_toast">Network settings have been reset</string>
     <!-- Title of the error message shown when error happens during erase eSIM data [CHAR LIMIT=NONE] -->
-    <string name="reset_esim_error_title">Can\u2019t erase SIMs</string>
+    <string name="reset_esim_error_title">Can\u2019t erase eSIMs</string>
     <!-- Message of the error message shown when error happens during erase eSIM data [CHAR LIMIT=NONE] -->
     <string name="reset_esim_error_msg">eSIMs can\u2019t be erased due to an error.\n\nRestart your device and try again.</string>
 
@@ -10834,7 +10834,7 @@
 
     <!-- Mobile network details page. Label for an option that lets the user delete an eSIM from
          the device. [CHAR LIMIT=60] -->
-    <string name="mobile_network_erase_sim">Erase SIM</string>
+    <string name="mobile_network_erase_sim">Erase eSIM</string>
 
     <!-- Title for preferred network type [CHAR LIMIT=NONE] -->
     <string name="preferred_network_mode_title">Preferred network type</string>
@@ -11003,15 +11003,15 @@
 
     <!-- Strings for deleting eUICC subscriptions dialog activity -->
     <!-- Title on confirmation dialog asking the user if they want to erase the eSIM from the device. [CHAR_LIMIT=NONE] -->
-    <string name="erase_sim_dialog_title">Erase this eSIM?</string>
+    <string name="erase_sim_dialog_title">Erase eSIM?</string>
     <!-- Body text in confirmation dialog indicating what erasing a SIM entails. [CHAR_LIMIT=NONE] -->
-    <string name="erase_sim_dialog_text">Erasing this SIM removes <xliff:g id="carrier_name_a" example="Google Fi">%1$s</xliff:g> service from this device.\n\nService for <xliff:g id="carrier_name_b" example="Google Fi">%1$s</xliff:g> won\'t be canceled.</string>
+    <string name="erase_sim_dialog_text">This removes <xliff:g id="carrier_name_a" example="Google Fi">%1$s</xliff:g> service on this device, but your <xliff:g id="carrier_name_b" example="Google Fi">%1$s</xliff:g> plan won\'t be canceled.</string>
     <!-- Button label to erase the eSIM [CHAR_LIMIT=20] -->
     <string name="erase_sim_confirm_button">Erase</string>
     <!-- Status message indicating the device is in the process of erasing the SIM. [CHAR_LIMIT=NONE] -->
-    <string name="erasing_sim">Erasing SIM&#8230;</string>
+    <string name="erasing_sim">Erasing eSIM&#8230;</string>
     <!-- Title of error message indicating the device could not erase the SIM. [CHAR_LIMIT=NONE] -->
-    <string name="erase_sim_fail_title">Can\'t erase SIM</string>
+    <string name="erase_sim_fail_title">Can\'t erase eSIM</string>
     <!-- Body text of error message indicating the device could not erase the SIM due to an error. [CHAR_LIMIT=NONE] -->
     <string name="erase_sim_fail_text">This SIM can\'t be erased due to an error.\n\nRestart your device and try again.</string>
 
@@ -11411,9 +11411,9 @@
     <!-- Provider Model: title of eSIMs category. [CHAR LIMIT=50] -->
     <string name="downloaded_sims_category_title">eSIMs</string>
     <!-- Provider Model: summary of Active in SIM category. [CHAR LIMIT=50] -->
-    <string name="sim_category_active_sim">Active</string>
+    <string name="sim_category_active_sim">On</string>
     <!-- Provider Model: summary of Inactive in SIM category. [CHAR LIMIT=50] -->
-    <string name="sim_category_inactive_sim">Inactive</string>
+    <string name="sim_category_inactive_sim">Off</string>
     <!-- Provider Model: summary of default config. [CHAR LIMIT=50] -->
     <string name="sim_category_default_active_sim">\u0020/ Default for <xliff:g name="default_sim_config" example=" / Default for calls">%1$s</xliff:g></string>
     <!-- Provider Model: summary of default call. [CHAR LIMIT=50] -->
