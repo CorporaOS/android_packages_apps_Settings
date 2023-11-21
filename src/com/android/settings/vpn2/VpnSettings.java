@@ -42,7 +42,6 @@ import android.os.Message;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.security.Credentials;
-import android.security.LegacyVpnProfileStore;
 import android.text.TextUtils;
 import android.util.ArrayMap;
 import android.util.ArraySet;
@@ -58,6 +57,7 @@ import androidx.preference.PreferenceScreen;
 
 import com.android.internal.annotations.GuardedBy;
 import com.android.internal.net.LegacyVpnInfo;
+import com.android.internal.net.VpnBlobStore;
 import com.android.internal.net.VpnConfig;
 import com.android.internal.net.VpnProfile;
 import com.android.settings.R;
@@ -676,9 +676,9 @@ public class VpnSettings extends RestrictedSettingsFragment implements
     private static List<VpnProfile> loadVpnProfiles() {
         final ArrayList<VpnProfile> result = Lists.newArrayList();
 
-        for (String key : LegacyVpnProfileStore.list(Credentials.VPN)) {
+        for (String key : VpnBlobStore.getInstance().list(Credentials.VPN)) {
             final VpnProfile profile = VpnProfile.decode(key,
-                    LegacyVpnProfileStore.get(Credentials.VPN + key));
+                    VpnBlobStore.getInstance().get(Credentials.VPN + key));
             if (profile != null) {
                 result.add(profile);
             }

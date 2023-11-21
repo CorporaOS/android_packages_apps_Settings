@@ -20,33 +20,33 @@ import android.net.VpnManager;
 import android.os.RemoteException;
 import android.provider.Settings;
 import android.security.Credentials;
-import android.security.LegacyVpnProfileStore;
 
 import com.android.internal.net.LegacyVpnInfo;
+import com.android.internal.net.VpnBlobStore;
 import com.android.internal.net.VpnConfig;
 
 /**
  * Utility functions for vpn.
  *
- * LegacyVpnProfileStore methods should only be called in system user
+ * VpnBlobStore methods should only be called in system user
  */
 public class VpnUtils {
 
     private static final String TAG = "VpnUtils";
 
     public static String getLockdownVpn() {
-        final byte[] value = LegacyVpnProfileStore.get(Credentials.LOCKDOWN_VPN);
+        final byte[] value = VpnBlobStore.getInstance().get(Credentials.LOCKDOWN_VPN);
         return value == null ? null : new String(value);
     }
 
     public static void clearLockdownVpn(Context context) {
-        LegacyVpnProfileStore.remove(Credentials.LOCKDOWN_VPN);
+        VpnBlobStore.getInstance().remove(Credentials.LOCKDOWN_VPN);
         // Always notify VpnManager after keystore update
         getVpnManager(context).updateLockdownVpn();
     }
 
     public static void setLockdownVpn(Context context, String lockdownKey) {
-        LegacyVpnProfileStore.put(Credentials.LOCKDOWN_VPN, lockdownKey.getBytes());
+        VpnBlobStore.getInstance().put(Credentials.LOCKDOWN_VPN, lockdownKey.getBytes());
         // Always notify VpnManager after keystore update
         getVpnManager(context).updateLockdownVpn();
     }
