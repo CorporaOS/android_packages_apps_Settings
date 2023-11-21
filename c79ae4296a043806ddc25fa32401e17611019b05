@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f7365a5_6efa6b54",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6216,
+      "author": {
+        "id": 1966927
+      },
+      "writtenOn": "2023-11-21T05:31:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e0472318_f371b78b",
+      "range": {
+        "startLine": 6216,
+        "startChar": 9,
+        "endLine": 6216,
+        "endChar": 92
+      },
+      "revId": "c79ae4296a043806ddc25fa32401e17611019b05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d31c15e1_5e1022a6",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-11-20T11:56:12Z",
       "side": 1,
       "message": "Let\u0027s remove this part, it\u0027s not relevant.\n\nIf you really want to be helpful, use \"upgrade\" instead of \"update\" and formulate this a little bit more like a suggestion, e.g.\n\n    You may want to upgrade to a VPN supporting IKEv2.",
+      "range": {
+        "startLine": 6217,
+        "startChar": 72,
+        "endLine": 6217,
+        "endChar": 96
+      },
+      "revId": "c79ae4296a043806ddc25fa32401e17611019b05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65d3eaf2_80d6de90",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6217,
+      "author": {
+        "id": 1966927
+      },
+      "writtenOn": "2023-11-21T05:31:25Z",
+      "side": 1,
+      "message": "Done. Removed.",
+      "parentUuid": "d31c15e1_5e1022a6",
       "range": {
         "startLine": 6217,
         "startChar": 72,
