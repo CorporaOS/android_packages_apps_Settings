@@ -349,6 +349,10 @@
     <!-- Whether to show a preference item for mobile plan -->
     <bool name="config_show_mobile_plan">true</bool>
 
+    <!-- Whether to show a custom subtitle for the screen brightness level setting.
+         If false, the default summary (brightness level percentage) is displayed -->
+    <bool name="config_show_brightness_level_custom_summary">false</bool>
+
     <!-- Whether none security option is hide or not  (country specific). -->
     <bool name="config_hide_none_security_option">false</bool>
 

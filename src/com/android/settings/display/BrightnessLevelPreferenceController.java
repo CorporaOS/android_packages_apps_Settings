@@ -36,6 +36,7 @@ import android.text.TextUtils;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
+import com.android.settings.R;
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settings.core.SettingsBaseActivity;
 import com.android.settingslib.core.AbstractPreferenceController;
@@ -150,7 +151,13 @@ public class BrightnessLevelPreferenceController extends AbstractPreferenceContr
     }
 
     private void updatedSummary(Preference preference) {
-        if (preference != null) {
+        if (preference == null) {
+            return;
+        }
+        if (mContext.getResources().
+                getBoolean(R.bool.config_show_brightness_level_custom_summary)) {
+            preference.setSummary(R.string.brightness_level_custom_summary);
+        } else {
             preference.setSummary(NumberFormat.getPercentInstance().format(getCurrentBrightness()));
         }
     }

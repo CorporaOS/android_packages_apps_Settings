@@ -2353,6 +2353,8 @@
     <!-- Setting option summary when adaptive brightness is off [CHAR LIMIT=NONE] -->
     <string name="auto_brightness_summary_off">Off</string>
 
+    <!-- Display settings screen, optional customizable screen brightness level summary -->
+    <string name="brightness_level_custom_summary"></string>
     <!-- Display settings screen, display white balance settings title [CHAR LIMIT=30] -->
     <string name="display_white_balance_title">Display white balance</string>
     <!-- Display settings screen, display white balance settings summary [CHAR LIMIT=NONE] -->
