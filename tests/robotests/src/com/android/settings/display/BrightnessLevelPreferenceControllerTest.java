@@ -31,6 +31,7 @@ import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.hardware.display.BrightnessInfo;
 import android.os.PowerManager;
 import android.provider.Settings.System;
@@ -39,6 +40,7 @@ import android.view.Display;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
+import com.android.settings.R;
 import com.android.settings.core.SettingsBaseActivity;
 import com.android.settingslib.transition.SettingsTransitionHelper;
 
@@ -73,10 +75,13 @@ public class BrightnessLevelPreferenceControllerTest {
 
     private BrightnessLevelPreferenceController mController;
 
+    private Resources mResources;
+
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         mContext = spy(RuntimeEnvironment.application);
+        mResources = spy(mContext.getResources());
         mContentResolver = mContext.getContentResolver();
         when(mPowerManager.getBrightnessConstraint(
                 PowerManager.BRIGHTNESS_CONSTRAINT_TYPE_MINIMUM)).thenReturn(0.0f);
@@ -86,6 +91,7 @@ public class BrightnessLevelPreferenceControllerTest {
                 mPowerManager);
         when(mScreen.findPreference(anyString())).thenReturn(mPreference);
         doReturn(mDisplay).when(mContext).getDisplay();
+        when(mContext.getResources()).thenReturn(mResources);
         mController = spy(new BrightnessLevelPreferenceController(mContext, null));
     }
 
@@ -161,6 +167,16 @@ public class BrightnessLevelPreferenceControllerTest {
         mController.updateState(mPreference);
 
         verify(mPreference).setSummary("87%");
+    }
+
+    @Test
+    public void updateState_customizedSummary_shouldSetCustomSummary() {
+        when(mResources.getBoolean(R.bool.config_show_brightness_level_custom_summary)).
+                thenReturn(true);
+
+        mController.updateState(mPreference);
+
+        verify(mPreference).setSummary(R.string.brightness_level_custom_summary);
     }
 
     @Test
