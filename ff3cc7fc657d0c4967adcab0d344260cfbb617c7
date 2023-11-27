@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a786a0b0_9c014bff",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11016,
+      "author": {
+        "id": 1976987
+      },
+      "writtenOn": "2023-11-27T18:11:52Z",
+      "side": 1,
+      "message": "Could we please update this to \"eSIM\" as well?",
+      "range": {
+        "startLine": 11016,
+        "startChar": 44,
+        "endLine": 11016,
+        "endChar": 47
+      },
+      "revId": "ff3cc7fc657d0c4967adcab0d344260cfbb617c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
