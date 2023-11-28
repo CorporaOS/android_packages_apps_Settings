@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03f515c9_77b10691",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2023-11-28T15:03:49Z",
+      "side": 1,
+      "message": "this symptom is fixed in the main branch",
+      "revId": "42f26f48bfa03162cda7b4cee88600ff78e5a9e1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
