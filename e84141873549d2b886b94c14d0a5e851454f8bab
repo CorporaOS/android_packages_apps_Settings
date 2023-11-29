@@ -16,6 +16,24 @@
       "message": "@shhenlin, thanks for your contribution, I discussed with our UX team internally, we will update UX in the next android release.",
       "revId": "e84141873549d2b886b94c14d0a5e851454f8bab",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "43f07b50_20ad3aa3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2023-11-29T02:55:43Z",
+      "side": 1,
+      "message": "Thanks Edgar, feeling great to hear the update. I\u0027ll abandon this CL, looking forward to see this change.",
+      "parentUuid": "5a33bd74_f71a1ef3",
+      "revId": "e84141873549d2b886b94c14d0a5e851454f8bab",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
