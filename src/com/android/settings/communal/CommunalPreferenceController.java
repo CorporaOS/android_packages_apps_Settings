@@ -17,6 +17,7 @@
 package com.android.settings.communal;
 
 import android.content.Context;
+import android.content.res.Resources;
 
 import com.android.settings.R;
 import com.android.settings.Utils;
@@ -39,7 +40,13 @@ public class CommunalPreferenceController extends BasePreferenceController {
      * Returns whether communal preferences are available.
      */
     public static boolean isAvailable(Context context) {
-        return context.getResources().getBoolean(R.bool.config_show_communal_settings)
-                && Utils.canCurrentUserDream(context);
+        Resources res = context.getResources();
+        if (res.getBoolean(R.bool.config_show_communal_settings)) {
+            if (res.getBoolean(R.bool.config_show_communal_settings_primary_user_only)) {
+                return Utils.canCurrentUserDream(context);
+            }
+            return true;
+        }
+        return false;
     }
 }

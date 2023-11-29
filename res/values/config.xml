@@ -686,6 +686,12 @@
     <!-- Whether to show communal settings at the top level. -->
     <bool name="config_show_communal_settings">false</bool>
 
+    <!-- Whether to show communal settings for primary user only. -->
+    <bool name="config_show_communal_settings_primary_user_only">true</bool>
+
+    <!-- The order of the top level communal settings. -->
+    <integer name="config_communal_settings_order">-145</integer>
+
     <!-- The extra value for battery tip -->
     <integer name="config_battery_extra_tip_value">12</integer>
 
