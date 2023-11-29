@@ -39,7 +39,13 @@ public class CommunalPreferenceController extends BasePreferenceController {
      * Returns whether communal preferences are available.
      */
     public static boolean isAvailable(Context context) {
-        return context.getResources().getBoolean(R.bool.config_show_communal_settings)
-                && Utils.canCurrentUserDream(context);
+        if (context.getResources().getBoolean(R.bool.config_show_communal_settings)) {
+            if (context.getResources().getBoolean(
+                        R.bool.config_show_communal_settings_primary_user_only)) {
+                return Utils.canCurrentUserDream(context);
+            }
+            return true;
+        }
+        return false;
     }
 }

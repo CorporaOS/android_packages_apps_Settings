@@ -23,6 +23,7 @@ import static org.mockito.Mockito.when;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.os.UserHandle;
 import android.os.UserManager;
 
 import androidx.test.core.app.ApplicationProvider;
@@ -58,33 +59,48 @@ public class CommunalPreferenceControllerTest {
 
         when(mContext.getResources()).thenReturn(mResources);
         when(mContext.getSystemService(UserManager.class)).thenReturn(mUserManager);
+        UserHandle mainUser = new UserHandle(0);
+        when(mUserManager.getMainUser()).thenReturn(mainUser);
+        when(mUserManager.isUserForeground()).thenReturn(true);
+        when(mContext.createContextAsUser(mainUser, 0)).thenReturn(mContext);
     }
 
     @Test
-    public void isAvailable_communalEnabled_shouldBeTrueForDockUser() {
-        setCommunalEnabled(true);
+    public void isAvailable_communalEnabled_primaryUserOnly_shouldBeTrueForDockUser() {
+        setCommunalEnabled(true, true);
         when(Utils.canCurrentUserDream(mContext)).thenReturn(true);
         assertTrue(mController.isAvailable());
     }
 
     @Test
-    public void isAvailable_communalEnabled_shouldBeFalseForNonDockUser() {
-        setCommunalEnabled(true);
+    public void isAvailable_communalEnabled_primaryUserOnly_shouldBeFalseForNonDockUser() {
+        setCommunalEnabled(true, true);
         when(Utils.canCurrentUserDream(mContext)).thenReturn(false);
         assertFalse(mController.isAvailable());
     }
 
     @Test
     public void isAvailable_communalDisabled_shouldBeFalseForDockUser() {
-        setCommunalEnabled(false);
+        setCommunalEnabled(false, true);
         when(Utils.canCurrentUserDream(mContext)).thenReturn(true);
         assertFalse(mController.isAvailable());
     }
 
-    private void setCommunalEnabled(boolean enabled) {
-        final int boolId = ResourcesUtils.getResourcesId(
+    @Test
+    public void isAvailable_communalEnabled_allUsers_shouldBeTrueForNonDockUser() {
+        setCommunalEnabled(true, false);
+        when(Utils.canCurrentUserDream(mContext)).thenReturn(false);
+        assertTrue(mController.isAvailable());
+    }
+
+    private void setCommunalEnabled(boolean enabled, boolean primaryUserOnly) {
+        final int enabledBoolId = ResourcesUtils.getResourcesId(
                 ApplicationProvider.getApplicationContext(), "bool",
                 "config_show_communal_settings");
-        when(mResources.getBoolean(boolId)).thenReturn(enabled);
+        final int primaryOnlyBoolId = ResourcesUtils.getResourcesId(
+                ApplicationProvider.getApplicationContext(), "bool",
+                "config_show_communal_settings_primary_user_only");
+        when(mResources.getBoolean(enabledBoolId)).thenReturn(enabled);
+        when(mResources.getBoolean(primaryOnlyBoolId)).thenReturn(primaryUserOnly);
     }
 }

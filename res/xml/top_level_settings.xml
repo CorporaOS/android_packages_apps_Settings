@@ -34,7 +34,7 @@
         android:fragment="com.android.settings.communal.CommunalDashboardFragment"
         android:icon="@drawable/ia_settings_communal"
         android:key="top_level_communal"
-        android:order="-145"
+        android:order="@integer/config_communal_settings_order"
         android:title="@string/communal_settings_title"
         android:summary="@string/communal_settings_summary"
         settings:highlightableMenuKey="@string/menu_key_communal"
