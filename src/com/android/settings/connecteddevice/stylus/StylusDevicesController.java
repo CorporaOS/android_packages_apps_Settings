@@ -71,6 +71,8 @@ public class StylusDevicesController extends AbstractPreferenceController implem
     static final String KEY_IGNORE_BUTTON = "ignore_button";
     @VisibleForTesting
     static final String KEY_DEFAULT_NOTES = "default_notes";
+    @VisibleForTesting
+    static final String KEY_SHOW_STYLUS_POINTER = "show_stylus_pointer_switch";
 
     private static final String TAG = "StylusDevicesController";
 
@@ -168,6 +170,19 @@ public class StylusDevicesController extends AbstractPreferenceController implem
         return pref;
     }
 
+    private SwitchPreference createShowStylusPointerPreference() {
+        SwitchPreference pref = new SwitchPreference(mContext);
+        pref.setKey(KEY_SHOW_STYLUS_POINTER);
+        pref.setTitle(mContext.getString(R.string.show_stylus_pointer));
+        pref.setIcon(R.drawable.ic_circle_outline_24dp);
+        pref.setOnPreferenceClickListener(this);
+        pref.setChecked(Settings.Secure.getInt(mContext.getContentResolver(),
+                Settings.Secure.STYLUS_POINTER_ENABLED,
+                Settings.Secure.STYLUS_POINTER_ENABLED_DEFAULT_VALUE) == 1);
+        return pref;
+
+    }
+
     @Override
     public boolean onPreferenceClick(Preference preference) {
         String key = preference.getKey();
@@ -199,6 +214,11 @@ public class StylusDevicesController extends AbstractPreferenceController implem
                 Settings.Secure.putInt(mContext.getContentResolver(),
                         Secure.STYLUS_BUTTONS_ENABLED,
                         ((SwitchPreference) preference).isChecked() ? 0 : 1);
+                break;
+            case KEY_SHOW_STYLUS_POINTER:
+                Settings.Secure.putInt(mContext.getContentResolver(),
+                        Secure.STYLUS_POINTER_ENABLED,
+                        ((SwitchPreference) preference).isChecked() ? 1 : 0);
                 break;
         }
         return true;
@@ -254,6 +274,11 @@ public class StylusDevicesController extends AbstractPreferenceController implem
         Preference buttonPref = mPreferencesContainer.findPreference(KEY_IGNORE_BUTTON);
         if (buttonPref == null) {
             mPreferencesContainer.addPreference(createButtonPressPreference());
+        }
+        Preference showStylusPointerPref = mPreferencesContainer
+                .findPreference(KEY_SHOW_STYLUS_POINTER);
+        if (showStylusPointerPref == null) {
+            mPreferencesContainer.addPreference(createShowStylusPointerPreference());
         }
     }
 
