@@ -217,17 +217,20 @@ public class StylusDevicesControllerTest {
 
         showScreen(controller);
 
-        assertThat(mPreferenceContainer.getPreferenceCount()).isEqualTo(3);
+        assertThat(mPreferenceContainer.getPreferenceCount()).isEqualTo(4);
     }
 
     @Test
     public void btStylusInputDevice_showsAllPreferences() {
         showScreen(mController);
+
+        assertThat(mPreferenceContainer.getPreferenceCount()).isEqualTo(4);
+
         Preference defaultNotesPref = mPreferenceContainer.getPreference(0);
         Preference handwritingPref = mPreferenceContainer.getPreference(1);
         Preference buttonPref = mPreferenceContainer.getPreference(2);
+        Preference stylusPointerIconPref = mPreferenceContainer.getPreference(3);
 
-        assertThat(mPreferenceContainer.getPreferenceCount()).isEqualTo(3);
         assertThat(defaultNotesPref.getTitle().toString()).isEqualTo(
                 mContext.getString(R.string.stylus_default_notes_app));
         assertThat(defaultNotesPref.isVisible()).isTrue();
@@ -237,6 +240,9 @@ public class StylusDevicesControllerTest {
         assertThat(buttonPref.getTitle().toString()).isEqualTo(
                 mContext.getString(R.string.stylus_ignore_button));
         assertThat(buttonPref.isVisible()).isTrue();
+        assertThat(stylusPointerIconPref.getTitle().toString()).isEqualTo(
+                mContext.getString(R.string.show_stylus_pointer_icon));
+        assertThat(stylusPointerIconPref.isVisible()).isTrue();
     }
 
     @Test
@@ -520,6 +526,46 @@ public class StylusDevicesControllerTest {
         assertThat(buttonsPref.isChecked()).isEqualTo(false);
         assertThat(Settings.Secure.getInt(mContext.getContentResolver(),
                 Secure.STYLUS_BUTTONS_ENABLED, -1)).isEqualTo(1);
+    }
+
+    @Test
+    public void stylusPointerIconPreference_checkedWhenFlagTrue() {
+        Settings.Secure.putInt(mContext.getContentResolver(),
+                Settings.Secure.STYLUS_POINTER_ICON_ENABLED, 1);
+
+        showScreen(mController);
+        SwitchPreference stylusPointerIconPref =
+                (SwitchPreference) mPreferenceContainer.getPreference(3);
+
+        assertThat(stylusPointerIconPref.isChecked()).isEqualTo(true);
+    }
+
+    @Test
+    public void stylusPointerIconPreference_uncheckedWhenFlagFalse() {
+        Settings.Secure.putInt(mContext.getContentResolver(),
+                Settings.Secure.STYLUS_POINTER_ICON_ENABLED, 0);
+
+        showScreen(mController);
+        SwitchPreference stylusPointerIconPref =
+                (SwitchPreference) mPreferenceContainer.getPreference(3);
+
+        assertThat(stylusPointerIconPref.isChecked()).isEqualTo(false);
+    }
+
+    @Test
+    public void stylusPointerIconPreference_updatesFlagOnClick() {
+        Settings.Secure.putInt(mContext.getContentResolver(),
+                Settings.Secure.STYLUS_POINTER_ICON_ENABLED, 0);
+
+        showScreen(mController);
+        SwitchPreference stylusPointerIconPref =
+                (SwitchPreference) mPreferenceContainer.getPreference(3);
+
+        stylusPointerIconPref.performClick();
+
+        assertThat(stylusPointerIconPref.isChecked()).isEqualTo(true);
+        assertThat(Settings.Secure.getInt(mContext.getContentResolver(),
+                Secure.STYLUS_POINTER_ICON_ENABLED, -1)).isEqualTo(1);
     }
 
     private void showScreen(StylusDevicesController controller) {
