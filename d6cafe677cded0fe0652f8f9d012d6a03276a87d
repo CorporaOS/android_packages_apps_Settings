@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "99b92702_40a67789",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2023-12-08T02:27:54Z",
+      "side": 1,
+      "message": "Hello Googler, This CL still applies to latest Android version, can anyone help follow this? Thank you.",
+      "revId": "d6cafe677cded0fe0652f8f9d012d6a03276a87d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
