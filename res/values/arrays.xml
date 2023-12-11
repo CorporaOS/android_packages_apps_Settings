@@ -1365,14 +1365,14 @@
     </string-array>
 
     <!-- A list for all temperature units. [DO NOT TRANSLATE] -->
-    <string-array name="temperature_units">
+    <string-array name="temperature_units" translatable="false">
         <item>default</item>
         <item>celsius</item>
         <item>fahrenhe</item>
     </string-array>
 
     <!-- A list for all days of a week. [DO NOT TRANSLATE] -->
-    <string-array name="first_day_of_week">
+    <string-array name="first_day_of_week" translatable="false">
         <item>default</item>
         <item>sun</item>
         <item>mon</item>
