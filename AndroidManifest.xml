@@ -4950,6 +4950,16 @@
             android:authorities="${applicationId}.androidx-startup"
             tools:node="remove" />
 
+        <!-- Test Switch -->
+        <provider
+            android:name=".dashboard.TestSwitchProvider"
+            android:authorities="com.android.settings.dashboard.TestSwitchProvider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.MANUFACTURER_APPLICATION_SETTING"/>
+            </intent-filter>
+        </provider>
+
         <!-- This is the longest AndroidManifest.xml ever. -->
     </application>
 </manifest>
