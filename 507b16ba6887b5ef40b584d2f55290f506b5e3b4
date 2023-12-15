@@ -16,6 +16,23 @@
       "message": "@peterzhang@google.com Please have a look at this potential bug in the Settings Tile API",
       "revId": "507b16ba6887b5ef40b584d2f55290f506b5e3b4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a0019213_3c7d68ce",
+        "filename": "src/com/android/settings/dashboard/TestSwitchProvider.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1900292
+      },
+      "writtenOn": "2023-12-15T16:01:04Z",
+      "side": 1,
+      "message": "The problem has been found.\nMETHOD_GET_ENTRY_DATA can be called with or without an \u0027extras\u0027. If provided it will hold the key of the Switch for which the metadata shall be returned as a single Bundle.\nIf \u0027extras\u0027 is not provided then a List of Bundles holding the metadata of any and all Switches provided by this class shall be returned.\n\nThis can quite easily be solved here in this class, so most likely this is according to design",
+      "revId": "507b16ba6887b5ef40b584d2f55290f506b5e3b4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
