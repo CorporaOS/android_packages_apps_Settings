@@ -16,6 +16,24 @@
       "message": "Can we simply remove this call here instead of introducing a new `mUpdatedInOnCreate` field?",
       "revId": "863a796d05391b9512c3b1b54da33cdb28a58a15",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b4f68662_0af3e4fb",
+        "filename": "src/com/android/settings/accessibility/AccessibilitySettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2023-12-18T23:48:40Z",
+      "side": 1,
+      "message": "+1\nAlso, if we\u0027re calling `updateAllPreferences` in onResume, might want to clean up call to `updateAllPreferences` in onStart as well.",
+      "parentUuid": "061aabb3_722e4509",
+      "revId": "863a796d05391b9512c3b1b54da33cdb28a58a15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
