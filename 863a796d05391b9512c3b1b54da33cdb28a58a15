@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "061aabb3_722e4509",
+        "filename": "src/com/android/settings/accessibility/AccessibilitySettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 2016516
+      },
+      "writtenOn": "2023-12-18T10:02:00Z",
+      "side": 1,
+      "message": "Can we simply remove this call here instead of introducing a new `mUpdatedInOnCreate` field?",
+      "revId": "863a796d05391b9512c3b1b54da33cdb28a58a15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
