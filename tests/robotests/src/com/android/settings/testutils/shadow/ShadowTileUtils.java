@@ -38,11 +38,12 @@ public class ShadowTileUtils {
 
     private static boolean sChecked;
     private static Bundle sResult;
+    private static String sText = MOCK_TEXT;
 
     @Implementation
     protected static String getTextFromUri(Context context, Uri uri,
             Map<String, IContentProvider> providerMap, String key) {
-        return MOCK_TEXT;
+        return sText;
     }
 
     @Implementation
@@ -75,5 +76,9 @@ public class ShadowTileUtils {
 
     public static void setResultBundle(Bundle result) {
         sResult = result;
+    }
+
+    public static void setResultText(String text) {
+        sText = text;
     }
 }
