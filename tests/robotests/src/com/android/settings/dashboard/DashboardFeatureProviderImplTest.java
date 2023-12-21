@@ -19,8 +19,12 @@ package com.android.settings.dashboard;
 import static android.content.Intent.EXTRA_USER;
 
 import static com.android.settingslib.drawer.SwitchesProvider.EXTRA_SWITCH_SET_CHECKED_ERROR;
+import static com.android.settingslib.drawer.TileUtils.AVAILABILITY_AVAILABLE;
+import static com.android.settingslib.drawer.TileUtils.AVAILABILITY_DISABLED;
+import static com.android.settingslib.drawer.TileUtils.AVAILABILITY_UNSUPPORTED;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_KEY_ORDER;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_KEY_PROFILE;
+import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_AVAILABILITY_STATUS_URI;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON_URI;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_KEYHINT;
@@ -29,6 +33,7 @@ import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SWIT
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_TITLE;
 import static com.android.settingslib.drawer.TileUtils.PROFILE_ALL;
 import static com.android.settingslib.drawer.TileUtils.PROFILE_PRIMARY;
+import static com.android.settings.dashboard.DashboardFragment.TILE_METADATA_EXTRA;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -106,6 +111,7 @@ public class DashboardFeatureProviderImplTest {
 
     private static final String KEY = "key";
     private static final String SWITCH_URI = "content://com.android.settings/tile_switch";
+    private static final String AVAILABILITY_URI = "content://com.android.settings/availability";
 
     @Mock(answer = Answers.RETURNS_DEEP_STUBS)
     private FragmentActivity mActivity;
@@ -136,6 +142,8 @@ public class DashboardFeatureProviderImplTest {
         mActivityInfo.metaData.putInt(META_DATA_PREFERENCE_TITLE, R.string.settings_label);
         mActivityInfo.metaData.putInt(META_DATA_PREFERENCE_SUMMARY,
                 R.string.about_settings_summary);
+        mActivityInfo.metaData.putString(META_DATA_PREFERENCE_AVAILABILITY_STATUS_URI,
+                AVAILABILITY_URI);
 
         mProviderInfo = new ProviderInfo();
         mProviderInfo.packageName = mContext.getPackageName();
@@ -178,6 +186,9 @@ public class DashboardFeatureProviderImplTest {
         assertThat(preference.getFragment()).isEqualTo(
                 mActivityInfo.metaData.getString(SettingsActivity.META_DATA_KEY_FRAGMENT_CLASS));
         assertThat(preference.getOrder()).isEqualTo(tile.getOrder());
+        assertThat(preference.peekExtras().getBundle(TILE_METADATA_EXTRA)).isNotNull();
+        assertThat(preference.peekExtras().getBundle(TILE_METADATA_EXTRA).getString(
+                META_DATA_PREFERENCE_AVAILABILITY_STATUS_URI)).isEqualTo(AVAILABILITY_URI);
     }
 
     @Test
@@ -362,6 +373,42 @@ public class DashboardFeatureProviderImplTest {
         observers.get(0).updateUi();
 
         assertThat(preference.getTitle()).isEqualTo(ShadowTileUtils.MOCK_TEXT);
+    }
+
+    @Test
+    @Config(shadows = {ShadowTileUtils.class})
+    public void bindPreference_hasAvailabilityUri_shouldSetAvailabilityFromContentProvider() {
+        final Preference preference = new Preference(RuntimeEnvironment.application);
+        final Tile tile = new ActivityTile(mActivityInfo, CategoryKey.CATEGORY_HOMEPAGE);
+
+        ShadowTileUtils.setResultText(AVAILABILITY_AVAILABLE);
+        List<DynamicDataObserver> observers = mImpl.bindPreferenceToTileAndGetObservers(
+                mActivity, mFragment, mForceRoundedIcon, preference, tile, null /* key */,
+                Preference.DEFAULT_ORDER);
+        observers.get(0).updateUi();
+        assertThat(preference.isEnabled()).isTrue();
+        assertThat(preference.isVisible()).isTrue();
+
+        ShadowTileUtils.setResultText(AVAILABILITY_DISABLED);
+        observers = mImpl.bindPreferenceToTileAndGetObservers(mActivity, mFragment,
+                mForceRoundedIcon, preference, tile, null /* key */, Preference.DEFAULT_ORDER);
+        observers.get(0).updateUi();
+        assertThat(preference.isEnabled()).isFalse();
+        assertThat(preference.isVisible()).isTrue();
+
+        ShadowTileUtils.setResultText(AVAILABILITY_UNSUPPORTED);
+        observers = mImpl.bindPreferenceToTileAndGetObservers(mActivity, mFragment,
+                mForceRoundedIcon, preference, tile, null /* key */, Preference.DEFAULT_ORDER);
+        observers.get(0).updateUi();
+        assertThat(preference.isEnabled()).isFalse();
+        assertThat(preference.isVisible()).isFalse();
+
+        ShadowTileUtils.setResultText(ShadowTileUtils.MOCK_TEXT);
+        observers = mImpl.bindPreferenceToTileAndGetObservers(mActivity, mFragment,
+                mForceRoundedIcon, preference, tile, null /* key */, Preference.DEFAULT_ORDER);
+        observers.get(0).updateUi();
+        assertThat(preference.isEnabled()).isTrue();
+        assertThat(preference.isVisible()).isTrue();
     }
 
     @Test
