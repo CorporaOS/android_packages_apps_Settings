@@ -26,12 +26,17 @@ import static com.android.settingslib.drawer.SwitchesProvider.METHOD_GET_DYNAMIC
 import static com.android.settingslib.drawer.SwitchesProvider.METHOD_GET_PROVIDER_ICON;
 import static com.android.settingslib.drawer.SwitchesProvider.METHOD_IS_CHECKED;
 import static com.android.settingslib.drawer.SwitchesProvider.METHOD_ON_CHECKED_CHANGED;
+import static com.android.settingslib.drawer.TileUtils.AVAILABILITY_DISABLED;
+import static com.android.settingslib.drawer.TileUtils.AVAILABILITY_UNSUPPORTED;
+import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_AVAILABILITY;
+import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_AVAILABILITY_STATUS_URI;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON_URI;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY_URI;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SWITCH_URI;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_TITLE;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_TITLE_URI;
+import static com.android.settings.dashboard.DashboardFragment.TILE_METADATA_EXTRA;
 
 import android.app.PendingIntent;
 import android.app.settings.SettingsEnums;
@@ -154,6 +159,11 @@ public class DashboardFeatureProviderImpl implements DashboardFeatureProvider {
             outObservers.add(observer);
         }
         bindIcon(pref, tile, forceRoundedIcon);
+        observer = bindAvailabilityAndGetObserver(pref, tile);
+        if (observer != null) {
+            outObservers.add(observer);
+        }
+        bindMetaData(pref, tile);
 
         if (tile.hasPendingIntent()) {
             // Pending intent cannot be launched within the settings app panel, and will thus always
@@ -254,6 +264,9 @@ public class DashboardFeatureProviderImpl implements DashboardFeatureProvider {
                         break;
                     case METHOD_IS_CHECKED:
                         refreshSwitch(uri, pref, this);
+                        break;
+                    case META_DATA_PREFERENCE_AVAILABILITY:
+                        refreshAvailability(uri, pref, this);
                         break;
                 }
             }
@@ -431,6 +444,42 @@ public class DashboardFeatureProviderImpl implements DashboardFeatureProvider {
             return;
         }
         setPreferenceIcon(preference, tile, forceRoundedIcon, tile.getPackageName(), tileIcon);
+    }
+
+    private DynamicDataObserver bindAvailabilityAndGetObserver(Preference preference, Tile tile) {
+        if (tile.getMetaData() != null
+                && tile.getMetaData().containsKey(META_DATA_PREFERENCE_AVAILABILITY_STATUS_URI)) {
+                final Uri uri = TileUtils.getCompleteUri(tile,
+                        META_DATA_PREFERENCE_AVAILABILITY_STATUS_URI,
+                        META_DATA_PREFERENCE_AVAILABILITY);
+            return createDynamicDataObserver(META_DATA_PREFERENCE_AVAILABILITY, uri, preference);
+        }
+        return null;
+    }
+
+    private void refreshAvailability(Uri uri, Preference preference, DynamicDataObserver observer) {
+        ThreadUtils.postOnBackgroundThread(() -> {
+            final Map<String, IContentProvider> providerMap = new ArrayMap<>();
+            final String availabilityStatusFromUri = TileUtils.getTextFromUri(
+                    mContext, uri, providerMap, META_DATA_PREFERENCE_AVAILABILITY);
+            observer.post(() -> {
+                if (AVAILABILITY_DISABLED.equals(availabilityStatusFromUri)) {
+                    preference.setEnabled(false);
+                    preference.setVisible(true);
+                } else if(AVAILABILITY_UNSUPPORTED.equals(availabilityStatusFromUri)) {
+                    preference.setEnabled(false);
+                    preference.setVisible(false);
+                } else {
+                    preference.setEnabled(true);
+                    preference.setVisible(true);
+                }
+            });
+        });
+    }
+
+    private void bindMetaData(Preference preference, Tile tile) {
+        final Bundle extras = preference.getExtras();
+        extras.putBundle(TILE_METADATA_EXTRA, tile.getMetaData());
     }
 
     private void setPreferenceIcon(Preference preference, Tile tile, boolean forceRoundedIcon,
