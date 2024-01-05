@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b1b7b80a_d55bba85",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2024-01-05T18:51:53Z",
+      "side": 1,
+      "message": "btw - for binder - there is allowBlocking, and we could help you set it up so you get errors when blocking binder calls are made on the UI thread. Sounds like a lot to review for, and we know from practice that it\u0027s very easy to miss these cases. If you want - open up a separate bug, and I could help you get this setup.",
+      "parentUuid": "c1eb8f09_ec622ebd",
+      "revId": "050121ce14e922c296b4dc908aec359d360fbbca",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "12c5fecb_381cc19d",
         "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
         "patchSetId": 5
