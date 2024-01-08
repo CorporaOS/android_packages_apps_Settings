@@ -34,6 +34,24 @@
       "parentUuid": "5b192160_3541ecb5",
       "revId": "efbb06cef372755f4176e788f7317ccdbfb4ca5a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "abc4d640_9259978f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1393882
+      },
+      "writtenOn": "2024-01-08T03:36:02Z",
+      "side": 1,
+      "message": "Please add the issue number to the commit message.\n```\nBug: 318825347\n```",
+      "parentUuid": "fd44e272_a4ba45b4",
+      "revId": "efbb06cef372755f4176e788f7317ccdbfb4ca5a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
