@@ -27,12 +27,16 @@ import com.android.settings.Settings;
 import com.android.settings.core.BasePreferenceController;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settingslib.core.instrumentation.MetricsFeatureProvider;
+import com.android.settingslib.core.lifecycle.LifecycleObserver;
+import com.android.settingslib.core.lifecycle.events.OnResume;
 import com.android.settingslib.widget.BannerMessagePreference;
 
 /**
  * Controller to take the user to location settings page
  */
-public class TwilightLocationPreferenceController extends BasePreferenceController {
+public class TwilightLocationPreferenceController extends BasePreferenceController
+        implements LifecycleObserver, OnResume {
+    private BannerMessagePreference mPreference;
     private final LocationManager mLocationManager;
     private final MetricsFeatureProvider mMetricsFeatureProvider;
 
@@ -45,14 +49,21 @@ public class TwilightLocationPreferenceController extends BasePreferenceControll
     @Override
     public void displayPreference(PreferenceScreen screen) {
         super.displayPreference(screen);
-        final BannerMessagePreference preference =
+        mPreference =
                 (BannerMessagePreference) screen.findPreference(getPreferenceKey());
-        preference
+        mPreference
                 .setPositiveButtonText(R.string.twilight_mode_launch_location)
                 .setPositiveButtonOnClickListener(v -> {
-                    mMetricsFeatureProvider.logClickedPreference(preference, getMetricsCategory());
+                    mMetricsFeatureProvider.logClickedPreference(mPreference, getMetricsCategory());
                     launchLocationSettings();
                 });
+    }
+
+    @Override
+    public void onResume() {
+        if (mPreference != null) {
+            mPreference.setVisible(!mLocationManager.isLocationEnabled());
+        }
     }
 
     @Override
