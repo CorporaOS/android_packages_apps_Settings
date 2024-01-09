@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "34110e1a_7eb63bc0",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-01-09T22:35:13Z",
+      "side": 1,
+      "message": "```suggestion\n    private final ListeningExecutorService mExecutorService \u003d\n```",
+      "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4dcc9b19_5f25f569",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-01-09T22:35:13Z",
+      "side": 1,
+      "message": "```suggestion\n                ContextCompat.getMainExecutor(mContext));\n```",
+      "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ebd657d1_e2a2e326",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-01-09T22:35:13Z",
+      "side": 1,
+      "message": "`getActivity()` is nullable - please check that the Activity exists before using (if the fragment gets detached before this call is made, it will trigger an NPE)",
+      "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
