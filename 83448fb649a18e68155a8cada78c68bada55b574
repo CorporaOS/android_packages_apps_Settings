@@ -35,6 +35,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b86e6340_3597f930",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-09T00:03:28Z",
+      "side": 1,
+      "message": "I have updated both cls with required changes",
+      "parentUuid": "3a11aea1_65cf0347",
+      "revId": "83448fb649a18e68155a8cada78c68bada55b574",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ed12a2d2_c033b12a",
@@ -48,6 +66,24 @@
       "writtenOn": "2023-10-18T23:44:16Z",
       "side": 1,
       "message": "By properly associating Future callbacks with the background work, you can ensure that this method is always called from the main thread, thus not needing to do any threading here. But also, please null check the mProgressDialog before using it, as this method could easily be called by another method in the future that breaks current assumptions.",
+      "revId": "83448fb649a18e68155a8cada78c68bada55b574",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5108e2d7_b886a405",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 270,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-09T00:03:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ed12a2d2_c033b12a",
       "revId": "83448fb649a18e68155a8cada78c68bada55b574",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
