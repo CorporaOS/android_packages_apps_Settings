@@ -77,6 +77,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f2047cf0_faa6bde7",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2024-01-09T22:56:38Z",
+      "side": 1,
+      "message": "In onPreferenceChange, when switching back to a 4k option, there\u0027s a TODO to reboot directly into 4k. Is a similar TODO needed here?",
+      "range": {
+        "startLine": 87,
+        "startChar": 8,
+        "endLine": 91,
+        "endChar": 59
+      },
+      "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ab8d032a_0d817910",
         "filename": "src/com/android/settings/development/Enable16kPagesWarningDialog.java",
         "patchSetId": 9
