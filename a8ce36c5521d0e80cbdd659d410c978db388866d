@@ -3,6 +3,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ff0c9e74_3c4dc9cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-01-09T22:24:55Z",
+      "side": 1,
+      "message": "Please address Link/Nullability warnings",
+      "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be6c09a7_3696dcc7",
+        "filename": "OWNERS",
+        "patchSetId": 9
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-01-09T22:24:55Z",
+      "side": 1,
+      "message": "revert",
+      "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6f18c9ce_a68ed22e",
         "filename": "src/com/android/settings/development/DevelopmentSettingsDashboardFragment.java",
         "patchSetId": 9
@@ -37,6 +71,40 @@
         "endLine": 36,
         "endChar": 65
       },
+      "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ab8d032a_0d817910",
+        "filename": "src/com/android/settings/development/Enable16kPagesWarningDialog.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-01-09T22:24:55Z",
+      "side": 1,
+      "message": "Why is this static?",
+      "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2e207631_751378d3",
+        "filename": "src/com/android/settings/development/Enable16kPagesWarningDialog.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-01-09T22:24:55Z",
+      "side": 1,
+      "message": "You\u0027re calling interface methods. Just keep reference to the interface instead of holding onto the implementation",
       "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
