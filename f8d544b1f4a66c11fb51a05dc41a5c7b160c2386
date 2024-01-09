@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a37010de_5d0af4fb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004882
+      },
+      "writtenOn": "2024-01-09T16:55:31Z",
+      "side": 1,
+      "message": "@cantol@google.com @chiujason@google.com @patb@google.com\nThanks for rebasing/merging the frameworks base patch. Is it possible to get some +2s on this one too?  Thanks!",
+      "revId": "f8d544b1f4a66c11fb51a05dc41a5c7b160c2386",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
