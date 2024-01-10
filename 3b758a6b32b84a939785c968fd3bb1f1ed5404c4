@@ -41,6 +41,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6be15590_402ff4d3",
+        "filename": "src/com/android/settings/development/Enable16kPagesWarningDialog.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T23:25:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "15ca824b_97507904",
+      "range": {
+        "startLine": 44,
+        "startChar": 21,
+        "endLine": 44,
+        "endChar": 55
+      },
+      "revId": "3b758a6b32b84a939785c968fd3bb1f1ed5404c4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2fe66054_a7e67ac6",
@@ -54,6 +78,30 @@
       "writtenOn": "2024-01-10T23:02:38Z",
       "side": 1,
       "message": "Overall, this test doesn\u0027t seem to exercise the main entry point of the controller: when the preference changes and instead exercises much of the internal methods instead. Please try to exercise the same method surface that the external \"client\" (in this case the Settings system) would interact with.",
+      "range": {
+        "startLine": 49,
+        "startChar": 13,
+        "endLine": 49,
+        "endChar": 51
+      },
+      "revId": "3b758a6b32b84a939785c968fd3bb1f1ed5404c4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6a5e5e1d_1e912732",
+        "filename": "tests/robotests/src/com/android/settings/development/Enable16kPagesPreferenceControllerTest.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T23:25:49Z",
+      "side": 1,
+      "message": "Will follow up for this. We are still working on user space behavior after kernel switch happens. It will determine whether we have access to /data from previous mode. I will update the tests accordingly once those changes are in.",
+      "parentUuid": "2fe66054_a7e67ac6",
       "range": {
         "startLine": 49,
         "startChar": 13,
