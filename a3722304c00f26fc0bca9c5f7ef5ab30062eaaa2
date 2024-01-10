@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53765450_0834f7a6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2024-01-10T07:52:22Z",
+      "side": 1,
+      "message": "Please add a bug id, here is example.\nFixes: \u003cYour bug id\u003e\n\nBTW, Also provide the before/after screenshots.",
+      "revId": "a3722304c00f26fc0bca9c5f7ef5ab30062eaaa2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
