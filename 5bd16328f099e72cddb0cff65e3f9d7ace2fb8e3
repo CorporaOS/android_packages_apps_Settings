@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "69f313e3_4f3500f8",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T23:26:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5bf79d74_33cc645e",
+      "range": {
+        "startLine": 244,
+        "startChar": 17,
+        "endLine": 244,
+        "endChar": 32
+      },
+      "revId": "5bd16328f099e72cddb0cff65e3f9d7ace2fb8e3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0e4bd225_ed493ca2",
@@ -85,6 +109,30 @@
       "side": 1,
       "message": "Time",
       "parentUuid": "0e4bd225_ed493ca2",
+      "range": {
+        "startLine": 284,
+        "startChar": 20,
+        "endLine": 284,
+        "endChar": 34
+      },
+      "revId": "5bd16328f099e72cddb0cff65e3f9d7ace2fb8e3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e8d1ebd_1baa6a98",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T23:26:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a58c603_0be483f5",
       "range": {
         "startLine": 284,
         "startChar": 20,
