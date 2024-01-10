@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f8c0f959_acb8dfbe",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T19:16:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e755368d_a8d1b414",
+      "range": {
+        "startLine": 76,
+        "startChar": 4,
+        "endLine": 77,
+        "endChar": 82
+      },
+      "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "34110e1a_7eb63bc0",
@@ -37,6 +61,24 @@
       "writtenOn": "2024-01-09T22:35:13Z",
       "side": 1,
       "message": "```suggestion\n    private final ListeningExecutorService mExecutorService \u003d\n```",
+      "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2728d2e_805dd001",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T19:16:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "34110e1a_7eb63bc0",
       "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -64,6 +106,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d49a9388_44442454",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T19:16:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8385ffb1_f833410b",
+      "range": {
+        "startLine": 135,
+        "startChar": 16,
+        "endLine": 135,
+        "endChar": 41
+      },
+      "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4dcc9b19_5f25f569",
@@ -81,6 +147,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "36fb95cd_744bea86",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T19:16:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4dcc9b19_5f25f569",
+      "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ebd657d1_e2a2e326",
@@ -94,6 +178,24 @@
       "writtenOn": "2024-01-09T22:35:13Z",
       "side": 1,
       "message": "`getActivity()` is nullable - please check that the Activity exists before using (if the fragment gets detached before this call is made, it will trigger an NPE)",
+      "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f221d61_00047a09",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T19:16:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ebd657d1_e2a2e326",
       "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -121,6 +223,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7a39f0c5_fc2d883e",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T19:16:53Z",
+      "side": 1,
+      "message": "It is not possible to change from settings. There will be non-cancelable progress dialog and after that device will be restarted. We are using UpdateEngineStable which doesn\u0027t provide cancel API. If anyhow user manages to change it before callback, second update is expected to fail as update engine won\u0027t apply it because of the pending update which will be waiting for reboot.",
+      "parentUuid": "196cc5c6_8b163b8a",
+      "range": {
+        "startLine": 279,
+        "startChar": 24,
+        "endLine": 279,
+        "endChar": 34
+      },
+      "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c31b5f47_21864219",
@@ -134,6 +260,30 @@
       "writtenOn": "2024-01-10T01:38:09Z",
       "side": 1,
       "message": "Can the test verify that `applyUpdateFile()` does what is expected. For example, given that `mController` is instrumented with `spy()`, could we verify that applyPayload() is called with the expected parameters. Ideally we should get as close as we can to verifying that the expected call was made to update engine.",
+      "range": {
+        "startLine": 81,
+        "startChar": 8,
+        "endLine": 81,
+        "endChar": 48
+      },
+      "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0db7e1da_6bf053a3",
+        "filename": "tests/robotests/src/com/android/settings/development/Enable16kPagesPreferenceControllerTest.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T19:16:53Z",
+      "side": 1,
+      "message": "It makes sense to have parameter check. I have placed a todo for now to modify this test. I will follow up with a cl. I plan to use update_device.py with OTA which is being used here  and record offset, headers, length. Those can be checked against the parameters which are being parsed and passed to UpdateEngine.",
+      "parentUuid": "c31b5f47_21864219",
       "range": {
         "startLine": 81,
         "startChar": 8,

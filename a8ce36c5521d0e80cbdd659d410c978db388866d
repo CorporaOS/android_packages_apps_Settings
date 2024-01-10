@@ -34,6 +34,24 @@
       "parentUuid": "b0be2aed_184ffcab",
       "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f3f656aa_23110df2",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T19:16:53Z",
+      "side": 0,
+      "message": "This was to make each changes reviewable and small. This was moved inside of onPayloadApplicationComplete - callback from update engine since ue integration was added in this cl. I am keeping these cls in same topic, so it should be treated as atomic change and it should be reverted as atomic change. removed from parent cl.",
+      "parentUuid": "b0be2aed_184ffcab",
+      "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
