@@ -16,6 +16,24 @@
       "message": "Why did we add this code in the previous CL if we\u0027re just going to remove it in this follow-up? If this were to get partially reverted, it would let a user set this value improperly (it would specify that the config is enabled for 16K but 16K isn\u0027t yet supported, so when they try to come back to this later after support is added it will be in a mixed state).",
       "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93657987_a6f267b9",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2024-01-10T01:38:09Z",
+      "side": 0,
+      "message": "+1",
+      "parentUuid": "b0be2aed_184ffcab",
+      "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

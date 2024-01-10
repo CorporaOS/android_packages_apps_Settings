@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e755368d_a8d1b414",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2024-01-10T01:38:09Z",
+      "side": 1,
+      "message": "nit: Use captial to be consistent with the rest of the name (and to be consistent with `ENABLE_4K_PAGE_SIZE` and `ENABLE_16K_PAGE_SIZE`.\n\n```suggestion\n    private static final String OTA_16K_PATH \u003d \"/system/boot_otas/boot_ota_16k.zip\";\n    private static final String OTA_4K_PATH \u003d \"/system/boot_otas/boot_ota_4k.zip\";\n```",
+      "range": {
+        "startLine": 76,
+        "startChar": 4,
+        "endLine": 77,
+        "endChar": 82
+      },
+      "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "34110e1a_7eb63bc0",
         "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
         "patchSetId": 8
@@ -14,6 +37,29 @@
       "writtenOn": "2024-01-09T22:35:13Z",
       "side": 1,
       "message": "```suggestion\n    private final ListeningExecutorService mExecutorService \u003d\n```",
+      "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8385ffb1_f833410b",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2024-01-10T01:38:09Z",
+      "side": 1,
+      "message": "Please label with `@Override` for consistency.",
+      "range": {
+        "startLine": 135,
+        "startChar": 16,
+        "endLine": 135,
+        "endChar": 41
+      },
       "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -48,6 +94,52 @@
       "writtenOn": "2024-01-09T22:35:13Z",
       "side": 1,
       "message": "`getActivity()` is nullable - please check that the Activity exists before using (if the fragment gets detached before this call is made, it will trigger an NPE)",
+      "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "196cc5c6_8b163b8a",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2024-01-10T01:38:09Z",
+      "side": 1,
+      "message": "Is it possible for `mEnable16k` to change in between when `installUpdate()` is called and when this `onPayloadApplicationComplete()` callback is invoked?\n\nIn between when `mEnable16k` is set and when it is used here is a dialog being shown and an OTA package being applied.\n\nAn alternative to consider would be to pass the intended value of the setting as a parameter so that each invocation chain started by an `onPreferenceChange()` is consistent in whether it is trying to enable 16k or revert back to 4k.\n\nThe same applies for the dialog callbacks. They assume that the value of `mEnable16k` must be the same as the value that was provided to the dialog upon its creation.",
+      "range": {
+        "startLine": 279,
+        "startChar": 24,
+        "endLine": 279,
+        "endChar": 34
+      },
+      "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c31b5f47_21864219",
+        "filename": "tests/robotests/src/com/android/settings/development/Enable16kPagesPreferenceControllerTest.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2024-01-10T01:38:09Z",
+      "side": 1,
+      "message": "Can the test verify that `applyUpdateFile()` does what is expected. For example, given that `mController` is instrumented with `spy()`, could we verify that applyPayload() is called with the expected parameters. Ideally we should get as close as we can to verifying that the expected call was made to update engine.",
+      "range": {
+        "startLine": 81,
+        "startChar": 8,
+        "endLine": 81,
+        "endChar": 48
+      },
       "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
