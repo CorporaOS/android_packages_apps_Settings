@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0e4bd225_ed493ca2",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2024-01-10T22:35:21Z",
+      "side": 1,
+      "message": "Should the progress bar be updated based on the update engine callback?",
+      "range": {
+        "startLine": 284,
+        "startChar": 20,
+        "endLine": 284,
+        "endChar": 34
+      },
+      "revId": "5bd16328f099e72cddb0cff65e3f9d7ace2fb8e3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
