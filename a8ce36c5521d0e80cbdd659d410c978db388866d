@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "05140866_a05557df",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T19:15:50Z",
+      "side": 1,
+      "message": "Addressed all except one..mProgressDialog has been added in different CL. Not sure if it is showing up here because same topic. I find adding @NonNull to each parameter redundant though.",
+      "parentUuid": "ff0c9e74_3c4dc9cc",
+      "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "be6c09a7_3696dcc7",
@@ -31,6 +49,24 @@
       "writtenOn": "2024-01-09T22:24:55Z",
       "side": 1,
       "message": "revert",
+      "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa4249e4_c44de403",
+        "filename": "OWNERS",
+        "patchSetId": 9
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T19:15:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "be6c09a7_3696dcc7",
       "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -52,6 +88,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb919ebd_0ef0d173",
+        "filename": "src/com/android/settings/development/DevelopmentSettingsDashboardFragment.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 797,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T19:15:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6f18c9ce_a68ed22e",
+      "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "59338cc6_fc39b6fa",
@@ -65,6 +119,30 @@
       "writtenOn": "2024-01-09T01:38:57Z",
       "side": 1,
       "message": "what makes sure this property is consistent with \u0027getpagesize() \u003d\u003d 2**16\u0027?",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 65
+      },
+      "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa2c4d6d_14dde315",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T19:15:50Z",
+      "side": 1,
+      "message": "This is enabled by product specific option here: https://android-review.git.corp.google.com/q/topic:%2216k_sys_prop%22. Right now, it will be independently set that of page size. This makes sure that we enable dev option on particular device only irrespective of page size.",
+      "parentUuid": "59338cc6_fc39b6fa",
       "range": {
         "startLine": 36,
         "startChar": 0,
@@ -98,6 +176,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "752f0b34_0527579b",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T19:15:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f2047cf0_faa6bde7",
+      "range": {
+        "startLine": 87,
+        "startChar": 8,
+        "endLine": 91,
+        "endChar": 59
+      },
+      "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ab8d032a_0d817910",
@@ -115,6 +217,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e05311af_aec4dd39",
+        "filename": "src/com/android/settings/development/Enable16kPagesWarningDialog.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T19:15:50Z",
+      "side": 1,
+      "message": "It is being set from static context in show method",
+      "parentUuid": "ab8d032a_0d817910",
+      "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2e207631_751378d3",
@@ -128,6 +248,24 @@
       "writtenOn": "2024-01-09T22:24:55Z",
       "side": 1,
       "message": "You\u0027re calling interface methods. Just keep reference to the interface instead of holding onto the implementation",
+      "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6416216_c12abe5e",
+        "filename": "src/com/android/settings/development/Enable16kPagesWarningDialog.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-10T19:15:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e207631_751378d3",
       "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
