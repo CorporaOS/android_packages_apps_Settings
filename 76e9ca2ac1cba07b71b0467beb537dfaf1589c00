@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e468514_f024ed37",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2024-01-10T23:02:38Z",
+      "side": 1,
+      "message": "nit: Move (or remove) this TODO as the progress bar is only shown after the dialog is confirmed, not when it is shown.\n\nhttps://android-review.git.corp.google.com/c/platform/packages/apps/Settings/+/2766345",
+      "range": {
+        "startLine": 108,
+        "startChar": 8,
+        "endLine": 108,
+        "endChar": 52
+      },
+      "revId": "76e9ca2ac1cba07b71b0467beb537dfaf1589c00",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

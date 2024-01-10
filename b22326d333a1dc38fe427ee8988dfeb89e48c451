@@ -247,6 +247,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f805338b_45d21938",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2024-01-10T23:02:38Z",
+      "side": 1,
+      "message": "I see. Even if the update engine rejects the call, `mEnable16k` would still be modified, so the first call will write the wrong value to settings right? I\u0027ll defer to you as to whether the dialog will be sufficient to ensure that `mEnable16k` can\u0027t be modified during this process (eg. onPreferenceChange can\u0027t be invoked by any other means like `adb` until the current invocation finishes).",
+      "parentUuid": "7a39f0c5_fc2d883e",
+      "range": {
+        "startLine": 279,
+        "startChar": 24,
+        "endLine": 279,
+        "endChar": 34
+      },
+      "revId": "b22326d333a1dc38fe427ee8988dfeb89e48c451",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c31b5f47_21864219",
