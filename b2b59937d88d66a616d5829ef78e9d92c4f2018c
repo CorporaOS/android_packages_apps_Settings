@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "547a4662_6bf81ada",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-01-11T00:31:01Z",
+      "side": 1,
+      "message": "Addressing the static reference to the host is my last concern, otherwise looks fine",
+      "revId": "b2b59937d88d66a616d5829ef78e9d92c4f2018c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6996b251_bc2ede30",
+        "filename": "src/com/android/settings/development/Enable16kPagesWarningDialog.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-01-11T00:31:01Z",
+      "side": 1,
+      "message": "Relying on a static reference here is problematic. In lieu of a deeper change to better handle callbacks across lifecycle changes, can we instead have the static method `show` set this value onto the Dialog, as well as handle null checks for it.\n\n```\nprivate Enable16kbPagesDialogHost mHost \u003d null;\n\nprivate void setHost(@NonNull Enable16kbPagesDialogHost host) {\n    mHost \u003d host;\n}\n\nprivate static void show(@NonNull Fragment hostFragment, @NonNull Enable16kbPagesDialogHost host) {\n    ...\n    Fragment existingFragment \u003d manager.findFragmentByTag(TAG);\n    if (existingFragment \u003d\u003d null) {\n        existingFragment \u003d new Enable16kPagesWarningDialog();\n        ...\n    }\n    if (existingFragment instanceof Enable16kPagesWarningDialog) {\n        existingFragment.setHost(host);\n    }\n}\n```",
+      "revId": "b2b59937d88d66a616d5829ef78e9d92c4f2018c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
