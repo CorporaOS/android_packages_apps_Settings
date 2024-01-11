@@ -153,6 +153,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "15e2bfc2_18a1ac98",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2024-01-11T19:23:51Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "aa2c4d6d_14dde315",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 65
+      },
+      "revId": "a8ce36c5521d0e80cbdd659d410c978db388866d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f2047cf0_faa6bde7",
