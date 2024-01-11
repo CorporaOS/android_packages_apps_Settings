@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa09dde5_fb86b6c0",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-01-11T17:39:13Z",
+      "side": 1,
+      "message": "```suggestion\n            @NonNull Context context, @Nullable DevelopmentSettingsDashboardFragment fragment) {\n```\n\nThis fragment will be null in some circumstances",
+      "revId": "48252f5d683cedf68a676444da4c435366708fc8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
