@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d439e7e_019aaf07",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-11T02:42:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "547a4662_6bf81ada",
+      "revId": "b2b59937d88d66a616d5829ef78e9d92c4f2018c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6996b251_bc2ede30",
@@ -49,6 +67,24 @@
       "side": 1,
       "message": "+1. Typically dialog-host interactions are handled by casting the context object provided to `onAttach()` as the host (see [documentation](https://developer.android.com/develop/ui/views/components/dialogs#PassingEvents)), but in this case, the host and the context are not the same, so Chris\u0027s solution might be a good compromise.",
       "parentUuid": "6996b251_bc2ede30",
+      "revId": "b2b59937d88d66a616d5829ef78e9d92c4f2018c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1206744f_a19749f9",
+        "filename": "src/com/android/settings/development/Enable16kPagesWarningDialog.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-11T02:42:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "38761444_34e865a4",
       "revId": "b2b59937d88d66a616d5829ef78e9d92c4f2018c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
