@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "718cd1c7_56eacdfb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-12T19:38:18Z",
+      "side": 1,
+      "message": "Bypassing presubmit due to unrelated flakes : b/317975138.\nBuild warnings are not really actionable here : mProgressDialog is not the part of this cl..seems false positive",
+      "revId": "8996ca9768156731b689cc300a473f0b0b5348f7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
