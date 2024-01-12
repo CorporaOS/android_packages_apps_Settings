@@ -33,6 +33,46 @@
       "message": "Bypass due to b/317975138",
       "revId": "905b78e4a5242320efffa013fb1e1605cfd7f920",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c9bbe6bf_4a9e5f26",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 17
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2024-01-12T21:43:07Z",
+      "side": 1,
+      "message": "Is there any user-visible message to let them know that the operation failed because there\u0027s an ongoing system update?",
+      "range": {
+        "startLine": 184,
+        "startChar": 12,
+        "endLine": 184,
+        "endChar": 69
+      },
+      "revId": "905b78e4a5242320efffa013fb1e1605cfd7f920",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "38a67a60_e2ac22ab",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 17
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 1783615
+      },
+      "writtenOn": "2024-01-12T21:43:07Z",
+      "side": 1,
+      "message": "I think the system update info should be updated prior to applying the payload so that other services know that there is a \"system update\" in progress. If this code relies on that API to know when to avoid applying a package because of an ongoing update, I think it is obligated to do the same when it is applying a package.",
+      "revId": "905b78e4a5242320efffa013fb1e1605cfd7f920",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
