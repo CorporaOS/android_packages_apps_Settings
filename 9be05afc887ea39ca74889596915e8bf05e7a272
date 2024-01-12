@@ -16,6 +16,23 @@
       "message": "Bypass due to b/317975138",
       "revId": "9be05afc887ea39ca74889596915e8bf05e7a272",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e19d2344_2ffd72dd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-12T19:39:27Z",
+      "side": 1,
+      "message": "Bypass due to b/317975138",
+      "revId": "9be05afc887ea39ca74889596915e8bf05e7a272",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
