@@ -23,6 +23,7 @@ import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.print.PrintSettingPreferenceController;
 import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.threadnetwork.ThreadNetworkPreferenceController;
 import com.android.settings.uwb.UwbPreferenceController;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
@@ -72,6 +73,17 @@ public class AdvancedConnectedDeviceDashboardFragment extends DashboardFragment 
         if (uwbPreferenceController != null && uwbPreferenceController.isUwbSupportedOnDevice()) {
             if (getSettingsLifecycle() != null) {
                 getSettingsLifecycle().addObserver(uwbPreferenceController);
+            }
+        }
+
+        ThreadNetworkPreferenceController threadPreferenceController =
+                use(ThreadNetworkPreferenceController.class);
+        // We only need the observer listen to the broadcast in the background for refreshing
+        // UI if the device supports Thread.
+        if (threadPreferenceController != null
+                && threadPreferenceController.isThreadSupportedOnDevice()) {
+            if (getSettingsLifecycle() != null) {
+                getSettingsLifecycle().addObserver(threadPreferenceController);
             }
         }
     }
