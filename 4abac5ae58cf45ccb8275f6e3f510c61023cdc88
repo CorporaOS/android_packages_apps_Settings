@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e4f82c93_94bd098a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1976987
+      },
+      "writtenOn": "2024-01-17T17:42:43Z",
+      "side": 1,
+      "message": "LGTM, thanks Aman.",
+      "revId": "4abac5ae58cf45ccb8275f6e3f510c61023cdc88",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
