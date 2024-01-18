@@ -19,6 +19,9 @@ package com.android.settings.vpn2;
 import static android.app.AppOpsManager.OP_ACTIVATE_PLATFORM_VPN;
 import static android.app.AppOpsManager.OP_ACTIVATE_VPN;
 
+import static com.android.server.connectivity.Flags.FLAG_REPLACE_VPN_PROFILE_STORE;
+import static com.android.server.connectivity.Flags.replaceVpnProfileStore;
+
 import android.annotation.UiThread;
 import android.annotation.WorkerThread;
 import android.app.Activity;
@@ -136,6 +139,15 @@ public class VpnSettings extends RestrictedDashboardFragment implements
         setHasOptionsMenu(!mUnavailable);
 
         mPreferenceScreen = getPreferenceScreen();
+
+        if (replaceVpnProfileStore()) {
+            // Only migrate the vpn profiles once, use the feature flag as the flag to indicate if
+            // the profiles have been imported.
+            if (mVpnManager.getFromVpnProfileStore(FLAG_REPLACE_VPN_PROFILE_STORE) == null) {
+                migrateLegacyStore(mVpnManager);
+                mVpnManager.putIntoVpnProfileStore(FLAG_REPLACE_VPN_PROFILE_STORE, new byte[0]);
+            }
+        }
     }
 
     @Override
@@ -255,7 +267,7 @@ public class VpnSettings extends RestrictedDashboardFragment implements
         final Context context = activity.getApplicationContext();
 
         // Run heavy RPCs before switching to UI thread
-        final List<VpnProfile> vpnProfiles = loadVpnProfiles();
+        final List<VpnProfile> vpnProfiles = loadVpnProfiles(mVpnManager);
         final List<AppVpnInfo> vpnApps = getVpnApps(context, /* includeProfiles */ true,
                 mFeatureProvider);
 
@@ -263,7 +275,7 @@ public class VpnSettings extends RestrictedDashboardFragment implements
         final Set<AppVpnInfo> connectedAppVpns = getConnectedAppVpns();
 
         final Set<AppVpnInfo> alwaysOnAppVpnInfos = getAlwaysOnAppVpnInfos();
-        final String lockdownVpnKey = VpnUtils.getLockdownVpn();
+        final String lockdownVpnKey = VpnUtils.getLockdownVpn(context);
 
         // Refresh list of VPNs
         activity.runOnUiThread(new UpdatePreferences(this)
@@ -682,17 +694,42 @@ public class VpnSettings extends RestrictedDashboardFragment implements
                 && TextUtils.equals(packageName, featureProvider.getAdvancedVpnPackageName());
     }
 
-    private static List<VpnProfile> loadVpnProfiles() {
+    private static List<VpnProfile> loadVpnProfiles(VpnManager vpnManager) {
         final ArrayList<VpnProfile> result = Lists.newArrayList();
 
-        for (String key : LegacyVpnProfileStore.list(Credentials.VPN)) {
-            final VpnProfile profile = VpnProfile.decode(key,
-                    LegacyVpnProfileStore.get(Credentials.VPN + key));
+        final String[] vpnKeys;
+        if (replaceVpnProfileStore()) {
+            vpnKeys = vpnManager.listFromVpnProfileStore(Credentials.VPN);
+        } else {
+            vpnKeys = LegacyVpnProfileStore.list(Credentials.VPN);
+        }
+
+        for (String key : vpnKeys) {
+            final VpnProfile profile;
+            if (replaceVpnProfileStore()) {
+                profile = VpnProfile.decode(
+                        key, vpnManager.getFromVpnProfileStore(Credentials.VPN + key));
+            } else {
+                profile = VpnProfile.decode(key, LegacyVpnProfileStore.get(Credentials.VPN + key));
+            }
             if (profile != null) {
                 result.add(profile);
             }
         }
         return result;
+    }
+
+    // Import profiles from legacy keystore
+    private void migrateLegacyStore(VpnManager vpnManager) {
+        final List<String> prefixes = List.of(Credentials.VPN, Credentials.LOCKDOWN_VPN);
+        for (String prefix : prefixes) {
+            for (String key : LegacyVpnProfileStore.list(prefix)) {
+                final String name = prefix + key;
+                if (!vpnManager.putIntoVpnProfileStore(name, LegacyVpnProfileStore.get(name))) {
+                    Log.e(LOG_TAG, "Failed to import vpn profile " + name);
+                }
+            }
+        }
     }
 
     @VisibleForTesting
