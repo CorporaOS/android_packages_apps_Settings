@@ -20,44 +20,45 @@ import android.net.VpnManager;
 import android.os.RemoteException;
 import android.provider.Settings;
 import android.security.Credentials;
-import android.security.LegacyVpnProfileStore;
 
 import com.android.internal.net.LegacyVpnInfo;
 import com.android.internal.net.VpnConfig;
 
 /**
  * Utility functions for vpn.
- *
- * LegacyVpnProfileStore methods should only be called in system user
  */
 public class VpnUtils {
 
     private static final String TAG = "VpnUtils";
 
-    public static String getLockdownVpn() {
-        final byte[] value = LegacyVpnProfileStore.get(Credentials.LOCKDOWN_VPN);
+    /** Get the lockdown vpn key stored in the database, set by setLockdownVpn */
+    public static String getLockdownVpn(Context context) {
+        final byte[] value = getVpnManager(context).profileStoreGet(Credentials.LOCKDOWN_VPN);
         return value == null ? null : new String(value);
     }
 
     public static void clearLockdownVpn(Context context) {
-        LegacyVpnProfileStore.remove(Credentials.LOCKDOWN_VPN);
+        getVpnManager(context).profileStoreRemove(Credentials.LOCKDOWN_VPN);
         // Always notify VpnManager after keystore update
         getVpnManager(context).updateLockdownVpn();
     }
 
     public static void setLockdownVpn(Context context, String lockdownKey) {
-        LegacyVpnProfileStore.put(Credentials.LOCKDOWN_VPN, lockdownKey.getBytes());
+        getVpnManager(context).profileStorePut(Credentials.LOCKDOWN_VPN, lockdownKey.getBytes());
         // Always notify VpnManager after keystore update
         getVpnManager(context).updateLockdownVpn();
     }
 
-    public static boolean isVpnLockdown(String key) {
-        return key.equals(getLockdownVpn());
+    /**
+     * Returns whether the given key is the currently set lockdown vpn key, set by setLockdownVpn.
+     */
+    public static boolean isVpnLockdown(Context context, String key) {
+        return key.equals(getLockdownVpn(context));
     }
 
     public static boolean isAnyLockdownActive(Context context) {
         final int userId = context.getUserId();
-        if (getLockdownVpn() != null) {
+        if (getLockdownVpn(context) != null) {
             return true;
         }
         return getVpnManager(context).getAlwaysOnVpnPackageForUser(userId) != null
