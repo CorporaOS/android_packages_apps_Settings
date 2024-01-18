@@ -18,25 +18,80 @@ package com.android.settings.vpn2;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.verify;
 
+import android.content.Context;
 import android.net.VpnManager;
+import android.security.Credentials;
 
+import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.android.server.connectivity.FakeFeatureFlagsImpl;
+import com.android.server.connectivity.Flags;
+
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 @RunWith(AndroidJUnit4.class)
 public final class VpnUtilsTest {
+    private static final String TEST_VPN_PKG = "com.example.vpn";
+
+    private Context mContext;
+    @Mock
+    private VpnManager mVpnManager;
+    private FakeFeatureFlagsImpl mFakeFlagsImpl;
+
+    @Before
+    public void setUp() {
+        MockitoAnnotations.initMocks(this);
+        mContext = spy(ApplicationProvider.getApplicationContext());
+        when(mContext.getSystemService(VpnManager.class)).thenReturn(mVpnManager);
+
+        mFakeFlagsImpl = new FakeFeatureFlagsImpl();
+        mFakeFlagsImpl.setFlag(Flags.FLAG_REPLACE_VPN_PROFILE_STORE, true);
+    }
+
     @Test
     public void testIsAlwaysOnVpnSet() {
         final VpnManager vm = mock(VpnManager.class);
-        when(vm.getAlwaysOnVpnPackageForUser(0)).thenReturn("com.example.vpn");
+        when(vm.getAlwaysOnVpnPackageForUser(0)).thenReturn(TEST_VPN_PKG);
         assertThat(VpnUtils.isAlwaysOnVpnSet(vm, 0)).isTrue();
 
         when(vm.getAlwaysOnVpnPackageForUser(0)).thenReturn(null);
         assertThat(VpnUtils.isAlwaysOnVpnSet(vm, 0)).isFalse();
     }
+
+    @Test
+    public void testGetLockdownVpn() {
+        final String lockdownKey = TEST_VPN_PKG;
+        final byte[] blob = lockdownKey.getBytes();
+
+        doReturn(blob).when(mVpnManager).getFromVpnProfileStore(Credentials.LOCKDOWN_VPN);
+        assertEquals(lockdownKey, new String(VpnUtils.getLockdownVpn(mContext)));
+    }
+
+    @Test
+    public void testClearLockdownVpn() {
+        VpnUtils.clearLockdownVpn(mContext);
+        verify(mVpnManager).removeFromVpnProfileStore(Credentials.LOCKDOWN_VPN);
+    }
+
+    @Test
+    public void testSetLockdownVpn() {
+        final String lockdownKey = TEST_VPN_PKG;
+        final byte[] blob = lockdownKey.getBytes();
+
+        VpnUtils.setLockdownVpn(mContext, lockdownKey);
+        verify(mVpnManager).putIntoVpnProfileStore(Credentials.LOCKDOWN_VPN, blob);
+    }
+
 }

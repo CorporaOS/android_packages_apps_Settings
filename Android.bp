@@ -106,6 +106,7 @@ android_library {
         "settings-logtags",
         "settings-telephony-protos-lite",
         "statslog-settings",
+        "connectivity_flags_lib",
     ],
 
     plugins: ["androidx.room_room-compiler-plugin"],
