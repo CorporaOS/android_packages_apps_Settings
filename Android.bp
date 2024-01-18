@@ -80,6 +80,7 @@ android_library {
         "android.hardware.dumpstate-V1.1-java",
         "android.view.accessibility.flags-aconfig-java",
         "com_android_server_accessibility_flags_lib",
+        "connectivity_flags_lib",
         "net-utils-framework-common",
         "notification_flags_lib",
         "securebox",

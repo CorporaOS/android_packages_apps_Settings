@@ -149,7 +149,7 @@ class ConfigDialog extends AlertDialog implements TextWatcher,
         loadCertificates(mIpsecServerCert, androidKeystoreAliasLoader.getKeyCertAliases(),
                 R.string.vpn_no_server_cert, mProfile.ipsecServerCert);
         mSaveLogin.setChecked(mProfile.saveLogin);
-        mAlwaysOnVpn.setChecked(mProfile.key.equals(VpnUtils.getLockdownVpn()));
+        mAlwaysOnVpn.setChecked(mProfile.key.equals(VpnUtils.getLockdownVpn(context)));
         mPassword.setTextAppearance(android.R.style.TextAppearance_DeviceDefault_Medium);
 
         // Hide lockdown VPN on devices that require IMS authentication
