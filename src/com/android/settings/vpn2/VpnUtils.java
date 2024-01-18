@@ -20,44 +20,50 @@ import android.net.VpnManager;
 import android.os.RemoteException;
 import android.provider.Settings;
 import android.security.Credentials;
-import android.security.LegacyVpnProfileStore;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.android.internal.net.LegacyVpnInfo;
 import com.android.internal.net.VpnConfig;
 
 /**
  * Utility functions for vpn.
- *
- * LegacyVpnProfileStore methods should only be called in system user
  */
 public class VpnUtils {
 
     private static final String TAG = "VpnUtils";
 
-    public static String getLockdownVpn() {
-        final byte[] value = LegacyVpnProfileStore.get(Credentials.LOCKDOWN_VPN);
+    /** Get the lockdown vpn key stored in the database, set by setLockdownVpn */
+    public static @Nullable String getLockdownVpn(@NonNull Context context) {
+        final byte[] value = getVpnManager(context).profileStoreGet(Credentials.LOCKDOWN_VPN);
         return value == null ? null : new String(value);
     }
 
-    public static void clearLockdownVpn(Context context) {
-        LegacyVpnProfileStore.remove(Credentials.LOCKDOWN_VPN);
+    /** Clear the lockdown vpn key. */
+    public static void clearLockdownVpn(@NonNull Context context) {
+        getVpnManager(context).profileStoreRemove(Credentials.LOCKDOWN_VPN);
         // Always notify VpnManager after keystore update
         getVpnManager(context).updateLockdownVpn();
     }
 
-    public static void setLockdownVpn(Context context, String lockdownKey) {
-        LegacyVpnProfileStore.put(Credentials.LOCKDOWN_VPN, lockdownKey.getBytes());
+    /** Set the lockdown vpn key. */
+    public static void setLockdownVpn(@NonNull Context context, @NonNull String lockdownKey) {
+        getVpnManager(context).profileStorePut(Credentials.LOCKDOWN_VPN, lockdownKey.getBytes());
         // Always notify VpnManager after keystore update
         getVpnManager(context).updateLockdownVpn();
     }
 
-    public static boolean isVpnLockdown(String key) {
-        return key.equals(getLockdownVpn());
+    /**
+     * Returns whether the given key is the currently set lockdown vpn key, set by setLockdownVpn.
+     */
+    public static boolean isVpnLockdown(@NonNull Context context, @NonNull String key) {
+        return key.equals(getLockdownVpn(context));
     }
 
     public static boolean isAnyLockdownActive(Context context) {
         final int userId = context.getUserId();
-        if (getLockdownVpn() != null) {
+        if (getLockdownVpn(context) != null) {
             return true;
         }
         return getVpnManager(context).getAlwaysOnVpnPackageForUser(userId) != null
