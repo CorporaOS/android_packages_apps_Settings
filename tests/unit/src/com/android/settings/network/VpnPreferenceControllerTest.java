@@ -21,6 +21,7 @@ import static androidx.lifecycle.Lifecycle.Event.ON_RESUME;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.spy;
@@ -33,11 +34,12 @@ import android.net.NetworkRequest;
 import android.net.VpnManager;
 import android.os.Looper;
 import android.os.UserHandle;
+import android.os.UserManager;
 import android.provider.Settings;
 import android.provider.SettingsSlicesContract;
+import android.security.Credentials;
 
 import androidx.lifecycle.LifecycleOwner;
-import androidx.preference.Preference;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 import androidx.test.annotation.UiThreadTest;
@@ -45,6 +47,10 @@ import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.internal.net.VpnConfig;
+import com.android.internal.net.VpnProfile;
+import com.android.server.connectivity.FakeFeatureFlagsImpl;
+import com.android.server.connectivity.Flags;
+import com.android.settings.vpn2.VpnInfoPreference;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 
 import org.junit.Before;
@@ -65,10 +71,13 @@ public class VpnPreferenceControllerTest {
     private VpnManager mVpnManager;
     private PreferenceScreen mScreen;
     @Mock
-    private Preference mPreference;
+    private VpnInfoPreference mPreference;
     private VpnPreferenceController mController;
     private Lifecycle mLifecycle;
     private LifecycleOwner mLifecycleOwner;
+    @Mock
+    private UserManager mUserManager;
+    private FakeFeatureFlagsImpl mFakeFlagsImpl;
 
     @Before
     @UiThreadTest
@@ -91,6 +100,9 @@ public class VpnPreferenceControllerTest {
         mLifecycleOwner = () -> mLifecycle;
         mLifecycle = new Lifecycle(mLifecycleOwner);
         mLifecycle.addObserver(mController);
+
+        mFakeFlagsImpl = new FakeFeatureFlagsImpl();
+        mFakeFlagsImpl.setFlag(Flags.FLAG_REPLACE_VPN_PROFILE_STORE, true);
     }
 
     @Test
@@ -131,5 +143,27 @@ public class VpnPreferenceControllerTest {
         final String summary = controller.getNameForVpnConfig(config, UserHandle.CURRENT);
 
         assertThat(summary).isEqualTo("Connected");
+    }
+
+    @Test
+    public void testGetInsecureVpnSummaryOverride() {
+        final String[] vpnProfileKeys = {"abc", "123"};
+        final String[] vpnProfileNames = {Credentials.VPN + "abc", Credentials.VPN + "123"};
+
+        for (int i = 0; i < vpnProfileKeys.length; i++) {
+            final VpnProfile vpnProfile = new VpnProfile(vpnProfileKeys[i]);
+            vpnProfile.type = VpnProfile.TYPE_IKEV2_IPSEC_USER_PASS;
+            final byte[] encodedProfile = vpnProfile.encode();
+            doReturn(encodedProfile).when(mVpnManager).getFromVpnProfileStore(vpnProfileNames[i]);
+        }
+
+        doReturn(vpnProfileKeys).when(mVpnManager).listFromVpnProfileStore(Credentials.VPN);
+
+        mController.displayPreference(mScreen);
+        mController.getInsecureVpnSummaryOverride(mUserManager, mVpnManager);
+        verify(mController).getInsecureVpnCount(mVpnManager, vpnProfileKeys);
+        verify(mPreference).setInsecureVpn(false);
+
+        assertEquals(0, mController.getInsecureVpnCount(mVpnManager, vpnProfileKeys));
     }
 }
