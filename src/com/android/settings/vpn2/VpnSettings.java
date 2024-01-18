@@ -42,7 +42,6 @@ import android.os.Message;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.security.Credentials;
-import android.security.LegacyVpnProfileStore;
 import android.text.TextUtils;
 import android.util.ArrayMap;
 import android.util.ArraySet;
@@ -263,7 +262,7 @@ public class VpnSettings extends RestrictedDashboardFragment implements
         final Set<AppVpnInfo> connectedAppVpns = getConnectedAppVpns();
 
         final Set<AppVpnInfo> alwaysOnAppVpnInfos = getAlwaysOnAppVpnInfos();
-        final String lockdownVpnKey = VpnUtils.getLockdownVpn();
+        final String lockdownVpnKey = VpnUtils.getLockdownVpn(context);
 
         // Refresh list of VPNs
         activity.runOnUiThread(new UpdatePreferences(this)
@@ -682,12 +681,12 @@ public class VpnSettings extends RestrictedDashboardFragment implements
                 && TextUtils.equals(packageName, featureProvider.getAdvancedVpnPackageName());
     }
 
-    private static List<VpnProfile> loadVpnProfiles() {
+    private List<VpnProfile> loadVpnProfiles() {
         final ArrayList<VpnProfile> result = Lists.newArrayList();
 
-        for (String key : LegacyVpnProfileStore.list(Credentials.VPN)) {
+        for (String key : mVpnManager.listVpnProfile(Credentials.VPN)) {
             final VpnProfile profile = VpnProfile.decode(key,
-                    LegacyVpnProfileStore.get(Credentials.VPN + key));
+                    mVpnManager.getVpnProfile(Credentials.VPN + key));
             if (profile != null) {
                 result.add(profile);
             }
