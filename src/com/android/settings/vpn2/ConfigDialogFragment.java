@@ -16,6 +16,8 @@
 
 package com.android.settings.vpn2;
 
+import static com.android.server.connectivity.Flags.replaceVpnProfileStore;
+
 import android.app.Dialog;
 import android.app.settings.SettingsEnums;
 import android.content.Context;
@@ -152,7 +154,11 @@ public class ConfigDialogFragment extends InstrumentedDialogFragment implements
             }
 
             // Delete from profile store.
-            LegacyVpnProfileStore.remove(Credentials.VPN + profile.key);
+            if (replaceVpnProfileStore()) {
+                mService.removeVpnProfile(Credentials.VPN + profile.key);
+            } else {
+                LegacyVpnProfileStore.remove(Credentials.VPN + profile.key);
+            }
 
             updateLockdownVpn(false, profile);
         }
@@ -180,14 +186,18 @@ public class ConfigDialogFragment extends InstrumentedDialogFragment implements
             VpnUtils.setLockdownVpn(mContext, profile.key);
         } else {
             // update only if lockdown vpn has been changed
-            if (VpnUtils.isVpnLockdown(profile.key)) {
+            if (VpnUtils.isVpnLockdown(mContext, profile.key)) {
                 VpnUtils.clearLockdownVpn(mContext);
             }
         }
     }
 
     private void save(VpnProfile profile, boolean lockdown) {
-        LegacyVpnProfileStore.put(Credentials.VPN + profile.key, profile.encode());
+        if (replaceVpnProfileStore()) {
+            mService.putVpnProfile(Credentials.VPN + profile.key, profile.encode());
+        } else {
+            LegacyVpnProfileStore.put(Credentials.VPN + profile.key, profile.encode());
+        }
 
         // Flush out old version of profile
         disconnect(profile);
@@ -201,7 +211,7 @@ public class ConfigDialogFragment extends InstrumentedDialogFragment implements
 
         // Now try to start the VPN - this is not necessary if the profile is set as lockdown,
         // because just saving the profile in this mode will start a connection.
-        if (!VpnUtils.isVpnLockdown(profile.key)) {
+        if (!VpnUtils.isVpnLockdown(mContext, profile.key)) {
             VpnUtils.clearLockdownVpn(mContext);
             try {
                 mService.startLegacyVpn(profile);

@@ -15,6 +15,8 @@
  */
 package com.android.settings.network;
 
+import static com.android.server.connectivity.Flags.replaceVpnProfileStore;
+
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.pm.UserInfo;
@@ -39,7 +41,6 @@ import com.android.internal.net.LegacyVpnInfo;
 import com.android.internal.net.VpnConfig;
 import com.android.internal.net.VpnProfile;
 import com.android.settings.R;
-import com.android.settings.Utils;
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settings.vpn2.VpnInfoPreference;
 import com.android.settingslib.RestrictedLockUtilsInternal;
@@ -50,7 +51,6 @@ import com.android.settingslib.core.lifecycle.events.OnResume;
 import com.android.settingslib.utils.ThreadUtils;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.function.Function;
 
 public class VpnPreferenceController extends AbstractPreferenceController
@@ -169,8 +169,13 @@ public class VpnPreferenceController extends AbstractPreferenceController
             VpnManager vpnManager) {
         // Optionally add warning icon if an insecure VPN is present.
         if (mPreference instanceof VpnInfoPreference) {
-            String [] legacyVpnProfileKeys = LegacyVpnProfileStore.list(Credentials.VPN);
-            final int insecureVpnCount = getInsecureVpnCount(legacyVpnProfileKeys);
+            final String [] legacyVpnProfileKeys;
+            if (replaceVpnProfileStore()) {
+                legacyVpnProfileKeys = vpnManager.listVpnProfile(Credentials.VPN);
+            } else {
+                legacyVpnProfileKeys = LegacyVpnProfileStore.list(Credentials.VPN);
+            }
+            final int insecureVpnCount = getInsecureVpnCount(vpnManager, legacyVpnProfileKeys);
             boolean isInsecureVPN = insecureVpnCount > 0;
             ((VpnInfoPreference) mPreference).setInsecureVpn(isInsecureVPN);
 
@@ -217,9 +222,15 @@ public class VpnPreferenceController extends AbstractPreferenceController
     }
 
     @VisibleForTesting
-    protected int getInsecureVpnCount(String [] legacyVpnProfileKeys) {
-        final Function<String, VpnProfile> keyToProfile = key ->
-                VpnProfile.decode(key, LegacyVpnProfileStore.get(Credentials.VPN + key));
+    protected int getInsecureVpnCount(VpnManager vpnManager, String [] legacyVpnProfileKeys) {
+        final Function<String, VpnProfile> keyToProfile;
+        if (replaceVpnProfileStore()) {
+            keyToProfile = key ->
+                    VpnProfile.decode(key, vpnManager.getVpnProfile(Credentials.VPN + key));
+        } else {
+            keyToProfile = key ->
+                    VpnProfile.decode(key, LegacyVpnProfileStore.get(Credentials.VPN + key));
+        }
         return (int) Arrays.stream(legacyVpnProfileKeys)
                 .map(keyToProfile)
                 // Return whether any profile is an insecure type.
