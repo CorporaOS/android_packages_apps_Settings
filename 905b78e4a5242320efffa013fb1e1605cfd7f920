@@ -58,6 +58,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d01d6f3_32b7b903",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 17
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-26T21:29:16Z",
+      "side": 1,
+      "message": "Toast on L168 will be displayed whenever update is failed.",
+      "parentUuid": "c9bbe6bf_4a9e5f26",
+      "range": {
+        "startLine": 184,
+        "startChar": 12,
+        "endLine": 184,
+        "endChar": 69
+      },
+      "revId": "905b78e4a5242320efffa013fb1e1605cfd7f920",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "38a67a60_e2ac22ab",
@@ -71,6 +95,24 @@
       "writtenOn": "2024-01-12T21:43:07Z",
       "side": 1,
       "message": "I think the system update info should be updated prior to applying the payload so that other services know that there is a \"system update\" in progress. If this code relies on that API to know when to avoid applying a package because of an ongoing update, I think it is obligated to do the same when it is applying a package.",
+      "revId": "905b78e4a5242320efffa013fb1e1605cfd7f920",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3d87d50_6c742ff5",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 17
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-01-26T21:29:16Z",
+      "side": 1,
+      "message": "Please see https://android-review.git.corp.google.com/c/platform/packages/apps/Settings/+/2930333",
+      "parentUuid": "38a67a60_e2ac22ab",
       "revId": "905b78e4a5242320efffa013fb1e1605cfd7f920",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
