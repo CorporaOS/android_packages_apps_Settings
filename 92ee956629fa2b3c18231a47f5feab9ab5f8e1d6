@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "190e1986_a9908e40",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1269233
+      },
+      "writtenOn": "2024-01-31T06:26:54Z",
+      "side": 1,
+      "message": "LGTM after small test update",
+      "revId": "92ee956629fa2b3c18231a47f5feab9ab5f8e1d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "39e95c92_be0506e4",
+        "filename": "tests/robotests/src/com/android/settings/connecteddevice/stylus/StylusDevicesControllerTest.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 1269233
+      },
+      "writtenOn": "2024-01-31T06:26:54Z",
+      "side": 1,
+      "message": "We follow Arrange // act // assert, so all asserts must be in the bottom block\nhttps://java-design-patterns.com/patterns/arrange-act-assert/\n\nPlease delete this assert",
+      "range": {
+        "startLine": 227,
+        "startChar": 0,
+        "endLine": 227,
+        "endChar": 75
+      },
+      "revId": "92ee956629fa2b3c18231a47f5feab9ab5f8e1d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

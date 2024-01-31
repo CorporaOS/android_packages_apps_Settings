@@ -292,6 +292,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5076cf2d_29675b0e",
+        "filename": "src/com/android/settings/connecteddevice/stylus/StylusDevicesController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1269233
+      },
+      "writtenOn": "2024-01-31T06:26:54Z",
+      "side": 1,
+      "message": "Acknowledged - thanks",
+      "parentUuid": "75423172_cbd3dd6b",
+      "range": {
+        "startLine": 174,
+        "startChar": 7,
+        "endLine": 178,
+        "endChar": 9
+      },
+      "revId": "1711db3527352b7246d55277bba5b2a1db1d812c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1e067ab4_b6ecbbd8",
