@@ -16,6 +16,23 @@
       "message": "I had to upload a fresh CL since the original was missing the Owner field (\"Deleted User\"). Apologies",
       "revId": "63e6079515c4642aca69d1207b7d1ce09bbcabba",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17a344d9_e455b6eb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2024-02-01T03:53:59Z",
+      "side": 1,
+      "message": "Thanks David for your contributing the CL.\n\nCould you provide your screenshots on the b/313066844? Thank you.",
+      "revId": "63e6079515c4642aca69d1207b7d1ce09bbcabba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
