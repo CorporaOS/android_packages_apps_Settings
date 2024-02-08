@@ -28,6 +28,7 @@ import android.content.Context;
 import android.service.timezone.TimeZoneProviderStatus;
 import android.service.timezone.TimeZoneProviderStatus.DependencyStatus;
 import android.text.TextUtils;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.preference.PreferenceScreen;
@@ -36,6 +37,9 @@ import com.android.settings.R;
 import com.android.settings.core.BasePreferenceController;
 import com.android.settings.core.SubSettingLauncher;
 import com.android.settings.location.LocationSettings;
+import com.android.settingslib.core.lifecycle.events.OnPause;
+import com.android.settingslib.core.lifecycle.events.OnResume;
+import com.android.settingslib.core.lifecycle.LifecycleObserver;
 import com.android.settingslib.widget.BannerMessagePreference;
 
 import java.util.concurrent.Executor;
@@ -45,7 +49,7 @@ import java.util.concurrent.Executor;
  * screen.
  */
 public class LocationProviderStatusPreferenceController
-        extends BasePreferenceController implements TimeManager.TimeZoneDetectorListener {
+        extends BasePreferenceController implements TimeManager.TimeZoneDetectorListener, LifecycleObserver, OnPause, OnResume{
     private final TimeManager mTimeManager;
 
     private BannerMessagePreference mPreference = null;
@@ -53,9 +57,6 @@ public class LocationProviderStatusPreferenceController
     public LocationProviderStatusPreferenceController(Context context, String preferenceKey) {
         super(context, preferenceKey);
         mTimeManager = context.getSystemService(TimeManager.class);
-
-        Executor mainExecutor = context.getMainExecutor();
-        mTimeManager.addTimeZoneDetectorListener(mainExecutor, this);
     }
 
     @Override
@@ -186,5 +187,16 @@ public class LocationProviderStatusPreferenceController
                 == DetectorStatusTypes.DETECTION_ALGORITHM_STATUS_NOT_SUPPORTED
                 && locationStatus.getStatus()
                 != DetectorStatusTypes.DETECTION_ALGORITHM_STATUS_NOT_SUPPORTED;
+    }
+
+    @Override
+    public void onResume() {
+        Executor mainExecutor = mContext.getMainExecutor();
+        mTimeManager.addTimeZoneDetectorListener(mainExecutor, this);
+    }
+
+    @Override
+    public void onPause() {
+        mTimeManager.removeTimeZoneDetectorListener(this);
     }
 }
