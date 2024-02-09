@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41ca5a3c_296613db",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1038039
+      },
+      "writtenOn": "2024-02-09T13:40:04Z",
+      "side": 1,
+      "message": "A nit from me only. I can see the reason for the fix and the fix looks good to me (so, +1), but we\u0027ll probably need someone from the SettingsUI team to approve.",
+      "revId": "011de09925a7a05f15d73ef15e8aa9a5d3754f17",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f993f03b_cca0328d",
+        "filename": "src/com/android/settings/datetime/LocationProviderStatusPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1038039
+      },
+      "writtenOn": "2024-02-09T13:40:04Z",
+      "side": 1,
+      "message": "Please could you make the line shorter to keep the linter happy?\n\n```suggestion\n        extends BasePreferenceController implements TimeManager.TimeZoneDetectorListener,\n        LifecycleObserver, OnPause, OnResume {\n```",
+      "range": {
+        "startLine": 52,
+        "startChar": 16,
+        "endLine": 52,
+        "endChar": 40
+      },
+      "revId": "011de09925a7a05f15d73ef15e8aa9a5d3754f17",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
