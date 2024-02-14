@@ -73,6 +73,7 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
         implements CategoryListener, Indexable, PreferenceGroup.OnExpandButtonClickListener,
         BasePreferenceController.UiBlockListener {
     public static final String CATEGORY = "category";
+    public static final String TILE_METADATA_EXTRA = "tile_metadata_extra";
     private static final String TAG = "DashboardFragment";
     private static final long TIMEOUT_MILLIS = 50L;
 
@@ -432,6 +433,9 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
         displayResourceTiles();
 
         refreshDashboardTiles(tag);
+
+        // Sort injected preferences if necessary
+        DashboardSort.sortPreferences(getPreferenceScreen());
 
         final Activity activity = getActivity();
         if (activity != null) {

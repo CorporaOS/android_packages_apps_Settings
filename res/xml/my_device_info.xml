@@ -63,6 +63,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="legal_and_regulatory_category"
         android:title="@string/my_device_info_legal_category_title">
 
         <!-- Legal information -->

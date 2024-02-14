@@ -32,6 +32,7 @@ import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMM
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SWITCH_URI;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_TITLE;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_TITLE_URI;
+import static com.android.settings.dashboard.DashboardFragment.TILE_METADATA_EXTRA;
 
 import android.app.PendingIntent;
 import android.app.settings.SettingsEnums;
@@ -154,6 +155,7 @@ public class DashboardFeatureProviderImpl implements DashboardFeatureProvider {
             outObservers.add(observer);
         }
         bindIcon(pref, tile, forceRoundedIcon);
+        bindMetaData(pref, tile);
 
         if (tile.hasPendingIntent()) {
             // Pending intent cannot be launched within the settings app panel, and will thus always
@@ -449,6 +451,11 @@ public class DashboardFeatureProviderImpl implements DashboardFeatureProvider {
             ((AdaptiveIcon) iconDrawable).setBackgroundColor(mContext, tile);
         }
         preference.setIcon(iconDrawable);
+    }
+
+    private void bindMetaData(Preference preference, Tile tile) {
+        final Bundle extras = preference.getExtras();
+        extras.putBundle(TILE_METADATA_EXTRA, tile.getMetaData());
     }
 
     private void launchPendingIntentOrSelectProfile(FragmentActivity activity, Tile tile,

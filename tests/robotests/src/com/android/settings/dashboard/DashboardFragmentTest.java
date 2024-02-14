@@ -16,14 +16,22 @@
 package com.android.settings.dashboard;
 
 import static com.android.internal.logging.nano.MetricsProto.MetricsEvent.DASHBOARD_CONTAINER;
+import static com.android.settingslib.drawer.TileUtils.META_DATA_POSITION_AFTER;
+import static com.android.settingslib.drawer.TileUtils.META_DATA_POSITION_BEFORE;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_GROUP_KEY;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_KEYHINT;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_PENDING_INTENT;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SWITCH_URI;
+import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_TITLE;
+import static com.android.settingslib.drawer.TileUtils.POSITION_FIRST;
+import static com.android.settingslib.drawer.TileUtils.POSITION_LAST;
 
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyBoolean;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.nullable;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
@@ -219,6 +227,269 @@ public class DashboardFragmentTest {
 
         verify(mTestFragment.mScreen, times(3)).addPreference(nullable(Preference.class));
         verify(groupPreference).addPreference(nullable(Preference.class));
+    }
+
+    @Test
+    public void displayTilesAsPreference_withPositionMetaData_shouldSortAccordingly() {
+        // Inject 6 tiles:
+        //  [group_key] with position after "key4"
+        //  [key1] without group key and position after "last"
+        //  [key2] with group key and position before "first"
+        //  [key3] with group key and position after "last"
+        //  [key4] without group key and without position
+        //  [key5] with group key and position after "key2"
+        //
+        // should be sorted as:
+        // [key4]
+        // [group_key]
+        //    [key2]
+        //    [key5]
+        //    [key3]
+        // [key1]
+
+        final DashboardCategory dashboardCategory = new DashboardCategory("category_key");
+
+        final ProviderInfo providerInfo = new ProviderInfo();
+        providerInfo.packageName = "pkg";
+        providerInfo.name = "provider";
+        providerInfo.authority = "authority";
+        final ActivityInfo activityInfo = new ActivityInfo();
+        activityInfo.packageName = "pkg";
+        activityInfo.name = "class";
+
+        // Inject a PreferenceCategory "group_key" with position after "key4"
+        final Bundle groupTileMetaData = new Bundle();
+        groupTileMetaData.putString(META_DATA_PREFERENCE_KEYHINT, "group_key");
+        groupTileMetaData.putString(META_DATA_POSITION_AFTER, "key4");
+        ProviderTile groupTile = new ProviderTile(providerInfo, dashboardCategory.key,
+                groupTileMetaData);
+        dashboardCategory.addTile(groupTile);
+
+        // Inject a Switch without group key and position after "last"
+        final Bundle metaData1 = new Bundle();
+        metaData1.putString(META_DATA_PREFERENCE_KEYHINT, "key1");
+        metaData1.putString(META_DATA_PREFERENCE_TITLE, "tile1");
+        metaData1.putString(META_DATA_POSITION_AFTER, POSITION_LAST);
+        metaData1.putString(META_DATA_PREFERENCE_SWITCH_URI, "uri");
+        ProviderTile tile1 = new ProviderTile(providerInfo, dashboardCategory.key,
+                metaData1);
+        dashboardCategory.addTile(tile1);
+
+        // Inject a Switch with group key and position before "first"
+        final Bundle metaData2 = new Bundle();
+        metaData2.putString(META_DATA_PREFERENCE_KEYHINT, "key2");
+        metaData2.putString(META_DATA_PREFERENCE_TITLE, "tile2");
+        metaData2.putString(META_DATA_PREFERENCE_GROUP_KEY, "group_key");
+        metaData2.putString(META_DATA_POSITION_BEFORE, POSITION_FIRST);
+        metaData2.putString(META_DATA_PREFERENCE_SWITCH_URI, "uri");
+        ProviderTile tile2 = new ProviderTile(providerInfo, dashboardCategory.key,
+                metaData2);
+        dashboardCategory.addTile(tile2);
+
+        // Inject a Switch with group key and position after "last"
+        final Bundle metaData3 = new Bundle();
+        metaData3.putString(META_DATA_PREFERENCE_KEYHINT, "key3");
+        metaData3.putString(META_DATA_PREFERENCE_TITLE, "tile3");
+        metaData3.putString(META_DATA_PREFERENCE_GROUP_KEY, "group_key");
+        metaData3.putString(META_DATA_POSITION_AFTER, POSITION_LAST);
+        metaData3.putString(META_DATA_PREFERENCE_SWITCH_URI, "uri");
+        ProviderTile tile3 = new ProviderTile(providerInfo, dashboardCategory.key,
+                metaData3);
+        dashboardCategory.addTile(tile3);
+
+        // Inject a Preference without group key and without position
+        activityInfo.metaData = new Bundle();
+        activityInfo.metaData.putString(META_DATA_PREFERENCE_KEYHINT, "key4");
+        activityInfo.metaData.putString(META_DATA_PREFERENCE_TITLE, "tile4");
+        ActivityTile tile4 = new ActivityTile(activityInfo, dashboardCategory.key);
+        dashboardCategory.addTile(tile4);
+
+        // Inject a Preference with group key and position after "key2"
+        activityInfo.metaData = new Bundle();
+        activityInfo.metaData.putString(META_DATA_PREFERENCE_KEYHINT, "key5");
+        activityInfo.metaData.putString(META_DATA_PREFERENCE_TITLE, "tile5");
+        activityInfo.metaData.putString(META_DATA_PREFERENCE_GROUP_KEY, "group_key");
+        activityInfo.metaData.putString(META_DATA_POSITION_AFTER, "key2");
+        ActivityTile tile5 = new ActivityTile(activityInfo, dashboardCategory.key);
+        dashboardCategory.addTile(tile5);
+
+        final DashboardFeatureProviderImpl mImpl = spy(new DashboardFeatureProviderImpl(mContext));
+
+        when(mFakeFeatureFactory.dashboardFeatureProvider
+                .getTilesForCategory(nullable(String.class)))
+                .thenReturn(dashboardCategory);
+        when(mFakeFeatureFactory.dashboardFeatureProvider
+                .getDashboardKeyForTile(any(Tile.class)))
+                .then(input -> ((Tile) input.getArgument(0)).getKey(mContext));
+        when(mFakeFeatureFactory.dashboardFeatureProvider
+                .bindPreferenceToTileAndGetObservers(any(), any(DashboardFragment.class),
+                anyBoolean(), any(Preference.class), any(Tile.class), anyString(),
+                anyInt())).thenAnswer(input -> mImpl.bindPreferenceToTileAndGetObservers(
+                        input.getArgument(0), input.getArgument(1), input.getArgument(2),
+                        input.getArgument(3), input.getArgument(4), input.getArgument(5),
+                        input.getArgument(6)));
+
+        mTestFragment.onCreatePreferences(new Bundle(), "rootKey");
+
+        PreferenceScreen screen = mTestFragment.getPreferenceScreen();
+        assertThat(screen.getPreferenceCount()).isEqualTo(3);
+        assertThat(screen.getPreference(0).getKey()).isEqualTo("key4");
+        assertThat(screen.getPreference(1).getKey()).isEqualTo("group_key");
+        assertThat(screen.getPreference(2).getKey()).isEqualTo("key1");
+
+        assertThat(screen.getPreference(1) instanceof PreferenceCategory).isTrue();
+        PreferenceCategory group = (PreferenceCategory) screen.getPreference(1);
+        assertThat(group.getPreferenceCount()).isEqualTo(3);
+        assertThat(group.getPreference(0).getKey()).isEqualTo("key2");
+        assertThat(group.getPreference(1).getKey()).isEqualTo("key5");
+        assertThat(group.getPreference(2).getKey()).isEqualTo("key3");
+    }
+
+    @Test
+    public void displayTilesAsPreference_withSuperfluousPositionMetaData_shouldUseAfterPosition() {
+        // Inject 3 tiles:
+        //  [key1] without group key and position after "key2" and before "first"
+        //  [key2] without group key and without position
+        //  [key3] without group key and without position
+        //
+        // should be sorted as:
+        // [key2]
+        // [key1]
+        // [key3]
+
+        final DashboardCategory dashboardCategory = new DashboardCategory("category_key");
+
+        final ProviderInfo providerInfo = new ProviderInfo();
+        providerInfo.packageName = "pkg";
+        providerInfo.name = "provider";
+        providerInfo.authority = "authority";
+
+        // Inject a Switch without group key and with position after "key2" and before "key3"
+        final Bundle metaData1 = new Bundle();
+        metaData1.putString(META_DATA_PREFERENCE_KEYHINT, "key1");
+        metaData1.putString(META_DATA_PREFERENCE_TITLE, "tile1");
+        metaData1.putString(META_DATA_POSITION_AFTER, "key2");
+        metaData1.putString(META_DATA_POSITION_BEFORE, POSITION_FIRST);
+        metaData1.putString(META_DATA_PREFERENCE_SWITCH_URI, "uri");
+        ProviderTile tile1 = new ProviderTile(providerInfo, dashboardCategory.key,
+                metaData1);
+        dashboardCategory.addTile(tile1);
+
+        // Inject a Switch without group key and without position
+        final Bundle metaData2 = new Bundle();
+        metaData2.putString(META_DATA_PREFERENCE_KEYHINT, "key2");
+        metaData2.putString(META_DATA_PREFERENCE_TITLE, "tile2");
+        metaData2.putString(META_DATA_PREFERENCE_SWITCH_URI, "uri");
+        ProviderTile tile2 = new ProviderTile(providerInfo, dashboardCategory.key,
+                metaData2);
+        dashboardCategory.addTile(tile2);
+
+        // Inject a Switch without group key and without position
+        final Bundle metaData3 = new Bundle();
+        metaData3.putString(META_DATA_PREFERENCE_KEYHINT, "key3");
+        metaData3.putString(META_DATA_PREFERENCE_TITLE, "tile3");
+        metaData3.putString(META_DATA_PREFERENCE_SWITCH_URI, "uri");
+        ProviderTile tile3 = new ProviderTile(providerInfo, dashboardCategory.key,
+                metaData3);
+        dashboardCategory.addTile(tile3);
+
+
+        final DashboardFeatureProviderImpl mImpl = spy(new DashboardFeatureProviderImpl(mContext));
+
+        when(mFakeFeatureFactory.dashboardFeatureProvider
+                .getTilesForCategory(nullable(String.class)))
+                .thenReturn(dashboardCategory);
+        when(mFakeFeatureFactory.dashboardFeatureProvider
+                .getDashboardKeyForTile(any(Tile.class)))
+                .then(input -> ((Tile) input.getArgument(0)).getKey(mContext));
+        when(mFakeFeatureFactory.dashboardFeatureProvider
+                .bindPreferenceToTileAndGetObservers(any(), any(DashboardFragment.class),
+                anyBoolean(), any(Preference.class), any(Tile.class), anyString(),
+                anyInt())).thenAnswer(input -> mImpl.bindPreferenceToTileAndGetObservers(
+                        input.getArgument(0), input.getArgument(1), input.getArgument(2),
+                        input.getArgument(3), input.getArgument(4), input.getArgument(5),
+                        input.getArgument(6)));
+
+        mTestFragment.onCreatePreferences(new Bundle(), "rootKey");
+
+        PreferenceScreen screen = mTestFragment.getPreferenceScreen();
+        assertThat(screen.getPreferenceCount()).isEqualTo(3);
+        assertThat(screen.getPreference(0).getKey()).isEqualTo("key2");
+        assertThat(screen.getPreference(1).getKey()).isEqualTo("key1");
+        assertThat(screen.getPreference(2).getKey()).isEqualTo("key3");
+    }
+
+    @Test
+    public void displayTilesAsPreference_withNonExistentPositionMetaData_shouldSortToBottom() {
+        // Inject 3 tiles:
+        //  [key1] without group key and position before "non-existent-key"
+        //  [key2] without group key and without position
+        //  [key3] without group key and without position
+        //
+        // should be sorted as:
+        // [key2]
+        // [key3]
+        // [key1]
+
+        final DashboardCategory dashboardCategory = new DashboardCategory("category_key");
+
+        final ProviderInfo providerInfo = new ProviderInfo();
+        providerInfo.packageName = "pkg";
+        providerInfo.name = "provider";
+        providerInfo.authority = "authority";
+
+        // Inject a Switch without group key and with position before "non-existent-key"
+        final Bundle metaData1 = new Bundle();
+        metaData1.putString(META_DATA_PREFERENCE_KEYHINT, "key1");
+        metaData1.putString(META_DATA_PREFERENCE_TITLE, "tile1");
+        metaData1.putString(META_DATA_POSITION_BEFORE, "non-existent-key");
+        metaData1.putString(META_DATA_PREFERENCE_SWITCH_URI, "uri");
+        ProviderTile tile1 = new ProviderTile(providerInfo, dashboardCategory.key,
+                metaData1);
+        dashboardCategory.addTile(tile1);
+
+        // Inject a Switch without group key and without position
+        final Bundle metaData2 = new Bundle();
+        metaData2.putString(META_DATA_PREFERENCE_KEYHINT, "key2");
+        metaData2.putString(META_DATA_PREFERENCE_TITLE, "tile2");
+        metaData2.putString(META_DATA_PREFERENCE_SWITCH_URI, "uri");
+        ProviderTile tile2 = new ProviderTile(providerInfo, dashboardCategory.key,
+                metaData2);
+        dashboardCategory.addTile(tile2);
+
+        // Inject a Switch without group key and without position
+        final Bundle metaData3 = new Bundle();
+        metaData3.putString(META_DATA_PREFERENCE_KEYHINT, "key3");
+        metaData3.putString(META_DATA_PREFERENCE_TITLE, "tile3");
+        metaData3.putString(META_DATA_PREFERENCE_SWITCH_URI, "uri");
+        ProviderTile tile3 = new ProviderTile(providerInfo, dashboardCategory.key,
+                metaData3);
+        dashboardCategory.addTile(tile3);
+
+
+        final DashboardFeatureProviderImpl mImpl = spy(new DashboardFeatureProviderImpl(mContext));
+
+        when(mFakeFeatureFactory.dashboardFeatureProvider
+                .getTilesForCategory(nullable(String.class)))
+                .thenReturn(dashboardCategory);
+        when(mFakeFeatureFactory.dashboardFeatureProvider
+                .getDashboardKeyForTile(any(Tile.class)))
+                .then(input -> ((Tile) input.getArgument(0)).getKey(mContext));
+        when(mFakeFeatureFactory.dashboardFeatureProvider
+                .bindPreferenceToTileAndGetObservers(any(), any(DashboardFragment.class),
+                anyBoolean(), any(Preference.class), any(Tile.class), anyString(),
+                anyInt())).thenAnswer(input -> mImpl.bindPreferenceToTileAndGetObservers(
+                        input.getArgument(0), input.getArgument(1), input.getArgument(2),
+                        input.getArgument(3), input.getArgument(4), input.getArgument(5),
+                        input.getArgument(6)));
+
+        mTestFragment.onCreatePreferences(new Bundle(), "rootKey");
+
+        PreferenceScreen screen = mTestFragment.getPreferenceScreen();
+        assertThat(screen.getPreferenceCount()).isEqualTo(3);
+        assertThat(screen.getPreference(0).getKey()).isEqualTo("key2");
+        assertThat(screen.getPreference(1).getKey()).isEqualTo("key3");
+        assertThat(screen.getPreference(2).getKey()).isEqualTo("key1");
     }
 
     @Test
@@ -543,12 +814,11 @@ public class DashboardFragmentTest {
 
         public TestFragment(Context context) {
             mContext = context;
-            mPreferenceManager = mock(PreferenceManager.class);
-            mScreen = mock(PreferenceScreen.class);
+            mPreferenceManager = new PreferenceManager(mContext);
+            mScreen = spy(mPreferenceManager.createPreferenceScreen(mContext));
             mContentResolver = mock(ContentResolver.class);
             mControllers = new ArrayList<>();
 
-            when(mPreferenceManager.getContext()).thenReturn(mContext);
             ReflectionHelpers.setField(
                     this, "mVisibilityLoggerMixin", mock(VisibilityLoggerMixin.class));
         }
