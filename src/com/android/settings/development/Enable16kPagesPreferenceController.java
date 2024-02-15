@@ -22,6 +22,8 @@ import android.os.Handler;
 import android.os.ParcelFileDescriptor;
 import android.os.PersistableBundle;
 import android.os.PowerManager;
+import android.os.RecoverySystem;
+import android.os.RemoteException;
 import android.os.SystemProperties;
 import android.os.SystemUpdateManager;
 import android.os.UpdateEngine;
@@ -148,7 +150,7 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
         mProgressDialog.show();
 
         // Apply update in background
-        ListenableFuture future = mExecutorService.submit(() -> installUpdate());
+        ListenableFuture future = mExecutorService.submit(() -> wipeData());
         Futures.addCallback(
                 future,
                 new FutureCallback<>() {
@@ -356,5 +358,14 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
         infoBundle.putBoolean(SystemUpdateManager.KEY_IS_SECURITY_UPDATE, false);
         infoBundle.putString(SystemUpdateManager.KEY_TITLE, EXPERIMENTAL_UPDATE_TITLE);
         return infoBundle;
+    }
+
+    private int wipeData() throws RemoteException, IOException {
+        //Reformat /data partition with ext4
+        String command = "--wipe_data\n--reformat_data=ext4";
+        //pw.println("Rebooting into recovery with " + command.replaceAll("\n", " "));
+        RecoverySystem recoveryService = mContext.getSystemService(RecoverySystem.class);
+        recoveryService.rebootWipeExt4(command);
+        return 0;
     }
 }

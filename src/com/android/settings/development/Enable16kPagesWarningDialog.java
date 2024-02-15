@@ -20,6 +20,7 @@ import android.app.Dialog;
 import android.app.settings.SettingsEnums;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.RemoteException;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -75,14 +76,9 @@ public class Enable16kPagesWarningDialog extends InstrumentedDialogFragment
         final Bundle bundle = getArguments();
         boolean is16kDialog = bundle.getBoolean(DIALOG_BUNDLE_KEY);
         return new AlertDialog.Builder(getActivity())
-                .setTitle(
-                        is16kDialog
-                                ? R.string.confirm_enable_16k_pages_title
-                                : R.string.confirm_enable_4k_pages_title)
+                .setTitle(R.string.confirm_format_ext4_title)
                 .setMessage(
-                        is16kDialog
-                                ? R.string.confirm_enable_16k_pages_text
-                                : R.string.confirm_enable_4k_pages_text)
+                        R.string.confirm_format_ext4_text)
                 .setPositiveButton(android.R.string.ok, this /* onClickListener */)
                 .setNegativeButton(android.R.string.cancel, this /* onClickListener */)
                 .create();
