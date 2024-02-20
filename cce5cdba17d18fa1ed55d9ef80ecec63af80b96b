@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0fa5d01c_cbfd267b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1304263
+      },
+      "writtenOn": "2024-02-20T07:33:43Z",
+      "side": 1,
+      "message": "Do the existing tests cover this change?\n\nDid you try to put something in the database and upgrade device to see if the function still works well?",
+      "range": {
+        "startLine": 13,
+        "startChar": 16,
+        "endLine": 13,
+        "endChar": 20
+      },
+      "revId": "cce5cdba17d18fa1ed55d9ef80ecec63af80b96b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
