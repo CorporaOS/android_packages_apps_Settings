@@ -12664,4 +12664,29 @@
     <string name="content_protection_preference_subpage_summary"></string>
     <!-- Default information at the bottom of the subpage of content protection settings. Will be overlaid by OEM. -->
     <string name="content_protection_preference_subpage_info"></string>
+    <string name="move_all_apps_title">Move multiple apps</string>
+    <string name="move_all_apps_count">{count, plural,
+      =0      {No apps available for moving}
+      =1      {# app can be moved to current volume}
+      other   {# apps can be moved to current volume}
+    }</string>
+    <string name="move_all_apps_not_supported">Not supported for current volume</string>
+    <string name="storage_wizard_move_all_apps_count">{count, plural,
+      =1      {# app}
+      other   {# apps}
+    }</string>
+    <string name="storage_wizard_move_all_apps_confirm_title">Move <xliff:g id="count" example="10 apps">^1</xliff:g></string>
+    <string name="storage_wizard_move_all_apps_confirm_body">Moving <xliff:g id="count" example="10 apps">^1</xliff:g> and their data to <xliff:g id="name" example="SD card">^2</xliff:g> will take only a few moments. You won\u2019t be able to use the apps until the move is complete.
+\n\nDon\u2019t remove the <xliff:g id="name" example="SD card">^2</xliff:g> during the move.
+    </string>
+    <string name="move_all_apps">Move apps</string>
+    <string name="storage_wizard_move_all_apps_title">Moving <xliff:g id="count" example="10 apps">^1</xliff:g>\u2026</string>
+    <!-- Body of wizard step showing app move progress [CHAR LIMIT=NONE] -->
+    <string name="storage_wizard_move_all_apps_body">Don\u2019t remove the <xliff:g id="name" example="SD card">^1</xliff:g> during the move.
+\n\nThe selected apps on this device won\u2019t be available until the move is complete.
+    </string>
+    <string name="storage_wizard_move_all_apps_failed_to_move_count">{count, plural,
+      =1      {Failed to move # app}
+      other   {Failed to move # apps}
+    }</string>
 </resources>

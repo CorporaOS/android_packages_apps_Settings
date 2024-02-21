@@ -44,6 +44,11 @@
         android:title="@string/storage_free_up_space_title"
         android:summary="@string/storage_free_up_space_summary"
         settings:controller="com.android.settings.deviceinfo.storage.ManageStoragePreferenceController"/>
+    <com.android.settings.widget.CardPreference
+        android:key="move_all_apps"
+        android:order="5"
+        android:title="@string/move_all_apps_title"
+        settings:controller="com.android.settings.deviceinfo.storage.MoveAllAppsPreferenceController"/>
     <!-- Preference order 100~200 are 'ONLY' for storage category preferences below. -->
     <Preference
         android:key="pref_public_storage"
