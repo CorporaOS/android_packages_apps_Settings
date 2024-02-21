@@ -45,6 +45,7 @@ import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.deviceinfo.storage.AutomaticStorageManagementSwitchPreferenceController;
 import com.android.settings.deviceinfo.storage.DiskInitFragment;
 import com.android.settings.deviceinfo.storage.ManageStoragePreferenceController;
+import com.android.settings.deviceinfo.storage.MoveAllAppsPreferenceController;
 import com.android.settings.deviceinfo.storage.NonCurrentUserController;
 import com.android.settings.deviceinfo.storage.StorageAsyncLoader;
 import com.android.settings.deviceinfo.storage.StorageCacheHelper;
@@ -102,6 +103,7 @@ public class StorageDashboardFragment extends DashboardFragment
     private VolumeOptionMenuController mOptionMenuController;
     private StorageSelectionPreferenceController mStorageSelectionController;
     private StorageUsageProgressBarPreferenceController mStorageUsageProgressBarController;
+    private MoveAllAppsPreferenceController mMoveAllAppsPreferenceController;
     private List<NonCurrentUserController> mNonCurrentUsers;
     private boolean mIsWorkProfile;
     private int mUserId;
@@ -268,8 +270,24 @@ public class StorageDashboardFragment extends DashboardFragment
             getLoaderManager()
                  .restartLoader(VOLUME_SIZE_JOB_ID, Bundle.EMPTY, new VolumeSizeCallbacks());
             getLoaderManager().restartLoader(ICON_JOB_ID, Bundle.EMPTY, new IconLoaderCallbacks());
+            setCurrentVolumeInfoForMoveAllAppsPreference();
         } else {
             mPreferenceController.setVolume(mSelectedStorageEntry.getVolumeInfo());
+        }
+    }
+
+    private void setCurrentVolumeInfoForMoveAllAppsPreference() {
+        // If private volume count is not more than one, move apps does not make sense. Therefore
+        // not setting the VolumeInfo for the MoveAllAppsPreference
+        int privateVolumeCount = 0;
+        for (StorageEntry entry: mStorageEntries) {
+            if (entry.isPrivate()) {
+                privateVolumeCount += 1;
+            }
+        }
+        if (privateVolumeCount > 1) {
+            mMoveAllAppsPreferenceController
+                    .setCurrentVolume(mSelectedStorageEntry.getVolumeInfo());
         }
     }
 
@@ -315,6 +333,7 @@ public class StorageDashboardFragment extends DashboardFragment
         use(AutomaticStorageManagementSwitchPreferenceController.class).setFragmentManager(
                 getFragmentManager());
         mStorageSelectionController = use(StorageSelectionPreferenceController.class);
+        mMoveAllAppsPreferenceController = use(MoveAllAppsPreferenceController.class);
         mStorageSelectionController.setOnItemSelectedListener(storageEntry -> {
             mSelectedStorageEntry = storageEntry;
             refreshUi();
