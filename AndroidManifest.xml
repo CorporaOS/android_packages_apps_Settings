@@ -2846,6 +2846,14 @@
                 android:exported="true"
                 android:permission="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 
+        <activity android:name=".deviceinfo.StorageWizardMoveAllConfirm"
+                android:theme="@style/GlifTheme.Light"
+                android:exported="false"/>
+        <activity android:name=".deviceinfo.StorageWizardMoveAllProgress"
+                android:theme="@style/GlifTheme.Light"
+                android:exported="true"
+                android:permission="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
         <!-- Exported for SystemUI to trigger -->
         <receiver android:name=".deviceinfo.StorageUnmountReceiver"
                 android:exported="true"
