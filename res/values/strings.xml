@@ -3116,6 +3116,46 @@
     <string name="battery_cycle_count">Cycle count</string>
     <!-- About phone, status item title. The status summary for cycle count that's not available. [CHAR LIMIT=40] -->
     <string name="battery_cycle_count_not_available">Unavailable</string>
+    <!-- About phone, status item title. The battery technology type. [CHAR LIMIT=60] -->
+    <string name="battery_technology">Technology</string>
+    <!-- About phone, status item title. The status summary for technology that's not available. [CHAR LIMIT=40] -->
+    <string name="battery_technology_not_available" translatable="false">@string/battery_cycle_count_not_available</string>
+    <!-- About phone, status item title. The health of the battery. [CHAR LIMIT=60] -->
+    <string name="battery_health">Health</string>
+    <!-- About phone, status item value. Indicates the battery is in good health. [CHAR LIMIT=60] -->
+    <string name="battery_health_good">Good</string>
+    <!-- About phone, status item value. Indicates the battery is overheating. [CHAR LIMIT=60] -->
+    <string name="battery_health_overheat">Overheat</string>
+    <!-- About phone, status item value. Indicates the battery is dead. [CHAR LIMIT=60] -->
+    <string name="battery_health_dead">Dead</string>
+    <!-- About phone, status item value. Indicates the battery is over-voltage. [CHAR LIMIT=60] -->
+    <string name="battery_health_over_voltage">Over voltage</string>
+    <!-- About phone, status item value. Indicates the battery has an unspecified failure. [CHAR LIMIT=60] -->
+    <string name="battery_health_unspecified_failure">Unspecified failure</string>
+    <!-- About phone, status item value. Indicates the battery is too cold. [CHAR LIMIT=60] -->
+    <string name="battery_health_cold">Cold</string>
+    <!-- About phone, status item value. Indicates the battery health is unknown. [CHAR LIMIT=60] -->
+    <string name="battery_health_unknown">Unknown</string>
+    <!-- About phone, status item title. The temperature of the battery. [CHAR LIMIT=60] -->
+    <string name="battery_temperature">Temperature</string>
+    <!-- About phone, status item title. The status summary for temperature that's not available. [CHAR LIMIT=40] -->
+    <string name="battery_temperature_not_available" translatable="false">@string/battery_cycle_count_not_available</string>
+    <!-- About phone, status item title. The voltage of the battery. [CHAR LIMIT=60] -->
+    <string name="battery_voltage">Voltage</string>
+    <!-- About phone, status item title. The status summary for voltage that's not available. [CHAR LIMIT=40] -->
+    <string name="battery_voltage_not_available" translatable="false">@string/battery_cycle_count_not_available</string>
+    <!-- About phone, status item title. The design capacity of the battery. [CHAR LIMIT=60] -->
+    <string name="battery_design_capacity">Design capacity</string>
+    <!-- About phone, status item title. The status summary for design capacity that's not available. [CHAR LIMIT=40] -->
+    <string name="battery_design_capacity_not_available" translatable="false">@string/battery_cycle_count_not_available</string>
+    <!-- About phone, status item summary. The design capacity in mAh. [CHAR LIMIT=60] -->
+    <string name="battery_design_capacity_summary">%1$d mAh</string>
+    <!-- About phone, status item title. The maximum capacity of the battery. [CHAR LIMIT=60] -->
+    <string name="battery_maximum_capacity">Maximum capacity</string>
+    <!-- About phone, status item summary. The maximum capacity in mAh and percentage. [CHAR LIMIT=60] -->
+    <string name="battery_maximum_capacity_summary">%1$d mAh (%2$d%%)</string>
+    <!-- About phone, status item title. The status summary for maximum capacity that's not available. [CHAR LIMIT=40] -->
+    <string name="battery_maximum_capacity_not_available" translatable="false">@string/battery_cycle_count_not_available</string>
 
     <!-- SD card & phone storage settings summary. Displayed when the total memory usage is being calculated. Will be replaced with a number like "12.3 GB" when finished calucating. [CHAR LIMIT=30] -->
     <string name="memory_calculating_size">Calculating\u2026</string>
