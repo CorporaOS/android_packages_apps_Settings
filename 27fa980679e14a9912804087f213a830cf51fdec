@@ -16,6 +16,24 @@
       "message": "should we check if Thread is supported or not first?",
       "revId": "27fa980679e14a9912804087f213a830cf51fdec",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a4c4f03b_d2109f3f",
+        "filename": "src/com/android/settings/threadnetwork/ThreadNetworkPreferenceController.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 1693933
+      },
+      "writtenOn": "2024-02-27T10:53:36Z",
+      "side": 1,
+      "message": "When Thread is not supported, the AvailabilityStatus will be set to \"UNSUPPORTED_ON_DEVICE\" in getAvailabilityStatus() method and the toggle will not be shown in this case.",
+      "parentUuid": "a7ecb2fa_a88fe682",
+      "revId": "27fa980679e14a9912804087f213a830cf51fdec",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
