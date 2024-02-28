@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2321c23_87b81dd0",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 20
+      },
+      "lineNbr": 11733,
+      "author": {
+        "id": 1693933
+      },
+      "writtenOn": "2024-02-28T16:11:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fec83199_c83682c7",
+      "revId": "1b3fa3539a09af1e84c9fefb21b4926621174a02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "512ee765_7dbc500b",
@@ -31,6 +49,24 @@
       "writtenOn": "2024-02-28T13:33:11Z",
       "side": 1,
       "message": "go/kotlin-practices/null#avoid-not-null-assertion-operator\n\nThe style guide suggests to avoid null assertions.",
+      "revId": "1b3fa3539a09af1e84c9fefb21b4926621174a02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f054695e_2a514c8c",
+        "filename": "src/com/android/settings/threadnetwork/ThreadNetworkPreferenceController.kt",
+        "patchSetId": 20
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1693933
+      },
+      "writtenOn": "2024-02-28T16:11:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "512ee765_7dbc500b",
       "revId": "1b3fa3539a09af1e84c9fefb21b4926621174a02",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -58,6 +94,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "84d2dc15_9af1481c",
+        "filename": "src/com/android/settings/threadnetwork/ThreadNetworkPreferenceController.kt",
+        "patchSetId": 20
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1693933
+      },
+      "writtenOn": "2024-02-28T16:11:09Z",
+      "side": 1,
+      "message": "This si inherited from base class. In java, it is `getPreferenceKey()`. In kotlin, the \"get\" prefix of a getter is omitted.",
+      "parentUuid": "4c005323_6873653c",
+      "range": {
+        "startLine": 129,
+        "startChar": 44,
+        "endLine": 129,
+        "endChar": 57
+      },
+      "revId": "1b3fa3539a09af1e84c9fefb21b4926621174a02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f4120b81_376f33cc",
@@ -75,6 +135,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b6f9c612_1511a6ef",
+        "filename": "src/com/android/settings/threadnetwork/ThreadNetworkPreferenceController.kt",
+        "patchSetId": 20
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1693933
+      },
+      "writtenOn": "2024-02-28T16:11:09Z",
+      "side": 1,
+      "message": "They are both \"override\" methods which come from the base class (`TogglePreferenceController`) and documented there.\n\nsetChecked() is called when toggle is flipped. ischecked() is called to decide how to redender the UI after the flip.",
+      "parentUuid": "f4120b81_376f33cc",
+      "revId": "1b3fa3539a09af1e84c9fefb21b4926621174a02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ac4a59c9_11ad5ba8",
@@ -88,6 +166,24 @@
       "writtenOn": "2024-02-28T13:33:11Z",
       "side": 1,
       "message": "Ditto. Avoid using null assertions.",
+      "revId": "1b3fa3539a09af1e84c9fefb21b4926621174a02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "57b89437_8104d48d",
+        "filename": "src/com/android/settings/threadnetwork/ThreadNetworkPreferenceController.kt",
+        "patchSetId": 20
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 1693933
+      },
+      "writtenOn": "2024-02-28T16:11:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ac4a59c9_11ad5ba8",
       "revId": "1b3fa3539a09af1e84c9fefb21b4926621174a02",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -115,6 +211,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "effb876d_3ed2175f",
+        "filename": "tests/unit/src/com/android/settings/threadnetwork/ThreadNetworkPreferenceControllerTest.kt",
+        "patchSetId": 20
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1693933
+      },
+      "writtenOn": "2024-02-28T16:11:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "58816c14_81b15ce8",
+      "range": {
+        "startLine": 92,
+        "startChar": 8,
+        "endLine": 92,
+        "endChar": 66
+      },
+      "revId": "1b3fa3539a09af1e84c9fefb21b4926621174a02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a87d3e2b_ed648113",
@@ -128,6 +248,30 @@
       "writtenOn": "2024-02-28T13:33:11Z",
       "side": 1,
       "message": "Should it be preference disabled?",
+      "range": {
+        "startLine": 168,
+        "startChar": 8,
+        "endLine": 168,
+        "endChar": 57
+      },
+      "revId": "1b3fa3539a09af1e84c9fefb21b4926621174a02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0016fc34_03c528a0",
+        "filename": "tests/unit/src/com/android/settings/threadnetwork/ThreadNetworkPreferenceControllerTest.kt",
+        "patchSetId": 20
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 1693933
+      },
+      "writtenOn": "2024-02-28T16:11:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a87d3e2b_ed648113",
       "range": {
         "startLine": 168,
         "startChar": 8,
