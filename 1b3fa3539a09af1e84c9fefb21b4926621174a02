@@ -1,0 +1,141 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fec83199_c83682c7",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 20
+      },
+      "lineNbr": 11733,
+      "author": {
+        "id": 2016993
+      },
+      "writtenOn": "2024-02-28T13:33:11Z",
+      "side": 1,
+      "message": "```suggestion\n    \u003c!-- Summary for Thread network preference when airplane mode is enabled. [CHAR_LIMIT\u003dNONE]--\u003e\n```\nnit",
+      "revId": "1b3fa3539a09af1e84c9fefb21b4926621174a02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "512ee765_7dbc500b",
+        "filename": "src/com/android/settings/threadnetwork/ThreadNetworkPreferenceController.kt",
+        "patchSetId": 20
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 2016993
+      },
+      "writtenOn": "2024-02-28T13:33:11Z",
+      "side": 1,
+      "message": "go/kotlin-practices/null#avoid-not-null-assertion-operator\n\nThe style guide suggests to avoid null assertions.",
+      "revId": "1b3fa3539a09af1e84c9fefb21b4926621174a02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c005323_6873653c",
+        "filename": "src/com/android/settings/threadnetwork/ThreadNetworkPreferenceController.kt",
+        "patchSetId": 20
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 2016993
+      },
+      "writtenOn": "2024-02-28T13:33:11Z",
+      "side": 1,
+      "message": "I may have missed something. Where is this `preferenceKey` from?",
+      "range": {
+        "startLine": 129,
+        "startChar": 44,
+        "endLine": 129,
+        "endChar": 57
+      },
+      "revId": "1b3fa3539a09af1e84c9fefb21b4926621174a02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f4120b81_376f33cc",
+        "filename": "src/com/android/settings/threadnetwork/ThreadNetworkPreferenceController.kt",
+        "patchSetId": 20
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 2016993
+      },
+      "writtenOn": "2024-02-28T13:33:11Z",
+      "side": 1,
+      "message": "What does \u0027checked\u0027 mean? It confuses me a little bit that the value returned in `isChecked` looks not directly related to  what `setChecked` does.\n\nMaybe document the behavior can make it easier to understand.",
+      "revId": "1b3fa3539a09af1e84c9fefb21b4926621174a02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ac4a59c9_11ad5ba8",
+        "filename": "src/com/android/settings/threadnetwork/ThreadNetworkPreferenceController.kt",
+        "patchSetId": 20
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 2016993
+      },
+      "writtenOn": "2024-02-28T13:33:11Z",
+      "side": 1,
+      "message": "Ditto. Avoid using null assertions.",
+      "revId": "1b3fa3539a09af1e84c9fefb21b4926621174a02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "58816c14_81b15ce8",
+        "filename": "tests/unit/src/com/android/settings/threadnetwork/ThreadNetworkPreferenceControllerTest.kt",
+        "patchSetId": 20
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 2016993
+      },
+      "writtenOn": "2024-02-28T13:33:11Z",
+      "side": 1,
+      "message": "I think it returns `CONDITIONALLY_UNAVAILABLE`\n```suggestion\n    fun availabilityStatus_flagDisabled_returnsConditionallyUnavailable() {\n```",
+      "range": {
+        "startLine": 92,
+        "startChar": 8,
+        "endLine": 92,
+        "endChar": 66
+      },
+      "revId": "1b3fa3539a09af1e84c9fefb21b4926621174a02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a87d3e2b_ed648113",
+        "filename": "tests/unit/src/com/android/settings/threadnetwork/ThreadNetworkPreferenceControllerTest.kt",
+        "patchSetId": 20
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 2016993
+      },
+      "writtenOn": "2024-02-28T13:33:11Z",
+      "side": 1,
+      "message": "Should it be preference disabled?",
+      "range": {
+        "startLine": 168,
+        "startChar": 8,
+        "endLine": 168,
+        "endChar": 57
+      },
+      "revId": "1b3fa3539a09af1e84c9fefb21b4926621174a02",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
