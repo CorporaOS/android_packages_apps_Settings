@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed7f5c28_3b1e3b22",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 21
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-02-28T19:13:19Z",
+      "side": 1,
+      "message": "+Tim Peng from connectivity settings team, +Sunny from Settings core for review",
+      "revId": "3f5b82bf13e3277a343ad946d7ac6bbef047bff9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
