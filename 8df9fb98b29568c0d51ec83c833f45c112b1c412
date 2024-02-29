@@ -64,6 +64,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc52a34e_07bbb953",
+        "filename": "src/com/android/settings/connecteddevice/threadnetwork/ThreadNetworkPreferenceController.kt",
+        "patchSetId": 24
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 1693933
+      },
+      "writtenOn": "2024-02-29T09:20:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5184c509_e4b5cf35",
+      "range": {
+        "startLine": 164,
+        "startChar": 8,
+        "endLine": 164,
+        "endChar": 48
+      },
+      "revId": "8df9fb98b29568c0d51ec83c833f45c112b1c412",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8eb46493_86b81868",
@@ -77,6 +101,30 @@
       "writtenOn": "2024-02-29T09:08:26Z",
       "side": 1,
       "message": "Does the testcase be modified as the following codes???\n\n```\n@Test\n@RequiresFlagsDisabled(Flags.FLAG_THREAD_ENABLED_PLATFORM)\nfun availabilityStatus_flagDisabled_returnsConditionallyUnavailable() {\nassertThat(controller.getAvailabilityStatus()).isEqualTo(CONDITIONALLY_UNAVAILABLE)\n}\n```",
+      "range": {
+        "startLine": 97,
+        "startChar": 4,
+        "endLine": 98,
+        "endChar": 73
+      },
+      "revId": "8df9fb98b29568c0d51ec83c833f45c112b1c412",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ab4e460c_d5bb8927",
+        "filename": "tests/unit/src/com/android/settings/conecteddevice/threadnetwork/ThreadNetworkPreferenceControllerTest.kt",
+        "patchSetId": 24
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1693933
+      },
+      "writtenOn": "2024-02-29T09:20:20Z",
+      "side": 1,
+      "message": "With @RequiresFlagsDisabled, the test case will not be run if the flag is not enabled. But here I want to make sure the code works as expected when the flag is disabled. See go/class-method-override",
+      "parentUuid": "8eb46493_86b81868",
       "range": {
         "startLine": 97,
         "startChar": 4,
