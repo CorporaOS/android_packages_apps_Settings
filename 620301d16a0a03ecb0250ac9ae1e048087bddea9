@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9c63ad75_57295887",
+        "filename": "src/com/android/settings/connecteddevice/AdvancedConnectedDeviceDashboardFragment.java",
+        "patchSetId": 25
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1501264
+      },
+      "writtenOn": "2024-02-29T09:45:37Z",
+      "side": 1,
+      "message": "This is auto registered, no need to manual register here, so we can avoid double registers.",
+      "range": {
+        "startLine": 87,
+        "startChar": 20,
+        "endLine": 87,
+        "endChar": 83
+      },
+      "revId": "620301d16a0a03ecb0250ac9ae1e048087bddea9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
