@@ -16,6 +16,75 @@
       "message": "Add the owner of the connected devices \u003e connection preferences \u003e cast for reveiwing.",
       "revId": "8df9fb98b29568c0d51ec83c833f45c112b1c412",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "20f6ea18_518283d1",
+        "filename": "src/com/android/settings/connecteddevice/threadnetwork/ThreadNetworkPreferenceController.kt",
+        "patchSetId": 24
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2024-02-29T09:08:26Z",
+      "side": 1,
+      "message": "nit.\n\n```suggestion\n        if (threadController \u003d\u003d null) return\n```",
+      "range": {
+        "startLine": 160,
+        "startChar": 0,
+        "endLine": 162,
+        "endChar": 9
+      },
+      "revId": "8df9fb98b29568c0d51ec83c833f45c112b1c412",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5184c509_e4b5cf35",
+        "filename": "src/com/android/settings/connecteddevice/threadnetwork/ThreadNetworkPreferenceController.kt",
+        "patchSetId": 24
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2024-02-29T09:08:26Z",
+      "side": 1,
+      "message": "```suggestion\n        when (event) {\n            Lifecycle.Event.ON_START -\u003e {\n                threadController.registerStateCallback(executor, stateCallback)\n                airplaneModeOn \u003d isAirplaneModeOn(mContext)\n                mContext.registerReceiver(\n                    airplaneModeReceiver,\n                    IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED)\n                )\n                preference?.let { preference -\u003e updateState(preference) }\n            }\n            Lifecycle.Event.ON_STOP -\u003e {\n                threadController.unregisterStateCallback(stateCallback)\n                mContext.unregisterReceiver(airplaneModeReceiver)\n            }\n```",
+      "range": {
+        "startLine": 164,
+        "startChar": 8,
+        "endLine": 164,
+        "endChar": 48
+      },
+      "revId": "8df9fb98b29568c0d51ec83c833f45c112b1c412",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8eb46493_86b81868",
+        "filename": "tests/unit/src/com/android/settings/conecteddevice/threadnetwork/ThreadNetworkPreferenceControllerTest.kt",
+        "patchSetId": 24
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2024-02-29T09:08:26Z",
+      "side": 1,
+      "message": "Does the testcase be modified as the following codes???\n\n```\n@Test\n@RequiresFlagsDisabled(Flags.FLAG_THREAD_ENABLED_PLATFORM)\nfun availabilityStatus_flagDisabled_returnsConditionallyUnavailable() {\nassertThat(controller.getAvailabilityStatus()).isEqualTo(CONDITIONALLY_UNAVAILABLE)\n}\n```",
+      "range": {
+        "startLine": 97,
+        "startChar": 4,
+        "endLine": 98,
+        "endChar": 73
+      },
+      "revId": "8df9fb98b29568c0d51ec83c833f45c112b1c412",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
