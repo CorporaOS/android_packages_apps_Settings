@@ -118,6 +118,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a950a1d3_fdfe305e",
+        "filename": "src/com/android/settings/connecteddevice/threadnetwork/ThreadNetworkPreferenceController.kt",
+        "patchSetId": 22
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1351023
+      },
+      "writtenOn": "2024-02-29T09:12:37Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "fe14dc19_1e63c1f7",
+      "range": {
+        "startLine": 129,
+        "startChar": 17,
+        "endLine": 129,
+        "endChar": 28
+      },
+      "revId": "e9b11eaed8b27d3189c05c68b1b01f206d037c6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "31735334_0a191106",
@@ -155,6 +179,30 @@
       "side": 1,
       "message": "Sure. But I didn\u0027t find a quick way to do it (it\u0027s a bit tricky to keep the UI and the underlying state consistent especially in a async style). I added a TODO to handle this later for Android V. Is it acceptable for you?",
       "parentUuid": "31735334_0a191106",
+      "range": {
+        "startLine": 143,
+        "startChar": 20,
+        "endLine": 143,
+        "endChar": 61
+      },
+      "revId": "e9b11eaed8b27d3189c05c68b1b01f206d037c6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "50c0197f_61b8b962",
+        "filename": "src/com/android/settings/connecteddevice/threadnetwork/ThreadNetworkPreferenceController.kt",
+        "patchSetId": 22
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1351023
+      },
+      "writtenOn": "2024-02-29T09:12:37Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "ed256e80_50c06009",
       "range": {
         "startLine": 143,
         "startChar": 20,
