@@ -133,6 +133,30 @@
       },
       "revId": "8df9fb98b29568c0d51ec83c833f45c112b1c412",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "50206606_73a1e318",
+        "filename": "tests/unit/src/com/android/settings/conecteddevice/threadnetwork/ThreadNetworkPreferenceControllerTest.kt",
+        "patchSetId": 24
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2024-02-29T09:33:59Z",
+      "side": 1,
+      "message": "Thanks for explanations. You can modify this in future if it can work.",
+      "parentUuid": "ab4e460c_d5bb8927",
+      "range": {
+        "startLine": 97,
+        "startChar": 4,
+        "endLine": 98,
+        "endChar": 73
+      },
+      "revId": "8df9fb98b29568c0d51ec83c833f45c112b1c412",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
