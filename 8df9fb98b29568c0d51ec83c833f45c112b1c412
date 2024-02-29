@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "34242f1b_09b48d8e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 24
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2024-02-29T08:29:30Z",
+      "side": 1,
+      "message": "Add the owner of the connected devices \u003e connection preferences \u003e cast for reveiwing.",
+      "revId": "8df9fb98b29568c0d51ec83c833f45c112b1c412",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
