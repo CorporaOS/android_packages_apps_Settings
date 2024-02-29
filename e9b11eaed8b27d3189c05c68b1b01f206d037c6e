@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1d1e589_3bf2d174",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 22
+      },
+      "lineNbr": 11731,
+      "author": {
+        "id": 1693933
+      },
+      "writtenOn": "2024-02-29T08:24:00Z",
+      "side": 1,
+      "message": "Updated to the suggestion in https://buganizer.corp.google.com/issues/327098435#comment3",
+      "parentUuid": "93461223_2e735d27",
+      "revId": "e9b11eaed8b27d3189c05c68b1b01f206d037c6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "24d581e0_84163bcf",
@@ -31,6 +49,24 @@
       "writtenOn": "2024-02-29T07:40:31Z",
       "side": 1,
       "message": "Does Thread have to be off in airplane mode. Perhaps we can remove this for now until we are sure about it?",
+      "revId": "e9b11eaed8b27d3189c05c68b1b01f206d037c6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e7b51eec_6cfec8de",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 22
+      },
+      "lineNbr": 11734,
+      "author": {
+        "id": 1693933
+      },
+      "writtenOn": "2024-02-29T08:24:00Z",
+      "side": 1,
+      "message": "I think we need to. This is final yet, we can still change this if I am wrong.",
+      "parentUuid": "24d581e0_84163bcf",
       "revId": "e9b11eaed8b27d3189c05c68b1b01f206d037c6e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -60,6 +96,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "fe14dc19_1e63c1f7",
+        "filename": "src/com/android/settings/connecteddevice/threadnetwork/ThreadNetworkPreferenceController.kt",
+        "patchSetId": 22
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1693933
+      },
+      "writtenOn": "2024-02-29T08:24:00Z",
+      "side": 1,
+      "message": "This is actually due to the fact that airplane mode support in the Thread mainline module is not completed yet. I added documentation and TODO for this line.\n\n```\n// TODO (b/322742298):\n// Check airplane mode here because it\u0027s planned to disable Thread state in airplane mode\n// (code in the mainline module). But it\u0027s currently not implemented yet (b/322742298).\n// By design, the toggle should be unchecked in airplane mode, so explicitly check the\n// airplane mode here to acchieve the same UX.\n```",
+      "parentUuid": "d6bd7c11_0ce58984",
+      "range": {
+        "startLine": 129,
+        "startChar": 17,
+        "endLine": 129,
+        "endChar": 28
+      },
+      "revId": "e9b11eaed8b27d3189c05c68b1b01f206d037c6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "31735334_0a191106",
         "filename": "src/com/android/settings/connecteddevice/threadnetwork/ThreadNetworkPreferenceController.kt",
         "patchSetId": 22
@@ -71,6 +131,30 @@
       "writtenOn": "2024-02-29T07:37:58Z",
       "side": 1,
       "message": "Do we need to toggle UI back when it failed?",
+      "range": {
+        "startLine": 143,
+        "startChar": 20,
+        "endLine": 143,
+        "endChar": 61
+      },
+      "revId": "e9b11eaed8b27d3189c05c68b1b01f206d037c6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ed256e80_50c06009",
+        "filename": "src/com/android/settings/connecteddevice/threadnetwork/ThreadNetworkPreferenceController.kt",
+        "patchSetId": 22
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1693933
+      },
+      "writtenOn": "2024-02-29T08:24:00Z",
+      "side": 1,
+      "message": "Sure. But I didn\u0027t find a quick way to do it (it\u0027s a bit tricky to keep the UI and the underlying state consistent especially in a async style). I added a TODO to handle this later for Android V. Is it acceptable for you?",
+      "parentUuid": "31735334_0a191106",
       "range": {
         "startLine": 143,
         "startChar": 20,
