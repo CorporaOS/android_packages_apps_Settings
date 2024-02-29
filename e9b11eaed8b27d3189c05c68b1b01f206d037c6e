@@ -3,6 +3,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "93461223_2e735d27",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 22
+      },
+      "lineNbr": 11731,
+      "author": {
+        "id": 1501262
+      },
+      "writtenOn": "2024-02-29T07:40:31Z",
+      "side": 1,
+      "message": "Perhaps: Connect to devices via Thread(a low-power and low-latency wireless mesh networking protocol).",
+      "revId": "e9b11eaed8b27d3189c05c68b1b01f206d037c6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "24d581e0_84163bcf",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 22
+      },
+      "lineNbr": 11734,
+      "author": {
+        "id": 1501262
+      },
+      "writtenOn": "2024-02-29T07:40:31Z",
+      "side": 1,
+      "message": "Does Thread have to be off in airplane mode. Perhaps we can remove this for now until we are sure about it?",
+      "revId": "e9b11eaed8b27d3189c05c68b1b01f206d037c6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d6bd7c11_0ce58984",
         "filename": "src/com/android/settings/connecteddevice/threadnetwork/ThreadNetworkPreferenceController.kt",
         "patchSetId": 22
