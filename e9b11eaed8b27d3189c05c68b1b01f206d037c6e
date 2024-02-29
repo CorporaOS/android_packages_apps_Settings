@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d6bd7c11_0ce58984",
+        "filename": "src/com/android/settings/connecteddevice/threadnetwork/ThreadNetworkPreferenceController.kt",
+        "patchSetId": 22
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1351023
+      },
+      "writtenOn": "2024-02-29T07:37:58Z",
+      "side": 1,
+      "message": "IIUC, isChecked() is current toggle status.\nDo we need to check airplaneModeOn?\nWe could have another method for the feature on/off if necessary.",
+      "range": {
+        "startLine": 129,
+        "startChar": 17,
+        "endLine": 129,
+        "endChar": 28
+      },
+      "revId": "e9b11eaed8b27d3189c05c68b1b01f206d037c6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "31735334_0a191106",
+        "filename": "src/com/android/settings/connecteddevice/threadnetwork/ThreadNetworkPreferenceController.kt",
+        "patchSetId": 22
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1351023
+      },
+      "writtenOn": "2024-02-29T07:37:58Z",
+      "side": 1,
+      "message": "Do we need to toggle UI back when it failed?",
+      "range": {
+        "startLine": 143,
+        "startChar": 20,
+        "endLine": 143,
+        "endChar": 61
+      },
+      "revId": "e9b11eaed8b27d3189c05c68b1b01f206d037c6e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
