@@ -16,6 +16,23 @@
       "message": "Any updates on this ?",
       "revId": "06f1d1b5fb23ec845d20bde0ad68fd7e7431bb73",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "291ee639_58ab65b7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3280207
+      },
+      "writtenOn": "2024-03-05T05:55:57Z",
+      "side": 1,
+      "message": "Hi team ,\nAny updates on the same ?",
+      "revId": "06f1d1b5fb23ec845d20bde0ad68fd7e7431bb73",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
