@@ -560,13 +560,20 @@ public class SimStatusDialogController implements LifecycleObserver {
             show4GForLTE = carrierConfig.getBoolean(
                     CarrierConfigManager.KEY_SHOW_4G_FOR_LTE_DATA_ICON_BOOL);
         }
-
+        Log.d(TAG, "updateNetworkType: show4GForLTE = " + show4GForLTE + " dataNetworkTypeName = "
+                + dataNetworkTypeName + " voiceNetworkTypeName = " + voiceNetworkTypeName);
         if (show4GForLTE) {
             if ("LTE".equals(dataNetworkTypeName)) {
                 dataNetworkTypeName = "4G";
             }
             if ("LTE".equals(voiceNetworkTypeName)) {
                 voiceNetworkTypeName = "4G";
+            }
+            if ("LTE_CA".equals(dataNetworkTypeName)) {
+                dataNetworkTypeName = "4G+";
+            }
+            if ("LTE_CA".equals(voiceNetworkTypeName)) {
+                voiceNetworkTypeName = "4G+";
             }
         }
 
@@ -781,8 +788,8 @@ public class SimStatusDialogController implements LifecycleObserver {
                 return "TD_SCDMA";
             case TelephonyManager.NETWORK_TYPE_IWLAN:
                 return "IWLAN";
-//          case TelephonyManager.NETWORK_TYPE_LTE_CA:
-//              return "LTE_CA";
+          case TelephonyManager.NETWORK_TYPE_LTE_CA:
+              return "LTE_CA";
             case TelephonyManager.NETWORK_TYPE_NR:
                 return "NR SA";
             default:
