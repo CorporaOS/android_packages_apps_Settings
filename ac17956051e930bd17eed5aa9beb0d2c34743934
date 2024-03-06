@@ -22,6 +22,30 @@
       },
       "revId": "ac17956051e930bd17eed5aa9beb0d2c34743934",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6685ede8_7f95db56",
+        "filename": "src/com/android/settings/deviceinfo/simstatus/SimStatusDialogController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 791,
+      "author": {
+        "id": 1413437
+      },
+      "writtenOn": "2024-03-06T09:36:46Z",
+      "side": 1,
+      "message": "Let me check framework code, and then update it",
+      "parentUuid": "9bd8b7c0_99b98a22",
+      "range": {
+        "startLine": 791,
+        "startChar": 15,
+        "endLine": 791,
+        "endChar": 51
+      },
+      "revId": "ac17956051e930bd17eed5aa9beb0d2c34743934",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
