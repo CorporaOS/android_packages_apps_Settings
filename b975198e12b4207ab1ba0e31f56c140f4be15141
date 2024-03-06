@@ -16,6 +16,29 @@
       "message": "songferngwang@google.com Please help to review it again.",
       "revId": "b975198e12b4207ab1ba0e31f56c140f4be15141",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf83ffe7_e8fae8ad",
+        "filename": "src/com/android/settings/network/SubscriptionsPreferenceController.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2024-03-06T10:05:17Z",
+      "side": 1,
+      "message": "it is duplicate logic, since the MobileMappings have this.\n https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/packages/SettingsLib/src/com/android/settingslib/mobile/MobileMappings.java;l\u003d161?q\u003dMobileMappings.java",
+      "range": {
+        "startLine": 301,
+        "startChar": 0,
+        "endLine": 313,
+        "endChar": 17
+      },
+      "revId": "b975198e12b4207ab1ba0e31f56c140f4be15141",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
