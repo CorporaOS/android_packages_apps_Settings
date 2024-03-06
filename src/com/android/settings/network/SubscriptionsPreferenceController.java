@@ -29,8 +29,10 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
 import android.net.wifi.WifiManager;
+import android.os.PersistableBundle;
 import android.os.UserManager;
 import android.telephony.AccessNetworkConstants;
+import android.telephony.CarrierConfigManager;
 import android.telephony.NetworkRegistrationInfo;
 import android.telephony.ServiceState;
 import android.telephony.SignalStrength;
@@ -290,13 +292,27 @@ public class SubscriptionsPreferenceController extends AbstractPreferenceControl
         String result = mSubsPrefCtrlInjector.getNetworkType(mContext, mConfig,
                 mTelephonyDisplayInfo, subId, isCarrierNetworkActive, mCarrierNetworkChangeMode);
         if (mSubsPrefCtrlInjector.isActiveCellularNetwork(mContext) || isCarrierNetworkActive) {
+            String connectionState = mContext.getString(isDds
+                    ? R.string.mobile_data_connection_active
+                    : R.string.mobile_data_temp_connection_active);
             if (result.isEmpty()) {
-                result = mContext.getString(isDds ? R.string.mobile_data_connection_active
-                        : R.string.mobile_data_temp_connection_active);
+                return connectionState;
             } else {
-                result = mContext.getString(R.string.preference_summary_default_combination,
-                        mContext.getString(isDds ? R.string.mobile_data_connection_active
-                                : R.string.mobile_data_temp_connection_active), result);
+                CarrierConfigManager carrierConfigManager = mContext.getSystemService(
+                        CarrierConfigManager.class);
+                final PersistableBundle carrierConfig = carrierConfigManager.getConfigForSubId(
+                        subId);
+                if (carrierConfig != null) {
+                    boolean show4GForLTE = carrierConfig.getBoolean(
+                            CarrierConfigManager.KEY_SHOW_4G_FOR_LTE_DATA_ICON_BOOL);
+                    if (show4GForLTE) {
+                        if ("LTE".equalsIgnoreCase(result)) {
+                            result = "4G";
+                        }
+                    }
+                }
+                result = mContext.getString(
+                        R.string.preference_summary_default_combination, connectionState, result);
             }
         } else if (!isDataInService) {
             result = mContext.getString(R.string.mobile_data_no_connection);
