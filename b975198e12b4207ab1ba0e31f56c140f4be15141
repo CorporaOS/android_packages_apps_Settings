@@ -39,6 +39,30 @@
       },
       "revId": "b975198e12b4207ab1ba0e31f56c140f4be15141",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "349146ff_e1d49750",
+        "filename": "src/com/android/settings/network/SubscriptionsPreferenceController.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 1413437
+      },
+      "writtenOn": "2024-03-07T08:06:49Z",
+      "side": 1,
+      "message": "songferngwang@google.com Thanks for your comment. \n\nI updated the gerrit to ensure sim status network type override using the same control logic in settingslib. Please help to review it again.",
+      "parentUuid": "cf83ffe7_e8fae8ad",
+      "range": {
+        "startLine": 301,
+        "startChar": 0,
+        "endLine": 313,
+        "endChar": 17
+      },
+      "revId": "b975198e12b4207ab1ba0e31f56c140f4be15141",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
