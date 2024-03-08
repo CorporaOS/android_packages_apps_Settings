@@ -71,6 +71,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "183f92f7_8adf3adc",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 11343,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-03-08T03:15:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "23f2f1f4_14737f58",
+      "revId": "b6108df4e8fcba80fdcf0624bfffa763d4991ea9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ffefd7f1_1cfe166e",
@@ -84,6 +102,30 @@
       "writtenOn": "2024-03-08T02:38:30Z",
       "side": 1,
       "message": "Please fix this WARNING reported by AndroidLint: [RequiresNullabilityAnnotation] Java public method parameter with non-primitive type must add androidx annotation. Example: functionName(@NonNull Context context, @Nullable Object obj) {}\n\nAnalyzer Description: Reports AndroidLint warnings.\nOwner: colefaust@google.com\n\n[RequiresNullabilityAnnotation] Java public method parameter with non-primitive type must add androidx annotation. Example: functionName(@NonNull Context context, @Nullable Object obj) {}\n\n                        public void onFailure(Throwable t) {\n                                                        ~\n\nAll public java APIs should specify nullability annotations for methods and parameters.\n\nSuppression and local reproduction steps: go/ayeaye-android-lint\n\nThis warning was found on the git_main branch",
+      "range": {
+        "startLine": 313,
+        "startChar": 53,
+        "endLine": 313,
+        "endChar": 56
+      },
+      "revId": "b6108df4e8fcba80fdcf0624bfffa763d4991ea9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a7e033e_fc41611b",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-03-08T03:15:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ffefd7f1_1cfe166e",
       "range": {
         "startLine": 313,
         "startChar": 53,
