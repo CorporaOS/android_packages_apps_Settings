@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3deecd1d_52935a74",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 11350,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-03-08T21:57:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9b13f281_19aa16c7",
+      "range": {
+        "startLine": 11350,
+        "startChar": 118,
+        "endLine": 11350,
+        "endChar": 162
+      },
+      "revId": "dfb4079b6cab67af4ae17a7280bcea3d006839e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "857f5513_10aac11b",
@@ -37,6 +61,30 @@
       "writtenOn": "2024-03-08T19:50:38Z",
       "side": 1,
       "message": "Why wouldn\u0027t it be?",
+      "range": {
+        "startLine": 47,
+        "startChar": 12,
+        "endLine": 47,
+        "endChar": 64
+      },
+      "revId": "dfb4079b6cab67af4ae17a7280bcea3d006839e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e08803c_3e0f6b8d",
+        "filename": "src/com/android/settings/development/Enable16KOemUnlockDialog.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-03-08T21:57:11Z",
+      "side": 1,
+      "message": "If there is some existing fragment which uses the same tag but instance of different dialog, then don\u0027t want to show that.",
+      "parentUuid": "857f5513_10aac11b",
       "range": {
         "startLine": 47,
         "startChar": 12,
