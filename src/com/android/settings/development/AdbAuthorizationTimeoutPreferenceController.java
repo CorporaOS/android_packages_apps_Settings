@@ -22,6 +22,7 @@ import android.provider.Settings;
 import androidx.preference.Preference;
 import androidx.preference.TwoStatePreference;
 
+import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
 
 /**
@@ -29,7 +30,7 @@ import com.android.settingslib.development.DeveloperOptionsPreferenceController;
  * authorizations.
  */
 public class AdbAuthorizationTimeoutPreferenceController extends
-        DeveloperOptionsPreferenceController implements Preference.OnPreferenceChangeListener {
+        DeveloperOptionsPreferenceController implements Preference.OnPreferenceChangeListener , PreferenceControllerMixin {
     private static final String ADB_AUTHORIZATION_TIMEOUT_KEY = "adb_authorization_timeout";
 
     private final Context mContext;

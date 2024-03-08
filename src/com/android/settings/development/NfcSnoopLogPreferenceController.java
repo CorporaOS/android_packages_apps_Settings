@@ -24,13 +24,14 @@ import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 import androidx.preference.TwoStatePreference;
 
+import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
 
 /**
  * Preference controller to control NFCSNOOP data payload
  */
 public class NfcSnoopLogPreferenceController extends
-        DeveloperOptionsPreferenceController implements Preference.OnPreferenceChangeListener {
+        DeveloperOptionsPreferenceController implements Preference.OnPreferenceChangeListener, PreferenceControllerMixin {
     private static final String TAG = "NfcSnoopLog";
     private static final String NFC_NFCSNOOP_LOG_KEY =
             "nfc_snoop_log";

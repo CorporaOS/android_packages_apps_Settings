@@ -26,6 +26,7 @@ import android.provider.Settings;
 import android.util.Log;
 import android.view.autofill.AutofillManager;
 
+import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.core.lifecycle.LifecycleObserver;
 import com.android.settingslib.core.lifecycle.events.OnStart;
@@ -36,7 +37,7 @@ import com.android.settingslib.development.DeveloperOptionsPreferenceController;
  * Controller class for observing the state of AutofillManager.
  */
 public class AutofillCategoryController extends DeveloperOptionsPreferenceController implements
-        LifecycleObserver, OnStart, OnStop {
+        LifecycleObserver, OnStart, OnStop, PreferenceControllerMixin {
 
     private static final String TAG = "AutofillCategoryController";
 

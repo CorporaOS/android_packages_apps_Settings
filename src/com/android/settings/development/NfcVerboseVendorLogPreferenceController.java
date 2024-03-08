@@ -24,6 +24,7 @@ import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 import androidx.preference.TwoStatePreference;
 
+import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
 
 /**
@@ -31,7 +32,7 @@ import com.android.settingslib.development.DeveloperOptionsPreferenceController;
  */
 public class NfcVerboseVendorLogPreferenceController
         extends DeveloperOptionsPreferenceController
-        implements Preference.OnPreferenceChangeListener {
+        implements Preference.OnPreferenceChangeListener, PreferenceControllerMixin {
     private static final String TAG = "NfcVerboseVendorLog";
     private static final String NFC_VERBOSE_VENDOR_LOG_KEY = "nfc_verbose_vendor_log";
     @VisibleForTesting
