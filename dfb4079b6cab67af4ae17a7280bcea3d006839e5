@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b13f281_19aa16c7",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 11350,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2024-03-08T19:50:38Z",
+      "side": 1,
+      "message": "we should have additional text \"OEM unlock will also require formatting userdata.\"\n\nWe\u0027ll also want additional text and warnings, currently being discussed the exact text, but we could add that before it\u0027s enabled on a production device - this should be sufficient for our separately flashable targets.",
+      "range": {
+        "startLine": 11350,
+        "startChar": 118,
+        "endLine": 11350,
+        "endChar": 162
+      },
+      "revId": "dfb4079b6cab67af4ae17a7280bcea3d006839e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "857f5513_10aac11b",
+        "filename": "src/com/android/settings/development/Enable16KOemUnlockDialog.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2024-03-08T19:50:38Z",
+      "side": 1,
+      "message": "Why wouldn\u0027t it be?",
+      "range": {
+        "startLine": 47,
+        "startChar": 12,
+        "endLine": 47,
+        "endChar": 64
+      },
+      "revId": "dfb4079b6cab67af4ae17a7280bcea3d006839e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
