@@ -16,6 +16,23 @@
       "message": "Adding settings team for owners approval",
       "revId": "b6108df4e8fcba80fdcf0624bfffa763d4991ea9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fb26c51b_4057c4cc",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 11343,
+      "author": {
+        "id": 1933051
+      },
+      "writtenOn": "2024-03-08T01:13:08Z",
+      "side": 1,
+      "message": "This is for developer option right?",
+      "revId": "b6108df4e8fcba80fdcf0624bfffa763d4991ea9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
