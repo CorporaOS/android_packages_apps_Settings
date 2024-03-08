@@ -33,6 +33,24 @@
       "message": "This is for developer option right?",
       "revId": "b6108df4e8fcba80fdcf0624bfffa763d4991ea9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4fb5a031_089f93bd",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 11343,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-03-08T01:57:49Z",
+      "side": 1,
+      "message": "Yes, this is for 16k developer option.",
+      "parentUuid": "fb26c51b_4057c4cc",
+      "revId": "b6108df4e8fcba80fdcf0624bfffa763d4991ea9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
