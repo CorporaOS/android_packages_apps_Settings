@@ -245,7 +245,8 @@ public class MobileNetworkRepository extends SubscriptionManager.OnSubscriptions
     }
 
     private void createTelephonyManagerBySubId(int subId) {
-        if (subId == SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
+        if (subId == SubscriptionManager.INVALID_SUBSCRIPTION_ID
+                || mTelephonyCallbackMap.containsKey(subId)) {
             return;
         }
         PhoneCallStateTelephonyCallback
