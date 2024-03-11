@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "7eca860d_6c0cb992",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2024-03-11T09:05:54Z",
+      "side": 1,
+      "message": "Bug: 328359782",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 9
+      },
+      "revId": "1e1a649d14c4d979ba129eb70b4c25d1df6ebb10",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "14c1bee3_ae3691a4",
@@ -32,6 +55,24 @@
       "side": 1,
       "message": "Hi SongFerng, \n\nYes, eventhough framework removed the network type LTE_CA for API getNetworkType@TelephonyManager, but 4G+ can be displayed by overriding. So I think display should keep consistance when CarrierConfigManager.KEY_HIDE_LTE_PLUS_DATA_ICON_BOOL false.",
       "parentUuid": "14c1bee3_ae3691a4",
+      "revId": "1e1a649d14c4d979ba129eb70b4c25d1df6ebb10",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05357dbb_07838532",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2024-03-11T09:05:54Z",
+      "side": 1,
+      "message": "1. The KEY_HIDE_LTE_PLUS_DATA_ICON_BOOL is used for data icon. The framework have changed the definition of network type, so here should not display LTE_CA.\n2. You can\u0027t get the LTE_CA via getNetworkType.\nhttps://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/telephony/java/android/telephony/NetworkRegistrationInfo.java;l\u003d645?q\u003d%22For%20old%20device%20backward%20compatibility%20support%22\u0026ss\u003dandroid%2Fplatform%2Fsuperproject%2Fmain\n\n\nFor the alternative plan, I think that here can show the Carrier Aggregation information.\n\nCarrier Aggregation: Enable / Disable\n\nMaybe we can discuss it on bug.",
+      "parentUuid": "4d334cb9_62121143",
       "revId": "1e1a649d14c4d979ba129eb70b4c25d1df6ebb10",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
