@@ -16,6 +16,24 @@
       "message": "Hi Hoff,\nThe voice network type and data network type does not equal the data rate at status bar. I do not preferred to use the the data rate for this item.\n\nAs I commented, since the framework telephony removed the NETWORK_TYPE_LTE_CA, we don\u0027t preferred to show LTE_CA. \n\nhttps://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/telephony/java/android/telephony/TelephonyManager.java;l\u003d3039;drc\u003d71c806d9f13939dda9ac9648171bb20849cf96f6?q\u003dNETWORK_TYPE_LTE_CA\u0026sq\u003d\u0026ss\u003dandroid%2Fplatform%2Fsuperproject%2Fmain",
       "revId": "1e1a649d14c4d979ba129eb70b4c25d1df6ebb10",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d334cb9_62121143",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1413437
+      },
+      "writtenOn": "2024-03-11T01:30:12Z",
+      "side": 1,
+      "message": "Hi SongFerng, \n\nYes, eventhough framework removed the network type LTE_CA for API getNetworkType@TelephonyManager, but 4G+ can be displayed by overriding. So I think display should keep consistance when CarrierConfigManager.KEY_HIDE_LTE_PLUS_DATA_ICON_BOOL false.",
+      "parentUuid": "14c1bee3_ae3691a4",
+      "revId": "1e1a649d14c4d979ba129eb70b4c25d1df6ebb10",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
