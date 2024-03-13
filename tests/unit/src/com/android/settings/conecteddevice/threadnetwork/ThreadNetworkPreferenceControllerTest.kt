@@ -68,7 +68,7 @@ class ThreadNetworkPreferenceControllerTest {
 
     @Before
     fun setUp() {
-        mSetFlagsRule.enableFlags(Flags.FLAG_THREAD_ENABLED_PLATFORM)
+        mSetFlagsRule.enableFlags(Flags.FLAG_THREAD_SETTINGS_ENABLED)
         context = spy(ApplicationProvider.getApplicationContext<Context>())
         executor = ContextCompat.getMainExecutor(context)
         fakeThreadNetworkController = FakeThreadNetworkController(executor)
@@ -96,7 +96,7 @@ class ThreadNetworkPreferenceControllerTest {
 
     @Test
     fun availabilityStatus_flagDisabled_returnsConditionallyUnavailable() {
-        mSetFlagsRule.disableFlags(Flags.FLAG_THREAD_ENABLED_PLATFORM)
+        mSetFlagsRule.disableFlags(Flags.FLAG_THREAD_SETTINGS_ENABLED)
         assertThat(controller.getAvailabilityStatus()).isEqualTo(CONDITIONALLY_UNAVAILABLE)
     }
 

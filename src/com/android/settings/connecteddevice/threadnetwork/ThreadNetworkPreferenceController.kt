@@ -110,7 +110,7 @@ class ThreadNetworkPreferenceController @VisibleForTesting constructor(
     }
 
     override fun getAvailabilityStatus(): Int {
-        return if (!Flags.threadEnabledPlatform()) {
+        return if (!Flags.threadSettingsEnabled()) {
             CONDITIONALLY_UNAVAILABLE
         } else if (!isThreadSupportedOnDevice) {
             UNSUPPORTED_ON_DEVICE
