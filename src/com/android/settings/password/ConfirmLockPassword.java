@@ -467,9 +467,14 @@ public class ConfirmLockPassword extends ConfirmDeviceCredentialBaseActivity {
             if (TextUtils.isEmpty(passwordText)) {
                 return;
             }
+            // don't wrap this LockscreenCredential in a try-with-resources, because
+            // validateGuess caches it if ConfirmDeviceCredentialBaseActivity#mCheckBox.isChecked()
+            // instead, we will explicitly call close() on the credential if it is
+            // not cached
             final LockscreenCredential credential = mIsAlpha
                     ? LockscreenCredential.createPassword(passwordText)
                     : LockscreenCredential.createPin(passwordText);
+            passwordText.clear();
 
             mPasswordEntryInputDisabler.setInputEnabled(false);
 
@@ -477,6 +482,9 @@ public class ConfirmLockPassword extends ConfirmDeviceCredentialBaseActivity {
                 validateGuess(credential);
                 updateRemoteLockscreenValidationViews();
                 updatePasswordEntry();
+                if (!mCheckBox.isChecked()) {
+                    credential.close();
+                }
                 return;
             }
 
@@ -486,6 +494,9 @@ public class ConfirmLockPassword extends ConfirmDeviceCredentialBaseActivity {
                 if (isInternalActivity()) {
                     startVerifyPassword(credential, intent,
                             LockPatternUtils.VERIFY_FLAG_REQUEST_GK_PW_HANDLE);
+                    if (!mCheckBox.isChecked()) {
+                        credential.close();
+                    }
                     return;
                 }
             } else if (mForceVerifyPath)  {
@@ -493,13 +504,22 @@ public class ConfirmLockPassword extends ConfirmDeviceCredentialBaseActivity {
                     final int flags = mRequestWriteRepairModePassword
                             ? LockPatternUtils.VERIFY_FLAG_WRITE_REPAIR_MODE_PW : 0;
                     startVerifyPassword(credential, intent, flags);
+                    if (!mCheckBox.isChecked()) {
+                        credential.close();
+                    }
                     return;
                 }
             } else {
                 startCheckPassword(credential, intent);
+                if (!mCheckBox.isChecked()) {
+                    credential.close();
+                }
                 return;
             }
 
+            if (!mCheckBox.isChecked()) {
+                credential.close();
+            }
             mCredentialCheckResultTracker.setResult(false, intent, 0, mEffectiveUserId);
         }
 
