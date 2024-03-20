@@ -16,6 +16,23 @@
       "message": "System apps such as Clock are set to prevent users from changing their battery usage settings, but the toggle is still usable and messes things up. Confirmed on Pixel 6a with stock 14 QPR2. Screenshots and further description in downstream issue: https://gitlab.com/CalyxOS/calyxos/-/issues/2209",
       "revId": "d9856fefa4d3cbc46f2d4f730b0714f1f3a257eb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cda41538_ab4a31d3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1854976
+      },
+      "writtenOn": "2024-03-20T03:42:05Z",
+      "side": 1,
+      "message": "thanks for providing the patch to improve this feature, actually, we already updated and refactored this mechanism a little bit in a similar concept, which will be included in the next relese",
+      "revId": "d9856fefa4d3cbc46f2d4f730b0714f1f3a257eb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
