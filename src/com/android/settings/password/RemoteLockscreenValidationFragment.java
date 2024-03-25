@@ -121,7 +121,7 @@ public class RemoteLockscreenValidationFragment extends Fragment {
             RemoteLockscreenValidationClient remoteLockscreenValidationClient,
             LockscreenCredential guess, byte[] encryptionKey, boolean shouldCacheGuess) {
         if (shouldCacheGuess) {
-            mLockscreenCredential = guess;
+            mLockscreenCredential = guess.duplicate();
         }
 
         remoteLockscreenValidationClient.validateLockscreenGuess(
