@@ -945,48 +945,49 @@ public class ChooseLockPassword extends SettingsActivity {
         protected void updateUi() {
             final boolean canInput = mSaveAndFinishWorker == null;
 
-            LockscreenCredential password = mIsAlphaMode
+            try (LockscreenCredential password = mIsAlphaMode
                     ? LockscreenCredential.createPassword(mPasswordEntry.getText())
-                    : LockscreenCredential.createPin(mPasswordEntry.getText());
-            final int length = password.size();
-            if (mUiStage == Stage.Introduction) {
-                mPasswordRestrictionView.setVisibility(View.VISIBLE);
-                final boolean passwordCompliant = validatePassword(password);
-                String[] messages = convertErrorCodeToMessages();
-                // Update the fulfillment of requirements.
-                mPasswordRequirementAdapter.setRequirements(messages);
-                // set the visibility of pin_auto_confirm option accordingly
-                setAutoPinConfirmOption(passwordCompliant, length);
-                // Enable/Disable the next button accordingly.
-                setNextEnabled(passwordCompliant);
-            } else {
-                // Hide password requirement view when we are just asking user to confirm the pw.
-                mPasswordRestrictionView.setVisibility(View.GONE);
-                setHeaderText(mUiStage.getHint(getContext(), mIsAlphaMode, getStageType(),
-                        mProfileType));
-                setNextEnabled(canInput && length >= LockPatternUtils.MIN_LOCK_PASSWORD_SIZE);
-                mSkipOrClearButton.setVisibility(toVisibility(canInput && length > 0));
-
-                // Hide the pin_confirm option when we are just asking user to confirm the pwd.
-                mAutoPinConfirmOption.setVisibility(View.GONE);
-                mAutoConfirmSecurityMessage.setVisibility(View.GONE);
-            }
-            final int stage = getStageType();
-            if (getStageType() != Stage.TYPE_NONE) {
-                int message = mUiStage.getMessage(mIsAlphaMode, stage);
-                if (message != 0) {
-                    mMessage.setVisibility(View.VISIBLE);
-                    mMessage.setText(message);
+                    : LockscreenCredential.createPin(mPasswordEntry.getText())) {
+                final int length = password.size();
+                if (mUiStage == Stage.Introduction) {
+                    mPasswordRestrictionView.setVisibility(View.VISIBLE);
+                    final boolean passwordCompliant = validatePassword(password);
+                    String[] messages = convertErrorCodeToMessages();
+                    // Update the fulfillment of requirements.
+                    mPasswordRequirementAdapter.setRequirements(messages);
+                    // set the visibility of pin_auto_confirm option accordingly
+                    setAutoPinConfirmOption(passwordCompliant, length);
+                    // Enable/Disable the next button accordingly.
+                    setNextEnabled(passwordCompliant);
                 } else {
-                    mMessage.setVisibility(View.INVISIBLE);
-                }
-            } else {
-                mMessage.setVisibility(View.GONE);
-            }
+                    // Hide password requirement view when we are just asking user to confirm
+                    // the pw.
+                    mPasswordRestrictionView.setVisibility(View.GONE);
+                    setHeaderText(mUiStage.getHint(getContext(), mIsAlphaMode, getStageType(),
+                            mProfileType));
+                    setNextEnabled(canInput && length >= LockPatternUtils.MIN_LOCK_PASSWORD_SIZE);
+                    mSkipOrClearButton.setVisibility(toVisibility(canInput && length > 0));
 
-            setNextText(mUiStage.buttonText);
-            mPasswordEntryInputDisabler.setInputEnabled(canInput);
-            password.zeroize();
+                    // Hide the pin_confirm option when we are just asking user to confirm the pwd.
+                    mAutoPinConfirmOption.setVisibility(View.GONE);
+                    mAutoConfirmSecurityMessage.setVisibility(View.GONE);
+                }
+                final int stage = getStageType();
+                if (getStageType() != Stage.TYPE_NONE) {
+                    int message = mUiStage.getMessage(mIsAlphaMode, stage);
+                    if (message != 0) {
+                        mMessage.setVisibility(View.VISIBLE);
+                        mMessage.setText(message);
+                    } else {
+                        mMessage.setVisibility(View.INVISIBLE);
+                    }
+                } else {
+                    mMessage.setVisibility(View.GONE);
+                }
+
+                setNextText(mUiStage.buttonText);
+                mPasswordEntryInputDisabler.setInputEnabled(canInput);
+            }
         }
 
         protected int toVisibility(boolean visibleOrGone) {

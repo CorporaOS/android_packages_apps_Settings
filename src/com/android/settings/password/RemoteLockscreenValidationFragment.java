@@ -114,14 +114,14 @@ public class RemoteLockscreenValidationFragment extends Fragment {
      *                                         for validation
      * @param guess the {@link LockscreenCredential} guess that the user entered
      * @param encryptionKey the key that should be used to encrypt the guess before validation
-     * @param shouldCacheGuess whether to cache to guess so it can be used to set the current
+     * @param shouldCacheGuess whether to cache a copy of guess so it can be used to set the current
      *                         device's lockscreen after validation succeeds.
      */
     public void validateLockscreenGuess(
             RemoteLockscreenValidationClient remoteLockscreenValidationClient,
             LockscreenCredential guess, byte[] encryptionKey, boolean shouldCacheGuess) {
         if (shouldCacheGuess) {
-            mLockscreenCredential = guess;
+            mLockscreenCredential = guess.duplicate();
         }
 
         remoteLockscreenValidationClient.validateLockscreenGuess(
