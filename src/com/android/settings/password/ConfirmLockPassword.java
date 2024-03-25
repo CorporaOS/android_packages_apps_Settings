@@ -467,40 +467,40 @@ public class ConfirmLockPassword extends ConfirmDeviceCredentialBaseActivity {
             if (TextUtils.isEmpty(passwordText)) {
                 return;
             }
-            final LockscreenCredential credential = mIsAlpha
+            try (final LockscreenCredential credential = mIsAlpha
                     ? LockscreenCredential.createPassword(passwordText)
-                    : LockscreenCredential.createPin(passwordText);
+                    : LockscreenCredential.createPin(passwordText)) {
+                mPasswordEntryInputDisabler.setInputEnabled(false);
 
-            mPasswordEntryInputDisabler.setInputEnabled(false);
-
-            if (mRemoteValidation) {
-                validateGuess(credential);
-                updateRemoteLockscreenValidationViews();
-                updatePasswordEntry();
-                return;
-            }
-
-            Intent intent = new Intent();
-            // TODO(b/161956762): Sanitize this
-            if (mReturnGatekeeperPassword) {
-                if (isInternalActivity()) {
-                    startVerifyPassword(credential, intent,
-                            LockPatternUtils.VERIFY_FLAG_REQUEST_GK_PW_HANDLE);
+                if (mRemoteValidation) {
+                    validateGuess(credential);
+                    updateRemoteLockscreenValidationViews();
+                    updatePasswordEntry();
                     return;
                 }
-            } else if (mForceVerifyPath)  {
-                if (isInternalActivity()) {
-                    final int flags = mRequestWriteRepairModePassword
-                            ? LockPatternUtils.VERIFY_FLAG_WRITE_REPAIR_MODE_PW : 0;
-                    startVerifyPassword(credential, intent, flags);
+
+                Intent intent = new Intent();
+                // TODO(b/161956762): Sanitize this
+                if (mReturnGatekeeperPassword) {
+                    if (isInternalActivity()) {
+                        startVerifyPassword(credential, intent,
+                                LockPatternUtils.VERIFY_FLAG_REQUEST_GK_PW_HANDLE);
+                        return;
+                    }
+                } else if (mForceVerifyPath)  {
+                    if (isInternalActivity()) {
+                        final int flags = mRequestWriteRepairModePassword
+                                ? LockPatternUtils.VERIFY_FLAG_WRITE_REPAIR_MODE_PW : 0;
+                        startVerifyPassword(credential, intent, flags);
+                        return;
+                    }
+                } else {
+                    startCheckPassword(credential, intent);
                     return;
                 }
-            } else {
-                startCheckPassword(credential, intent);
-                return;
-            }
 
-            mCredentialCheckResultTracker.setResult(false, intent, 0, mEffectiveUserId);
+                mCredentialCheckResultTracker.setResult(false, intent, 0, mEffectiveUserId);
+            }
         }
 
         private boolean isInternalActivity() {
@@ -547,7 +547,7 @@ public class ConfirmLockPassword extends ConfirmDeviceCredentialBaseActivity {
                             mPendingLockCheck = null;
                             if (matched && isInternalActivity() && mReturnCredentials) {
                                 intent.putExtra(
-                                        ChooseLockSettingsHelper.EXTRA_KEY_PASSWORD, credential);
+                                    ChooseLockSettingsHelper.EXTRA_KEY_PASSWORD, credential.duplicate());
                             }
                             mCredentialCheckResultTracker.setResult(matched, intent, timeoutMs,
                                     localEffectiveUserId);
