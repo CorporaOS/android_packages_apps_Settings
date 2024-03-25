@@ -503,35 +503,36 @@ public class ConfirmLockPattern extends ConfirmDeviceCredentialBaseActivity {
 
                 mLockPatternView.setEnabled(false);
 
-                final LockscreenCredential credential = LockscreenCredential.createPattern(pattern);
-
-                if (mRemoteValidation) {
-                    validateGuess(credential);
-                    updateRemoteLockscreenValidationViews();
-                    return;
-                }
-
-                // TODO(b/161956762): Sanitize this
-                Intent intent = new Intent();
-                if (mReturnGatekeeperPassword) {
-                    if (isInternalActivity()) {
-                        startVerifyPattern(credential, intent,
-                                LockPatternUtils.VERIFY_FLAG_REQUEST_GK_PW_HANDLE);
+                try (final LockscreenCredential credential =
+                            LockscreenCredential.createPattern(pattern)) {
+                    if (mRemoteValidation) {
+                        validateGuess(credential);
+                        updateRemoteLockscreenValidationViews();
                         return;
                     }
-                } else if (mForceVerifyPath) {
-                    if (isInternalActivity()) {
-                        final int flags = mRequestWriteRepairModePassword
-                                ? LockPatternUtils.VERIFY_FLAG_WRITE_REPAIR_MODE_PW : 0;
-                        startVerifyPattern(credential, intent, flags);
+
+                    // TODO(b/161956762): Sanitize this
+                    Intent intent = new Intent();
+                    if (mReturnGatekeeperPassword) {
+                        if (isInternalActivity()) {
+                            startVerifyPattern(credential, intent,
+                                    LockPatternUtils.VERIFY_FLAG_REQUEST_GK_PW_HANDLE);
+                            return;
+                        }
+                    } else if (mForceVerifyPath) {
+                        if (isInternalActivity()) {
+                            final int flags = mRequestWriteRepairModePassword
+                                    ? LockPatternUtils.VERIFY_FLAG_WRITE_REPAIR_MODE_PW : 0;
+                            startVerifyPattern(credential, intent, flags);
+                            return;
+                        }
+                    } else {
+                        startCheckPattern(credential, intent);
                         return;
                     }
-                } else {
-                    startCheckPattern(credential, intent);
-                    return;
-                }
 
-                mCredentialCheckResultTracker.setResult(false, intent, 0, mEffectiveUserId);
+                    mCredentialCheckResultTracker.setResult(false, intent, 0, mEffectiveUserId);
+                }
             }
 
             private boolean isInternalActivity() {
