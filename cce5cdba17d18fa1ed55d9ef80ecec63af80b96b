@@ -22,6 +22,30 @@
       },
       "revId": "cce5cdba17d18fa1ed55d9ef80ecec63af80b96b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "23345b35_5c642c41",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1966927
+      },
+      "writtenOn": "2024-03-26T08:26:44Z",
+      "side": 1,
+      "message": "Existing unit test does not cover these changes. Since LegacyVpnProfileStore is static, the tests would affect the real database. \n\nI did do some manual test, added in cl description.\n\nAdded some unit tests that assume the flag is enabled.",
+      "parentUuid": "0fa5d01c_cbfd267b",
+      "range": {
+        "startLine": 13,
+        "startChar": 16,
+        "endLine": 13,
+        "endChar": 20
+      },
+      "revId": "cce5cdba17d18fa1ed55d9ef80ecec63af80b96b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
