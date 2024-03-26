@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c5a95f6_c69851bb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2024-03-26T03:01:38Z",
+      "side": 1,
+      "message": "Add battery settings team to take a look.",
+      "revId": "448c18e5fff8f0c7b5b142452207a20240d67478",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
