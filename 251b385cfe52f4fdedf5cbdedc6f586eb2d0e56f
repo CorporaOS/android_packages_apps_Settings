@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96d2b882_ed675696",
+        "filename": "src/com/android/settings/sim/smartForwarding/SmartForwardingUtils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2024-03-27T10:57:27Z",
+      "side": 1,
+      "message": "Please use SubscriptionUtil\u0027s getActiveSubscriptions API. It can filter more conditions, and then you don\u0027t filter again by yourself.\nhttps://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/src/com/android/settings/network/SubscriptionUtil.java;l\u003d90?q\u003dgetActiveSubscriptions\u0026sq\u003d",
+      "range": {
+        "startLine": 153,
+        "startChar": 0,
+        "endLine": 158,
+        "endChar": 46
+      },
+      "revId": "251b385cfe52f4fdedf5cbdedc6f586eb2d0e56f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
