@@ -3,6 +3,23 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "b5e5b09a_995d5c08",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2024-03-28T22:06:13Z",
+      "side": 1,
+      "message": "For future reference, it\u0027s helpful to use `git cherry-pick -x` so that it adds a line about what commit was cherry-picked:\n\n`(cherry picked from commit 223737e0b51471fb254b96e7b71395cdfc15973e)`\n\nIt\u0027s not a strict requirement that it be included though.",
+      "revId": "9c1eaa0800b5e51b9476003a62652a27a847edb5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "09fd8376_bfc1685b",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1
