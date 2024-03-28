@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "970fe15f_932a31bf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2024-03-28T06:48:23Z",
+      "side": 1,
+      "message": "Hi Takeshi,\nPlease help to fix the conflict. please rebase it. Thanks\n\nHi Chaohui,\nPlease help review it for the Review-Enforcement. Thanks",
+      "revId": "fb9528a3525f65bbc7be69b5b2ce6afc1f06a43b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
