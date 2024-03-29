@@ -115,6 +115,7 @@ public abstract class DefaultSubscriptionController extends TelephonyBasePrefere
         // Set a summary placeholder to reduce flicker.
         mPreference.setSummaryProvider(pref -> mContext.getString(R.string.summary_placeholder));
         updateEntries();
+        refreshSummary(mPreference);
     }
 
     @Override
