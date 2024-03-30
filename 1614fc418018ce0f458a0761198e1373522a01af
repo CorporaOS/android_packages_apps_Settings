@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c3cd3dc1_1cf4dce0",
+        "filename": "src/com/android/settings/sim/smartForwarding/SmartForwardingFragment.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2024-03-30T01:46:50Z",
+      "side": 0,
+      "message": "A quick solution is update this code as getActivity().setTitle(title);",
+      "range": {
+        "startLine": 52,
+        "startChar": 8,
+        "endLine": 52,
+        "endChar": 53
+      },
+      "revId": "1614fc418018ce0f458a0761198e1373522a01af",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
