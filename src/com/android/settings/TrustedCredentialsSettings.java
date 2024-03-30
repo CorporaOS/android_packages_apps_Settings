@@ -46,7 +46,7 @@ public class TrustedCredentialsSettings extends DashboardFragment {
 
     public static final String ARG_SHOW_NEW_FOR_USER = "ARG_SHOW_NEW_FOR_USER";
 
-    static final ImmutableList<Tab> TABS = ImmutableList.of(Tab.SYSTEM, Tab.USER);
+    static final ImmutableList<Tab> TABS = ImmutableList.of(Tab.SYSTEM, Tab.MANAGED, Tab.USER);
 
     private static final String USER_ACTION = "com.android.settings.TRUSTED_CREDENTIALS_USER";
 
@@ -113,6 +113,7 @@ public class TrustedCredentialsSettings extends DashboardFragment {
 
     enum Tab {
         SYSTEM(R.string.trusted_credentials_system_tab, true),
+        MANAGED(R.string.trusted_credentials_managed_tab, false),
         USER(R.string.trusted_credentials_user_tab, false);
 
         private final int mLabel;
@@ -128,6 +129,9 @@ public class TrustedCredentialsSettings extends DashboardFragment {
                 case SYSTEM: {
                     return service.getSystemCaAliases().getList();
                 }
+                case MANAGED: {
+                    return service.getManagedCaAliases().getList();
+                }
                 case USER:
                     return service.getUserCaAliases().getList();
             }
@@ -138,6 +142,8 @@ public class TrustedCredentialsSettings extends DashboardFragment {
             switch (this) {
                 case SYSTEM:
                     return !service.containsCaAlias(alias);
+                case MANAGED:
+                    return false;
                 case USER:
                     return false;
             }

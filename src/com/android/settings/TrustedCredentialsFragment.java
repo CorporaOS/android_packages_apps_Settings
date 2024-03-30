@@ -164,8 +164,23 @@ public class TrustedCredentialsFragment extends ObservableFragment
 
         ViewGroup contentView = mFragmentView.findViewById(R.id.content);
 
-        mGroupAdapter = new GroupAdapter(
-                requireArguments().getInt(ARG_POSITION) == 0 ? Tab.SYSTEM : Tab.USER);
+        int tabPosition = requireArguments().getInt(ARG_POSITION);
+        Tab currentTab;
+        switch (tabPosition) {
+            case 0:
+                currentTab = Tab.SYSTEM;
+                break;
+            case 1:
+                currentTab = Tab.MANAGED;
+                break;
+            case 2:
+                currentTab = Tab.USER;
+                break;
+            default:
+                throw new IllegalStateException("Unexpected tab position: " + tabPosition);
+        }
+
+        mGroupAdapter = new GroupAdapter(currentTab);
         int profilesSize = mGroupAdapter.getGroupCount();
         for (int i = 0; i < profilesSize; i++) {
             Bundle childState = savedInstanceState == null ? null
@@ -897,6 +912,10 @@ public class TrustedCredentialsFragment extends ObservableFragment
 
         public String getAlias() {
             return mAlias;
+        }
+
+        public boolean isManagedCert() {
+            return mTab == Tab.MANAGED;
         }
 
         public boolean isSystemCert() {
