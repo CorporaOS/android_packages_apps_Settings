@@ -225,6 +225,7 @@ class TrustedCredentialsDialogBuilder extends AlertDialog.Builder {
         private void updatePositiveButton() {
             final CertHolder certHolder = getCurrentCertInfo();
             mNeedsApproval = !certHolder.isSystemCert()
+                    && !certHolder.isManagedCert()
                     && isUserSecure(certHolder.getUserId())
                     && !mDpm.isCaCertApproved(certHolder.getAlias(), certHolder.getUserId());
 
@@ -240,9 +241,11 @@ class TrustedCredentialsDialogBuilder extends AlertDialog.Builder {
 
         private void updateNegativeButton() {
             final CertHolder certHolder = getCurrentCertInfo();
-            final boolean showRemoveButton = !mUserManager.hasUserRestriction(
-                    UserManager.DISALLOW_CONFIG_CREDENTIALS,
-                    new UserHandle(certHolder.getUserId()));
+            final boolean showRemoveButton =
+                    !certHolder.isManagedCert()
+                            && !mUserManager.hasUserRestriction(
+                                    UserManager.DISALLOW_CONFIG_CREDENTIALS,
+                                    new UserHandle(certHolder.getUserId()));
             CharSequence displayText = mActivity.getText(getButtonLabel(certHolder));
             mNegativeButton = updateButton(DialogInterface.BUTTON_NEGATIVE, displayText);
             mNegativeButton.setVisibility(showRemoveButton ? View.VISIBLE : View.GONE);

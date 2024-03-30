@@ -6540,6 +6540,8 @@
     <!-- Toast message when a certificate is missing. [CHAR LIMIT=100] -->
     <string name="vpn_missing_cert">A certificate is missing. Try editing the profile.</string>
 
+    <!-- Tab label for device owner added CA certificates. -->
+    <string name="trusted_credentials_managed_tab">Managed</string>
     <!-- Tab label for built-in system CA certificates. -->
     <string name="trusted_credentials_system_tab">System</string>
     <!-- Tab label for user added CA certificates. -->
