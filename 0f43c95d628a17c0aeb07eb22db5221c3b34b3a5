@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "62efbff8_0657892e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1942180
+      },
+      "writtenOn": "2024-03-31T04:43:39Z",
+      "side": 1,
+      "message": "Here\u0027s a screenshot of a certificate installed under managed: https://imgur.com/a/HXT2irQ",
+      "revId": "0f43c95d628a17c0aeb07eb22db5221c3b34b3a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
