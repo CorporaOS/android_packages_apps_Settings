@@ -22,6 +22,30 @@
       },
       "revId": "251b385cfe52f4fdedf5cbdedc6f586eb2d0e56f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a9fde92_6cc4cbca",
+        "filename": "src/com/android/settings/sim/smartForwarding/SmartForwardingUtils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 1237921
+      },
+      "writtenOn": "2024-04-01T06:39:38Z",
+      "side": 1,
+      "message": "Thank you for your advice. I updated it to use the method but we also need to check the subscription is not opportunistic. Could you review the patchset3?",
+      "parentUuid": "96d2b882_ed675696",
+      "range": {
+        "startLine": 153,
+        "startChar": 0,
+        "endLine": 158,
+        "endChar": 46
+      },
+      "revId": "251b385cfe52f4fdedf5cbdedc6f586eb2d0e56f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
