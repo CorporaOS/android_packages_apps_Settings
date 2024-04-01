@@ -1,0 +1,130 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85a0fbb1_fe1084f8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2024-04-01T18:15:44Z",
+      "side": 1,
+      "message": "What about ConfirmLockPattern.java?",
+      "revId": "e8a3b1c4d98f31f2f3db0f4532540b2c5efef94b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0551a27a_0e344228",
+        "filename": "src/com/android/settings/password/ChooseLockPassword.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 817,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2024-04-01T18:15:44Z",
+      "side": 1,
+      "message": "This is unrelated to the subject of the CL, \"Ensure that LockscreenCredential#close() gets called\".  How about focusing this CL just on calling `LockscreenCredential#close()`?",
+      "revId": "e8a3b1c4d98f31f2f3db0f4532540b2c5efef94b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b171f14_b8793891",
+        "filename": "src/com/android/settings/password/ConfirmLockPassword.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 470,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2024-04-01T18:15:44Z",
+      "side": 1,
+      "message": "I think this is fairly well known (try-with-resources is just shorthand for closing the resource in a `finally` block), so I\u0027d probably leave this out",
+      "range": {
+        "startLine": 470,
+        "startChar": 12,
+        "endLine": 470,
+        "endChar": 83
+      },
+      "revId": "e8a3b1c4d98f31f2f3db0f4532540b2c5efef94b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd3f0b24_7169313f",
+        "filename": "src/com/android/settings/password/ConfirmLockPassword.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 471,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2024-04-01T18:15:44Z",
+      "side": 1,
+      "message": "This breaks the case where `startCheckPassword()` sets `EXTRA_KEY_PASSWORD`, since the `LockscreenCredential` it uses will have already been wiped.",
+      "range": {
+        "startLine": 471,
+        "startChar": 12,
+        "endLine": 471,
+        "endChar": 65
+      },
+      "revId": "e8a3b1c4d98f31f2f3db0f4532540b2c5efef94b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f1238cde_945bd906",
+        "filename": "src/com/android/settings/password/ConfirmLockPassword.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 474,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2024-04-01T18:15:44Z",
+      "side": 1,
+      "message": "Similarly, calling `Editable#clear()` is unrelated.",
+      "range": {
+        "startLine": 474,
+        "startChar": 16,
+        "endLine": 474,
+        "endChar": 37
+      },
+      "revId": "e8a3b1c4d98f31f2f3db0f4532540b2c5efef94b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "668f5228_b2d244dc",
+        "filename": "src/com/android/settings/password/RemoteLockscreenValidationFragment.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2024-04-01T18:15:44Z",
+      "side": 1,
+      "message": "a copy of guess",
+      "range": {
+        "startLine": 117,
+        "startChar": 48,
+        "endLine": 117,
+        "endChar": 56
+      },
+      "revId": "e8a3b1c4d98f31f2f3db0f4532540b2c5efef94b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
