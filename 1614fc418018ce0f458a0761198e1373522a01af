@@ -22,6 +22,30 @@
       },
       "revId": "1614fc418018ce0f458a0761198e1373522a01af",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bdd8c7c4_c3295215",
+        "filename": "src/com/android/settings/sim/smartForwarding/SmartForwardingFragment.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1237921
+      },
+      "writtenOn": "2024-04-01T07:23:54Z",
+      "side": 0,
+      "message": "Thank you for your advice. It worked well. I updated the patch. Could you review new patchset?",
+      "parentUuid": "c3cd3dc1_1cf4dce0",
+      "range": {
+        "startLine": 52,
+        "startChar": 8,
+        "endLine": 52,
+        "endChar": 53
+      },
+      "revId": "1614fc418018ce0f458a0761198e1373522a01af",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
