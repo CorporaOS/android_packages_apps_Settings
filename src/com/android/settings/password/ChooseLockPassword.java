@@ -814,6 +814,7 @@ public class ChooseLockPassword extends SettingsActivity {
                     if (tmp != null) {
                         Selection.setSelection((Spannable) tmp, 0, tmp.length());
                     }
+                    if (tmp instanceof Editable) ((Editable)tmp).clear();
                     updateStage(Stage.ConfirmWrong);
                     mChosenPassword.zeroize();
                 }
