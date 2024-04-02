@@ -18,6 +18,41 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0eed34f_11715c12",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1954616
+      },
+      "writtenOn": "2024-04-02T23:18:22Z",
+      "side": 1,
+      "message": "Thanks! I\u0027ve split the changes that clear text (instead of calling `close()`) into another CL",
+      "revId": "e8a3b1c4d98f31f2f3db0f4532540b2c5efef94b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90e8a419_c0559d81",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1954616
+      },
+      "writtenOn": "2024-04-02T23:18:22Z",
+      "side": 1,
+      "message": "Ah, great catch -- included this file now",
+      "parentUuid": "85a0fbb1_fe1084f8",
+      "revId": "e8a3b1c4d98f31f2f3db0f4532540b2c5efef94b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0551a27a_0e344228",
@@ -35,6 +70,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8c8e49f_94ec9c8b",
+        "filename": "src/com/android/settings/password/ChooseLockPassword.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 817,
+      "author": {
+        "id": 1954616
+      },
+      "writtenOn": "2024-04-02T23:18:22Z",
+      "side": 1,
+      "message": "Ah, good idea -- I\u0027ll split these off into another CL.",
+      "parentUuid": "0551a27a_0e344228",
+      "revId": "e8a3b1c4d98f31f2f3db0f4532540b2c5efef94b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4b171f14_b8793891",
@@ -48,6 +101,30 @@
       "writtenOn": "2024-04-01T18:15:44Z",
       "side": 1,
       "message": "I think this is fairly well known (try-with-resources is just shorthand for closing the resource in a `finally` block), so I\u0027d probably leave this out",
+      "range": {
+        "startLine": 470,
+        "startChar": 12,
+        "endLine": 470,
+        "endChar": 83
+      },
+      "revId": "e8a3b1c4d98f31f2f3db0f4532540b2c5efef94b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e9e5845_29532299",
+        "filename": "src/com/android/settings/password/ConfirmLockPassword.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 470,
+      "author": {
+        "id": 1954616
+      },
+      "writtenOn": "2024-04-02T23:18:22Z",
+      "side": 1,
+      "message": "Noted, sounds good",
+      "parentUuid": "4b171f14_b8793891",
       "range": {
         "startLine": 470,
         "startChar": 12,
@@ -81,6 +158,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "837c621c_362b950b",
+        "filename": "src/com/android/settings/password/ConfirmLockPassword.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 471,
+      "author": {
+        "id": 1954616
+      },
+      "writtenOn": "2024-04-02T23:18:22Z",
+      "side": 1,
+      "message": "Great catch -- I\u0027ve changed `startCheckPassword` to cache `credential.duplicate()` if `EXTRA_KEY_PASSWORD` is set, so that no methods called in the try-with-resources take ownership of the `LockscreenCredential` .",
+      "parentUuid": "fd3f0b24_7169313f",
+      "range": {
+        "startLine": 471,
+        "startChar": 12,
+        "endLine": 471,
+        "endChar": 65
+      },
+      "revId": "e8a3b1c4d98f31f2f3db0f4532540b2c5efef94b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f1238cde_945bd906",
@@ -104,6 +205,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce6e35fa_48b24230",
+        "filename": "src/com/android/settings/password/ConfirmLockPassword.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 474,
+      "author": {
+        "id": 1954616
+      },
+      "writtenOn": "2024-04-02T23:18:22Z",
+      "side": 1,
+      "message": "Good point; split into another CL",
+      "parentUuid": "f1238cde_945bd906",
+      "range": {
+        "startLine": 474,
+        "startChar": 16,
+        "endLine": 474,
+        "endChar": 37
+      },
+      "revId": "e8a3b1c4d98f31f2f3db0f4532540b2c5efef94b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "668f5228_b2d244dc",
@@ -117,6 +242,30 @@
       "writtenOn": "2024-04-01T18:15:44Z",
       "side": 1,
       "message": "a copy of guess",
+      "range": {
+        "startLine": 117,
+        "startChar": 48,
+        "endLine": 117,
+        "endChar": 56
+      },
+      "revId": "e8a3b1c4d98f31f2f3db0f4532540b2c5efef94b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8503a958_45a1d415",
+        "filename": "src/com/android/settings/password/RemoteLockscreenValidationFragment.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1954616
+      },
+      "writtenOn": "2024-04-02T23:18:22Z",
+      "side": 1,
+      "message": "Good catch",
+      "parentUuid": "668f5228_b2d244dc",
       "range": {
         "startLine": 117,
         "startChar": 48,
