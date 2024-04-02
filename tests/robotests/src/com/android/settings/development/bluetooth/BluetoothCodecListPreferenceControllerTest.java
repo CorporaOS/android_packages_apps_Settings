@@ -35,15 +35,19 @@ import android.bluetooth.BluetoothCodecType;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothProfile;
 import android.content.Context;
+import android.platform.test.flag.junit.SetFlagsRule;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.ListPreference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.settings.development.BluetoothA2dpConfigStore;
+import com.android.settings.development.Flags;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 
+import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -57,6 +61,8 @@ import java.util.List;
 
 @RunWith(RobolectricTestRunner.class)
 public class BluetoothCodecListPreferenceControllerTest {
+
+    @Rule public final SetFlagsRule mSetFlagsRule = new SetFlagsRule();
 
     private static final String DEVICE_ADDRESS = "00:11:22:33:44:55";
 
@@ -246,6 +252,9 @@ public class BluetoothCodecListPreferenceControllerTest {
 
     @Test
     public void onPreferenceChange_notifyPreference() {
+        mSetFlagsRule.enableFlags(Flags.FLAG_A2DP_OFFLOAD_CODEC_EXTENSIBILITY_SETTINGS);
+        Assert.assertTrue(Flags.a2dpOffloadCodecExtensibilitySettings());
+
         assertFalse(
                 mController.onPreferenceChange(
                         mPreference, String.valueOf(mCodecTypeAAC.getCodecId())));
@@ -257,6 +266,9 @@ public class BluetoothCodecListPreferenceControllerTest {
                         mPreference, String.valueOf(mCodecTypeAAC.getCodecId())));
 
         verify(mCallback).onBluetoothCodecChanged();
+
+        mSetFlagsRule.disableFlags(Flags.FLAG_A2DP_OFFLOAD_CODEC_EXTENSIBILITY_SETTINGS);
+        Assert.assertFalse(Flags.a2dpOffloadCodecExtensibilitySettings());
     }
 
     @Test
