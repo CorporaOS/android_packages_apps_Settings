@@ -470,6 +470,8 @@ public class ConfirmLockPassword extends ConfirmDeviceCredentialBaseActivity {
             try (final LockscreenCredential credential = mIsAlpha
                     ? LockscreenCredential.createPassword(passwordText)
                     : LockscreenCredential.createPin(passwordText)) {
+                passwordText.clear();
+
                 mPasswordEntryInputDisabler.setInputEnabled(false);
 
                 if (mRemoteValidation) {
