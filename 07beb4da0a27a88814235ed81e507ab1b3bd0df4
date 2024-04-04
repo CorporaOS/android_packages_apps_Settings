@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "10130cee_244bfb8b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2024-04-04T21:11:20Z",
+      "side": 1,
+      "message": "When does this happen, exactly?  Is there any user-visible change in behavior?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 86
+      },
+      "revId": "07beb4da0a27a88814235ed81e507ab1b3bd0df4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1e32fd6_ea1b010c",
+        "filename": "src/com/android/settings/password/ConfirmLockPassword.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 465,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2024-04-04T21:11:20Z",
+      "side": 1,
+      "message": "Does this address this TODO?  If not, why not?",
+      "range": {
+        "startLine": 465,
+        "startChar": 12,
+        "endLine": 465,
+        "endChar": 84
+      },
+      "revId": "07beb4da0a27a88814235ed81e507ab1b3bd0df4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
