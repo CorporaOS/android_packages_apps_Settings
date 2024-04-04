@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4286efeb_32ab60f7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1954616
+      },
+      "writtenOn": "2024-04-04T22:05:00Z",
+      "side": 1,
+      "message": "These are just local variables, and are not visible to the user. The change is to wipe them before they go out of scope, since they are not necessarily cleared by the GC. I\u0027ve updated the commit message to add this info.",
+      "parentUuid": "10130cee_244bfb8b",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 86
+      },
+      "revId": "07beb4da0a27a88814235ed81e507ab1b3bd0df4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b1e32fd6_ea1b010c",
@@ -37,6 +61,30 @@
       "writtenOn": "2024-04-04T21:11:20Z",
       "side": 1,
       "message": "Does this address this TODO?  If not, why not?",
+      "range": {
+        "startLine": 465,
+        "startChar": 12,
+        "endLine": 465,
+        "endChar": 84
+      },
+      "revId": "07beb4da0a27a88814235ed81e507ab1b3bd0df4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c85dd79_2045fbaf",
+        "filename": "src/com/android/settings/password/ConfirmLockPassword.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 465,
+      "author": {
+        "id": 1954616
+      },
+      "writtenOn": "2024-04-04T22:05:00Z",
+      "side": 1,
+      "message": "Ah, yes it does -- nice catch, thanks",
+      "parentUuid": "b1e32fd6_ea1b010c",
       "range": {
         "startLine": 465,
         "startChar": 12,
