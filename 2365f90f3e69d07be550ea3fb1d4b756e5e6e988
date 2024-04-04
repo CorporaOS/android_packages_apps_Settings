@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1aa01036_3ee692b2",
+        "filename": "src/com/android/settings/password/ConfirmLockPassword.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 550,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2024-04-04T21:05:08Z",
+      "side": 1,
+      "message": "I don\u0027t think this fix works, as the duplication of `credential` doesn\u0027t happen until after the `close()`.  Note that this is inside a callback method.",
+      "revId": "2365f90f3e69d07be550ea3fb1d4b756e5e6e988",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
