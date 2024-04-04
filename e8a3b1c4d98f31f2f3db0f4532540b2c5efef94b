@@ -71,6 +71,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "868bf3ed_ec812ddc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1954616
+      },
+      "writtenOn": "2024-04-04T22:47:54Z",
+      "side": 1,
+      "message": "`ChooseLockPattern` actually uses try-with-resources already!",
+      "parentUuid": "db0cd624_c123f407",
+      "revId": "e8a3b1c4d98f31f2f3db0f4532540b2c5efef94b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0551a27a_0e344228",
