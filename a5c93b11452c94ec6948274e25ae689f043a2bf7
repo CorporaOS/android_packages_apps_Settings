@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1cc8af67_d6239611",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1975910
+      },
+      "writtenOn": "2024-04-05T09:52:11Z",
+      "side": 1,
+      "message": "Can anyone take a look?\nThe ticket was opened some time ago...",
+      "revId": "a5c93b11452c94ec6948274e25ae689f043a2bf7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
