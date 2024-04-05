@@ -16,6 +16,23 @@
       "message": "Can anyone take a look?\nThe ticket was opened some time ago...",
       "revId": "a5c93b11452c94ec6948274e25ae689f043a2bf7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b8855e4_e3a3ea1b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-04-05T17:11:29Z",
+      "side": 1,
+      "message": "lgtm. @sunnyshao@google.com can you also take a look? For reference on how this works, see the logic in `onCreate` of the Activity\u0027s parent class: https://android.googlesource.com/platform/packages/apps/Settings/+/main/src/com/android/settings/wallpaper/StyleSuggestionActivityBase.java",
+      "revId": "a5c93b11452c94ec6948274e25ae689f043a2bf7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
