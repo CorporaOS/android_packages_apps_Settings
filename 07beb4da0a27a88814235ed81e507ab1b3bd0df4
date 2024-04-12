@@ -74,6 +74,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6c5416fa_859a63b3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1954616
+      },
+      "writtenOn": "2024-04-12T17:21:53Z",
+      "side": 1,
+      "message": "Oh you\u0027re right -- I misread and thought it `mPasswordEntry.getText()` was returning a copy of the password entry, but you\u0027re right it\u0027s an editable reference to the text in the UI.\n\nI think, because this is in the `handleNext()` function, that this has no effect on what the user can see: this code runs when the user clicks \"next\" after they have chosen a new password. That being said, my test was manual, and there may be some edge cases I am not thinking of. \nI think I could just replace this by adding a finalizer on the `ChooseLockPasswordFragment` class and clearing the `mPasswordEntry` field in there instead.",
+      "parentUuid": "73a21027_3abc2296",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 86
+      },
+      "revId": "07beb4da0a27a88814235ed81e507ab1b3bd0df4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b1e32fd6_ea1b010c",
         "filename": "src/com/android/settings/password/ConfirmLockPassword.java",
         "patchSetId": 1
