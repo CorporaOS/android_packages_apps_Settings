@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aff903a4_f51fd5fd",
+        "filename": "src/com/android/settings/password/ConfirmLockPassword.java",
+        "patchSetId": 15
+      },
+      "lineNbr": 470,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2024-04-12T01:42:47Z",
+      "side": 1,
+      "message": "`final` is redundant on resources used with try-with-resources",
+      "range": {
+        "startLine": 470,
+        "startChar": 17,
+        "endLine": 470,
+        "endChar": 22
+      },
+      "revId": "9da02201c65f7534ff9d3e29618cc2a11ff4d7d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2893ad2_f6a4d35f",
+        "filename": "src/com/android/settings/password/ConfirmLockPassword.java",
+        "patchSetId": 15
+      },
+      "lineNbr": 549,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2024-04-12T01:42:47Z",
+      "side": 1,
+      "message": "This copy isn\u0027t being zeroized.\n\nI think the way to solve this is:\n\n- make `onChecked()` always zeroize it\n- implement `onCancelled()` and do the same\n- when setting EXTRA_KEY_PASSWORD, do a further duplication\n\nThis way a copy will only remain if the EXTRA_KEY_PASSWORD is actually added.",
+      "range": {
+        "startLine": 549,
+        "startChar": 0,
+        "endLine": 549,
+        "endChar": 93
+      },
+      "revId": "9da02201c65f7534ff9d3e29618cc2a11ff4d7d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5c96aec0_491ac116",
+        "filename": "src/com/android/settings/password/ConfirmLockPattern.java",
+        "patchSetId": 15
+      },
+      "lineNbr": 506,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2024-04-12T01:42:47Z",
+      "side": 1,
+      "message": "`final` is redundant on resources used with try-with-resources",
+      "range": {
+        "startLine": 506,
+        "startChar": 21,
+        "endLine": 506,
+        "endChar": 26
+      },
+      "revId": "9da02201c65f7534ff9d3e29618cc2a11ff4d7d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7dcd8eab_c1cfa406",
+        "filename": "src/com/android/settings/password/ConfirmLockPattern.java",
+        "patchSetId": 15
+      },
+      "lineNbr": 530,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2024-04-12T01:42:47Z",
+      "side": 1,
+      "message": "`startCheckPattern()` has the same issue as `startCheckPassword()`, where it assumes that the `credential` that it\u0027s passed lives longer than the method call",
+      "range": {
+        "startLine": 530,
+        "startChar": 0,
+        "endLine": 530,
+        "endChar": 62
+      },
+      "revId": "9da02201c65f7534ff9d3e29618cc2a11ff4d7d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
