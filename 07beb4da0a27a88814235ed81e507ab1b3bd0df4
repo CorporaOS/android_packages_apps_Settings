@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "73a21027_3abc2296",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2024-04-12T01:53:09Z",
+      "side": 1,
+      "message": "It\u0027s clearing the text from the UI element, though.  Doesn\u0027t that change what\u0027s shown in the UI?",
+      "parentUuid": "4286efeb_32ab60f7",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 86
+      },
+      "revId": "07beb4da0a27a88814235ed81e507ab1b3bd0df4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b1e32fd6_ea1b010c",
         "filename": "src/com/android/settings/password/ConfirmLockPassword.java",
         "patchSetId": 1
