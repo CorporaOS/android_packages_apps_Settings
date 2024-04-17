@@ -45,6 +45,7 @@ import android.widget.CheckBox;
 import androidx.annotation.Nullable;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
+import androidx.preference.SwitchPreference;
 import androidx.preference.SwitchPreferenceCompat;
 import androidx.preference.TwoStatePreference;
 
@@ -79,6 +80,7 @@ public class ToggleScreenMagnificationPreferenceFragment extends
             new TextUtils.SimpleStringSplitter(COMPONENT_NAME_SEPARATOR);
 
     protected TwoStatePreference mFollowingTypingSwitchPreference;
+    protected SwitchPreference mMagnifyNavImeSwitchPreference;
 
     // TODO(b/147021230): Move duplicated functions with android/internal/accessibility into util.
     private TouchExplorationStateChangeListener mTouchExplorationStateChangeListener;
@@ -88,6 +90,7 @@ public class ToggleScreenMagnificationPreferenceFragment extends
     @Nullable private CheckBox mTwoFingerTripleTapTypeCheckBox;
     private DialogCreatable mDialogDelegate;
     private MagnificationFollowTypingPreferenceController mFollowTypingPreferenceController;
+    private MagnifyNavAndImePreferenceController mMagnifyNavAndImePreferenceController;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -220,6 +223,10 @@ public class ToggleScreenMagnificationPreferenceFragment extends
         mFollowTypingPreferenceController.displayPreference(getPreferenceScreen());
         addPreferenceController(mFollowTypingPreferenceController);
 
+        if (android.view.accessibility.Flags.magnifyNavAndIme()) {
+            addMagnifyNavAndImeSetting(generalCategory);
+        }
+
         addAlwaysOnSetting(generalCategory);
         addJoystickSetting(generalCategory);
     }
@@ -246,6 +253,20 @@ public class ToggleScreenMagnificationPreferenceFragment extends
         }
 
         super.onProcessArguments(arguments);
+    }
+
+    private void addMagnifyNavAndImeSetting(PreferenceCategory generalCategory) {
+        mMagnifyNavImeSwitchPreference =
+                new SwitchPreference(getPrefContext());
+        mMagnifyNavImeSwitchPreference.setTitle(
+                R.string.accessibility_screen_magnification_nav_ime_title);
+        mMagnifyNavImeSwitchPreference.setKey(
+                MagnifyNavAndImePreferenceController.PREF_KEY);
+        generalCategory.addPreference(mMagnifyNavImeSwitchPreference);
+
+        mMagnifyNavAndImePreferenceController = new MagnifyNavAndImePreferenceController(
+                getContext(), MagnifyNavAndImePreferenceController.PREF_KEY);
+        addPreferenceController(mMagnifyNavAndImePreferenceController);
     }
 
     private boolean isAlwaysOnSettingEnabled() {
@@ -430,6 +451,7 @@ public class ToggleScreenMagnificationPreferenceFragment extends
 
         var keysToObserve = List.of(
             Settings.Secure.ACCESSIBILITY_MAGNIFICATION_FOLLOW_TYPING_ENABLED,
+            Settings.Secure.ACCESSIBILITY_MAGNIFY_NAV_AND_IME,
             Settings.Secure.ACCESSIBILITY_MAGNIFICATION_ALWAYS_ON_ENABLED,
             Settings.Secure.ACCESSIBILITY_MAGNIFICATION_JOYSTICK_ENABLED
         );

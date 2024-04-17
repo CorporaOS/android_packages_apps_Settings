@@ -4548,6 +4548,8 @@
     <string name="accessibility_screen_magnification_follow_typing_title">Magnify typing</string>
     <!-- Summary for accessibility follow typing preference for magnification. [CHAR LIMIT=none] -->
     <string name="accessibility_screen_magnification_follow_typing_summary">Magnifier follows text as you type</string>
+     <!-- Title for accessibility magnifying navigation bar and IME preference for magnification. [CHAR LIMIT=35] -->
+    <string name="accessibility_screen_magnification_nav_ime_title">Magnify navigation bar and keyboards</string>
     <!-- Title for accessibility magnifier preference where the magnifier never turns off while switching apps. [CHAR LIMIT=60] -->
     <string name="accessibility_screen_magnification_always_on_title">Keep on while switching apps</string>
     <!-- Summary for accessibility magnifier preference where the magnifier never turns off while switching apps. [CHAR LIMIT=none] -->
