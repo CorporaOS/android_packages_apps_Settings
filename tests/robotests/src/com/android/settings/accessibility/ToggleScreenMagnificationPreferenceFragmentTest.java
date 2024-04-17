@@ -96,6 +96,9 @@ public class ToggleScreenMagnificationPreferenceFragmentTest {
     private static final String KEY_FOLLOW_TYPING =
             Settings.Secure.ACCESSIBILITY_MAGNIFICATION_FOLLOW_TYPING_ENABLED;
 
+    private static final String KEY_MAGNIFY_NAV_AND_IME =
+            Settings.Secure.ACCESSIBILITY_MAGNIFY_NAV_AND_IME;
+
     private TestToggleScreenMagnificationPreferenceFragment mFragment;
     private Context mContext;
     private Resources mResources;
@@ -154,6 +157,40 @@ public class ToggleScreenMagnificationPreferenceFragmentTest {
         assertThat(switchPreference.isChecked()).isFalse();
     }
 
+
+    @Ignore("Ignore it since a NPE is happened in ShadowWindowManagerGlobal. (Ref. b/214161063)")
+    @Test
+    @Config(shadows = ShadowFragment.class)
+    public void onResume_defaultStateForMagnifyNavAndIme_switchPreferenceShouldReturnFalse() {
+        mFragment.onCreate(new Bundle());
+        mFragment.onCreateView(LayoutInflater.from(mContext), mock(ViewGroup.class), Bundle.EMPTY);
+        mFragment.onAttach(mContext);
+        final SwitchPreference switchPreference =
+                mFragment.findPreference(MagnifyNavAndImePreferenceController.PREF_KEY);
+
+        mFragment.onResume();
+
+        assertThat(switchPreference).isNotNull();
+        assertThat(switchPreference.isChecked()).isFalse();
+    }
+
+    @Ignore("Ignore it since a NPE is happened in ShadowWindowManagerGlobal. (Ref. b/214161063)")
+    @Test
+    @Config(shadows = ShadowFragment.class)
+    public void onResume_enableMagnifyNavAndIme_switchPreferenceShouldReturnTrue() {
+        Settings.Secure.putInt(mContext.getContentResolver(), KEY_MAGNIFY_NAV_AND_IME, ON);
+        mFragment.onCreate(new Bundle());
+        mFragment.onCreateView(LayoutInflater.from(mContext), mock(ViewGroup.class), Bundle.EMPTY);
+        mFragment.onAttach(mContext);
+        SwitchPreference switchPreference =
+                mFragment.findPreference(MagnifyNavAndImePreferenceController.PREF_KEY);
+
+        mFragment.onResume();
+
+        assertThat(switchPreference).isNotNull();
+        assertThat(switchPreference.isChecked()).isTrue();
+    }
+
     @Test
     @Config(shadows = {ShadowFragment.class})
     public void onResume_haveRegisterToSpecificUris() {
@@ -169,6 +206,11 @@ public class ToggleScreenMagnificationPreferenceFragmentTest {
         verify(mContentResolver).registerContentObserver(
                 eq(Settings.Secure.getUriFor(
                         Settings.Secure.ACCESSIBILITY_SHORTCUT_TARGET_SERVICE)),
+                eq(false),
+                any(AccessibilitySettingsContentObserver.class));
+        verify(mContentResolver).registerContentObserver(
+                eq(Settings.Secure.getUriFor(
+                        Settings.Secure.ACCESSIBILITY_MAGNIFY_NAV_AND_IME)),
                 eq(false),
                 any(AccessibilitySettingsContentObserver.class));
         verify(mContentResolver).registerContentObserver(
