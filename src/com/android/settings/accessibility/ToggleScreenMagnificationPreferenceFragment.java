@@ -222,6 +222,10 @@ public class ToggleScreenMagnificationPreferenceFragment extends
         mFollowTypingPreferenceController.displayPreference(getPreferenceScreen());
         addPreferenceController(mFollowTypingPreferenceController);
 
+        if (android.view.accessibility.Flags.magnifyNavAndIme()) {
+            addMagnifyNavAndImeSetting(generalCategory);
+        }
+
         addAlwaysOnSetting(generalCategory);
         addJoystickSetting(generalCategory);
     }
@@ -248,6 +252,22 @@ public class ToggleScreenMagnificationPreferenceFragment extends
         }
 
         super.onProcessArguments(arguments);
+    }
+
+    private void addMagnifyNavAndImeSetting(PreferenceCategory generalCategory) {
+        TwoStatePreference mMagnifyNavImeSwitchPreference =
+                new SwitchPreferenceCompat(getPrefContext());
+        mMagnifyNavImeSwitchPreference.setTitle(
+                R.string.accessibility_screen_magnification_nav_ime_title);
+        mMagnifyNavImeSwitchPreference.setKey(
+                MagnifyNavAndImePreferenceController.PREF_KEY);
+        generalCategory.addPreference(mMagnifyNavImeSwitchPreference);
+
+        MagnifyNavAndImePreferenceController mMagnifyNavAndImePreferenceController =
+                new MagnifyNavAndImePreferenceController(
+                    getContext(), MagnifyNavAndImePreferenceController.PREF_KEY);
+        mMagnifyNavAndImePreferenceController.displayPreference(getPreferenceScreen());
+        addPreferenceController(mMagnifyNavAndImePreferenceController);
     }
 
     private boolean isAlwaysOnSettingEnabled() {
@@ -432,6 +452,7 @@ public class ToggleScreenMagnificationPreferenceFragment extends
 
         var keysToObserve = List.of(
             Settings.Secure.ACCESSIBILITY_MAGNIFICATION_FOLLOW_TYPING_ENABLED,
+            Settings.Secure.ACCESSIBILITY_MAGNIFY_NAV_AND_IME,
             Settings.Secure.ACCESSIBILITY_MAGNIFICATION_ALWAYS_ON_ENABLED,
             Settings.Secure.ACCESSIBILITY_MAGNIFICATION_JOYSTICK_ENABLED
         );
