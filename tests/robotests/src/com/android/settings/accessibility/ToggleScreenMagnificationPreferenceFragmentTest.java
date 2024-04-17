@@ -46,6 +46,7 @@ import android.platform.test.flag.junit.DeviceFlagsValueProvider;
 import android.provider.Settings;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.preference.SwitchPreference;
 import androidx.preference.TwoStatePreference;
 import androidx.test.core.app.ApplicationProvider;
 
@@ -110,6 +111,10 @@ public class ToggleScreenMagnificationPreferenceFragmentTest {
     private static final String KEY_FOLLOW_TYPING =
             Settings.Secure.ACCESSIBILITY_MAGNIFICATION_FOLLOW_TYPING_ENABLED;
     private FragmentController<ToggleScreenMagnificationPreferenceFragment> mFragController;
+
+    private static final String KEY_MAGNIFY_NAV_AND_IME =
+            Settings.Secure.ACCESSIBILITY_MAGNIFY_NAV_AND_IME;
+
     private Context mContext;
     private Resources mSpyResources;
     private ShadowPackageManager mShadowPackageManager;
@@ -164,6 +169,33 @@ public class ToggleScreenMagnificationPreferenceFragmentTest {
     }
 
     @Test
+    public void onResume_defaultStateForMagnifyNavAndIme_switchPreferenceShouldReturnFalse() {
+        setKeyMagnifyNavAndIMEEnabled(false);
+
+        mFragController.create(R.id.main_content, /* bundle= */ null).start().resume();
+
+        final SwitchPreference switchPreference =
+                mFragController.get().findPreference(
+                        MagnifyNavAndImePreferenceController.PREF_KEY);
+
+        assertThat(switchPreference).isNotNull();
+        assertThat(switchPreference.isChecked()).isFalse();
+    }
+
+    @Test
+    public void onResume_enableMagnifyNavAndIme_switchPreferenceShouldReturnTrue() {
+        setKeyMagnifyNavAndIMEEnabled(true);
+
+        mFragController.create(R.id.main_content, /* bundle= */ null).start().resume();
+
+        final SwitchPreference switchPreference =
+                mFragController.get().findPreference(
+                        MagnifyNavAndImePreferenceController.PREF_KEY);
+        assertThat(switchPreference).isNotNull();
+        assertThat(switchPreference.isChecked()).isTrue();
+    }
+
+    @Test
     public void onResume_haveRegisterToSpecificUris() {
         ShadowContentResolver shadowContentResolver = Shadows.shadowOf(
                 mContext.getContentResolver());
@@ -173,6 +205,8 @@ public class ToggleScreenMagnificationPreferenceFragmentTest {
                         Settings.Secure.ACCESSIBILITY_SHORTCUT_TARGET_SERVICE),
                 Settings.Secure.getUriFor(
                         Settings.Secure.ACCESSIBILITY_MAGNIFICATION_FOLLOW_TYPING_ENABLED),
+                Settings.Secure.getUriFor(
+                        Settings.Secure.ACCESSIBILITY_MAGNIFY_NAV_AND_IME),
                 Settings.Secure.getUriFor(
                         Settings.Secure.ACCESSIBILITY_MAGNIFICATION_ALWAYS_ON_ENABLED)
         };
@@ -692,6 +726,11 @@ public class ToggleScreenMagnificationPreferenceFragmentTest {
 
     private void setKeyFollowTypingEnabled(boolean enabled) {
         Settings.Secure.putInt(mContext.getContentResolver(), KEY_FOLLOW_TYPING,
+                enabled ? ON : OFF);
+    }
+
+    private void setKeyMagnifyNavAndIMEEnabled(boolean enabled) {
+        Settings.Secure.putInt(mContext.getContentResolver(), KEY_MAGNIFY_NAV_AND_IME,
                 enabled ? ON : OFF);
     }
 
