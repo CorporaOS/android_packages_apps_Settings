@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "57bbfa4d_1d65c390",
+        "filename": "src/com/android/settings/communal/CommunalPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2016516
+      },
+      "writtenOn": "2024-04-22T23:36:23Z",
+      "side": 1,
+      "message": "nit: save `context.getResources()` to a local variable for reuse",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 21
+      },
+      "revId": "57056726500dbbec2d8ee03efbce2242d72c4383",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
