@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1675701a_2914baa1",
+        "filename": "src/com/android/settings/TestingSettingsBroadcastReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 2016516
+      },
+      "writtenOn": "2024-04-22T23:28:42Z",
+      "side": 1,
+      "message": "I think it is more general to provide a \"bool\" resource for this customization request.",
+      "revId": "f7dd33838632d3416fcf056dabbe63454313b7c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
