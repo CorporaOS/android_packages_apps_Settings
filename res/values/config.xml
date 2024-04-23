@@ -784,4 +784,7 @@
 
     <!-- Package responsible for updating Mainline Modules -->
     <string name="config_mainline_module_update_package" translatable="false">com.android.vending</string>
+
+    <!-- Disable the Testing Setting Menu for user builds, i.e only display the menu on userdebug/eng builds -->
+    <bool name="config_hide_testing_settings_menu_for_user_builds">false</bool>
 </resources>
