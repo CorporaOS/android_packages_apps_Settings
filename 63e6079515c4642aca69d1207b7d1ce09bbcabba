@@ -50,6 +50,24 @@
       "message": "Please fix merge conflict, otherwise, lgtm",
       "revId": "63e6079515c4642aca69d1207b7d1ce09bbcabba",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "93745a9a_4f96bfdc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3259843
+      },
+      "writtenOn": "2024-04-23T12:52:02Z",
+      "side": 1,
+      "message": "Hi Sunny! I have attached a screenshot to the buganizer, as requested. BRs",
+      "parentUuid": "17a344d9_e455b6eb",
+      "revId": "63e6079515c4642aca69d1207b7d1ce09bbcabba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
