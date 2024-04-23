@@ -33,6 +33,23 @@
       "message": "Thanks David for your contributing the CL.\n\nCould you provide your screenshots on the b/313066844? Thank you.",
       "revId": "63e6079515c4642aca69d1207b7d1ce09bbcabba",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "326b84d3_d091df5f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1564745
+      },
+      "writtenOn": "2024-04-23T09:04:44Z",
+      "side": 1,
+      "message": "Please fix merge conflict, otherwise, lgtm",
+      "revId": "63e6079515c4642aca69d1207b7d1ce09bbcabba",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
