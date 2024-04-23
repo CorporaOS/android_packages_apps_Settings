@@ -16,6 +16,24 @@
       "message": "I think it is more general to provide a \"bool\" resource for this customization request.",
       "revId": "f7dd33838632d3416fcf056dabbe63454313b7c6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "00096a06_4ce036fe",
+        "filename": "src/com/android/settings/TestingSettingsBroadcastReceiver.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 3259843
+      },
+      "writtenOn": "2024-04-23T07:47:38Z",
+      "side": 1,
+      "message": "I see your point however the intention is to disable the menu for one of more build types (or none), thus adding flexibility.\nDo you propose adding a single config bool e.g \"config_disableTestingSettingsMenuForUserBuild\"?\nThanks!",
+      "parentUuid": "1675701a_2914baa1",
+      "revId": "f7dd33838632d3416fcf056dabbe63454313b7c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
