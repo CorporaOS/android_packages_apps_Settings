@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8ff13685_b3edd976",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2024-04-24T22:26:02Z",
+      "side": 1,
+      "message": "do we also make sure that development options can\u0027t be disabled in this state (have to return to production build to disable them)?",
+      "range": {
+        "startLine": 9,
+        "startChar": 48,
+        "endLine": 10,
+        "endChar": 56
+      },
+      "revId": "c1659eaeeef7b35e8d5e205558bd49d780825406",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
