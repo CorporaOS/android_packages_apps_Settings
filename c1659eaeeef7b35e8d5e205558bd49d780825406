@@ -22,6 +22,47 @@
       },
       "revId": "c1659eaeeef7b35e8d5e205558bd49d780825406",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8cc1f89_7ee9d709",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-04-26T20:48:06Z",
+      "side": 1,
+      "message": "This will be followed up separately here :b/329657279",
+      "parentUuid": "8ff13685_b3edd976",
+      "range": {
+        "startLine": 9,
+        "startChar": 48,
+        "endLine": 10,
+        "endChar": 56
+      },
+      "revId": "c1659eaeeef7b35e8d5e205558bd49d780825406",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "904d5289_c446561f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-04-26T20:48:06Z",
+      "side": 1,
+      "message": "@cantol Can you review this change and provide owner\u0027s approval?",
+      "revId": "c1659eaeeef7b35e8d5e205558bd49d780825406",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
