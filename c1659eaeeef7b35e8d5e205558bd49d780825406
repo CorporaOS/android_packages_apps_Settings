@@ -63,6 +63,23 @@
       "message": "@cantol Can you review this change and provide owner\u0027s approval?",
       "revId": "c1659eaeeef7b35e8d5e205558bd49d780825406",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ade78799_d6f3ca93",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-04-29T21:20:12Z",
+      "side": 1,
+      "message": "Need +1/+2 from settings team to merge this.",
+      "revId": "c1659eaeeef7b35e8d5e205558bd49d780825406",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
