@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7d298c18_5aff6685",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 16
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2024-04-29T16:10:52Z",
+      "side": 1,
+      "message": "There are some fairly subtle changes in this CL.  It would be helpful to call them out in the commit message.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 61
+      },
+      "revId": "8a143ebff5c248257a5c3e9d6dc73cd6128a84f2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "01516331_63329d0c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 16
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1137063
+      },
+      "writtenOn": "2024-04-29T16:10:52Z",
+      "side": 1,
+      "message": "This CL has checkstyle errors.",
+      "revId": "8a143ebff5c248257a5c3e9d6dc73cd6128a84f2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
