@@ -121,9 +121,7 @@ public class BluetoothDetailsSpatialAudioController extends BluetoothDetailsCont
 
     @Override
     protected void refresh() {
-        if (mAudioDevice == null) {
-            getAvailableDevice();
-        }
+        getAvailableDevice();
 
         TwoStatePreference spatialAudioPref = mProfilesContainer.findPreference(KEY_SPATIAL_AUDIO);
         if (spatialAudioPref == null && mAudioDevice != null) {
