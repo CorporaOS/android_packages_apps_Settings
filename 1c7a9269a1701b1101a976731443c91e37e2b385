@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "24ed2326_2edebbab",
+        "filename": "src/com/android/settings/network/telephony/DefaultSubscriptionController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2024-05-02T07:02:35Z",
+      "side": 0,
+      "message": "you changed the mobile data part, but this class has be extended by CallsDefaultSubscriptionController and SmsDefaultSubscriptionController. I think that we don\u0027t remove this code.",
+      "range": {
+        "startLine": 99,
+        "startChar": 7,
+        "endLine": 101,
+        "endChar": 80
+      },
+      "revId": "1c7a9269a1701b1101a976731443c91e37e2b385",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
