@@ -1,5 +1,4 @@
 package: "com.android.settings.flags"
-container: "system"
 
 flag {
   name: "enable_volume_plus_quick_settings"
