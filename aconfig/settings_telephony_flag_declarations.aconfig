@@ -1,5 +1,4 @@
 package: "com.android.settings.flags"
-container: "system"
 
 flag {
     name: "remove_key_hide_enable_2g"

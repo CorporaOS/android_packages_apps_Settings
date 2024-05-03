@@ -1,5 +1,4 @@
 package: "com.android.settings.flags"
-container: "system"
 
 flag {
     name: "new_apn_page_enabled"
