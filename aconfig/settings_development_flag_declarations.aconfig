@@ -1,5 +1,4 @@
 package: "com.android.settings.flags"
-container: "system"
 
 # NOTE: Keep alphabetized to help limit merge conflicts from multiple simultaneous editors.
 
