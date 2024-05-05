@@ -38,7 +38,6 @@ import com.android.settings.core.BasePreferenceController.AVAILABLE
 import com.android.settings.core.BasePreferenceController.CONDITIONALLY_UNAVAILABLE
 import com.android.settings.core.BasePreferenceController.DISABLED_DEPENDENT_SETTING
 import com.android.settings.core.BasePreferenceController.UNSUPPORTED_ON_DEVICE
-import com.android.settings.connecteddevice.threadnetwork.ThreadNetworkPreferenceController.BaseThreadNetworkController
 import com.android.settings.flags.Flags
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
@@ -71,7 +70,7 @@ class ThreadNetworkPreferenceControllerTest {
         mSetFlagsRule.enableFlags(Flags.FLAG_THREAD_SETTINGS_ENABLED)
         context = spy(ApplicationProvider.getApplicationContext<Context>())
         executor = ContextCompat.getMainExecutor(context)
-        fakeThreadNetworkController = FakeThreadNetworkController(executor)
+        fakeThreadNetworkController = FakeThreadNetworkController()
         controller = newControllerWithThreadFeatureSupported(true)
         val preferenceManager = PreferenceManager(context)
         val preferenceScreen = preferenceManager.createPreferenceScreen(context)
@@ -97,7 +96,7 @@ class ThreadNetworkPreferenceControllerTest {
     @Test
     fun availabilityStatus_flagDisabled_returnsConditionallyUnavailable() {
         mSetFlagsRule.disableFlags(Flags.FLAG_THREAD_SETTINGS_ENABLED)
-        assertThat(controller.getAvailabilityStatus()).isEqualTo(CONDITIONALLY_UNAVAILABLE)
+        assertThat(controller.availabilityStatus).isEqualTo(CONDITIONALLY_UNAVAILABLE)
     }
 
     @Test
@@ -105,7 +104,7 @@ class ThreadNetworkPreferenceControllerTest {
         Settings.Global.putInt(context.contentResolver, Settings.Global.AIRPLANE_MODE_ON, 1)
         controller.onStateChanged(mock(LifecycleOwner::class.java), Lifecycle.Event.ON_START)
 
-        assertThat(controller.getAvailabilityStatus()).isEqualTo(DISABLED_DEPENDENT_SETTING)
+        assertThat(controller.availabilityStatus).isEqualTo(DISABLED_DEPENDENT_SETTING)
     }
 
     @Test
@@ -113,7 +112,7 @@ class ThreadNetworkPreferenceControllerTest {
         Settings.Global.putInt(context.contentResolver, Settings.Global.AIRPLANE_MODE_ON, 0)
         controller.onStateChanged(mock(LifecycleOwner::class.java), Lifecycle.Event.ON_START)
 
-        assertThat(controller.getAvailabilityStatus()).isEqualTo(AVAILABLE)
+        assertThat(controller.availabilityStatus).isEqualTo(AVAILABLE)
     }
 
     @Test
@@ -122,7 +121,7 @@ class ThreadNetworkPreferenceControllerTest {
         controller.onStateChanged(mock(LifecycleOwner::class.java), Lifecycle.Event.ON_START)
 
         assertThat(fakeThreadNetworkController.registeredStateCallback).isNull()
-        assertThat(controller.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE)
+        assertThat(controller.availabilityStatus).isEqualTo(UNSUPPORTED_ON_DEVICE)
     }
 
     @Test
@@ -200,8 +199,7 @@ class ThreadNetworkPreferenceControllerTest {
         verify(context)!!.registerReceiver(broadcastReceiverArgumentCaptor.capture(), any())
     }
 
-    private class FakeThreadNetworkController(private val executor: Executor) :
-        BaseThreadNetworkController {
+    private class FakeThreadNetworkController : BaseThreadNetworkController {
         var isEnabled = true
             private set
         var registeredStateCallback: StateCallback? = null
