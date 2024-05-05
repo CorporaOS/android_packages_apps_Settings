@@ -38,7 +38,6 @@ import com.android.settings.core.BasePreferenceController.AVAILABLE
 import com.android.settings.core.BasePreferenceController.CONDITIONALLY_UNAVAILABLE
 import com.android.settings.core.BasePreferenceController.DISABLED_DEPENDENT_SETTING
 import com.android.settings.core.BasePreferenceController.UNSUPPORTED_ON_DEVICE
-import com.android.settings.connecteddevice.threadnetwork.ThreadNetworkPreferenceController.BaseThreadNetworkController
 import com.android.settings.flags.Flags
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
@@ -71,12 +70,12 @@ class ThreadNetworkPreferenceControllerTest {
         mSetFlagsRule.enableFlags(Flags.FLAG_THREAD_SETTINGS_ENABLED)
         context = spy(ApplicationProvider.getApplicationContext<Context>())
         executor = ContextCompat.getMainExecutor(context)
-        fakeThreadNetworkController = FakeThreadNetworkController(executor)
+        fakeThreadNetworkController = FakeThreadNetworkController()
         controller = newControllerWithThreadFeatureSupported(true)
         val preferenceManager = PreferenceManager(context)
         val preferenceScreen = preferenceManager.createPreferenceScreen(context)
         preference = SwitchPreference(context)
-        preference.key = "thread_network_settings"
+        preference.key = "toggle_thread_network"
         preferenceScreen.addPreference(preference)
         controller.displayPreference(preferenceScreen)
 
@@ -88,7 +87,7 @@ class ThreadNetworkPreferenceControllerTest {
     ): ThreadNetworkPreferenceController {
         return ThreadNetworkPreferenceController(
             context,
-            "thread_network_settings" /* key */,
+            "toggle_thread_network" /* key */,
             executor,
             if (present) fakeThreadNetworkController else null
         )
@@ -97,7 +96,7 @@ class ThreadNetworkPreferenceControllerTest {
     @Test
     fun availabilityStatus_flagDisabled_returnsConditionallyUnavailable() {
         mSetFlagsRule.disableFlags(Flags.FLAG_THREAD_SETTINGS_ENABLED)
-        assertThat(controller.getAvailabilityStatus()).isEqualTo(CONDITIONALLY_UNAVAILABLE)
+        assertThat(controller.availabilityStatus).isEqualTo(CONDITIONALLY_UNAVAILABLE)
     }
 
     @Test
@@ -105,7 +104,7 @@ class ThreadNetworkPreferenceControllerTest {
         Settings.Global.putInt(context.contentResolver, Settings.Global.AIRPLANE_MODE_ON, 1)
         controller.onStateChanged(mock(LifecycleOwner::class.java), Lifecycle.Event.ON_START)
 
-        assertThat(controller.getAvailabilityStatus()).isEqualTo(DISABLED_DEPENDENT_SETTING)
+        assertThat(controller.availabilityStatus).isEqualTo(DISABLED_DEPENDENT_SETTING)
     }
 
     @Test
@@ -113,7 +112,7 @@ class ThreadNetworkPreferenceControllerTest {
         Settings.Global.putInt(context.contentResolver, Settings.Global.AIRPLANE_MODE_ON, 0)
         controller.onStateChanged(mock(LifecycleOwner::class.java), Lifecycle.Event.ON_START)
 
-        assertThat(controller.getAvailabilityStatus()).isEqualTo(AVAILABLE)
+        assertThat(controller.availabilityStatus).isEqualTo(AVAILABLE)
     }
 
     @Test
@@ -122,7 +121,7 @@ class ThreadNetworkPreferenceControllerTest {
         controller.onStateChanged(mock(LifecycleOwner::class.java), Lifecycle.Event.ON_START)
 
         assertThat(fakeThreadNetworkController.registeredStateCallback).isNull()
-        assertThat(controller.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE)
+        assertThat(controller.availabilityStatus).isEqualTo(UNSUPPORTED_ON_DEVICE)
     }
 
     @Test
@@ -198,58 +197,5 @@ class ThreadNetworkPreferenceControllerTest {
     private fun startControllerAndCaptureCallbacks() {
         controller.onStateChanged(mock(LifecycleOwner::class.java), Lifecycle.Event.ON_START)
         verify(context)!!.registerReceiver(broadcastReceiverArgumentCaptor.capture(), any())
-    }
-
-    private class FakeThreadNetworkController(private val executor: Executor) :
-        BaseThreadNetworkController {
-        var isEnabled = true
-            private set
-        var registeredStateCallback: StateCallback? = null
-            private set
-
-        override fun setEnabled(
-            enabled: Boolean,
-            executor: Executor,
-            receiver: OutcomeReceiver<Void?, ThreadNetworkException>
-        ) {
-            isEnabled = enabled
-            if (registeredStateCallback != null) {
-                if (!isEnabled) {
-                    executor.execute {
-                        registeredStateCallback!!.onThreadEnableStateChanged(
-                            STATE_DISABLING
-                        )
-                    }
-                    executor.execute {
-                        registeredStateCallback!!.onThreadEnableStateChanged(
-                            STATE_DISABLED
-                        )
-                    }
-                } else {
-                    executor.execute {
-                        registeredStateCallback!!.onThreadEnableStateChanged(
-                            STATE_ENABLED
-                        )
-                    }
-                }
-            }
-            executor.execute { receiver.onResult(null) }
-        }
-
-        override fun registerStateCallback(
-            executor: Executor,
-            callback: StateCallback
-        ) {
-            require(callback !== registeredStateCallback) { "callback is already registered" }
-            registeredStateCallback = callback
-            val enabledState =
-                if (isEnabled) STATE_ENABLED else STATE_DISABLED
-            executor.execute { registeredStateCallback!!.onThreadEnableStateChanged(enabledState) }
-        }
-
-        override fun unregisterStateCallback(callback: StateCallback) {
-            requireNotNull(registeredStateCallback) { "callback is already unregistered" }
-            registeredStateCallback = null
-        }
     }
 }
