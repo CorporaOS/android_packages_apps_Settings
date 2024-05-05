@@ -12076,6 +12076,18 @@
     <!-- Title for Thread network preference [CHAR_LIMIT=60] -->
     <string name="thread_network_settings_title">Thread</string>
 
+    <!-- Title for Thread network settings main switch [CHAR_LIMIT=60] -->
+    <string name="thread_network_settings_main_switch_title">Use Thread</string>
+
+    <!-- Title for Thread network settings footer [CHAR_LIMIT=NONE] -->
+    <string name="thread_network_settings_footer_title">Thread helps connect your smart home devices, boosting efficiency, and performance.\n\nWhen enabled, this device is eligible to join a Thread network, allowing control of Matter supported devices through this phone.</string>
+
+    <!-- Text for Thread network settings learn more link [CHAR_LIMIT=NONE] -->
+    <string name="thread_network_settings_learn_more">Learn more about Thread</string>
+
+    <!-- URL for Thread network settings learn more link [CHAR_LIMIT=NONE] -->
+    <string name="thread_network_settings_learn_more_link" translatable="false">https://developers.home.google.com</string>
+
     <!-- Summary for Thread network preference. [CHAR_LIMIT=NONE]-->
     <string name="thread_network_settings_summary">Connect to compatible devices using Thread for a seamless smart home experience</string>
 
