@@ -37,9 +37,13 @@ import androidx.preference.PreferenceScreen
 import com.android.settings.R
 import com.android.settings.core.TogglePreferenceController
 import com.android.settings.flags.Flags
+import com.android.settingslib.HelpUtils
+import com.android.settingslib.widget.FooterPreference
 import java.util.concurrent.Executor
 
-/** Controller for the "Thread" toggle in "Connected devices > Connection preferences".  */
+/**
+ * Controller for the "Use Thread" toggle in "Connected devices > Connection preferences > Thread".
+ */
 class ThreadNetworkPreferenceController @VisibleForTesting constructor(
     context: Context,
     key: String,
@@ -52,33 +56,11 @@ class ThreadNetworkPreferenceController @VisibleForTesting constructor(
     private var airplaneModeOn = false
     private var preference: Preference? = null
 
-    /**
-     * A testable interface for [ThreadNetworkController] which is `final`.
-     *
-     * We are in a awkward situation that Android API guideline suggest `final` for API classes
-     * while Robolectric test is being deprecated for platform testing (See
-     * tests/robotests/new_tests_hook.sh). This force us to use "mockito-target-extended" but it's
-     * conflicting with the default "mockito-target" which is somehow indirectly depended by the
-     * `SettingsUnitTests` target.
-     */
-    @VisibleForTesting
-    interface BaseThreadNetworkController {
-        fun setEnabled(
-            enabled: Boolean,
-            executor: Executor,
-            receiver: OutcomeReceiver<Void?, ThreadNetworkException>
-        )
-
-        fun registerStateCallback(executor: Executor, callback: StateCallback)
-
-        fun unregisterStateCallback(callback: StateCallback)
-    }
-
     constructor(context: Context, key: String) : this(
         context,
         key,
         ContextCompat.getMainExecutor(context),
-        getThreadNetworkController(context)
+        Utils.getThreadNetworkController(context)
     )
 
     init {
@@ -93,6 +75,7 @@ class ThreadNetworkPreferenceController @VisibleForTesting constructor(
         return object : StateCallback {
             override fun onThreadEnableStateChanged(enabledState: Int) {
                 threadEnabled = enabledState == ThreadNetworkController.STATE_ENABLED
+                preference?.let { preference -> updateState(preference) }
             }
 
             override fun onDeviceRoleChanged(role: Int) {}
@@ -110,9 +93,9 @@ class ThreadNetworkPreferenceController @VisibleForTesting constructor(
     }
 
     override fun getAvailabilityStatus(): Int {
-        return if (!Flags.threadSettingsEnabled()) {
+        return /*if (!Flags.threadSettingsEnabled()) {
             CONDITIONALLY_UNAVAILABLE
-        } else if (!isThreadSupportedOnDevice) {
+        } else */if (!isThreadSupportedOnDevice) {
             UNSUPPORTED_ON_DEVICE
         } else if (airplaneModeOn) {
             DISABLED_DEPENDENT_SETTING
@@ -124,6 +107,27 @@ class ThreadNetworkPreferenceController @VisibleForTesting constructor(
     override fun displayPreference(screen: PreferenceScreen) {
         super.displayPreference(screen)
         preference = screen.findPreference(preferenceKey)
+        val footer: FooterPreference? = screen.findPreference(KEY_PREFERENCE_FOOTER)
+        if (footer != null) {
+            setupFooterPreference(footer)
+        }
+    }
+
+    private fun setupFooterPreference(footer: FooterPreference) {
+        footer.setLearnMoreAction { v -> openLocaleLearnMoreLink() }
+        footer.setLearnMoreText(mContext.getString(R.string.thread_network_settings_learn_more))
+    }
+
+    private fun openLocaleLearnMoreLink() {
+        val intent = HelpUtils.getHelpIntent(
+                mContext,
+                mContext.getString(R.string.thread_network_settings_learn_more_link),
+                mContext::class.java.name)
+        if (intent != null) {
+            mContext.startActivity(intent);
+        } else {
+            Log.w(TAG, "HelpIntent is null");
+        }
     }
 
     override fun isChecked(): Boolean {
@@ -131,7 +135,7 @@ class ThreadNetworkPreferenceController @VisibleForTesting constructor(
         // Check airplane mode here because it's planned to disable Thread state in airplane mode
         // (code in the mainline module). But it's currently not implemented yet (b/322742298).
         // By design, the toggle should be unchecked in airplane mode, so explicitly check the
-        // airplane mode here to acchieve the same UX.
+        // airplane mode here to archieve the same UX.
         return !airplaneModeOn && threadEnabled
     }
 
@@ -139,6 +143,13 @@ class ThreadNetworkPreferenceController @VisibleForTesting constructor(
         if (threadController == null) {
             return false
         }
+
+        // Avoids deadloop of setChecked -> threadController.setEnabled() ->
+        // StateCallback.onThreadEnableStateChanged -> updateState -> setChecked
+        if (isChecked == isChecked()) {
+            return true
+        }
+
         val action = if (isChecked) "enable" else "disable"
         threadController.setEnabled(
             isChecked,
@@ -200,31 +211,7 @@ class ThreadNetworkPreferenceController @VisibleForTesting constructor(
 
     companion object {
         private const val TAG = "ThreadNetworkSettings"
-        private fun getThreadNetworkController(context: Context): BaseThreadNetworkController? {
-            if (!context.packageManager.hasSystemFeature(PackageManager.FEATURE_THREAD_NETWORK)) {
-                return null
-            }
-            val manager = context.getSystemService(ThreadNetworkManager::class.java) ?: return null
-            val controller = manager.allThreadNetworkControllers[0]
-            return object : BaseThreadNetworkController {
-                override fun setEnabled(
-                    enabled: Boolean,
-                    executor: Executor,
-                    receiver: OutcomeReceiver<Void?, ThreadNetworkException>
-                ) {
-                    controller.setEnabled(enabled, executor, receiver)
-                }
-
-                override fun registerStateCallback(executor: Executor, callback: StateCallback) {
-                    controller.registerStateCallback(executor, callback)
-                }
-
-                override fun unregisterStateCallback(callback: StateCallback) {
-                    controller.unregisterStateCallback(callback)
-                }
-            }
-        }
-
+        private const val KEY_PREFERENCE_FOOTER = "thread_network_settings_footer"
         private fun isAirplaneModeOn(context: Context): Boolean {
             return Settings.Global.getInt(
                 context.contentResolver,
