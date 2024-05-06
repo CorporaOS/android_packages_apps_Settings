@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd33e17b_cac4a76b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-05-06T22:40:38Z",
+      "side": 1,
+      "message": "Requesting +1/+2 for Owners approval from Settings team",
+      "revId": "b98a8acf9bc4f53ecc2c51acc941cdcf2b6670ff",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
