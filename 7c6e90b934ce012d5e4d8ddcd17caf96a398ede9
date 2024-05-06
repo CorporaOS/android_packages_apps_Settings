@@ -16,6 +16,24 @@
       "message": "is this needed?",
       "revId": "7c6e90b934ce012d5e4d8ddcd17caf96a398ede9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36415595_a18859fd",
+        "filename": "src/com/android/settings/connecteddevice/threadnetwork/BaseThreadNetworkController.kt",
+        "patchSetId": 10
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1693933
+      },
+      "writtenOn": "2024-05-06T10:10:04Z",
+      "side": 1,
+      "message": "Yes, it\u0027s referred in the class doc\n\n```\nA testable interface for [ThreadNetworkController] which is `final`.\n```",
+      "parentUuid": "668c2337_51fe27a5",
+      "revId": "7c6e90b934ce012d5e4d8ddcd17caf96a398ede9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
