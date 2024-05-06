@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "668c2337_51fe27a5",
+        "filename": "src/com/android/settings/connecteddevice/threadnetwork/BaseThreadNetworkController.kt",
+        "patchSetId": 10
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1501262
+      },
+      "writtenOn": "2024-05-06T09:49:31Z",
+      "side": 1,
+      "message": "is this needed?",
+      "revId": "7c6e90b934ce012d5e4d8ddcd17caf96a398ede9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
