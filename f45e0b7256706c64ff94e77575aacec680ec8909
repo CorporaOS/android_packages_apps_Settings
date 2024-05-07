@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d88e1092_8c02b8ed",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-07T22:09:43Z",
+      "side": 1,
+      "message": "Hi Susan, is it possible to make this change on the main branch, or was there a specific reason to land it in android14-dev?",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "68e4f7e7_11ffb885",
         "filename": "res/values/strings.xml",
         "patchSetId": 3
@@ -31,6 +48,29 @@
       "writtenOn": "2024-05-07T18:33:53Z",
       "side": 1,
       "message": "same",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "08c3d809_6c569c69",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4264,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-07T22:09:43Z",
+      "side": 1,
+      "message": "Title and summary of the preference is identical. Could you update the summary to describe what it does in details or don\u0027t use the summary if it doesn\u0027t adds value?",
+      "range": {
+        "startLine": 4264,
+        "startChar": 70,
+        "endLine": 4264,
+        "endChar": 110
+      },
       "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -71,6 +111,87 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d9eb9b2b_10236578",
+        "filename": "src/com/android/settings/accessibility/MagnifyNavAndImePreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-07T22:09:43Z",
+      "side": 1,
+      "message": "This is only used for identifying the preference on the PreferenceScreen. This doesn\u0027t need to be the same as the one in Settings.Secure. I prefer to decouple the pref key string and the Setting\u0027s key.",
+      "parentUuid": "a090bf5b_3b2a18d3",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "37d859a5_d368b267",
+        "filename": "src/com/android/settings/accessibility/MagnifyNavAndImePreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-07T22:09:43Z",
+      "side": 1,
+      "message": "nit: Could use Settings.Secure.getInt() or putInt() without the `ForUser` of you are always configure it for the current user.",
+      "range": {
+        "startLine": 58,
+        "startChar": 31,
+        "endLine": 58,
+        "endChar": 44
+      },
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48cd8b7c_d62d069e",
+        "filename": "src/com/android/settings/accessibility/MagnifyNavAndImePreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-07T22:09:43Z",
+      "side": 1,
+      "message": "This controller is only used in ToggleScreenMagnificationPreferenceFragment which is a DashboardFragment.\n\nIn [DashboardFragment](https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/src/com/android/settings/dashboard/DashboardFragment.java;l\u003d242;drc\u003dcfdb3b1f1b0810fa9b402b5f6369b12a9ee0c35f), when onResume is called, it\u0027ll call updatePreferenceState, which will call the controller\u0027s #updateState(Preference) method.\n\nWith that, in this controller, you don\u0027t need to implement `LifecycleObserver`, and can remove the override on `displayPreference`, and remove `onResume()`, `updateState()`",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8095243e_0fca8cb3",
+        "filename": "src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-07T22:09:43Z",
+      "side": 1,
+      "message": "[nit] Could you move this setup to it\u0027s own method and reference the method from here, so that this method is concise and easier to read?",
+      "range": {
+        "startLine": 222,
+        "startChar": 8,
+        "endLine": 236,
+        "endChar": 71
+      },
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1adc5b64_abfc2fc8",
         "filename": "src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment.java",
         "patchSetId": 3
@@ -99,6 +220,24 @@
       "writtenOn": "2024-05-07T18:33:53Z",
       "side": 1,
       "message": "This means the test won\u0027t actually be run. @chunkulin@google.com do you know if we can remove these yet? I see you did something in that referenced bug b/214161063",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45aa1bee_f2aa9e2f",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragmentTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-07T22:09:43Z",
+      "side": 1,
+      "message": "This test class has been fixed with no ignored test methods in the `main` branch.\n\nhttps://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/tests/robotests/src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragmentTest.java",
+      "parentUuid": "f1eb815b_f602a074",
       "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
