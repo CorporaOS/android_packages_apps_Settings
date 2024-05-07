@@ -3,6 +3,52 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6428480a_13496b04",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 10
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2024-05-07T09:56:23Z",
+      "side": 1,
+      "message": "suggest don\u0027t leave internal link in AOSP commit message, you can put it in code review comment.",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 85
+      },
+      "revId": "7c6e90b934ce012d5e4d8ddcd17caf96a398ede9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5bc3e003_1742b69e",
+        "filename": "res/xml/thread_network_settings.xml",
+        "patchSetId": 10
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2024-05-07T09:56:23Z",
+      "side": 1,
+      "message": "```\n\u003c!-- Copyright (C) 2024 The Android Open Source Project\n\n     Licensed under the Apache License, Version 2.0 (the \"License\");\n     you may not use this file except in compliance with the License.\n     You may obtain a copy of the License at\n\n          http://www.apache.org/licenses/LICENSE-2.0\n\n     Unless required by applicable law or agreed to in writing, software\n     distributed under the License is distributed on an \"AS IS\" BASIS,\n     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n     See the License for the specific language governing permissions and\n     limitations under the License.\n--\u003e\n```",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 5
+      },
+      "revId": "7c6e90b934ce012d5e4d8ddcd17caf96a398ede9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "668c2337_51fe27a5",
         "filename": "src/com/android/settings/connecteddevice/threadnetwork/BaseThreadNetworkController.kt",
         "patchSetId": 10
@@ -32,6 +78,52 @@
       "side": 1,
       "message": "Yes, it\u0027s referred in the class doc\n\n```\nA testable interface for [ThreadNetworkController] which is `final`.\n```",
       "parentUuid": "668c2337_51fe27a5",
+      "revId": "7c6e90b934ce012d5e4d8ddcd17caf96a398ede9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eaa9bcf2_0032dc72",
+        "filename": "src/com/android/settings/connecteddevice/threadnetwork/ThreadNetworkFragment.kt",
+        "patchSetId": 10
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2024-05-07T09:56:23Z",
+      "side": 1,
+      "message": "we don\u0027t need it anymore",
+      "range": {
+        "startLine": 34,
+        "startChar": 4,
+        "endLine": 34,
+        "endChar": 69
+      },
+      "revId": "7c6e90b934ce012d5e4d8ddcd17caf96a398ede9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a3fc9cf2_f3806f53",
+        "filename": "src/com/android/settings/connecteddevice/threadnetwork/ThreadNetworkPreferenceController.kt",
+        "patchSetId": 10
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2024-05-07T09:56:23Z",
+      "side": 1,
+      "message": "please create different preferenceController for the footerPreference",
+      "range": {
+        "startLine": 108,
+        "startChar": 8,
+        "endLine": 129,
+        "endChar": 9
+      },
       "revId": "7c6e90b934ce012d5e4d8ddcd17caf96a398ede9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
