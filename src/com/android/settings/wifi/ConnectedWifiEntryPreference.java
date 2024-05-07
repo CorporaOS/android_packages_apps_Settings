@@ -22,6 +22,7 @@ import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceViewHolder;
 
 import com.android.settings.R;
+import com.android.settingslib.Utils;
 import com.android.wifitrackerlib.WifiEntry;
 
 /**
@@ -66,6 +67,22 @@ public class ConnectedWifiEntryPreference extends LongPressWifiEntryPreference i
             if (mOnGearClickListener != null) {
                 mOnGearClickListener.onGearClick(this);
             }
+        }
+    }
+
+    @Override
+    protected void updateIcon(boolean showX, int level, int standard) {
+        int mLevel = level;
+        if (level == -1) {
+            mLevel = WifiEntry.WIFI_LEVEL_MIN;
+        }
+
+        final Drawable drawable = mIconInjector.getIcon(showX, mLevel, standard);
+        if (drawable != null) {
+            drawable.setTint(Utils.getColorAttrDefaultColor(getContext(), getIconColorAttr()));
+            setIcon(drawable);
+        } else {
+            setIcon(null);
         }
     }
 
