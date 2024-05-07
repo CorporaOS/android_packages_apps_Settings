@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "913e93f0_f7a85d15",
+        "filename": "src/com/android/settings/connecteddevice/threadnetwork/ThreadNetworkToggleController.kt",
+        "patchSetId": 14
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2024-05-07T13:22:52Z",
+      "side": 1,
+      "message": "Since the summary never change, you can put it in thread_network_settings.xml",
+      "range": {
+        "startLine": 139,
+        "startChar": 4,
+        "endLine": 141,
+        "endChar": 5
+      },
+      "revId": "43526cf1d74768f706f4e3123937a01d5af9dd1e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
