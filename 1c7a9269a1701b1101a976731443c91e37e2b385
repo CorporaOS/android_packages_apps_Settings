@@ -22,6 +22,30 @@
       },
       "revId": "1c7a9269a1701b1101a976731443c91e37e2b385",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cac1a629_d79197cd",
+        "filename": "src/com/android/settings/network/telephony/DefaultSubscriptionController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1301463
+      },
+      "writtenOn": "2024-05-07T02:18:08Z",
+      "side": 0,
+      "message": "Hi SongFerng,\n\nrecalled its history, the API addRegisterBySubId takes care of another registrations like phone state callback.\n\nwith below commit, such logic is no longer present in this API.\nThe remaining only take care of mobile data user data listener.\nhere, this API isn\u0027t needed to be called here anymore.\n\nbecause there is no logic depending on mobile user data option changed from such classes.\n\nwith the earlier refactor logic, MobileNetworkRepositor already maintains such info globally per SUB.\n\nthat is why i remove the entire API addRegisterBySubId\n\n\ncommit b9f6bb7958d98dbe52c46602810a349c9a207f04\nAuthor: Zoey Chen \u003czoeychen@google.com\u003e\nDate:   Thu Mar 16 18:40:08 2023 +0000\n\n    [Settings] Fix the inconsistent data/entity when switch the app/fragment\n\n    Bug: 271524675\n    Bug: 273825889\n    Test: local test\n    Change-Id: I7ec6d824c5154422aaad056dc3f4dcd365fef5e1",
+      "parentUuid": "24ed2326_2edebbab",
+      "range": {
+        "startLine": 99,
+        "startChar": 7,
+        "endLine": 101,
+        "endChar": 80
+      },
+      "revId": "1c7a9269a1701b1101a976731443c91e37e2b385",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }

@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "ee4b25e0_fe3e1c86",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1301463
+      },
+      "writtenOn": "2024-05-07T02:18:08Z",
+      "side": 1,
+      "message": "sure, will let you know the UT result of DefaultSubscriptionControllerTest.java",
+      "parentUuid": "23e8f7c0_35f6c4c3",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 79
+      },
+      "revId": "8c10fb7054de484009f28fb78ff91413dcaa4c15",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "8caf01c1_e57b81aa",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1
