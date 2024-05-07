@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "68e4f7e7_11ffb885",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4261,
+      "author": {
+        "id": 1135528
+      },
+      "writtenOn": "2024-05-07T18:33:53Z",
+      "side": 1,
+      "message": "Please update the comment to describe what the feature does",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "131207ba_b0e96925",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4263,
+      "author": {
+        "id": 1135528
+      },
+      "writtenOn": "2024-05-07T18:33:53Z",
+      "side": 1,
+      "message": "same",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "053b24f3_e47c53f4",
+        "filename": "src/com/android/settings/accessibility/MagnifyNavAndImePreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1135528
+      },
+      "writtenOn": "2024-05-07T18:33:53Z",
+      "side": 1,
+      "message": "nit: formatting",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a090bf5b_3b2a18d3",
+        "filename": "src/com/android/settings/accessibility/MagnifyNavAndImePreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1135528
+      },
+      "writtenOn": "2024-05-07T18:33:53Z",
+      "side": 1,
+      "message": "Can you use the constant from Settings.Secure here?",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1adc5b64_abfc2fc8",
+        "filename": "src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 1135528
+      },
+      "writtenOn": "2024-05-07T18:33:53Z",
+      "side": 1,
+      "message": "indentation",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f1eb815b_f602a074",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragmentTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 1135528
+      },
+      "writtenOn": "2024-05-07T18:33:53Z",
+      "side": 1,
+      "message": "This means the test won\u0027t actually be run. @chunkulin@google.com do you know if we can remove these yet? I see you did something in that referenced bug b/214161063",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
