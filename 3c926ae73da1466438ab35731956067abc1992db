@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "66791696_745327ff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 16
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2024-05-07T17:35:47Z",
+      "side": 1,
+      "message": "LGTM from my perspective. Defer to Connectivity Settings owner to review",
+      "revId": "3c926ae73da1466438ab35731956067abc1992db",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
