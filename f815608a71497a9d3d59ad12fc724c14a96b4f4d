@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d951dda_aa7e67d3",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 1889140
+      },
+      "writtenOn": "2024-05-08T21:12:26Z",
+      "side": 1,
+      "message": "how would the user check this? should we include this instructions?",
+      "range": {
+        "startLine": 213,
+        "startChar": 41,
+        "endLine": 213,
+        "endChar": 84
+      },
+      "revId": "f815608a71497a9d3d59ad12fc724c14a96b4f4d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
