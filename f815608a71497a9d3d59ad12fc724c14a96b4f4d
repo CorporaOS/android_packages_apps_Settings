@@ -22,6 +22,30 @@
       },
       "revId": "f815608a71497a9d3d59ad12fc724c14a96b4f4d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "39f7903a_26c1ff87",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-05-08T21:14:35Z",
+      "side": 1,
+      "message": "This is something should be done by OEMs when configuring this option on the devices. Do you want a SAC link here?",
+      "parentUuid": "5d951dda_aa7e67d3",
+      "range": {
+        "startLine": 213,
+        "startChar": 41,
+        "endLine": 213,
+        "endChar": 84
+      },
+      "revId": "f815608a71497a9d3d59ad12fc724c14a96b4f4d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
