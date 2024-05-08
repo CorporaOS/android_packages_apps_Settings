@@ -11,7 +11,7 @@
         android:name="com.android.settings.BATTERY_DATA"
         android:protectionLevel="signature|privileged"/>
 
-    <!-- Permission for using the Biometric Settings Provider. -->
+    <!-- Permission for using the Biometric Settings Provider... -->
     <permission
         android:name="com.android.settings.USE_BIOMETRIC_PROVIDER"
         android:protectionLevel="signature|privileged"/>
