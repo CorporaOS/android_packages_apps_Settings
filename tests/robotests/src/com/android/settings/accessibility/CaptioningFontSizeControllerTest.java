@@ -94,7 +94,8 @@ public class CaptioningFontSizeControllerTest {
 
     @Test
     public void onPreferenceChange_shouldSetCaptionEnabled() {
-        mShadowCaptioningManager.setEnabled(false);
+        Settings.Secure.putInt(
+            mContext.getContentResolver(), Settings.Secure.ACCESSIBILITY_CAPTIONING_ENABLED, OFF);
         mController.displayPreference(mScreen);
 
         mController.onPreferenceChange(mPreference, "0.5");
