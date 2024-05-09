@@ -34,6 +34,24 @@
       "parentUuid": "6ca7fc5f_3b76bd83",
       "revId": "7b8e3a7f598059fdbf2ab6a4db357dc86d4247e4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e40cce5_35121a4a",
+        "filename": "src/com/android/settings/password/OWNERS",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2002120
+      },
+      "writtenOn": "2024-05-09T22:16:14Z",
+      "side": 1,
+      "message": "Good suggestion. Added the noparent to those directories too.",
+      "parentUuid": "99c97a2c_01f12b8b",
+      "revId": "7b8e3a7f598059fdbf2ab6a4db357dc86d4247e4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
