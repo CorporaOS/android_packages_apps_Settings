@@ -16,6 +16,24 @@
       "message": "Should we do this for their other directories in the same CL?",
       "revId": "7b8e3a7f598059fdbf2ab6a4db357dc86d4247e4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "99c97a2c_01f12b8b",
+        "filename": "src/com/android/settings/password/OWNERS",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-05-09T00:09:36Z",
+      "side": 1,
+      "message": "- packages/apps/Settings/src/com/android/settings/biometrics/\n- packages/apps/Settings/src/com/android/settings/biometrics2/",
+      "parentUuid": "6ca7fc5f_3b76bd83",
+      "revId": "7b8e3a7f598059fdbf2ab6a4db357dc86d4247e4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
