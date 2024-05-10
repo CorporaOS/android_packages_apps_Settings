@@ -65,6 +65,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "40bff90f_a9106c18",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1693933
+      },
+      "writtenOn": "2024-05-10T05:08:09Z",
+      "side": 1,
+      "message": "Mark resolved as settings owners approved",
+      "parentUuid": "7d5a98b8_0e60906f",
+      "revId": "7c6e90b934ce012d5e4d8ddcd17caf96a398ede9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5bc3e003_1742b69e",
