@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c1500d70_36116e4a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-05-10T17:48:26Z",
+      "side": 1,
+      "message": "Hi Chun-Ku! It was due to some testing constraints on my end, but I\u0027ve been working to resolve this (see comment below)!",
+      "parentUuid": "d88e1092_8c02b8ed",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "68e4f7e7_11ffb885",
         "filename": "res/values/strings.xml",
         "patchSetId": 3
@@ -31,6 +49,24 @@
       "writtenOn": "2024-05-07T18:33:53Z",
       "side": 1,
       "message": "Please update the comment to describe what the feature does",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5cc0ed40_8bb4dfb5",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4261,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-05-10T17:48:26Z",
+      "side": 1,
+      "message": "(Apologies -- I could\u0027ve sworn I changed these!) Thanks for catching it though -- I\u0027ll address this and the following comments.",
+      "parentUuid": "68e4f7e7_11ffb885",
       "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -52,6 +88,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "34b915d6_45c45d02",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4263,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-05-10T17:48:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "131207ba_b0e96925",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "08c3d809_6c569c69",
@@ -65,6 +119,30 @@
       "writtenOn": "2024-05-07T22:09:43Z",
       "side": 1,
       "message": "Title and summary of the preference is identical. Could you update the summary to describe what it does in details or don\u0027t use the summary if it doesn\u0027t adds value?",
+      "range": {
+        "startLine": 4264,
+        "startChar": 70,
+        "endLine": 4264,
+        "endChar": 110
+      },
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d735696_7ac2c0c7",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4264,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-05-10T17:48:26Z",
+      "side": 1,
+      "message": "Yes! I think I\u0027ll take out the summary, since the title says all.",
+      "parentUuid": "08c3d809_6c569c69",
       "range": {
         "startLine": 4264,
         "startChar": 70,
@@ -127,6 +205,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8ec7947_e1ce60a3",
+        "filename": "src/com/android/settings/accessibility/MagnifyNavAndImePreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-05-10T17:48:26Z",
+      "side": 1,
+      "message": "Hm, in that case I\u0027ll leave this as is then!",
+      "parentUuid": "d9eb9b2b_10236578",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "37d859a5_d368b267",
@@ -140,6 +236,30 @@
       "writtenOn": "2024-05-07T22:09:43Z",
       "side": 1,
       "message": "nit: Could use Settings.Secure.getInt() or putInt() without the `ForUser` of you are always configure it for the current user.",
+      "range": {
+        "startLine": 58,
+        "startChar": 31,
+        "endLine": 58,
+        "endChar": 44
+      },
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bfa18e7b_d927f554",
+        "filename": "src/com/android/settings/accessibility/MagnifyNavAndImePreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-05-10T17:48:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "37d859a5_d368b267",
       "range": {
         "startLine": 58,
         "startChar": 31,
@@ -167,6 +287,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "020084c2_7f385245",
+        "filename": "src/com/android/settings/accessibility/MagnifyNavAndImePreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-05-10T17:48:26Z",
+      "side": 1,
+      "message": "Ah thanks so much!",
+      "parentUuid": "48cd8b7c_d62d069e",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8095243e_0fca8cb3",
@@ -190,6 +328,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f0d1c0c_a6bb3c9c",
+        "filename": "src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-05-10T17:48:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8095243e_0fca8cb3",
+      "range": {
+        "startLine": 222,
+        "startChar": 8,
+        "endLine": 236,
+        "endChar": 71
+      },
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1adc5b64_abfc2fc8",
@@ -203,6 +365,24 @@
       "writtenOn": "2024-05-07T18:33:53Z",
       "side": 1,
       "message": "indentation",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91a78f53_5fec62c6",
+        "filename": "src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-05-10T17:48:26Z",
+      "side": 1,
+      "message": "Strangely enough, this was done to appease the checkstyle-hook, but I\u0027ll fix this!",
+      "parentUuid": "1adc5b64_abfc2fc8",
       "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
@@ -238,6 +418,24 @@
       "side": 1,
       "message": "This test class has been fixed with no ignored test methods in the `main` branch.\n\nhttps://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/tests/robotests/src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragmentTest.java",
       "parentUuid": "f1eb815b_f602a074",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "952fced1_93e1b251",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragmentTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-05-10T17:48:26Z",
+      "side": 1,
+      "message": "Thanks! Initially I kept it like this due to posting my change against android14-dev, but I\u0027m working on getting it posted against main (and will modify these tests). \n\nAlso a quick question, I saw that in your commit you used atest -- are these instructions out of date then? https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/tests/robotests/README.md",
+      "parentUuid": "45aa1bee_f2aa9e2f",
       "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
