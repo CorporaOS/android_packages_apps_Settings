@@ -438,6 +438,24 @@
       "parentUuid": "45aa1bee_f2aa9e2f",
       "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5dadd1a_6c7a57c5",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragmentTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-10T22:30:52Z",
+      "side": 1,
+      "message": "Good call! Just tested with `make RunSettingsRoboTests ROBOTEST_FILTER\u003d\u003cClassName\u003e` and it doesn\u0027t work somehow. I\u0027ll ask the internal team and update the doc accordingly. Will cc you. Thank you.",
+      "parentUuid": "952fced1_93e1b251",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
