@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "50a27320_3154c7f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-11T02:33:53Z",
+      "side": 1,
+      "message": "Susan from Amazon found out the README instruction is no longer valid. Updating the README to the latest that matches Settings\u0027 doc.",
+      "revId": "01463cac05c4f9bf31bb0fef592290e7518dab80",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
