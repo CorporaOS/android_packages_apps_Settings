@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f35649a1_5e5d8436",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-05-13T10:38:30Z",
+      "side": 1,
+      "message": "Hi Chun-Ku! \n\nFor context, our internal AOSP branch is built on Android 14 (hence why I was posting against android14-dev initially). While my builds succeeded on AOSP main branch, I can\u0027t flash my current device with these changes as my device configuration is supported only in our internal branch. I have also been having some issues running the Settings unit tests (even using the updated instructions) on the AOSP Main branch, which I\u0027m working on figuring out... if you have any suggestions let me know! \n\nRegardless, I\u0027ve posted this change against main for now so you can take a look -- https://android-review.googlesource.com/c/platform/packages/apps/Settings/+/3084185\n\n(I didn\u0027t realize it would create a separate gerrit though, so I\u0027ve also added it to the same topic!)",
+      "parentUuid": "c1500d70_36116e4a",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "68e4f7e7_11ffb885",
         "filename": "res/values/strings.xml",
         "patchSetId": 3
@@ -454,6 +472,24 @@
       "side": 1,
       "message": "Good call! Just tested with `make RunSettingsRoboTests ROBOTEST_FILTER\u003d\u003cClassName\u003e` and it doesn\u0027t work somehow. I\u0027ll ask the internal team and update the doc accordingly. Will cc you. Thank you.",
       "parentUuid": "952fced1_93e1b251",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bdaa5e0d_693105c8",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragmentTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-05-13T10:38:30Z",
+      "side": 1,
+      "message": "No problem!",
+      "parentUuid": "a5dadd1a_6c7a57c5",
       "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
