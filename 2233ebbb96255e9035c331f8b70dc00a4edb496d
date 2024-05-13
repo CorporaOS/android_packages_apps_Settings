@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8eec3922_c08c4cb0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-05-13T22:31:52Z",
+      "side": 1,
+      "message": "Looks good to me in general. Some comments below but nothing significant that needs changing",
+      "revId": "2233ebbb96255e9035c331f8b70dc00a4edb496d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e2b7a75d_1d4c55cb",
+        "filename": "res/xml/display_settings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-05-13T22:31:52Z",
+      "side": 1,
+      "message": "np: for consistency, put `key` as the first attribute",
+      "revId": "2233ebbb96255e9035c331f8b70dc00a4edb496d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c1ecf87c_02c6922b",
+        "filename": "src/com/android/settings/dashboard/DashboardFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 438,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-05-13T22:31:52Z",
+      "side": 1,
+      "message": "Please wrap this ingress with a Flag: https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/aconfig/settings_flag_declarations.aconfig\n\nYou can set the namespace to be the main settings team, `android_settings` so that my team can control this once this to turn on/off if there\u0027s any issues discovered internally before it propagates to everyone else. Then it should be available to your company\u0027s usage immediately by just overriding the flag.",
+      "revId": "2233ebbb96255e9035c331f8b70dc00a4edb496d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e052660d_55e64185",
+        "filename": "src/com/android/settings/dashboard/DashboardSort.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-05-13T22:31:52Z",
+      "side": 1,
+      "message": "This class has a very contained API - having tests for this class in isolation would be particularly useful (this appears to already be tested via the DashboardFragment, but there are many moving pieces there, so would be good to get at least some simpler tests that specifically test this)",
+      "revId": "2233ebbb96255e9035c331f8b70dc00a4edb496d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "756c1dd3_3c4459cc",
+        "filename": "src/com/android/settings/dashboard/DashboardSort.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-05-13T22:31:52Z",
+      "side": 1,
+      "message": "Can we get javadoc here (or on class itself since this is the only method) describing the purpose and general approach taken",
+      "revId": "2233ebbb96255e9035c331f8b70dc00a4edb496d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
