@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fb8d5b3b_4cd5125a",
+        "filename": "tests/unit/src/com/android/settings/connecteddevice/threadnetwork/ThreadNetworkToggleControllerTest.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2016993
+      },
+      "writtenOn": "2024-05-13T08:11:01Z",
+      "side": 1,
+      "message": "I think the behavior doesn\u0027t change in this CL? How could this fix the issue?",
+      "revId": "85576286691f35f8e62307190b626bd2a5a42f73",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
