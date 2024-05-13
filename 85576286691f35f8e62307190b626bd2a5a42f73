@@ -34,6 +34,41 @@
       "parentUuid": "fb8d5b3b_4cd5125a",
       "revId": "85576286691f35f8e62307190b626bd2a5a42f73",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bc2b50a7_9680183e",
+        "filename": "tests/unit/src/com/android/settings/connecteddevice/threadnetwork/ThreadNetworkToggleControllerTest.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2016993
+      },
+      "writtenOn": "2024-05-13T08:13:10Z",
+      "side": 1,
+      "message": "```suggestion\n        executor \u003d MoreExecutors.directExecutor()\n```",
+      "revId": "85576286691f35f8e62307190b626bd2a5a42f73",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0eb23d53_9572e215",
+        "filename": "tests/unit/src/com/android/settings/connecteddevice/threadnetwork/ThreadNetworkToggleControllerTest.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2016993
+      },
+      "writtenOn": "2024-05-13T08:13:10Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "a1f7781c_e2f8996f",
+      "revId": "85576286691f35f8e62307190b626bd2a5a42f73",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
