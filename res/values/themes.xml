@@ -75,6 +75,10 @@
         <item name="notification_importance_button_foreground_color_selected">?androidprv:attr/materialColorOnSecondaryContainer</item>
     </style>
 
+    <style name="Theme.Settings.Home.Toolbar">
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
+    </style>
+
     <!-- Variant of the settings theme with no action bar. -->
     <style name="Theme.Settings.NoActionBar">
         <item name="android:windowActionBar">false</item>

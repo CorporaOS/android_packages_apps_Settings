@@ -746,7 +746,8 @@
                 android:label="@string/device_picker"
                 android:configChanges="orientation|keyboardHidden|screenSize"
                 android:exported="true"
-                android:clearTaskOnLaunch="true">
+                android:clearTaskOnLaunch="true"
+                android:theme="@style/Theme.Settings.Home.Toolbar">
             <intent-filter>
                 <action android:name="android.bluetooth.devicepicker.action.LAUNCH" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -2953,7 +2954,8 @@
         </activity>
 
         <activity android:name=".development.AppPicker"
-                  android:label="@string/select_application" />
+                  android:label="@string/select_application"
+                  android:theme="@style/Theme.Settings.Home.Toolbar" />
 
         <activity android:name=".development.AdbQrCodeActivity" />
 
