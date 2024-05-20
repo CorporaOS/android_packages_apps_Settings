@@ -212,7 +212,10 @@ public class QrCodeScanModeFragment extends InstrumentedFragment implements
                     Log.d(TAG, "scan success");
                     final Intent resultIntent = new Intent();
                     resultIntent.putExtra(KEY_BROADCAST_METADATA, mBroadcastMetadata);
-                    getActivity().setResult(Activity.RESULT_OK, resultIntent);
+                    Activity activity = getActivity();
+                    if (activity != null) {
+                        activity.setResult(Activity.RESULT_OK, resultIntent);
+                    }
                     notifyUserForQrCodeRecognition();
                     break;
                 default:
@@ -228,8 +231,10 @@ public class QrCodeScanModeFragment extends InstrumentedFragment implements
         mErrorMessage.setVisibility(View.INVISIBLE);
 
         triggerVibrationForQrCodeRecognition(getContext());
-
-        getActivity().finish();
+        Activity activity = getActivity();
+        if (activity != null) {
+            activity.finish();
+        }
     }
 
     private static void triggerVibrationForQrCodeRecognition(Context context) {
