@@ -54,6 +54,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d744188c_abc7fc96",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-21T23:28:48Z",
+      "side": 1,
+      "message": "Acknowledged.\n\nSince we no longer accepting new changes in android14-dev in AOSP, let\u0027s focus on changes on the main branch.",
+      "parentUuid": "f35649a1_5e5d8436",
+      "revId": "f45e0b7256706c64ff94e77575aacec680ec8909",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "68e4f7e7_11ffb885",
