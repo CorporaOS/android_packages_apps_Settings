@@ -1,0 +1,250 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1eca2a40_caf8b523",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-21T23:26:41Z",
+      "side": 1,
+      "message": "Hi Susan,\n\nThank you for contributing to AOSP.\n\nI think android14-dev no longer accept new features. Let\u0027s abandon the one on android14-dev and focus on the changes on main.\n\nIn addition, there is a new process on Android where all new changes needs to be feature flagged, unless it\u0027s trivial or low risk changes. Unfortunately, we still don\u0027t have an official document on how to feature flag on Android.\n\nTo use feature flag, the general process is like:\n\n1. Create a flag in the .aconfig, for example in your case, the flag will be used for Settings, Sysui, Framework, you can create another entry in the frameworks/base [.aconfig](https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/core/java/android/view/accessibility/flags/accessibility_flags.aconfig) file\n2. Once the flag is in aconfig file, when you build Android, it\u0027ll generate the Flag\u0027s java class, where you can import into the code that needs the flag. See [here](https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/src/com/android/settings/accessibility/ToggleFeaturePreferenceFragment.java;l\u003d909;drc\u003d0f2cc342304e8ef89f1ceadee4ab3aeb599091a8) for example usage\n3. When the flag is first created and used, the flag is default to disabled. To test your change locally, you can:\n```\nonetime per device:\n$ adb shell device_config put core_experiments_team_internal com.android.providers.settings.support_overrides true\n$ adb shell stop \u0026\u0026 adb shell start\n```\n```\nper feature flag:\n$ adb shell device_config override accessibility android.view.accessibility.your_new_feature_flag true\n$ adb shell stop \u0026\u0026 adb shell start\n```\n\n\nIn the robolectric test, if you need to turn on/off the feature flag for testing the preference controller, you could use the [`SetFlagRules`](https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/tests/robotests/src/com/android/settings/notification/PoliteNotifWorkProfileToggleControllerTest.java;l\u003d47;drc\u003d9f82e7381a2f5bec4e3973eba6237c504018635f) with `@EnableFlags` `@DisableFlags`",
+      "revId": "bc167ff7f7fd1f130904086a5a035cd0a85fc805",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e7f0deb_613e10e9",
+        "filename": "src/com/android/settings/accessibility/MagnifyNavAndImePreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-21T23:26:41Z",
+      "side": 1,
+      "message": "Could move the first line of the doc to line#32, so that the styles looks better.",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 3
+      },
+      "revId": "bc167ff7f7fd1f130904086a5a035cd0a85fc805",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "04c01afb_2ab23ef7",
+        "filename": "src/com/android/settings/accessibility/MagnifyNavAndImePreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-21T23:26:41Z",
+      "side": 1,
+      "message": "With the feature flag, you could change this to\n\n```\nreturn Flag.XXXX()? AVAILABLE : CONDITIONALLY_AVAILABLE;\n```",
+      "revId": "bc167ff7f7fd1f130904086a5a035cd0a85fc805",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f0b4d169_2e2826dc",
+        "filename": "src/com/android/settings/accessibility/MagnifyNavAndImePreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-21T23:26:41Z",
+      "side": 1,
+      "message": "`mMagnifyNavImePreference` seemed not needed anymore. Could remove the entire method as well.",
+      "revId": "bc167ff7f7fd1f130904086a5a035cd0a85fc805",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ec56e5cd_51dcaceb",
+        "filename": "src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-21T23:26:41Z",
+      "side": 1,
+      "message": "```suggestion\n    private void addMagnifyNavAndImeSetting(PreferenceCategory generalCategory) {\n```",
+      "range": {
+        "startLine": 256,
+        "startChar": 17,
+        "endLine": 256,
+        "endChar": 43
+      },
+      "revId": "bc167ff7f7fd1f130904086a5a035cd0a85fc805",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5be12f80_0fed9cee",
+        "filename": "src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-21T23:26:41Z",
+      "side": 1,
+      "message": "nit: probably don\u0027t need to set the summary here, since the summary is empty.",
+      "revId": "bc167ff7f7fd1f130904086a5a035cd0a85fc805",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "acf10e71_367137ea",
+        "filename": "src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-21T23:26:41Z",
+      "side": 1,
+      "message": "Probably don\u0027t need this line as the DashboardFragment will handle it.",
+      "revId": "bc167ff7f7fd1f130904086a5a035cd0a85fc805",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f20ce6e5_3031c380",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/MagnifyNavAndImePreferenceControllerTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-21T23:26:41Z",
+      "side": 1,
+      "message": "```suggestion\n    public void isChecked_magnifyNavAndImeSettingDisabled_shouldReturnFalse() {\n```\n\nAnd add another test case for\n```public void isChecked_magnifyNavAndImeSettingEnabled_shouldReturnTrue()```",
+      "range": {
+        "startLine": 62,
+        "startChar": 16,
+        "endLine": 62,
+        "endChar": 75
+      },
+      "revId": "bc167ff7f7fd1f130904086a5a035cd0a85fc805",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f9c92ae4_523b4fb6",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/MagnifyNavAndImePreferenceControllerTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-21T23:26:41Z",
+      "side": 1,
+      "message": "@Test\npublic void performClick_magnifyNavAndImeDisabled_shouldEnableMagnifyNavAndIme() {\n    // set up the setting so that it\u0027s disabled\n    \n    // perform click\n    \n    // verify the setting is update to true\n\n}\n\nAlso, could you add another test case for:\nperformClick_magnifyNavAndImeEnabled_shouldDisableMagnifyNavAndIme",
+      "range": {
+        "startLine": 68,
+        "startChar": 16,
+        "endLine": 68,
+        "endChar": 84
+      },
+      "revId": "bc167ff7f7fd1f130904086a5a035cd0a85fc805",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "21201b76_42b8da63",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragmentTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-21T23:26:41Z",
+      "side": 1,
+      "message": "```suggestion\n    public void onResume_disableMagnifyNavAndIme_preferenceNotChecked() {\n```",
+      "range": {
+        "startLine": 172,
+        "startChar": 16,
+        "endLine": 172,
+        "endChar": 90
+      },
+      "revId": "bc167ff7f7fd1f130904086a5a035cd0a85fc805",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ef3e064d_eaab69fb",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragmentTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-21T23:26:41Z",
+      "side": 1,
+      "message": "```suggestion\n    public void ```suggestion\n    public void onResume_enableMagnifyNavAndIme_preferenceIsChecked() {\n```() {\n```",
+      "range": {
+        "startLine": 186,
+        "startChar": 16,
+        "endLine": 186,
+        "endChar": 80
+      },
+      "revId": "bc167ff7f7fd1f130904086a5a035cd0a85fc805",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "92a23108_5d16b054",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragmentTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 732,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-05-21T23:26:41Z",
+      "side": 1,
+      "message": "```suggestion\n    private void setKeyMagnifyNavAndImeEnabled(boolean enabled) {\n```",
+      "range": {
+        "startLine": 732,
+        "startChar": 17,
+        "endLine": 732,
+        "endChar": 46
+      },
+      "revId": "bc167ff7f7fd1f130904086a5a035cd0a85fc805",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
