@@ -19,6 +19,9 @@ package com.android.settings.flashlight;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.hardware.camera2.CameraAccessException;
+import android.hardware.camera2.CameraCharacteristics;
+import android.hardware.camera2.CameraManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
@@ -46,15 +49,48 @@ public class FlashlightHandleActivity extends Activity implements Indexable {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Do nothing meaningful in this activity.
-        // The sole purpose of this activity is to provide a place to index flashlight
-        // into Settings search.
+
+        // Control the flashlight
+        controlFlashlight();
 
         // Caller's choice: fallback to homepage, or just exit?
         if (getIntent().getBooleanExtra(EXTRA_FALLBACK_TO_HOMEPAGE, false)) {
             startActivity(new Intent(Settings.ACTION_SETTINGS));
         }
         finish();
+    }
+
+    private void controlFlashlight() {
+        CameraManager cameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
+        try {
+            String cameraId = getCameraId(this);
+            if (cameraId != null) {
+                boolean isFlashlightOn = isFlashlightEnabled(this);
+                cameraManager.setTorchMode(cameraId, !isFlashlightOn);
+                Settings.Secure.putInt(getContentResolver(), Settings.Secure.FLASHLIGHT_ENABLED, !isFlashlightOn ? 1 : 0);
+            }
+        } catch (CameraAccessException e) {
+            Log.e(TAG, "Failed to toggle flashlight: " + e.getMessage());
+        }
+    }
+
+    private static String getCameraId(Context context) throws CameraAccessException {
+        CameraManager cameraManager = context.getSystemService(CameraManager.class);
+        String[] ids = cameraManager.getCameraIdList();
+        for (String id : ids) {
+            CameraCharacteristics c = cameraManager.getCameraCharacteristics(id);
+            Boolean flashAvailable = c.get(CameraCharacteristics.FLASH_INFO_AVAILABLE);
+            Integer lensFacing = c.get(CameraCharacteristics.LENS_FACING);
+            if (flashAvailable != null && flashAvailable
+                    && lensFacing != null && lensFacing == CameraCharacteristics.LENS_FACING_BACK) {
+                return id;
+            }
+        }
+        return null;
+    }
+
+    private static boolean isFlashlightEnabled(Context context) {
+        return Settings.Secure.getInt(context.getContentResolver(), Settings.Secure.FLASHLIGHT_ENABLED, 0) == 1;
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
