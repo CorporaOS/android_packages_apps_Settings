@@ -77,6 +77,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6d4a47e_cbf54611",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 3280207
+      },
+      "writtenOn": "2024-05-29T12:28:55Z",
+      "side": 1,
+      "message": "Added the bug id as well - 343352537",
+      "parentUuid": "ab073d9d_664e2439",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 6
+      },
+      "revId": "38336b1e849e4fd59c63dc10bafd9b6b1045d3c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "167a14b4_511fcbeb",
