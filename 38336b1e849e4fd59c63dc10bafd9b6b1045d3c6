@@ -54,6 +54,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cec37d32_f17a433c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 3280207
+      },
+      "writtenOn": "2024-05-31T19:32:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f7e5c97a_228434fb",
+      "revId": "38336b1e849e4fd59c63dc10bafd9b6b1045d3c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ab073d9d_664e2439",
@@ -91,6 +109,30 @@
       "side": 1,
       "message": "Added the bug id as well - 343352537",
       "parentUuid": "ab073d9d_664e2439",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 6
+      },
+      "revId": "38336b1e849e4fd59c63dc10bafd9b6b1045d3c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5956db62_5a9ce875",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 3280207
+      },
+      "writtenOn": "2024-05-31T19:32:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a6d4a47e_cbf54611",
       "range": {
         "startLine": 29,
         "startChar": 0,
