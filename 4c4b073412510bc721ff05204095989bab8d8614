@@ -39,6 +39,29 @@
       },
       "revId": "4c4b073412510bc721ff05204095989bab8d8614",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2844de16_d2aa87e7",
+        "filename": "tests/Enable16KbTests/AndroidTest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2024-06-03T18:26:30Z",
+      "side": 1,
+      "message": "this may break if the screen is already unlocked, right, or does it still work?\n\nFor that reason, you may want to add RebootTargetPreparer so that the device will always be in a fresh state",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 75
+      },
+      "revId": "4c4b073412510bc721ff05204095989bab8d8614",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
