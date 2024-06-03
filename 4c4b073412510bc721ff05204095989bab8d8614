@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "252b2f8f_8c1451ff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2024-06-03T18:25:16Z",
+      "side": 1,
+      "message": "Can we add this into TEST_MAPPING as well? postsubmit for now?",
+      "revId": "4c4b073412510bc721ff05204095989bab8d8614",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c3b56ab_6da192f7",
+        "filename": "tests/Enable16KbTests/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2024-06-03T18:25:16Z",
+      "side": 1,
+      "message": "general-tests? this should be device-independent?",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 34
+      },
+      "revId": "4c4b073412510bc721ff05204095989bab8d8614",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
