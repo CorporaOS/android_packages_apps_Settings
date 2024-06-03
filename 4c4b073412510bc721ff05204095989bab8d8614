@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb3dd153_88eba4f6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-06-03T20:06:44Z",
+      "side": 1,
+      "message": "Waiting on one dependency to get resolved - b/341177018. This might immediately start breaking. I plan to enable this once dependency lands. Added it here: https://android-review.git.corp.google.com/c/platform/packages/apps/Settings/+/3111923/1",
+      "parentUuid": "252b2f8f_8c1451ff",
+      "revId": "4c4b073412510bc721ff05204095989bab8d8614",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6c3b56ab_6da192f7",
@@ -41,6 +59,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1482bf42_c7f17448",
+        "filename": "tests/Enable16KbTests/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-06-03T20:06:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6c3b56ab_6da192f7",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 34
+      },
+      "revId": "4c4b073412510bc721ff05204095989bab8d8614",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2844de16_d2aa87e7",
@@ -54,6 +96,30 @@
       "writtenOn": "2024-06-03T18:26:30Z",
       "side": 1,
       "message": "this may break if the screen is already unlocked, right, or does it still work?\n\nFor that reason, you may want to add RebootTargetPreparer so that the device will always be in a fresh state",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 75
+      },
+      "revId": "4c4b073412510bc721ff05204095989bab8d8614",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "12b4ae60_71462c54",
+        "filename": "tests/Enable16KbTests/AndroidTest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-06-03T20:06:44Z",
+      "side": 1,
+      "message": "It works with unlocked screen as well. We don\u0027t want the reboot to be handled by test. It should be handled by recovery system and settings app.",
+      "parentUuid": "2844de16_d2aa87e7",
       "range": {
         "startLine": 36,
         "startChar": 0,
