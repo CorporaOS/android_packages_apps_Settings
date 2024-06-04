@@ -16,6 +16,23 @@
       "message": "If the sim set the carrier config KEY_SHOW_CDMA_CHOICES_BOOL as true, the settings show the CDMA network mode list when the phone type is the gsm.",
       "revId": "b300cae17d928c1272d58b67f0da4f4e6e5de719",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5112d703_de4168da",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2024-06-04T07:25:23Z",
+      "side": 1,
+      "message": "Hi chaohui,\nplease help to review it. thanks",
+      "revId": "b300cae17d928c1272d58b67f0da4f4e6e5de719",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
