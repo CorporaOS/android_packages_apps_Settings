@@ -34,6 +34,24 @@
       "parentUuid": "f231681f_a27894d5",
       "revId": "3aa1405acb54c26b99b09825beb821e0dcbbafc6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ec38d4e4_90a9ed29",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2024-06-10T23:44:56Z",
+      "side": 1,
+      "message": "First of all for this change, please merge it.\n\n---\n\nThis is Dan\u0027s design (or he told me about it):\n- general-tests is meant to be tests that are device-agnostic up to architecture. That is, they should be able to run on any device.\n- device-tests is meant to be device-specific test (e.g. depend on product options, etc..)\n\nFor this specific test, it is testing a feature that is only enabled on some devices, but that\u0027s okay, it\u0027s not a fundamental device difference, this test should be like \"if 16kb-dev mode exists, then run the test, otherwise skip or assumption failed, continue on\". It can run on all devices.\n\nNow, the issue with a lot of tests today is that ATP configurations don\u0027t pull in general-tests. According to Dan\u0027s design, I think ATP configs should be pulling in general-tests from a standard location (rather than requiring all these targets to rebuild general-tests themselves which is relatively big and expensive).\n\nAs you remember, you recently fixed things to allow presubmit builds to use multiple builds - http://cl/628110354, so that\u0027s probably why the configs have diverged from the original general-tests design here, but by updating the test configs to be able to pull in general-tests per-arch in general rather than ever building them per-target, that would presumably reduce costs overall.\n\nHowever, I don\u0027t know the test configs enough to see how big this impact is or estimate this cost. Do you know how to do that or who could?",
+      "parentUuid": "d3e5214a_2c064372",
+      "revId": "3aa1405acb54c26b99b09825beb821e0dcbbafc6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
