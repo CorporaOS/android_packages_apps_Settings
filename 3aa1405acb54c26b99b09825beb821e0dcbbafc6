@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f231681f_a27894d5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2024-06-10T21:37:01Z",
+      "side": 1,
+      "message": "How is this possible? I have noticed a pattern on this recently - a lot of targets are including their own test builds, but they should pull in the standard builds.\n\nIn the past, this was not possible, but now we support multiple builds for presubmit tests. Paul/Dan - is this issue easy to see for you? We could save quite a bit of build resources, I imagine..",
+      "revId": "3aa1405acb54c26b99b09825beb821e0dcbbafc6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
