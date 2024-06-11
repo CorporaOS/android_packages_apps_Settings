@@ -52,6 +52,24 @@
       "parentUuid": "d3e5214a_2c064372",
       "revId": "3aa1405acb54c26b99b09825beb821e0dcbbafc6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "22c0655c_b5ca6958",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1096830
+      },
+      "writtenOn": "2024-06-11T15:19:47Z",
+      "side": 1,
+      "message": "Is there a reason general-tests isn\u0027t in test_suites x86? I see it in many other test suites targets. Would adding it to test_suites x86 enable removing it from device builds?\n\n\u003e I think ATP configs should be pulling in general-tests from a standard location (rather than requiring all these targets to rebuild general-tests themselves which is relatively big and expensive).\n\nThe cost equation is a bit more complicated than just sum(builder_time), but it\u0027s probably true that centralizing general-tests into a separate build image would save on builder resources. The downside is that it would require more trident disk-copies and source syncing (and we are currently frequently bottlenecked on git quota).\n\n\u003e However, I don\u0027t know the test configs enough to see how big this impact is or estimate this cost. Do you know how to do that or who could?\n\nDavid James or Dan Willemsen are good people to evaluate this possibility.",
+      "parentUuid": "ec38d4e4_90a9ed29",
+      "revId": "3aa1405acb54c26b99b09825beb821e0dcbbafc6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
