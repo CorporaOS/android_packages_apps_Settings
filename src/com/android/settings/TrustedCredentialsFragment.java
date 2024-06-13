@@ -390,6 +390,9 @@ public class TrustedCredentialsFragment extends ObservableFragment
 
         public boolean checkGroupExpandableAndStartWarningActivity(int groupPosition,
                 boolean startActivity) {
+            if(groupPosition >= getGroupCount()){
+                return false;
+            }
             UserHandle groupUser = getGroup(groupPosition);
             int groupUserId = groupUser.getIdentifier();
             if (mUserManager.isQuietModeEnabled(groupUser)) {
