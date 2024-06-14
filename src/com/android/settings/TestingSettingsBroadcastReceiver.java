@@ -25,6 +25,8 @@ import com.android.settings.Settings.TestingSettingsActivity;
 
 
 public class TestingSettingsBroadcastReceiver extends BroadcastReceiver {
+    private static final String ACTION_ESOS_TEST =
+            "com.google.android.apps.stargate.ACTION_ESOS_QUESTIONNAIRE";
 
     public TestingSettingsBroadcastReceiver() {
     }
@@ -33,9 +35,9 @@ public class TestingSettingsBroadcastReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         if (intent != null && intent.getAction() != null
                 && intent.getAction().equals(TelephonyManager.ACTION_SECRET_CODE)) {
-            Intent i = new Intent(Intent.ACTION_MAIN);
-            i.setClass(context, TestingSettingsActivity.class);
-            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            //Intent i = new Intent(Intent.ACTION_MAIN);
+            Intent i = new Intent(ACTION_ESOS_TEST);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             context.startActivity(i);
         }
     }
