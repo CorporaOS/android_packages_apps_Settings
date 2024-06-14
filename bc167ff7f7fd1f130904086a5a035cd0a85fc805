@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9a10e9b8_b0fe452e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-06-14T20:03:55Z",
+      "side": 1,
+      "message": "Thanks for creating a bug. Once that feature gets approved, we can start rolling this out.\n\n---\n\nUse the flag defined in the Settings as an example.\n- The flag name is `remove_qs_tooltip_in_suw` with accessibility as the name space in the [aconfig file](https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/aconfig/accessibility/accessibility_flags.aconfig). This means the accessibility team will handle the flag roll out.\n- When using this flag in the java file, you add a if-else statement like [this](https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/src/com/android/settings/accessibility/ToggleFeaturePreferenceFragment.java;l\u003d909;drc\u003d0f2cc342304e8ef89f1ceadee4ab3aeb599091a8)\n- When adding a test that would run with flag on/off scenario, checkout [this example](https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/src/com/android/settings/accessibility/ToggleFeaturePreferenceFragment.java;l\u003d909;drc\u003d0f2cc342304e8ef89f1ceadee4ab3aeb599091a8)\n\n---\n\nIn your case, you can define the flag in frameworks/base, and use the same flag for both frameworks/base change and in packages/apps/settings.\n\nWhen flag is defined, which means you\u0027re able to referencing it in your code. The default value of the flag is set to false. The default value would change depending on the build variant when the flag is rolled out to different stages. You can also manually change the flag\u0027s value manually by using the adb command mentioned earlier.\n\n---\n\nOnce the changes looks good, I and maybe Tyler and Daniel can help verify the changes before giving a +2 stamp.\n\n---\n\nIt\u0027s interesting that build succeeded, but image files were missing. Do you mind sharing what images files are missing?",
+      "parentUuid": "2689e7da_90e9f4da",
+      "revId": "bc167ff7f7fd1f130904086a5a035cd0a85fc805",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4e7f0deb_613e10e9",
         "filename": "src/com/android/settings/accessibility/MagnifyNavAndImePreferenceController.java",
         "patchSetId": 1
@@ -132,6 +150,24 @@
       "side": 1,
       "message": "I saw your example, and I was wondering, is the Flag.XXXX() method auto-generated from the name of the flag we create?",
       "parentUuid": "04c01afb_2ab23ef7",
+      "revId": "bc167ff7f7fd1f130904086a5a035cd0a85fc805",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3932a5df_41350632",
+        "filename": "src/com/android/settings/accessibility/MagnifyNavAndImePreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-06-14T20:03:55Z",
+      "side": 1,
+      "message": "Yes, once you add your new flag in the .aconfig file, then build the Android again, you should be able to see/use the auto generated flag.",
+      "parentUuid": "71301ae2_ce11f812",
       "revId": "bc167ff7f7fd1f130904086a5a035cd0a85fc805",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
