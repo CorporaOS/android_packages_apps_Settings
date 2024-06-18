@@ -81,9 +81,12 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.Executor;
 
+import com.android.settingslib.core.lifecycle.events.OnResume;
+import com.android.settingslib.core.lifecycle.events.OnPause;
+
 /** Queries available credential manager providers and adds preferences for them. */
 public class CredentialManagerPreferenceController extends BasePreferenceController
-        implements LifecycleObserver {
+        implements LifecycleObserver, OnResume, OnPause {
     public static final String ADD_SERVICE_DEVICE_CONFIG = "credential_manager_service_search_uri";
 
     /**
@@ -129,7 +132,6 @@ public class CredentialManagerPreferenceController extends BasePreferenceControl
                 getCredentialManager(context, preferenceKey.equals("credentials_test"));
         mSettingsContentObserver =
                 new SettingContentObserver(mHandler, context.getContentResolver());
-        mSettingsContentObserver.register();
         mSettingsPackageMonitor.register(context, context.getMainLooper(), false);
         mIconResizer = getResizer(context);
     }
@@ -214,10 +216,6 @@ public class CredentialManagerPreferenceController extends BasePreferenceControl
 
         setDelegate(delegate);
         verifyReceivedIntent(launchIntent);
-
-        // Recreate the content observers because the user might have changed.
-        mSettingsContentObserver.unregister();
-        mSettingsContentObserver.register();
 
         // When we set the mIsWorkProfile above we should try and force a refresh
         // so we can get the correct data.
@@ -1100,5 +1098,15 @@ public class CredentialManagerPreferenceController extends BasePreferenceControl
                         }
                     });
         }
+    }
+
+    @Override
+    public void onResume() {
+        mSettingsContentObserver.register();
+    }
+
+    @Override
+    public void onPause() {
+        mSettingsContentObserver.unregister();
     }
 }

@@ -79,6 +79,7 @@ public class AccountWorkProfileDashboardFragment extends DashboardFragment {
                 }
             };
             cmpp.init(this, getFragmentManager(), getIntent(), delegate, /*isWorkProfile=*/true);
+            getSettingsLifecycle().addObserver(cmpp);
         } else {
             getSettingsLifecycle().addObserver(use(PasswordsPreferenceController.class));
         }

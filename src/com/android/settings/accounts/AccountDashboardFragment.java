@@ -90,6 +90,7 @@ public class AccountDashboardFragment extends DashboardFragment {
                 }
             };
             cmpp.init(this, getFragmentManager(), getIntent(), delegate, /*isWorkProfile=*/false);
+            getSettingsLifecycle().addObserver(cmpp);
         } else {
             getSettingsLifecycle().addObserver(use(PasswordsPreferenceController.class));
         }
