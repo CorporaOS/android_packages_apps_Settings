@@ -90,25 +90,15 @@ class ApnRepositoryTest {
     }
 
     @Test
-    fun getApnIdMap_knownCarrierId() {
+    fun getApnIdMap() {
         mockSubscriptionInfo.stub {
             on { carrierId } doReturn CARRIER_ID
         }
 
         val idMap = context.getApnIdMap(SUB_ID)
 
-        assertThat(idMap).containsExactly(Telephony.Carriers.CARRIER_ID, CARRIER_ID)
-    }
-
-    @Test
-    fun getApnIdMap_unknownCarrierId() {
-        mockSubscriptionInfo.stub {
-            on { carrierId } doReturn TelephonyManager.UNKNOWN_CARRIER_ID
-        }
-
-        val idMap = context.getApnIdMap(SUB_ID)
-
-        assertThat(idMap).containsExactly(Telephony.Carriers.NUMERIC, MCC + MNC)
+        assertThat(idMap).containsExactly(Telephony.Carriers.CARRIER_ID, CARRIER_ID,
+                Telephony.Carriers.NUMERIC, MCC + MNC)
     }
 
     private companion object {

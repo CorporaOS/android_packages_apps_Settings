@@ -55,6 +55,8 @@ const val URI = "uri"
 const val SUB_ID = "subId"
 const val EDIT_URL = "editUrl"
 const val INSERT_URL = "insertUrl"
+const val MVNO_TYPE = "mvnoType"
+const val MVNO_MATCH_DATA = "mvnoMatchData"
 
 object ApnEditPageProvider : SettingsPageProvider {
 
@@ -65,6 +67,8 @@ object ApnEditPageProvider : SettingsPageProvider {
         navArgument(URI_TYPE) { type = NavType.StringType },
         navArgument(URI) { type = NavType.StringType },
         navArgument(SUB_ID) { type = NavType.IntType },
+        navArgument(MVNO_TYPE) { type = NavType.StringType },
+        navArgument(MVNO_MATCH_DATA) { type = NavType.StringType },
     )
 
     @Composable
@@ -82,10 +86,12 @@ object ApnEditPageProvider : SettingsPageProvider {
     fun getRoute(
         uriType: String,
         uri: Uri,
-        subId: Int
+        subId: Int,
+        mvnoType: String,
+        mvnoMatchData: String
     ): String = "${name}/$uriType/${
         Base64.getUrlEncoder().encodeToString(uri.toString().toByteArray())
-    }/$subId"
+    }/$subId/$mvnoType/$mvnoMatchData"
 }
 
 @Composable

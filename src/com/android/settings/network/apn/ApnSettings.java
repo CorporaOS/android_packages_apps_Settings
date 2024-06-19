@@ -427,8 +427,14 @@ public class ApnSettings extends RestrictedSettingsFragment
         final int subId = mSubscriptionInfo != null ? mSubscriptionInfo.getSubscriptionId()
                 : SubscriptionManager.INVALID_SUBSCRIPTION_ID;
         if (Flags.newApnPageEnabled()) {
-            String route = ApnEditPageProvider.INSTANCE.getRoute(
-                    INSERT_URL, Telephony.Carriers.CONTENT_URI, subId);
+            String route;
+            if (!TextUtils.isEmpty(mMvnoType) && !TextUtils.isEmpty(mMvnoMatchData)) {
+                route = ApnEditPageProvider.INSTANCE.getRoute(INSERT_URL,
+                        Telephony.Carriers.CONTENT_URI, subId, mMvnoType, mMvnoMatchData);
+            } else {
+                route = ApnEditPageProvider.INSTANCE.getRoute(INSERT_URL,
+                        Telephony.Carriers.CONTENT_URI, subId, "_", "_");
+            }
             SpaActivity.startSpaActivity(getContext(), route);
         } else {
             final Intent intent = new Intent(Intent.ACTION_INSERT, Telephony.Carriers.CONTENT_URI);

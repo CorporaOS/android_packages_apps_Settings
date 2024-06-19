@@ -180,10 +180,7 @@ fun isItemExist(apnData: ApnData, context: Context): String? {
 fun Context.getApnIdMap(subId: Int): Map<String, Any> {
     val subInfo = getSystemService(SubscriptionManager::class.java)!!
         .getActiveSubscriptionInfo(subId)
-    val carrierId = subInfo.carrierId
-    return if (carrierId != TelephonyManager.UNKNOWN_CARRIER_ID) {
-        mapOf(Telephony.Carriers.CARRIER_ID to carrierId)
-    } else {
-        mapOf(Telephony.Carriers.NUMERIC to subInfo.mccString + subInfo.mncString)
-    }.also { Log.d(TAG, "[$subId] New APN item with id: $it") }
+    return mapOf(Telephony.Carriers.CARRIER_ID to subInfo.carrierId,
+        Telephony.Carriers.NUMERIC to subInfo.mccString + subInfo.mncString)
+            .also { Log.d(TAG, "[$subId] New APN item with id: $it") }
 }

@@ -67,6 +67,8 @@ data class ApnData(
     val newApn: Boolean = false,
     val subId: Int = -1,
     val validEnabled: Boolean = false,
+    val mvnoType: String = "",
+    val mvnoMatchData: String = "",
     val customizedConfig: CustomizedConfig = CustomizedConfig()
 ) {
     fun getContentValueMap(context: Context): Map<String, Any> = mapOf(
@@ -87,6 +89,8 @@ data class ApnData(
         Telephony.Carriers.NETWORK_TYPE_BITMASK to networkType,
         Telephony.Carriers.CARRIER_ENABLED to apnEnable,
         Telephony.Carriers.EDITED_STATUS to Telephony.Carriers.USER_EDITED,
+        Telephony.Carriers.MVNO_TYPE to mvnoType,
+        Telephony.Carriers.MVNO_MATCH_DATA to mvnoMatchData,
     )
 
     fun getContentValues(context: Context) = ContentValues().apply {
@@ -115,6 +119,8 @@ data class CustomizedConfig(
  */
 fun getApnDataInit(arguments: Bundle, context: Context, uriInit: Uri, subId: Int): ApnData? {
     val uriType = arguments.getString(URI_TYPE) ?: return null
+    val mvnoType = arguments.getString(MVNO_TYPE)
+    val mvnoMatchData = arguments.getString(MVNO_MATCH_DATA)
 
     if (!uriInit.isPathPrefixMatch(Telephony.Carriers.CONTENT_URI)) {
         Log.e(TAG, "Insert request not for carrier table. Uri: $uriInit")
@@ -132,6 +138,10 @@ fun getApnDataInit(arguments: Bundle, context: Context, uriInit: Uri, subId: Int
     }
 
     apnDataInit = apnDataInit.copy(subId = subId)
+    if (!mvnoType.equals("_") && !mvnoMatchData.equals("_")) {
+        apnDataInit = apnDataInit.copy(mvnoType = mvnoType!!)
+        apnDataInit = apnDataInit.copy(mvnoMatchData = mvnoMatchData!!)
+    }
     val configManager =
         context.getSystemService(Context.CARRIER_CONFIG_SERVICE) as CarrierConfigManager
     apnDataInit =
