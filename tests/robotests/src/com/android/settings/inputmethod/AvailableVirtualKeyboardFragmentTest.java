@@ -50,6 +50,7 @@ import com.android.settings.testutils.shadow.ShadowInputMethodManagerWithMethodL
 import com.android.settings.testutils.shadow.ShadowSecureSettings;
 import com.android.settingslib.inputmethod.InputMethodPreference;
 import com.android.settingslib.inputmethod.InputMethodSettingValuesWrapper;
+import com.android.settings.annotation.InputMethodTests;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -69,6 +70,7 @@ import java.util.List;
         ShadowSecureSettings.class,
         ShadowInputMethodManagerWithMethodList.class
 })
+@InputMethodTests
 public class AvailableVirtualKeyboardFragmentTest {
 
     @Mock

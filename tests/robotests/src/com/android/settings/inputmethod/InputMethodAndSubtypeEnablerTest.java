@@ -27,6 +27,7 @@ import android.os.Bundle;
 import androidx.fragment.app.FragmentActivity;
 
 import com.android.settings.R;
+import com.android.settings.annotation.InputMethodTests;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -40,6 +41,7 @@ import org.robolectric.annotation.Config;
 @Config(shadows = {
         com.android.settings.testutils.shadow.ShadowFragment.class,
 })
+@InputMethodTests
 public class InputMethodAndSubtypeEnablerTest {
 
     private FragmentActivity mActivity;

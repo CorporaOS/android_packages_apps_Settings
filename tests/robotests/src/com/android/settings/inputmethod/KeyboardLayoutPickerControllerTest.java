@@ -37,6 +37,7 @@ import androidx.preference.PreferenceScreen;
 
 import com.android.settings.core.BasePreferenceController;
 import com.android.settings.testutils.shadow.ShadowInputDevice;
+import com.android.settings.annotation.InputMethodTests;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -53,6 +54,7 @@ import org.robolectric.shadows.ShadowApplication;
 @Config(shadows = {
         com.android.settings.testutils.shadow.ShadowFragment.class,
 })
+@InputMethodTests
 public class KeyboardLayoutPickerControllerTest {
 
     @Mock
