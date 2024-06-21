@@ -23,6 +23,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.android.settings.R;
+import com.android.settings.Utils;
 
 import java.util.List;
 
@@ -37,6 +38,7 @@ public class WifiConfigInfo extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Utils.setupEdgeToEdge(this);
 
         mWifiManager = (WifiManager) getSystemService(WIFI_SERVICE);
         setContentView(R.layout.wifi_config_info);

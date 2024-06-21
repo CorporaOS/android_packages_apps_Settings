@@ -37,6 +37,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.android.settings.R;
+import com.android.settings.Utils;
 import com.android.settingslib.wifi.AccessPoint;
 
 import java.io.IOException;
@@ -115,6 +116,7 @@ public class WifiStatusTest extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Utils.setupEdgeToEdge(this);
 
         mWifiManager = (WifiManager) getSystemService(WIFI_SERVICE);
 
