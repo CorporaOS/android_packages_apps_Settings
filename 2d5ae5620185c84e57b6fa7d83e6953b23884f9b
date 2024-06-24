@@ -94,6 +94,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "563c98bb_7d179ad0",
+        "filename": "src/com/android/settings/Utils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1405,
+      "author": {
+        "id": 1970738
+      },
+      "writtenOn": "2024-06-24T05:56:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c6e13c98_abbf8d45",
+      "range": {
+        "startLine": 1405,
+        "startChar": 0,
+        "endLine": 1405,
+        "endChar": 94
+      },
+      "revId": "2d5ae5620185c84e57b6fa7d83e6953b23884f9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f5f604d1_50ca26ca",
@@ -107,6 +131,30 @@
       "writtenOn": "2024-06-24T05:02:34Z",
       "side": 1,
       "message": "Please fix this ERROR reported by Build Warnings: cannot find symbol\n\nAnalyzer Description: Reports warnings that originate from build.log in the build artifacts.\nOwner: farivar@google.com\n\n    cannot find symbol\n                        Insets insets \u003d windowInsets.getInsets(\n                        ^\n      symbol:   class Insets\n      location: class Utils\n\nThis finding was found on https://android-build.googleplex.com/builds/build-details/P76565752/targets/aosp_cf_x86_64_phone-trunk_staging-userdebug, but may also be present on other builds.\n\nThis is a different branch than your cl originated on (it was automerged), and thus might better reflect the state of the code in the aosp-main branch.",
+      "range": {
+        "startLine": 1407,
+        "startChar": 0,
+        "endLine": 1407,
+        "endChar": 59
+      },
+      "revId": "2d5ae5620185c84e57b6fa7d83e6953b23884f9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64fce2b9_143e0b4b",
+        "filename": "src/com/android/settings/Utils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1407,
+      "author": {
+        "id": 1970738
+      },
+      "writtenOn": "2024-06-24T05:56:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f5f604d1_50ca26ca",
       "range": {
         "startLine": 1407,
         "startChar": 0,
@@ -153,6 +201,54 @@
       "writtenOn": "2024-06-24T05:02:34Z",
       "side": 1,
       "message": "Please fix this ERROR reported by Build Warnings: package WindowInsetsCompat does not exist\n\nAnalyzer Description: Reports warnings that originate from build.log in the build artifacts.\nOwner: farivar@google.com\n\n    package WindowInsetsCompat does not exist\n                                WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.ime());\n                                                                                         ^\n\nThis finding was found on https://android-build.googleplex.com/builds/build-details/P76565752/targets/aosp_cf_x86_64_phone-trunk_staging-userdebug, but may also be present on other builds.\n\nThis is a different branch than your cl originated on (it was automerged), and thus might better reflect the state of the code in the aosp-main branch.",
+      "range": {
+        "startLine": 1408,
+        "startChar": 0,
+        "endLine": 1408,
+        "endChar": 98
+      },
+      "revId": "2d5ae5620185c84e57b6fa7d83e6953b23884f9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f6ab4a43_fd4860f8",
+        "filename": "src/com/android/settings/Utils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1408,
+      "author": {
+        "id": 1970738
+      },
+      "writtenOn": "2024-06-24T05:56:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f2055458_6d74e4d9",
+      "range": {
+        "startLine": 1408,
+        "startChar": 0,
+        "endLine": 1408,
+        "endChar": 98
+      },
+      "revId": "2d5ae5620185c84e57b6fa7d83e6953b23884f9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ea061b3_0f80f5be",
+        "filename": "src/com/android/settings/Utils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1408,
+      "author": {
+        "id": 1970738
+      },
+      "writtenOn": "2024-06-24T05:56:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a31510a_bb12111e",
       "range": {
         "startLine": 1408,
         "startChar": 0,
