@@ -16,6 +16,24 @@
       "message": "Auto-merge conflict",
       "revId": "2d5ae5620185c84e57b6fa7d83e6953b23884f9b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "846c9f94_15bdd37d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1970738
+      },
+      "writtenOn": "2024-06-24T02:24:12Z",
+      "side": 1,
+      "message": "need to resubmit patch?",
+      "parentUuid": "ffaabc88_780a7cb5",
+      "revId": "2d5ae5620185c84e57b6fa7d83e6953b23884f9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
