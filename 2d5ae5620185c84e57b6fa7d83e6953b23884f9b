@@ -184,6 +184,30 @@
       },
       "revId": "2d5ae5620185c84e57b6fa7d83e6953b23884f9b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d94976c_c28fb24d",
+        "filename": "src/com/android/settings/Utils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1415,
+      "author": {
+        "id": 1970738
+      },
+      "writtenOn": "2024-06-24T05:40:12Z",
+      "side": 1,
+      "message": "So i need to submit patch to resolve this compile issue?",
+      "parentUuid": "bc7ffc4b_08be66ff",
+      "range": {
+        "startLine": 1415,
+        "startChar": 0,
+        "endLine": 1415,
+        "endChar": 55
+      },
+      "revId": "2d5ae5620185c84e57b6fa7d83e6953b23884f9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
