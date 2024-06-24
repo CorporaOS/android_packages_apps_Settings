@@ -52,6 +52,138 @@
       "parentUuid": "846c9f94_15bdd37d",
       "revId": "2d5ae5620185c84e57b6fa7d83e6953b23884f9b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f230c37_50fe9b65",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2024-06-24T05:02:34Z",
+      "side": 1,
+      "message": "Please help to fix the warning. I will check the auto-merge conflict at the same time",
+      "revId": "2d5ae5620185c84e57b6fa7d83e6953b23884f9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6e13c98_abbf8d45",
+        "filename": "src/com/android/settings/Utils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1405,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2024-06-24T05:02:34Z",
+      "side": 1,
+      "message": "Please fix this ERROR reported by Build Warnings: cannot find symbol\n\nAnalyzer Description: Reports warnings that originate from build.log in the build artifacts.\nOwner: farivar@google.com\n\n    cannot find symbol\n            ViewCompat.setOnApplyWindowInsetsListener(activity.findViewById(android.R.id.content),\n            ^\n      symbol:   variable ViewCompat\n      location: class Utils\n\nThis finding was found on https://android-build.googleplex.com/builds/build-details/P76565752/targets/aosp_cf_x86_64_phone-trunk_staging-userdebug, but may also be present on other builds.\n\nThis is a different branch than your cl originated on (it was automerged), and thus might better reflect the state of the code in the aosp-main branch.",
+      "range": {
+        "startLine": 1405,
+        "startChar": 0,
+        "endLine": 1405,
+        "endChar": 94
+      },
+      "revId": "2d5ae5620185c84e57b6fa7d83e6953b23884f9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f5f604d1_50ca26ca",
+        "filename": "src/com/android/settings/Utils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1407,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2024-06-24T05:02:34Z",
+      "side": 1,
+      "message": "Please fix this ERROR reported by Build Warnings: cannot find symbol\n\nAnalyzer Description: Reports warnings that originate from build.log in the build artifacts.\nOwner: farivar@google.com\n\n    cannot find symbol\n                        Insets insets \u003d windowInsets.getInsets(\n                        ^\n      symbol:   class Insets\n      location: class Utils\n\nThis finding was found on https://android-build.googleplex.com/builds/build-details/P76565752/targets/aosp_cf_x86_64_phone-trunk_staging-userdebug, but may also be present on other builds.\n\nThis is a different branch than your cl originated on (it was automerged), and thus might better reflect the state of the code in the aosp-main branch.",
+      "range": {
+        "startLine": 1407,
+        "startChar": 0,
+        "endLine": 1407,
+        "endChar": 59
+      },
+      "revId": "2d5ae5620185c84e57b6fa7d83e6953b23884f9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2055458_6d74e4d9",
+        "filename": "src/com/android/settings/Utils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1408,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2024-06-24T05:02:34Z",
+      "side": 1,
+      "message": "Please fix this ERROR reported by Build Warnings: package WindowInsetsCompat does not exist\n\nAnalyzer Description: Reports warnings that originate from build.log in the build artifacts.\nOwner: farivar@google.com\n\n    package WindowInsetsCompat does not exist\n                                WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.ime());\n                                                  ^\n\nThis finding was found on https://android-build.googleplex.com/builds/build-details/P76565752/targets/aosp_cf_x86_64_phone-trunk_staging-userdebug, but may also be present on other builds.\n\nThis is a different branch than your cl originated on (it was automerged), and thus might better reflect the state of the code in the aosp-main branch.",
+      "range": {
+        "startLine": 1408,
+        "startChar": 0,
+        "endLine": 1408,
+        "endChar": 98
+      },
+      "revId": "2d5ae5620185c84e57b6fa7d83e6953b23884f9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1a31510a_bb12111e",
+        "filename": "src/com/android/settings/Utils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1408,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2024-06-24T05:02:34Z",
+      "side": 1,
+      "message": "Please fix this ERROR reported by Build Warnings: package WindowInsetsCompat does not exist\n\nAnalyzer Description: Reports warnings that originate from build.log in the build artifacts.\nOwner: farivar@google.com\n\n    package WindowInsetsCompat does not exist\n                                WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.ime());\n                                                                                         ^\n\nThis finding was found on https://android-build.googleplex.com/builds/build-details/P76565752/targets/aosp_cf_x86_64_phone-trunk_staging-userdebug, but may also be present on other builds.\n\nThis is a different branch than your cl originated on (it was automerged), and thus might better reflect the state of the code in the aosp-main branch.",
+      "range": {
+        "startLine": 1408,
+        "startChar": 0,
+        "endLine": 1408,
+        "endChar": 98
+      },
+      "revId": "2d5ae5620185c84e57b6fa7d83e6953b23884f9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bc7ffc4b_08be66ff",
+        "filename": "src/com/android/settings/Utils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1415,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2024-06-24T05:02:34Z",
+      "side": 1,
+      "message": "Please fix this ERROR reported by Build Warnings: cannot find symbol\n\nAnalyzer Description: Reports warnings that originate from build.log in the build artifacts.\nOwner: farivar@google.com\n\n    cannot find symbol\n                        return WindowInsetsCompat.CONSUMED;\n                               ^\n      symbol:   variable WindowInsetsCompat\n      location: class Utils\n\nThis finding was found on https://android-build.googleplex.com/builds/build-details/P76565752/targets/aosp_cf_x86_64_phone-trunk_staging-userdebug, but may also be present on other builds.\n\nThis is a different branch than your cl originated on (it was automerged), and thus might better reflect the state of the code in the aosp-main branch.",
+      "range": {
+        "startLine": 1415,
+        "startChar": 0,
+        "endLine": 1415,
+        "endChar": 55
+      },
+      "revId": "2d5ae5620185c84e57b6fa7d83e6953b23884f9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
