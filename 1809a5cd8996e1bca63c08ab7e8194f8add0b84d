@@ -63,6 +63,30 @@
       },
       "revId": "1809a5cd8996e1bca63c08ab7e8194f8add0b84d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bec96ed4_7deaff6f",
+        "filename": "src/com/android/settings/Utils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1421,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2024-06-26T10:09:14Z",
+      "side": 1,
+      "message": "The almost code is the same, we can change the parameter as Activity. @sunnyshao@google.com\n\nWe can\u0027t expose any information about it, so please refer it\nhttps://developer.android.com/about/versions/15/overview",
+      "parentUuid": "dc08f2a5_08b3805e",
+      "range": {
+        "startLine": 1402,
+        "startChar": 0,
+        "endLine": 1421,
+        "endChar": 5
+      },
+      "revId": "1809a5cd8996e1bca63c08ab7e8194f8add0b84d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
