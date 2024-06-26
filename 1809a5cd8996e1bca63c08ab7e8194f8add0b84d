@@ -16,6 +16,29 @@
       "message": "Hi Ling,\nPlease help to review again. Thanks",
       "revId": "1809a5cd8996e1bca63c08ab7e8194f8add0b84d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9856ddfb_2f50af31",
+        "filename": "src/com/android/settings/Utils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1421,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2024-06-26T06:56:33Z",
+      "side": 1,
+      "message": "Since the same code exists at Utils.java in the 24Q3 release, perhaps we could hold off on this until that release?",
+      "range": {
+        "startLine": 1402,
+        "startChar": 0,
+        "endLine": 1421,
+        "endChar": 5
+      },
+      "revId": "1809a5cd8996e1bca63c08ab7e8194f8add0b84d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
