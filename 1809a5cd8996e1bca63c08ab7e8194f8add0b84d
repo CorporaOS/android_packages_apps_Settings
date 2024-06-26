@@ -39,6 +39,30 @@
       },
       "revId": "1809a5cd8996e1bca63c08ab7e8194f8add0b84d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc08f2a5_08b3805e",
+        "filename": "src/com/android/settings/Utils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1421,
+      "author": {
+        "id": 2019721
+      },
+      "writtenOn": "2024-06-26T07:22:47Z",
+      "side": 1,
+      "message": "The parameter of setupEdgeToEdge is FragmentActivity in the 24Q3 release, this setupEdgeToEdge  is another method with parameter Activity.\nBTW, what\u0027s the time of  the 24Q3 release?",
+      "parentUuid": "9856ddfb_2f50af31",
+      "range": {
+        "startLine": 1402,
+        "startChar": 0,
+        "endLine": 1421,
+        "endChar": 5
+      },
+      "revId": "1809a5cd8996e1bca63c08ab7e8194f8add0b84d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
