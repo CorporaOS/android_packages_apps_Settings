@@ -91,6 +91,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "23e8b8ac_ea8a8f5d",
+        "filename": "src/com/android/settings/Utils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1408,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2024-06-27T07:48:56Z",
+      "side": 1,
+      "message": "Hi Qiang,\nI think Sunny\u0027s way is ok to avoid the auto-merge conflict. Could you help to move your api to WifiUtils?",
+      "parentUuid": "3720ad2b_f32b5ec4",
+      "range": {
+        "startLine": 1408,
+        "startChar": 4,
+        "endLine": 1408,
+        "endChar": 68
+      },
+      "revId": "1809a5cd8996e1bca63c08ab7e8194f8add0b84d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9856ddfb_2f50af31",
         "filename": "src/com/android/settings/Utils.java",
         "patchSetId": 2
