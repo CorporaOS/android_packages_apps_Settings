@@ -20,6 +20,77 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3720ad2b_f32b5ec4",
+        "filename": "src/com/android/settings/Utils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1408,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2024-06-27T07:08:21Z",
+      "side": 1,
+      "message": "Hi @quic_cqiang@quicinc.com,\n\ndue to the system action bar shown in the Settings page. The setupEdgeToEdge API used in the Settings page is different with yours (see the following code snippets). So I suggest that you move your API to the WifiUtils.java to avoid the conflict problem.\n\n\n    public static void setupEdgeToEdge(@NonNull FragmentActivity activity) {\n        ViewCompat.setOnApplyWindowInsetsListener(activity.findViewById(android.R.id.content),\n                (v, windowInsets) -\u003e {\n                    Insets insets \u003d windowInsets.getInsets(\n                            WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.ime());\n                    int statusBarHeight \u003d activity.getWindow().getDecorView().getRootWindowInsets()\n                            .getInsets(WindowInsetsCompat.Type.statusBars()).top;\n                    // Apply the insets paddings to the view.\n                    v.setPadding(insets.left, statusBarHeight, insets.right, insets.bottom);\n\n                    // Return CONSUMED if you don\u0027t want the window insets to keep being\n                    // passed down to descendant views.\n                    return WindowInsetsCompat.CONSUMED;\n                });\n    }",
+      "range": {
+        "startLine": 1408,
+        "startChar": 4,
+        "endLine": 1408,
+        "endChar": 68
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "f0b19c51_f6b937c8",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "src/com/android/settings/Utils.java",
+              "range": {
+                "startLine": 95,
+                "startChar": 0,
+                "endLine": 95,
+                "endChar": 0
+              },
+              "replacement": "import android.util.TypedValue;\n"
+            },
+            {
+              "path": "src/com/android/settings/Utils.java",
+              "range": {
+                "startLine": 1409,
+                "startChar": 0,
+                "endLine": 1413,
+                "endChar": 0
+              },
+              "replacement": "        final ActionBar actionBar \u003d activity.getActionBar();\n        if (actionBar !\u003d null) {\n            final TypedValue tv \u003d new TypedValue();\n            if (activity.getTheme().resolveAttribute(\n                    com.android.internal.R.attr.actionBarSize, tv, true)) {\n                final int actionBarHeight \u003d TypedValue.complexToDimensionPixelSize(\n                        tv.data, activity.getResources().getDisplayMetrics());\n                ViewCompat.setOnApplyWindowInsetsListener(activity.findViewById(android.R.id.content),\n                        (v, windowInsets) -\u003e {\n                            Insets insets \u003d windowInsets.getInsets(\n                                    WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.ime());\n"
+            },
+            {
+              "path": "src/com/android/settings/Utils.java",
+              "range": {
+                "startLine": 1414,
+                "startChar": 0,
+                "endLine": 1416,
+                "endChar": 0
+              },
+              "replacement": "                            // Apply the insets paddings to the view.\n                            v.setPadding(insets.left, insets.top, insets.right, insets.bottom);\n"
+            },
+            {
+              "path": "src/com/android/settings/Utils.java",
+              "range": {
+                "startLine": 1417,
+                "startChar": 0,
+                "endLine": 1421,
+                "endChar": 0
+              },
+              "replacement": "                            // Return CONSUMED if you don\u0027t want the window insets to keep being\n                            // passed down to descendant views.\n                            return WindowInsetsCompat.CONSUMED;\n                        });\n            }\n        }\n"
+            }
+          ]
+        }
+      ],
+      "revId": "1809a5cd8996e1bca63c08ab7e8194f8add0b84d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9856ddfb_2f50af31",
         "filename": "src/com/android/settings/Utils.java",
         "patchSetId": 2
