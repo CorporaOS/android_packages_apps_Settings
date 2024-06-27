@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40f71682_15d47d01",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11682,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2024-06-27T23:26:42Z",
+      "side": 1,
+      "message": "should we delete this then?",
+      "range": {
+        "startLine": 11680,
+        "startChar": 0,
+        "endLine": 11682,
+        "endChar": 154
+      },
+      "revId": "234872e187349919c82cbd1fe0afaf731b2c27c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
