@@ -22,6 +22,30 @@
       },
       "revId": "234872e187349919c82cbd1fe0afaf731b2c27c7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9b095d1_cf790754",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11682,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-06-28T16:46:04Z",
+      "side": 1,
+      "message": "We can revert to BigTextStyle once the ellipsis is fixed - b/349860833",
+      "parentUuid": "40f71682_15d47d01",
+      "range": {
+        "startLine": 11680,
+        "startChar": 0,
+        "endLine": 11682,
+        "endChar": 154
+      },
+      "revId": "234872e187349919c82cbd1fe0afaf731b2c27c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
