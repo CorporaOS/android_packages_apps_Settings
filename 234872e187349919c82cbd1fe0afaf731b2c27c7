@@ -46,6 +46,30 @@
       },
       "revId": "234872e187349919c82cbd1fe0afaf731b2c27c7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd382b40_c65c489d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11682,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2024-06-28T20:13:05Z",
+      "side": 1,
+      "message": "But, if the ellipsis shows, we can always pass the largest text and rely on ellipsis? I\u0027m okay if you choose later though.",
+      "parentUuid": "c9b095d1_cf790754",
+      "range": {
+        "startLine": 11680,
+        "startChar": 0,
+        "endLine": 11682,
+        "endChar": 154
+      },
+      "revId": "234872e187349919c82cbd1fe0afaf731b2c27c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
