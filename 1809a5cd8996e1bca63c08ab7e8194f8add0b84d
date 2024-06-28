@@ -113,6 +113,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3bb1478c_9b4f6667",
+        "filename": "src/com/android/settings/Utils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1408,
+      "author": {
+        "id": 1970738
+      },
+      "writtenOn": "2024-06-28T05:08:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "23e8b8ac_ea8a8f5d",
+      "range": {
+        "startLine": 1408,
+        "startChar": 4,
+        "endLine": 1408,
+        "endChar": 68
+      },
+      "revId": "1809a5cd8996e1bca63c08ab7e8194f8add0b84d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9856ddfb_2f50af31",
