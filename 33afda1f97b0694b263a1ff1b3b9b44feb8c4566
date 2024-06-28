@@ -3,6 +3,57 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "443b5ec6_42261247",
+        "filename": "src/com/android/settings/wifi/WifiUtils.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2024-06-28T06:46:42Z",
+      "side": 1,
+      "message": "nit.\n\nsuggest using the `typedValue` instead.",
+      "range": {
+        "startLine": 330,
+        "startChar": 25,
+        "endLine": 330,
+        "endChar": 28
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "b762cf9b_9d482a06",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "src/com/android/settings/wifi/WifiUtils.java",
+              "range": {
+                "startLine": 330,
+                "startChar": 0,
+                "endLine": 331,
+                "endChar": 0
+              },
+              "replacement": "        final TypedValue typedValue \u003d new TypedValue();\n"
+            },
+            {
+              "path": "src/com/android/settings/wifi/WifiUtils.java",
+              "range": {
+                "startLine": 332,
+                "startChar": 0,
+                "endLine": 333,
+                "endChar": 0
+              },
+              "replacement": "                com.android.internal.R.attr.actionBarSize, typedValue, true)) {\n"
+            }
+          ]
+        }
+      ],
+      "revId": "33afda1f97b0694b263a1ff1b3b9b44feb8c4566",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c4a98927_9bfac60d",
         "filename": "src/com/android/settings/wifi/WifiUtils.java",
         "patchSetId": 4
