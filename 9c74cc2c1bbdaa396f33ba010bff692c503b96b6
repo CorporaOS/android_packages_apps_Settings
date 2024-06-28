@@ -79,6 +79,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d0c91e3_e680b843",
+        "filename": "src/com/android/settings/wifi/WifiUtils.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 1970738
+      },
+      "writtenOn": "2024-06-28T06:11:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cd5a1676_6800c717",
+      "range": {
+        "startLine": 326,
+        "startChar": 8,
+        "endLine": 326,
+        "endChar": 32
+      },
+      "revId": "9c74cc2c1bbdaa396f33ba010bff692c503b96b6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a73aed1e_82c99e76",
@@ -116,6 +140,30 @@
           ]
         }
       ],
+      "revId": "9c74cc2c1bbdaa396f33ba010bff692c503b96b6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fce6336f_b4732eec",
+        "filename": "src/com/android/settings/wifi/WifiUtils.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 1970738
+      },
+      "writtenOn": "2024-06-28T06:11:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a73aed1e_82c99e76",
+      "range": {
+        "startLine": 330,
+        "startChar": 0,
+        "endLine": 331,
+        "endChar": 78
+      },
       "revId": "9c74cc2c1bbdaa396f33ba010bff692c503b96b6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
