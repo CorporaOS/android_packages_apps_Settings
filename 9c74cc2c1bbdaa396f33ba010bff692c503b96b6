@@ -16,6 +16,108 @@
       "message": "Good",
       "revId": "9c74cc2c1bbdaa396f33ba010bff692c503b96b6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd5a1676_6800c717",
+        "filename": "src/com/android/settings/wifi/WifiUtils.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2024-06-28T05:38:11Z",
+      "side": 1,
+      "message": "please use the following codes to reduce the indent.\n\n        if (actionBar \u003d\u003d null) {\n            return;\n        }\n        final TypedValue tv \u003d new TypedValue();\n        if (activity.getTheme().resolveAttribute(",
+      "range": {
+        "startLine": 326,
+        "startChar": 8,
+        "endLine": 326,
+        "endChar": 32
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "84ec25dc_538e7ef7",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "src/com/android/settings/wifi/WifiUtils.java",
+              "range": {
+                "startLine": 326,
+                "startChar": 0,
+                "endLine": 336,
+                "endChar": 0
+              },
+              "replacement": "        if (actionBar \u003d\u003d null) {\n            return;\n        }\n        final TypedValue tv \u003d new TypedValue();\n        if (activity.getTheme().resolveAttribute(\n                com.android.internal.R.attr.actionBarSize, tv, true)) {\n            final int actionBarHeight \u003d TypedValue.complexToDimensionPixelSize(\n                    tv.data, activity.getResources().getDisplayMetrics());\n            ViewCompat.setOnApplyWindowInsetsListener(activity.findViewById(android.R.id.content),\n                    (v, windowInsets) -\u003e {\n                        Insets insets \u003d windowInsets.getInsets(\n                                WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.ime());\n"
+            },
+            {
+              "path": "src/com/android/settings/wifi/WifiUtils.java",
+              "range": {
+                "startLine": 337,
+                "startChar": 0,
+                "endLine": 339,
+                "endChar": 0
+              },
+              "replacement": "                        // Apply the insets paddings to the view.\n                        v.setPadding(insets.left, insets.top, insets.right, insets.bottom);\n"
+            },
+            {
+              "path": "src/com/android/settings/wifi/WifiUtils.java",
+              "range": {
+                "startLine": 340,
+                "startChar": 0,
+                "endLine": 345,
+                "endChar": 0
+              },
+              "replacement": "                        // Return CONSUMED if you don\u0027t want the window insets to keep being\n                        // passed down to descendant views.\n                        return WindowInsetsCompat.CONSUMED;\n                    });\n"
+            }
+          ]
+        }
+      ],
+      "revId": "9c74cc2c1bbdaa396f33ba010bff692c503b96b6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a73aed1e_82c99e76",
+        "filename": "src/com/android/settings/wifi/WifiUtils.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 1407552
+      },
+      "writtenOn": "2024-06-28T05:38:11Z",
+      "side": 1,
+      "message": "This local variable has no any refernece on it. please remove it.",
+      "range": {
+        "startLine": 330,
+        "startChar": 0,
+        "endLine": 331,
+        "endChar": 78
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "b05e2846_a8ff726a",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "src/com/android/settings/wifi/WifiUtils.java",
+              "range": {
+                "startLine": 330,
+                "startChar": 0,
+                "endLine": 332,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "revId": "9c74cc2c1bbdaa396f33ba010bff692c503b96b6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
