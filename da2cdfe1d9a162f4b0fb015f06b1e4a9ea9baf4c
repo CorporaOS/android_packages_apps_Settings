@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2335d225_f938a701",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1388435
+      },
+      "writtenOn": "2024-06-30T06:05:37Z",
+      "side": 1,
+      "message": "Could you put your name into development folder, not just add in the root folder",
+      "revId": "da2cdfe1d9a162f4b0fb015f06b1e4a9ea9baf4c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
