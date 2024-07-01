@@ -16,6 +16,24 @@
       "message": "Could you put your name into development folder, not just add in the root folder",
       "revId": "da2cdfe1d9a162f4b0fb015f06b1e4a9ea9baf4c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1159605e_0062acbc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2024-07-01T18:07:31Z",
+      "side": 1,
+      "message": "There are two separate folders/places where it would be needed, and this would still require per-file permissions:\nhttps://cs.android.com/search?q\u003df:%2FEnable16k%5B%5E%2F%5D*%2F%3F$\u0026sq\u003d\n\nThis is the LCA location.",
+      "parentUuid": "2335d225_f938a701",
+      "revId": "da2cdfe1d9a162f4b0fb015f06b1e4a9ea9baf4c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
