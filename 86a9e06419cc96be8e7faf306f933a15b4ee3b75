@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "015de893_6edf6344",
+        "filename": "src/com/android/settings/development/PageAgnosticNotificationService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2024-07-03T22:05:19Z",
+      "side": 1,
+      "message": "this is moved because it only needs to run once per boot?",
+      "range": {
+        "startLine": 69,
+        "startChar": 6,
+        "endLine": 70,
+        "endChar": 34
+      },
+      "revId": "86a9e06419cc96be8e7faf306f933a15b4ee3b75",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
