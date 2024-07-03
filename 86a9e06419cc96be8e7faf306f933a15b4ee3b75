@@ -22,6 +22,30 @@
       },
       "revId": "86a9e06419cc96be8e7faf306f933a15b4ee3b75",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d1752b3_db598d4a",
+        "filename": "src/com/android/settings/development/PageAgnosticNotificationService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-07-03T22:07:15Z",
+      "side": 1,
+      "message": "Yes..we store the settings for automatic updates and even check it before updating.",
+      "parentUuid": "015de893_6edf6344",
+      "range": {
+        "startLine": 69,
+        "startChar": 6,
+        "endLine": 70,
+        "endChar": 34
+      },
+      "revId": "86a9e06419cc96be8e7faf306f933a15b4ee3b75",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
