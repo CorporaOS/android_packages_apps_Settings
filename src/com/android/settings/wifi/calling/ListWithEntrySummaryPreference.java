@@ -90,7 +90,7 @@ public class ListWithEntrySummaryPreference extends CustomListPreference {
     protected void onPrepareDialogBuilder(Builder builder,
             DialogInterface.OnClickListener listener) {
         ListAdapter la = (ListAdapter) new SelectorAdapter(mContext,
-                R.xml.single_choice_list_item_2, this);
+                R.layout.single_choice_list_item_2, this);
         builder.setSingleChoiceItems(la, findIndexOfValue(getValue()), listener);
         super.onPrepareDialogBuilder(builder, listener);
     }
@@ -116,7 +116,7 @@ public class ListWithEntrySummaryPreference extends CustomListPreference {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = LayoutInflater.from(mContext);
-            View row = inflater.inflate(R.xml.single_choice_list_item_2, parent, false);
+            View row = inflater.inflate(R.layout.single_choice_list_item_2, parent, false);
 
             TextView title = (TextView) row.findViewById(R.id.title);
             title.setText(mSelector.getEntries()[position]);
