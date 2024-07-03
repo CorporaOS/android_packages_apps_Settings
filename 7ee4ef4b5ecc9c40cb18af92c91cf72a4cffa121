@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a1bb427_d626e189",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2024-07-03T08:31:00Z",
+      "side": 1,
+      "message": "This CL is still compatible with latest code base, so rebase it.",
+      "revId": "7ee4ef4b5ecc9c40cb18af92c91cf72a4cffa121",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
