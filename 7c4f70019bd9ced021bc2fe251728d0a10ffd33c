@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8bffd113_797ae343",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2024-07-03T04:03:06Z",
+      "side": 1,
+      "message": "can you provide the reason why you want to move this file to?",
+      "revId": "7c4f70019bd9ced021bc2fe251728d0a10ffd33c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
