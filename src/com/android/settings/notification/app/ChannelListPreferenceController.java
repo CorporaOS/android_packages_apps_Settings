@@ -330,7 +330,7 @@ public class ChannelListPreferenceController extends NotificationPreferenceContr
         preference.setChecked(!group.isBlocked());
         preference.setOnPreferenceClickListener(preference1 -> {
             final boolean allowGroup = ((TwoStatePreference) preference1).isChecked();
-            group.setBlocked(!allowGroup);
+            group.setBlocked(allowGroup);
             mBackend.updateChannelGroup(mAppRow.pkg, mAppRow.uid, group);
 
             onGroupBlockStateChanged(group);
