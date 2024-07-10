@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e649a9fc_28659221",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1060562
+      },
+      "writtenOn": "2024-07-10T13:52:08Z",
+      "side": 1,
+      "message": "Please include the Bug: describing the issue and add a test",
+      "revId": "695df25fa26bf95a91198eaff0cb6532f0c78227",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
