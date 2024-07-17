@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "10a387e9_39ec7271",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1221112
+      },
+      "writtenOn": "2024-07-17T13:56:25Z",
+      "side": 1,
+      "message": "Thanks for looking into this bug @chaohuiw@google.com, really appreciate it.\n\nHope below explanation gives a better idea of the first bug.\n\nUser interaction: Insert a sim card for Docomo mcc440 mnc10 and add an APN in Settings with APN attribute \"testapn\" and a name.\nSource code: Since carrier id is known for Docomo, it will set \u0027carrier id\u0027 to 850 in ApnRepository.getApnIdMap()\n\nUser interaction: Set test APN as preferred\nSource code: carrier id will be updated to 2529 in CarrierResolver according the Subscription Carrier match rules\n(see attached carrierIdentification.db in Bug)\n\nframeworks/opt/telephony/src/java/com/android/internal/telephony/CarrierResolver.java\n`\n    case PREFER_APN_UPDATE_EVENT:\n        String preferApn \u003d getPreferApn();\n        if (!equals(mPreferApn, preferApn, true)) {\n            logd(\"[updatePreferApn] from:\" + mPreferApn + \" to:\" + preferApn);\n            mPreferApn \u003d preferApn;\n            matchSubscriptionCarrier(true /* update carrier config*/, false);\n        }\n    break;\n`\n    in matchSubscriptionCarrier() the code will call updateCarrierConfig()\n\nSince carrier config is updated, DataProfileManager#updateDataProfiles will be called\n\nNow test APN will not be found in the Telphonyprovider because carrier id does not match.\n\npackages/providers/TelephonyProvider/src/com/android/providers/telephony/TelephonyProvider.java\n`\n    if (currentCursor.getCount() \u003e 0) {\n        if (DBG) log(\"match MVNO APN: \" + currentCursor.getCount());\n            result \u003d currentCursor;\n    } else if (parentCursor.getCount() \u003e 0) {\n        if (DBG) log(\"match MNO APN: \" + parentCursor.getCount());\n            result \u003d parentCursor;\n        } else {\n            if (DBG) {\n                log(\"No MVNO, MNO and no MCC/MNC match, but we have match/matches with the \" +\n                        \"same carrier id, count: \" + carrierIdNonMatchingMNOCursor.getCount());\n            }\n            result \u003d carrierIdNonMatchingMNOCursor;\n        }\n    if (DBG) log(\"match carrier id APN: \" + carrierIdCursor.getCount());\n        appendCursorData(result, carrierIdCursor);\n        return result;\n    }\n`\nThe result is that Docomo spmode APN will be set as preferred\n\nQuestion is how a user should be able to add or change an APN for a known carrier id on a device that does not get any APN updates, security updates stopped arriving for example?\n\nHow do you mean that mvno fields have been deprecated from APN? Is it not read from the sim card to match the correct APN in case the sim card is not in the carrier list?",
+      "parentUuid": "78501568_d15fae05",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 42
+      },
+      "revId": "8ce44eb043cf209863fda686b56dedcc6482e41b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "43087deb_7c6952c5",
