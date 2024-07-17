@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "78501568_d15fae05",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1501264
+      },
+      "writtenOn": "2024-07-17T05:07:17Z",
+      "side": 1,
+      "message": "In case of matching carrier information, carrier id should be used by default instead of mcc, mnc, numeric or mvno etc.\n         \nhttps://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/core/java/android/provider/Telephony.java;l\u003d3466;drc\u003d8dfd569c1ecd86d4c1a80f423c83dbc03e1b6f1f\n\nAnd mvno fields have been deprecated from APN.\n\nCould you describe more about the case that the sim changes carrier id?",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 42
+      },
+      "revId": "8ce44eb043cf209863fda686b56dedcc6482e41b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "43087deb_7c6952c5",
