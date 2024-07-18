@@ -46,6 +46,30 @@
       },
       "revId": "1614fc418018ce0f458a0761198e1373522a01af",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5954764a_16f7e15f",
+        "filename": "src/com/android/settings/sim/smartForwarding/SmartForwardingFragment.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1237921
+      },
+      "writtenOn": "2024-07-18T09:45:41Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "bdd8c7c4_c3295215",
+      "range": {
+        "startLine": 52,
+        "startChar": 8,
+        "endLine": 52,
+        "endChar": 53
+      },
+      "revId": "1614fc418018ce0f458a0761198e1373522a01af",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
