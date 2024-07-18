@@ -51,6 +51,24 @@
       "parentUuid": "a889eb48_45f29939",
       "revId": "7fa6799b93544936cacc3e89f1ba14f2a8f559b4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "056959ee_7cee4fd2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1347463
+      },
+      "writtenOn": "2024-07-18T16:14:46Z",
+      "side": 1,
+      "message": "I transferred TL-ship of Night Display (Color Display) to Fiona quite a while back, so I don\u0027t think I\u0027m the best person to review this change. Either Fiona or someone on Settings are probably your best choices.",
+      "parentUuid": "c46d40bc_2c80ec2b",
+      "revId": "7fa6799b93544936cacc3e89f1ba14f2a8f559b4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
