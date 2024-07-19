@@ -69,6 +69,24 @@
       "parentUuid": "c46d40bc_2c80ec2b",
       "revId": "7fa6799b93544936cacc3e89f1ba14f2a8f559b4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd6338dc_ea04cbe0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2024-07-19T05:15:06Z",
+      "side": 1,
+      "message": "\u003e I transferred TL-ship of Night Display (Color Display) to Fiona quite a while back, so I don\u0027t think I\u0027m the best person to review this change. Either Fiona or someone on Settings are probably your best choices.\n\nIMHO, this CL actually has nothing to do with the  Night Display (Color Display) logic, and can be treated as a pure Settings app related commit, so I prefer one more Setting team member to review it as well.",
+      "parentUuid": "056959ee_7cee4fd2",
+      "revId": "7fa6799b93544936cacc3e89f1ba14f2a8f559b4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
