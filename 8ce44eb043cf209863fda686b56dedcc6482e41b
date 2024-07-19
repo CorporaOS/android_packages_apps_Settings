@@ -48,6 +48,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "7076fa8d_15ff5458",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1733820
+      },
+      "writtenOn": "2024-07-19T04:51:00Z",
+      "side": 1,
+      "message": "I have added some comments on the bug. we need to understand more details regarding the test and the issue. thanks.",
+      "parentUuid": "10a387e9_39ec7271",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 42
+      },
+      "revId": "8ce44eb043cf209863fda686b56dedcc6482e41b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "43087deb_7c6952c5",
