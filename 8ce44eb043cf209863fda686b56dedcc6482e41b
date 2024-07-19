@@ -72,6 +72,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "d030c52e_c39b913a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1221112
+      },
+      "writtenOn": "2024-07-19T13:00:58Z",
+      "side": 1,
+      "message": "Thanks a lot @huiwang@google.com",
+      "parentUuid": "7076fa8d_15ff5458",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 42
+      },
+      "revId": "8ce44eb043cf209863fda686b56dedcc6482e41b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "43087deb_7c6952c5",
