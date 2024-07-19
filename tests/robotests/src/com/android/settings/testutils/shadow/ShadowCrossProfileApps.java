@@ -40,7 +40,6 @@ public class ShadowCrossProfileApps extends org.robolectric.shadows.ShadowCrossP
 
     @Implementation
     protected void __constructor__(Context context, ICrossProfileApps service) {
-        super.__constructor__(context, service);
         this.mContext = context;
         this.mPackageManager = context.getPackageManager();
     }
