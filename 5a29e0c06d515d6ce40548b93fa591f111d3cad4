@@ -56,6 +56,30 @@
       },
       "revId": "5a29e0c06d515d6ce40548b93fa591f111d3cad4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "05cce5db_ccbf6ea1",
+        "filename": "src/com/android/settings/development/BluetoothMaxConnectedAudioDevicesPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 2051900
+      },
+      "writtenOn": "2024-07-22T16:17:50Z",
+      "side": 1,
+      "message": "@yqian@google.com do you mean add the checks in below code. Please confirm.\n\nhttps://cs.android.com/android/platform/superproject/+/main:packages/modules/Bluetooth/framework/java/android/bluetooth/BluetoothManager.java;drc\u003daa58f747f37494c619a9afae1622f56001bc07fb;l\u003d71",
+      "parentUuid": "517e00a3_e7852539",
+      "range": {
+        "startLine": 50,
+        "startChar": 16,
+        "endLine": 50,
+        "endChar": 32
+      },
+      "revId": "5a29e0c06d515d6ce40548b93fa591f111d3cad4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
