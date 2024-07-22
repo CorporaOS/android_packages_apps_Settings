@@ -33,6 +33,29 @@
       "message": "Hi @yqian@google.com,\n\n please help to review the changes.\n \nChaneswar.",
       "revId": "5a29e0c06d515d6ce40548b93fa591f111d3cad4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "517e00a3_e7852539",
+        "filename": "src/com/android/settings/development/BluetoothMaxConnectedAudioDevicesPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1944977
+      },
+      "writtenOn": "2024-07-22T14:57:11Z",
+      "side": 1,
+      "message": "maybe it\u0027s better have null check on bluetoothManager \u0026 bluetoothAdapter and return early with error logging.",
+      "range": {
+        "startLine": 50,
+        "startChar": 16,
+        "endLine": 50,
+        "endChar": 32
+      },
+      "revId": "5a29e0c06d515d6ce40548b93fa591f111d3cad4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
