@@ -80,6 +80,30 @@
       },
       "revId": "5a29e0c06d515d6ce40548b93fa591f111d3cad4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "55916227_90056a51",
+        "filename": "src/com/android/settings/development/BluetoothMaxConnectedAudioDevicesPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 2051900
+      },
+      "writtenOn": "2024-07-23T13:06:19Z",
+      "side": 1,
+      "message": "Please help to review the latest patch",
+      "parentUuid": "05cce5db_ccbf6ea1",
+      "range": {
+        "startLine": 50,
+        "startChar": 16,
+        "endLine": 50,
+        "endChar": 32
+      },
+      "revId": "5a29e0c06d515d6ce40548b93fa591f111d3cad4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
