@@ -87,6 +87,41 @@
       "parentUuid": "056959ee_7cee4fd2",
       "revId": "7fa6799b93544936cacc3e89f1ba14f2a8f559b4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6701988b_edc76436",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2024-07-24T02:51:40Z",
+      "side": 1,
+      "message": "A friendly ping.",
+      "revId": "7fa6799b93544936cacc3e89f1ba14f2a8f559b4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "418751fd_bd647ddd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1275415
+      },
+      "writtenOn": "2024-07-24T02:51:40Z",
+      "side": 1,
+      "message": "\u003e \u003e I transferred TL-ship of Night Display (Color Display) to Fiona quite a while back, so I don\u0027t think I\u0027m the best person to review this change. Either Fiona or someone on Settings are probably your best choices.\n\u003e \n\u003e IMHO, this CL actually has nothing to do with the  Night Display (Color Display) logic, and can be treated as a pure Settings app related commit, so I prefer one more Setting team member to review it as well.",
+      "parentUuid": "bd6338dc_ea04cbe0",
+      "revId": "7fa6799b93544936cacc3e89f1ba14f2a8f559b4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
