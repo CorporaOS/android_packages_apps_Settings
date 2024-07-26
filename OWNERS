@@ -26,3 +26,11 @@ yangfan@google.com
 
 # Exempt resource files (because they are in a flat directory and too hard to manage via OWNERS)
 per-file res*/**=*
+
+# ADB
+per-file src/com/android/settings/development/Adb*=set noparent
+per-file src/com/android/settings/development/Adb*=file:platform/packages/modules/adb:/OWNERS
+#per-file src/com/android/settings/wifi/dpp/AdbQrCode.java=set noparent
+#per-file src/com/android/settings/wifi/dpp/AdbQrCode.java=enh@google.com,sanglardf@google.com
+#per-file tests/unit/src/com/android/settings/wifi/dpp/AdbQrCodeTest.java=set noparent
+#per-file tests/unit/src/com/android/settings/wifi/dpp/AdbQrCodeTest.java=enh@google.com,sanglardf@google.com
