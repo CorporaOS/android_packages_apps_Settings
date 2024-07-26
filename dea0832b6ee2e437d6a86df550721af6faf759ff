@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "54a8642d_ee543801",
+        "filename": "OWNERS",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-07-26T16:49:49Z",
+      "side": 1,
+      "message": "I know it\u0027s a bit cumbersome, but can you create/update 3 different OWNER files for each of these directories? Our codebase is massive and has a large amount of distributed owners, so if we started putting them all here it would quickly get out of control. (you\u0027ll see we already have some in /development for per-setting owners).",
+      "revId": "dea0832b6ee2e437d6a86df550721af6faf759ff",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
