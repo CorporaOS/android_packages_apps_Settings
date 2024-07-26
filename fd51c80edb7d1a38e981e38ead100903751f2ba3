@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e99ea9b6_11403d23",
+        "filename": "src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-07-26T20:13:48Z",
+      "side": 1,
+      "message": "@chunkulin@google.com I know you asked me to remove this earlier, but I believe that this actually is necessary to add the SwitchChangeListener to the preference.\n\nTogglePreferenceController::displayPreference\nhttps://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/src/com/android/settings/core/TogglePreferenceController.java;drc\u003d10cf80af4c5f20310b96e51bf74d67605b1687c7;l\u003d58",
+      "revId": "fd51c80edb7d1a38e981e38ead100903751f2ba3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3c55373_82fc04c1",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/MagnifyNavAndImePreferenceControllerTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-07-26T20:13:48Z",
+      "side": 1,
+      "message": "Since the MagnifyNavAndImePreferenceController doesn\u0027t implement LifecycleObserver anymore, we need to add an updateState(pref) call after we manually set the setting. \n\n(note: we don\u0027t need to call this after performClick() though because that is handled by the SwitchChangeListener, which is configured through line 60 of this file.)",
+      "revId": "fd51c80edb7d1a38e981e38ead100903751f2ba3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
