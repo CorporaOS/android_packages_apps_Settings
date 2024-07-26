@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78e06f81_2819d60f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1432429
+      },
+      "writtenOn": "2024-07-26T02:12:49Z",
+      "side": 1,
+      "message": "Hi Łukasz,\n\nWe had already refactored here. Please wait for the updated version.\n\nMany thanks for your check and contribution for AOSP.",
+      "revId": "102c7c59dd2b4ff7f7e41b7b93e968f9c5219222",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
