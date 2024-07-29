@@ -1,6 +1,91 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "981087a5_e6c3f38c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-07-29T20:01:19Z",
+      "side": 1,
+      "message": "Would be nice to also add a bug id, since you already have one.\n\n`Bug: 342446315`",
+      "revId": "fd51c80edb7d1a38e981e38ead100903751f2ba3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d84a8ded_dc6cec2b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-07-29T20:01:19Z",
+      "side": 1,
+      "message": "Thank you Susan for updating the cl. Overall looks good to me in terms of Settings. Just left some minor comments.",
+      "revId": "fd51c80edb7d1a38e981e38ead100903751f2ba3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2d062045_b24fcabd",
+        "filename": "src/com/android/settings/accessibility/MagnifyNavAndImePreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-07-29T20:01:19Z",
+      "side": 1,
+      "message": "Could remove this if unused (and TAG at line#37)",
+      "revId": "fd51c80edb7d1a38e981e38ead100903751f2ba3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d9086b4b_2c629c3f",
+        "filename": "src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-07-29T20:01:19Z",
+      "side": 1,
+      "message": "I\u0027m not sure why we use SwitchPreferenceCompat over SwitchPreference, but for consistency sake, could you do `SwitchPreferenceCompat` for the new toggle?",
+      "revId": "fd51c80edb7d1a38e981e38ead100903751f2ba3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3b8cbd68_860f283a",
+        "filename": "src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-07-29T20:01:19Z",
+      "side": 1,
+      "message": "We\u0027re not using it in other places after initializing it. Probably could remove this line and line#95",
+      "revId": "fd51c80edb7d1a38e981e38ead100903751f2ba3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "e99ea9b6_11403d23",
@@ -14,6 +99,64 @@
       "writtenOn": "2024-07-26T20:13:48Z",
       "side": 1,
       "message": "@chunkulin@google.com I know you asked me to remove this earlier, but I believe that this actually is necessary to add the SwitchChangeListener to the preference.\n\nTogglePreferenceController::displayPreference\nhttps://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/src/com/android/settings/core/TogglePreferenceController.java;drc\u003d10cf80af4c5f20310b96e51bf74d67605b1687c7;l\u003d58",
+      "revId": "fd51c80edb7d1a38e981e38ead100903751f2ba3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c00fc659_55595dd9",
+        "filename": "src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-07-29T20:01:19Z",
+      "side": 1,
+      "message": "ah, you\u0027re right. Since we programmatically populate the preferences in the ToggleScreenMagnificationPreferenceFragment, the controller#DisplayPreference won\u0027t get called in [onResume](https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/src/com/android/settings/dashboard/DashboardFragment.java;l\u003d377;drc\u003d10cf80af4c5f20310b96e51bf74d67605b1687c7)",
+      "parentUuid": "e99ea9b6_11403d23",
+      "revId": "fd51c80edb7d1a38e981e38ead100903751f2ba3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "69ae0186_2c8fa858",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/MagnifyNavAndImePreferenceControllerTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-07-29T20:01:19Z",
+      "side": 1,
+      "message": "For robolectric tests, could you use [`@EnableFlags(Flags.FLAG_MAGNIFY_NAV_AND_IME)`](https://cs.android.com/android/platform/superproject/main/+/main:platform_testing/libraries/annotations/src/android/platform/test/annotations/EnableFlags.java;l\u003d48;drc\u003db40723b2efe6354031eba4246cb2cedebfb8671b) so that the test is running regardless if the flag matches the default flag value on the device?\n\nYou might also need to add `SetFlagRule` in member variable of the test class to make the annotation (@EnableFlags) works.\n\n```\n@Rule public final SetFlagsRule mSetFlagsRule \u003d new SetFlagsRule();\n```",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 21
+      },
+      "revId": "fd51c80edb7d1a38e981e38ead100903751f2ba3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "755ef530_bc3522e3",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/MagnifyNavAndImePreferenceControllerTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-07-29T20:01:19Z",
+      "side": 1,
+      "message": "is `spy` needed? Would it be possible to assert on the `isChecked` directly?",
       "revId": "fd51c80edb7d1a38e981e38ead100903751f2ba3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
