@@ -197,6 +197,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "5860abe5_2e5e7021",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/MagnifyNavAndImePreferenceControllerTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-07-29T20:40:17Z",
+      "side": 1,
+      "message": "ah ok. It\u0027s probably not necessary to verify setChecked is called, since the thing we want to assert is whether the `isChecked` state is correct. We don\u0027t care how it\u0027s get set to that state.",
+      "parentUuid": "5fe4dd2f_95922d9d",
+      "revId": "fd51c80edb7d1a38e981e38ead100903751f2ba3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "a3c55373_82fc04c1",
