@@ -35,6 +35,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1f7d2db_5c5cbc7e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-07-29T20:35:40Z",
+      "side": 1,
+      "message": "Sounds good! I\u0027ll post a revision for the comments!",
+      "parentUuid": "d84a8ded_dc6cec2b",
+      "revId": "fd51c80edb7d1a38e981e38ead100903751f2ba3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2d062045_b24fcabd",
@@ -157,6 +175,24 @@
       "writtenOn": "2024-07-29T20:01:19Z",
       "side": 1,
       "message": "is `spy` needed? Would it be possible to assert on the `isChecked` directly?",
+      "revId": "fd51c80edb7d1a38e981e38ead100903751f2ba3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5fe4dd2f_95922d9d",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/MagnifyNavAndImePreferenceControllerTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-07-29T20:35:40Z",
+      "side": 1,
+      "message": "Hi Chun! Would we need `spy` for line 88 and 100 when we verify that setChecked is called though?",
+      "parentUuid": "755ef530_bc3522e3",
       "revId": "fd51c80edb7d1a38e981e38ead100903751f2ba3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
