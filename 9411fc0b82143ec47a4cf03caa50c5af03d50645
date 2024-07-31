@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "692788fd_8762b24a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1854976
+      },
+      "writtenOn": "2024-07-31T04:18:10Z",
+      "side": 1,
+      "message": "would you mind to provide detail description and screenshot for this chage?",
+      "revId": "9411fc0b82143ec47a4cf03caa50c5af03d50645",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
