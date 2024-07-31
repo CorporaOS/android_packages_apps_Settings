@@ -16,6 +16,24 @@
       "message": "would you mind to provide detail description and screenshot for this chage?",
       "revId": "9411fc0b82143ec47a4cf03caa50c5af03d50645",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a948a079_a27f17af",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3545041
+      },
+      "writtenOn": "2024-07-31T15:01:05Z",
+      "side": 1,
+      "message": "Done (Updated commit description and attached a screenshot)",
+      "parentUuid": "692788fd_8762b24a",
+      "revId": "9411fc0b82143ec47a4cf03caa50c5af03d50645",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
