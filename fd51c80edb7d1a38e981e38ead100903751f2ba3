@@ -332,6 +332,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d7c2895e_c957e250",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/MagnifyNavAndImePreferenceControllerTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-08-06T23:11:16Z",
+      "side": 1,
+      "message": "ugh... I should say \"keep it as member variable\" https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/tests/robotests/src/com/android/settings/wifi/calling/WifiCallingSettingsForSubTest.java;drc\u003daab23344cb24bebc9bae65ba2c89b089d7a454c5",
+      "parentUuid": "9b0bd6fb_43f6b370",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 21
+      },
+      "revId": "fd51c80edb7d1a38e981e38ead100903751f2ba3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "755ef530_bc3522e3",
         "filename": "tests/robotests/src/com/android/settings/accessibility/MagnifyNavAndImePreferenceControllerTest.java",
         "patchSetId": 3
