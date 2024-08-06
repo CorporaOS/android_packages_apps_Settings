@@ -260,6 +260,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1392e853_9a28e855",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/MagnifyNavAndImePreferenceControllerTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-08-06T22:59:12Z",
+      "side": 1,
+      "message": "I believe you still need the SetFlagRules so that the [Rule would process](https://cs.android.com/android/platform/superproject/main/+/main:platform_testing/libraries/flag-helpers/junit/src_base/android/platform/test/flag/junit/SetFlagsRule.java;l\u003d203;drc\u003df2805775e79c46034bd16c29fc3f898d7177e992) the `@EnableFlags` annotation. Otherwise, it\u0027s just an annotation do nothing.\n\nI recently forgot to add `SetFlagRules` and the test failed because of that, so I\u0027m pretty sure SetFlagRules is needed.",
+      "parentUuid": "b31b48ab_e0db00c1",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 21
+      },
+      "revId": "fd51c80edb7d1a38e981e38ead100903751f2ba3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "755ef530_bc3522e3",
         "filename": "tests/robotests/src/com/android/settings/accessibility/MagnifyNavAndImePreferenceControllerTest.java",
         "patchSetId": 3
