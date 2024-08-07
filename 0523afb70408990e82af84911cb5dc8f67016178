@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c319d6aa_ff5bc4ba",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragmentTest.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-08-07T19:28:33Z",
+      "side": 1,
+      "message": "Hi @susalin@amazon.com, fyi, I updated this to use TwoStatePreference, since the code in ToggleScreenMagnificationPreferenceFragment is using `TwoStatePreference`",
+      "range": {
+        "startLine": 192,
+        "startChar": 14,
+        "endLine": 192,
+        "endChar": 32
+      },
+      "revId": "0523afb70408990e82af84911cb5dc8f67016178",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
