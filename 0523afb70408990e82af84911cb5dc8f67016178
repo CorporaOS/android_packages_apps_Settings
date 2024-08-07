@@ -22,6 +22,30 @@
       },
       "revId": "0523afb70408990e82af84911cb5dc8f67016178",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1ce74a4_ff7e5cbf",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragmentTest.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-08-07T19:30:57Z",
+      "side": 1,
+      "message": "Ah thank you so much!",
+      "parentUuid": "c319d6aa_ff5bc4ba",
+      "range": {
+        "startLine": 192,
+        "startChar": 14,
+        "endLine": 192,
+        "endChar": 32
+      },
+      "revId": "0523afb70408990e82af84911cb5dc8f67016178",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
