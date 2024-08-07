@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "399f5485_bb9c0482",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-08-07T00:26:46Z",
+      "side": 1,
+      "message": "LGTM, +2 first to run the PRESUBMIT",
+      "revId": "d2e2737b1e35f4292f4451356979daba8e79c5f2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17e32ebd_e3bb56eb",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/MagnifyNavAndImePreferenceControllerTest.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-08-07T00:26:46Z",
+      "side": 1,
+      "message": "Probably missed import for `EnableFlags` and `SetFlagsRule`",
+      "revId": "d2e2737b1e35f4292f4451356979daba8e79c5f2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
