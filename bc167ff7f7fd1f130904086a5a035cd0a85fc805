@@ -90,6 +90,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "32359a5e_04a54168",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-08-07T00:23:01Z",
+      "side": 1,
+      "message": "Resolving this comment!",
+      "parentUuid": "51b18557_3245c00e",
+      "revId": "bc167ff7f7fd1f130904086a5a035cd0a85fc805",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4e7f0deb_613e10e9",
@@ -186,6 +204,24 @@
       "side": 1,
       "message": "Yes, once you add your new flag in the .aconfig file, then build the Android again, you should be able to see/use the auto generated flag.",
       "parentUuid": "71301ae2_ce11f812",
+      "revId": "bc167ff7f7fd1f130904086a5a035cd0a85fc805",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1490874_d74477a8",
+        "filename": "src/com/android/settings/accessibility/MagnifyNavAndImePreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-08-07T00:23:01Z",
+      "side": 1,
+      "message": "Resolving this comment as well!",
+      "parentUuid": "3932a5df_41350632",
       "revId": "bc167ff7f7fd1f130904086a5a035cd0a85fc805",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
