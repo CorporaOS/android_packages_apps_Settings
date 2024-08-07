@@ -33,6 +33,24 @@
       "message": "Probably missed import for `EnableFlags` and `SetFlagsRule`",
       "revId": "d2e2737b1e35f4292f4451356979daba8e79c5f2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6338de0c_a965a536",
+        "filename": "tests/robotests/src/com/android/settings/accessibility/MagnifyNavAndImePreferenceControllerTest.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-08-07T00:28:11Z",
+      "side": 1,
+      "message": "```\nimport android.platform.test.annotations.EnableFlags;\nimport android.platform.test.flag.junit.SetFlagsRule;\n```",
+      "parentUuid": "17e32ebd_e3bb56eb",
+      "revId": "d2e2737b1e35f4292f4451356979daba8e79c5f2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
