@@ -1,0 +1,45 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7edbd5c9_6461f672",
+        "filename": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 1367652
+      },
+      "writtenOn": "2024-08-14T07:06:59Z",
+      "side": 1,
+      "message": "nit: please remove unnecessary space.",
+      "range": {
+        "startLine": 272,
+        "startChar": 67,
+        "endLine": 272,
+        "endChar": 68
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "b8f34fc8_cf33c940",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "src/com/android/settings/development/Enable16kPagesPreferenceController.java",
+              "range": {
+                "startLine": 272,
+                "startChar": 0,
+                "endLine": 273,
+                "endChar": 0
+              },
+              "replacement": "                        Log.e(TAG, \"IOException when getInputStream\");\n"
+            }
+          ]
+        }
+      ],
+      "revId": "2e4d8f3d9e9827bdb2dc60491d9ff6647f39e4a7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
