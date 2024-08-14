@@ -257,12 +257,33 @@ public class Enable16kPagesPreferenceController extends DeveloperOptionsPreferen
                     payloadSize = length;
                 } else if (PAYLOAD_PROPERTIES_FILE_NAME.equals(fileName)) {
                     propertiesFound = true;
-                    InputStream inputStream = zip.getInputStream(zipEntry);
-                    if (inputStream != null) {
-                        BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
-                        String line;
-                        while ((line = br.readLine()) != null) {
-                            properties.add(line);
+                    InputStream inputStream = null;
+                    BufferedReader br = null;
+                    try {
+                        inputStream = zip.getInputStream(zipEntry);
+                        if (inputStream != null) {
+                            br = new BufferedReader(new InputStreamReader(inputStream));
+                            String line;
+                            while ((line = br.readLine()) != null) {
+                                properties.add(line);
+                            }
+                        }
+                    } catch (IOException e) {
+                        Log.e(TAG, "IOException when getInputStream ");
+                    } finally {
+                        if (inputStream != null) {
+                            try {
+                                inputStream.close();
+                            } catch (IOException e) {
+                                Log.e(TAG, "fileInputStream close exception");
+                            }
+                        }
+                        if (br != null) {
+                            try {
+                                br.close();
+                            } catch (IOException e) {
+                                Log.e(TAG, "BufferedReader close exception");
+                            }
                         }
                     }
                 }
