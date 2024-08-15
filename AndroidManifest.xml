@@ -2621,7 +2621,7 @@
         <activity android:name=".SetupRedactionInterstitial"
             android:enabled="false"
             android:exported="true"
-            android:theme="@style/SudThemeGlif.DayNight"
+            android:theme="@style/SudThemeGlifV3.DayNight"
             android:label="@string/lock_screen_notifications_interstitial_title"
             android:icon="@drawable/ic_suggested_notifications">
             <intent-filter>
