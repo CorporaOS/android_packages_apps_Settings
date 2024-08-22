@@ -70,6 +70,24 @@
       "parentUuid": "7e530efd_21a43bcd",
       "revId": "172deb857bb560104ff7858a5700e9ec0d5fd090",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f9f5387_4fd6734c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-08-22T18:43:50Z",
+      "side": 1,
+      "message": "Hi Susan, thanks for following up. The feature request is under discussion, once it\u0027s approved, and we get necessary owner\u0027s reviews (currently, missing the window manager changes\u0027 owner\u0027s review), the internal one can be merged, and then I\u0027ll merge this one. No specific timeline yet.",
+      "parentUuid": "e4293097_deb9e670",
+      "revId": "172deb857bb560104ff7858a5700e9ec0d5fd090",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
