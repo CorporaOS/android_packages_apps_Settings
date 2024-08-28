@@ -50,6 +50,24 @@
       "message": "Thank you for contributing this change to Android. Unfortunately, we cannot accept it in its current state.\n\n1) Unexpected Behavior: This change makes the search result item clickable, allowing users to toggle the flashlight directly from the search results. However, there\u0027s no visual indication that tapping it will have this effect. There\u0027s also no prompt to turn off the flashlight when leaving Settings. This could lead to the flashlight being left on indefinitely, draining the battery.\n\n2) Inconsistent with AOSP: The AOSP version of search does not include toggles in search results. Tapping a search result to control hardware (like the flashlight) is unexpected and potentially confusing.\n\nWe recommend creating a feature request ticket so that we can properly evaluate this request. Adding such a feature would require careful UX consideration and general guidelines for developers.",
       "revId": "db95ad93f7191552aa89655c37e0f1b2bafc3c58",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e4f63fd1_2caa0b55",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3417964
+      },
+      "writtenOn": "2024-08-28T13:30:33Z",
+      "side": 1,
+      "message": "@cipson@google.com Thank you for your response. I will raise a feature request ticket.",
+      "parentUuid": "29d7df5d_1423e8bb",
+      "revId": "db95ad93f7191552aa89655c37e0f1b2bafc3c58",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
