@@ -76,7 +76,7 @@ android_robolectric_test {
 
     libs: [
         "ims-common",
-        "android.test.mock",
+        "android.test.mock.stubs.system",
     ],
 
     java_resource_dirs: [
