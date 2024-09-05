@@ -106,6 +106,24 @@
       "parentUuid": "9f9f5387_4fd6734c",
       "revId": "172deb857bb560104ff7858a5700e9ec0d5fd090",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fdfa6edf_4d672f07",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-09-05T23:52:26Z",
+      "side": 1,
+      "message": "Hi Chun-Ku! I was curious if you know whether this change could be released in an update to A15 or we\u0027ll have to wait until A16? Thanks in advance!",
+      "parentUuid": "57c06cb0_5ecf3e12",
+      "revId": "172deb857bb560104ff7858a5700e9ec0d5fd090",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
