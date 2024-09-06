@@ -142,6 +142,24 @@
       "parentUuid": "fdfa6edf_4d672f07",
       "revId": "172deb857bb560104ff7858a5700e9ec0d5fd090",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e4489fa9_56dce71d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3307287
+      },
+      "writtenOn": "2024-09-06T00:43:41Z",
+      "side": 1,
+      "message": "Ah I see -- thanks for the further clarification! Feel free to let me know if there\u0027s anything I can help with!",
+      "parentUuid": "a44bae0f_6fee4e9f",
+      "revId": "172deb857bb560104ff7858a5700e9ec0d5fd090",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
