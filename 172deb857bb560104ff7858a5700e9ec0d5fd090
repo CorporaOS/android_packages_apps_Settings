@@ -124,6 +124,24 @@
       "parentUuid": "57c06cb0_5ecf3e12",
       "revId": "172deb857bb560104ff7858a5700e9ec0d5fd090",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a44bae0f_6fee4e9f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1977308
+      },
+      "writtenOn": "2024-09-06T00:29:55Z",
+      "side": 1,
+      "message": "Hi Susan, it\u0027s definitely NOT included in Android 15 (Android 15 is in public today). For Android 16, unsure. we\u0027re still under discussion whether to take this feature (e.g. whether the settings toggle is a good place to include this feature, should this setting be enabled all the time regardless of the magnification mode). Also, even if we take the code in feature flagged, it would need to be tested to see if the feature is mature to be on Android.\n\nNo expected timeline on this feature request.",
+      "parentUuid": "fdfa6edf_4d672f07",
+      "revId": "172deb857bb560104ff7858a5700e9ec0d5fd090",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
