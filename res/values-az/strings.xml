@@ -19,183 +19,183 @@
     <string name="yes" msgid="1999566976857398962">"Bəli"</string>
     <string name="no" msgid="5541738710521607130">"Xeyr"</string>
     <string name="create" msgid="986997212165228751">"Yarat"</string>
-    <string name="allow" msgid="3763244945363657722">"İcazə verin"</string>
-    <string name="deny" msgid="7326117222944479942">"Rədd edin"</string>
-    <string name="confirmation_turn_on" msgid="2979094011928347665">"Aktiv edin"</string>
-    <string name="device_info_default" msgid="1406619232867343310">"Naməlum"</string>
-    <string name="device_info_protected_single_press" msgid="3810785480060743677">"Məlumatı göstərmək üçün toxunun"</string>
-    <string name="show_dev_countdown" msgid="2936506773086395069">"{count,plural, =1{İndi tərtibatçı olmağınıza # addım qalıb.}other{İndi tərtibatçı olmağınıza # addım qalıb.}}"</string>
-    <string name="show_dev_on" msgid="2840850085134853754">"Siz indi tərtibatçısınız!"</string>
-    <string name="show_dev_already" msgid="7041756429707644630">"Ehtiyac yoxdur, Siz artı gəlişdiricisiniz."</string>
-    <string name="dev_settings_disabled_warning" msgid="6971867026249671244">"Əvvəlcə developer seçimlərini aktiv edin."</string>
-    <string name="dev_settings_available_to_admin_only_warning" msgid="3408243404879083111">"Yalnız admin istifadəçilər developer ayarlarına daxil ola bilər."</string>
+    <string name="allow" msgid="3763244945363657722">"İcazə ver"</string>
+    <string name="deny" msgid="7326117222944479942">"Rədd et"</string>
+    <string name="confirmation_turn_on" msgid="2979094011928347665">"İşə sal"</string>
+    <string name="device_info_default" msgid="1406619232867343310">"Bilinmir"</string>
+    <string name="device_info_protected_single_press" msgid="3810785480060743677">"Məlumatları göstərmək üçün toxunun"</string>
+    <string name="show_dev_countdown" msgid="2936506773086395069">"{count,plural, =1{Artıq gəlişdirici olmağınıza # addım qalıb.}other{Artıq gəlişdirici olmağınıza # addım qalıb.}}"</string>
+    <string name="show_dev_on" msgid="2840850085134853754">"Artıq gəlişdiricisiniz!"</string>
+    <string name="show_dev_already" msgid="7041756429707644630">"Ehtiyac yoxdur. Siz artıq gəlişdiricisiniz."</string>
+    <string name="dev_settings_disabled_warning" msgid="6971867026249671244">"Əvvəlcə gəlişdirici seçimlərini fəallaşdırın."</string>
+    <string name="dev_settings_available_to_admin_only_warning" msgid="3408243404879083111">"Yalnız admin istifadəçilər, gəlişdirici ayarlarına müraciət edə bilər."</string>
     <string name="header_category_system" msgid="1665516346845259058">"Sistem"</string>
     <string name="radioInfo_service_in" msgid="9088637745836646271">"Xidmətdə"</string>
-    <string name="radioInfo_service_out" msgid="1868347333892403287">"Xidmətdən Kənarda"</string>
-    <string name="radioInfo_service_off" msgid="6184928420860868571">"Radio Deaktivdir"</string>
-    <string name="radioInfo_roaming_in" msgid="8892550453644088692">"Roaminq"</string>
-    <string name="radioInfo_roaming_not" msgid="3137594549464975054">"Rominq Deyil"</string>
-    <string name="radioInfo_data_disconnected" msgid="362604130117666924">"Əlaqə kəsildi"</string>
-    <string name="radioInfo_data_connecting" msgid="7280819598028917888">"Qoşulur"</string>
-    <string name="radioInfo_data_connected" msgid="8816467971633020141">"Qoşulu"</string>
+    <string name="radioInfo_service_out" msgid="1868347333892403287">"Xidmətdən kənarda"</string>
+    <string name="radioInfo_service_off" msgid="6184928420860868571">"Radio bağlıdır"</string>
+    <string name="radioInfo_roaming_in" msgid="8892550453644088692">"Rouminq"</string>
+    <string name="radioInfo_roaming_not" msgid="3137594549464975054">"Rominqdə deyil"</string>
+    <string name="radioInfo_data_disconnected" msgid="362604130117666924">"Bağlantı kəsildi"</string>
+    <string name="radioInfo_data_connecting" msgid="7280819598028917888">"Bağlantı qurulur"</string>
+    <string name="radioInfo_data_connected" msgid="8816467971633020141">"Bağlantılıdır"</string>
     <string name="radioInfo_data_suspended" msgid="2001254415431299603">"Dayandırılıb"</string>
-    <string name="radioInfo_unknown" msgid="2892562356748600367">"Naməlum"</string>
+    <string name="radioInfo_unknown" msgid="2892562356748600367">"Bilinmir"</string>
     <string name="preview_pager_content_description" msgid="3762247188224576303">"Önizləmə"</string>
-    <string name="font_size_make_smaller_desc" msgid="4978038055549590140">"Kiçildin"</string>
-    <string name="font_size_make_larger_desc" msgid="5583046033381722247">"Böyüdün"</string>
+    <string name="font_size_make_smaller_desc" msgid="4978038055549590140">"Kiçilt"</string>
+    <string name="font_size_make_larger_desc" msgid="5583046033381722247">"Böyüt"</string>
     <string name="stay_awake_on_fold_title" msgid="6590454679898134221">"Həmişə"</string>
-    <string name="stay_awake_on_fold_summary" msgid="1939963751585954262">"Cihazı qatladıqda ön ekran yandırılır"</string>
-    <string name="selective_stay_awake_title" msgid="7887645333447645168">"Yalnız oyun, video və s."</string>
-    <string name="selective_stay_awake_summary" msgid="9055967322921984543">"Ekranın hərəkətsiz qalmasının qarşısını alan tətbiqlər üçün ön ekran yandırılır"</string>
-    <string name="stay_awake_on_lockscreen_title" msgid="8088456642083051068">"Davam etmək üçün yuxarı sürüşdürün"</string>
-    <string name="stay_awake_on_lockscreen_summary" msgid="8825321939913726566">"Tətbiqdən istifadəyə davam etmək üçün telefonu qatlayıb, ön ekranda yuxarı çəkin və ya ekranın kilidlənməsi üçün bir neçə saniyə gözləyin. Oyunlar və video tətbiqlər avtomatik davam edəcək."</string>
+    <string name="stay_awake_on_fold_summary" msgid="1939963751585954262">"Cihazı qatladıqda ön ekran işə düşür"</string>
+    <string name="selective_stay_awake_title" msgid="7887645333447645168">"Yalnız oyunlar, videolar və daha çoxu"</string>
+    <string name="selective_stay_awake_summary" msgid="9055967322921984543">"Ön ekran, ekranınızın boşda qalmasını əngəlləyən tətbiqlər üçün açılır"</string>
+    <string name="stay_awake_on_lockscreen_title" msgid="8088456642083051068">"Davam etmək üçün yuxarı sürüşdür"</string>
+    <string name="stay_awake_on_lockscreen_summary" msgid="8825321939913726566">"Tətbiqi istifadəyə davam etmək üçün telefonu qatlayıb ön ekranda yuxarı sürüşdürün və ya ekranın kilidlənməsi üçün bir neçə saniyə gözləyin. Oyunlar və video tətbiqlər avtomatik davam edəcək."</string>
     <string name="sleep_on_fold_title" msgid="7626123024330501411">"Heç vaxt"</string>
     <string name="sleep_on_fold_summary" msgid="4191753338303043456">"Cihazı qatladıqda ön ekran sönür və kilidlənir"</string>
-    <string name="auto_rotate_settings_primary_switch_title" msgid="3440951924928594520">"Ekran avtomatik dönsün"</string>
-    <string name="smart_rotate_text_headline" msgid="5878008933992951904">"Üz Aşkarlanması, avtodönüş dəqiqliyini yaxşılaşdırmaq üçün ön kameranı istifadə edir. Şəkillər heç vaxt saxlanılmır, yaxud Google\'a göndərilmir."</string>
+    <string name="auto_rotate_settings_primary_switch_title" msgid="3440951924928594520">"Avto-döndərməni istifadə et"</string>
+    <string name="smart_rotate_text_headline" msgid="5878008933992951904">"Üz aşkarlama, avto-döndərmə dəqiqliyini yaxşılaşdırmaq üçün önə baxan kameranı istifadə edir. Şəkillər heç vaxt saxlanılmır və yaxud Google-a göndərilmir."</string>
     <string name="bluetooth" msgid="8898478620943459654">"Bluetooth"</string>
     <string name="bluetooth_is_discoverable" msgid="4798961627677790935">"Yaxınlıqdakı bütün Bluetooth cihazlarına görünür (<xliff:g id="DISCOVERABLE_TIME_PERIOD">%1$s</xliff:g>)"</string>
     <string name="bluetooth_is_discoverable_always" msgid="8122823110652921674">"Yaxınlıqdakı bütün Bluetooth cihazlarına görünür"</string>
     <string name="bluetooth_not_visible_to_other_devices" msgid="6181960579190879601">"Digər Bluetooth cihazlarına görünmür"</string>
-    <string name="bluetooth_only_visible_to_paired_devices" msgid="3574936359739213455">"Yalnız birləşdirilmiş cihazlar üçün görünən"</string>
+    <string name="bluetooth_only_visible_to_paired_devices" msgid="3574936359739213455">"Yalnız cütləşdirilmiş cihazlara görünür"</string>
     <string name="bluetooth_devices" msgid="1063177983261608277">"Bluetooth cihazları"</string>
     <string name="bluetooth_device_name" msgid="1294669733490268384">"Cihaz adı"</string>
-    <string name="bluetooth_rename_device" msgid="4219655243836021443">"Bu cihazın adını dəyişin"</string>
+    <string name="bluetooth_rename_device" msgid="4219655243836021443">"Bu cihazın adını dəyişdir"</string>
     <string name="bluetooth_rename_button" msgid="9162500408570289545">"Adı dəyişdir"</string>
-    <string name="bluetooth_disconnect_title" msgid="4581951246357823044">"Cihaz ayrılsın?"</string>
-    <string name="bluetooth_pairing_pref_title" msgid="3497193027590444598">"Cihaz əlavə edin"</string>
+    <string name="bluetooth_disconnect_title" msgid="4581951246357823044">"Cihazın bağlantısı kəsilsin?"</string>
+    <string name="bluetooth_pairing_pref_title" msgid="3497193027590444598">"Yeni cihazla cütləşdir"</string>
     <string name="keywords_add_bt_device" msgid="4533191164203174011">"bluetooth"</string>
-    <string name="bluetooth_screen_auto_on_title" msgid="2203993262483477532">"Sabah avtomatik aktiv edin"</string>
-    <string name="bluetooth_pair_right_ear_button" msgid="3979894494803078852">"Sağ qulaqlığı birləşdirin"</string>
-    <string name="bluetooth_pair_left_ear_button" msgid="1019938875726073791">"Sol qulaqlığı birləşdirin"</string>
-    <string name="bluetooth_pair_other_ear_dialog_title" msgid="3814943511999984012">"Digər qulaqlığı birləşdirin"</string>
-    <string name="bluetooth_pair_other_ear_dialog_left_ear_message" msgid="5711642363615781647">"Sol eşitmə cihazı qoşulub.\n\nSağı yandırıb, birləşdirilməyə hazır edin."</string>
-    <string name="bluetooth_pair_other_ear_dialog_right_ear_message" msgid="631521133525979967">"Sağ eşitmə cihazı qoşulub.\n\nSolu yandırıb, birləşdirilməyə hazır edin."</string>
-    <string name="bluetooth_pair_other_ear_dialog_right_ear_positive_button" msgid="533612082529204078">"Sağ qulaqlığı birləşdirin"</string>
-    <string name="bluetooth_pair_other_ear_dialog_left_ear_positive_button" msgid="6500192653171220257">"Sol qulaqlığı birləşdirin"</string>
+    <string name="bluetooth_screen_auto_on_title" msgid="2203993262483477532">"Sabah avtomatik işə sal"</string>
+    <string name="bluetooth_pair_right_ear_button" msgid="3979894494803078852">"Sağ qulaqlığı cütləşdir"</string>
+    <string name="bluetooth_pair_left_ear_button" msgid="1019938875726073791">"Sol qulaqlığı cütləşdir"</string>
+    <string name="bluetooth_pair_other_ear_dialog_title" msgid="3814943511999984012">"Digər qulaqlığı cütləşdir"</string>
+    <string name="bluetooth_pair_other_ear_dialog_left_ear_message" msgid="5711642363615781647">"Sol eşitmə cihazınız bağlantılıdır.\n\nSağ tərəfi cütləşdirmək üçün, işə salındığına və cütləşdirilməyə hazır olduğuna əmin olun."</string>
+    <string name="bluetooth_pair_other_ear_dialog_right_ear_message" msgid="631521133525979967">"Sağ eşitmə cihazınız bağlantılıdır.\n\nSol tərəfi cütləşdirmək üçün, işə salındığına və cütləşdirilməyə hazır olduğuna əmin olun."</string>
+    <string name="bluetooth_pair_other_ear_dialog_right_ear_positive_button" msgid="533612082529204078">"Sağ qulaqlığı cütləşdir"</string>
+    <string name="bluetooth_pair_other_ear_dialog_left_ear_positive_button" msgid="6500192653171220257">"Sol qulaqlığı cütləşdir"</string>
     <string name="bluetooth_hearing_device_settings_title" msgid="6060072560486755057">"Eşitmə cihazı ayarları"</string>
-    <string name="bluetooth_hearing_device_settings_summary" msgid="3822646075744075158">"Qısayol, eşitmə cihazı uyğunluğu"</string>
-    <string name="bluetooth_hearing_aids_presets" msgid="4615094985857156388">"Hazır ayar"</string>
-    <string name="bluetooth_hearing_aids_presets_error" msgid="2095249829735188484">"Hazır ayar güncəllənmədi"</string>
-    <string name="bluetooth_audio_routing_title" msgid="5541729245424856226">"Audio çıxışı"</string>
-    <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"Audio çıxışı haqqında"</string>
-    <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"Səsləri eşitmə cihazına və ya telefon dinamikinə yönləndirin"</string>
+    <string name="bluetooth_hearing_device_settings_summary" msgid="3822646075744075158">"Qısayol, eşitmə cihazı uyumluluğu"</string>
+    <string name="bluetooth_hearing_aids_presets" msgid="4615094985857156388">"Ön ayar"</string>
+    <string name="bluetooth_hearing_aids_presets_error" msgid="2095249829735188484">"Ön ayar güncəllənmədi"</string>
+    <string name="bluetooth_audio_routing_title" msgid="5541729245424856226">"Səs çıxışı"</string>
+    <string name="bluetooth_audio_routing_about_title" msgid="5773336779246891954">"Səs çıxışı haqqında"</string>
+    <string name="bluetooth_audio_routing_summary" msgid="7180947533985969066">"Səsləri eşitmə cihazınıza və ya telefonun dinamikinə yönləndirin"</string>
     <string name="bluetooth_screen_related" msgid="7976543255501825536">"Oxşar"</string>
-    <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"Zəng melodiyası, zəngli saat"</string>
-    <string name="bluetooth_call_title" msgid="6851464952021874072">"Zənglər zamanı audio"</string>
+    <string name="bluetooth_ringtone_title" msgid="3177308461256892085">"Zəng səsləri və zəngli saat"</string>
+    <string name="bluetooth_call_title" msgid="6851464952021874072">"Zəng zamanı səs"</string>
     <string name="bluetooth_media_title" msgid="2878373577382067290">"Media və sistem səsləri"</string>
     <string name="bluetooth_notification_title" msgid="8708962394926222039">"Bildirişlər"</string>
-    <string name="bluetooth_audio_routing_footer_summary" msgid="410260713589309293">"Audio çıxışını defolt olaraq fərdi tətbiqlər müəyyənləşdirir"</string>
-    <string name="bluetooth_audio_codec_default_selection" msgid="4753278792700664175">"Sistem seçimindən istifadə edin (defolt)"</string>
+    <string name="bluetooth_audio_routing_footer_summary" msgid="410260713589309293">"İlkin olaraq səs çıxışın fərdi tətbiqlər müəyyənləşdirir"</string>
+    <string name="bluetooth_audio_codec_default_selection" msgid="4753278792700664175">"Sistem seçimini istifadə et (İlkin)"</string>
     <string name="bluetooth_device" msgid="2217973503732544291">"Adsız Bluetooth cihazı"</string>
     <string name="progress_scanning" msgid="2564746192843011826">"Axtarılır"</string>
     <string name="bluetooth_no_devices_found" msgid="7704539337219953182">"Yaxınlıqda heç bir Bluetooth cihazı tapılmadı."</string>
-    <string name="bluetooth_notif_ticker" msgid="209515545257862858">"Bluetooth bağlantı sorğusu"</string>
-    <string name="bluetooth_notif_title" msgid="1196532269131348647">"cütlənmə sorğusu göndərildi"</string>
-    <string name="bluetooth_notif_message" msgid="5584717784198086653">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ilə cütlənmək üçün tıklayın"</string>
-    <string name="bluetooth_devices_card_off_title" msgid="1320149821945129127">"Bluetooth deaktivdir"</string>
-    <string name="bluetooth_devices_card_off_summary" msgid="2276527382891105858">"Aktiv etmək üçün ona toxunun"</string>
+    <string name="bluetooth_notif_ticker" msgid="209515545257862858">"Bluetooth cütləşdirmə tələbi"</string>
+    <string name="bluetooth_notif_title" msgid="1196532269131348647">"Cütləşdirmə tələbi"</string>
+    <string name="bluetooth_notif_message" msgid="5584717784198086653">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ilə cütləşdirmək üçün toxunun."</string>
+    <string name="bluetooth_devices_card_off_title" msgid="1320149821945129127">"Bluetooth bağlıdır"</string>
+    <string name="bluetooth_devices_card_off_summary" msgid="2276527382891105858">"Açmaq üçün toxunun"</string>
     <string name="device_picker" msgid="2427027896389445414">"Bluetooth cihazını seçin"</string>
-    <string name="bluetooth_ask_enablement" msgid="1529030199895339199">"<xliff:g id="APP_NAME">%1$s</xliff:g> Bluetooth\'u yandırmaq istəyir."</string>
-    <string name="bluetooth_ask_disablement" msgid="1879788777942714761">"<xliff:g id="APP_NAME">%1$s</xliff:g> Bluetooth\'u söndürmək istəyir"</string>
-    <string name="bluetooth_ask_enablement_no_name" msgid="5091401961637405417">"Tətbiq Bluetooth\'u aktivləşdirmək istəyir"</string>
-    <string name="bluetooth_ask_disablement_no_name" msgid="382299750909188822">"Tətbiq Bluetooth\'u söndürmək istəyir"</string>
-    <string name="bluetooth_turning_on" msgid="3842613808709024730">"Bluetooth yandırılır..."</string>
-    <string name="bluetooth_turning_off" msgid="7406309124247701148">"Bluetooth söndürülür..."</string>
-    <string name="bluetooth_connection_permission_request" msgid="8793131019383198861">"Bluetooth bağlantı sorğusu"</string>
-    <string name="bluetooth_phonebook_request" msgid="1085102844577089889">"Telefon kitabı giriş sorğusu"</string>
-    <string name="bluetooth_map_request" msgid="8664081227240707479">"Mesaj giriş sorğusu"</string>
+    <string name="bluetooth_ask_enablement" msgid="1529030199895339199">"<xliff:g id="APP_NAME">%1$s</xliff:g> Bluetooth-u açmaq istəyir."</string>
+    <string name="bluetooth_ask_disablement" msgid="1879788777942714761">"<xliff:g id="APP_NAME">%1$s</xliff:g> Bluetooth-u bağlamaq istəyir"</string>
+    <string name="bluetooth_ask_enablement_no_name" msgid="5091401961637405417">"Bir tətbiq Bluetooth-u açmaq istəyir"</string>
+    <string name="bluetooth_ask_disablement_no_name" msgid="382299750909188822">"Bir tətbiq Bluetooth-u bağlamaq istəyir"</string>
+    <string name="bluetooth_turning_on" msgid="3842613808709024730">"Bluetooth açılır..."</string>
+    <string name="bluetooth_turning_off" msgid="7406309124247701148">"Bluetooth bağlanır..."</string>
+    <string name="bluetooth_connection_permission_request" msgid="8793131019383198861">"Bluetooth bağlantı tələbi"</string>
+    <string name="bluetooth_phonebook_request" msgid="1085102844577089889">"Telefon kitabçasına müraciət tələbi"</string>
+    <string name="bluetooth_map_request" msgid="8664081227240707479">"Mesaj müraciət tələbi"</string>
     <string name="bluetooth_device_name_summary" msgid="8678342689845439583">"Digər cihazlara \"<xliff:g id="DEVICE_NAME">^1</xliff:g>\" kimi görünür"</string>
-    <string name="bluetooth_off_footer" msgid="76578735660216295">"Digər cihazlara qoşulmaq üçün Bluetooth\'u aktiv edin."</string>
+    <string name="bluetooth_off_footer" msgid="76578735660216295">"Digər cihazlara bağlanmaq üçün Bluetooth-u açın."</string>
     <string name="bluetooth_paired_device_title" msgid="3240639218362342026">"Cihazlarınız"</string>
-    <string name="bluetooth_pairing_page_title" msgid="3403981358823707692">"Cihaz əlavə edin"</string>
-    <string name="bluetooth_disable_a2dp_hw_offload" msgid="5942913792817797541">"Bluetooth A2DP profilinin aparat boşalması deaktiv edilsin"</string>
-    <string name="bluetooth_disable_le_audio_hw_offload" msgid="4656853795514691257">"Bluetooth LE audio avadanlıq ləğvini deaktiv edin"</string>
+    <string name="bluetooth_pairing_page_title" msgid="3403981358823707692">"Yeni cihazla cütləşdir"</string>
+    <string name="bluetooth_disable_a2dp_hw_offload" msgid="5942913792817797541">"Sıradan çıxart: Bluetooth A2DP hardware offload"</string>
+    <string name="bluetooth_disable_le_audio_hw_offload" msgid="4656853795514691257">"Sıradan çıxart: Bluetooth LE audio hardware offload"</string>
     <string name="bluetooth_disable_hw_offload_dialog_title" msgid="6001142380445276918">"Cihaz yenidən başladılsın?"</string>
     <string name="bluetooth_disable_hw_offload_dialog_message" msgid="1524373895333698779">"Bu ayarı dəyişmək üçün cihazı yenidən başlatmalısınız."</string>
-    <string name="bluetooth_disable_hw_offload_dialog_confirm" msgid="5594859658551707592">"Yenidən başladın"</string>
-    <string name="bluetooth_disable_hw_offload_dialog_cancel" msgid="3663690305043973720">"Ləğv edin"</string>
-    <string name="bluetooth_disable_leaudio" msgid="8619410595945155354">"Bluetooth LE audionu deaktiv edin"</string>
-    <string name="bluetooth_disable_leaudio_summary" msgid="4756307633476985470">"Cihaz LE audio avadanlıq imkanlarını dəstəkləyirsə, Bluetooth LE audio funksiyasını deaktiv edir."</string>
+    <string name="bluetooth_disable_hw_offload_dialog_confirm" msgid="5594859658551707592">"Yenidən başlat"</string>
+    <string name="bluetooth_disable_hw_offload_dialog_cancel" msgid="3663690305043973720">"İmtina"</string>
+    <string name="bluetooth_disable_leaudio" msgid="8619410595945155354">"Sıradan çıxart: Bluetooth LE audio"</string>
+    <string name="bluetooth_disable_leaudio_summary" msgid="4756307633476985470">"Cihaz, LE audio hardware imkanlarını dəstəkləyirsə, Bluetooth LE audio özəlliyi sıradan çıxardılır."</string>
     <string name="bluetooth_leaudio_mode" msgid="5206961943393400814">"Bluetooth LE Audio rejimi"</string>
-    <string name="bluetooth_show_leaudio_device_details" msgid="3306637862550475370">"LE audio açarı görünsün: Cihaz detalları"</string>
-    <string name="bluetooth_bypass_leaudio_allowlist" msgid="7392319491894565552">"Bluetooth LE Audio üzrə icazə verilənlər siyahısına qoşulmayın"</string>
-    <string name="bluetooth_bypass_leaudio_allowlist_summary" msgid="8999245286359656738">"LE Audio periferik cihazının icazə verilənlər siyahısı üzrə meyarlara cavab verdiyi doğrulanmasa da, defolt olaraq LE Audio istifadə edin."</string>
+    <string name="bluetooth_show_leaudio_device_details" msgid="3306637862550475370">"Cihaz detallarında LE audio açarını göstər"</string>
+    <string name="bluetooth_bypass_leaudio_allowlist" msgid="7392319491894565552">"Bluetooth LE Audio üzrə İcazəlilər siyahısını ötür"</string>
+    <string name="bluetooth_bypass_leaudio_allowlist_summary" msgid="8999245286359656738">"LE Audio periferiyanın, İcazəlilər siyahısı üzrə meyarlara cavab verməsi doğrulanmasa belə, ilkin olaraq LE Audio istifadə edin."</string>
     <string name="connected_device_media_device_title" msgid="3783388247594566734">"Media cihazları"</string>
     <string name="connected_device_call_device_title" msgid="88732390601723608">"Zəng cihazları"</string>
     <string name="connected_device_other_device_title" msgid="4652120430615729193">"Digər cihazlar"</string>
-    <string name="connected_device_saved_title" msgid="5607274378851905959">"Yadda saxlanmış cihazlar"</string>
-    <string name="connected_device_fast_pair_device_title" msgid="543124539265592392">"Hesab ilə əlaqələndirilib"</string>
-    <string name="connected_device_previously_associated_fast_pair_device_title" msgid="8353405823992023457">"Əvvəllər hesab ilə istifadə edilib"</string>
-    <string name="connected_device_add_device_summary" msgid="8671009879957120802">"Bluetooth qoşulmaq üçün aktiv ediləcək"</string>
+    <string name="connected_device_saved_title" msgid="5607274378851905959">"Saxlanılmış cihazlar"</string>
+    <string name="connected_device_fast_pair_device_title" msgid="543124539265592392">"Hesabla əlaqələndirilən"</string>
+    <string name="connected_device_previously_associated_fast_pair_device_title" msgid="8353405823992023457">"Daha əvvəl hesabla istifadə edilən"</string>
+    <string name="connected_device_add_device_summary" msgid="8671009879957120802">"Cütləşdirmək üçün Bluetooth açılacaq"</string>
     <string name="connected_device_connections_title" msgid="4164120115341579170">"Bağlantı tərcihləri"</string>
-    <string name="connected_device_previously_connected_screen_title" msgid="8823331744788100605">"Öncə qoşulmuş cihazlar"</string>
-    <string name="connected_device_bluetooth_turned_on_toast" msgid="144664089794199928">"Bluetooth aktivdir"</string>
-    <string name="previous_connected_see_all" msgid="7759413145713251328">"Hamısına baxın"</string>
-    <string name="connected_device_fast_pair_device_see_all" msgid="4898279230458128620">"Hamısına baxın"</string>
+    <string name="connected_device_previously_connected_screen_title" msgid="8823331744788100605">"Daha əvvəl bağlantı qurulanlar"</string>
+    <string name="connected_device_bluetooth_turned_on_toast" msgid="144664089794199928">"Bluetooth açıldı"</string>
+    <string name="previous_connected_see_all" msgid="7759413145713251328">"Hamısına bax"</string>
+    <string name="connected_device_fast_pair_device_see_all" msgid="4898279230458128620">"Hamısına bax"</string>
     <string name="stylus_device_details_title" msgid="7618295136015480864">"Qələm"</string>
-    <string name="stylus_default_notes_app" msgid="4165657465911764628">"Başlıq düyməsinin basılması"</string>
+    <string name="stylus_default_notes_app" msgid="4165657465911764628">"Qələm düyməsinə basdıqda"</string>
     <string name="stylus_default_notes_summary_work" msgid="4554643411627934223">"<xliff:g id="APP_NAME">%s</xliff:g> (İş profili)"</string>
-    <string name="stylus_textfield_handwriting" msgid="2363579035338976327">"Mətn sahələrinə yazın"</string>
-    <string name="stylus_ignore_button" msgid="7734540973145241391">"Qələmlə düymə basılmalarını nəzərə almayın"</string>
+    <string name="stylus_textfield_handwriting" msgid="2363579035338976327">"Mətn xanalarına yaz"</string>
+    <string name="stylus_ignore_button" msgid="7734540973145241391">"Bütün qələm düymələrinə basmağı yox say"</string>
     <string name="stylus_connected_devices_title" msgid="2823967577941359812">"Qələm"</string>
-    <string name="date_and_time" msgid="1788358029823431692">"Vaxt və tarix"</string>
+    <string name="date_and_time" msgid="1788358029823431692">"Tarix və vaxt"</string>
     <string name="proxy_settings_title" msgid="4201866858226087066">"Proksi"</string>
     <string name="proxy_clear_text" msgid="6529658759984031149">"Təmizlə"</string>
-    <string name="proxy_port_label" msgid="4647357286461712574">"Proksi port"</string>
-    <string name="proxy_exclusionlist_label" msgid="2598613986784917542">"Proksi server:"</string>
-    <string name="proxy_defaultView_text" msgid="6795150505379688451">"İlkin halına qaytarın"</string>
-    <string name="proxy_action_text" msgid="1103328484441449542">"Tamam"</string>
+    <string name="proxy_port_label" msgid="4647357286461712574">"Proksi portu"</string>
+    <string name="proxy_exclusionlist_label" msgid="2598613986784917542">"Proksini bunun üçün ötür"</string>
+    <string name="proxy_defaultView_text" msgid="6795150505379688451">"İlkin dəyərləri bərpa et"</string>
+    <string name="proxy_action_text" msgid="1103328484441449542">"Hazırdır"</string>
     <string name="proxy_hostname_label" msgid="5504327742505848063">"Proksi host adı"</string>
     <string name="proxy_error" msgid="3615905975598084126">"Diqqət"</string>
-    <string name="proxy_error_dismiss" msgid="4207430265140873078">"OK"</string>
-    <string name="proxy_error_invalid_host" msgid="3814412792702059247">"Yazdığınız host adı etibarlı deyil."</string>
-    <string name="proxy_error_invalid_exclusion_list" msgid="6096353559936226599">"Daxil etdiyiniz istisna siyahısı düzgün formatda deyil. Vergüllə ayrılmış istisna domenləri siyahısını daxil edin."</string>
-    <string name="proxy_error_empty_port" msgid="4250295137005082992">"Port sahəsini doldurmalısınız"</string>
-    <string name="proxy_error_empty_host_set_port" msgid="8886572276450900049">"Host sahəsi boş olan zaman port sahəsi boş olmalıdır."</string>
-    <string name="proxy_error_invalid_port" msgid="2830054691770209166">"Daxil etdiyiniz port etibarlı deyil."</string>
-    <string name="proxy_warning_limited_support" msgid="3277104160797351942">"HTTP proksi brauzer tərəfindən istifadə olunur və digər tətbiqlər tərəfindən istifadə edilə bilməz."</string>
+    <string name="proxy_error_dismiss" msgid="4207430265140873078">"Oldu"</string>
+    <string name="proxy_error_invalid_host" msgid="3814412792702059247">"Yazdığınız host adı yararlı deyil."</string>
+    <string name="proxy_error_invalid_exclusion_list" msgid="6096353559936226599">"Yazdığınız istisna siyahısı düzgün formatda deyil. İstisna edilən domenlərin vergüllə ayrılmış siyahısını yazın."</string>
+    <string name="proxy_error_empty_port" msgid="4250295137005082992">"Port xanasını tamamlamalısınız"</string>
+    <string name="proxy_error_empty_host_set_port" msgid="8886572276450900049">"Host xanası boşdursa, port xanası da boş olmalıdır."</string>
+    <string name="proxy_error_invalid_port" msgid="2830054691770209166">"Yazdığınız port yararlı deyil."</string>
+    <string name="proxy_warning_limited_support" msgid="3277104160797351942">"HTTP proksi brauzer tərəfindən istifadə olunur, ancaq digər tətbiqlər tərəfindən istifadə edilməyə bilər."</string>
     <string name="proxy_url_title" msgid="3502625766036404073">"PAC URL: "</string>
     <string name="radio_info_ping_hostname_v4" msgid="4790577760885127088">"Ping Hostname(www.google.com) IPv4:"</string>
-    <string name="radio_info_http_client_test" msgid="5673975677271544085">"HTTP Müştəri Testi:"</string>
-    <string name="ping_test_label" msgid="265427033290391845">"Ping Testi Çalışdırın"</string>
-    <string name="skip_label" msgid="6380034601349015895">"Adlayın"</string>
-    <string name="next_label" msgid="1248293387735652187">"Sonrakı"</string>
+    <string name="radio_info_http_client_test" msgid="5673975677271544085">"HTTP Client Testi:"</string>
+    <string name="ping_test_label" msgid="265427033290391845">"Ping testi çalışdır"</string>
+    <string name="skip_label" msgid="6380034601349015895">"Ötür"</string>
+    <string name="next_label" msgid="1248293387735652187">"Növbəti"</string>
     <string name="language_picker_title" msgid="4271307478263345133">"Dillər"</string>
     <string name="language_picker_category_title" msgid="1792199453060454565">"Tərcih edilən dil sırası"</string>
     <string name="desc_current_default_language" msgid="1901157141663662859">"Sistem dili"</string>
-    <string name="locale_remove_menu" msgid="3521546263421387474">"Silin"</string>
-    <string name="add_a_language" msgid="2126220398077503271">"Dil əlavə edin"</string>
+    <string name="locale_remove_menu" msgid="3521546263421387474">"Sil"</string>
+    <string name="add_a_language" msgid="2126220398077503271">"Bir dil əlavə et"</string>
     <string name="app_locale_preference_title" msgid="5513627099300360232">"Dil"</string>
-    <string name="locale_picker_category_title" msgid="6212064706962721255">"Tərcih etdiyiniz dil"</string>
+    <string name="locale_picker_category_title" msgid="6212064706962721255">"Tərcih edilən dil"</string>
     <string name="app_locales_picker_menu_title" msgid="7617427959223831373">"Tətbiq dilləri"</string>
-    <string name="app_locale_picker_summary" msgid="6742557329924446252">"Hər tətbiq üçün dili ayarlayın"</string>
+    <string name="app_locale_picker_summary" msgid="6742557329924446252">"Hər tətbiq üçün dili ayarla"</string>
     <string name="app_locale_picker_title" msgid="2431448962911301366">"Tətbiq dili"</string>
     <string name="suggested_app_locales_title" msgid="8898358282377369405">"Təklif edilən dillər"</string>
     <string name="all_supported_app_locales_title" msgid="5479289964316009026">"Bütün dillər"</string>
     <string name="preference_of_system_locale_title" msgid="8067226276038751504">"Sistem dili"</string>
-    <string name="preference_of_system_locale_summary" msgid="5612241394431188535">"Sistem defoltu"</string>
-    <string name="desc_no_available_supported_locale" msgid="7883271726226947273">"Bu tətbiq üçün dil seçimini Ayarlardan etmək olmur."</string>
-    <string name="desc_app_locale_disclaimer" msgid="5295933110644789052">"Dil tətbiqdə əlçatan dillərdən fərqli ola bilər. Bəzi tətbiqlər bu ayarı dəstəkləməyə bilər."</string>
-    <string name="desc_app_locale_selection_supported" msgid="6744909281573556379">"Hər tətbiq üçün dil ayarlayın."</string>
-    <string name="desc_introduction_of_language_picker" msgid="1038423471887102449">"Sisteminiz, tətbiqləriniz və vebsaytlarınız tərcih etdiyiniz dillərdən ilk dəstəklənən dildən istifadə edir."</string>
-    <string name="desc_notice_of_language_picker" msgid="3449290526457925447">"Hər tətbiqə dil seçmək üçün tətbiq dili ayarlarına keçin."</string>
+    <string name="preference_of_system_locale_summary" msgid="5612241394431188535">"Sistemin ilkin ayarı"</string>
+    <string name="desc_no_available_supported_locale" msgid="7883271726226947273">"Ayarlarda bu tətbiq üçün dil seçimi mövcud deyil."</string>
+    <string name="desc_app_locale_disclaimer" msgid="5295933110644789052">"Dil, tətbiqdə mövcud olan dillərdən fərqli ola bilər. Bəzi tətbiqlər bu ayarı dəstəkləməyə bilər."</string>
+    <string name="desc_app_locale_selection_supported" msgid="6744909281573556379">"Hər tətbiq üçün dili ayarla."</string>
+    <string name="desc_introduction_of_language_picker" msgid="1038423471887102449">"Sisteminiz, tətbiqləriniz və vebsaytlarınız tərcih etdiyiniz dillərdəki ilk dəstəklənən dili istifadə edir."</string>
+    <string name="desc_notice_of_language_picker" msgid="3449290526457925447">"Hər tətbiqə bir dil seçmək üçün tətbiq dil ayarlarına gedin."</string>
     <string name="desc_locale_helper_footer_general" msgid="6112153921151780303">"Tətbiq dilləri haqqında daha ətraflı"</string>
     <string name="title_change_system_locale" msgid="8589844586256566951">"Sistem dili %s olsun?"</string>
     <string name="title_system_locale_addition" msgid="8218683660751479466">"%s tərcih edilən dillərə əlavə edilsin?"</string>
-    <string name="desc_system_locale_addition" msgid="3409917362651596070">"Bununla tətbiq və veb-saytlar bu dili tərcih etdiyinizi bilir."</string>
-    <string name="desc_notice_device_locale_settings_change" msgid="8311132485850714160">"Cihaz ayarları və regional tərcihlər dəyişəcək."</string>
-    <string name="button_label_confirmation_of_system_locale_change" msgid="5593798559604894733">"Dəyişin"</string>
+    <string name="desc_system_locale_addition" msgid="3409917362651596070">"Bu, tətbiqlərin və veb saytların bu dili tərcih etdiyinizi bilməsinə icazə verir."</string>
+    <string name="desc_notice_device_locale_settings_change" msgid="8311132485850714160">"Cihaz ayarlarınız və regional tərcihləriniz dəyişəcək."</string>
+    <string name="button_label_confirmation_of_system_locale_change" msgid="5593798559604894733">"Dəyişdir"</string>
     <string name="title_unavailable_locale" msgid="2628898110416542386">"%s əlçatan deyil"</string>
-    <string name="desc_unavailable_locale" msgid="2201756477400935896">"Bu dil sistem dili kimi istifadə edilə bilməz, lakin tətbiq və veb-saytlara bu dili tərcih etdiyinizi bildirmisiniz."</string>
+    <string name="desc_unavailable_locale" msgid="2201756477400935896">"Bu dil, sistem dili kimi istifadə edilə bilməz, ancaq tətbiqlərə və veb saytlara bu dili tərcih etdiyinizi bildirmisiniz."</string>
     <string name="regional_preferences_title" msgid="4304567374498629528">"Regional tərcihlər"</string>
-    <string name="regional_preferences_summary" msgid="1189876997389469650">"Vahidlər və nömrə tərcihlərini ayarlayın"</string>
+    <string name="regional_preferences_summary" msgid="1189876997389469650">"Vahidləri və nömrə tərcihlərini ayarla"</string>
     <string name="regional_preferences_main_page_sub_title" msgid="4237109940015254725">"Tətbiqlərə regional tərcihlərinizi bildirin ki, təcrübənizi fərdiləşdirə bilsinlər."</string>
-    <string name="regional_preferences_option_page_sub_title" msgid="8303661099255197036">"Tətbiqlər mümkün olduqda regional tərcihlərinizdən istifadə edəcək."</string>
+    <string name="regional_preferences_option_page_sub_title" msgid="8303661099255197036">"Tətbiqlər, mümkün olduqda regional tərcihlərinizi istifadə edəcək."</string>
     <string name="temperature_preferences_title" msgid="5009881556503629058">"Temperatur"</string>
     <string name="first_day_of_week_preferences_title" msgid="1971850087589599553">"Həftənin ilk günü"</string>
     <string name="numbers_preferences_title" msgid="8197418984391195446">"Rəqəm tərcihləri"</string>
-    <string name="default_string_of_regional_preference" msgid="3428899072914884203">"Defolt ayarı istifadə edin"</string>
+    <string name="default_string_of_regional_preference" msgid="3428899072914884203">"İlkin ayarı istifadə et"</string>
     <string name="celsius_temperature_unit" msgid="8896459071273084507">"Selsi (°C)"</string>
     <string name="fahrenheit_temperature_unit" msgid="1118677820614569801">"Farenheyt (°F)"</string>
     <string name="sunday_first_day_of_week" msgid="7644548348295686051">"Bazar"</string>
@@ -205,31 +205,31 @@
     <string name="thursday_first_day_of_week" msgid="3035885630945594833">"Cümə axşamı"</string>
     <string name="friday_first_day_of_week" msgid="7074795061812083541">"Cümə"</string>
     <string name="saturday_first_day_of_week" msgid="3702282590450322727">"Şənbə"</string>
-    <string name="title_regional_pref_footer" msgid="7450438024324794380">"Tətbiq regional tərcihləri dəstəkləmirsə, defolt ayarlardan istifadə edəcək."</string>
-    <string name="desc_regional_pref_footer_learn_more" msgid="4401708653329230081">"Dil tərcihləri haqqında ətraflı."</string>
+    <string name="title_regional_pref_footer" msgid="7450438024324794380">"Tətbiq, regional tərcihləri dəstəkləmirsə, ilkin yerli ayarları istifadə edəcək."</string>
+    <string name="desc_regional_pref_footer_learn_more" msgid="4401708653329230081">"Dil tərcihləriniz haqqında ətraflı."</string>
     <string name="category_title_terms_of_address" msgid="4309422700380895278">"Əlavə tərcihlər"</string>
     <string name="terms_of_address_title" msgid="7338630812197476808">"Sizə müraciət formasını seçin"</string>
     <string name="terms_of_address_summary" msgid="7802443422612600620">"Cihaz sizə müraciət formasını fərdiləşdirə bilər"</string>
-    <string name="terms_of_address_intro_title" msgid="1533951542181569335">"Bu ayar əksər sistem tətbiqlərinə sizə müraciət formasını fərdiləşdirmək imkanı verir. Bu, quraşdırdığınız tətbiqlər tərəfindən istifadə edilmir."</string>
+    <string name="terms_of_address_intro_title" msgid="1533951542181569335">"Bu ayar, əksər sistem tətbiqlərinin sizə müraciət formasını fərdiləşdirməsinə icazə verir. Bu, quraşdırdığınız tətbiqlər tərəfindən istifadə edilmir."</string>
     <string name="terms_of_address_not_specified" msgid="4439257779351251973">"Göstərilməyib"</string>
     <string name="terms_of_address_feminine" msgid="1743479869695539283">"Qadın"</string>
     <string name="terms_of_address_masculine" msgid="983106046135098856">"Kişi"</string>
     <string name="terms_of_address_neutral" msgid="5475414185543112478">"Neytral"</string>
     <string name="dlg_remove_locales_title" msgid="3170501604483612114">"{count,plural, =1{Seçilmiş dil silinsin?}other{Seçilmiş dillər silinsin?}}"</string>
-    <string name="dlg_remove_locales_message" msgid="8110560091134252067">"Mətn başqa dildə göstəriləcək."</string>
-    <string name="dlg_remove_locales_error_title" msgid="5875503658221562572">"Bütün dilləri silmək mümkün deyil."</string>
-    <string name="dlg_remove_locales_error_message" msgid="6504279959974675302">"Ən azı bir tərcih olunmuş dil saxlayın"</string>
+    <string name="dlg_remove_locales_message" msgid="8110560091134252067">"Mətn, başqa dildə göstəriləcək."</string>
+    <string name="dlg_remove_locales_error_title" msgid="5875503658221562572">"Bütün dillər silinə bilmir."</string>
+    <string name="dlg_remove_locales_error_message" msgid="6504279959974675302">"Ən azı bir tərcih olunmuş dil saxla"</string>
     <string name="locale_not_translated" msgid="3071618135527110152">"Sistem dili kimi əlçatan deyil"</string>
-    <string name="action_drag_label_move_up" msgid="3392196942330705015">"Yuxarı keçin"</string>
-    <string name="action_drag_label_move_down" msgid="9069518740553953426">"Aşağı keçin"</string>
-    <string name="action_drag_label_move_top" msgid="2430471023612171619">"Ən yuxarı"</string>
-    <string name="action_drag_label_move_bottom" msgid="6266165197792827003">"Aşağı köçürün"</string>
-    <string name="action_drag_label_remove" msgid="1034900377796780568">"Dili silin"</string>
-    <string name="activity_picker_label" msgid="351250401590691126">"Fəaliyyəti seçin"</string>
-    <string name="cancel" msgid="5780102414089664898">"Ləğv edin"</string>
-    <string name="okay" msgid="4827099303045669054">"Ok"</string>
-    <string name="forget" msgid="3754013654135912783">"Unudulsun"</string>
-    <string name="save" msgid="3125033126936493822">"Yadda saxlayın"</string>
+    <string name="action_drag_label_move_up" msgid="3392196942330705015">"Yuxarı daşı"</string>
+    <string name="action_drag_label_move_down" msgid="9069518740553953426">"Aşağı daşı"</string>
+    <string name="action_drag_label_move_top" msgid="2430471023612171619">"Ən üstə daşı"</string>
+    <string name="action_drag_label_move_bottom" msgid="6266165197792827003">"Ən alta daşı"</string>
+    <string name="action_drag_label_remove" msgid="1034900377796780568">"Dili sil"</string>
+    <string name="activity_picker_label" msgid="351250401590691126">"Fəaliyyəti seç"</string>
+    <string name="cancel" msgid="5780102414089664898">"İmtina"</string>
+    <string name="okay" msgid="4827099303045669054">"Oldu"</string>
+    <string name="forget" msgid="3754013654135912783">"Unut"</string>
+    <string name="save" msgid="3125033126936493822">"Saxla"</string>
     <string name="done" msgid="7497982645646431310">"Hazırdır"</string>
     <string name="apply" msgid="7834684883190163536">"Tətbiq edin"</string>
     <string name="share" msgid="8502235338607613795">"Paylaşın"</string>
@@ -5300,47 +5300,47 @@
     <string name="audio_sharing_sharing_stopped_label" msgid="8128194452354240996">"Audio paylaşma dayandı"</string>
     <string name="audio_sharing_confirm_dialog_title" msgid="7655147122624691167">"Uyğun cihaz qoşun"</string>
     <string name="audio_sharing_comfirm_dialog_content" msgid="3479217934447446066">"Audio paylaşmağa başlamaq üçün əvvəlcə LE Audio qulaqlıqlarını telefona qoşun"</string>
-    <string name="audio_streams_category_title" msgid="4878022761829895463">"LE audio yayımına qoşulun"</string>
-    <string name="audio_streams_pref_title" msgid="6320485086288646209">"Yaxınlıqdakı audio yayımları"</string>
-    <string name="audio_streams_title" msgid="6617990880383079165">"Audio yayımları"</string>
-    <string name="audio_streams_qr_code_summary" msgid="2838923349871884871">"QR kodu ilə audio yayımına qoşulun"</string>
-    <string name="audio_streams_empty" msgid="8803517701437394982">"Yaxınlıqda audio yayımı tapılmadı."</string>
-    <string name="audio_streams_disconnect" msgid="1755594831469579161">"Ayırın"</string>
-    <string name="audio_streams_connect" msgid="1955964373102927954">"Qoşun"</string>
-    <string name="audio_streams_qr_code_is_not_valid_format" msgid="4856288389653121830">"QR kod doğru formatda deyil"</string>
-    <string name="audio_streams_qr_code_scanner" msgid="525396804963685478">"Dinləməyə başlamaq üçün aşağıda QR kodu mərkəzə yerləşdirin"</string>
-    <string name="audio_streams_add_source_bad_code_state_summary" msgid="6527086906921868757">"Parolu yoxlayın və yenidən cəhd edin"</string>
-    <string name="audio_streams_add_source_failed_state_summary" msgid="3937546443978562322">"Qoşulmaq olmur. Yenidən cəhd edin."</string>
-    <string name="audio_streams_connecting_summary" msgid="7237827765572331702">"Qoşulur…"</string>
-    <string name="audio_streams_dialog_stream_is_not_available" msgid="4032878851270690546">"Audio yayımı əlçatan deyil"</string>
-    <string name="audio_streams_is_not_playing" msgid="8480293894696007941">"Bu audio yayımı hazırda heç nə oxutmur"</string>
-    <string name="audio_streams_dialog_close" msgid="8177201719298408431">"Bağlayın"</string>
-    <string name="audio_streams_dialog_listen" msgid="7290340191504987685">"Dinləyin"</string>
-    <string name="audio_streams_dialog_retry" msgid="4456843891970998556">"Yenidən cəhd edin"</string>
-    <string name="audio_streams_dialog_listen_to_audio_stream" msgid="8585253007762261528">"Audio yayımını dinləyin"</string>
-    <string name="audio_streams_dialog_control_volume" msgid="7615062686016713544">"Audio yayımı <xliff:g id="DEVICE_NAME">%1$s</xliff:g> cihazında oxudulacaq. Səs səviyyəsini idarə etmək üçün bu cihazdan istifadə edin."</string>
-    <string name="audio_streams_dialog_cannot_listen" msgid="4432257183698209966">"Audio yayımını dinləmək olmur"</string>
-    <string name="audio_streams_dialog_default_device" msgid="6159800303379303266">"qoşulmuş uyğun qulaqlıqlar"</string>
-    <string name="audio_streams_activity_title" msgid="6766869545769831935">"Audio yayımları"</string>
+    <string name="audio_streams_category_title" msgid="4878022761829895463">"LE səs yayımına bağlan"</string>
+    <string name="audio_streams_pref_title" msgid="6320485086288646209">"Yaxınlıqdakı səs yayımları"</string>
+    <string name="audio_streams_title" msgid="6617990880383079165">"Səs yayımları"</string>
+    <string name="audio_streams_qr_code_summary" msgid="2838923349871884871">"QR kodu ilə səs yayımına bağlan"</string>
+    <string name="audio_streams_empty" msgid="8803517701437394982">"Yaxınlıqda heç bir səs yayımı tapılmadı."</string>
+    <string name="audio_streams_disconnect" msgid="1755594831469579161">"Bağlantını kəs"</string>
+    <string name="audio_streams_connect" msgid="1955964373102927954">"Bağlantı qur"</string>
+    <string name="audio_streams_qr_code_is_not_valid_format" msgid="4856288389653121830">"QR kodu yararlı formatda deyil"</string>
+    <string name="audio_streams_qr_code_scanner" msgid="525396804963685478">"Dinləməyə başlamaq üçün aşağıdakı QR kodu mərkəzə yerləşdirin"</string>
+    <string name="audio_streams_add_source_bad_code_state_summary" msgid="6527086906921868757">"Parolu yoxlayıb yenidən sınayın"</string>
+    <string name="audio_streams_add_source_failed_state_summary" msgid="3937546443978562322">"Bağlantı qurula bilmir. Yenidən sına."</string>
+    <string name="audio_streams_connecting_summary" msgid="7237827765572331702">"Bağlantı qurulur…"</string>
+    <string name="audio_streams_dialog_stream_is_not_available" msgid="4032878851270690546">"Səs yayımı əlçatan deyil"</string>
+    <string name="audio_streams_is_not_playing" msgid="8480293894696007941">"Bu səs yayımı hazırda heç nə oxutmur"</string>
+    <string name="audio_streams_dialog_close" msgid="8177201719298408431">"Bağla"</string>
+    <string name="audio_streams_dialog_listen" msgid="7290340191504987685">"Dinlə"</string>
+    <string name="audio_streams_dialog_retry" msgid="4456843891970998556">"Yenidən sına"</string>
+    <string name="audio_streams_dialog_listen_to_audio_stream" msgid="8585253007762261528">"Səs yayımını dinlə"</string>
+    <string name="audio_streams_dialog_control_volume" msgid="7615062686016713544">"Səs yayımı <xliff:g id="DEVICE_NAME">%1$s</xliff:g> cihazında oxudulacaq. Səs səviyyəsini bu cihazda idarə edin."</string>
+    <string name="audio_streams_dialog_cannot_listen" msgid="4432257183698209966">"Səs yayımını dinləmək olmur"</string>
+    <string name="audio_streams_dialog_default_device" msgid="6159800303379303266">"qoşulmuş uyumlu qulaqlıqlar"</string>
+    <string name="audio_streams_activity_title" msgid="6766869545769831935">"Səs yayımları"</string>
     <string name="audio_streams_no_password_summary" msgid="8976357323034830144">"Parol yoxdur"</string>
-    <string name="audio_streams_dialog_learn_more" msgid="6711241053442211345">"Ətraflı məlumat"</string>
-    <string name="audio_streams_dialog_cannot_play" msgid="1358828316927479091">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> cihazında bu audio yayımını oxutmaq olmur."</string>
+    <string name="audio_streams_dialog_learn_more" msgid="6711241053442211345">"Daha ətraflı"</string>
+    <string name="audio_streams_dialog_cannot_play" msgid="1358828316927479091">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> üzərində bu səs yayımını oxudula bilmir."</string>
     <string name="audio_streams_listening_now" msgid="4205614429222949176">"İndi dinlənilir"</string>
-    <string name="audio_streams_media_service_notification_leave_broadcast_text" msgid="4938656134300913647">"Dinləməni dayandırın"</string>
-    <string name="audio_streams_dialog_no_le_device_title" msgid="3931163990976742282">"Uyğun qulaqlıqları qoşun"</string>
-    <string name="audio_streams_dialog_no_le_device_button" msgid="4484355549428642588">"Cihaz qoşun"</string>
-    <string name="audio_streams_detail_page_title" msgid="7884132061275273766">"Audio yayımı detalları"</string>
-    <string name="audio_streams_qr_code_page_title" msgid="9169570362469544641">"Audio yayımı QR kodu"</string>
+    <string name="audio_streams_media_service_notification_leave_broadcast_text" msgid="4938656134300913647">"Dinləməni dayandır"</string>
+    <string name="audio_streams_dialog_no_le_device_title" msgid="3931163990976742282">"Uyumlu qulaqlıqları qoş"</string>
+    <string name="audio_streams_dialog_no_le_device_button" msgid="4484355549428642588">"Bir cihaza bağlan"</string>
+    <string name="audio_streams_detail_page_title" msgid="7884132061275273766">"Səs yayımı detalları"</string>
+    <string name="audio_streams_qr_code_page_title" msgid="9169570362469544641">"Səs yayımı QR kodu"</string>
     <string name="audio_streams_qr_code_page_password" msgid="7268475614131297060">"Parol: <xliff:g id="PASSWORD">%1$s</xliff:g>"</string>
-    <string name="audio_streams_qr_code_page_description" msgid="1317961663706630428">"<xliff:g id="STREAM_NAME">%1$s</xliff:g> dinləmək üçün digərləri uyğun qulaqlıqları Android cihazlarına qoşa bilər. Sonra bu QR kodu skanlaya bilərlər."</string>
-    <string name="audio_streams_main_page_title" msgid="1838380471076527639">"Audio yayımı tapın"</string>
-    <string name="audio_streams_main_page_subtitle" msgid="3251995732921981539">"Audio paylaşan cihazı və ya yaxınlıqdakı Auracast yayımını dinləyin"</string>
-    <string name="audio_streams_main_page_device_title" msgid="2635744035523908253">"Audio cihazınız"</string>
-    <string name="audio_streams_main_page_no_device_summary" msgid="2936000845397406389">"Uyğun qulaqlıqları qoşun"</string>
-    <string name="audio_streams_main_page_scan_section_title" msgid="2778235929304061163">"Yaxınlıqdakı audio yayımları"</string>
-    <string name="audio_streams_main_page_scan_qr_code_title" msgid="8337270277392468895">"QR kodunu skan edin"</string>
-    <string name="audio_streams_main_page_scan_qr_code_summary" msgid="1991792283368249499">"Yayımın QR kodunu skanlamaqla dinləməyə başlayın"</string>
-    <string name="audio_streams_main_page_password_dialog_join_button" msgid="2967747276379153408">"Yayımı dinləyin"</string>
-    <string name="audio_streams_main_page_qr_code_scanner_summary" msgid="5312980105735143360">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ilə dinləmək üçün audio yayımı QR kodunu skanlayın"</string>
-    <string name="audio_streams_main_page_password_dialog_cannot_edit" msgid="9020898619297520153">"Paylaşarkən parolu redaktə etmək olmur. Parolu dəyişmək üçün əvvəlcə audio paylaşmanı deaktiv edin."</string>
+    <string name="audio_streams_qr_code_page_description" msgid="1317961663706630428">"<xliff:g id="STREAM_NAME">%1$s</xliff:g> dinləmək üçün digərləri uyumlu qulaqlıqları Android cihazlarına qoşa bilər. Sonra bu QR kodu skan edə bilərlər."</string>
+    <string name="audio_streams_main_page_title" msgid="1838380471076527639">"Bir səs yayımı tap"</string>
+    <string name="audio_streams_main_page_subtitle" msgid="3251995732921981539">"Səs paylaşan cihazı və ya yaxınlıqdakı Auracast yayımını dinləyin"</string>
+    <string name="audio_streams_main_page_device_title" msgid="2635744035523908253">"Səs cihazınız"</string>
+    <string name="audio_streams_main_page_no_device_summary" msgid="2936000845397406389">"Uyumlu qulaqlıqları qoş"</string>
+    <string name="audio_streams_main_page_scan_section_title" msgid="2778235929304061163">"Yaxınlıqdakı səs yayımları"</string>
+    <string name="audio_streams_main_page_scan_qr_code_title" msgid="8337270277392468895">"QR kodunu skan et"</string>
+    <string name="audio_streams_main_page_scan_qr_code_summary" msgid="1991792283368249499">"Yayımın QR kodunu skan edərək dinləməyə başla"</string>
+    <string name="audio_streams_main_page_password_dialog_join_button" msgid="2967747276379153408">"Yayımı dinlə"</string>
+    <string name="audio_streams_main_page_qr_code_scanner_summary" msgid="5312980105735143360">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ilə dinləmək üçün səs yayımı QR kodunu skan edin"</string>
+    <string name="audio_streams_main_page_password_dialog_cannot_edit" msgid="9020898619297520153">"Paylaşarkən parola düzəliş edilə bilmir. Parolu dəyişdirmək üçün əvvəlcə səs paylaşmanını söndürün."</string>
 </resources>
