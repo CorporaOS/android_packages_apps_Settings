@@ -485,6 +485,11 @@
             android:title="@string/nfc_snoop_log_title"
             android:summary="@string/nfc_snoop_log_summary"/>
 
+        <SwitchPreferenceCompat
+            android:key="placeholder"
+            android:title="@string/placeholder"
+            android:summary="@string/placeholder_summary" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
