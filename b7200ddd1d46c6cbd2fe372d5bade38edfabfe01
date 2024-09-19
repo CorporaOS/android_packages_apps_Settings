@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "77699ec1_536d516f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1393882
+      },
+      "writtenOn": "2024-09-19T02:29:26Z",
+      "side": 1,
+      "message": "Please file a bug and elaborate it on https://issuetracker.google.com/issues, and mention it in the commit message using\nBug: XXXXX",
+      "revId": "b7200ddd1d46c6cbd2fe372d5bade38edfabfe01",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
