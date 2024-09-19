@@ -247,6 +247,11 @@ public class ProfileSelectStorageFragment extends ProfileSelectFragment {
             mStorageEntries.clear();
             mStorageEntries.addAll(
                     StorageUtils.getAllStorageEntries(getContext(), mStorageManager));
+            mStorageEntries.forEach(storageEntry -> {
+                if (storageEntry.equals(mSelectedStorageEntry)) {
+                    mSelectedStorageEntry = storageEntry;
+                }
+            });
             refreshUi();
         }
     }
@@ -291,6 +296,11 @@ public class ProfileSelectStorageFragment extends ProfileSelectFragment {
             mStorageEntries.clear();
             mStorageEntries.addAll(
                     StorageUtils.getAllStorageEntries(getContext(), mStorageManager));
+            mStorageEntries.forEach(storageEntry -> {
+                if (storageEntry.equals(mSelectedStorageEntry)) {
+                    mSelectedStorageEntry = storageEntry;
+                }
+            });
             refreshUi();
         }
         mStorageManager.registerListener(mStorageEventListener);
