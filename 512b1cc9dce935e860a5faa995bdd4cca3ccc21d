@@ -16,6 +16,57 @@
       "message": "Upstream from Meta 😊",
       "revId": "512b1cc9dce935e860a5faa995bdd4cca3ccc21d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "170e3dc9_7ff324f2",
+        "filename": "src/com/android/settings/applications/manageapplications/ManageApplications.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1050,
+      "author": {
+        "id": 1367652
+      },
+      "writtenOn": "2024-09-25T21:18:10Z",
+      "side": 1,
+      "message": "Suggest to use early return style.",
+      "range": {
+        "startLine": 1037,
+        "startChar": 0,
+        "endLine": 1050,
+        "endChar": 9
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "4f7746e2_c05e4046",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "src/com/android/settings/applications/manageapplications/ManageApplications.java",
+              "range": {
+                "startLine": 1037,
+                "startChar": 0,
+                "endLine": 1050,
+                "endChar": 0
+              },
+              "replacement": "        if (mAppBarLayout \u003d\u003d null) {\n            return;\n"
+            },
+            {
+              "path": "src/com/android/settings/applications/manageapplications/ManageApplications.java",
+              "range": {
+                "startLine": 1051,
+                "startChar": 0,
+                "endLine": 1051,
+                "endChar": 0
+              },
+              "replacement": "        final CoordinatorLayout.LayoutParams params \u003d\n            (CoordinatorLayout.LayoutParams) mAppBarLayout.getLayoutParams();\n        final AppBarLayout.Behavior behavior \u003d new AppBarLayout.Behavior();\n        behavior.setDragCallback(\n                new AppBarLayout.Behavior.DragCallback() {\n                    @Override\n                    public boolean canDrag(@NonNull AppBarLayout appBarLayout) {\n                        return appBarLayout.getResources().getConfiguration().orientation\n                                \u003d\u003d Configuration.ORIENTATION_LANDSCAPE;\n                    }\n                });\n        params.setBehavior(behavior);\n"
+            }
+          ]
+        }
+      ],
+      "revId": "512b1cc9dce935e860a5faa995bdd4cca3ccc21d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
