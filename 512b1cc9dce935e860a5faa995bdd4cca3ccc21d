@@ -67,6 +67,30 @@
       ],
       "revId": "512b1cc9dce935e860a5faa995bdd4cca3ccc21d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2abab082_997a2aa7",
+        "filename": "src/com/android/settings/applications/manageapplications/ManageApplications.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1050,
+      "author": {
+        "id": 3524514
+      },
+      "writtenOn": "2024-09-25T23:42:19Z",
+      "side": 1,
+      "message": "Fix applied. Agreed this is a more efficient way of doing it.",
+      "parentUuid": "170e3dc9_7ff324f2",
+      "range": {
+        "startLine": 1037,
+        "startChar": 0,
+        "endLine": 1050,
+        "endChar": 9
+      },
+      "revId": "512b1cc9dce935e860a5faa995bdd4cca3ccc21d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
