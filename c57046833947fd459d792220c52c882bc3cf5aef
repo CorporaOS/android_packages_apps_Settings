@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ec33f958_1e59e5d8",
+        "filename": "src/com/android/settings/applications/manageapplications/ManageApplications.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 1041,
+      "author": {
+        "id": 1367652
+      },
+      "writtenOn": "2024-09-25T23:57:42Z",
+      "side": 1,
+      "message": "No need to change this line.",
+      "range": {
+        "startLine": 1041,
+        "startChar": 0,
+        "endLine": 1041,
+        "endChar": 77
+      },
+      "revId": "c57046833947fd459d792220c52c882bc3cf5aef",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
