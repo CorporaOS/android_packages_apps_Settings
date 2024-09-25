@@ -1034,18 +1034,20 @@ public class ManageApplications extends InstrumentedFragment
     }
 
     private void autoSetCollapsingToolbarLayoutScrolling() {
-        final CoordinatorLayout.LayoutParams params =
+        if (mAppBarLayout != null) {
+            final CoordinatorLayout.LayoutParams params =
                 (CoordinatorLayout.LayoutParams) mAppBarLayout.getLayoutParams();
-        final AppBarLayout.Behavior behavior = new AppBarLayout.Behavior();
-        behavior.setDragCallback(
-                new AppBarLayout.Behavior.DragCallback() {
-                    @Override
-                    public boolean canDrag(@NonNull AppBarLayout appBarLayout) {
-                        return appBarLayout.getResources().getConfiguration().orientation
-                                == Configuration.ORIENTATION_LANDSCAPE;
-                    }
-                });
-        params.setBehavior(behavior);
+            final AppBarLayout.Behavior behavior = new AppBarLayout.Behavior();
+            behavior.setDragCallback(
+                    new AppBarLayout.Behavior.DragCallback() {
+                        @Override
+                        public boolean canDrag(@NonNull AppBarLayout appBarLayout) {
+                            return appBarLayout.getResources().getConfiguration().orientation
+                                    == Configuration.ORIENTATION_LANDSCAPE;
+                        }
+                    });
+            params.setBehavior(behavior);
+        }
     }
 
     /**
