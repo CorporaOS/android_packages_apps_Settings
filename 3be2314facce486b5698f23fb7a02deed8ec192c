@@ -33,6 +33,24 @@
       "message": "Hi, can I please get a review for this change? Thanks 😊",
       "revId": "3be2314facce486b5698f23fb7a02deed8ec192c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "798f39f6_9b354178",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3524514
+      },
+      "writtenOn": "2024-09-27T09:53:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "287a0478_9459359c",
+      "revId": "3be2314facce486b5698f23fb7a02deed8ec192c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
