@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b0e7c93_b7335a8a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-10-07T19:14:23Z",
+      "side": 1,
+      "message": "seems fine to me. @edgarwang@google.com please verify if this is an acceptable style for this component",
+      "revId": "59a8d7b12571798f51a5a5cdb24ff05cd2e284c2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
