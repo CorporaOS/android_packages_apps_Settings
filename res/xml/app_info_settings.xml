@@ -102,6 +102,12 @@
         settings:controller="com.android.settings.applications.appinfo.AppOpenByDefaultPreferenceController" />
 
     <Preference
+        android:key="enable_16kb_app_compat"
+        android:title="@string/enable_16k_app_compat_title"
+        android:summary="@string/summary_placeholder"
+        settings:controller="com.android.settings.applications.appinfo.Enable16KbAppCompatPreferenceController" />
+
+    <Preference
         android:key="memory"
         android:title="@string/memory_settings_title"
         android:summary="@string/summary_placeholder"

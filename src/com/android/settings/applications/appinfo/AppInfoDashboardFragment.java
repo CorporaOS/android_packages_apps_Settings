@@ -166,6 +166,8 @@ public class AppInfoDashboardFragment extends DashboardFragment
         use(AppInstallerPreferenceCategoryController.class).setChildren(Arrays.asList(installer));
         use(AppNotificationPreferenceController.class).setParentFragment(this);
 
+        use(Enable16KbAppCompatPreferenceController.class).setParentFragment(this);
+
         use(AppOpenByDefaultPreferenceController.class)
                 .setPackageName(packageName)
                 .setParentFragment(this);
