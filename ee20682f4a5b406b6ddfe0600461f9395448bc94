@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e808011e_664dc702",
+        "filename": "src/com/android/settings/dashboard/profileselector/ProfileSelectStorageFragment.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 2002120
+      },
+      "writtenOn": "2024-10-09T16:03:41Z",
+      "side": 1,
+      "message": "How does this change fix the issue? This code seems no effect, can you explain a little more?",
+      "revId": "ee20682f4a5b406b6ddfe0600461f9395448bc94",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
