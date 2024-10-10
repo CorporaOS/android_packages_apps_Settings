@@ -33,6 +33,29 @@
       "message": "Can you fix lint errors about nullable/nonnull annotation?",
       "revId": "3d9f34d5e60fd3f5bfb3792e7478c430c0ae47e7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1f4b2eed_b131fa93",
+        "filename": "src/com/android/settings/development/LinuxTerminalPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2024-10-10T05:42:40Z",
+      "side": 1,
+      "message": "In this case, we should not show this settings entry.",
+      "range": {
+        "startLine": 109,
+        "startChar": 0,
+        "endLine": 109,
+        "endChar": 18
+      },
+      "revId": "3d9f34d5e60fd3f5bfb3792e7478c430c0ae47e7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
