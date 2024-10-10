@@ -16,6 +16,23 @@
       "message": "Thanks!",
       "revId": "3d9f34d5e60fd3f5bfb3792e7478c430c0ae47e7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5960df6b_463e7e8c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2024-10-10T04:14:21Z",
+      "side": 1,
+      "message": "Can you fix lint errors about nullable/nonnull annotation?",
+      "revId": "3d9f34d5e60fd3f5bfb3792e7478c430c0ae47e7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
