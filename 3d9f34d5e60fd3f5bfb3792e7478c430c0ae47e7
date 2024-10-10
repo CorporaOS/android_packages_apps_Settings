@@ -56,6 +56,30 @@
       },
       "revId": "3d9f34d5e60fd3f5bfb3792e7478c430c0ae47e7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f54a4ce_af324e67",
+        "filename": "src/com/android/settings/development/LinuxTerminalPreferenceController.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1019013
+      },
+      "writtenOn": "2024-10-10T07:25:13Z",
+      "side": 1,
+      "message": "`isAvailable()` will do the trick.",
+      "parentUuid": "1f4b2eed_b131fa93",
+      "range": {
+        "startLine": 109,
+        "startChar": 0,
+        "endLine": 109,
+        "endChar": 18
+      },
+      "revId": "3d9f34d5e60fd3f5bfb3792e7478c430c0ae47e7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
