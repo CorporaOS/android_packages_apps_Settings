@@ -16,6 +16,24 @@
       "message": "How does this change fix the issue? This code seems no effect, can you explain a little more?",
       "revId": "ee20682f4a5b406b6ddfe0600461f9395448bc94",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "67da3a3c_cc1807cb",
+        "filename": "src/com/android/settings/dashboard/profileselector/ProfileSelectStorageFragment.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 1831622
+      },
+      "writtenOn": "2024-10-10T12:35:07Z",
+      "side": 1,
+      "message": "After a formatting process, the volumeInfo obtained from the Storage Manager for the OTG device has changed. If not updated, device information cannot be obtained. The screenshot provided in the issue (367968595) shows that the OTG device cannot obtain the used space size and total space size after formatting.",
+      "parentUuid": "e808011e_664dc702",
+      "revId": "ee20682f4a5b406b6ddfe0600461f9395448bc94",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
