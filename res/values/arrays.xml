@@ -912,9 +912,9 @@
     <!-- Match this with the array VPN_TYPES in ConfigDialog. --> <skip />
     <!-- Short names for each VPN type, not really translatable. [CHAR LIMIT=20] -->
     <string-array name="vpn_types" translatable="false">
-        <item>IKEv2/IPSec MSCHAPv2</item>
-        <item>IKEv2/IPSec PSK</item>
-        <item>IKEv2/IPSec RSA</item>
+        <item>IKEv2/IPsec MSCHAPv2</item>
+        <item>IKEv2/IPsec PSK</item>
+        <item>IKEv2/IPsec RSA</item>
     </string-array>
 
     <!-- VPN proxy settings. -->
