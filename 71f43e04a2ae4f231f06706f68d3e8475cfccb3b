@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e0de6434_c0ed9d7f",
+        "filename": "res/values/integers.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1221112
+      },
+      "writtenOn": "2024-10-11T12:35:45Z",
+      "side": 1,
+      "message": "this should be in config.xml right @cantol@google.com ?",
+      "range": {
+        "startLine": 43,
+        "startChar": 19,
+        "endLine": 43,
+        "endChar": 44
+      },
+      "revId": "71f43e04a2ae4f231f06706f68d3e8475cfccb3b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
