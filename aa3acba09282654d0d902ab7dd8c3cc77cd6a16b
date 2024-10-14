@@ -18,6 +18,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "6e88fda8_da47d901",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2024-10-14T23:59:29Z",
+      "side": 1,
+      "message": "This feature is developed in AOSP. Specifically, AVF, pKVM, and the Terminal App, which are core parts of this feature are all AOSP-first projects.\n\nBeing in AOSP doesn\u0027t necessarily mean that we don\u0027t bake it. What external people would get is from the android\u003cVer\u003e-release branch, which is merged with the internal branch after the baking is finished.",
+      "parentUuid": "4b056dbd_d56ec54c",
+      "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "1f098956_371fd58b",
