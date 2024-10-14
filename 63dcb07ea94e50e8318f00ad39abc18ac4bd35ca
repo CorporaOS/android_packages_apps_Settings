@@ -16,6 +16,23 @@
       "message": "please have a look",
       "revId": "63dcb07ea94e50e8318f00ad39abc18ac4bd35ca",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa29a8bd_d085c8ba",
+        "filename": "src/com/android/settings/TestingSettingsBroadcastReceiver.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-10-14T20:42:18Z",
+      "side": 1,
+      "message": "Settings can access hidden APIs, so you can use `Build.IS_USER` instead",
+      "revId": "63dcb07ea94e50e8318f00ad39abc18ac4bd35ca",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
