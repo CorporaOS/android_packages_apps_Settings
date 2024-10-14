@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b056dbd_d56ec54c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-10-14T21:31:36Z",
+      "side": 1,
+      "message": "Is there a reason this has to go straight to AOSP instead of baking in internal branch? Typically changes are required to go through internal testing and dogfooding unless there\u0027s a pressing need for external devs to have access ASAP",
+      "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "1f098956_371fd58b",
@@ -48,6 +65,40 @@
       "writtenOn": "2024-10-14T08:20:28Z",
       "side": 1,
       "message": "Uh, Cipson alread said \u0027no concerns\u0027 about this change. (see: https://b.corp.google.com/issues/365706613#comment8)\n\nCan I get owner review here? It would be a great help.",
+      "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "922de037_443bf746",
+        "filename": "src/com/android/settings/development/LinuxTerminalPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-10-14T21:31:36Z",
+      "side": 1,
+      "message": "Please guard these changes with a trunk stable flag.",
+      "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c747b85_3661a445",
+        "filename": "src/com/android/settings/development/LinuxTerminalPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-10-14T21:31:36Z",
+      "side": 1,
+      "message": "Is it not valid to have more than one terminal app? How would someone correct this situation? Would they know to uninstall one? Do we need a flow for the user to select one?",
       "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
