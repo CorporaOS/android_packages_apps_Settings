@@ -33,6 +33,23 @@
       "message": "+R: cantol@ for owner review\n\nDear Chris Antol, could you take a look at this CL?\n\nRelevant bug (b/369246712) got approval from Daniel (gundrum@), but Cipson didn\u0027t explicitly say anything.",
       "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7538d1bc_71cd0bf4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1019013
+      },
+      "writtenOn": "2024-10-14T08:20:28Z",
+      "side": 1,
+      "message": "Uh, Cipson alread said \u0027no concerns\u0027 about this change. (see: https://b.corp.google.com/issues/365706613#comment8)\n\nCan I get owner review here? It would be a great help.",
+      "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
