@@ -1,0 +1,94 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "264ba1b8_6394a804",
+        "filename": "src/com/android/settings/display/ScreenTimeoutSettings.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-10-14T20:36:32Z",
+      "side": 1,
+      "message": "It looks like we want the index of the last position rather than the size, as the size itself is never used. Better to just initialize it as such",
+      "fixSuggestions": [
+        {
+          "fixId": "e3715f82_7870fd93",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "src/com/android/settings/display/ScreenTimeoutSettings.java",
+              "range": {
+                "startLine": 214,
+                "startChar": 0,
+                "endLine": 215,
+                "endChar": 0
+              },
+              "replacement": "            int lastIndex \u003d candidateList.size() - 1;\n"
+            },
+            {
+              "path": "src/com/android/settings/display/ScreenTimeoutSettings.java",
+              "range": {
+                "startLine": 217,
+                "startChar": 0,
+                "endLine": 218,
+                "endChar": 0
+              },
+              "replacement": "                            screen.getPreference(lastIndex);\n"
+            },
+            {
+              "path": "src/com/android/settings/display/ScreenTimeoutSettings.java",
+              "range": {
+                "startLine": 220,
+                "startChar": 0,
+                "endLine": 221,
+                "endChar": 0
+              },
+              "replacement": "            setCurrentSystemScreenTimeout(getContext(), candidateList.get(lastIndex).getKey());\n"
+            }
+          ]
+        }
+      ],
+      "revId": "5c547c801636b8101194f257c4c86e76d0bd1554",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a98941e_92a14bcd",
+        "filename": "src/com/android/settings/display/ScreenTimeoutSettings.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 345,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-10-14T20:36:32Z",
+      "side": 1,
+      "message": "It looks like the maximum value this could be as an integer is roughly ~25 days. If this config value would ever be higher then it would need to be a long. Since there is no Android resource type for Long (weirdly enough), we\u0027d have to store this as a string in XML which gets parsed into a Long. Not sure if there\u0027s a usecase for a longer lock timeout, but something to consider.",
+      "fixSuggestions": [
+        {
+          "fixId": "5c451948_db87891a",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "src/com/android/settings/display/ScreenTimeoutSettings.java",
+              "range": {
+                "startLine": 344,
+                "startChar": 0,
+                "endLine": 346,
+                "endChar": 0
+              },
+              "replacement": "            configMaxTimeout \u003d context.getResources().getInteger(R.integer.config_max_screen_timeout);\n"
+            }
+          ]
+        }
+      ],
+      "revId": "5c547c801636b8101194f257c4c86e76d0bd1554",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

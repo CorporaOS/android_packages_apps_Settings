@@ -22,6 +22,30 @@
       },
       "revId": "71f43e04a2ae4f231f06706f68d3e8475cfccb3b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c5d8a054_6ae6ec90",
+        "filename": "res/values/integers.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-10-14T20:36:32Z",
+      "side": 1,
+      "message": "Yes, `config.xml` is a better match. `integers.xml` is more for Integer constants, whereas config is for configurable values",
+      "parentUuid": "e0de6434_c0ed9d7f",
+      "range": {
+        "startLine": 43,
+        "startChar": 19,
+        "endLine": 43,
+        "endChar": 44
+      },
+      "revId": "71f43e04a2ae4f231f06706f68d3e8475cfccb3b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
