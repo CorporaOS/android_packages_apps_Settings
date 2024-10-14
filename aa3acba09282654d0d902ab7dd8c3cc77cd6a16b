@@ -16,6 +16,23 @@
       "message": "Adding @cipson for owners review.",
       "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "10c5091a_28016bdb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1019013
+      },
+      "writtenOn": "2024-10-14T08:16:41Z",
+      "side": 1,
+      "message": "+R: cantol@ for owner review\n\nDear Chris Antol, could you take a look at this CL?\n\nRelevant bug (b/369246712) got approval from Daniel (gundrum@), but Cipson didn\u0027t explicitly say anything.",
+      "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
