@@ -21,6 +21,14 @@
     settings:searchable="false">
 
     <com.android.settingslib.widget.SelectorWithWidgetPreference
+        android:key="wifi_hotspot_security_owe"
+        android:title="@string/wifi_security_owe"/>
+
+    <com.android.settingslib.widget.SelectorWithWidgetPreference
+        android:key="wifi_hotspot_security_none_owe"
+	android:title="@string/wifi_security_none_owe"/>
+
+    <com.android.settingslib.widget.SelectorWithWidgetPreference
         android:key="wifi_hotspot_security_wpa3"
         android:title="@string/wifi_security_sae"/>
 

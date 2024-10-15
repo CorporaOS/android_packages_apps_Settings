@@ -322,6 +322,8 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
                         : mSecurityPreferenceController.getSecurityType();
         String passphrase =
                 securityType == SoftApConfiguration.SECURITY_TYPE_OPEN
+                        || securityType == SoftApConfiguration.SECURITY_TYPE_WPA3_OWE
+                        || securityType == SoftApConfiguration.SECURITY_TYPE_WPA3_OWE_TRANSITION
                         ? null
                         : mPasswordPreferenceController.getPasswordValidated(securityType);
         configBuilder.setPassphrase(passphrase, securityType);

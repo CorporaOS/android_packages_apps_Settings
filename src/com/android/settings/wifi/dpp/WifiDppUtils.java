@@ -504,7 +504,9 @@ public class WifiDppUtils {
         return securityType == SoftApConfiguration.SECURITY_TYPE_WPA3_SAE
                 || securityType == SoftApConfiguration.SECURITY_TYPE_WPA3_SAE_TRANSITION
                 || securityType == SoftApConfiguration.SECURITY_TYPE_WPA2_PSK
-                || securityType == SoftApConfiguration.SECURITY_TYPE_OPEN;
+                || securityType == SoftApConfiguration.SECURITY_TYPE_OPEN
+                || securityType == SoftApConfiguration.SECURITY_TYPE_WPA3_OWE_TRANSITION
+                || securityType == SoftApConfiguration.SECURITY_TYPE_WPA3_OWE;
     }
 
     private static boolean isSupportWifiDpp(Context context, int wifiEntrySecurity) {

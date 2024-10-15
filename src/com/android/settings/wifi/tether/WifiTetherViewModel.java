@@ -20,7 +20,11 @@ import static android.net.wifi.SoftApConfiguration.SECURITY_TYPE_OPEN;
 import static android.net.wifi.SoftApConfiguration.SECURITY_TYPE_WPA2_PSK;
 import static android.net.wifi.SoftApConfiguration.SECURITY_TYPE_WPA3_SAE;
 import static android.net.wifi.SoftApConfiguration.SECURITY_TYPE_WPA3_SAE_TRANSITION;
+import static android.net.wifi.SoftApConfiguration.SECURITY_TYPE_WPA3_OWE;
+import static android.net.wifi.SoftApConfiguration.SECURITY_TYPE_WPA3_OWE_TRANSITION;
 
+import static com.android.settings.wifi.repository.WifiHotspotRepository.mIsOweSupported;
+import static com.android.settings.wifi.repository.WifiHotspotRepository.mIsOweTransitionSupported;
 import static com.android.settings.wifi.repository.WifiHotspotRepository.SPEED_2GHZ;
 import static com.android.settings.wifi.repository.WifiHotspotRepository.SPEED_2GHZ_5GHZ;
 import static com.android.settings.wifi.repository.WifiHotspotRepository.SPEED_5GHZ;
@@ -66,6 +70,7 @@ public class WifiTetherViewModel extends AndroidViewModel {
                 SECURITY_TYPE_WPA2_PSK, com.android.settingslib.R.string.wifi_security_wpa2);
         sSecuritySummaryResMap.put(
                 SECURITY_TYPE_OPEN, com.android.settingslib.R.string.wifi_security_none);
+        updateSecuritySummaryMap();
     }
 
     static Map<Integer, Integer> sSpeedSummaryResMap = new HashMap<>();
@@ -163,6 +168,7 @@ public class WifiTetherViewModel extends AndroidViewModel {
     }
 
     protected void onSecurityTypeChanged(int securityType) {
+        updateSecuritySummaryMap();
         int resId = R.string.summary_placeholder;
         if (sSecuritySummaryResMap.containsKey(securityType)) {
             resId = sSecuritySummaryResMap.get(securityType);
@@ -236,5 +242,20 @@ public class WifiTetherViewModel extends AndroidViewModel {
 
     private void log(String msg) {
         FeatureFactory.getFeatureFactory().getWifiFeatureProvider().verboseLog(TAG, msg);
+    }
+
+    private static void updateSecuritySummaryMap() {
+        if(mIsOweSupporeted && !sSecuritySummaryResMap.containsKey(SECURITY_TYPE_WPA3_OWE)) {
+            sSecuritySummaryResMap.put(
+                    SECURITY_TYPE_WPA3_OWE, com.android.settingslib.R.string.wifi_security_owe);
+        } else if (!mIsOweSupporeted && sSecuritySummaryResMap.containsKey(SECURITY_TYPE_WPA3_OWE)) {
+	    sSecuritySummaryResMap.remove(SECURITY_TYPE_WPA3_OWE);
+        }
+        if(mIsTransitionOweSupporeted && !sSecuritySummaryResMap.containsKey(SECURITY_TYPE_WPA3_OWE_TRANSITION)) {
+            sSecuritySummaryResMap.put(
+                    SECURITY_TYPE_WPA3_OWE_TRANSITION, com.android.settingslib.R.string.wifi_security_none_owe);
+        } else if (!mIsTransitionOweSupporeted && sSecuritySummaryResMap.containsKey(SECURITY_TYPE_WPA3_OWE_TRANSITION)) {
+            sSecuritySummaryResMap.remove(SECURITY_TYPE_WPA3_OWE_TRANSITION);
+        }
     }
 }
