@@ -190,6 +190,24 @@
       "parentUuid": "1c747b85_3661a445",
       "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cba58404_90b97795",
+        "filename": "src/com/android/settings/development/LinuxTerminalPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2024-10-15T00:15:10Z",
+      "side": 1,
+      "message": "I found Settings app includes package name and sometimes activity name as resources, and override them if necessary. Can we do similar apporach?\n https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/res/values/config.xml?q\u003df:%5C.xml%20com%5C.%20config%5C.xml\u0026ss\u003dandroid%2Fplatform%2Fsuperproject%2Fmain",
+      "parentUuid": "7e288495_b959de92",
+      "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
