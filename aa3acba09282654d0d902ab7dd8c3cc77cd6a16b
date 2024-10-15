@@ -229,6 +229,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "666b8d65_b97913e0",
+        "filename": "src/com/android/settings/development/LinuxTerminalPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1019013
+      },
+      "writtenOn": "2024-10-15T12:01:36Z",
+      "side": 1,
+      "message": "\u003e build flag is also the trunk stable flag it should be less preferred than aconfig\n\ncorrection: build flag is also the trunk stable flag, although it\u0027s less preferred than aconfig.\n\nSince the flag `RELEASE_AVF_SUPPORT_CUSTOM_VM_WITH_PARAVIRTUALIZED_DEVICES` is inaccessibly from Java or resources, let me keep skip the check here (but added comment). PTAL.",
+      "parentUuid": "1244a611_f311f463",
+      "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1c747b85_3661a445",
@@ -296,6 +314,24 @@
       "side": 1,
       "message": "If this intent action isn\u0027t restricted, then we\u0027ll need an explicit intent here. Either we grab an intent only for a system application, or if its an OEM/system configurable package name then you can put it in the config.xml",
       "parentUuid": "cba58404_90b97795",
+      "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b197142a_81c86f76",
+        "filename": "src/com/android/settings/development/LinuxTerminalPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1019013
+      },
+      "writtenOn": "2024-10-15T12:01:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a78eca9f_a9dff09a",
       "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
