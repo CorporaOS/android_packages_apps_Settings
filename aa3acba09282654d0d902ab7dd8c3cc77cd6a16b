@@ -54,6 +54,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a597f57_3f1ed0a6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-10-15T00:25:06Z",
+      "side": 1,
+      "message": "AOSP drops typically happen with the \"dessert\" drops (Android 15 just had its merge to AOSP a few weeks ago).\n\nPutting things in AOSP typically have minimal impact unless it\u0027s something another OEM is asking for ahead of time, or it\u0027s something that requires more lead-time for OEMs or Developers to work with (so they can start integrating early).\n\nYou can do AOSP-first if that\u0027s the strategy for this feature, it\u0027s just worth calling out since it means there\u0027s a lot of visibility",
+      "parentUuid": "fb9e3c64_dfe0c38d",
+      "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "1f098956_371fd58b",
@@ -159,6 +177,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "2dfab728_f88f1f96",
+        "filename": "src/com/android/settings/development/LinuxTerminalPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-10-15T00:25:06Z",
+      "side": 1,
+      "message": "A trunk stable flag is still required for all features in Android. The process is pretty straight forward assuming you already have a Trendy/Gantry team",
+      "parentUuid": "54c1d492_83554b98",
+      "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1c747b85_3661a445",
         "filename": "src/com/android/settings/development/LinuxTerminalPreferenceController.java",
         "patchSetId": 3
@@ -206,6 +242,24 @@
       "side": 1,
       "message": "I found Settings app includes package name and sometimes activity name as resources, and override them if necessary. Can we do similar apporach?\n https://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Settings/res/values/config.xml?q\u003df:%5C.xml%20com%5C.%20config%5C.xml\u0026ss\u003dandroid%2Fplatform%2Fsuperproject%2Fmain",
       "parentUuid": "7e288495_b959de92",
+      "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a78eca9f_a9dff09a",
+        "filename": "src/com/android/settings/development/LinuxTerminalPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-10-15T00:25:06Z",
+      "side": 1,
+      "message": "If this intent action isn\u0027t restricted, then we\u0027ll need an explicit intent here. Either we grab an intent only for a system application, or if its an OEM/system configurable package name then you can put it in the config.xml",
+      "parentUuid": "cba58404_90b97795",
       "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
