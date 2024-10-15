@@ -36,6 +36,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "fb9e3c64_dfe0c38d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1019013
+      },
+      "writtenOn": "2024-10-15T00:00:53Z",
+      "side": 1,
+      "message": "It\u0027s simply because other places (`packages/modules/Virtualization`) in the same topic branch has AOSP first policy.\n\nShould I move this CL to internal, and wait for cherry-pick? If so, how much time does it take to AOSP?",
+      "parentUuid": "4b056dbd_d56ec54c",
+      "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "1f098956_371fd58b",
@@ -87,6 +105,23 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a7871f2_dbc139e2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1019013
+      },
+      "writtenOn": "2024-10-15T00:00:53Z",
+      "side": 1,
+      "message": "Thank you for the review! Let me ask few questions to reduce # of iterations across the different timezone.",
+      "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "922de037_443bf746",
@@ -106,6 +141,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "54c1d492_83554b98",
+        "filename": "src/com/android/settings/development/LinuxTerminalPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1019013
+      },
+      "writtenOn": "2024-10-15T00:00:53Z",
+      "side": 1,
+      "message": "We do have a flag (`RELEASE_AVF_SUPPORT_CUSTOM_VM_WITH_PARAVIRTUALIZED_DEVICES`), but it\u0027s not exposed via aconfig. So Java code can\u0027t access it (see: b/309090563, b/343795511).\n\nCan I omit the check here? Installation of the terminal app is guarded by the build flag (see: [Android.bp](\nhttps://cs.android.com/android/platform/superproject/main/+/main:packages/modules/Virtualization/build/apex/Android.bp?q\u003df:packages%2Fmodules%2FVirtualization%2Fbuild%2Fapex%2FAndroid.bp%20%22VmTerminalApp%22)), so it\u0027s not shown when the flag is turned off.",
+      "parentUuid": "922de037_443bf746",
+      "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1c747b85_3661a445",
         "filename": "src/com/android/settings/development/LinuxTerminalPreferenceController.java",
         "patchSetId": 3
@@ -117,6 +170,24 @@
       "writtenOn": "2024-10-14T21:31:36Z",
       "side": 1,
       "message": "Is it not valid to have more than one terminal app? How would someone correct this situation? Would they know to uninstall one? Do we need a flow for the user to select one?",
+      "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e288495_b959de92",
+        "filename": "src/com/android/settings/development/LinuxTerminalPreferenceController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1019013
+      },
+      "writtenOn": "2024-10-15T00:00:53Z",
+      "side": 1,
+      "message": "Good catch!\n\nThe default terminal app is bundled in system image, and I don\u0027t expect more than one. It\u0027s because launching VM requires privileged permission.\n\nI admit that I didn\u0027t consider the 3rd party app that declares the same intent action. Can I hardcode the component name in the resource, and launch the activity with it? I wonder whether it\u0027s the acceptable practice in Settings.",
+      "parentUuid": "1c747b85_3661a445",
       "revId": "aa3acba09282654d0d902ab7dd8c3cc77cd6a16b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
