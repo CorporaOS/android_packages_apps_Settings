@@ -44,6 +44,7 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.android.settings.R;
 import com.android.settings.overlay.FeatureFactory;
+import com.android.settings.wifi.WifiUtils;
 
 import java.util.HashMap;
 import java.util.List;
@@ -121,6 +122,9 @@ public class WifiHotspotRepository {
     boolean mIsRestarting;
     @VisibleForTesting
     MutableLiveData<Boolean> mRestarting;
+
+    public static boolean mIsOweSupported = true;
+    public static boolean mIsOweTransitionSupported = false;
 
     public WifiHotspotRepository(@NonNull Context appContext, @NonNull WifiManager wifiManager,
             @NonNull TetheringManager tetheringManager) {
@@ -263,7 +267,7 @@ public class WifiHotspotRepository {
             return;
         }
         SoftApConfiguration.Builder configBuilder = new SoftApConfiguration.Builder(config);
-        String passphrase = (securityType == SECURITY_TYPE_OPEN) ? null : generatePassword(config);
+        String passphrase = getPasswordValidated(securityType, config.getPassphrase());
         configBuilder.setPassphrase(passphrase, securityType);
         setSoftApConfiguration(configBuilder.build());
 
@@ -654,7 +658,19 @@ public class WifiHotspotRepository {
             log("onCapabilityChanged(), softApCapability:" + softApCapability);
             mBand5g.hasCapability = softApCapability.getSupportedChannelList(BAND_5GHZ).length > 0;
             mBand6g.hasCapability = softApCapability.getSupportedChannelList(BAND_6GHZ).length > 0;
-            updateCapabilityChanged();
+            if (mIsOweSupported != softApCapability.areFeaturesSupported(
+	            SoftApCapability.SOFTAP_FEATURE_WPA3_OWE)
+	            || mIsOweTransitionSupported != softApCapability.areFeaturesSupported(
+		    SoftApCapability.SOFTAP_FEATURE_WPA3_OWE_TRANSITION)) {
+                mIsOweSupported = softApCapability.areFeaturesSupported(
+		        SoftApCapability.SOFTAP_FEATURE_WPA3_OWE);
+                mIsOweTransitionSupported = softApCapability.areFeaturesSupported(
+                        SoftApCapability.SOFTAP_FEATURE_WPA3_OWE_TRANSITION);
+                log("onCapabilityChanged mIsOweSupported is " + mIsOweSupported,
+		        + ", and mIsOweTransitionSupported is " + mIsOweTransitionSupported);
+                refresh();
+            }
+	    updateCapabilityChanged();
         }
     }
 
@@ -707,5 +723,17 @@ public class WifiHotspotRepository {
 
     private void log(String msg) {
         FeatureFactory.getFeatureFactory().getWifiFeatureProvider().verboseLog(TAG, msg);
+    }
+
+    private String getPasswordValidated(int securityType, String passphrase) {
+        String validatedPassword = passphrase;
+        if (securityType == SoftapConfiguration.SECURITY_TYPE_OPEN
+                || securityType == SoftapConfiguration.SECURITY_TYPE_WPA3_OWE
+                || securityType == SoftapConfiguration.SECURITY_TYPE_WPA3_TRANSITION) {
+            validatedPassword = null;
+        } else if (!WifiUtils.isHotspotPasswordValid(validatedPassword, securityType)) {
+            validatedPassword = generateRandomPassword();
+        }
+        return validatedPassword;
     }
 }

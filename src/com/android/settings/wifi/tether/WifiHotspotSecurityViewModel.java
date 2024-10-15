@@ -18,10 +18,14 @@ package com.android.settings.wifi.tether;
 
 import static android.net.wifi.SoftApConfiguration.SECURITY_TYPE_OPEN;
 import static android.net.wifi.SoftApConfiguration.SECURITY_TYPE_WPA2_PSK;
+import static android.net.wifi.SoftApConfiguration.SECURITY_TYPE_WPA3_OWE;
+import static android.net.wifi.SoftApConfiguration.SECURITY_TYPE_WPA3_OWE_TRANSITION;
 import static android.net.wifi.SoftApConfiguration.SECURITY_TYPE_WPA3_SAE;
 import static android.net.wifi.SoftApConfiguration.SECURITY_TYPE_WPA3_SAE_TRANSITION;
 
 import static com.android.settings.wifi.repository.WifiHotspotRepository.SPEED_6GHZ;
+import static com.android.settings.wifi.repository.WifiHotspotRepository.mIsOweSupported;
+import static com.android.settings.wifi.repository.WifiHotspotRepository.mIsOweTransitionSupported;
 
 import android.app.Application;
 
@@ -45,6 +49,8 @@ import java.util.Map;
 public class WifiHotspotSecurityViewModel extends AndroidViewModel {
     private static final String TAG = "WifiHotspotSecurityViewModel";
 
+    public static final String KEY_SECURITY_OWE = "wifi_hotspot_security_owe";
+    public static final String KEY_SECURITY_NONE_OWE = "wifi_hotspot_security_none_owe";
     public static final String KEY_SECURITY_WPA3 = "wifi_hotspot_security_wpa3";
     public static final String KEY_SECURITY_WPA2_WPA3 = "wifi_hotspot_security_wpa2_wpa3";
     public static final String KEY_SECURITY_WPA2 = "wifi_hotspot_security_wpa2";
@@ -57,6 +63,8 @@ public class WifiHotspotSecurityViewModel extends AndroidViewModel {
     protected final Observer<Integer> mSecurityTypeObserver = st -> onSecurityTypeChanged(st);
     protected final Observer<Integer> mSpeedTypeObserver = st -> onSpeedTypeChanged(st);
 
+    ViewItem mOweViewItem = new ViewItem(KEY_SECURITY_OWE);
+    ViewItem mOweTransitionViewItem = new ViewItem(KEY_SECURITY_NONE_OWE);
     public WifiHotspotSecurityViewModel(
             @NotNull Application application) {
         super(application);
@@ -64,6 +72,7 @@ public class WifiHotspotSecurityViewModel extends AndroidViewModel {
         mViewItemMap.put(SECURITY_TYPE_WPA3_SAE_TRANSITION, new ViewItem(KEY_SECURITY_WPA2_WPA3));
         mViewItemMap.put(SECURITY_TYPE_WPA2_PSK, new ViewItem(KEY_SECURITY_WPA2));
         mViewItemMap.put(SECURITY_TYPE_OPEN, new ViewItem(KEY_SECURITY_NONE));
+        updateViewItemMap();
 
         mWifiHotspotRepository = FeatureFactory.getFeatureFactory().getWifiFeatureProvider()
                 .getWifiHotspotRepository();
@@ -79,6 +88,7 @@ public class WifiHotspotSecurityViewModel extends AndroidViewModel {
 
     protected void onSecurityTypeChanged(int securityType) {
         log("onSecurityTypeChanged(), securityType:" + securityType);
+        updateViewItemMap();
         for (Map.Entry<Integer, ViewItem> entry : mViewItemMap.entrySet()) {
             entry.getValue().mIsChecked = entry.getKey().equals(securityType);
         }
@@ -160,5 +170,18 @@ public class WifiHotspotSecurityViewModel extends AndroidViewModel {
 
     private void log(String msg) {
         FeatureFactory.getFeatureFactory().getWifiFeatureProvider().verboseLog(TAG, msg);
+    }
+
+    private void updateViewItemMap() {
+        if (mIsOweSupported && !mViewItemMap.containsKey(SECURITY_TYPE_WPA3_OWE)) {
+	    mViewItemMap.put(SECURITY_TYPE_WPA3_OWE, mOweViewItem);
+        } else if (!mIsOweSupported && mViewItemMap.containsKey(SECURITY_TYPE_WPA3_OWE)) {
+	    mViewItemMap.remove(SECURITY_TYPE_WPA3_OWE);
+        }
+        if (mIsOweTransitionSupported && !mViewItemMap.containsKey(SECURITY_TYPE_WPA3_OWE_TRANSITION)) {
+            mViewItemMap.put(SECURITY_TYPE_WPA3_OWE_TRANSITION, mOweTransitionViewItem);
+        } else if (!mIsOweTransitionSupported && mViewItemMap.containsKey(SECURITY_TYPE_WPA3_OWE_TRANSITION)) {
+            mViewItemMap.remove(SECURITY_TYPE_WPA3_OWE_TRANSITION);
+        }
     }
 }

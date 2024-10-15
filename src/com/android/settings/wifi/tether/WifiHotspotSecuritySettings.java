@@ -16,6 +16,9 @@
 
 package com.android.settings.wifi.tether;
 
+import static com.android.settings.wifi.repository.WifiHotspotRepository.mIsOweSupported;
+import static com.android.settings.wifi.repository.WifiHotspotRepository.mIsOweTransitionSupported;
+
 import android.app.settings.SettingsEnums;
 import android.os.Bundle;
 
@@ -63,6 +66,15 @@ public class WifiHotspotSecuritySettings extends DashboardFragment implements
     }
 
     protected void loadViewModel() {
+	if (!mIsOweSupported) {
+	    getPreferenceScreen().removePreference(findPreference(
+                    WifiHotspotSecurityViewModel.KEY_SECURITY_OWE));
+	}
+	if (!mIsOweTransitionSupported) {
+            getPreferenceScreen().removePreference(findPreference(
+                    WifiHotspotSecurityViewModel.KEY_SECURITY_NONE_OWE));
+        }
+
         mWifiHotspotSecurityViewModel = FeatureFactory.getFeatureFactory()
                 .getWifiFeatureProvider().getWifiHotspotSecurityViewModel(this);
         LiveData<List<WifiHotspotSecurityViewModel.ViewItem>> viewItemListData =
