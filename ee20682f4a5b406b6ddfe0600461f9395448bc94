@@ -52,6 +52,24 @@
       "parentUuid": "67da3a3c_cc1807cb",
       "revId": "ee20682f4a5b406b6ddfe0600461f9395448bc94",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "09669ceb_3f47b43b",
+        "filename": "src/com/android/settings/dashboard/profileselector/ProfileSelectStorageFragment.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 1831622
+      },
+      "writtenOn": "2024-10-17T09:11:01Z",
+      "side": 1,
+      "message": "this change can solve the issue bug.",
+      "parentUuid": "961eeb43_19ab105a",
+      "revId": "ee20682f4a5b406b6ddfe0600461f9395448bc94",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
