@@ -50,6 +50,23 @@
       "message": "edgarwang@google.com Please help to do review +1",
       "revId": "2545f06558bebe579bce98b5e81139423d131d2f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "114ccf36_9ab30aa0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1413437
+      },
+      "writtenOn": "2024-10-18T07:02:50Z",
+      "side": 1,
+      "message": "Thanks tomhsu@google.com for doing the review. \n\nNow Presubmit-Verified vote has been expired. Please help to re-vote Presubmit-Verified.",
+      "revId": "2545f06558bebe579bce98b5e81139423d131d2f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
