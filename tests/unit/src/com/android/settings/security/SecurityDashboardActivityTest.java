@@ -31,6 +31,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 
+import androidx.test.annotation.UiThreadTest;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 
@@ -46,6 +47,7 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+@UiThreadTest
 @RunWith(AndroidJUnit4.class)
 public class SecurityDashboardActivityTest {
     private static final String ALTERNATIVE_FRAGMENT_CLASSNAME = "AlternativeFragmentClassname";
