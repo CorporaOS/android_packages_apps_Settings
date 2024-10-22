@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "273d26f7_a81b54da",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1308560
+      },
+      "writtenOn": "2024-10-22T05:01:40Z",
+      "side": 1,
+      "message": "Please help to add what test you do.\nTest: XXXXXXX",
+      "revId": "80d6c97ec18f841346ec3f2029b109e78b03ad6b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
