@@ -16,6 +16,24 @@
       "message": "It\u0027s fixed?",
       "revId": "a06272c913a187433a88e9baafa68ad7d6374688",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c6cd8b28_585273ff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956258
+      },
+      "writtenOn": "2024-10-25T21:16:24Z",
+      "side": 1,
+      "message": "b/335443194 app seems to be updated for 16kb.",
+      "parentUuid": "02dd2546_b3af124a",
+      "revId": "a06272c913a187433a88e9baafa68ad7d6374688",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
