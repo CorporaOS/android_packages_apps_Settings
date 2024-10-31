@@ -47,6 +47,6 @@ public class AccessibilityAudioRoutingFragment extends RestrictedDashboardFragme
         return TAG;
     }
 
-    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+    public static final BaseSearchIndexProvider  =
             new BaseSearchIndexProvider(R.xml.accessibility_audio_routing_fragment);
 }
