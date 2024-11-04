@@ -137,6 +137,8 @@ public class EnableLinuxTerminalPreferenceControllerTest {
                         mTerminalPackageName,
                         PackageManager.COMPONENT_ENABLED_STATE_DEFAULT,
                         /* flags= */ 0);
+
+        verify(mPackageManager).clearApplicationUserData(eq(mTerminalPackageName), any());
     }
 
     @Test
