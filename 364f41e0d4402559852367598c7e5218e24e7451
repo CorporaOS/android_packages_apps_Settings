@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4e938bd_197a6b58",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1221112
+      },
+      "writtenOn": "2024-11-04T20:43:04Z",
+      "side": 1,
+      "message": "@cantol@google.com , please have a look, this is needed to futher move away from patching AOSP Settings for OEM additions",
+      "revId": "364f41e0d4402559852367598c7e5218e24e7451",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
