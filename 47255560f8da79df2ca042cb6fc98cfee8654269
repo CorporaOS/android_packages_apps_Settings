@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c11e3d7b_f7edf3c4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1004424
+      },
+      "writtenOn": "2024-11-04T13:53:05Z",
+      "side": 1,
+      "message": "Just a key for injection.",
+      "revId": "47255560f8da79df2ca042cb6fc98cfee8654269",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
