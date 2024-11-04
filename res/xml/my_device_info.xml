@@ -64,7 +64,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/my_device_info_legal_category_title">
+        android:title="@string/my_device_info_legal_category_title"
+        android:key="legal_category">
 
         <!-- Legal information -->
         <Preference
