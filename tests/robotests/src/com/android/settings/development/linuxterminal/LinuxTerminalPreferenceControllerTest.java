@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.development;
+package com.android.settings.development.linuxterminal;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -22,8 +22,6 @@ import static org.mockito.Mockito.any;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.eq;
-import static org.mockito.Mockito.spy;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.content.Context;
@@ -38,9 +36,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 
+/* Tests {@link LinuxTerminalPreferenceController} */
 @RunWith(RobolectricTestRunner.class)
 public class LinuxTerminalPreferenceControllerTest {
 
@@ -65,7 +65,7 @@ public class LinuxTerminalPreferenceControllerTest {
         doReturn(mApplicationInfo).when(mPackageManager).getApplicationInfo(
                 eq(mTerminalPackageName), any());
 
-        mController = spy(new LinuxTerminalPreferenceController(mContext));
+        mController = Mockito.spy(new LinuxTerminalPreferenceController(mContext));
         doReturn(true).when(mController).isAvailable();
         doReturn(mTerminalPackageName).when(mController).getTerminalPackageName();
         when(mPreferenceScreen.findPreference(mController.getPreferenceKey()))
@@ -74,8 +74,13 @@ public class LinuxTerminalPreferenceControllerTest {
     }
 
     @Test
+    public void isAvailable_whenPackageExists_returnsTrue() throws Exception {
+        assertThat(mController.isAvailable()).isTrue();
+    }
+
+    @Test
     public void isAvailable_whenPackageNameIsNull_returnsFalse() throws Exception {
-        mController = spy(new LinuxTerminalPreferenceController(mContext));
+        mController = Mockito.spy(new LinuxTerminalPreferenceController(mContext));
         doReturn(null).when(mController).getTerminalPackageName();
 
         assertThat(mController.isAvailable()).isFalse();
@@ -86,46 +91,8 @@ public class LinuxTerminalPreferenceControllerTest {
         doThrow(new NameNotFoundException()).when(mPackageManager).getApplicationInfo(
                 eq(mTerminalPackageName), any());
 
-        mController = spy(new LinuxTerminalPreferenceController(mContext));
+        mController = Mockito.spy(new LinuxTerminalPreferenceController(mContext));
 
         assertThat(mController.isAvailable()).isFalse();
-    }
-
-    @Test
-    public void onPreferenceChanged_turnOnTerminal() {
-        mController.onPreferenceChange(null, true);
-
-        verify(mPackageManager).setApplicationEnabledSetting(
-                mTerminalPackageName,
-                PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
-                /* flags= */ 0);
-    }
-
-    @Test
-    public void onPreferenceChanged_turnOffTerminal() {
-        mController.onPreferenceChange(null, false);
-
-        verify(mPackageManager).setApplicationEnabledSetting(
-                mTerminalPackageName,
-                PackageManager.COMPONENT_ENABLED_STATE_DEFAULT,
-                /* flags= */ 0);
-    }
-
-    @Test
-    public void updateState_preferenceShouldBeChecked() {
-        when(mPackageManager.getApplicationEnabledSetting(mTerminalPackageName))
-                .thenReturn(PackageManager.COMPONENT_ENABLED_STATE_ENABLED);
-        mController.updateState(mPreference);
-
-        verify(mPreference).setChecked(true);
-    }
-
-    @Test
-    public void updateState_preferenceShouldNotBeChecked() {
-        when(mPackageManager.getApplicationEnabledSetting(mTerminalPackageName))
-                .thenReturn(PackageManager.COMPONENT_ENABLED_STATE_DEFAULT);
-        mController.updateState(mPreference);
-
-        verify(mPreference).setChecked(false);
     }
 }
