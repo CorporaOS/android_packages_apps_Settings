@@ -14,45 +14,32 @@
  * limitations under the License.
  */
 
-package com.android.settings.development;
+package com.android.settings.development.linuxterminal;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.text.TextUtils;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
-import androidx.preference.TwoStatePreference;
 
 import com.android.settings.R;
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.development.DeveloperOptionsPreferenceController;
 
+/** Preference controller for Linux terminal option in developers option */
 public class LinuxTerminalPreferenceController extends DeveloperOptionsPreferenceController
-        implements Preference.OnPreferenceChangeListener, PreferenceControllerMixin {
-    private static final String TAG = "LinuxTerminalPrefCtrl";
+        implements PreferenceControllerMixin {
+    private static final String LINUX_TERMINAL_KEY = "linux_terminal";
 
-    private static final String ENABLE_TERMINAL_KEY = "enable_linux_terminal";
-
-    @NonNull
-    private final PackageManager mPackageManager;
-
-    @Nullable
-    private final String mTerminalPackageName;
+    @Nullable private final String mTerminalPackageName;
 
     public LinuxTerminalPreferenceController(@NonNull Context context) {
         super(context);
-        mPackageManager = mContext.getPackageManager();
-
         String packageName = mContext.getString(R.string.config_linux_terminal_app_package_name);
         mTerminalPackageName =
-                isPackageInstalled(mPackageManager, packageName) ? packageName : null;
-
-        Log.d(TAG, "Terminal app package name=" + packageName + ", isAvailable=" + isAvailable());
+                isPackageInstalled(context.getPackageManager(), packageName) ? packageName : null;
     }
 
     // Avoid lazy initialization because this may be called before displayPreference().
@@ -67,42 +54,7 @@ public class LinuxTerminalPreferenceController extends DeveloperOptionsPreferenc
     @Override
     @NonNull
     public String getPreferenceKey() {
-        return ENABLE_TERMINAL_KEY;
-    }
-
-    @Override
-    public void displayPreference(@NonNull PreferenceScreen screen) {
-        super.displayPreference(screen);
-        mPreference.setEnabled(isAvailable());
-    }
-
-    @Override
-    public boolean onPreferenceChange(
-                @NonNull Preference preference, @NonNull Object newValue) {
-        String packageName = getTerminalPackageName();
-        if (packageName == null) {
-            return false;
-        }
-
-        boolean terminalEnabled = (Boolean) newValue;
-        int state = terminalEnabled
-                ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
-                : PackageManager.COMPONENT_ENABLED_STATE_DEFAULT;
-        mPackageManager.setApplicationEnabledSetting(packageName, state, /* flags=*/ 0);
-        ((TwoStatePreference) mPreference).setChecked(terminalEnabled);
-        return true;
-    }
-
-    @Override
-    public void updateState(@NonNull Preference preference) {
-        String packageName = getTerminalPackageName();
-        if (packageName == null) {
-            return;
-        }
-
-        boolean isTerminalEnabled = mPackageManager.getApplicationEnabledSetting(packageName)
-                == PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
-        ((TwoStatePreference) mPreference).setChecked(isTerminalEnabled);
+        return LINUX_TERMINAL_KEY;
     }
 
     // Can be mocked for testing
@@ -118,8 +70,9 @@ public class LinuxTerminalPreferenceController extends DeveloperOptionsPreferenc
         }
         try {
             return manager.getPackageInfo(
-                    packageName,
-                    PackageManager.MATCH_ALL | PackageManager.MATCH_DISABLED_COMPONENTS) != null;
+                            packageName,
+                            PackageManager.MATCH_ALL | PackageManager.MATCH_DISABLED_COMPONENTS)
+                    != null;
         } catch (PackageManager.NameNotFoundException e) {
             return false;
         }
