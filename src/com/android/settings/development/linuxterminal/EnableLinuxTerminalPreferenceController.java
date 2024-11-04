@@ -86,6 +86,10 @@ public class EnableLinuxTerminalPreferenceController extends BasePreferenceContr
                         ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
                         : PackageManager.COMPONENT_ENABLED_STATE_DEFAULT;
         mPackageManager.setApplicationEnabledSetting(packageName, state, /* flags= */ 0);
+        if (!isChecked) {
+            mPackageManager.clearApplicationUserData(
+                    getTerminalPackageName(), /* observer= */ null);
+        }
     }
 
     @Override
