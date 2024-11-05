@@ -43,6 +43,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "77b539f7_1b099d4f",
+        "filename": "res/xml/my_device_info.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-11-05T00:30:53Z",
+      "side": 1,
+      "message": "Why do you mean? You\u0027re pointing to your diff; there was no key for this category prior",
+      "parentUuid": "1a24161a_16820c55",
+      "range": {
+        "startLine": 32,
+        "startChar": 8,
+        "endLine": 32,
+        "endChar": 41
+      },
+      "revId": "47255560f8da79df2ca042cb6fc98cfee8654269",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9232aaef_66cf2909",
         "filename": "res/xml/my_device_info.xml",
         "patchSetId": 1
@@ -54,6 +78,30 @@
       "writtenOn": "2024-11-04T13:59:50Z",
       "side": 1,
       "message": "makes sense for this to also have a category",
+      "range": {
+        "startLine": 68,
+        "startChar": 8,
+        "endLine": 68,
+        "endChar": 37
+      },
+      "revId": "47255560f8da79df2ca042cb6fc98cfee8654269",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8090a8f4_bf750370",
+        "filename": "res/xml/my_device_info.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-11-05T00:30:53Z",
+      "side": 1,
+      "message": "This comment doesn\u0027t point to anything",
+      "parentUuid": "9232aaef_66cf2909",
       "range": {
         "startLine": 68,
         "startChar": 8,
