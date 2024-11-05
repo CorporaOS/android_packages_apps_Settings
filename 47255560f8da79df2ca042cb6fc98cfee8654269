@@ -114,6 +114,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "eed27eb8_78c92d1a",
+        "filename": "res/xml/my_device_info.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1004424
+      },
+      "writtenOn": "2024-11-05T05:42:10Z",
+      "side": 1,
+      "message": "Well just pointed out that most \u003cPreferenceCategories in this file have a key, but it was missing in two of them. This might have been obvious from a review point of view. Maybe it should have gone into commit message.",
+      "parentUuid": "8090a8f4_bf750370",
+      "range": {
+        "startLine": 68,
+        "startChar": 8,
+        "endLine": 68,
+        "endChar": 37
+      },
+      "revId": "47255560f8da79df2ca042cb6fc98cfee8654269",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "bfdcdf74_5349bfff",
         "filename": "res/xml/my_device_info.xml",
         "patchSetId": 1
