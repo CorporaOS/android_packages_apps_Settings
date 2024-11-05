@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bdd1f934_238f6263",
+        "filename": "src/com/android/settings/dashboard/profileselector/ProfileSelectFragment.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-11-05T17:29:34Z",
+      "side": 1,
+      "message": "This appears to be causing Robolectric test `ProfileSelectFragmentTest#getTabId_setWorkId_getCorrectTab` and `#getTabId_setPrivateId_getCorrectTab` to fail. PTAL",
+      "revId": "f945457f4af0484bb273588a91505ee9e73e22d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
