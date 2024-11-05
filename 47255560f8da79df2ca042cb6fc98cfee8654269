@@ -67,6 +67,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "98c79563_3889cd1b",
+        "filename": "res/xml/my_device_info.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1004424
+      },
+      "writtenOn": "2024-11-05T05:43:31Z",
+      "side": 1,
+      "message": "Just stating that other categories have keys, maybe just stating the obvious and this should have gone into commit message.",
+      "parentUuid": "77b539f7_1b099d4f",
+      "range": {
+        "startLine": 32,
+        "startChar": 8,
+        "endLine": 32,
+        "endChar": 41
+      },
+      "revId": "47255560f8da79df2ca042cb6fc98cfee8654269",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9232aaef_66cf2909",
         "filename": "res/xml/my_device_info.xml",
         "patchSetId": 1
