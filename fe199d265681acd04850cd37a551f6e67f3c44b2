@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "deb95516_ca6f4ca0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3720670
+      },
+      "writtenOn": "2024-11-07T10:46:20Z",
+      "side": 1,
+      "message": "Null unauth yser",
+      "revId": "fe199d265681acd04850cd37a551f6e67f3c44b2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
