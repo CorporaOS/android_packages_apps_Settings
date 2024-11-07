@@ -16,6 +16,57 @@
       "message": "Gentle reminder to Chris for +2",
       "revId": "dc6fb2dbee27055abfdddc6067d7a0b88d7ce3f7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "38a0e6ee_7fb681a5",
+        "filename": "src/com/android/settings/development/linuxterminal/EnableLinuxTerminalPreferenceController.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-11-07T20:34:11Z",
+      "side": 1,
+      "message": "Is there a reason you\u0027re manually dealing with device admin / restrictions? Typically you would use a `RestrictedPreference` or `RestrictedPreferenceHelper`",
+      "revId": "dc6fb2dbee27055abfdddc6067d7a0b88d7ce3f7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "777de4f9_57539d1d",
+        "filename": "src/com/android/settings/development/linuxterminal/LinuxTerminalDashboardFragment.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-11-07T20:34:11Z",
+      "side": 1,
+      "message": "Does this logic need to go before the super call? Typically you call super first unless there\u0027s a reason to otherwise",
+      "revId": "dc6fb2dbee27055abfdddc6067d7a0b88d7ce3f7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a68509c_780b21c4",
+        "filename": "src/com/android/settings/development/linuxterminal/LinuxTerminalPreferenceController.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-11-07T20:34:11Z",
+      "side": 1,
+      "message": "Please take this in an overloaded constructor instead. Mocking methods within the class-under-test is not advised\n\n```\npublic LTPC(Context context) {\n    this(context, mTerminalPackageName);\n}\n@VisibleForTesting\nLTPC(Context context, String packageName) {\n  ...\n}\n```",
+      "revId": "dc6fb2dbee27055abfdddc6067d7a0b88d7ce3f7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
