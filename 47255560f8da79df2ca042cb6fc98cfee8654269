@@ -89,6 +89,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e72b3d5c_0ccb9dae",
+        "filename": "res/xml/my_device_info.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1004424
+      },
+      "writtenOn": "2024-11-08T12:41:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "98c79563_3889cd1b",
+      "range": {
+        "startLine": 32,
+        "startChar": 8,
+        "endLine": 32,
+        "endChar": 41
+      },
+      "revId": "47255560f8da79df2ca042cb6fc98cfee8654269",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9232aaef_66cf2909",
@@ -160,6 +184,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c9f3a9b_dbed3a49",
+        "filename": "res/xml/my_device_info.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1004424
+      },
+      "writtenOn": "2024-11-08T12:41:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eed27eb8_78c92d1a",
+      "range": {
+        "startLine": 68,
+        "startChar": 8,
+        "endLine": 68,
+        "endChar": 37
+      },
+      "revId": "47255560f8da79df2ca042cb6fc98cfee8654269",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bfdcdf74_5349bfff",
@@ -183,6 +231,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5babda4d_230e928e",
+        "filename": "res/xml/my_device_info.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1004424
+      },
+      "writtenOn": "2024-11-08T12:41:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bfdcdf74_5349bfff",
+      "range": {
+        "startLine": 94,
+        "startChar": 8,
+        "endLine": 94,
+        "endChar": 44
+      },
+      "revId": "47255560f8da79df2ca042cb6fc98cfee8654269",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c81444a4_e2bd4068",
@@ -196,6 +268,30 @@
       "writtenOn": "2024-11-04T13:59:50Z",
       "side": 1,
       "message": "Maybe also add one here?",
+      "range": {
+        "startLine": 160,
+        "startChar": 4,
+        "endLine": 160,
+        "endChar": 23
+      },
+      "revId": "47255560f8da79df2ca042cb6fc98cfee8654269",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9b78a7d_4c36c1df",
+        "filename": "res/xml/my_device_info.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1004424
+      },
+      "writtenOn": "2024-11-08T12:41:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c81444a4_e2bd4068",
       "range": {
         "startLine": 160,
         "startChar": 4,
