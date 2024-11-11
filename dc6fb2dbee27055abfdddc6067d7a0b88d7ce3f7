@@ -35,6 +35,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "118a089d_3720d336",
+        "filename": "src/com/android/settings/development/linuxterminal/EnableLinuxTerminalPreferenceController.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1019013
+      },
+      "writtenOn": "2024-11-11T06:12:08Z",
+      "side": 1,
+      "message": "I picked `SettingsMainSwitchPreference` for UX reason. While `RestrictedPreference` provides a toggle button, I picked `SettingsMainSwitchPreference` provides main switch because it looked better on a new fragment.\n\nPlus, `SettingsMainSwitchPreference` has the same feature with `RestrictedPreference`, so it looked the same for the admin/restriction handling.\n\nHope this answers your questions.",
+      "parentUuid": "38a0e6ee_7fb681a5",
+      "revId": "dc6fb2dbee27055abfdddc6067d7a0b88d7ce3f7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "777de4f9_57539d1d",
@@ -52,6 +70,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c18ebead_8169dca7",
+        "filename": "src/com/android/settings/development/linuxterminal/LinuxTerminalDashboardFragment.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1019013
+      },
+      "writtenOn": "2024-11-11T06:12:08Z",
+      "side": 1,
+      "message": "`super.onAttach()` calls `createPreferenceControllers()` which requires `mUserAwareContext`. If we call `super.onAttach()` at the top, we should instantiate `mUserAwareContext` in `createPreferenceControllers()` but it didn\u0027t look straightforward for me.\n\nAdded comment here to make it explicit.",
+      "parentUuid": "777de4f9_57539d1d",
+      "revId": "dc6fb2dbee27055abfdddc6067d7a0b88d7ce3f7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0a68509c_780b21c4",
@@ -65,6 +101,24 @@
       "writtenOn": "2024-11-07T20:34:11Z",
       "side": 1,
       "message": "Please take this in an overloaded constructor instead. Mocking methods within the class-under-test is not advised\n\n```\npublic LTPC(Context context) {\n    this(context, mTerminalPackageName);\n}\n@VisibleForTesting\nLTPC(Context context, String packageName) {\n  ...\n}\n```",
+      "revId": "dc6fb2dbee27055abfdddc6067d7a0b88d7ce3f7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e0447e0_b5cd473a",
+        "filename": "src/com/android/settings/development/linuxterminal/LinuxTerminalPreferenceController.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1019013
+      },
+      "writtenOn": "2024-11-11T06:12:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0a68509c_780b21c4",
       "revId": "dc6fb2dbee27055abfdddc6067d7a0b88d7ce3f7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
