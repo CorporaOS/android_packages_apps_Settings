@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "158e0ef9_1ae69a91",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1944977
+      },
+      "writtenOn": "2024-11-13T09:07:50Z",
+      "side": 1,
+      "message": "In general we don\u0027t accept external owners especially at such an early stage for codebase maintainability. Let\u0027s discussion more before starting the implementation.",
+      "revId": "bf46bf76f95721e1d2b6489a5645ba39fb540f51",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
