@@ -207,9 +207,7 @@ public class AddAppNetworksFragment extends InstrumentedFragment implements
     @Override
     public void onDestroy() {
         mWorkerThread.quit();
-        if (mHandler.hasMessagesOrCallbacks()) {
-            mHandler.removeCallbacksAndMessages(null);
-        }
+
         super.onDestroy();
     }
 
