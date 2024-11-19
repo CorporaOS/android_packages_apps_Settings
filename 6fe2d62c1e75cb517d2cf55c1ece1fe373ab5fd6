@@ -40,6 +40,30 @@
       ],
       "revId": "6fe2d62c1e75cb517d2cf55c1ece1fe373ab5fd6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e99a8ed_5a6375e8",
+        "filename": "src/com/android/settings/development/linuxterminal/LinuxTerminalPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1386891
+      },
+      "writtenOn": "2024-11-19T07:48:13Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "87851dc6_45af0fa3",
+      "range": {
+        "startLine": 46,
+        "startChar": 78,
+        "endLine": 46,
+        "endChar": 94
+      },
+      "revId": "6fe2d62c1e75cb517d2cf55c1ece1fe373ab5fd6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
