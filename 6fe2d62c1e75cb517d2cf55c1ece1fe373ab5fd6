@@ -1,0 +1,45 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "87851dc6_45af0fa3",
+        "filename": "src/com/android/settings/development/linuxterminal/LinuxTerminalPreferenceController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1019013
+      },
+      "writtenOn": "2024-11-19T05:09:19Z",
+      "side": 1,
+      "message": "128_000_000_000 to match with above",
+      "range": {
+        "startLine": 46,
+        "startChar": 78,
+        "endLine": 46,
+        "endChar": 94
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "f0ae3e73_1fd0254c",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "src/com/android/settings/development/linuxterminal/LinuxTerminalPreferenceController.java",
+              "range": {
+                "startLine": 46,
+                "startChar": 0,
+                "endLine": 47,
+                "endChar": 0
+              },
+              "replacement": "    static final long STORAGE_MIN_BYTES \u003d DataUnit.GIGABYTES.toBytes(128); // 128_000_000_000\n"
+            }
+          ]
+        }
+      ],
+      "revId": "6fe2d62c1e75cb517d2cf55c1ece1fe373ab5fd6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
