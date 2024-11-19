@@ -34,6 +34,7 @@ import androidx.navigation.navArgument
 import com.android.settings.R
 import com.android.settings.applications.AppInfoBase
 import com.android.settings.applications.appinfo.AppInfoDashboardFragment
+import com.android.settings.development.Enable16kUtils
 import com.android.settings.flags.Flags
 import com.android.settings.spa.SpaActivity.Companion.startSpaActivity
 import com.android.settings.spa.app.appcompat.UserAspectRatioAppPreference
@@ -165,6 +166,9 @@ private fun AppInfoSettings(packageInfoPresenter: PackageInfoPresenter) {
             InstallUnknownAppsListProvider.InfoPageEntryItem(app)
             InteractAcrossProfilesDetailsPreference(app)
             AlarmsAndRemindersAppListProvider.InfoPageEntryItem(app)
+            if (Enable16kUtils.isUsing16kbPages()) {
+                Enable16KbAppCompatPreference(app)
+            }
         }
 
         Category(title = stringResource(R.string.app_install_details_group_title)) {
