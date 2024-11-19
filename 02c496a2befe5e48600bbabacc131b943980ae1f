@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5199f45a_f88c5bee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1986461
+      },
+      "writtenOn": "2024-11-19T18:29:19Z",
+      "side": 1,
+      "message": "Code link where it was removed: https://cs.android.com/android/_/android/platform/packages/apps/Settings/+/09fd6ca720852b77b9ebfb339c7d57dfbad6a231\n\nLooking back at that old CL, there doesn\u0027t actually appear to be any reason why this should have been removed",
+      "revId": "02c496a2befe5e48600bbabacc131b943980ae1f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
