@@ -476,7 +476,8 @@ public class CredentialManagerPreferenceController extends BasePreferenceControl
         final boolean isAvailable =
                 (getAvailabilityStatus() == AVAILABLE) && !isHiddenDueToNoProviderSet(providerPair);
 
-        if (isAvailable) {
+        int count = mPreferenceGroup.getPreferenceCount();
+        if (isAvailable && count > 0) {
             mPreferenceScreen.addPreference(mPreferenceGroup);
             mPreferenceGroup.setVisible(true);
         } else {
