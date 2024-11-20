@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97efed2a_fca86ae2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1876010
+      },
+      "writtenOn": "2024-11-20T21:26:17Z",
+      "side": 1,
+      "message": "Hi Jia! Could you please give some more context on how you encounter this bug? If possible, could you also file a bug [here](https://issuetracker.google.com/issues?q\u003dAndroid%2F) with more context on the issue including a bug report and videos if possible. Thank you!",
+      "revId": "be13c093acd9fe2b1db1b7d487b23ac9808bb899",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
